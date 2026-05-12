@@ -259,7 +259,7 @@ async function loadQuestions(level = 1) {
       throw new Error(`tests is not an array, it's ${typeof data.tests}`);
     }
     TESTS = data.tests;
-    console.log('TESTS assigned:', TESTS.length, 'items');
+    console.log('TESTS assigned:', TESTS.length, 'items from level', data.level);
     showHome();
   } catch (e) {
     console.error('Failed to load questions:', e);
