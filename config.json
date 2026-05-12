@@ -3,63 +3,12 @@
     "title": "📚 江東区最強せいちゃんへの挑戦問題",
     "icon": "📚",
     "bgColor": "#667eea",
-    "bgGradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    "colors": {
-      "primary": "#667eea",
-      "secondary": "#764ba2",
-      "topBar": "linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085)",
-      "scoreBar": "linear-gradient(135deg, #667eea, #764ba2)",
-      "levelBtnActive": "#667eea",
-      "levelBtnActiveBg": "linear-gradient(135deg, #f7f8ff, #f5f7ff)",
-      "progressBar": "linear-gradient(90deg, #667eea, #764ba2)",
-      "scenarioBg": "linear-gradient(135deg, #f7f8ff, #fff0fb)",
-      "scenarioBorder": "#667eea",
-      "choiceBtnHover": "#667eea",
-      "choiceBtnHoverBg": "#f7f8ff",
-      "nextBtn": "linear-gradient(135deg, #667eea, #764ba2)",
-      "reviewBtn": "linear-gradient(135deg, #667eea, #764ba2)",
-      "scoreRing": "linear-gradient(135deg, #667eea, #764ba2)",
-      "cardGradients": [
-        "linear-gradient(135deg, #f093fb, #f5576c)",
-        "linear-gradient(135deg, #4facfe, #00f2fe)",
-        "linear-gradient(135deg, #43e97b, #38f9d7)"
-      ],
-      "explanationBg": "linear-gradient(135deg, #f0f4ff, #f5f7ff)",
-      "explanationBorder": "#667eea",
-      "explanationText": "#667eea"
-    }
+    "bgGradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
   },
   "devops": {
     "title": "☁️ DOP-C02 練習問題",
     "icon": "☁️",
     "bgColor": "#203a43",
-    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "colors": {
-      "primary": "#f7971e",
-      "secondary": "#ffd200",
-      "topBar": "linear-gradient(90deg, #f7971e, #ffd200, #21d4fd, #b721ff)",
-      "scoreBar": "linear-gradient(135deg, #0f2027, #2c5364)",
-      "levelBtnActive": "#f7971e",
-      "levelBtnActiveBg": "linear-gradient(135deg, #fff9ed, #fffbea)",
-      "progressBar": "linear-gradient(90deg, #f7971e, #ffd200)",
-      "scenarioBg": "linear-gradient(135deg, #f7f8ff, #fffbea)",
-      "scenarioBorder": "#f7971e",
-      "choiceBtnHover": "#f7971e",
-      "choiceBtnHoverBg": "#fffbea",
-      "nextBtn": "linear-gradient(135deg, #f7971e, #ffd200)",
-      "reviewBtn": "linear-gradient(135deg, #667eea, #764ba2)",
-      "scoreRing": "linear-gradient(135deg, #f7971e, #ffd200)",
-      "cardGradients": [
-        "linear-gradient(135deg, #f7971e, #ffd200)",
-        "linear-gradient(135deg, #21d4fd, #b721ff)",
-        "linear-gradient(135deg, #0f2027, #2c5364)",
-        "linear-gradient(135deg, #f5576c, #f093fb)",
-        "linear-gradient(135deg, #43e97b, #38f9d7)",
-        "linear-gradient(135deg, #4facfe, #00f2fe)"
-      ],
-      "explanationBg": "linear-gradient(135deg, #f7f8ff, #fffbea)",
-      "explanationBorder": "#f7971e",
-      "explanationText": "#f7971e"
-    }
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)"
   }
 }
