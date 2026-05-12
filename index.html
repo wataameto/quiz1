@@ -517,9 +517,17 @@ auth.onAuthStateChanged(user => {
   }
 });
 
-const BUILD_TIME = '2026-05-12 12:45:00';
-
 (function() {
+  const now = new Date();
+  const jstTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+  const year = jstTime.getFullYear();
+  const month = String(jstTime.getMonth() + 1).padStart(2, '0');
+  const day = String(jstTime.getDate()).padStart(2, '0');
+  const hours = String(jstTime.getHours()).padStart(2, '0');
+  const minutes = String(jstTime.getMinutes()).padStart(2, '0');
+  const seconds = String(jstTime.getSeconds()).padStart(2, '0');
+  const BUILD_TIME = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
   const timeEl = document.createElement('div');
   timeEl.style.position = 'fixed';
   timeEl.style.bottom = '10px';
