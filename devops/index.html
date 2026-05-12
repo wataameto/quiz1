@@ -371,7 +371,8 @@ async function showHome() {
 }
 
 function startTest(id) {
-  currentTest = TESTS.find(t => t.id === id);
+  const numId = typeof id === 'string' ? parseInt(id, 10) : id;
+  currentTest = TESTS.find(t => t.id === numId);
   currentQ = 0; answers = [];
   document.getElementById('screen-home').classList.add('hidden');
   document.getElementById('screen-quiz').classList.remove('hidden');
