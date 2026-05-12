@@ -81,10 +81,13 @@
     .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
     .test-card .best-score span { font-weight: 800; font-size: 1rem; }
 
-    .total-score-bar { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
-    .total-score-bar .label { font-size: 0.9rem; opacity: 0.85; }
-    .total-score-bar .value { font-size: 1.5rem; font-weight: 900; }
-    .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
+    .total-score-bar { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; color: #fff; }
+    .score-level-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; font-size: 0.88rem; }
+    .score-level-row .lv-label { opacity: 0.85; }
+    .score-level-row .lv-value { font-weight: 800; }
+    .score-level-row .lv-value span { font-size: 0.8rem; font-weight: 400; opacity: 0.75; }
+    .score-grand-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.3); margin-top: 8px; padding-top: 8px; font-weight: 900; font-size: 1.05rem; }
+    .score-grand-row span:last-child span { font-size: 0.85rem; font-weight: 400; opacity: 0.8; }
 
     /* ===== QUIZ ===== */
     .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -370,10 +373,7 @@
       <button class="level-btn active" id="level-btn-1" onclick="switchLevel(1)">📖 パート 1</button>
       <button class="level-btn" id="level-btn-2" onclick="switchLevel(2)">📖 パート 2</button>
     </div>
-    <div class="total-score-bar">
-      <div class="label">🎯 総合成績</div>
-      <div class="value" id="total-score-display">-</div>
-    </div>
+    <div class="total-score-bar" id="total-score-bar"></div>
     <div class="test-grid" id="test-grid"></div>
   </div>
 
@@ -643,14 +643,49 @@ async function resetScores() {
   } catch (e) { console.error(e); }
 }
 
-async function getTotalCorrect() {
-  let total = 0, attempted = 0;
-  if (!TESTS || !Array.isArray(TESTS)) return { total: 0, attempted: 0 };
-  for (const t of TESTS) {
-    const best = await getBest(t.id);
-    if (best >= 0) { total += Math.round(best / 100 * 10); attempted++; }
+async function getBestForLevel(level, id) {
+  if (!currentUser) return -1;
+  const key = `best_${level}_${id}`;
+  if (bestScores[key] !== undefined) return bestScores[key];
+  try {
+    const doc = await db.collection(getCollectionName()).doc(currentUser.uid).get();
+    const scores = doc.exists ? doc.data() : {};
+    bestScores = { ...bestScores, ...scores };
+    return parseInt(scores[key] || '-1', 10);
+  } catch (e) { console.error(e); return -1; }
+}
+
+async function updateAllLevelScores() {
+  let html = '';
+  let grandCorrect = 0, grandTotal = 0, anyAttempted = false;
+
+  for (let level = 1; level <= maxLevel; level++) {
+    const data = quizData[level];
+    if (!data) continue;
+    const label = data.label || `レベル ${level}`;
+    let correct = 0, attempted = false;
+    const levelTotal = data.tests.reduce((s, t) => s + t.questions.length, 0);
+
+    for (const t of data.tests) {
+      const best = await getBestForLevel(level, t.id);
+      if (best >= 0) { correct += Math.round(best / 100 * 10); attempted = true; }
+    }
+
+    grandCorrect += correct;
+    grandTotal += levelTotal;
+    if (attempted) anyAttempted = true;
+
+    const valHtml = attempted
+      ? `${correct}<span> / ${levelTotal}問</span>`
+      : `- <span>/ ${levelTotal}問</span>`;
+    html += `<div class="score-level-row"><span class="lv-label">${label}</span><span class="lv-value">${valHtml}</span></div>`;
   }
-  return { total, attempted };
+
+  const grandHtml = anyAttempted
+    ? `${grandCorrect}<span> / ${grandTotal}問 正解</span>`
+    : `- <span>/ ${grandTotal}問</span>`;
+  html += `<div class="score-grand-row"><span>🎯 合計</span><span>${grandHtml}</span></div>`;
+  document.getElementById('total-score-bar').innerHTML = html;
 }
 
 async function showHome() {
@@ -660,13 +695,7 @@ async function showHome() {
   document.getElementById('screen-results').classList.add('hidden');
 
   TOTAL_QUESTIONS = calculateTotalQuestions();
-  const { total, attempted } = await getTotalCorrect();
-  const totalEl = document.getElementById('total-score-display');
-  if (attempted === 0) {
-    totalEl.innerHTML = `- <span>/ ${TOTAL_QUESTIONS}問</span>`;
-  } else {
-    totalEl.innerHTML = `${total} <span>/ ${TOTAL_QUESTIONS}問 正解</span>`;
-  }
+  await updateAllLevelScores();
 
   let html = '';
   for (const t of TESTS) {
