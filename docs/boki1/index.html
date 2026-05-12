@@ -907,8 +907,10 @@ async function showResults() {
 
   document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
     const ans = answers[i];
-    const correctText = q.choices[q.correct];
-    const chosenText = q.choices[ans.chosenOrigIdx];
+    const isJ = q.type === 'journal';
+    const toText = c => isJ ? journalText(c) : c;
+    const correctText = toText(q.choices[q.correct]);
+    const chosenText  = toText(q.choices[ans.chosenOrigIdx]);
     let detail = `<span>${q.scenario}</span><br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
     if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
     if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}</div>`;
