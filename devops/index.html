@@ -288,7 +288,7 @@ async function getBest(id) {
   if (!currentUser) return -1;
   if (bestScores[`best_${currentLevel}_${id}`] !== undefined) return bestScores[`best_${currentLevel}_${id}`];
   try {
-    const doc = await db.collection('scores').doc(currentUser.uid).get();
+    const doc = await db.collection('quiz_devops').doc(currentUser.uid).get();
     const scores = doc.exists ? doc.data() : {};
     bestScores = { ...bestScores, ...scores };
     return parseInt(scores[`best_${currentLevel}_${id}`] || '-1', 10);
@@ -300,7 +300,7 @@ async function setBest(id, s) {
   const best = await getBest(id);
   if (s > best) {
     try {
-      await db.collection('scores').doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
+      await db.collection('quiz_devops').doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
       bestScores[`best_${currentLevel}_${id}`] = s;
     } catch (e) { console.error(e); }
   }
@@ -314,7 +314,7 @@ async function resetScores() {
     TESTS.forEach(t => {
       updates[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
     });
-    await db.collection('scores').doc(currentUser.uid).update(updates);
+    await db.collection('quiz_devops').doc(currentUser.uid).update(updates);
     bestScores = {};
     soundClick(); showHome();
   } catch (e) { console.error(e); }
