@@ -434,29 +434,9 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 let currentUser = null;
-let authReady = false;
-
-async function loginWithGoogle() {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  try {
-    await auth.signInWithPopup(provider);
-  } catch (e) {
-    console.error('Google login error:', e);
-    alert('ログインに失敗しました: ' + e.message);
-  }
-}
-
-function showLoginScreen() {
-  document.getElementById('screen-login').classList.remove('hidden');
-  document.getElementById('screen-home').classList.add('hidden');
-  document.getElementById('screen-quiz').classList.add('hidden');
-  document.getElementById('screen-results').classList.add('hidden');
-}
-
 auth.onAuthStateChanged(async user => {
+  currentUser = user;
   if (user) {
-    currentUser = user;
-    authReady = true;
     await showHome();
   }
 });
