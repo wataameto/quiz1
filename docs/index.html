@@ -255,12 +255,27 @@
       display: block;
     }
 
+    .score-quiz-header {
+      font-size: 0.8rem;
+      font-weight: 800;
+      opacity: 0.75;
+      padding: 10px 0 2px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 4px;
+    }
+
+    .score-quiz-header:first-child {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
     .score-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
-      font-size: 0.95rem;
+      padding: 6px 0;
+      font-size: 0.9rem;
     }
 
     .score-row.total {
@@ -277,7 +292,7 @@
       cursor: pointer;
       transition: all 0.2s;
       border-radius: 8px;
-      padding: 8px;
+      padding: 6px 8px;
       margin: 0 -8px;
     }
 
@@ -343,17 +358,10 @@
     </div>
 
     <div class="score-summary" id="score-summary">
-      <a href="./boki1/" class="score-row score-link">
-        <span>📖 簿記 (パート1・2)</span>
-        <span id="score-boki">0問</span>
-      </a>
-      <a href="./devops/" class="score-row score-link">
-        <span>☁️ DevOps (全3段階)</span>
-        <span id="score-devops">0問</span>
-      </a>
+      <div id="score-rows"></div>
       <div class="score-row total">
         <span>合計</span>
-        <span id="score-total">0問</span>
+        <span id="score-total">-</span>
       </div>
     </div>
 
@@ -398,76 +406,64 @@ function logout() {
   auth.signOut().catch(e => console.error('Logout error:', e));
 }
 
-async function getBokiScore() {
-  if (!currentUser) return { correct: 0, total: 0 };
-  try {
-    const doc = await db.collection('quiz_boki1').doc(currentUser.uid).get();
-    if (!doc.exists) return { correct: 0, total: 0 };
+const QUIZ_LIST = [
+  { id: 'boki1',  path: './boki1',  header: '📚 簿記' },
+  { id: 'devops', path: './devops', header: '☁️ DevOps' },
+];
 
-    const data = doc.data();
-    let totalCorrect = 0;
-
-    // Collect all score keys (best_level_id pattern)
-    const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
-    if (scoreKeys.length === 0) return { correct: 0, total: 0 };
-
-    scoreKeys.forEach(key => {
-      const score = data[key];
-      if (score > 0) {
-        totalCorrect += Math.round(score / 100 * 10);
-      }
-    });
-
-    // Total questions = number of score keys * 10 (each test has 10 questions)
-    const totalQuestions = scoreKeys.length * 10;
-
-    return { correct: totalCorrect, total: totalQuestions };
-  } catch (e) {
-    console.error('Error fetching boki scores:', e);
-    return { correct: 0, total: 0 };
+async function fetchLevelInfo(quizPath) {
+  const levels = [];
+  for (let n = 1; ; n++) {
+    try {
+      const res = await fetch(`${quizPath}/questions${n}.json?t=${Date.now()}`);
+      if (!res.ok) break;
+      const data = await res.json();
+      levels.push({ level: n, label: data.label, testIds: data.tests.map(t => t.id) });
+    } catch (e) { break; }
   }
+  return levels;
 }
 
-async function getDevopsScore() {
-  if (!currentUser) return { correct: 0, total: 0 };
+async function fetchQuizScores(quizId) {
   try {
-    const doc = await db.collection('quiz_devops').doc(currentUser.uid).get();
-    if (!doc.exists) return { correct: 0, total: 0 };
-
-    const data = doc.data();
-    let totalCorrect = 0;
-
-    // Collect all score keys (best_level_id pattern)
-    const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
-    if (scoreKeys.length === 0) return { correct: 0, total: 0 };
-
-    scoreKeys.forEach(key => {
-      const score = data[key];
-      if (score > 0) {
-        totalCorrect += Math.round(score / 100 * 10);
-      }
-    });
-
-    // Total questions = number of score keys * 10 (each test has 10 questions)
-    const totalQuestions = scoreKeys.length * 10;
-
-    return { correct: totalCorrect, total: totalQuestions };
+    const doc = await db.collection(`quiz_${quizId}`).doc(currentUser.uid).get();
+    return doc.exists ? doc.data() : {};
   } catch (e) {
-    console.error('Error fetching devops scores:', e);
-    return { correct: 0, total: 0 };
+    console.error(e);
+    return {};
   }
 }
 
 async function updateScoreDisplay() {
-  const bokiScore = await getBokiScore();
-  const devopsScore = await getDevopsScore();
-  const totalCorrect = bokiScore.correct + devopsScore.correct;
-  const totalQuestions = bokiScore.total + devopsScore.total;
+  let totalCorrect = 0, totalQuestions = 0;
+  let html = '';
 
-  // 常にスコアエリアを表示（リンクが必要なため）
+  for (const quiz of QUIZ_LIST) {
+    const [levels, scores] = await Promise.all([
+      fetchLevelInfo(quiz.path),
+      fetchQuizScores(quiz.id),
+    ]);
+
+    html += `<div class="score-quiz-header">${quiz.header}</div>`;
+
+    for (const { level, label, testIds } of levels) {
+      let correct = 0;
+      const total = testIds.length * 10;
+      for (const testId of testIds) {
+        const score = scores[`best_${level}_${testId}`] || 0;
+        if (score > 0) correct += Math.round(score / 100 * 10);
+      }
+      totalCorrect += correct;
+      totalQuestions += total;
+      html += `<a href="${quiz.path}/" class="score-row score-link">
+        <span>${label}</span>
+        <span>${correct}問 / ${total}問</span>
+      </a>`;
+    }
+  }
+
+  document.getElementById('score-rows').innerHTML = html;
   document.getElementById('score-summary').classList.add('visible');
-  document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
-  document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
   document.getElementById('score-total').textContent = `${totalCorrect}問 / ${totalQuestions}問`;
 }
 
