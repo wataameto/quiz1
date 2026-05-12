@@ -464,14 +464,11 @@ async function updateScoreDisplay() {
   const totalCorrect = bokiScore.correct + devopsScore.correct;
   const totalQuestions = bokiScore.total + devopsScore.total;
 
-  if (bokiScore.correct === 0 && devopsScore.correct === 0) {
-    document.getElementById('score-summary').classList.remove('visible');
-  } else {
-    document.getElementById('score-summary').classList.add('visible');
-    document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
-    document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
-    document.getElementById('score-total').textContent = `${totalCorrect}問 / ${totalQuestions}問`;
-  }
+  // 常にスコアエリアを表示（リンクが必要なため）
+  document.getElementById('score-summary').classList.add('visible');
+  document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
+  document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
+  document.getElementById('score-total').textContent = `${totalCorrect}問 / ${totalQuestions}問`;
 }
 
 function showHomeScreen() {
