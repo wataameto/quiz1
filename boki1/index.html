@@ -664,7 +664,7 @@ async function showHome() {
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
 
-  const { correct, total } = getTotalCorrect();
+  const { correct, total } = await getTotalCorrect();
   const totalEl = document.getElementById('total-score-display');
   if (correct === 0) {
     totalEl.innerHTML = `- <span>/ ${total}問</span>`;
