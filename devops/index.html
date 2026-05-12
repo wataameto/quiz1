@@ -370,6 +370,31 @@ async function showHome() {
   document.body.appendChild(debugEl);
 }
 
+// ============================================================
+// 仕訳レンダリング（boki1 との統一性のため）
+// ============================================================
+
+function fmt(n) { return '¥' + n.toLocaleString(); }
+
+function renderJournal(entry) {
+  const dLines = entry.debit.map(e =>
+    `<div class="entry-item journal-debit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+  ).join('');
+  const cLines = entry.credit.map(e =>
+    `<div class="entry-item journal-credit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+  ).join('');
+  return `<div class="journal">
+    <div><div class="journal-header">借方（左）</div><div class="entry-line">${dLines}</div></div>
+    <div class="journal-sep">｜</div>
+    <div><div class="journal-header">貸方（右）</div><div class="entry-line">${cLines}</div></div>
+  </div>`;
+}
+
+function journalText(entry) {
+  return '借: ' + entry.debit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・')
+       + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
+}
+
 function startTest(id) {
   const numId = typeof id === 'string' ? parseInt(id, 10) : id;
   currentTest = TESTS.find(t => t.id === numId);
@@ -396,6 +421,7 @@ function renderQuestion() {
   answerInProgress = false; // 新しい問題では回答可能に
   const q = currentTest.questions[currentQ];
   const total = currentTest.questions.length;
+  const isJ = currentTest.id.toString().endsWith('-3'); // 仕訳問題判定
   const pct = Math.round((currentQ / total) * 100);
 
   document.getElementById('quiz-title').textContent    = currentTest.title;
@@ -419,7 +445,8 @@ function renderQuestion() {
 
   choicesEl.innerHTML = indexed.map((item, i) => {
     const label = String.fromCharCode(97 + i); // a, b, c, d
-    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${item.choice}</button>`;
+    const choiceHtml = isJ ? renderJournal(item.choice) : item.choice;
+    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${choiceHtml}</button>`;
   }).join('');
 
   // 問題表示後 0.5秒はクリック受け付けない
