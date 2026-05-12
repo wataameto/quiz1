@@ -271,6 +271,21 @@
       font-size: 1.1rem;
     }
 
+    .score-link {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      border-radius: 8px;
+      padding: 8px;
+      margin: 0 -8px;
+    }
+
+    .score-link:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateX(4px);
+    }
+
     .hidden {
       display: none !important;
     }
@@ -328,33 +343,19 @@
     </div>
 
     <div class="score-summary" id="score-summary">
-      <div class="score-row">
+      <a href="./boki1/" class="score-row score-link">
         <span>📖 簿記 (パート1・2)</span>
         <span id="score-boki">0問</span>
-      </div>
-      <div class="score-row">
+      </a>
+      <a href="./devops/" class="score-row score-link">
         <span>☁️ DevOps (全3段階)</span>
         <span id="score-devops">0問</span>
-      </div>
+      </a>
       <div class="score-row total">
         <span>合計</span>
         <span id="score-total">0問</span>
       </div>
     </div>
-
-    <div class="menu-grid">
-    <a href="./boki1/" class="menu-card">
-      <div class="icon">📖</div>
-      <h2>簿記</h2>
-      <p>江東区最強せいちゃんへの挑戦問題<br>パート1・パート2</p>
-    </a>
-
-    <a href="./devops/" class="menu-card">
-      <div class="icon">☁️</div>
-      <h2>DevOps</h2>
-      <p>DOP-C02 練習問題<br>AWS Engineer Professional</p>
-    </a>
-  </div>
 
     <div class="footer">
       <p>© 2026 クイズアプリ</p>
