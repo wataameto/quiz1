@@ -46,6 +46,11 @@
     .home-header h1 { font-size: 1.8rem; color: #2d3748; font-weight: 800; margin-bottom: 6px; }
     .home-header p  { color: #718096; font-size: 0.95rem; }
 
+    .level-switcher { display: flex; gap: 8px; margin-bottom: 16px; justify-content: center; }
+    .level-btn { flex: 1; padding: 10px 8px; border: 2.5px solid #e2e8f0; border-radius: 12px; background: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; color: #718096; }
+    .level-btn.active { border-color: #667eea; background: linear-gradient(135deg, #f7f8ff, #f5f7ff); color: #2d3748; box-shadow: 0 4px 12px rgba(102,126,234,0.2); }
+    .level-btn:hover:not(.active) { border-color: #cbd5e0; background: #f7fafc; }
+
     .test-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -281,7 +286,7 @@
 
     .btn-home:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
 
-/* 紙吹雪アニメ */
+    /* 紙吹雪アニメ */
     .confetti-wrap {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -332,18 +337,6 @@
 <body>
 <div class="container">
 
-  <!-- LOGIN -->
-  <div id="screen-login">
-    <div class="home-header">
-      <div class="logo">📚</div>
-      <h1>江東区最強せいちゃんへの挑戦問題</h1>
-      <p>ログインして問題に挑戦しよう！</p>
-    </div>
-    <button onclick="loginWithGoogle()" style="width:100%; padding:15px; background:linear-gradient(135deg, #667eea, #764ba2); color:#fff; border:none; border-radius:12px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit; margin-top:20px;">
-      🔐 Google でログイン
-    </button>
-  </div>
-
   <!-- HOME -->
   <div id="screen-home">
     <div class="home-top">
@@ -352,9 +345,13 @@
       <div class="home-header">
         <div class="logo">📚</div>
         <h1>江東区最強せいちゃんへの挑戦問題</h1>
-        <p><span style="background:#667eea; color:#fff; padding:4px 12px; border-radius:99px; display:inline-block; margin-bottom:8px; font-weight:700;">パート 1</span></p>
+        <p><span id="part-badge" style="background:#667eea; color:#fff; padding:4px 12px; border-radius:99px; display:inline-block; margin-bottom:8px; font-weight:700;">パート 1</span></p>
         <p>分記法（商品売買益）レベル ／ 各10問・100点満点</p>
       </div>
+    </div>
+    <div class="level-switcher">
+      <button class="level-btn active" id="level-btn-1" onclick="switchLevel(1)">📖 パート 1</button>
+      <button class="level-btn" id="level-btn-2" onclick="switchLevel(2)">📖 パート 2</button>
     </div>
     <div class="test-grid" id="test-grid"></div>
   </div>
@@ -451,10 +448,7 @@ auth.onAuthStateChanged(async user => {
   if (user) {
     currentUser = user;
     authReady = true;
-    document.getElementById('screen-login').classList.add('hidden');
     await showHome();
-  } else {
-    showLoginScreen();
   }
 });
 
@@ -503,7 +497,6 @@ function soundClick() {
 }
 
 function soundFanfare() {
-  // ド ミ ソ ド↑
   [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => {
     tone(f, 'sine', t, 0.18, 0.28);
   });
@@ -537,320 +530,42 @@ function launchConfetti(count = 60) {
 }
 
 // ============================================================
-// 📝 データ
+// 📝 データ管理
 // ============================================================
 
-// テスト１：用語問題
-const TEST1 = {
-  id: '1-1', title: '💡 簿記パート1　テスト1', type: '用語問題',
-  emoji: '💡', subtitle: '正しい説明を選んでね！',
-  questions: [
-    {
-      scenario: '📖 「仕訳」とは何のこと？',
-      choices: [
-        '取引を借方と貸方に分けて記録すること',
-        '勘定科目の残高を集計すること',
-        '決算書を作成すること',
-        '現金の入出金だけを記録すること',
-      ],
-      correct: 0,
-      explanation: '仕訳は複式簿記の基本であり、全ての取引を借方と貸方に分けて記録します。',
-    },
-    {
-      scenario: '📖 「分記法」とは何のこと？',
-      choices: [
-        '商品の原価と売却益を分けて記録する方法',
-        '費用と収益を合算して記録する方法',
-        '資産と負債を一括して記録する方法',
-        '仕入れと売上を同じ科目で記録する方法',
-      ],
-      correct: 0,
-      explanation: '分記法は商品売買で原価と売却益を分けて記録する方法で、損益把握が容易です。',
-    },
-    {
-      scenario: '💰 「商品売買益」とは何のこと？',
-      choices: [
-        '商品を原価より高く売ったときに生じる利益',
-        '商品を仕入れたときにかかった費用',
-        '商品の在庫として残っている金額',
-        '商品を売った総額（売上高）',
-      ],
-      correct: 0,
-      explanation: '商品売買益は商品の売却時に、販売価格と原価の差額として発生する利益です。',
-    },
-    {
-      scenario: '🤝 「売掛金」とは何のこと？',
-      choices: [
-        '商品を掛けで売ったときに生じる代金の受取権利',
-        '商品を掛けで買ったときに生じる代金の支払義務',
-        '現金で受け取った売上代金',
-        '商品を売ったときに発生する利益',
-      ],
-      correct: 0,
-      explanation: '売掛金は商品を掛けで売った場合、後から代金を受け取る権利（資産）です。',
-    },
-    {
-      scenario: '🤝 「買掛金」とは何のこと？',
-      choices: [
-        '商品を掛けで買ったときに生じる代金の支払義務',
-        '商品を掛けで売ったときに生じる代金の受取権利',
-        '現金で支払った仕入代金',
-        '商品を買ったときに発生する費用',
-      ],
-      correct: 0,
-      explanation: '買掛金は商品を掛けで買った場合、後から代金を支払う義務（負債）です。',
-    },
-    {
-      scenario: '⬅️ 「借方」とはどちら側のこと？',
-      choices: [
-        '仕訳の左側',
-        '仕訳の右側',
-        '負債が増える側',
-        '収益が増える側',
-      ],
-      correct: 0,
-      explanation: '借方は仕訳の左側を意味します。資産や費用が増えるとき、借方に記入されます。',
-    },
-    {
-      scenario: '➡️ 「貸方」とはどちら側のこと？',
-      choices: [
-        '仕訳の右側',
-        '仕訳の左側',
-        '資産が増える側',
-        '費用が増える側',
-      ],
-      correct: 0,
-      explanation: '貸方は仕訳の右側を意味します。負債や収益が増えるとき、貸方に記入されます。',
-    },
-    {
-      scenario: '⏰ 「掛け」取引とは？',
-      choices: [
-        '代金を後払いにする取引',
-        '代金を前払いにする取引',
-        '現金で即時に支払う取引',
-        '手形を使って支払う取引',
-      ],
-      correct: 0,
-      explanation: '掛け取引は商品やサービスの代金を後から支払う取引です。売掛金や買掛金が発生します。',
-    },
-    {
-      scenario: '🏷️ 「原価」とは？',
-      choices: [
-        '商品を仕入れたときにかかった費用',
-        '商品を売ったときの販売価格',
-        '商品を売ったときに得られる利益',
-        '決算時の在庫評価額',
-      ],
-      correct: 0,
-      explanation: '原価は商品を仕入れるのに実際に支払った金額であり、商品売買益を計算する基礎になります。',
-    },
-    {
-      scenario: '🗂️ 「勘定科目」とは？',
-      choices: [
-        '取引の内容を分類するための名称',
-        '仕訳帳のページ番号',
-        '会計期間中の合計金額',
-        '決算書の様式名',
-      ],
-      correct: 0,
-      explanation: '勘定科目は現金、商品、売掛金などのように、取引内容を分類するために使われる名称です。',
-    },
-  ],
-};
+let TESTS = [];
+let currentLevel = 1;
 
-// テスト２：勘定科目の区分問題
-const TEST2 = {
-  id: '1-2', title: '📊 簿記パート1　テスト2', type: '区分問題',
-  emoji: '📊', subtitle: '正しい区分・増加側を選んでね！',
-  questions: [
-    {
-      scenario: '💵 「現金」はどの区分に入る？',
-      choices: ['資産', '負債', '収益', '費用'],
-      correct: 0,
-      explanation: '現金は企業が保有する価値があるものなので、資産に分類されます。',
-    },
-    {
-      scenario: '📬 「売掛金」はどの区分に入る？',
-      choices: ['資産', '負債', '収益', '費用'],
-      correct: 0,
-      explanation: '売掛金は将来受け取る権利のある代金なので、資産に分類されます。',
-    },
-    {
-      scenario: '📤 「買掛金」はどの区分に入る？',
-      choices: ['負債', '資産', '費用', '収益'],
-      correct: 0,
-      explanation: '買掛金は将来支払わなければならない義務なので、負債に分類されます。',
-    },
-    {
-      scenario: '📦 「商品」はどの区分に入る？',
-      choices: ['資産', '費用', '負債', '収益'],
-      correct: 0,
-      explanation: '商品は売るために保有されるものなので、資産に分類されます。',
-    },
-    {
-      scenario: '💹 「商品売買益」はどの区分に入る？',
-      choices: ['収益', '費用', '資産', '負債'],
-      correct: 0,
-      explanation: '商品売買益は商品販売により得られる利益なので、収益に分類されます。',
-    },
-    {
-      scenario: '🏦 「資本金」はどの区分に入る？',
-      choices: ['純資産（資本）', '負債', '資産', '収益'],
-      correct: 0,
-      explanation: '資本金は企業の所有者が投入した資金なので、純資産（資本）に分類されます。',
-    },
-    {
-      scenario: '⬆️ 資産の勘定が増加するとき、どちらに記入する？',
-      choices: ['借方（左側）', '貸方（右側）', '両側に同額', 'どちらでもよい'],
-      correct: 0,
-      explanation: '資産は借方で増加し、貸方で減少します。資産増加時は借方に記入されます。',
-    },
-    {
-      scenario: '⬆️ 負債の勘定が増加するとき、どちらに記入する？',
-      choices: ['貸方（右側）', '借方（左側）', '両側に同額', 'どちらでもよい'],
-      correct: 0,
-      explanation: '負債は貸方で増加し、借方で減少します。負債増加時は貸方に記入されます。',
-    },
-    {
-      scenario: '⬆️ 収益の勘定が発生するとき、どちらに記入する？',
-      choices: ['貸方（右側）', '借方（左側）', '両側に同額', 'どちらでもよい'],
-      correct: 0,
-      explanation: '収益は貸方で発生・増加し、借方で減少します。収益発生時は貸方に記入されます。',
-    },
-    {
-      scenario: '📬 「売掛金」の残高は通常どちら側にある？',
-      choices: ['借方（左側）', '貸方（右側）', 'ゼロになる', '両側にある'],
-      correct: 0,
-      explanation: '売掛金は資産であり、資産は借方に残高を持つので、借方側にあります。',
-    },
-  ],
-};
+async function loadQuestions(level = 1) {
+  try {
+    const res = await fetch(`questions${level}.json?t=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if (!data || !data.tests || !Array.isArray(data.tests)) {
+      throw new Error('Invalid questions format');
+    }
+    TESTS = data.tests;
+    showHome();
+  } catch (e) {
+    console.error('Failed to load questions:', e);
+    TESTS = [];
+    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:20px;text-align:center;">問題ファイルの読み込みに失敗: ' + e.message + '</p>';
+  }
+}
 
-// テスト３：仕訳問題
-function j(debit, credit) { return { debit, credit }; }
-function e(account, amount) { return { account, amount }; }
-
-const TEST3 = {
-  id: '1-3', title: '✏️ 簿記パート1　テスト3', type: '仕訳問題',
-  emoji: '✏️', subtitle: '正しい仕訳を選んでね！',
-  questions: [
-    {
-      scenario: '🛒 商品¥10,000を現金で仕入れた。',
-      choices: [
-        j([e('商品',10000)],[e('現金',10000)]),
-        j([e('現金',10000)],[e('商品',10000)]),
-        j([e('商品',10000)],[e('買掛金',10000)]),
-        j([e('買掛金',10000)],[e('商品',10000)]),
-      ],
-      correct: 0,
-      explanation: '商品（資産）が増加し、現金（資産）が減少する取引です。商品は借方、現金は貸方に記入します。',
-    },
-    {
-      scenario: '💰 原価¥8,000の商品を¥12,000で現金販売した。',
-      choices: [
-        j([e('現金',12000)],[e('商品',8000),e('商品売買益',4000)]),
-        j([e('現金',12000)],[e('商品',12000)]),
-        j([e('現金',8000),e('商品売買益',4000)],[e('商品',12000)]),
-        j([e('商品',8000)],[e('現金',12000),e('商品売買益',4000)]),
-      ],
-      correct: 0,
-      explanation: '現金¥12,000受け取り、商品¥8,000と売買益¥4,000を貸方に記録します。分記法の基本です。',
-    },
-    {
-      scenario: '🛒 商品¥15,000を掛けで仕入れた。',
-      choices: [
-        j([e('商品',15000)],[e('買掛金',15000)]),
-        j([e('買掛金',15000)],[e('商品',15000)]),
-        j([e('商品',15000)],[e('現金',15000)]),
-        j([e('売掛金',15000)],[e('商品',15000)]),
-      ],
-      correct: 0,
-      explanation: '商品（資産）が増加し、買掛金（負債）が増加する取引です。',
-    },
-    {
-      scenario: '💰 原価¥6,000の商品を¥9,000で掛け販売した。',
-      choices: [
-        j([e('売掛金',9000)],[e('商品',6000),e('商品売買益',3000)]),
-        j([e('売掛金',9000)],[e('商品',9000)]),
-        j([e('現金',9000)],[e('商品',6000),e('商品売買益',3000)]),
-        j([e('商品',6000),e('商品売買益',3000)],[e('売掛金',9000)]),
-      ],
-      correct: 0,
-      explanation: '売掛金¥9,000受け取る権利が生じ、商品¥6,000と売買益¥3,000を貸方に記録します。',
-    },
-    {
-      scenario: '💸 買掛金¥15,000を現金で支払った。',
-      choices: [
-        j([e('買掛金',15000)],[e('現金',15000)]),
-        j([e('現金',15000)],[e('買掛金',15000)]),
-        j([e('売掛金',15000)],[e('現金',15000)]),
-        j([e('現金',15000)],[e('売掛金',15000)]),
-      ],
-      correct: 0,
-      explanation: '買掛金（負債）が減少し、現金（資産）が減少する取引です。',
-    },
-    {
-      scenario: '📥 売掛金¥9,000を現金で回収した。',
-      choices: [
-        j([e('現金',9000)],[e('売掛金',9000)]),
-        j([e('売掛金',9000)],[e('現金',9000)]),
-        j([e('現金',9000)],[e('買掛金',9000)]),
-        j([e('買掛金',9000)],[e('現金',9000)]),
-      ],
-      correct: 0,
-      explanation: '現金（資産）が増加し、売掛金（資産）が減少する取引です。',
-    },
-    {
-      scenario: '💰 原価¥10,000の商品を¥14,000で現金販売した。',
-      choices: [
-        j([e('現金',14000)],[e('商品',10000),e('商品売買益',4000)]),
-        j([e('現金',14000)],[e('商品',14000)]),
-        j([e('現金',10000),e('商品売買益',4000)],[e('商品',14000)]),
-        j([e('商品',10000)],[e('現金',14000),e('商品売買益',4000)]),
-      ],
-      correct: 0,
-      explanation: '現金¥14,000受け取り、商品¥10,000と売買益¥4,000を貸方に記録します。',
-    },
-    {
-      scenario: '🛒 商品¥20,000を掛けで仕入れた。',
-      choices: [
-        j([e('商品',20000)],[e('買掛金',20000)]),
-        j([e('買掛金',20000)],[e('商品',20000)]),
-        j([e('商品',20000)],[e('現金',20000)]),
-        j([e('現金',20000)],[e('商品',20000)]),
-      ],
-      correct: 0,
-      explanation: '商品（資産）が増加し、買掛金（負債）が増加する取引です。',
-    },
-    {
-      scenario: '💰 原価¥15,000の商品を¥22,000で掛け販売した。',
-      choices: [
-        j([e('売掛金',22000)],[e('商品',15000),e('商品売買益',7000)]),
-        j([e('売掛金',22000)],[e('商品',22000)]),
-        j([e('現金',22000)],[e('商品',15000),e('商品売買益',7000)]),
-        j([e('商品',15000),e('商品売買益',7000)],[e('売掛金',22000)]),
-      ],
-      correct: 0,
-      explanation: '売掛金¥22,000受け取る権利が生じ、商品¥15,000と売買益¥7,000を貸方に記録します。',
-    },
-    {
-      scenario: '💸 買掛金¥20,000を現金で支払った。',
-      choices: [
-        j([e('買掛金',20000)],[e('現金',20000)]),
-        j([e('現金',20000)],[e('買掛金',20000)]),
-        j([e('買掛金',20000)],[e('売掛金',20000)]),
-        j([e('現金',20000)],[e('売掛金',20000)]),
-      ],
-      correct: 0,
-      explanation: '買掛金（負債）が減少し、現金（資産）が減少する取引です。',
-    },
-  ],
-};
-
-const TESTS = [TEST1, TEST2, TEST3];
+function switchLevel(level) {
+  if (level === currentLevel) return;
+  currentLevel = level;
+  [1, 2].forEach(i => {
+    document.getElementById(`level-btn-${i}`).classList.toggle('active', i === level);
+  });
+  document.getElementById('part-badge').textContent = `パート ${level}`;
+  soundClick();
+  loadQuestions(level);
+}
 
 // ============================================================
-// 状態
+// 状態管理
 // ============================================================
 
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
@@ -863,7 +578,7 @@ async function getBest(id) {
     const doc = await db.collection('scores').doc(currentUser.uid).get();
     const scores = doc.exists ? doc.data() : {};
     bestScores = scores;
-    return parseInt(scores[`best_${id}`] || '0', 10);
+    return parseInt(scores[`best_${currentLevel}_${id}`] || '0', 10);
   } catch (e) { console.error(e); return 0; }
 }
 
@@ -872,17 +587,21 @@ async function setBest(id, s) {
   const best = await getBest(id);
   if (s > best) {
     try {
-      await db.collection('scores').doc(currentUser.uid).set({ [`best_${id}`]: s }, { merge: true });
-      bestScores[`best_${id}`] = s;
+      await db.collection('scores').doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
+      bestScores[`best_${currentLevel}_${id}`] = s;
     } catch (e) { console.error(e); }
   }
 }
 
 async function resetScores() {
-  if (!confirm('🗑️ 全テストの最高得点をリセットしますか？')) return;
+  if (!confirm('🗑️ このパートの最高得点をリセットしますか？')) return;
   if (!currentUser) return;
   try {
-    await db.collection('scores').doc(currentUser.uid).delete();
+    const updates = {};
+    TESTS.forEach(t => {
+      updates[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+    });
+    await db.collection('scores').doc(currentUser.uid).update(updates);
     bestScores = {};
     soundClick();
     showHome();
@@ -1077,10 +796,15 @@ async function showResults() {
 }
 
 auth.onAuthStateChanged(user => {
-  if (!user) showLoginScreen();
+  if (!user) {
+    // ログインなしでも使用可能
+  }
 });
 
-const BUILD_TIME = '2026-05-10 11:05:46';
+// 初期化
+loadQuestions(1);
+
+const BUILD_TIME = '2026-05-12 11:30:00';
 
 (function() {
   const timeEl = document.createElement('div');
