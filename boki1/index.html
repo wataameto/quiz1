@@ -491,6 +491,10 @@ let maxLevel = 1;
 
 async function loadAllQuestions() {
   try {
+    // config.json を読み込む
+    const configRes = await fetch('../config.json?t=' + Date.now());
+    const configData = await configRes.json();
+
     // 複数のレベルから最大レベル数を検出
     maxLevel = 1;
     let foundLevel = true;
@@ -516,7 +520,14 @@ async function loadAllQuestions() {
         throw new Error(`Invalid data at level ${level}`);
       }
       quizData[level] = data;
-      if (!quizId) quizId = data.id; // 最初のデータから quizId を取得
+      if (!quizId) {
+        quizId = data.id; // 最初のデータから quizId を取得
+        // config から title を動的に設定
+        if (configData[quizId]) {
+          document.title = configData[quizId].title;
+          document.body.style.background = configData[quizId].bgGradient;
+        }
+      }
     }
 
     // レベルボタンを動的に生成

@@ -1,0 +1,14 @@
+{
+  "boki1": {
+    "title": "📚 江東区最強せいちゃんへの挑戦問題",
+    "icon": "📚",
+    "bgColor": "#667eea",
+    "bgGradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+  },
+  "devops": {
+    "title": "☁️ DOP-C02 練習問題",
+    "icon": "☁️",
+    "bgColor": "#203a43",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)"
+  }
+}
