@@ -647,13 +647,16 @@ function journalText(entry) {
 // ============================================================
 
 function getTotalCorrect() {
-  let total = 0, attempted = 0;
-  if (!TESTS || !Array.isArray(TESTS)) return { total: 0, attempted: 0 };
+  let totalCorrect = 0;
+  if (!TESTS || !Array.isArray(TESTS)) return { correct: 0, total: 0 };
   TESTS.forEach(t => {
     const best = getBest(t.id);
-    if (best > 0) { total += Math.round(best / 100 * 10); attempted++; }
+    if (best > 0) {
+      totalCorrect += Math.round(best / 100 * 10);
+    }
   });
-  return { total, attempted };
+  const totalQuestions = TESTS.length * 10;
+  return { correct: totalCorrect, total: totalQuestions };
 }
 
 async function showHome() {
@@ -661,12 +664,12 @@ async function showHome() {
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
 
-  const { total, attempted } = getTotalCorrect();
+  const { correct, total } = getTotalCorrect();
   const totalEl = document.getElementById('total-score-display');
-  if (attempted === 0) {
-    totalEl.innerHTML = `- <span>/ 60問</span>`;
+  if (correct === 0) {
+    totalEl.innerHTML = `- <span>/ ${total}問</span>`;
   } else {
-    totalEl.innerHTML = `${total} <span>/ 60問 正解</span>`;
+    totalEl.innerHTML = `${correct} <span>/ ${total}問 正解</span>`;
   }
 
   let html = '';
