@@ -647,15 +647,15 @@ function journalText(entry) {
 // 画面制御
 // ============================================================
 
-function getTotalCorrect() {
+async function getTotalCorrect() {
   let totalCorrect = 0;
   if (!TESTS || !Array.isArray(TESTS)) return { correct: 0, total: 0 };
-  TESTS.forEach(t => {
-    const best = getBest(t.id);
+  for (const t of TESTS) {
+    const best = await getBest(t.id);
     if (best > 0) {
       totalCorrect += Math.round(best / 100 * 10);
     }
-  });
+  }
   const totalQuestions = TESTS.length * 10;
   return { correct: totalCorrect, total: totalQuestions };
 }
