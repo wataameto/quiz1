@@ -289,6 +289,9 @@
     .mark          { font-size: 1.2rem; min-width: 24px; }
     .answer-detail { color: #2d3748; line-height: 1.7; flex: 1; }
 
+    .btn-review { margin-top: 16px; width: 100%; padding: 15px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .btn-review:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
+
     .btn-home {
       margin-top: 24px;
       width: 100%;
@@ -419,6 +422,7 @@
       <h3>📋 解答一覧</h3>
       <div id="answer-list"></div>
     </div>
+    <button id="review-btn" class="btn-review" onclick="startReview()" style="display:none"></button>
     <button class="btn-home" onclick="showHome()">🏠 テスト選択に戻る</button>
   </div>
 
