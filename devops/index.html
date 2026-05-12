@@ -103,6 +103,21 @@
     .btn-reset-corner { position: absolute; top: 0; right: 0; background: transparent; color: #e53e3e; border: 2px solid #e53e3e; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
     .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
     .hidden { display: none !important; }
+
+    /* 仕訳レンダリング（boki1 との統一） */
+    .journal {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 4px 10px;
+      font-size: 0.88rem;
+    }
+
+    .journal-header { font-size: 0.72rem; color: #888; font-weight: bold; }
+    .journal-debit  { color: #2b6cb0; }
+    .journal-credit { color: #742a2a; padding-left: 14px; }
+    .journal-sep    { color: #cbd5e0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .entry-line     { display: flex; flex-direction: column; gap: 3px; }
+    .entry-item     { display: flex; justify-content: space-between; gap: 12px; }
   </style>
 </head>
 <body>
