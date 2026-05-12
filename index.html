@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クイズアプリ メニュー</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🏠</text></svg>">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      max-width: 600px;
+      width: 100%;
+      padding: 48px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .header .logo {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #2d3748;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #718096;
+      font-size: 0.95rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .menu-card {
+      border-radius: 16px;
+      padding: 32px 20px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(.34,1.56,.64,1);
+      border: none;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+    }
+
+    .menu-card:nth-child(1) {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .menu-card:nth-child(2) {
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+      color: #2d3748;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .menu-card .icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .menu-card h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .menu-card p {
+      font-size: 0.85rem;
+      opacity: 0.95;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 1.5rem;
+      }
+
+      .menu-card {
+        min-height: 160px;
+        padding: 24px 16px;
+      }
+
+      .menu-card .icon {
+        font-size: 2.5rem;
+      }
+
+      .menu-card h2 {
+        font-size: 1.1rem;
+      }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #edf2f7;
+      color: #718096;
+      font-size: 0.8rem;
+    }
+
+    .auth-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #2d3748;
+    }
+
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .user-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .btn-logout {
+      background: transparent;
+      border: 2px solid #e53e3e;
+      color: #e53e3e;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .btn-logout:hover {
+      background: #fff5f5;
+      transform: translateY(-1px);
+    }
+
+    .login-screen {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .login-screen h2 {
+      font-size: 1.5rem;
+      color: #2d3748;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .btn-login {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 32px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .btn-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102,126,234,0.4);
+    }
+
+    .score-summary {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      color: #fff;
+      display: none;
+    }
+
+    .score-summary.visible {
+      display: block;
+    }
+
+    .score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 0.95rem;
+    }
+
+    .score-row.total {
+      border-top: 1px solid rgba(255,255,255,0.3);
+      margin-top: 10px;
+      padding-top: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- LOGIN SCREEN -->
+  <div id="screen-login" class="login-screen">
+    <div class="logo" style="font-size: 3.5rem; margin-bottom: 20px;">📚</div>
+    <h2>クイズアプリ</h2>
+    <p style="color: #718096; margin-bottom: 24px;">学習問題に挑戦しよう！</p>
+    <button class="btn-login" onclick="loginWithGoogle()">🔐 Google でログイン</button>
+  </div>
+
+  <!-- HOME SCREEN -->
+  <div id="screen-home" class="hidden">
+    <div class="auth-header">
+      <div class="header">
+        <div class="logo">📚</div>
+        <h1>クイズアプリ</h1>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <div class="user-info">
+          <div class="user-avatar" id="user-avatar">👤</div>
+          <div>
+            <div class="user-name" id="user-name">ユーザー</div>
+            <div style="font-size: 0.75rem; color: #a0aec0;">ログイン中</div>
+          </div>
+        </div>
+        <button class="btn-logout" onclick="logout()">ログアウト</button>
+      </div>
+    </div>
+
+    <div class="score-summary" id="score-summary">
+      <div class="score-row">
+        <span>📖 簿記 (パート1・2)</span>
+        <span id="score-boki">0問</span>
+      </div>
+      <div class="score-row">
+        <span>☁️ DevOps (全3段階)</span>
+        <span id="score-devops">0問</span>
+      </div>
+      <div class="score-row total">
+        <span>合計</span>
+        <span id="score-total">0問</span>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+    <a href="./boki1/" class="menu-card">
+      <div class="icon">📖</div>
+      <h2>簿記</h2>
+      <p>江東区最強せいちゃんへの挑戦問題<br>パート1・パート2</p>
+    </a>
+
+    <a href="./devops/" class="menu-card">
+      <div class="icon">☁️</div>
+      <h2>DevOps</h2>
+      <p>DOP-C02 練習問題<br>AWS Engineer Professional</p>
+    </a>
+  </div>
+
+    <div class="footer">
+      <p>© 2026 クイズアプリ</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// 🔥 Firebase 初期化
+// ============================================================
+
+const firebaseConfig = {
+  apiKey: "AIzaSyASXTkFt2cm-lG5zrPL0uygNMpY6u_OWwY",
+  authDomain: "boki1-b66ad.firebaseapp.com",
+  projectId: "boki1-b66ad",
+  storageBucket: "boki1-b66ad.firebasestorage.app",
+  messagingSenderId: "416766529196",
+  appId: "1:416766529196:web:9a451e15d3e1c4057c9909",
+  measurementId: "G-HQKC6V6J1F"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+let currentUser = null;
+
+async function loginWithGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  try {
+    await auth.signInWithPopup(provider);
+  } catch (e) {
+    console.error('Google login error:', e);
+    alert('ログインに失敗しました: ' + e.message);
+  }
+}
+
+function logout() {
+  auth.signOut().catch(e => console.error('Logout error:', e));
+}
+
+async function getBokiScore() {
+  if (!currentUser) return { correct: 0, total: 0 };
+  try {
+    const doc = await db.collection('quiz_boki1').doc(currentUser.uid).get();
+    if (!doc.exists) return { correct: 0, total: 0 };
+
+    const data = doc.data();
+    let totalCorrect = 0;
+    let testCount = 0;
+
+    // Collect all test IDs by looking for best_level_id pattern
+    const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
+    if (scoreKeys.length === 0) return { correct: 0, total: 0 };
+
+    scoreKeys.forEach(key => {
+      const score = data[key];
+      if (score > 0) {
+        totalCorrect += Math.round(score / 100 * 10);
+        testCount++;
+      }
+    });
+
+    // Assuming 3 tests per level, 2 levels = 6 tests total, 10 questions each
+    const uniqueTests = new Set();
+    scoreKeys.forEach(key => {
+      const parts = key.split('_');
+      if (parts.length >= 3) {
+        uniqueTests.add(parts[2]);
+      }
+    });
+
+    const totalTests = Math.max(6, uniqueTests.size);
+    const totalQuestions = totalTests * 10;
+
+    return { correct: totalCorrect, total: totalQuestions };
+  } catch (e) {
+    console.error('Error fetching boki scores:', e);
+    return { correct: 0, total: 0 };
+  }
+}
+
+async function getDevopsScore() {
+  if (!currentUser) return { correct: 0, total: 0 };
+  try {
+    const doc = await db.collection('quiz_devops').doc(currentUser.uid).get();
+    if (!doc.exists) return { correct: 0, total: 0 };
+
+    const data = doc.data();
+    let totalCorrect = 0;
+    let totalQuestions = 0;
+
+    // Collect all test IDs by looking for best_level_id pattern
+    const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
+    if (scoreKeys.length === 0) return { correct: 0, total: 0 };
+
+    const uniqueTests = new Set();
+    scoreKeys.forEach(key => {
+      const score = data[key];
+      if (score > 0) {
+        totalCorrect += Math.round(score / 100 * 10);
+      }
+      const parts = key.split('_');
+      if (parts.length >= 3) {
+        uniqueTests.add(parts[2]);
+      }
+    });
+
+    // DevOps: 3 levels × 2 tests per level = 6 tests, 10 questions each = 60 questions
+    totalQuestions = 60;
+
+    return { correct: totalCorrect, total: totalQuestions };
+  } catch (e) {
+    console.error('Error fetching devops scores:', e);
+    return { correct: 0, total: 0 };
+  }
+}
+
+async function updateScoreDisplay() {
+  const bokiScore = await getBokiScore();
+  const devopsScore = await getDevopsScore();
+  const totalCorrect = bokiScore.correct + devopsScore.correct;
+  const totalQuestions = bokiScore.total + devopsScore.total;
+
+  if (bokiScore.correct === 0 && devopsScore.correct === 0) {
+    document.getElementById('score-summary').classList.remove('visible');
+  } else {
+    document.getElementById('score-summary').classList.add('visible');
+    document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
+    document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
+    document.getElementById('score-total').textContent = `${totalCorrect}問 / ${totalQuestions}問`;
+  }
+}
+
+function showHomeScreen() {
+  document.getElementById('screen-login').classList.add('hidden');
+  document.getElementById('screen-home').classList.remove('hidden');
+
+  if (currentUser) {
+    const displayName = currentUser.displayName || 'ユーザー';
+    const firstChar = displayName.charAt(0);
+    document.getElementById('user-name').textContent = displayName;
+    document.getElementById('user-avatar').textContent = firstChar;
+    updateScoreDisplay();
+  }
+}
+
+function showLoginScreen() {
+  document.getElementById('screen-login').classList.remove('hidden');
+  document.getElementById('screen-home').classList.add('hidden');
+}
+
+auth.onAuthStateChanged(user => {
+  currentUser = user;
+  if (user) {
+    showHomeScreen();
+  } else {
+    showLoginScreen();
+  }
+});
+</script>
+</body>
+</html>
