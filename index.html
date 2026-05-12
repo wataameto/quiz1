@@ -516,6 +516,21 @@ auth.onAuthStateChanged(user => {
     showLoginScreen();
   }
 });
+
+const BUILD_TIME = '2026-05-12 12:45:00';
+
+(function() {
+  const timeEl = document.createElement('div');
+  timeEl.style.position = 'fixed';
+  timeEl.style.bottom = '10px';
+  timeEl.style.left = '10px';
+  timeEl.style.fontSize = '11px';
+  timeEl.style.color = '#999';
+  timeEl.style.zIndex = '9999';
+  timeEl.style.pointerEvents = 'none';
+  timeEl.textContent = `ビルド: ${BUILD_TIME}`;
+  document.body.appendChild(timeEl);
+})();
 </script>
 </body>
 </html>
