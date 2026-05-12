@@ -255,27 +255,55 @@ function launchConfetti(count = 60) {
 
 // Test 1: SDLC Automation
 let TESTS = [];
-const TOTAL_QUESTIONS = 60;
+let quizId = null;
+let quizData = {}; // 全レベルのデータをキャッシュ
 let currentLevel = 1;
+let maxLevel = 1;
 
-async function loadQuestions(level = 1) {
+async function loadAllQuestions() {
   try {
-    const res = await fetch(`questions${level}.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    console.log('Loaded data:', data);
-    if (!data || typeof data !== 'object') {
-      throw new Error('Data is not an object');
+    // 複数のレベルから最大レベル数を検出
+    maxLevel = 1;
+    let foundLevel = true;
+    while (foundLevel) {
+      try {
+        const res = await fetch(`questions${maxLevel + 1}.json?t=${Date.now()}`);
+        if (res.ok) {
+          maxLevel++;
+        } else {
+          foundLevel = false;
+        }
+      } catch (e) {
+        foundLevel = false;
+      }
     }
-    if (!data.tests) {
-      throw new Error('data.tests is undefined');
+
+    // 各レベルのデータを読み込む
+    for (let level = 1; level <= maxLevel; level++) {
+      const res = await fetch(`questions${level}.json?t=${Date.now()}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!data || !data.tests || !Array.isArray(data.tests)) {
+        throw new Error(`Invalid data at level ${level}`);
+      }
+      quizData[level] = data;
+      if (!quizId) quizId = data.id; // 最初のデータから quizId を取得
     }
-    if (!Array.isArray(data.tests)) {
-      throw new Error(`tests is not an array, it's ${typeof data.tests}`);
+
+    // レベルボタンを動的に生成
+    const switcherEl = document.getElementById('level-switcher');
+    switcherEl.innerHTML = '';
+    for (let i = 1; i <= maxLevel; i++) {
+      const btn = document.createElement('button');
+      btn.className = `level-btn ${i === 1 ? 'active' : ''}`;
+      btn.id = `level-btn-${i}`;
+      btn.textContent = quizData[i].label || `レベル ${i}`;
+      btn.onclick = () => switchLevel(i);
+      switcherEl.appendChild(btn);
     }
-    TESTS = data.tests;
-    console.log('TESTS assigned:', TESTS.length, 'items from level', data.level);
-    showHome();
+
+    currentLevel = 1;
+    loadQuestions(1);
   } catch (e) {
     console.error('Failed to load questions:', e);
     TESTS = [];
@@ -286,12 +314,26 @@ async function loadQuestions(level = 1) {
   }
 }
 
+async function loadQuestions(level = 1) {
+  try {
+    if (!quizData[level]) throw new Error(`Level ${level} data not found`);
+    const data = quizData[level];
+    TESTS = data.tests;
+    showHome();
+  } catch (e) {
+    console.error('Failed to load questions:', e);
+    TESTS = [];
+    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:20px;text-align:center;">問題の読み込みに失敗しました</p>';
+  }
+}
+
 function switchLevel(level) {
-  if (level === currentLevel) return;
+  if (level === currentLevel || level < 1 || level > maxLevel) return;
   currentLevel = level;
-  [1, 2, 3].forEach(i => {
-    document.getElementById(`level-btn-${i}`).classList.toggle('active', i === level);
-  });
+  for (let i = 1; i <= maxLevel; i++) {
+    const btn = document.getElementById(`level-btn-${i}`);
+    if (btn) btn.classList.toggle('active', i === level);
+  }
   soundClick();
   loadQuestions(level);
 }
@@ -299,11 +341,17 @@ function switchLevel(level) {
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
 let bestScores = {};
 
+function getCollectionName() {
+  // quizId（boki1 or devops）をコレクション名に変換
+  return `quiz_${quizId}`;
+}
+
 async function getBest(id) {
   if (!currentUser) return -1;
   if (bestScores[`best_${currentLevel}_${id}`] !== undefined) return bestScores[`best_${currentLevel}_${id}`];
   try {
-    const doc = await db.collection('quiz_devops').doc(currentUser.uid).get();
+    const collection = getCollectionName();
+    const doc = await db.collection(collection).doc(currentUser.uid).get();
     const scores = doc.exists ? doc.data() : {};
     bestScores = { ...bestScores, ...scores };
     return parseInt(scores[`best_${currentLevel}_${id}`] || '-1', 10);
@@ -315,7 +363,8 @@ async function setBest(id, s) {
   const best = await getBest(id);
   if (s > best) {
     try {
-      await db.collection('quiz_devops').doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
+      const collection = getCollectionName();
+      await db.collection(collection).doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
       bestScores[`best_${currentLevel}_${id}`] = s;
     } catch (e) { console.error(e); }
   }
@@ -325,11 +374,12 @@ async function resetScores() {
   if (!confirm('🗑️ このレベルの最高得点をリセットしますか？')) return;
   if (!currentUser) return;
   try {
+    const collection = getCollectionName();
     const updates = {};
     TESTS.forEach(t => {
       updates[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
     });
-    await db.collection('quiz_devops').doc(currentUser.uid).update(updates);
+    await db.collection(collection).doc(currentUser.uid).update(updates);
     bestScores = {};
     soundClick(); showHome();
   } catch (e) { console.error(e); }
@@ -589,7 +639,8 @@ function startReview() {
   renderQuestion();
 }
 
-loadQuestions(1);
+// 初期化
+loadAllQuestions();
 
 // キーボードショートカット
 document.addEventListener('keydown', (e) => {
