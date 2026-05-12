@@ -143,6 +143,9 @@
       border-color: #38a169;
       background: linear-gradient(135deg, #f0fff4, #c6f6d5);
       animation: popIn 0.3s cubic-bezier(.34,1.56,.64,1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .choice-btn.wrong {
@@ -154,6 +157,15 @@
     .choice-btn.reveal {
       border-color: #38a169;
       background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .choice-btn.correct .next-indicator,
+    .choice-btn.reveal .next-indicator {
+      margin-left: 12px;
+      flex-shrink: 0;
     }
 
     @keyframes popIn {
