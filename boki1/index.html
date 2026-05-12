@@ -434,10 +434,10 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 let currentUser = null;
-auth.onAuthStateChanged(async user => {
-  currentUser = user;
+
+auth.onAuthStateChanged(user => {
   if (user) {
-    await showHome();
+    currentUser = user;
   }
 });
 
@@ -447,63 +447,27 @@ auth.onAuthStateChanged(async user => {
 
 const AC = window.AudioContext || window.webkitAudioContext;
 let ac = null;
-
-function getAC() {
-  if (!ac) ac = new AC();
-  if (ac.state === 'suspended') ac.resume();
-  return ac;
-}
-
+function getAC() { if (!ac) ac = new AC(); if (ac.state === 'suspended') ac.resume(); return ac; }
 function tone(freq, type, start, dur, vol = 0.25) {
   try {
-    const a = getAC();
-    const osc = a.createOscillator();
-    const gain = a.createGain();
-    osc.connect(gain);
-    gain.connect(a.destination);
-    osc.type = type;
-    osc.frequency.value = freq;
+    const a = getAC(), osc = a.createOscillator(), gain = a.createGain();
+    osc.connect(gain); gain.connect(a.destination);
+    osc.type = type; osc.frequency.value = freq;
     gain.gain.setValueAtTime(vol, a.currentTime + start);
     gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + start + dur);
-    osc.start(a.currentTime + start);
-    osc.stop(a.currentTime + start + dur);
+    osc.start(a.currentTime + start); osc.stop(a.currentTime + start + dur);
   } catch(e) {}
 }
-
-function soundCorrect() {
-  tone(660,  'sine',     0,    0.12, 0.25);
-  tone(880,  'sine',     0.08, 0.15, 0.25);
-  tone(1100, 'sine',     0.18, 0.18, 0.20);
-}
-
-function soundWrong() {
-  tone(330, 'sawtooth', 0,    0.10, 0.20);
-  tone(220, 'sawtooth', 0.08, 0.18, 0.15);
-}
-
-function soundClick() {
-  tone(1000, 'sine', 0, 0.05, 0.10);
-}
-
-function soundFanfare() {
-  [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => {
-    tone(f, 'sine', t, 0.18, 0.28);
-  });
-}
-
-function soundGood() {
-  tone(784,  'sine', 0,    0.15, 0.25);
-  tone(1047, 'sine', 0.14, 0.20, 0.25);
-}
-
-// ============================================================
-// 🎊 紙吹雪
-// ============================================================
+function soundCorrect() { tone(660,'sine',0,0.12,0.25); tone(880,'sine',0.08,0.15,0.25); tone(1100,'sine',0.18,0.18,0.20); }
+function soundWrong()   { tone(330,'sawtooth',0,0.10,0.20); tone(220,'sawtooth',0.08,0.18,0.15); }
+function soundClick()   { tone(1000,'sine',0,0.05,0.10); }
+function soundFanfare() { [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => tone(f,'sine',t,0.18,0.28)); }
+function soundGood()    { tone(784,'sine',0,0.15,0.25); tone(1047,'sine',0.14,0.20,0.25); }
 
 function launchConfetti(count = 60) {
   const wrap = document.getElementById('confetti-wrap');
   wrap.innerHTML = '';
-  const colors = ['#667eea','#764ba2','#f093fb','#f5576c','#fda085','#43e97b','#4facfe'];
+  const colors = ['#f7971e','#ffd200','#21d4fd','#b721ff','#0f2027','#38a169','#f5576c'];
   for (let i = 0; i < count; i++) {
     const el = document.createElement('div');
     el.className = 'confetti-piece';
@@ -518,58 +482,109 @@ function launchConfetti(count = 60) {
   }
 }
 
-// ============================================================
-// 📝 データ管理
-// ============================================================
-
+// Test 1: SDLC Automation
 let TESTS = [];
+let quizId = null;
+let quizData = {}; // 全レベルのデータをキャッシュ
 let currentLevel = 1;
+let maxLevel = 1;
 
-async function loadQuestions(level = 1) {
+async function loadAllQuestions() {
   try {
-    const res = await fetch(`questions${level}.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    if (!data || !data.tests || !Array.isArray(data.tests)) {
-      throw new Error('Invalid questions format');
+    // 複数のレベルから最大レベル数を検出
+    maxLevel = 1;
+    let foundLevel = true;
+    while (foundLevel) {
+      try {
+        const res = await fetch(`questions${maxLevel + 1}.json?t=${Date.now()}`);
+        if (res.ok) {
+          maxLevel++;
+        } else {
+          foundLevel = false;
+        }
+      } catch (e) {
+        foundLevel = false;
+      }
     }
-    TESTS = data.tests;
-    document.getElementById('part-badge').textContent = data.label || `パート ${level}`;
-    showHome();
+
+    // 各レベルのデータを読み込む
+    for (let level = 1; level <= maxLevel; level++) {
+      const res = await fetch(`questions${level}.json?t=${Date.now()}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!data || !data.tests || !Array.isArray(data.tests)) {
+        throw new Error(`Invalid data at level ${level}`);
+      }
+      quizData[level] = data;
+      if (!quizId) quizId = data.id; // 最初のデータから quizId を取得
+    }
+
+    // レベルボタンを動的に生成
+    const switcherEl = document.getElementById('level-switcher');
+    switcherEl.innerHTML = '';
+    for (let i = 1; i <= maxLevel; i++) {
+      const btn = document.createElement('button');
+      btn.className = `level-btn ${i === 1 ? 'active' : ''}`;
+      btn.id = `level-btn-${i}`;
+      btn.textContent = quizData[i].label || `レベル ${i}`;
+      btn.onclick = () => switchLevel(i);
+      switcherEl.appendChild(btn);
+    }
+
+    currentLevel = 1;
+    loadQuestions(1);
   } catch (e) {
     console.error('Failed to load questions:', e);
     TESTS = [];
+    document.getElementById('screen-home').classList.remove('hidden');
+    document.getElementById('screen-quiz').classList.add('hidden');
+    document.getElementById('screen-results').classList.add('hidden');
     document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:20px;text-align:center;">問題ファイルの読み込みに失敗: ' + e.message + '</p>';
   }
 }
 
+async function loadQuestions(level = 1) {
+  try {
+    if (!quizData[level]) throw new Error(`Level ${level} data not found`);
+    const data = quizData[level];
+    TESTS = data.tests;
+    showHome();
+  } catch (e) {
+    console.error('Failed to load questions:', e);
+    TESTS = [];
+    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:20px;text-align:center;">問題の読み込みに失敗しました</p>';
+  }
+}
+
 function switchLevel(level) {
-  if (level === currentLevel) return;
+  if (level === currentLevel || level < 1 || level > maxLevel) return;
   currentLevel = level;
-  [1, 2].forEach(i => {
-    document.getElementById(`level-btn-${i}`).classList.toggle('active', i === level);
-  });
-  document.getElementById('part-badge').textContent = `パート ${level}`;
+  for (let i = 1; i <= maxLevel; i++) {
+    const btn = document.getElementById(`level-btn-${i}`);
+    if (btn) btn.classList.toggle('active', i === level);
+  }
   soundClick();
   loadQuestions(level);
 }
 
-// ============================================================
-// 状態管理
-// ============================================================
-
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
 let bestScores = {};
 
+function getCollectionName() {
+  // quizId（boki1 or devops）をコレクション名に変換
+  return `quiz_${quizId}`;
+}
+
 async function getBest(id) {
-  if (!currentUser) return 0;
-  if (bestScores[id] !== undefined) return bestScores[id];
+  if (!currentUser) return -1;
+  if (bestScores[`best_${currentLevel}_${id}`] !== undefined) return bestScores[`best_${currentLevel}_${id}`];
   try {
-    const doc = await db.collection('quiz_boki1').doc(currentUser.uid).get();
+    const collection = getCollectionName();
+    const doc = await db.collection(collection).doc(currentUser.uid).get();
     const scores = doc.exists ? doc.data() : {};
-    bestScores = scores;
-    return parseInt(scores[`best_${currentLevel}_${id}`] || '0', 10);
-  } catch (e) { console.error(e); return 0; }
+    bestScores = { ...bestScores, ...scores };
+    return parseInt(scores[`best_${currentLevel}_${id}`] || '-1', 10);
+  } catch (e) { console.error(e); return -1; }
 }
 
 async function setBest(id, s) {
@@ -577,32 +592,83 @@ async function setBest(id, s) {
   const best = await getBest(id);
   if (s > best) {
     try {
-      await db.collection('quiz_boki1').doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
+      const collection = getCollectionName();
+      await db.collection(collection).doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
       bestScores[`best_${currentLevel}_${id}`] = s;
     } catch (e) { console.error(e); }
   }
 }
 
 async function resetScores() {
-  if (!confirm('🗑️ このパートの最高得点をリセットしますか？')) return;
+  if (!confirm('🗑️ このレベルの最高得点をリセットしますか？')) return;
   if (!currentUser) return;
   try {
+    const collection = getCollectionName();
     const updates = {};
     TESTS.forEach(t => {
       updates[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
     });
-    await db.collection('quiz_boki1').doc(currentUser.uid).update(updates);
+    await db.collection(collection).doc(currentUser.uid).update(updates);
     bestScores = {};
-    soundClick();
-    showHome();
+    soundClick(); showHome();
   } catch (e) { console.error(e); }
 }
 
-function fmt(n)         { return '¥' + n.toLocaleString(); }
+async function getTotalCorrect() {
+  let total = 0, attempted = 0;
+  if (!TESTS || !Array.isArray(TESTS)) return { total: 0, attempted: 0 };
+  for (const t of TESTS) {
+    const best = await getBest(t.id);
+    if (best >= 0) { total += Math.round(best / 100 * 10); attempted++; }
+  }
+  return { total, attempted };
+}
+
+async function showHome() {
+  isReviewMode = false;
+  document.getElementById('screen-home').classList.remove('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+
+  const { total, attempted } = await getTotalCorrect();
+  const totalEl = document.getElementById('total-score-display');
+  if (attempted === 0) {
+    totalEl.innerHTML = `- <span>/ ${TOTAL_QUESTIONS}問</span>`;
+  } else {
+    totalEl.innerHTML = `${total} <span>/ ${TOTAL_QUESTIONS}問 正解</span>`;
+  }
+
+  let html = '';
+  for (const t of TESTS) {
+    const best = await getBest(t.id);
+    const bestTxt = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
+    html += `<div class="test-card" onclick="startTest(${t.id}); soundClick();">
+      <span class="card-emoji">${t.emoji}</span>
+      <h2>${t.title}</h2>
+      <span class="test-type">${t.type}</span>
+      <p class="best-score">${bestTxt}</p>
+    </div>`;
+  }
+  document.getElementById('test-grid').innerHTML = html;
+
+  // Debug: Show touch device detection and build time
+  const isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0));
+  };
+  const buildTime = '2026-05-06 12:30:00';
+  const debugEl = document.createElement('div');
+  debugEl.style.cssText = 'position:fixed;bottom:8px;left:8px;font-size:0.65rem;color:#999;background:rgba(0,0,0,0.1);padding:4px 8px;border-radius:4px;z-index:1000;line-height:1.3;';
+  debugEl.innerHTML = (isTouchDevice() ? '📱 Touch' : '🖥️ PC') + '<br>' + buildTime;
+  document.body.appendChild(debugEl);
+}
 
 // ============================================================
-// 仕訳レンダリング
+// 仕訳レンダリング（boki1 との統一性のため）
 // ============================================================
+
+function fmt(n) { return '¥' + n.toLocaleString(); }
 
 function renderJournal(entry) {
   const dLines = entry.debit.map(e =>
@@ -623,50 +689,6 @@ function journalText(entry) {
        + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
 }
 
-// ============================================================
-// 画面制御
-// ============================================================
-
-async function getTotalCorrect() {
-  let totalCorrect = 0;
-  if (!TESTS || !Array.isArray(TESTS)) return { correct: 0, total: 0 };
-  for (const t of TESTS) {
-    const best = await getBest(t.id);
-    if (best > 0) {
-      totalCorrect += Math.round(best / 100 * 10);
-    }
-  }
-  const totalQuestions = TESTS.length * 10;
-  return { correct: totalCorrect, total: totalQuestions };
-}
-
-async function showHome() {
-  document.getElementById('screen-home').classList.remove('hidden');
-  document.getElementById('screen-quiz').classList.add('hidden');
-  document.getElementById('screen-results').classList.add('hidden');
-
-  const { correct, total } = await getTotalCorrect();
-  const totalEl = document.getElementById('total-score-display');
-  if (correct === 0) {
-    totalEl.innerHTML = `- <span>/ ${total}問</span>`;
-  } else {
-    totalEl.innerHTML = `${correct} <span>/ ${total}問 正解</span>`;
-  }
-
-  let html = '';
-  for (const t of TESTS) {
-    const best = await getBest(t.id);
-    const bestTxt = best > 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
-    html += `<div class="test-card" onclick="startTest('${t.id}'); soundClick();">
-      <span class="card-emoji">${t.emoji}</span>
-      <h2>${t.title}</h2>
-      <span class="test-type">${t.type}</span>
-      <p class="best-score">${bestTxt}</p>
-    </div>`;
-  }
-  document.getElementById('test-grid').innerHTML = html;
-}
-
 function startTest(id) {
   const numId = typeof id === 'string' ? parseInt(id, 10) : id;
   currentTest = TESTS.find(t => t.id === numId);
@@ -679,82 +701,108 @@ function startTest(id) {
 
 function shuffle(arr) {
   const a = arr.slice();
-  for (let i = a.length-1; i > 0; i--) {
-    const j = Math.floor(Math.random()*(i+1));
-    [a[i],a[j]]=[a[j],a[i]];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
 }
 
-const CORRECT_MSGS = ['✅ 正解！やったね！', '🎯 その通り！完璧！', '⭐ 正解！さすが！', '🌟 正解！いい感じ！', '💫 正解！よくできました！'];
-const WRONG_MSGS   = ['❌ 残念...もう一度確認しよう！', '💔 惜しい！正解を確認してね', '😅 不正解...次はがんばろう！', '🔄 違うよ！正解をチェックしてね'];
+const CORRECT_MSGS = ['✅ 正解！やったね！', '🎯 その通り！完璧！', '⭐ 正解！さすが！'];
+const WRONG_MSGS   = ['❌ 残念...確認しよう！', '💔 惜しい！正解を見てね'];
 
 function renderQuestion() {
-  const q     = currentTest.questions[currentQ];
+  answerInProgress = false; // 新しい問題では回答可能に
+  const q = currentTest.questions[currentQ];
   const total = currentTest.questions.length;
-  const isJ   = q.type === 'journal';
-  const pct   = Math.round((currentQ / total) * 100);
+  const isJ = q.type === 'journal'; // 仕訳問題判定
+  const pct = Math.round((currentQ / total) * 100);
 
   document.getElementById('quiz-title').textContent    = currentTest.title;
   document.getElementById('quiz-subtitle').textContent = currentTest.subtitle;
   document.getElementById('progress-bar').style.width  = pct + '%';
-  document.getElementById('progress-label').textContent = `第 ${currentQ+1} 問 ／ ${total} 問`;
+  document.getElementById('progress-label').textContent = `第 ${currentQ + 1} 問 ／ ${total} 問`;
   document.getElementById('progress-pct').textContent   = pct + '%';
   document.getElementById('scenario').textContent       = q.scenario;
   document.getElementById('feedback').className         = 'feedback';
-  document.getElementById('explanation').style.display  = 'none';
+  document.getElementById('feedback').textContent       = '';
+  document.getElementById('explanation').className      = 'explanation';
+  document.getElementById('explanation').textContent    = '';
   document.getElementById('next-btn').style.display     = 'none';
 
-  const indexed = shuffle(q.choices.map((c,i)=>({choice:c,origIdx:i})));
+  const choicesEl = document.getElementById('choices');
+  choicesEl.innerHTML = ''; // 前の問題の状態をクリア
+
+  const indexed = shuffle(q.choices.map((c, i) => ({ choice: c, origIdx: i })));
   shuffledChoices = indexed;
   const correctShuffledIdx = indexed.findIndex(x => x.origIdx === q.correct);
 
-  document.getElementById('choices').innerHTML = indexed.map((item, i) => {
-    const label = isJ ? renderJournal(item.choice) : item.choice;
-    const letters = ['a.', 'b.', 'c.', 'd.'];
-    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}"><span style="font-weight:700; margin-right:8px;">${letters[i]}</span>${label}</button>`;
+  choicesEl.innerHTML = indexed.map((item, i) => {
+    const label = String.fromCharCode(97 + i); // a, b, c, d
+    const choiceHtml = isJ ? renderJournal(item.choice) : item.choice;
+    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${choiceHtml}</button>`;
   }).join('');
+
+  // 問題表示後 0.5秒はクリック受け付けない
+  setTimeout(() => {
+    shuffledChoices.forEach((_, i) => {
+      const btn = document.getElementById(`choice-${i}`);
+      if (btn) btn.disabled = false;
+    });
+  }, 500);
 }
 
+let answerInProgress = false;
+let isReviewMode = false;
+
 function answer(idx, correctIdx) {
-  const q  = currentTest.questions[currentQ];
-  const isJ = q.type === 'journal';
-  const ok  = idx === correctIdx;
+  if (answerInProgress) return; // 複数実行防止
+  answerInProgress = true;
+
+  const q = currentTest.questions[currentQ];
+  const ok = idx === correctIdx;
   answers.push({ correct: ok, chosenOrigIdx: shuffledChoices[idx].origIdx });
 
-  shuffledChoices.forEach((_,i) => { document.getElementById(`choice-${i}`).disabled = true; });
-  document.getElementById(`choice-${idx}`).classList.add(ok ? 'correct' : 'wrong');
-  if (!ok) document.getElementById(`choice-${correctIdx}`).classList.add('reveal');
+  shuffledChoices.forEach((_, i) => { document.getElementById(`choice-${i}`).disabled = true; });
+  const ansBtn = document.getElementById(`choice-${idx}`);
+  ansBtn.classList.add(ok ? 'correct' : 'wrong');
+  const isLast = currentQ === currentTest.questions.length - 1;
+  const goNext = (e) => {
+    if (e && e.key === 'Enter') e.preventDefault(); // Enter キーでの自動実行を防止
+    soundClick();
+    isLast ? showResults() : nextQuestion();
+  };
+  const nextLabel = isLast ? '→ 結果を見る' : '→ 次の問題';
+  if (ok) {
+    ansBtn.innerHTML = `<span>${ansBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    ansBtn.onclick = goNext;
+    ansBtn.onkeydown = goNext;
+    // 答え合わせ表示後 0.5秒はクリック受け付けない
+    setTimeout(() => { ansBtn.disabled = false; }, 500);
+  }
+  const correctBtn = document.getElementById(`choice-${correctIdx}`);
+  if (!ok) {
+    correctBtn.classList.add('reveal');
+    correctBtn.innerHTML = `<span>${correctBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    correctBtn.onclick = goNext;
+    correctBtn.onkeydown = goNext;
+    // 答え合わせ表示後 0.5秒はクリック受け付けない
+    setTimeout(() => { correctBtn.disabled = false; }, 500);
+  }
 
   const fb = document.getElementById('feedback');
   fb.className = `feedback ${ok ? 'correct' : 'wrong'}`;
-  fb.textContent = ok
-    ? CORRECT_MSGS[Math.floor(Math.random()*CORRECT_MSGS.length)]
-    : WRONG_MSGS[Math.floor(Math.random()*WRONG_MSGS.length)];
+  fb.textContent = ok ? CORRECT_MSGS[Math.floor(Math.random() * CORRECT_MSGS.length)] : WRONG_MSGS[Math.floor(Math.random() * WRONG_MSGS.length)];
 
-  const expEl = document.getElementById('explanation');
-  const expText = document.getElementById('explanation-text');
   if (q.explanation) {
-    expText.textContent = q.explanation;
-    expEl.style.display = 'block';
-  } else {
-    expEl.style.display = 'none';
+    const exp = document.getElementById('explanation');
+    exp.textContent = '💡 ' + q.explanation;
+    exp.className = 'explanation show';
   }
 
   ok ? soundCorrect() : soundWrong();
 
-  const nb = document.getElementById('next-btn');
-  nb.style.display = 'block';
-  const isLast = currentQ === currentTest.questions.length - 1;
-  nb.textContent = isLast ? '📊 結果を見る →' : '➡️ 次の問題';
-  nb.onclick = async () => {
-    soundClick();
-    if (isLast) {
-      await showResults();
-    } else {
-      nextQuestion();
-    }
-  };
+  document.getElementById('next-btn').style.display = 'none';
 }
 
 function nextQuestion() { currentQ++; renderQuestion(); }
@@ -762,60 +810,90 @@ function nextQuestion() { currentQ++; renderQuestion(); }
 async function showResults() {
   const total   = currentTest.questions.length;
   const correct = answers.filter(a => a.correct).length;
-  const score   = Math.round((correct / total) * 100);
-  await setBest(currentTest.id, score);
-  const best    = await getBest(currentTest.id);
-  const isNew   = score > 0 && score >= best;
+  const score   = correct * 10; // 1問10点
+  const maxScore = total * 10;
+
+  if (!isReviewMode) {
+    await setBest(currentTest.id, score);
+    const best = await getBest(currentTest.id);
+    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点`;
+    document.getElementById('best-msg').style.display = '';
+  } else {
+    document.getElementById('best-msg').style.display = 'none';
+  }
 
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.remove('hidden');
-  document.getElementById('result-title').textContent = currentTest.title + ' 結果 🎉';
-  document.getElementById('score-num').textContent    = score;
+  document.getElementById('result-title').textContent = isReviewMode ? currentTest.title + ' 復習結果' : currentTest.title + ' 結果 🎉';
+  document.getElementById('score-num').innerHTML    = `<span class="score-main">${score}</span><span class="score-sub"> / ${maxScore}点</span>`;
 
-  const stars = score === 100 ? '⭐⭐⭐' : score >= 70 ? '⭐⭐' : score >= 40 ? '⭐' : '　';
+  const ratio = score / maxScore;
+  const stars = ratio === 1 ? '⭐⭐⭐' : ratio >= 0.7 ? '⭐⭐' : ratio >= 0.4 ? '⭐' : '　';
   document.getElementById('score-stars').textContent = stars;
+  document.getElementById('score-msg').textContent = ratio === 1 ? '🏆 満点！' : ratio >= 0.8 ? '🌟 すごい！' : ratio >= 0.6 ? '💪 惜しい！' : ratio >= 0.4 ? '📚 復習しよう' : '😅 もう一度';
 
-  document.getElementById('score-msg').textContent =
-    score === 100 ? '🏆 満点！天才すぎる！！' :
-    score >= 80   ? '🌟 すごい！もう少しで満点！' :
-    score >= 60   ? '💪 惜しい！もう一息！' :
-    score >= 40   ? '📚 まだまだ！復習してみよう！' :
-                    '😅 ん〜、一緒にがんばろう！';
-
-  document.getElementById('best-msg').textContent =
-    `🏅 最高得点: ${best}点${isNew ? '（🔥 更新！）' : ''}`;
-
-  if (score === 100) { soundFanfare(); setTimeout(() => launchConfetti(80), 300); }
-  else if (score >= 70) { soundGood(); setTimeout(() => launchConfetti(30), 300); }
+  if (ratio === 1) { soundFanfare(); setTimeout(() => launchConfetti(80), 300); }
+  else if (ratio >= 0.7) { soundGood(); setTimeout(() => launchConfetti(30), 300); }
   else soundClick();
 
-  document.getElementById('answer-list').innerHTML = currentTest.questions.map((q,i) => {
-    const ans         = answers[i];
-    const color       = ans.correct ? '#38a169' : '#e53e3e';
-    const correctC    = q.choices[q.correct];
-    const chosenC     = q.choices[ans.chosenOrigIdx];
-    const isJ         = q.type === 'journal';
-    const correctText = isJ ? journalText(correctC) : correctC;
-    const chosenText  = isJ ? journalText(chosenC)  : chosenC;
+  const wrongCount = answers.filter(a => !a.correct).length;
+  const reviewBtn = document.getElementById('review-btn');
+  if (wrongCount > 0) {
+    const btnText = isReviewMode ? `🔁 もう一度復習 (${wrongCount}問)` : `🔁 間違えた ${wrongCount} 問を復習する`;
+    reviewBtn.textContent = btnText;
+    reviewBtn.style.display = '';
+  } else {
+    reviewBtn.style.display = 'none';
+  }
+
+  document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
+    const ans = answers[i];
+    const correctText = q.choices[q.correct];
+    const chosenText = q.choices[ans.chosenOrigIdx];
     let detail = `<span>${q.scenario}</span><br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
     if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
-    if (q.explanation) detail += `<br><span style="font-size:0.85rem; color:#667eea; margin-top:6px; font-style:italic;">📝 解説: ${q.explanation}</span>`;
-    return `<div class="answer-row">
-      <span class="q-num">Q${i+1}</span>
-      <span class="mark">${ans.correct ? '✅' : '❌'}</span>
-      <div class="answer-detail">${detail}</div>
-    </div>`;
+    if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}</div>`;
+    return `<div class="answer-row"><span class="q-num">Q${i + 1}</span><span class="mark">${ans.correct ? '✅' : '❌'}</span><div class="answer-detail">${detail}</div></div>`;
   }).join('');
 }
 
-auth.onAuthStateChanged(user => {
-  if (!user) {
-    // ログインなしでも使用可能
-  }
-});
+function startReview() {
+  const wrongQuestions = currentTest.questions.filter((_, i) => !answers[i].correct);
+  currentTest = { ...currentTest, questions: wrongQuestions };
+  isReviewMode = true;
+  currentQ = 0;
+  answers = [];
+  document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.remove('hidden');
+  renderQuestion();
+}
 
 // 初期化
-loadQuestions(1);
+loadAllQuestions();
+
+// キーボードショートカット
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('screen-quiz').classList.contains('hidden')) return;
+  const key = e.key.toLowerCase();
+
+  if (!answerInProgress) {
+    // 回答前: a/b/c/d で選択
+    const map = { 'a': 0, 'b': 1, 'c': 2, 'd': 3 };
+    if (key in map) {
+      const btn = document.getElementById(`choice-${map[key]}`);
+      if (btn && !btn.disabled) btn.click();
+    }
+  } else if (key === 'enter') {
+    // 回答後: Enter で次へ（0.5秒ガード中は disabled なので自然に弾かれる）
+    for (let i = 0; i < 4; i++) {
+      const btn = document.getElementById(`choice-${i}`);
+      if (btn && !btn.disabled && (btn.classList.contains('correct') || btn.classList.contains('reveal'))) {
+        btn.click();
+        break;
+      }
+    }
+  }
+});
 
 (function() {
   const now = new Date();
