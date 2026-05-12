@@ -18,7 +18,8 @@
             "S3 静的ウェブサイトホスティングを有効にする。"
           ],
           "correct": 0,
-          "explanation": "クロスアカウントデプロイでは、送信先アカウントの CodePipeline ロールに対して S3 バケットへのアクセス許可（s3:GetObject、s3:PutObject）を付与するバケットポリシーが必須。KMS カスタマーマネージドキーを使用し、KMS キーポリシーでも送信先アカウントへのアクセスを明示的に許可する必要がある。AWS マネージド型キーではアカウント間の権限制御ができない。"
+          "explanation": "クロスアカウントデプロイでは、送信先アカウントの CodePipeline ロールに対して S3 バケットへのアクセス許可（s3:GetObject、s3:PutObject）を付与するバケットポリシーが必須。KMS カスタマーマネージドキーを使用し、KMS キーポリシーでも送信先アカウントへのアクセスを明示的に許可する必要がある。AWS マネージド型キーではアカウント間の権限制御ができない。",
+          "type": "choice"
         },
         {
           "scenario": "CodeDeploy で Lambda のトラフィックを 10% ずつ 10 分ごとに増やす設定はどれですか？",
@@ -29,7 +30,8 @@
             "LambdaBlueGreen10Percent"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy では Lambda へのトラフィック切り替え戦略を指定します。LambdaLinear10PercentEvery10Minutes は「10 分ごとに 10% ずつ増加」という線形な段階的デプロイです。Canary は少数→全体、All at once は瞬時です。"
+          "explanation": "CodeDeploy では Lambda へのトラフィック切り替え戦略を指定します。LambdaLinear10PercentEvery10Minutes は「10 分ごとに 10% ずつ増加」という線形な段階的デプロイです。Canary は少数→全体、All at once は瞬時です。",
+          "type": "choice"
         },
         {
           "scenario": "CloudFormation でスタックの削除時に特定の S3 バケットだけを残したい場合の設定はどれですか？",
@@ -40,7 +42,8 @@
             "TerminationProtection: Enable"
           ],
           "correct": 0,
-          "explanation": "CloudFormation でリソースを削除から保護するには DeletionPolicy: Retain を使用。UpdateReplacePolicy はスタック更新時の動作、Metadata はメタ情報、TerminationProtection はスタック削除を禁止(スタック全体)です。"
+          "explanation": "CloudFormation でリソースを削除から保護するには DeletionPolicy: Retain を使用。UpdateReplacePolicy はスタック更新時の動作、Metadata はメタ情報、TerminationProtection はスタック削除を禁止(スタック全体)です。",
+          "type": "choice"
         },
         {
           "scenario": "Auto Scaling グループで、新しいインスタンスがトラフィックを受ける前にウォームアップ時間を設けたい場合に使用する機能は？",
@@ -51,7 +54,8 @@
             "ライフサイクルフック"
           ],
           "correct": 0,
-          "explanation": "Auto Scaling グループでは Health Check Grace Period で、新規インスタンスがトラフィックを受け取る前のウォームアップ時間を確保できます。クールダウン期間はスケーリング操作後の待機時間です。"
+          "explanation": "Auto Scaling グループでは Health Check Grace Period で、新規インスタンスがトラフィックを受け取る前のウォームアップ時間を確保できます。クールダウン期間はスケーリング操作後の待機時間です。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Organizations で全アカウントに対して特定のリージョン以外の使用を禁止するガードレールは？",
@@ -62,7 +66,8 @@
             "Resource Access Manager"
           ],
           "correct": 0,
-          "explanation": "SCP（サービスコントロールポリシー）は Organizations で複数アカウントへのサービス利用を制限します。IAM 境界は IAM 権限の上限、Config は設定監視、RAM はリソース共有です。"
+          "explanation": "SCP（サービスコントロールポリシー）は Organizations で複数アカウントへのサービス利用を制限します。IAM 境界は IAM 権限の上限、Config は設定監視、RAM はリソース共有です。",
+          "type": "choice"
         },
         {
           "scenario": "CodeBuild のビルド環境で、Docker イメージのレイヤーキャッシュを有効にしてビルドを高速化する方法は？",
@@ -73,7 +78,8 @@
             "ソースプロバイダーを S3 に限定する。"
           ],
           "correct": 0,
-          "explanation": "CodeBuild で Docker イメージレイヤーキャッシュを有効にするには、buildspec.yml で cache セクションに docker レイヤ対象を指定し、プロジェクト設定でキャッシュ場所を選択（LOCAL: ローカルキャッシュで同じビルド環境内、S3: S3 バケットで複数ビルド環境間で共有）。多段階ビルド時に中間レイヤが再利用されるため大幅に高速化できる。"
+          "explanation": "CodeBuild で Docker イメージレイヤーキャッシュを有効にするには、buildspec.yml で cache セクションに docker レイヤ対象を指定し、プロジェクト設定でキャッシュ場所を選択（LOCAL: ローカルキャッシュで同じビルド環境内、S3: S3 バケットで複数ビルド環境間で共有）。多段階ビルド時に中間レイヤが再利用されるため大幅に高速化できる。",
+          "type": "choice"
         },
         {
           "scenario": "Systems Manager パッチマネージャーを使用して、非準拠のインスタンスを特定しつつパッチは当てない操作はどれですか？",
@@ -84,7 +90,8 @@
             "インスタンスの再起動"
           ],
           "correct": 0,
-          "explanation": "Systems Manager パッチマネージャーのスキャン操作は非準拠インスタンスを検出するのみで、パッチは当てません。インストール操作がパッチ適用です。"
+          "explanation": "Systems Manager パッチマネージャーのスキャン操作は非準拠インスタンスを検出するのみで、パッチは当てません。インストール操作がパッチ適用です。",
+          "type": "choice"
         },
         {
           "scenario": "Amazon EventBridge を使用して、EC2 の状態変化を検知し Lambda を起動する構成において、フィルタリングを行う場所はどこですか？",
@@ -95,7 +102,8 @@
             "Lambda の環境変数"
           ],
           "correct": 0,
-          "explanation": "EventBridge でフィルタリングはイベントパターンルールで行います。IAM ポリシー、CloudWatch Logs、Lambda 環境変数はフィルタリング場所ではありません。"
+          "explanation": "EventBridge でフィルタリングはイベントパターンルールで行います。IAM ポリシー、CloudWatch Logs、Lambda 環境変数はフィルタリング場所ではありません。",
+          "type": "choice"
         },
         {
           "scenario": "CloudFormation のドリフト検出機能で特定できる内容はどれですか？",
@@ -106,7 +114,8 @@
             "IAM ユーザーのログイン履歴"
           ],
           "correct": 0,
-          "explanation": "ドリフト検出は、コンソール等で直接変更されたリソース設定とテンプレートの差異を特定します。構文エラーはテンプレート検証で、コスト予測や監査履歴ではありません。"
+          "explanation": "ドリフト検出は、コンソール等で直接変更されたリソース設定とテンプレートの差異を特定します。構文エラーはテンプレート検証で、コスト予測や監査履歴ではありません。",
+          "type": "choice"
         },
         {
           "scenario": "Blue/Green デプロイメントにおいて、Route 53 の加重レコードを使用する利点は？",
@@ -117,7 +126,8 @@
             "SSL 証明書が不要になる。"
           ],
           "correct": 0,
-          "explanation": "Route 53 の加重ルーティング（重み付け）により、トラフィックを指定割合で複数の対象に分配でき、段階的なトラフィック切り替えが可能です。"
+          "explanation": "Route 53 の加重ルーティング（重み付け）により、トラフィックを指定割合で複数の対象に分配でき、段階的なトラフィック切り替えが可能です。",
+          "type": "choice"
         }
       ]
     },
@@ -137,7 +147,8 @@
             "IAM によるアクセス制御"
           ],
           "correct": 0,
-          "explanation": "Secrets Manager には**組み込みのシークレットローテーション**が特徴。Lambda 関数と連携して RDS パスワードや API キーを定期的に自動更新し、古いシークレットは一時期は並行利用できる（段階的な切り替え）。Parameter Store はローテーション機能がなく、代わりに無料で Standard パラメータ（4KB）が利用可能。安全な保存と IAM 制御は両方でサポート。"
+          "explanation": "Secrets Manager には**組み込みのシークレットローテーション**が特徴。Lambda 関数と連携して RDS パスワードや API キーを定期的に自動更新し、古いシークレットは一時期は並行利用できる（段階的な切り替え）。Parameter Store はローテーション機能がなく、代わりに無料で Standard パラメータ（4KB）が利用可能。安全な保存と IAM 制御は両方でサポート。",
+          "type": "choice"
         },
         {
           "scenario": "Amazon Inspector を使用して EC2 インスタンスの脆弱性をスキャンする際、必要なコンポーネントは？",
@@ -148,7 +159,8 @@
             "CodeDeploy エージェント"
           ],
           "correct": 0,
-          "explanation": "Inspector はリモートスキャンのため、Systems Manager (SSM) エージェント経由で脆弱性情報を収集します。エージェント、CloudWatch、CodeDeploy エージェントは不要です。"
+          "explanation": "Inspector はリモートスキャンのため、Systems Manager (SSM) エージェント経由で脆弱性情報を収集します。エージェント、CloudWatch、CodeDeploy エージェントは不要です。",
+          "type": "choice"
         },
         {
           "scenario": "Config ルールを使用して「すべての EC2 にタグが付いていること」を確認し、付いていない場合に自動で修正（修復）する機能は？",
@@ -159,7 +171,8 @@
             "Lambda の定期実行のみ"
           ],
           "correct": 0,
-          "explanation": "AWS Config では Config ルールで非準拠を検出し、SSM Automation を使った修復アクション（Remediation Actions）で自動修正できます。CloudFormation や IAM のみでは修復できません。"
+          "explanation": "AWS Config では Config ルールで非準拠を検出し、SSM Automation を使った修復アクション（Remediation Actions）で自動修正できます。CloudFormation や IAM のみでは修復できません。",
+          "type": "choice"
         },
         {
           "scenario": "Amazon CloudWatch Logs で機密情報をマスクするための機能は？",
@@ -170,7 +183,8 @@
             "ロググループの暗号化のみ"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Logs の Data Protection ポリシー機能で、クレジットカード番号など機密情報をマスク（置換）できます。その他はログの保存や転送の仕組みです。"
+          "explanation": "CloudWatch Logs の Data Protection ポリシー機能で、クレジットカード番号など機密情報をマスク（置換）できます。その他はログの保存や転送の仕組みです。",
+          "type": "choice"
         },
         {
           "scenario": "Elastic Beanstalk で、デプロイ中に新しいインスタンスのバッチを別途作成し、成功を確認してから入れ替えるポリシーは？",
@@ -181,7 +195,8 @@
             "Rebuild デプロイ"
           ],
           "correct": 0,
-          "explanation": "Immutable デプロイは新しいインスタンスのバッチを別途起動し、ヘルスチェックに成功してから既存バッチに置き換えます。Rolling はバッチごと、All at once は一度に更新です。"
+          "explanation": "Immutable デプロイは新しいインスタンスのバッチを別途起動し、ヘルスチェックに成功してから既存バッチに置き換えます。Rolling はバッチごと、All at once は一度に更新です。",
+          "type": "choice"
         },
         {
           "scenario": "Kinesis Data Firehose から S3 にログを配信する際、分析効率を上げるために Firehose 側で実行できる処理は？",
@@ -192,7 +207,8 @@
             "IAM ユーザーの作成"
           ],
           "correct": 0,
-          "explanation": "Kinesis Firehose は S3 配信設定で圧縮形式（GZIP、SNAPPY、ZIP）とフォーマット（Parquet、ORC、JSON）を指定でき、Athena による S3 Select クエリやビッグデータ分析を効率化できる。Lambda 変換を組み合わせるとさらに細粒度の処理も可能。SQL クエリ実行は Athena 側で行う。"
+          "explanation": "Kinesis Firehose は S3 配信設定で圧縮形式（GZIP、SNAPPY、ZIP）とフォーマット（Parquet、ORC、JSON）を指定でき、Athena による S3 Select クエリやビッグデータ分析を効率化できる。Lambda 変換を組み合わせるとさらに細粒度の処理も可能。SQL クエリ実行は Athena 側で行う。",
+          "type": "choice"
         },
         {
           "scenario": "マルチアカウント環境で CloudTrail ログを 1 つのアカウントに集約する最適な方法は？",
@@ -203,7 +219,8 @@
             "VPC ピアリング経由で転送する。"
           ],
           "correct": 0,
-          "explanation": "Organizations の組織トレイルを使い、全メンバーアカウント CloudTrail のログを中央 S3 バケットに集約できます。個別設定より管理が楽です。"
+          "explanation": "Organizations の組織トレイルを使い、全メンバーアカウント CloudTrail のログを中央 S3 バケットに集約できます。個別設定より管理が楽です。",
+          "type": "choice"
         },
         {
           "scenario": "OpsWorks で、インスタンスの起動や設定変更時に自動的に実行されるスクリプトの集まりを何と呼びますか？",
@@ -214,7 +231,8 @@
             "プレイブック (Playbooks)"
           ],
           "correct": 0,
-          "explanation": "OpsWorks は Chef/Puppet で管理され、クックブックがインスタンス起動や設定変更時に自動実行されるスクリプト集です。"
+          "explanation": "OpsWorks は Chef/Puppet で管理され、クックブックがインスタンス起動や設定変更時に自動実行されるスクリプト集です。",
+          "type": "choice"
         },
         {
           "scenario": "CloudWatch アラームの状態が ALARM になった際、自動的に EC2 インスタンスを終了させるアクションを追加できますか？",
@@ -225,7 +243,8 @@
             "はい、ただし S3 バケットへの保存が必要である。"
           ],
           "correct": 0,
-          "explanation": "CloudWatch アラーム ALARM 状態で EC2 停止、終了、再起動、復旧といったアクションをスケール設定で自動実行できます。Lambda 経由なしで直接設定可能です。"
+          "explanation": "CloudWatch アラーム ALARM 状態で EC2 停止、終了、再起動、復旧といったアクションをスケール設定で自動実行できます。Lambda 経由なしで直接設定可能です。",
+          "type": "choice"
         },
         {
           "scenario": "CodeCommit で、特定のブランチ（main など）への直接プッシュを禁止し、プルリクエストを強制するために併用すべき機能は？",
@@ -236,7 +255,8 @@
             "AWS Config"
           ],
           "correct": 0,
-          "explanation": "CodeCommit ブランチ保護と IAM Deny ポリシーを組み合わせて、main への直接プッシュを禁止し、プルリクエスト必須にします。"
+          "explanation": "CodeCommit ブランチ保護と IAM Deny ポリシーを組み合わせて、main への直接プッシュを禁止し、プルリクエスト必須にします。",
+          "type": "choice"
         }
       ]
     },
@@ -256,7 +276,8 @@
             "VPC フローログ"
           ],
           "correct": 0,
-          "explanation": "X-Ray のサービスマップはコンポーネント間の呼び出し関係を図示します。トレースビューアは個別トレースの詳細表示です。"
+          "explanation": "X-Ray のサービスマップはコンポーネント間の呼び出し関係を図示します。トレースビューアは個別トレースの詳細表示です。",
+          "type": "choice"
         },
         {
           "scenario": "CloudFormation の「スタックセット (StackSets)」の主な用途は？",
@@ -267,7 +288,8 @@
             "テンプレートを自動生成する。"
           ],
           "correct": 0,
-          "explanation": "StackSets で複数アカウント・リージョンへのデプロイが一括化でき、操作が大幅に簡略化されます。"
+          "explanation": "StackSets で複数アカウント・リージョンへのデプロイが一括化でき、操作が大幅に簡略化されます。",
+          "type": "choice"
         },
         {
           "scenario": "Amazon GuardDuty が検出した脅威情報を自動的に修復するために推奨される組み合わせは？",
@@ -278,7 +300,8 @@
             "Inspector + Systems Manager"
           ],
           "correct": 0,
-          "explanation": "GuardDuty が脅威を検出すると EventBridge（GuardDuty findings イベント）でそれをキャッチ、Lambda で自動修復（セキュリティグループ変更、インスタンス隔離など）、複雑なワークフローなら Step Functions で実装。その結果を SNS 通知や SecurityHub に連携。S3+Athena はログ分析、Config は設定監視が役目。"
+          "explanation": "GuardDuty が脅威を検出すると EventBridge（GuardDuty findings イベント）でそれをキャッチ、Lambda で自動修復（セキュリティグループ変更、インスタンス隔離など）、複雑なワークフローなら Step Functions で実装。その結果を SNS 通知や SecurityHub に連携。S3+Athena はログ分析、Config は設定監視が役目。",
+          "type": "choice"
         },
         {
           "scenario": "CloudWatch Logs サブスクリプションフィルタでサポートされていない送信先は？",
@@ -289,7 +312,8 @@
             "AWS Lambda"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Logs サブスクリプションフィルタが直接サポートする送信先は Kinesis Data Streams、Kinesis Data Firehose、Lambda、および CloudWatch Logs（クロスアカウント）です。SNS は直接サポートされていません。SNS に通知したい場合は Lambda を経由する必要があります。"
+          "explanation": "CloudWatch Logs サブスクリプションフィルタが直接サポートする送信先は Kinesis Data Streams、Kinesis Data Firehose、Lambda、および CloudWatch Logs（クロスアカウント）です。SNS は直接サポートされていません。SNS に通知したい場合は Lambda を経由する必要があります。",
+          "type": "choice"
         },
         {
           "scenario": "CodeDeploy で、オンプレミスサーバーにデプロイするために最低限必要な構成は？",
@@ -300,7 +324,8 @@
             "AWS への VPN 接続のみ"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy エージェントをオンプレミスサーバーにインストール + IAM ユーザー/ロール認証情報でアクセスします。DirectConnect やVPN は必須ではありません。"
+          "explanation": "CodeDeploy エージェントをオンプレミスサーバーにインストール + IAM ユーザー/ロール認証情報でアクセスします。DirectConnect やVPN は必須ではありません。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Systems Manager セッションマネージャーの主な利点は？",
@@ -311,7 +336,8 @@
             "インターネットゲートウェイが不要になる。"
           ],
           "correct": 0,
-          "explanation": "Session Manager は SSH キー不要、セキュリティグループのポート 22（SSH）開放不要で安全にシェルアクセスできる。IAM ロールと Systems Manager（Session Manager）ドキュメントで権限制御。全セッションは CloudWatch Logs や S3 に自動記録でき、監査対応も容易。EC2 Instance Connect とは異なり、プライベートサブネットのインスタンスにも接続可能（VPC エンドポイント設定で）。"
+          "explanation": "Session Manager は SSH キー不要、セキュリティグループのポート 22（SSH）開放不要で安全にシェルアクセスできる。IAM ロールと Systems Manager（Session Manager）ドキュメントで権限制御。全セッションは CloudWatch Logs や S3 に自動記録でき、監査対応も容易。EC2 Instance Connect とは異なり、プライベートサブネットのインスタンスにも接続可能（VPC エンドポイント設定で）。",
+          "type": "choice"
         },
         {
           "scenario": "CodePipeline の「手動承認」アクションを実行する際、通知を送るために利用されるサービスは？",
@@ -322,7 +348,8 @@
             "AWS Step Functions"
           ],
           "correct": 0,
-          "explanation": "CodePipeline 手動承認アクション → SNS で通知を送ります。SES はメール送信、SQS はキューイング、Step Functions はオーケストレーションです。"
+          "explanation": "CodePipeline 手動承認アクション → SNS で通知を送ります。SES はメール送信、SQS はキューイング、Step Functions はオーケストレーションです。",
+          "type": "choice"
         },
         {
           "scenario": "Auto Scaling ライフサイクルフックを使用中、処理が完了したことを Auto Scaling に伝えるためのコマンド（または API）は？",
@@ -333,7 +360,8 @@
             "record-lifecycle-action-heartbeat"
           ],
           "correct": 0,
-          "explanation": "Auto Scaling ライフサイクルフック使用時に complete-lifecycle-action を呼んで、処理完了を通知します。"
+          "explanation": "Auto Scaling ライフサイクルフック使用時に complete-lifecycle-action を呼んで、処理完了を通知します。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Health Dashboard (旧 Personal Health Dashboard) の役割は？",
@@ -344,7 +372,8 @@
             "請求金額の予測を表示する。"
           ],
           "correct": 0,
-          "explanation": "AWS Health Dashboard は**自分のリソースに影響がある AWS インフラ障害やメンテナンス情報**を表示します。EC2 メトリクスは CloudWatch、脆弱性は Inspector です。"
+          "explanation": "AWS Health Dashboard は**自分のリソースに影響がある AWS インフラ障害やメンテナンス情報**を表示します。EC2 メトリクスは CloudWatch、脆弱性は Inspector です。",
+          "type": "choice"
         },
         {
           "scenario": "EC2 Auto Scaling で「古いインスタンスから順に削除したい」場合に使用する終了ポリシーは？",
@@ -355,7 +384,8 @@
             "Default"
           ],
           "correct": 0,
-          "explanation": "OldestInstance 終了ポリシーで、最も古いインスタンスから順に削除します。OldestLaunchConfiguration は設定が古いもの、ClosestToNextInstanceHour は時間課金の最適化です。"
+          "explanation": "OldestInstance 終了ポリシーで、最も古いインスタンスから順に削除します。OldestLaunchConfiguration は設定が古いもの、ClosestToNextInstanceHour は時間課金の最適化です。",
+          "type": "choice"
         }
       ]
     },
@@ -375,7 +405,8 @@
             "アドバンスドメトリクス"
           ],
           "correct": 0,
-          "explanation": "高解像度 (High-resolution) メトリクスで最短 1 秒粒度でのデータ送信が可能です。詳細モニタリングは通常の 1 分粒度です。"
+          "explanation": "高解像度 (High-resolution) メトリクスで最短 1 秒粒度でのデータ送信が可能です。詳細モニタリングは通常の 1 分粒度です。",
+          "type": "choice"
         },
         {
           "scenario": "CodeBuild で、ビルドごとに新しい IAM ロールを動的に割り当てることは可能ですか？",
@@ -386,7 +417,8 @@
             "いいえ、常に root 権限で実行される。"
           ],
           "correct": 0,
-          "explanation": "CodeBuild のサービスロールはプロジェクトごとに固定で、buildspec.yml では指定できません。ただし、ロール内の権限は動的に変更可能です。"
+          "explanation": "CodeBuild のサービスロールはプロジェクトごとに固定で、buildspec.yml では指定できません。ただし、ロール内の権限は動的に変更可能です。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Trusted Advisor がチェックしないカテゴリはどれですか？",
@@ -397,7 +429,8 @@
             "パフォーマンス"
           ],
           "correct": 0,
-          "explanation": "Trusted Advisor はセキュリティ、コスト、パフォーマンス、フォルトトレランス、制限値をチェック。アプリケーションバグ分析はしません。"
+          "explanation": "Trusted Advisor はセキュリティ、コスト、パフォーマンス、フォルトトレランス、制限値をチェック。アプリケーションバグ分析はしません。",
+          "type": "choice"
         },
         {
           "scenario": "CloudFormation の「マクロ (Macros)」を使用すると何ができますか？",
@@ -408,7 +441,8 @@
             "マルチアカウントデプロイを行う。"
           ],
           "correct": 0,
-          "explanation": "CloudFormation マクロを使うと、テンプレート処理中に Lambda を呼び出してカスタム変換ができます。"
+          "explanation": "CloudFormation マクロを使うと、テンプレート処理中に Lambda を呼び出してカスタム変換ができます。",
+          "type": "choice"
         },
         {
           "scenario": "Amazon EventBridge パイプ (Pipes) の主な目的は？",
@@ -419,7 +453,8 @@
             "Docker イメージをビルドする。"
           ],
           "correct": 0,
-          "explanation": "EventBridge Pipes は異なるソースとターゲットを直接つなぎ、変換フィルタリングを簡潔に記述できます。"
+          "explanation": "EventBridge Pipes は異なるソースとターゲットを直接つなぎ、変換フィルタリングを簡潔に記述できます。",
+          "type": "choice"
         },
         {
           "scenario": "EC2 で稼働中のアプリの標準出力を CloudWatch Logs に送るために推奨される方法は？",
@@ -430,7 +465,8 @@
             "AWS CLI を crontab で回す。"
           ],
           "correct": 0,
-          "explanation": "CloudWatch エージェントをインストール + 設定ファイルでログ転送先を指定し、アプリ標準出力を CloudWatch Logs に送ります。"
+          "explanation": "CloudWatch エージェントをインストール + 設定ファイルでログ転送先を指定し、アプリ標準出力を CloudWatch Logs に送ります。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Systems Manager の「インベントリ (Inventory)」機能で収集できる情報は？",
@@ -441,7 +477,8 @@
             "請求の詳細な明細"
           ],
           "correct": 0,
-          "explanation": "Systems Manager インベントリは OS バージョン、ソフト、ネットワーク設定などのメタデータを自動収集します。"
+          "explanation": "Systems Manager インベントリは OS バージョン、ソフト、ネットワーク設定などのメタデータを自動収集します。",
+          "type": "choice"
         },
         {
           "scenario": "CodeDeploy で「失敗した時に自動的にロールバックする」ためのトリガー条件として設定できるものは？",
@@ -452,7 +489,8 @@
             "S3 バケットが一杯になった時"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy のロールバック条件として、デプロイ失敗時や CloudWatch アラーム超過時が設定できます。"
+          "explanation": "CodeDeploy のロールバック条件として、デプロイ失敗時や CloudWatch アラーム超過時が設定できます。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Application Cost Profiler の用途は？",
@@ -463,7 +501,8 @@
             "AWS の請求書を発行する。"
           ],
           "correct": 0,
-          "explanation": "Application Cost Profiler で、共有リソースのコストをアプリケーション別に詳細分析・配分できます。"
+          "explanation": "Application Cost Profiler で、共有リソースのコストをアプリケーション別に詳細分析・配分できます。",
+          "type": "choice"
         },
         {
           "scenario": "CloudWatch ダッシュボードで複数のリージョンのメトリクスを 1 つの画面に表示できますか？",
@@ -474,7 +513,8 @@
             "いいえ、CloudFormation で作成した場合のみ可能。"
           ],
           "correct": 0,
-          "explanation": "CloudWatch ダッシュボードは複数リージョンのメトリクスを 1 つの画面に表示できます。"
+          "explanation": "CloudWatch ダッシュボードは複数リージョンのメトリクスを 1 つの画面に表示できます。",
+          "type": "choice"
         }
       ]
     },
@@ -494,7 +534,8 @@
             "ソースコードを自動生成する。"
           ],
           "correct": 0,
-          "explanation": "Step Functions（StateMachine）は複数の Lambda/ECS/Glue などのタスクを並列・逐次実行するワークフローを定義。状態管理、エラーハンドリング（Catch）、リトライ・バックオフ処理、待機（Wait）タスクを JSON で宣言的に記述できるため、ビジネスロジックはタスク内に、ワークフロー制御は Step Functions に分離。最大 1 年の長時間実行も可能で、Lambda 15 分制限を超える処理に最適。"
+          "explanation": "Step Functions（StateMachine）は複数の Lambda/ECS/Glue などのタスクを並列・逐次実行するワークフローを定義。状態管理、エラーハンドリング（Catch）、リトライ・バックオフ処理、待機（Wait）タスクを JSON で宣言的に記述できるため、ビジネスロジックはタスク内に、ワークフロー制御は Step Functions に分離。最大 1 年の長時間実行も可能で、Lambda 15 分制限を超える処理に最適。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Resource Groups の役割は？",
@@ -505,7 +546,8 @@
             "S3 のデータをフォルダ分けする。"
           ],
           "correct": 0,
-          "explanation": "Resource Groups はタグベースでリソースをまとめ、グループごとに監視・管理を一括化できます。"
+          "explanation": "Resource Groups はタグベースでリソースをまとめ、グループごとに監視・管理を一括化できます。",
+          "type": "choice"
         },
         {
           "scenario": "CloudFormation の `Transform: AWS::Serverless-2016-10-31` は何を示していますか？",
@@ -516,7 +558,8 @@
             "Docker コンテナを起動すること"
           ],
           "correct": 0,
-          "explanation": "SAM (Serverless Application Model) は CloudFormation の拡張で、サーバーレスアプリケーション開発を簡潔に記述できます。"
+          "explanation": "SAM (Serverless Application Model) は CloudFormation の拡張で、サーバーレスアプリケーション開発を簡潔に記述できます。",
+          "type": "choice"
         },
         {
           "scenario": "AWS AppConfig の主な用途は？",
@@ -527,7 +570,8 @@
             "ソースコードの静的解析を行う。"
           ],
           "correct": 0,
-          "explanation": "AppConfig は設定値やフィーチャーフラグを分離管理し、アプリ再デプロイなしに段階的に展開（Deployment Strategy: Linear, Exponential, All-at-once）。バリデーション（JSON Schema）を設定して無効な値を自動拒否、ロールバック（CloudWatch メトリクスやカスタム Lambda）も設定可能。A/B テスト用途にも活用。"
+          "explanation": "AppConfig は設定値やフィーチャーフラグを分離管理し、アプリ再デプロイなしに段階的に展開（Deployment Strategy: Linear, Exponential, All-at-once）。バリデーション（JSON Schema）を設定して無効な値を自動拒否、ロールバック（CloudWatch メトリクスやカスタム Lambda）も設定可能。A/B テスト用途にも活用。",
+          "type": "choice"
         },
         {
           "scenario": "CloudWatch Logs Insights の機能は？",
@@ -538,7 +582,8 @@
             "ログに電子署名を付与する。"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Logs Insights は独自のクエリ言語で、ログの高速検索・分析・グラフ化ができます。"
+          "explanation": "CloudWatch Logs Insights は独自のクエリ言語で、ログの高速検索・分析・グラフ化ができます。",
+          "type": "choice"
         },
         {
           "scenario": "CodeDeploy エラー `Health constraints invalid` の一般的な原因は？",
@@ -549,7 +594,8 @@
             "ネットワーク接続が切れている。"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy の Health constraints invalid エラーは、最小健全ホスト数 (Minimum Healthy Hosts) の要件が満たせない時に発生します。"
+          "explanation": "CodeDeploy の Health constraints invalid エラーは、最小健全ホスト数 (Minimum Healthy Hosts) の要件が満たせない時に発生します。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Service Catalog で管理者が行うべき操作は？",
@@ -560,7 +606,8 @@
             "ドメインを登録する。"
           ],
           "correct": 0,
-          "explanation": "Service Catalog で承認済みテンプレートを製品として登録し、ユーザーがセルフサービスで利用できます。"
+          "explanation": "Service Catalog で承認済みテンプレートを製品として登録し、ユーザーがセルフサービスで利用できます。",
+          "type": "choice"
         },
         {
           "scenario": "Amazon ECS のデプロイで「Rolling update」を選択した場合の挙動は？",
@@ -571,7 +618,8 @@
             "デプロイを行わない。"
           ],
           "correct": 0,
-          "explanation": "ECS Rolling update では、古いタスクを徐々に停止しながら新タスクに置き換え、ダウンタイムを最小化します。"
+          "explanation": "ECS Rolling update では、古いタスクを徐々に停止しながら新タスクに置き換え、ダウンタイムを最小化します。",
+          "type": "choice"
         },
         {
           "scenario": "AWS CloudMap の主な役割は？",
@@ -582,7 +630,8 @@
             "世界地図上のリソース配置を表示する。"
           ],
           "correct": 0,
-          "explanation": "CloudMap でリソースにカスタム名を付け、サービス検出を容易にします。特にマイクロサービス環境で有用です。"
+          "explanation": "CloudMap でリソースにカスタム名を付け、サービス検出を容易にします。特にマイクロサービス環境で有用です。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Audit Manager を使用して得られるメリットは？",
@@ -593,7 +642,8 @@
             "ネットワーク速度を向上させる。"
           ],
           "correct": 0,
-          "explanation": "Audit Manager で AWS 利用状況を継続的に監査し、コンプライアンス証拠を自動収集・管理できます。"
+          "explanation": "Audit Manager で AWS 利用状況を継続的に監査し、コンプライアンス証拠を自動収集・管理できます。",
+          "type": "choice"
         }
       ]
     },
@@ -613,7 +663,8 @@
             "追加料金が一切かからない。"
           ],
           "correct": 0,
-          "explanation": "クロスリージョンアクションでは、各リージョンごとにアーティファクトストア(S3)が必要になります。1 つの S3 では全リージョンをカバーできません。"
+          "explanation": "クロスリージョンアクションでは、各リージョンごとにアーティファクトストア(S3)が必要になります。1 つの S3 では全リージョンをカバーできません。",
+          "type": "choice"
         },
         {
           "scenario": "Config ルールの「カスタムルール」を作成するために使用するサービスは？",
@@ -624,7 +675,8 @@
             "Amazon SNS"
           ],
           "correct": 0,
-          "explanation": "Config カスタムルールは Lambda 関数で実装され、独自のチェックロジックを定義できます。"
+          "explanation": "Config カスタムルールは Lambda 関数で実装され、独自のチェックロジックを定義できます。",
+          "type": "choice"
         },
         {
           "scenario": "AWS CloudTrail Insights が検出するものは？",
@@ -635,7 +687,8 @@
             "S3 バケットの合計サイズ"
           ],
           "correct": 0,
-          "explanation": "CloudTrail Insights は API コールボリュームの異常なスパイクを検出します。"
+          "explanation": "CloudTrail Insights は API コールボリュームの異常なスパイクを検出します。",
+          "type": "choice"
         },
         {
           "scenario": "Elastic Beanstalk で `.ebextensions` フォルダを置く場所は？",
@@ -646,7 +699,8 @@
             "ホームディレクトリ"
           ],
           "correct": 0,
-          "explanation": ".ebextensions は アプリケーションソースのルートに置き、デプロイ時に自動的に設定を適用します。"
+          "explanation": ".ebextensions は アプリケーションソースのルートに置き、デプロイ時に自動的に設定を適用します。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Systems Manager Patch Manager の「パッチベースライン」に設定できる内容は？",
@@ -657,7 +711,8 @@
             "EC2 のインスタンスタイプ"
           ],
           "correct": 0,
-          "explanation": "パッチベースラインで以下を設定：承認ルール（例：CRITICAL パッチは自動承認、その他は手動）、除外パッチ（例：特定バージョンは除外）、デフォルトパッチ言語（Linux: al2023 など）、承認後の適用待機期間（0〜30 日）。Compliance Scanning でパッチ適用状況も監視できる。"
+          "explanation": "パッチベースラインで以下を設定：承認ルール（例：CRITICAL パッチは自動承認、その他は手動）、除外パッチ（例：特定バージョンは除外）、デフォルトパッチ言語（Linux: al2023 など）、承認後の適用待機期間（0〜30 日）。Compliance Scanning でパッチ適用状況も監視できる。",
+          "type": "choice"
         },
         {
           "scenario": "CloudWatch アラームで、一定期間データが届かない場合（データ不足）の挙動をどう設定すべきか？",
@@ -668,7 +723,8 @@
             "SNS でエラーを送るのみ。"
           ],
           "correct": 0,
-          "explanation": "CloudWatch アラームで missing データ処理方法を指定でき、データが来ない場合の挙動（breaching/notBreaching/ignore など）を制御できます。"
+          "explanation": "CloudWatch アラームで missing データ処理方法を指定でき、データが来ない場合の挙動（breaching/notBreaching/ignore など）を制御できます。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Step Functions の「Express Workflows」が適しているケースは？",
@@ -679,7 +735,8 @@
             "低コストで月 1 回だけ動かすバッチ"
           ],
           "correct": 0,
-          "explanation": "Step Functions Express Workflows は毎秒数千実行の高頻度・短時間ワークフロー向けで、コスト効率的です。"
+          "explanation": "Step Functions Express Workflows は毎秒数千実行の高頻度・短時間ワークフロー向けで、コスト効率的です。",
+          "type": "choice"
         },
         {
           "scenario": "Amazon X-Ray SDK をアプリに組み込む主な目的は？",
@@ -690,7 +747,8 @@
             "ディスクをフォーマットするため"
           ],
           "correct": 0,
-          "explanation": "X-Ray SDK を組み込むと、送受信リクエスト・リソース呼び出しのメタデータ（セグメント）を自動収集し、X-Ray に送信します。"
+          "explanation": "X-Ray SDK を組み込むと、送受信リクエスト・リソース呼び出しのメタデータ（セグメント）を自動収集し、X-Ray に送信します。",
+          "type": "choice"
         },
         {
           "scenario": "CodePipeline で、ソースアクションの変更検出方法として推奨される（最も効率的な）ものは？",
@@ -701,7 +759,8 @@
             "SNS からの通知受信"
           ],
           "correct": 0,
-          "explanation": "CodePipeline での変更検出は EventBridge（旧 CloudWatch Events）が最も効率的です。ポーリングより低レイテンシ・低コストです。"
+          "explanation": "CodePipeline での変更検出は EventBridge（旧 CloudWatch Events）が最も効率的です。ポーリングより低レイテンシ・低コストです。",
+          "type": "choice"
         },
         {
           "scenario": "AWS Compute Optimizer が推奨を提供するために分析するデータは？",
@@ -712,7 +771,8 @@
             "S3 のオブジェクト数"
           ],
           "correct": 0,
-          "explanation": "Compute Optimizer は過去 14 日間（デフォルト）の CloudWatch メトリクスを分析し、インスタンスタイプの推奨を提供します。"
+          "explanation": "Compute Optimizer は過去 14 日間（デフォルト）の CloudWatch メトリクスを分析し、インスタンスタイプの推奨を提供します。",
+          "type": "choice"
         }
       ]
     }

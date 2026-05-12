@@ -436,7 +436,7 @@ function renderQuestion() {
   answerInProgress = false; // 新しい問題では回答可能に
   const q = currentTest.questions[currentQ];
   const total = currentTest.questions.length;
-  const isJ = currentTest.id.toString().endsWith('-3'); // 仕訳問題判定
+  const isJ = q.type === 'journal'; // 仕訳問題判定
   const pct = Math.round((currentQ / total) * 100);
 
   document.getElementById('quiz-title').textContent    = currentTest.title;
