@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>☁️ DOP-C02 練習問題</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 12px 16px 16px 16px; }
@@ -168,6 +171,36 @@
 <div class="confetti-wrap" id="confetti-wrap"></div>
 
 <script>
+// ============================================================
+// 🔥 Firebase 初期化
+// ============================================================
+
+const firebaseConfig = {
+  apiKey: "AIzaSyASXTkFt2cm-lG5zrPL0uygNMpY6u_OWwY",
+  authDomain: "boki1-b66ad.firebaseapp.com",
+  projectId: "boki1-b66ad",
+  storageBucket: "boki1-b66ad.firebasestorage.app",
+  messagingSenderId: "416766529196",
+  appId: "1:416766529196:web:9a451e15d3e1c4057c9909",
+  measurementId: "G-HQKC6V6J1F"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+let currentUser = null;
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    currentUser = user;
+  }
+});
+
+// ============================================================
+// 🔊 サウンド（Web Audio API）
+// ============================================================
+
 const AC = window.AudioContext || window.webkitAudioContext;
 let ac = null;
 function getAC() { if (!ac) ac = new AC(); if (ac.state === 'suspended') ac.resume(); return ac; }
@@ -249,40 +282,61 @@ function switchLevel(level) {
 }
 
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
+let bestScores = {};
 
-function getBest(id) { return parseInt(localStorage.getItem(`best_${currentLevel}_${id}`) || '-1', 10); }
-function setBest(id, s) { if (s > getBest(id)) localStorage.setItem(`best_${currentLevel}_${id}`, s); }
-function resetScores() {
-  if (!confirm('🗑️ このレベルの最高得点をリセットしますか？')) return;
-  TESTS.forEach(t => localStorage.removeItem(`best_${currentLevel}_${t.id}`));
-  soundClick(); showHome();
+async function getBest(id) {
+  if (!currentUser) return -1;
+  if (bestScores[`best_${currentLevel}_${id}`] !== undefined) return bestScores[`best_${currentLevel}_${id}`];
+  try {
+    const doc = await db.collection('scores').doc(currentUser.uid).get();
+    const scores = doc.exists ? doc.data() : {};
+    bestScores = { ...bestScores, ...scores };
+    return parseInt(scores[`best_${currentLevel}_${id}`] || '-1', 10);
+  } catch (e) { console.error(e); return -1; }
 }
 
-function getTotalCorrect() {
+async function setBest(id, s) {
+  if (!currentUser) return;
+  const best = await getBest(id);
+  if (s > best) {
+    try {
+      await db.collection('scores').doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
+      bestScores[`best_${currentLevel}_${id}`] = s;
+    } catch (e) { console.error(e); }
+  }
+}
+
+async function resetScores() {
+  if (!confirm('🗑️ このレベルの最高得点をリセットしますか？')) return;
+  if (!currentUser) return;
+  try {
+    const updates = {};
+    TESTS.forEach(t => {
+      updates[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+    });
+    await db.collection('scores').doc(currentUser.uid).update(updates);
+    bestScores = {};
+    soundClick(); showHome();
+  } catch (e) { console.error(e); }
+}
+
+async function getTotalCorrect() {
   let total = 0, attempted = 0;
-  console.log('getTotalCorrect called, TESTS =', TESTS);
-  if (!TESTS) {
-    console.error('TESTS is null or undefined');
-    return { total: 0, attempted: 0 };
-  }
-  if (!Array.isArray(TESTS)) {
-    console.error('TESTS is not an array:', typeof TESTS, TESTS);
-    return { total: 0, attempted: 0 };
-  }
-  TESTS.forEach(t => {
-    const best = getBest(t.id);
+  if (!TESTS || !Array.isArray(TESTS)) return { total: 0, attempted: 0 };
+  for (const t of TESTS) {
+    const best = await getBest(t.id);
     if (best >= 0) { total += Math.round(best / 100 * 10); attempted++; }
-  });
+  }
   return { total, attempted };
 }
 
-function showHome() {
+async function showHome() {
   isReviewMode = false;
   document.getElementById('screen-home').classList.remove('hidden');
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
 
-  const { total, attempted } = getTotalCorrect();
+  const { total, attempted } = await getTotalCorrect();
   const totalEl = document.getElementById('total-score-display');
   if (attempted === 0) {
     totalEl.innerHTML = `- <span>/ ${TOTAL_QUESTIONS}問</span>`;
@@ -290,16 +344,18 @@ function showHome() {
     totalEl.innerHTML = `${total} <span>/ ${TOTAL_QUESTIONS}問 正解</span>`;
   }
 
-  document.getElementById('test-grid').innerHTML = TESTS.map(t => {
-    const best = getBest(t.id);
+  let html = '';
+  for (const t of TESTS) {
+    const best = await getBest(t.id);
     const bestTxt = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
-    return `<div class="test-card" onclick="startTest(${t.id}); soundClick();">
+    html += `<div class="test-card" onclick="startTest(${t.id}); soundClick();">
       <span class="card-emoji">${t.emoji}</span>
       <h2>${t.title}</h2>
       <span class="test-type">${t.type}</span>
       <p class="best-score">${bestTxt}</p>
     </div>`;
-  }).join('');
+  }
+  document.getElementById('test-grid').innerHTML = html;
 
   // Debug: Show touch device detection and build time
   const isTouchDevice = () => {
@@ -429,15 +485,15 @@ function answer(idx, correctIdx) {
 
 function nextQuestion() { currentQ++; renderQuestion(); }
 
-function showResults() {
+async function showResults() {
   const total   = currentTest.questions.length;
   const correct = answers.filter(a => a.correct).length;
   const score   = correct * 10; // 1問10点
   const maxScore = total * 10;
 
   if (!isReviewMode) {
-    setBest(currentTest.id, score);
-    const best = getBest(currentTest.id);
+    await setBest(currentTest.id, score);
+    const best = await getBest(currentTest.id);
     document.getElementById('best-msg').textContent = `🏅 最高: ${best}点`;
     document.getElementById('best-msg').style.display = '';
   } else {
