@@ -64,7 +64,7 @@
 
     .menu-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 20px;
     }
 
@@ -405,9 +405,8 @@ async function getBokiScore() {
 
     const data = doc.data();
     let totalCorrect = 0;
-    let testCount = 0;
 
-    // Collect all test IDs by looking for best_level_id pattern
+    // Collect all score keys (best_level_id pattern)
     const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
     if (scoreKeys.length === 0) return { correct: 0, total: 0 };
 
@@ -415,21 +414,11 @@ async function getBokiScore() {
       const score = data[key];
       if (score > 0) {
         totalCorrect += Math.round(score / 100 * 10);
-        testCount++;
       }
     });
 
-    // Assuming 3 tests per level, 2 levels = 6 tests total, 10 questions each
-    const uniqueTests = new Set();
-    scoreKeys.forEach(key => {
-      const parts = key.split('_');
-      if (parts.length >= 3) {
-        uniqueTests.add(parts[2]);
-      }
-    });
-
-    const totalTests = Math.max(6, uniqueTests.size);
-    const totalQuestions = totalTests * 10;
+    // Total questions = number of score keys * 10 (each test has 10 questions)
+    const totalQuestions = scoreKeys.length * 10;
 
     return { correct: totalCorrect, total: totalQuestions };
   } catch (e) {
@@ -446,26 +435,20 @@ async function getDevopsScore() {
 
     const data = doc.data();
     let totalCorrect = 0;
-    let totalQuestions = 0;
 
-    // Collect all test IDs by looking for best_level_id pattern
+    // Collect all score keys (best_level_id pattern)
     const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
     if (scoreKeys.length === 0) return { correct: 0, total: 0 };
 
-    const uniqueTests = new Set();
     scoreKeys.forEach(key => {
       const score = data[key];
       if (score > 0) {
         totalCorrect += Math.round(score / 100 * 10);
       }
-      const parts = key.split('_');
-      if (parts.length >= 3) {
-        uniqueTests.add(parts[2]);
-      }
     });
 
-    // DevOps: 3 levels × 2 tests per level = 6 tests, 10 questions each = 60 questions
-    totalQuestions = 60;
+    // Total questions = number of score keys * 10 (each test has 10 questions)
+    const totalQuestions = scoreKeys.length * 10;
 
     return { correct: totalCorrect, total: totalQuestions };
   } catch (e) {
