@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 江東区最強せいちゃんへの挑戦問題</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>📚</text></svg>">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      max-width: 720px;
+      width: 100%;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085);
+    }
+
+    /* ===== HOME ===== */
+    .home-header { text-align: center; margin-bottom: 32px; }
+    .home-header .logo { font-size: 3rem; margin-bottom: 8px; }
+    .home-header h1 { font-size: 1.8rem; color: #2d3748; font-weight: 800; margin-bottom: 6px; }
+    .home-header p  { color: #718096; font-size: 0.95rem; }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+    }
+
+    .test-card {
+      border-radius: 16px;
+      padding: 24px 18px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(.34,1.56,.64,1);
+      position: relative;
+      overflow: hidden;
+      border: none;
+      color: #fff;
+    }
+
+    .test-card:nth-child(1) { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .test-card:nth-child(2) { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .test-card:nth-child(3) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+
+    .test-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
+
+    .test-card .card-emoji { font-size: 2.4rem; margin-bottom: 8px; display: block; }
+    .test-card h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
+    .test-card .test-type { font-size: 0.78rem; opacity: 0.9; margin-bottom: 12px; background: rgba(255,255,255,0.25); border-radius: 99px; padding: 2px 10px; display: inline-block; }
+    .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
+    .test-card .best-score span { font-weight: 800; font-size: 1rem; }
+
+    /* ===== QUIZ ===== */
+    .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .quiz-back { background: #f7fafc; border: none; border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 1rem; color: #4a5568; transition: background 0.15s; }
+    .quiz-back:hover { background: #edf2f7; }
+    .quiz-title-wrap { flex: 1; }
+    .quiz-title-wrap h2 { font-size: 1.2rem; font-weight: 800; color: #2d3748; }
+    .quiz-title-wrap p  { font-size: 0.8rem; color: #718096; }
+
+    .progress-wrap { margin-bottom: 20px; }
+    .progress-top  { display: flex; justify-content: space-between; font-size: 0.82rem; color: #718096; margin-bottom: 6px; }
+    .progress-bar-bg { background: #edf2f7; border-radius: 99px; height: 10px; overflow: hidden; }
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transition: width 0.5s cubic-bezier(.34,1.56,.64,1);
+    }
+
+    .scenario {
+      background: linear-gradient(135deg, #f7f8ff, #fff0fb);
+      border-left: 5px solid #667eea;
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-size: 1.05rem;
+      color: #2d3748;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .choices { display: flex; flex-direction: column; gap: 10px; }
+
+    .choice-btn {
+      border: 2.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      cursor: pointer;
+      text-align: left;
+      background: #fff;
+      transition: all 0.15s;
+      width: 100%;
+      font-size: 0.93rem;
+      color: #2d3748;
+      line-height: 1.5;
+      font-family: inherit;
+    }
+
+    .choice-btn:not([disabled]):hover {
+      border-color: #667eea;
+      background: #f7f8ff;
+      transform: translateX(4px);
+    }
+
+    .choice-btn.correct {
+      border-color: #38a169;
+      background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+      animation: popIn 0.3s cubic-bezier(.34,1.56,.64,1);
+    }
+
+    .choice-btn.wrong {
+      border-color: #e53e3e;
+      background: linear-gradient(135deg, #fff5f5, #fed7d7);
+      animation: shake 0.4s ease;
+    }
+
+    .choice-btn.reveal {
+      border-color: #38a169;
+      background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+    }
+
+    @keyframes popIn {
+      0%   { transform: scale(0.95); }
+      60%  { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes shake {
+      0%,100% { transform: translateX(0); }
+      20%      { transform: translateX(-8px); }
+      40%      { transform: translateX(8px); }
+      60%      { transform: translateX(-5px); }
+      80%      { transform: translateX(5px); }
+    }
+
+    /* 仕訳レイアウト */
+    .journal {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 4px 10px;
+      font-size: 0.88rem;
+    }
+
+    .journal-header { font-size: 0.72rem; color: #888; font-weight: bold; }
+    .journal-debit  { color: #2b6cb0; }
+    .journal-credit { color: #742a2a; padding-left: 14px; }
+    .journal-sep    { color: #cbd5e0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+    .entry-line     { display: flex; flex-direction: column; gap: 3px; }
+    .entry-item     { display: flex; justify-content: space-between; gap: 12px; }
+
+    /* フィードバック */
+    .feedback {
+      margin-top: 16px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 800;
+      display: none;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .feedback.correct {
+      background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+      color: #276749;
+      display: block;
+    }
+
+    .feedback.wrong {
+      background: linear-gradient(135deg, #fff5f5, #fed7d7);
+      color: #9b2c2c;
+      display: block;
+    }
+
+    .next-btn {
+      margin-top: 18px;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: none;
+      transition: all 0.2s;
+      font-family: inherit;
+      letter-spacing: 0.03em;
+    }
+
+    .next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
+
+    /* ===== RESULTS ===== */
+    .result-header { text-align: center; margin-bottom: 24px; }
+    .result-header h1 { font-size: 1.6rem; font-weight: 800; color: #2d3748; }
+
+    .score-area { text-align: center; margin: 28px 0; }
+
+    .score-ring {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 12px 40px rgba(102,126,234,0.4);
+      animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1);
+    }
+
+    .score-num   { font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1; }
+    .score-unit  { font-size: 0.9rem; color: rgba(255,255,255,0.85); }
+    .score-stars { font-size: 1.6rem; letter-spacing: 4px; margin-bottom: 8px; }
+    .score-msg   { font-size: 1.15rem; font-weight: 700; color: #2d3748; margin-bottom: 6px; }
+    .best-msg    { font-size: 0.9rem; color: #667eea; font-weight: 700; }
+
+    .result-list { border-top: 2px solid #edf2f7; margin-top: 24px; padding-top: 20px; }
+    .result-list h3 { font-size: 0.95rem; color: #718096; margin-bottom: 14px; font-weight: 700; }
+
+    .answer-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f7fafc;
+      font-size: 0.84rem;
+    }
+
+    .q-num         { min-width: 32px; font-weight: 800; color: #a0aec0; }
+    .mark          { font-size: 1.2rem; min-width: 24px; }
+    .answer-detail { color: #2d3748; line-height: 1.7; flex: 1; }
+
+    .btn-home {
+      margin-top: 24px;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .btn-home:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
+
+/* 紙吹雪アニメ */
+    .confetti-wrap {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      pointer-events: none;
+      overflow: hidden;
+      height: 100vh;
+      z-index: 9999;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      animation: confettiFall linear forwards;
+    }
+
+    @keyframes confettiFall {
+      0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+
+    .home-top {
+      position: relative;
+    }
+
+    .btn-reset-corner {
+      position: absolute;
+      top: 0; right: 0;
+      background: transparent;
+      color: #e53e3e;
+      border: 2px solid #e53e3e;
+      border-radius: 10px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- LOGIN -->
+  <div id="screen-login">
+    <div class="home-header">
+      <div class="logo">📚</div>
+      <h1>江東区最強せいちゃんへの挑戦問題</h1>
+      <p>ログインして問題に挑戦しよう！</p>
+    </div>
+    <button onclick="loginWithGoogle()" style="width:100%; padding:15px; background:linear-gradient(135deg, #667eea, #764ba2); color:#fff; border:none; border-radius:12px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit; margin-top:20px;">
+      🔐 Google でログイン
+    </button>
+  </div>
+
+  <!-- HOME -->
+  <div id="screen-home">
+    <div class="home-top">
+      <button class="btn-reset-corner" onclick="resetScores()">🗑️ リセット</button>
+      <a href="../" style="position:absolute; top:0; left:0; background:transparent; color:#667eea; border:2px solid #667eea; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#f7f8ff'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
+      <div class="home-header">
+        <div class="logo">📚</div>
+        <h1>江東区最強せいちゃんへの挑戦問題</h1>
+        <p><span style="background:#667eea; color:#fff; padding:4px 12px; border-radius:99px; display:inline-block; margin-bottom:8px; font-weight:700;">パート 2</span></p>
+        <p>分記法（商品売買益）レベル ／ 各10問・100点満点</p>
+      </div>
+    </div>
+    <div class="test-grid" id="test-grid"></div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="screen-quiz" class="hidden">
+    <div class="quiz-header">
+      <button class="quiz-back" onclick="showHome()">← 戻る</button>
+      <div class="quiz-title-wrap">
+        <h2 id="quiz-title"></h2>
+        <p id="quiz-subtitle"></p>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-top">
+        <span id="progress-label"></span>
+        <span id="progress-pct"></span>
+      </div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-bar"></div></div>
+    </div>
+    <div class="scenario" id="scenario"></div>
+    <div class="choices" id="choices"></div>
+    <div class="feedback" id="feedback"></div>
+    <div id="explanation" style="margin-top:16px; padding:14px 18px; border-radius:12px; background:linear-gradient(135deg, #f0f4ff, #f5f7ff); border-left:4px solid #667eea; display:none;">
+      <div style="font-size:0.9rem; color:#667eea; font-weight:700; margin-bottom:8px;">📝 解説</div>
+      <div id="explanation-text" style="font-size:0.9rem; color:#2d3748; line-height:1.6;"></div>
+    </div>
+    <button class="next-btn" id="next-btn"></button>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="screen-results" class="hidden">
+    <div class="result-header"><h1 id="result-title"></h1></div>
+    <div class="score-area">
+      <div class="score-ring">
+        <span class="score-num" id="score-num"></span>
+        <span class="score-unit">点 / 100点</span>
+      </div>
+      <div class="score-stars" id="score-stars"></div>
+      <p class="score-msg" id="score-msg"></p>
+      <p class="best-msg" id="best-msg"></p>
+    </div>
+    <div class="result-list">
+      <h3>📋 解答一覧</h3>
+      <div id="answer-list"></div>
+    </div>
+    <button class="btn-home" onclick="showHome()">🏠 テスト選択に戻る</button>
+  </div>
+
+</div>
+
+<div class="confetti-wrap" id="confetti-wrap"></div>
+
+<script>
+// ============================================================
+// 🔥 Firebase 初期化
+// ============================================================
+
+const firebaseConfig = {
+  apiKey: "AIzaSyASXTkFt2cm-lG5zrPL0uygNMpY6u_OWwY",
+  authDomain: "boki1-b66ad.firebaseapp.com",
+  projectId: "boki1-b66ad",
+  storageBucket: "boki1-b66ad.firebasestorage.app",
+  messagingSenderId: "416766529196",
+  appId: "1:416766529196:web:9a451e15d3e1c4057c9909",
+  measurementId: "G-HQKC6V6J1F"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+let currentUser = null;
+let authReady = false;
+
+async function loginWithGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  try {
+    await auth.signInWithPopup(provider);
+  } catch (e) {
+    console.error('Google login error:', e);
+    alert('ログインに失敗しました: ' + e.message);
+  }
+}
+
+function showLoginScreen() {
+  document.getElementById('screen-login').classList.remove('hidden');
+  document.getElementById('screen-home').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+}
+
+auth.onAuthStateChanged(async user => {
+  if (user) {
+    currentUser = user;
+    authReady = true;
+    document.getElementById('screen-login').classList.add('hidden');
+    await showHome();
+  } else {
+    showLoginScreen();
+  }
+});
+
+// ============================================================
+// 🔊 サウンド（Web Audio API）
+// ============================================================
+
+const AC = window.AudioContext || window.webkitAudioContext;
+let ac = null;
+
+function getAC() {
+  if (!ac) ac = new AC();
+  if (ac.state === 'suspended') ac.resume();
+  return ac;
+}
+
+function tone(freq, type, start, dur, vol = 0.25) {
+  try {
+    const a = getAC();
+    const osc = a.createOscillator();
+    const gain = a.createGain();
+    osc.connect(gain);
+    gain.connect(a.destination);
+    osc.type = type;
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(vol, a.currentTime + start);
+    gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + start + dur);
+    osc.start(a.currentTime + start);
+    osc.stop(a.currentTime + start + dur);
+  } catch(e) {}
+}
+
+function soundCorrect() {
+  tone(660,  'sine',     0,    0.12, 0.25);
+  tone(880,  'sine',     0.08, 0.15, 0.25);
+  tone(1100, 'sine',     0.18, 0.18, 0.20);
+}
+
+function soundWrong() {
+  tone(330, 'sawtooth', 0,    0.10, 0.20);
+  tone(220, 'sawtooth', 0.08, 0.18, 0.15);
+}
+
+function soundClick() {
+  tone(1000, 'sine', 0, 0.05, 0.10);
+}
+
+function soundFanfare() {
+  // ド ミ ソ ド↑
+  [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => {
+    tone(f, 'sine', t, 0.18, 0.28);
+  });
+}
+
+function soundGood() {
+  tone(784,  'sine', 0,    0.15, 0.25);
+  tone(1047, 'sine', 0.14, 0.20, 0.25);
+}
+
+// ============================================================
+// 🎊 紙吹雪
+// ============================================================
+
+function launchConfetti(count = 60) {
+  const wrap = document.getElementById('confetti-wrap');
+  wrap.innerHTML = '';
+  const colors = ['#667eea','#764ba2','#f093fb','#f5576c','#fda085','#43e97b','#4facfe'];
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.background = colors[Math.floor(Math.random() * colors.length)];
+    el.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+    el.style.animationDelay = (Math.random() * 0.8) + 's';
+    el.style.width = el.style.height = (6 + Math.random() * 8) + 'px';
+    el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    wrap.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+// ============================================================
+// 📝 データ
+// ============================================================
+
+// テスト１：用語問題
+const TEST1 = {
+  id: '2-1', title: '💡 簿記パート2　テスト1', type: '用語問題',
+  emoji: '💡', subtitle: '正しい説明を選んでね！',
+  questions: [
+    {
+      scenario: '⬅️ 「借方」（かりかた）とは何のこと？',
+      choices: [
+        '仕訳の左側',
+        '仕訳の右側',
+        '帳簿の上側',
+        'マイナスを表す側',
+      ],
+      correct: 0,
+      explanation: '借方は仕訳の左側を意味し、資産や費用の増加を記録します。',
+    },
+    {
+      scenario: '➡️ 「貸方」（かしかた）とは何のこと？',
+      choices: [
+        '仕訳の右側',
+        '仕訳の左側',
+        '帳簿の下側',
+        'プラスを表す側',
+      ],
+      correct: 0,
+      explanation: '貸方は仕訳の右側を意味し、負債や収益の増加を記録します。',
+    },
+    {
+      scenario: '🏷️ 「勘定科目」とは何のこと？',
+      choices: [
+        '取引の内容を分類するための名前（例：現金、商品、売掛金など）',
+        '商品の価格',
+        '取引の日付',
+        '決算書の種類',
+      ],
+      correct: 0,
+      explanation: '勘定科目は取引を分類・整理するための名称で、会計の基本要素です。',
+    },
+    {
+      scenario: '💰 「現金」はどのような勘定科目か？',
+      choices: [
+        'お金そのもの（資産）',
+        '商品の代金',
+        '経費',
+        '利益',
+      ],
+      correct: 0,
+      explanation: '現金は企業が保有する流動性の高い資産であり、直ちに支払いに充てられます。',
+    },
+    {
+      scenario: '📦 「商品」はどのような勘定科目か？',
+      choices: [
+        '売るための商品（資産）',
+        'お金',
+        'お店を借りる費用',
+        '売ったときに得られる利益',
+      ],
+      correct: 0,
+      explanation: '商品は企業が販売するために保有する資産で、回転資産として分類されます。',
+    },
+    {
+      scenario: '💵 「売掛金」（うりかけきん）とは何のこと？',
+      choices: [
+        '商品を掛けで売ったときに、後からもらうお金（資産）',
+        '商品を掛けで買ったときに、後から払うお金',
+        '銀行から借りたお金',
+        '商品を売った時の利益',
+      ],
+      correct: 0,
+      explanation: '売掛金は掛け販売により発生した回収権であり、流動資産に分類されます。',
+    },
+    {
+      scenario: '💳 「買掛金」（かいかけきん）とは何のこと？',
+      choices: [
+        '商品を掛けで買ったときに、後から払うお金（負債）',
+        '商品を掛けで売ったときに、後からもらうお金',
+        '銀行に預けたお金',
+        '商品を買った時の利益',
+      ],
+      correct: 0,
+      explanation: '買掛金は掛け仕入により発生した支払義務であり、流動負債に分類されます。',
+    },
+    {
+      scenario: '🤝 「掛け」とは何のこと？',
+      choices: [
+        '商品やサービスの代金を後で払う取引',
+        '商品の在庫を数えること',
+        'お店に品物を飾ること',
+        '商品を現金で買うこと',
+      ],
+      correct: 0,
+      explanation: '掛け取引は代金の支払いを後に延ばす取引方法で、企業間ではよく行われます。',
+    },
+    {
+      scenario: '💎 「商品売買益」（しょうひんばいばいえき）とは何のこと？',
+      choices: [
+        '商品を売ったときに得られる利益（販売価格 - 原価）',
+        '商品の総販売額',
+        '商品の原価',
+        '商品の在庫',
+      ],
+      correct: 0,
+      explanation: '商品売買益は分記法において、販売価格と原価の差額として計上される収益です。',
+    },
+    {
+      scenario: '🎯 「原価」とは何のこと？',
+      choices: [
+        '商品を仕入れるのに実際に支払った金額',
+        '商品を売るときの販売価格',
+        '商品から得られる利益',
+        '商品の配送料金',
+      ],
+      correct: 0,
+      explanation: '原価は商品を仕入れるのに支払った実際の金額で、売買益計算の基礎となります。',
+    },
+  ],
+};
+
+// テスト２：勘定科目の区分問題
+const TEST2 = {
+  id: '2-2', title: '📊 簿記パート2　テスト2', type: '区分問題',
+  emoji: '📊', subtitle: '正しい区分・増加側を選んでね！',
+  questions: [
+    {
+      scenario: '📦 「商品」はどの区分に属する？',
+      choices: ['資産', '費用', '負債', '収益'],
+      correct: 0,
+      explanation: '商品は売却を目的として保有される価値あるものなので、資産に分類されます。',
+    },
+    {
+      scenario: '💰 「現金」はどの区分に属する？',
+      choices: ['資産', '負債', '費用', '収益'],
+      correct: 0,
+      explanation: '現金は最も流動性が高い資産で、いつでも支払いに充てられます。',
+    },
+    {
+      scenario: '💵 「銀行預金」はどの区分に属する？',
+      choices: ['資産', '負債', '費用', '収益'],
+      correct: 0,
+      explanation: '銀行預金は企業が保有する流動資産で、いつでも引き出せるお金です。',
+    },
+    {
+      scenario: '💵 「売掛金」はどの区分に属する？',
+      choices: ['資産', '負債', '費用', '収益'],
+      correct: 0,
+      explanation: '売掛金は将来受け取る権利がある資産で、流動資産に分類されます。',
+    },
+    {
+      scenario: '💳 「買掛金」はどの区分に属する？',
+      choices: ['負債', '資産', '費用', '収益'],
+      correct: 0,
+      explanation: '買掛金は将来支払わねばならない義務であり、流動負債に分類されます。',
+    },
+    {
+      scenario: '💎 「商品売買益」はどの区分に属する？',
+      choices: ['収益', '費用', '資産', '負債'],
+      correct: 0,
+      explanation: '商品売買益は商品販売により得られる利益であり、収益に分類されます。',
+    },
+    {
+      scenario: '⬆️ 資産の勘定が増加するとき、どちらに記入する？',
+      choices: ['借方（左側）', '貸方（右側）', '両側に同額', '記入しない'],
+      correct: 0,
+      explanation: '資産は借方で増加し、貸方で減少するため、資産増加時は借方に記入します。',
+    },
+    {
+      scenario: '⬇️ 資産の勘定が減少するとき、どちらに記入する？',
+      choices: ['貸方（右側）', '借方（左側）', '両側に同額', '記入しない'],
+      correct: 0,
+      explanation: '資産は貸方で減少するため、資産減少時は貸方に記入します。',
+    },
+    {
+      scenario: '⬆️ 負債の勘定が増加するとき、どちらに記入する？',
+      choices: ['貸方（右側）', '借方（左側）', '両側に同額', '記入しない'],
+      correct: 0,
+      explanation: '負債は貸方で増加し、借方で減少するため、負債増加時は貸方に記入します。',
+    },
+    {
+      scenario: '⬆️ 収益の勘定が増加するとき、どちらに記入する？',
+      choices: ['貸方（右側）', '借方（左側）', '両側に同額', '記入しない'],
+      correct: 0,
+      explanation: '収益は貸方で増加し、借方で減少するため、収益増加時は貸方に記入します。',
+    },
+  ],
+};
+
+// テスト３：仕訳問題
+function j(debit, credit) { return { debit, credit }; }
+function e(account, amount) { return { account, amount }; }
+
+const TEST3 = {
+  id: '2-3', title: '✏️ 簿記パート2　テスト3', type: '仕訳問題',
+  emoji: '✏️', subtitle: '正しい仕訳を選んでね！',
+  questions: [
+    {
+      scenario: '🛒 商品¥5,000を現金で仕入れた。',
+      choices: [
+        j([e('商品',5000)],[e('現金',5000)]),
+        j([e('現金',5000)],[e('商品',5000)]),
+        j([e('商品',5000)],[e('買掛金',5000)]),
+        j([e('買掛金',5000)],[e('商品',5000)]),
+      ],
+      correct: 0,
+      explanation: '商品（資産）が増加し、現金（資産）が減少する取引です。商品は借方、現金は貸方に記入します。',
+    },
+    {
+      scenario: '💰 原価¥3,000の商品を¥5,000で現金販売した。',
+      choices: [
+        j([e('現金',5000)],[e('商品',3000),e('商品売買益',2000)]),
+        j([e('現金',5000)],[e('商品',5000)]),
+        j([e('現金',3000),e('商品売買益',2000)],[e('商品',5000)]),
+        j([e('商品',3000)],[e('現金',5000),e('商品売買益',2000)]),
+      ],
+      correct: 0,
+      explanation: '現金¥5,000受け取り、商品¥3,000と売買益¥2,000を貸方に記録します。分記法の基本です。',
+    },
+    {
+      scenario: '🛒 商品¥8,000を掛けで仕入れた。',
+      choices: [
+        j([e('商品',8000)],[e('買掛金',8000)]),
+        j([e('買掛金',8000)],[e('商品',8000)]),
+        j([e('商品',8000)],[e('現金',8000)]),
+        j([e('売掛金',8000)],[e('商品',8000)]),
+      ],
+      correct: 0,
+      explanation: '商品（資産）が増加し、買掛金（負債）が増加する取引です。',
+    },
+    {
+      scenario: '💰 原価¥4,000の商品を¥6,500で掛け販売した。',
+      choices: [
+        j([e('売掛金',6500)],[e('商品',4000),e('商品売買益',2500)]),
+        j([e('売掛金',6500)],[e('商品',6500)]),
+        j([e('現金',6500)],[e('商品',4000),e('商品売買益',2500)]),
+        j([e('商品',4000),e('商品売買益',2500)],[e('売掛金',6500)]),
+      ],
+      correct: 0,
+      explanation: '売掛金¥6,500受け取る権利が生じ、商品¥4,000と売買益¥2,500を貸方に記録します。',
+    },
+    {
+      scenario: '💸 買掛金¥8,000を現金で支払った。',
+      choices: [
+        j([e('買掛金',8000)],[e('現金',8000)]),
+        j([e('現金',8000)],[e('買掛金',8000)]),
+        j([e('売掛金',8000)],[e('現金',8000)]),
+        j([e('現金',8000)],[e('売掛金',8000)]),
+      ],
+      correct: 0,
+      explanation: '買掛金（負債）が減少し、現金（資産）が減少する取引です。',
+    },
+    {
+      scenario: '📥 売掛金¥6,500を現金で回収した。',
+      choices: [
+        j([e('現金',6500)],[e('売掛金',6500)]),
+        j([e('売掛金',6500)],[e('現金',6500)]),
+        j([e('現金',6500)],[e('買掛金',6500)]),
+        j([e('買掛金',6500)],[e('現金',6500)]),
+      ],
+      correct: 0,
+      explanation: '現金（資産）が増加し、売掛金（資産）が減少する取引です。',
+    },
+    {
+      scenario: '💰 原価¥7,000の商品を¥11,000で現金販売した。',
+      choices: [
+        j([e('現金',11000)],[e('商品',7000),e('商品売買益',4000)]),
+        j([e('現金',11000)],[e('商品',11000)]),
+        j([e('現金',7000),e('商品売買益',4000)],[e('商品',11000)]),
+        j([e('商品',7000)],[e('現金',11000),e('商品売買益',4000)]),
+      ],
+      correct: 0,
+      explanation: '現金¥11,000受け取り、商品¥7,000と売買益¥4,000を貸方に記録します。',
+    },
+    {
+      scenario: '🛒 商品¥12,000を掛けで仕入れた。',
+      choices: [
+        j([e('商品',12000)],[e('買掛金',12000)]),
+        j([e('買掛金',12000)],[e('商品',12000)]),
+        j([e('商品',12000)],[e('現金',12000)]),
+        j([e('現金',12000)],[e('商品',12000)]),
+      ],
+      correct: 0,
+      explanation: '商品（資産）が増加し、買掛金（負債）が増加する取引です。',
+    },
+    {
+      scenario: '💰 原価¥5,000の商品を¥8,000で掛け販売した。',
+      choices: [
+        j([e('売掛金',8000)],[e('商品',5000),e('商品売買益',3000)]),
+        j([e('売掛金',8000)],[e('商品',8000)]),
+        j([e('現金',8000)],[e('商品',5000),e('商品売買益',3000)]),
+        j([e('商品',5000),e('商品売買益',3000)],[e('売掛金',8000)]),
+      ],
+      correct: 0,
+      explanation: '売掛金¥8,000受け取る権利が生じ、商品¥5,000と売買益¥3,000を貸方に記録します。',
+    },
+    {
+      scenario: '💸 買掛金¥12,000を現金で支払った。',
+      choices: [
+        j([e('買掛金',12000)],[e('現金',12000)]),
+        j([e('現金',12000)],[e('買掛金',12000)]),
+        j([e('買掛金',12000)],[e('売掛金',12000)]),
+        j([e('現金',12000)],[e('売掛金',12000)]),
+      ],
+      correct: 0,
+      explanation: '買掛金（負債）が減少し、現金（資産）が減少する取引です。',
+    },
+  ],
+};
+
+const TESTS = [TEST1, TEST2, TEST3];
+
+// ============================================================
+// 状態
+// ============================================================
+
+let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
+let bestScores = {};
+
+async function getBest(id) {
+  if (!currentUser) return 0;
+  if (bestScores[id] !== undefined) return bestScores[id];
+  try {
+    const doc = await db.collection('scores').doc(currentUser.uid).get();
+    const scores = doc.exists ? doc.data() : {};
+    bestScores = scores;
+    return parseInt(scores[`best_${id}`] || '0', 10);
+  } catch (e) { console.error(e); return 0; }
+}
+
+async function setBest(id, s) {
+  if (!currentUser) return;
+  const best = await getBest(id);
+  if (s > best) {
+    try {
+      await db.collection('scores').doc(currentUser.uid).set({ [`best_${id}`]: s }, { merge: true });
+      bestScores[`best_${id}`] = s;
+    } catch (e) { console.error(e); }
+  }
+}
+
+async function resetScores() {
+  if (!confirm('🗑️ 全テストの最高得点をリセットしますか？')) return;
+  if (!currentUser) return;
+  try {
+    await db.collection('scores').doc(currentUser.uid).delete();
+    bestScores = {};
+    soundClick();
+    showHome();
+  } catch (e) { console.error(e); }
+}
+
+function fmt(n)         { return '¥' + n.toLocaleString(); }
+
+// ============================================================
+// 仕訳レンダリング
+// ============================================================
+
+function renderJournal(entry) {
+  const dLines = entry.debit.map(e =>
+    `<div class="entry-item journal-debit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+  ).join('');
+  const cLines = entry.credit.map(e =>
+    `<div class="entry-item journal-credit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+  ).join('');
+  return `<div class="journal">
+    <div><div class="journal-header">借方（左）</div><div class="entry-line">${dLines}</div></div>
+    <div class="journal-sep">｜</div>
+    <div><div class="journal-header">貸方（右）</div><div class="entry-line">${cLines}</div></div>
+  </div>`;
+}
+
+function journalText(entry) {
+  return '借: ' + entry.debit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・')
+       + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
+}
+
+// ============================================================
+// 画面制御
+// ============================================================
+
+async function showHome() {
+  document.getElementById('screen-home').classList.remove('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+  let html = '';
+  for (const t of TESTS) {
+    const best = await getBest(t.id);
+    const bestTxt = best > 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
+    html += `<div class="test-card" onclick="startTest('${t.id}'); soundClick();">
+      <span class="card-emoji">${t.emoji}</span>
+      <h2>${t.title}</h2>
+      <span class="test-type">${t.type}</span>
+      <p class="best-score">${bestTxt}</p>
+    </div>`;
+  }
+  document.getElementById('test-grid').innerHTML = html;
+}
+
+function startTest(id) {
+  currentTest = TESTS.find(t => t.id === id);
+  currentQ = 0; answers = [];
+  document.getElementById('screen-home').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.remove('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+  renderQuestion();
+}
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length-1; i > 0; i--) {
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+const CORRECT_MSGS = ['✅ 正解！やったね！', '🎯 その通り！完璧！', '⭐ 正解！さすが！', '🌟 正解！いい感じ！', '💫 正解！よくできました！'];
+const WRONG_MSGS   = ['❌ 残念...もう一度確認しよう！', '💔 惜しい！正解を確認してね', '😅 不正解...次はがんばろう！', '🔄 違うよ！正解をチェックしてね'];
+
+function renderQuestion() {
+  const q     = currentTest.questions[currentQ];
+  const total = currentTest.questions.length;
+  const isJ   = currentTest.id.toString().endsWith('-3');
+  const pct   = Math.round((currentQ / total) * 100);
+
+  document.getElementById('quiz-title').textContent    = currentTest.title;
+  document.getElementById('quiz-subtitle').textContent = currentTest.subtitle;
+  document.getElementById('progress-bar').style.width  = pct + '%';
+  document.getElementById('progress-label').textContent = `第 ${currentQ+1} 問 ／ ${total} 問`;
+  document.getElementById('progress-pct').textContent   = pct + '%';
+  document.getElementById('scenario').textContent       = q.scenario;
+  document.getElementById('feedback').className         = 'feedback';
+  document.getElementById('explanation').style.display  = 'none';
+  document.getElementById('next-btn').style.display     = 'none';
+
+  const indexed = shuffle(q.choices.map((c,i)=>({choice:c,origIdx:i})));
+  shuffledChoices = indexed;
+  const correctShuffledIdx = indexed.findIndex(x => x.origIdx === q.correct);
+
+  document.getElementById('choices').innerHTML = indexed.map((item, i) => {
+    const label = isJ ? renderJournal(item.choice) : item.choice;
+    const letters = ['a.', 'b.', 'c.', 'd.'];
+    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}"><span style="font-weight:700; margin-right:8px;">${letters[i]}</span>${label}</button>`;
+  }).join('');
+}
+
+function answer(idx, correctIdx) {
+  const q  = currentTest.questions[currentQ];
+  const isJ = currentTest.id.toString().endsWith('-3');
+  const ok  = idx === correctIdx;
+  answers.push({ correct: ok, chosenOrigIdx: shuffledChoices[idx].origIdx });
+
+  shuffledChoices.forEach((_,i) => { document.getElementById(`choice-${i}`).disabled = true; });
+  document.getElementById(`choice-${idx}`).classList.add(ok ? 'correct' : 'wrong');
+  if (!ok) document.getElementById(`choice-${correctIdx}`).classList.add('reveal');
+
+  const fb = document.getElementById('feedback');
+  fb.className = `feedback ${ok ? 'correct' : 'wrong'}`;
+  fb.textContent = ok
+    ? CORRECT_MSGS[Math.floor(Math.random()*CORRECT_MSGS.length)]
+    : WRONG_MSGS[Math.floor(Math.random()*WRONG_MSGS.length)];
+
+  const expEl = document.getElementById('explanation');
+  const expText = document.getElementById('explanation-text');
+  if (q.explanation) {
+    expText.textContent = q.explanation;
+    expEl.style.display = 'block';
+  } else {
+    expEl.style.display = 'none';
+  }
+
+  ok ? soundCorrect() : soundWrong();
+
+  const nb = document.getElementById('next-btn');
+  nb.style.display = 'block';
+  const isLast = currentQ === currentTest.questions.length - 1;
+  nb.textContent = isLast ? '📊 結果を見る →' : '➡️ 次の問題';
+  nb.onclick = async () => {
+    soundClick();
+    if (isLast) {
+      await showResults();
+    } else {
+      nextQuestion();
+    }
+  };
+}
+
+function nextQuestion() { currentQ++; renderQuestion(); }
+
+async function showResults() {
+  const total   = currentTest.questions.length;
+  const correct = answers.filter(a => a.correct).length;
+  const score   = Math.round((correct / total) * 100);
+  const isJ     = currentTest.id.toString().endsWith('-3');
+  await setBest(currentTest.id, score);
+  const best    = await getBest(currentTest.id);
+  const isNew   = score > 0 && score >= best;
+
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.remove('hidden');
+  document.getElementById('result-title').textContent = currentTest.title + ' 結果 🎉';
+  document.getElementById('score-num').textContent    = score;
+
+  const stars = score === 100 ? '⭐⭐⭐' : score >= 70 ? '⭐⭐' : score >= 40 ? '⭐' : '　';
+  document.getElementById('score-stars').textContent = stars;
+
+  document.getElementById('score-msg').textContent =
+    score === 100 ? '🏆 満点！天才すぎる！！' :
+    score >= 80   ? '🌟 すごい！もう少しで満点！' :
+    score >= 60   ? '💪 惜しい！もう一息！' :
+    score >= 40   ? '📚 まだまだ！復習してみよう！' :
+                    '😅 ん〜、一緒にがんばろう！';
+
+  document.getElementById('best-msg').textContent =
+    `🏅 最高得点: ${best}点${isNew ? '（🔥 更新！）' : ''}`;
+
+  if (score === 100) { soundFanfare(); setTimeout(() => launchConfetti(80), 300); }
+  else if (score >= 70) { soundGood(); setTimeout(() => launchConfetti(30), 300); }
+  else soundClick();
+
+  document.getElementById('answer-list').innerHTML = currentTest.questions.map((q,i) => {
+    const ans         = answers[i];
+    const color       = ans.correct ? '#38a169' : '#e53e3e';
+    const correctC    = q.choices[q.correct];
+    const chosenC     = q.choices[ans.chosenOrigIdx];
+    const correctText = isJ ? journalText(correctC) : correctC;
+    const chosenText  = isJ ? journalText(chosenC)  : chosenC;
+    let detail = `<span>${q.scenario}</span><br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
+    if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
+    if (q.explanation) detail += `<br><span style="font-size:0.85rem; color:#667eea; margin-top:6px; font-style:italic;">📝 解説: ${q.explanation}</span>`;
+    return `<div class="answer-row">
+      <span class="q-num">Q${i+1}</span>
+      <span class="mark">${ans.correct ? '✅' : '❌'}</span>
+      <div class="answer-detail">${detail}</div>
+    </div>`;
+  }).join('');
+}
+
+auth.onAuthStateChanged(user => {
+  if (!user) showLoginScreen();
+});
+
+const BUILD_TIME = '2026-05-10 11:05:46';
+
+(function() {
+  const timeEl = document.createElement('div');
+  timeEl.style.position = 'fixed';
+  timeEl.style.bottom = '10px';
+  timeEl.style.left = '10px';
+  timeEl.style.fontSize = '11px';
+  timeEl.style.color = '#999';
+  timeEl.style.zIndex = '9999';
+  timeEl.style.pointerEvents = 'none';
+  timeEl.textContent = `ビルド: ${BUILD_TIME}`;
+  document.body.appendChild(timeEl);
+})();
+</script>
+</body>
+</html>

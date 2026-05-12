@@ -1,0 +1,719 @@
+{
+  "label": "🔴 基礎上級",
+  "tests": [
+    {
+      "id": 1,
+      "title": "📦 テスト１",
+      "type": "SDLC Automation",
+      "emoji": "📦",
+      "subtitle": "CI/CD・デプロイメント自動化の問題！",
+      "questions": [
+        {
+          "scenario": "大規模なマイクロサービス群で、デプロイ後の異常を検知した際に自動ロールバックを行いたい。最も「管理の手間が少なく」リアルタイム性の高い構成は？",
+          "choices": [
+            "CodeDeploy のアラーム監視機能を使用し、特定の CloudWatch アラームが発火した際に自動ロールバックをトリガーする。",
+            "Lambda を毎分実行してログを解析し、異常があれば CodeDeploy API で停止・戻し操作を行う。",
+            "Route 53 のヘルスチェックを使用して DNS レベルで旧環境へ切り替える。",
+            "CloudTrail のイベントを監視し、エラー率が上昇したらスタックを削除する。"
+          ],
+          "correct": 0,
+          "explanation": "CodeDeploy のアラーム監視機能で特定の CloudWatch アラームを設定しておき、異常検知時に自動でロールバックをトリガーできます。Lambda ポーリングより簡潔で、Route 53 DNS 切り替えより管理の手間が少ないリアルタイム対応。"
+        },
+        {
+          "scenario": "CloudFormation StackSets を使用して 100 近くのアカウントにデプロイする際、一部のアカウントで失敗しても全体を止めずに進めたい。調整すべきパラメータは？",
+          "choices": [
+            "FailureToleranceCount または FailureTolerancePercentage",
+            "MaxConcurrentCount",
+            "RetainStacksOnAccountRemoval",
+            "RegionConcurrencyType"
+          ],
+          "correct": 0,
+          "explanation": "CloudFormation StackSets で FailureToleranceCount（失敗許容アカウント数）または FailureTolerancePercentage（失敗許容率）を設定すれば、一部アカウント失敗時も他のアカウントへのデプロイを継続。"
+        },
+        {
+          "scenario": "AWS Organizations 内のすべてのアカウントで、パブリック S3 バケットの作成を「遡及的に」検出し、自動で非公開にする構成は？",
+          "choices": [
+            "AWS Config 組織ルール（Managed Rule）と SSM Automation による自動修復を組み合わせる。",
+            "SCP でバケット作成を禁止する。",
+            "CloudWatch Logs のサブスクリプションフィルタで Lambda を動かす。",
+            "S3 バケットポリシーで一律拒否する。"
+          ],
+          "correct": 0,
+          "explanation": "AWS Config 組織ルールで遡及的にパブリック S3 バケットを検出でき、SSM Automation による修復アクションで自動非公開化。SCP は予防的で遡及的ではなく、Lambda ポーリングは遅延リスク。"
+        },
+        {
+          "scenario": "CodePipeline で、ソースコードの変更が反映される前に、外部の脆弱性スキャンツール（API 経由）を完了させたい。最適なアクションタイプは？",
+          "choices": [
+            "カスタムアクションまたは Lambda アクションを使用して API を叩き、結果を待機する。",
+            "承認アクションを使用して手動で確認する。",
+            "CodeBuild 内で curl を使ってスキャンを開始し、そのままビルドを続ける。",
+            "S3 のイベント通知を利用する。"
+          ],
+          "correct": 0,
+          "explanation": "CodePipeline で外部脆弱性スキャン API を組み込むには、カスタムアクションまたは Lambda アクションで API 呼び出し結果を待機し、成功/失敗を判定して次ステージへ進む。"
+        },
+        {
+          "scenario": "Systems Manager パッチマネージャーで、特定の「Webサーバー群」にだけ異なるスケジュールでパッチを当てたい。どう識別すべきか？",
+          "choices": [
+            "リソースタグ（例: Role=WebServer）をインスタンスに付与し、パッチグループを作成する。",
+            "インスタンス ID を直接メンテナンスウィンドウに記述する。",
+            "VPC サブネットごとにパッチ適用範囲を分ける。",
+            "IAM ロール名でフィルタリングする。"
+          ],
+          "correct": 0,
+          "explanation": "Systems Manager パッチマネージャーで Role=WebServer というタグを EC2 に付与し、パッチグループとして定義すれば、このグループだけ異なるパッチスケジュール適用が可能。"
+        },
+        {
+          "scenario": "Amazon EventBridge で、複数アカウントのイベントを中央のセキュリティアカウントに集約したい。送信側アカウントで必要な設定は？",
+          "choices": [
+            "ターゲットとして、中央アカウントのイベントバス ARN を指定する。",
+            "IAM ロールを作成して S3 に書き出す。",
+            "VPC ピアリングを中央アカウントと接続する。",
+            "SNS トピックを中央アカウントと共有する。"
+          ],
+          "correct": 0,
+          "explanation": "EventBridge クロスアカウント連携では、送信側で中央アカウントの EventBus ARN をターゲット指定し、リソースベースポリシーで権限許可。中央側でルールを集約管理。"
+        },
+        {
+          "scenario": "CloudFormation で、DB スタックの出力値（Endpoint等）を、他のアプリ用スタックで動的に参照したい。最も標準的な方法は？",
+          "choices": [
+            "Outputs セクションで Export を使用し、別スタックで Fn::ImportValue を使う。",
+            "Parameter Store に値を手動でコピーする。",
+            "同じスタック内にすべてのリソースを詰め込む。",
+            "S3 に設定ファイルを書き出し、それを読み込む。"
+          ],
+          "correct": 0,
+          "explanation": "CloudFormation スタック間で値を共有するには、Outputs セクションで Export を定義し、別スタックで Fn::ImportValue を使用します。クロススタック参照が実現できます。"
+        },
+        {
+          "scenario": "AWS Control Tower を導入した環境で、新しいアカウントが作成された際に自動的に特定のセキュリティリソースをプロビジョニングする仕組みは？",
+          "choices": [
+            "Account Factory と AWS Service Catalog の連携、およびライフサイクルイベントの活用",
+            "個別のアカウントに root でログインして設定する。",
+            "IAM グループポリシーで強制する。",
+            "CloudFormation を手動で 1 つずつ実行する。"
+          ],
+          "correct": 0,
+          "explanation": "AWS Control Tower + Account Factory で、新規アカウント作成時に Service Catalog でセキュリティリソースをプロビジョニングできます。ライフサイクルイベント活用で自動化。"
+        },
+        {
+          "scenario": "Amazon GuardDuty で「EC2 が異常なドメインに通信している」という警告が出た。これを自動で隔離（セキュリティグループ変更）するためのフローは？",
+          "choices": [
+            "GuardDuty 検出イベント → EventBridge → Lambda (SG変更処理)",
+            "GuardDuty → CloudWatch Logs → SNS",
+            "Config ルールの定期実行のみ",
+            "IAM ポリシーでの制限のみ"
+          ],
+          "correct": 0,
+          "explanation": "GuardDuty の EC2 異常通信警告を自動隔離するには、GuardDuty イベント → EventBridge ルール → Lambda で SecurityGroup を変更し、該当 EC2 のアウトバウンドを遮断。"
+        },
+        {
+          "scenario": "Amazon Inspector が、特定の EC2 インスタンスでスキャンを実行できていない。まず確認すべき項目は？",
+          "choices": [
+            "SSM エージェントが実行中か、およびインスタンスに SSM 管理用の IAM ロールが付与されているか。",
+            "Inspector のライセンスが有効か。",
+            "S3 バケットポリシーが Inspector を許可しているか。",
+            "VPC エンドポイントが作成されているか。"
+          ],
+          "correct": 0,
+          "explanation": "Inspector がスキャン実行できない原因は、SSM エージェント未起動または IAM ロール権限不足。両者なく SSM エージェントがインスタンスと通信できず、脆弱性データを収集できません。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "🏗️ テスト２",
+      "type": "IaC & 構成管理",
+      "emoji": "🏗️",
+      "subtitle": "Infrastructure as Code の問題！",
+      "questions": [
+        {
+          "scenario": "Blue/Green デプロイメントにおいて、データベースのスキーマ変更が必要な場合のベストプラクティスは？",
+          "choices": [
+            "後方互換性のある変更（カラム追加のみ等）を行い、新旧アプリ両方が動作するようにする。",
+            "デプロイ中に DB をメンテナンスモードにする。",
+            "新旧それぞれの環境用に DB を 2 つ用意し、後で同期する。",
+            "スキーマ変更が終わるまでアプリを起動しない。"
+          ],
+          "correct": 0,
+          "explanation": "Blue/Green デプロイでは DB スキーマ変更時に後方互換性を保つ必要があります。新旧アプリが同時に動作する設計で、ダウンタイムゼロを実現。"
+        },
+        {
+          "scenario": "AWS Config で、リソースの設定変更が「誰によって」行われたかを特定するために連携が必要なサービスは？",
+          "choices": [
+            "AWS CloudTrail",
+            "Amazon GuardDuty",
+            "AWS IAM Access Analyzer",
+            "Amazon CloudWatch"
+          ],
+          "correct": 0,
+          "explanation": "AWS Config でリソース変更の『誰が』を特定するには CloudTrail と連携し、API 呼び出し元を確認できます。Config Rules と組み合わせて自動修復が可能。"
+        },
+        {
+          "scenario": "CodePipeline で、承認者が詳細を確認できるように、外部ドキュメントへのリンクを表示させる機能は？",
+          "choices": [
+            "承認アクションの「CustomData」フィールドに URL を含める。",
+            "S3 バケットのメタデータに記述する。",
+            "SNS 通知の本文に直接リンクを書く（パイプライン側設定なし）。",
+            "CodeCommit のコメント機能を使う。"
+          ],
+          "correct": 0,
+          "explanation": "CodePipeline 承認アクションで CustomData フィールドに URL やメッセージを含めることで、承認者が詳細情報を確認できます。"
+        },
+        {
+          "scenario": "AWS Systems Manager の「ステートマネージャー」を使用して、全 EC2 に特定のソフトウェアが常にインストールされている状態（あるべき姿）を維持したい。使用するドキュメントは？",
+          "choices": [
+            "AWS-ApplyAutomationRecipe または AWS-RunPatchBaseline",
+            "AWS-RestartEC2Instance",
+            "AWS-CreateImage",
+            "AWS-CopySnapshot"
+          ],
+          "correct": 0,
+          "explanation": "State Manager で『あるべき姿』を継続維持するには、AWS-RunPatchBaseline（パッチ適用）や AWS-ApplyAutomationRecipe（自動化レシピ）などの Automation Document を使用。"
+        },
+        {
+          "scenario": "Auto Scaling グループで、スケールイン時に特定の「計算処理中のインスタンス」が削除されるのを防ぐための設定は？",
+          "choices": [
+            "インスタンスのスケールイン保護 (Instance Scale-in Protection) を有効にする。",
+            "終了ポリシーを OldestInstance にする。",
+            "クールダウン期間を長くする。",
+            "ライフサイクルフックで 1 時間待機させる。"
+          ],
+          "correct": 0,
+          "explanation": "Auto Scaling グループでインスタンスのスケールイン保護を有効にすると、スケールイン対象からそのインスタンスが除外され、計算処理完了まで継続稼働。"
+        },
+        {
+          "scenario": "CloudWatch Logs Insights で、ステータスコードが 500 系のログだけを抽出して集計するクエリのキーワードは？",
+          "choices": [
+            "filter status >= 500 | stats count(*)",
+            "select count where status = 500",
+            "find 500 | group by hour",
+            "search 'ERROR' | summarize"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch Logs Insights は独自のクエリ言語で、ログの高速検索・分析・グラフ化ができます。SQL と異なるが直感的。"
+        },
+        {
+          "scenario": "CodeBuild でビルドした Docker イメージを ECR にプッシュする際、`access denied` エラーが出た。ビルド環境が使用しているのはどの権限？",
+          "choices": [
+            "CodeBuild プロジェクトに割り当てられたサービスロール (IAM Role)",
+            "ビルドを実行した IAM ユーザーの個人権限",
+            "ECR のリポジトリポリシーのみ",
+            "buildspec.yml 内に記載したアクセスキー"
+          ],
+          "correct": 0,
+          "explanation": "CodeBuild でイメージを ECR にプッシュする際、CodeBuild サービスロールに ECR push 権限がないと access denied エラーが発生します。"
+        },
+        {
+          "scenario": "AWS X-Ray を使用して、マイクロサービスのレイテンシー（遅延）が「DB 呼び出し」に起因しているか調査したい。確認すべきデータ単位は？",
+          "choices": [
+            "サブセグメント (Subsegments)",
+            "アノテーション (Annotations)",
+            "メタデータ (Metadata)",
+            "サンプリングルール (Sampling Rules)"
+          ],
+          "correct": 0,
+          "explanation": "X-Ray でマイクロサービスのレイテンシー原因を調査するには、サブセグメント（DB 呼び出しなど各操作）を確認し、どこで時間がかかっているか特定します。"
+        },
+        {
+          "scenario": "複数のアカウント間で共通の AMI を安全に共有し、かつパッチ適用済みの最新版を常に使いやすくするサービスは？",
+          "choices": [
+            "EC2 Image Builder ＋ AWS Resource Access Manager (RAM)",
+            "S3 のバケットポリシーでの共有",
+            "各アカウントでの AMI 手動コピー",
+            "IAM グループでの共有"
+          ],
+          "correct": 0,
+          "explanation": "EC2 Image Builder で AMI を作成し、RAM で複数アカウント間に共有することで、最新パッチ適用済み AMI を統一的に利用できます。"
+        },
+        {
+          "scenario": "AWS Organizations で、開発用 OU（組織単位）には全ての操作を許可しつつ、本番用 OU には特定のサービス（例: ゲーム等）の使用を禁止したい。適用するポリシーは？",
+          "choices": [
+            "本番用 OU にのみ制限をかける SCP を適用し、開発用は FullAWSAccess を維持する。",
+            "開発用 OU にのみ許可を与える IAM ポリシーを書く。",
+            "ルートアカウントで全てのサービスを無効にする。",
+            "AWS Config で禁止サービスを削除する。"
+          ],
+          "correct": 0,
+          "explanation": "Organizations SCP で、本番 OU には制限ポリシーを、開発 OU には FullAWSAccess を付与し、環境別に権限を分ける設計。"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "⚡ テスト３",
+      "type": "Resilient Cloud Solutions",
+      "emoji": "⚡",
+      "subtitle": "高可用性・耐障害性の問題！",
+      "questions": [
+        {
+          "scenario": "AWS CloudFormation で「スタックの更新が失敗した場合に、自動で前の状態に戻さない（トラブルシューティングのため）」設定は？",
+          "choices": [
+            "--disable-rollback (CLI) または「失敗時にロールバック」を無効にする設定",
+            "Termination Protection",
+            "Stack Policy",
+            "OnFailure: DELETE"
+          ],
+          "correct": 0,
+          "explanation": "CloudFormation スタック更新失敗時に自動ロールバックさせない（--disable-rollback）ことで、失敗状態のまま保持し、トラブルシューティングが可能。"
+        },
+        {
+          "scenario": "Amazon EventBridge を使用して API Gateway の呼び出し回数が異常な場合にアラートを出したい。どのメトリクスを使用すべきか？",
+          "choices": [
+            "CloudWatch メトリクスの Count または 4XXError/5XXError",
+            "VPC フローログのバイト数",
+            "IAM のサインイン試行回数",
+            "Lambda の Duration"
+          ],
+          "correct": 0,
+          "explanation": "EventBridge でイベント駆動型のメトリクス監視をするには、CloudWatch メトリクスの Count や Error 系メトリクスをルール条件に使用。"
+        },
+        {
+          "scenario": "CodeDeploy の AppSpec ファイルで、スクリプトを実行する際の「実行ユーザー（Runas）」を指定できるセクションは？",
+          "choices": [
+            "hooks セクション内の各スクリプト定義箇所",
+            "version セクション",
+            "os セクション",
+            "files セクション"
+          ],
+          "correct": 0,
+          "explanation": "CodeDeploy の AppSpec で、hooks セクション内の各スクリプト定義に『Runas』フィールドを追加することで、実行ユーザーを指定できます。"
+        },
+        {
+          "scenario": "Amazon S3 で数百万のオブジェクトがある。特定のタグが付いていないオブジェクトの一覧を最も効率的に取得する方法は？",
+          "choices": [
+            "S3 インベントリ (S3 Inventory) を使用し、結果を Athena でクエリする。",
+            "aws s3 ls コマンドを再帰的に実行する。",
+            "SDK で ListObjectsV2 をループで回す。",
+            "S3 ストレージレンズを確認するのみ。"
+          ],
+          "correct": 0,
+          "explanation": "S3 インベントリで大量オブジェクトのメタデータを定期出力し、Athena でクエリ実行することで、タグ検索などを効率化できます。"
+        },
+        {
+          "scenario": "CodePipeline で、ビルド成功後に「ステージング環境」へデプロイし、テストが成功したら「本番環境」へ自動で進むようにしたい。構成要素は？",
+          "choices": [
+            "ステージング用デプロイステージ → テストステージ → 本番用デプロイステージの順で定義する。",
+            "2 つのパイプラインを作成し、手動で繋ぐ。",
+            "1 つのデプロイステージに全ての環境を詰め込む。",
+            "CloudFormation の WaitCondition を使う。"
+          ],
+          "correct": 0,
+          "explanation": "CodePipeline で多段階デプロイを実装するには、ステージング→テスト→本番の順でステージを定義し、テスト成功を条件に進める設定。"
+        },
+        {
+          "scenario": "AWS Systems Manager Automation ドキュメント内で、前のステップの出力を次のステップの入力として使うための参照形式は？",
+          "choices": [
+            "{{stepName.OutputName}}",
+            "$Input.Variable",
+            "{Ref: PreviousStep}",
+            "!GetAtt PreviousStep.Output"
+          ],
+          "correct": 0,
+          "explanation": "Systems Manager Automation で前のステップの出力を参照するには {{stepName.OutputName}} 形式を使用。"
+        },
+        {
+          "scenario": "Kinesis Data Streams で「データが処理しきれず滞留している」ことを検知するための CloudWatch メトリクスは？",
+          "choices": [
+            "MillisBehindLatest",
+            "IncomingRecords",
+            "PutRecord.Success",
+            "ReadProvisionedThroughputExceeded"
+          ],
+          "correct": 0,
+          "explanation": "Kinesis MillisBehindLatest メトリクスで、消費者がプロデューサーからどのくらい遅れているか可視化でき、滞留検知ができます。"
+        },
+        {
+          "scenario": "AWS OpsWorks で、新しいインスタンスがレイヤーに追加された際に、既存の他のインスタンスの設定（例: ロードバランサーの参照先など）を自動更新するライフサイクルイベントは？",
+          "choices": [
+            "Configure イベント",
+            "Setup イベント",
+            "Deploy イベント",
+            "Sync イベント"
+          ],
+          "correct": 0,
+          "explanation": "AWS OpsWorks で Configure ライフサイクルイベント（インスタンス追加時）が発火し、既存インスタンスの設定も自動更新されます。"
+        },
+        {
+          "scenario": "IAM Access Analyzer が分析するのはどの種類のリソース共有設定ですか？",
+          "choices": [
+            "S3, IAM ロール, KMS, Lambda, SQS 等の「リソースベースのポリシー」による外部共有設定",
+            "ユーザーのパスワード強度",
+            "セキュリティグループのポート開放",
+            "VPC のルートテーブル"
+          ],
+          "correct": 0,
+          "explanation": "IAM Access Analyzer は、S3、IAM ロール、KMS などのリソースベースポリシーで、組織外への不正な共有がないか分析します。"
+        },
+        {
+          "scenario": "Elastic Beanstalk で「トラフィック分割 (Traffic Splitting) デプロイ」を使用する主な利点は？",
+          "choices": [
+            "少量のトラフィックを新しいバージョンに流して、カナリアテストを行いながらヘルス状態を確認できる。",
+            "DB のバックアップを同時に取れる。",
+            "デプロイ費用が無料になる。",
+            "インスタンス数を半分に減らせる。"
+          ],
+          "correct": 0,
+          "explanation": "Elastic Beanstalk トラフィック分割デプロイで、新バージョンへ一部トラフィックを流し、ヘルス状態確認後に段階的に切り替え可能。"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "📊 テスト４",
+      "type": "Monitoring & Logging",
+      "emoji": "📊",
+      "subtitle": "モニタリング・ログ管理の問題！",
+      "questions": [
+        {
+          "scenario": "Amazon CloudWatch で、特定のログパターン（例: \"ERROR\"）が出た回数を数値データとして可視化したい。何を作成すべきか？",
+          "choices": [
+            "メトリクスフィルター (Metric Filter)",
+            "サブスクリプションフィルター",
+            "アラーム履歴",
+            "ログインサイトクエリ"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch メトリクスフィルターで、ログから『ERROR』などのパターンを検出し、カウントを数値メトリクスとして可視化・アラーム化。"
+        },
+        {
+          "scenario": "AWS Step Functions で、外部システムの処理待ちなどで数日間ワークフローを停止させ、外部からの合図で再開させるための機能は？",
+          "choices": [
+            "待機タスク（.waitForTaskToken）を使用する。",
+            "Wait ステートで時間を指定する。",
+            "Lambda を無限ループさせる。",
+            "SQS の可視性タイムアウトを長くする。"
+          ],
+          "correct": 0,
+          "explanation": "Step Functions の待機タスク（WaitForTaskToken）で、外部システムからのコールバックを待って再開できます。長期待機に有効。"
+        },
+        {
+          "scenario": "AWS CodeDeploy を使用して EC2 にデプロイする際、過去の成功したデプロイアーティファクトをどこに保存しておく必要があるか？",
+          "choices": [
+            "Amazon S3 または GitHub",
+            "EC2 インスタンスの EBS",
+            "CodeCommit ブランチ",
+            "Systems Manager パラメータストア"
+          ],
+          "correct": 0,
+          "explanation": "CodeDeploy のアーティファクトは S3 または GitHub に保存され、パイプラインから参照・デプロイに使用。"
+        },
+        {
+          "scenario": "CloudFormation のスタック更新で「リソースの置換 (Replacement)」が発生する場合、データの損失を防ぐために確認すべき項目は？",
+          "choices": [
+            "変更セット (Change Sets) で置換の有無を確認し、バックアップまたは保持ポリシーを検討する。",
+            "IAM ロールを管理者権限にする。",
+            "リージョンを変更する。",
+            "スタックを一度削除してから作り直す。"
+          ],
+          "correct": 0,
+          "explanation": "CloudFormation 変更セット（Change Sets）でリソース置換の有無を事前確認し、DeletionPolicy: Retain で保持すれば、データ損失を防止。"
+        },
+        {
+          "scenario": "AWS Trusted Advisor で、公開設定になっている S3 バケットを特定できるカテゴリは？",
+          "choices": [
+            "セキュリティ",
+            "コスト最適化",
+            "フォールトトレランス",
+            "サービス制限"
+          ],
+          "correct": 0,
+          "explanation": "Trusted Advisor のセキュリティカテゴリで、パブリック公開の S3 バケットを自動検出・報告。"
+        },
+        {
+          "scenario": "CloudWatch アラームで、複数の異なるアラーム（例: CPU > 80% かつ エラー率 > 5%）が同時に発生した時にだけ通知したい場合に使用する機能は？",
+          "choices": [
+            "複合アラーム (Composite Alarms)",
+            "メトリクス数式",
+            "SNS トピックの統合",
+            "Lambda フィルター"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch 複合アラーム（Composite Alarms）で複数アラーム条件を AND/OR で組み合わせ、複雑な監視条件を実現。"
+        },
+        {
+          "scenario": "Systems Manager Run Command で、多数のインスタンスに対して実行速度（同時実行数）を制御し、エラー率が一定を超えたら停止させたい。設定するパラメータは？",
+          "choices": [
+            "MaxConcurrency と MaxErrors",
+            "TimeoutSeconds と Retries",
+            "Priority と Weight",
+            "BatchSize と StopCondition"
+          ],
+          "correct": 0,
+          "explanation": "Systems Manager Run Command で MaxConcurrency（同時実行数）と MaxErrors（エラー上限）を設定し、大量インスタンス実行を制御。"
+        },
+        {
+          "scenario": "AWS Secrets Manager で「ローテーション中に DB への接続ができなくなる時間」を最小限にするための推奨構成は？",
+          "choices": [
+            "2 つのユーザー（交互に入れ替わるマスターとクローン）を使用する方式の Lambda を使用する。",
+            "メンテナンス時間中に手動で更新する。",
+            "DB を再起動する。",
+            "暗号化を一時的に無効にする。"
+          ],
+          "correct": 0,
+          "explanation": "Secrets Manager ローテーション で 2 ユーザー方式を使うと、ローテーション中も DB アクセスが継続でき、ダウンタイムゼロ。"
+        },
+        {
+          "scenario": "Amazon S3 バケットのアクセスログを分析するために、ログの出力先 S3 バケットからデータを取得してクエリを投げられるサービスは？",
+          "choices": [
+            "Amazon Athena",
+            "Amazon Redshift Spectrum",
+            "AWS Glue だけ",
+            "Amazon CloudWatch Logs"
+          ],
+          "correct": 0,
+          "explanation": "Amazon Athena で S3 ログ（S3 access logs など）をクエリ実行し、アクセス分析が可能。SQL で簡潔に検索。"
+        },
+        {
+          "scenario": "CodePipeline で、パイプラインの実行が失敗した理由を SNS で通知したい。EventBridge のイベントパターンでフィルタリングすべき「detail.state」の値は？",
+          "choices": [
+            "FAILED",
+            "ERROR",
+            "STOPPED",
+            "FAILURE"
+          ],
+          "correct": 0,
+          "explanation": "CodePipeline 失敗を SNS で通知するには、EventBridge で 'detail.state': 'FAILED' をフィルター条件に設定。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "🚨 テスト５",
+      "type": "Incident & Event Response",
+      "emoji": "🚨",
+      "subtitle": "インシデント対応・イベント管理の問題！",
+      "questions": [
+        {
+          "scenario": "AWS Lambda で、デプロイ時に古いバージョンと新しいバージョンに一定比率でトラフィックを振り分ける（カナリアデプロイ等）ために使用する機能は？",
+          "choices": [
+            "エイリアス (Alias) と加重ターゲット設定",
+            "環境変数",
+            "バージョン番号の直接指定",
+            "API Gateway のルート設定"
+          ],
+          "correct": 0,
+          "explanation": "Lambda エイリアス + 加重ターゲット設定で、新バージョンへ一定比率のトラフィックを流し、カナリアデプロイが実現。"
+        },
+        {
+          "scenario": "Amazon EC2 Auto Scaling の「予測スケーリング (Predictive Scaling)」が基づいているデータは？",
+          "choices": [
+            "過去 14 日間のトラフィックと CPU 使用率の履歴データ",
+            "CloudTrail のログ",
+            "リアルタイムのメモリ使用率",
+            "S3 のアクセスログ"
+          ],
+          "correct": 0,
+          "explanation": "Auto Scaling 予測スケーリングは過去 14 日のトラフィック・CPU データを ML 分析し、需要予測に基づいて事前スケール。"
+        },
+        {
+          "scenario": "AWS AppConfig で、設定の適用中にエラーが発生した場合に自動で前の設定に戻すための仕組みは？",
+          "choices": [
+            "CloudWatch アラームを設定し、アラーム発火時に自動ロールバックをトリガーする。",
+            "手動で前のバージョンをデプロイし直す。",
+            "Lambda を使って 5 分ごとにチェックする。",
+            "Route 53 を切り替える。"
+          ],
+          "correct": 0,
+          "explanation": "AWS AppConfig のデプロイ中にエラー検知時、CloudWatch アラーム設定で自動ロールバック可能。ガードレール機能で設定正合性チェックし、本番適用前に検証。"
+        },
+        {
+          "scenario": "CloudFormation の `Condition` セクションを使用して、「本番環境の時だけ RDS を作成する」ロジックを実装したい。必要な関数は？",
+          "choices": [
+            "Fn::If",
+            "Fn::GetAtt",
+            "Fn::Sub",
+            "Fn::Join"
+          ],
+          "correct": 0,
+          "explanation": "CloudFormation Condition セクションで Fn::If を使い、パラメータ値に応じて リソース作成の有無を条件分岐。"
+        },
+        {
+          "scenario": "AWS Artifact の主な役割は？",
+          "choices": [
+            "AWS のコンプライアンスレポート（SOC, ISO等）やオンライン契約にアクセスし、ダウンロードする。",
+            "ビルドしたプログラムのバイナリを保存する。",
+            "CloudFormation テンプレートを保存する。",
+            "Docker イメージを管理する。"
+          ],
+          "correct": 0,
+          "explanation": "AWS Artifact で AWS コンプライアンスレポート（SOC、ISO など）やオンライン契約書を一元ダウンロード・管理。"
+        },
+        {
+          "scenario": "AWS Organizations で、既存のアカウントを組織に招待した際、そのアカウントに対して SCP が適用されるタイミングは？",
+          "choices": [
+            "招待を承認し、アカウントが組織（または特定の OU）に参加した直後",
+            "24 時間後",
+            "次の請求サイクルから",
+            "手動で有効化した時のみ"
+          ],
+          "correct": 0,
+          "explanation": "Organizations でアカウント招待後、SCP は招待承認と同時に適用されます。新メンバーアカウントにも制限が有効。"
+        },
+        {
+          "scenario": "CloudWatch の「メトリクス数式 (Metric Math)」を使用して何ができますか？",
+          "choices": [
+            "複数のメトリクスを組み合わせて計算し（例: 合計リクエスト数 / エラー数）、新しいメトリクスとして扱う。",
+            "ログを S3 に転送する。",
+            "SNS 通知を送る。",
+            "EC2 のパスワードを変更する。"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch メトリクス数式（Metric Math）で、複数メトリクス（例：成功数/エラー数）を計算し、新メトリクスとして可視化。"
+        },
+        {
+          "scenario": "AWS Systems Manager の「パッチグループ」を定義するために、EC2 インスタンスに付与する必要があるタグキーの名前は？",
+          "choices": [
+            "Patch Group (大文字小文字、スペースも重要)",
+            "patch-group",
+            "SSMPatchGroup",
+            "MaintenanceWindow"
+          ],
+          "correct": 0,
+          "explanation": "Systems Manager パッチグループはタグキー『Patch Group』（大文字・スペース重要）の値で識別。タグ値が『WebServers』なら、Patch Group『WebServers』として複数スケジュール設定可能。"
+        },
+        {
+          "scenario": "AWS CloudMap と Amazon ECS を連携させた「サービス検出」で、コンテナの IP アドレスが変更された際に自動更新される DNS レコードの種類は？",
+          "choices": [
+            "A レコード または SRV レコード",
+            "CNAME レコード",
+            "TXT レコード",
+            "MX レコード"
+          ],
+          "correct": 0,
+          "explanation": "CloudMap + ECS の サービス検出では、コンテナ IP 変更時に DNS A レコード（または SRV レコード）が自動更新。"
+        },
+        {
+          "scenario": "AWS CodeDeploy の `ValidateService` ライフサイクルイベントの目的は？",
+          "choices": [
+            "デプロイ完了後に、サービスが正しく起動しトラフィックを処理できるかを確認するスクリプトを実行する。",
+            "デプロイ前に IAM 権限をチェックする。",
+            "S3 からファイルをダウンロードする。",
+            "旧環境のインスタンスを削除する。"
+          ],
+          "correct": 0,
+          "explanation": "CodeDeploy ValidateService イベントで、デプロイ完了後のサービス正常動作と トラフィック処理能力を検証スクリプトで確認。"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "🔒 テスト６",
+      "type": "Security & Compliance",
+      "emoji": "🔒",
+      "subtitle": "セキュリティ・コンプライアンスの問題！",
+      "questions": [
+        {
+          "scenario": "Amazon GuardDuty が Amazon S3 への異常なアクセスを検知した。まず何を有効にしておく必要があるか？",
+          "choices": [
+            "S3 保護 (S3 Protection) の有効化",
+            "S3 のパブリックアクセスブロック",
+            "CloudTrail の管理イベントのデータイベント記録",
+            "KMS 暗号化"
+          ],
+          "correct": 0,
+          "explanation": "GuardDuty の S3 保護機能を有効にすることで、異常なアクセスパターンを検知・アラート可能。"
+        },
+        {
+          "scenario": "AWS Resource Access Manager (RAM) を使用して、組織内の別アカウントと共有「できない」リソースは？",
+          "choices": [
+            "IAM ユーザー",
+            "Transit Gateway",
+            "VPC サブネット",
+            "License Manager 設定"
+          ],
+          "correct": 0,
+          "explanation": "AWS RAM で共有できないのは IAM ユーザー。IAM ロール、リソース（S3、Lambda等）は共有可能。"
+        },
+        {
+          "scenario": "CloudWatch Logs の「エクスポートタスク」で S3 にログを送る際、ログデータが表示されない原因として多いのは？",
+          "choices": [
+            "S3 バケットポリシーで `logs.amazonaws.com` へのアクセス許可が設定されていない。",
+            "エクスポートに 1 日以上かかる。",
+            "EC2 の CPU が高い。",
+            "VPC エンドポイントがない。"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch Logs エクスポートで S3 にログ送信時、S3 バケットポリシーで logs.amazonaws.com に PutObject 権限を許可しないと、ログが表示されず。"
+        },
+        {
+          "scenario": "AWS Systems Manager の「高速セットアップ (Quick Setup)」で自動化できる運用タスクは？",
+          "choices": [
+            "パッチ適用のスキャン、インベントリ収集、CloudWatch エージェントの更新など",
+            "VPC の作成",
+            "Route 53 のドメイン取得",
+            "S3 の静的サイト公開"
+          ],
+          "correct": 0,
+          "explanation": "Systems Manager Quick Setup はウィザード形式で、パッチスキャン、インベントリ自動収集、CloudWatch エージェント設定更新など代表的運用タスクを素早く一括自動化。"
+        },
+        {
+          "scenario": "Amazon EventBridge の「デッドレターキュー (DLQ)」の役割は？",
+          "choices": [
+            "ターゲット（Lambda 等）へのイベント配信に失敗した際、そのイベントを保持して後で再試行できるようにする。",
+            "スパムメールを隔離する。",
+            "実行完了したログを保存する。",
+            "不要なイベントを即座に破棄する。"
+          ],
+          "correct": 0,
+          "explanation": "EventBridge DLQ で、ターゲット配信失敗時のイベントを保持し、後で再試行・監視が可能。"
+        },
+        {
+          "scenario": "Elastic Beanstalk で「環境のマニフェスト (env.yaml)」を使用する目的は？",
+          "choices": [
+            "環境名やソリューションスタックなどのパラメータをコード化し、環境作成を自動化する。",
+            "OS のパッチを当てる。",
+            "Docker イメージをビルドする。",
+            "IAM ユーザーを追加する。"
+          ],
+          "correct": 0,
+          "explanation": "Elastic Beanstalk の env.yaml でソリューションスタック、環境名など をコード化し、環境自動作成を実装。"
+        },
+        {
+          "scenario": "AWS CodePipeline で、パイプライン自身の構成変更（アクションの追加など）を自動検知して実行させるには？",
+          "choices": [
+            "パイプラインの定義を CloudFormation 等で管理し、その更新をトリガーにする。",
+            "パイプラインに「自己修復」ボタンを設置する。",
+            "手動で再実行するしかない。",
+            "S3 のバージョニングを使う。"
+          ],
+          "correct": 0,
+          "explanation": "CodePipeline 構成を CloudFormation 管理すれば、その更新をトリガーにパイプライン自身のアップデートが自動化。"
+        },
+        {
+          "scenario": "AWS Config 組織ルールをデプロイする際、一部のアカウントを除外（Exclude）するための設定場所は？",
+          "choices": [
+            "組織ルールの設定時のパラメータ（ExcludedAccounts）",
+            "個別アカウントの IAM 設定",
+            "SCP での拒否",
+            "VPC のルートテーブル"
+          ],
+          "correct": 0,
+          "explanation": "AWS Config 組織ルール デプロイ時、ExcludedAccounts パラメータで特定アカウントを除外できます。"
+        },
+        {
+          "scenario": "Amazon CloudWatch で、特定のログが 5 分間に 10 回以上出たらアラームを出す設定は？",
+          "choices": [
+            "メトリクスフィルターでカウントし、そのメトリクスに対してアラームのしきい値を設定する。",
+            "SNS で直接カウントする。",
+            "CloudTrail で監視する。",
+            "ロググループの保持期間を短くする。"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch メトリクスフィルタで『特定ログが 5 分に 10 回以上』をカウント → そのメトリクスにアラーム設定で実現。"
+        },
+        {
+          "scenario": "AWS Support API を使用して自動化できることは？",
+          "choices": [
+            "サポートケースの作成、管理、および Trusted Advisor チェック結果の取得",
+            "AWS サーバーの物理修理依頼",
+            "新しいリージョンの開設要求",
+            "利用料金の支払い日の変更"
+          ],
+          "correct": 0,
+          "explanation": "AWS Support API で、サポートケース作成・管理や Trusted Advisor チェック結果取得が自動化可能。"
+        }
+      ]
+    }
+  ]
+}

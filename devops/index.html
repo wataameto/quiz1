@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☁️ DOP-C02 練習問題</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 12px 16px 16px 16px; }
+    .container { background: #fff; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.35); max-width: 720px; width: 100%; padding: 36px 32px; position: relative; overflow: hidden; }
+    .container::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #f7971e, #ffd200, #21d4fd, #b721ff); }
+    .home-header { text-align: center; margin-bottom: 24px; }
+    .home-header .logo { font-size: 3rem; margin-bottom: 8px; }
+    .home-header h1 { font-size: 1.8rem; color: #2d3748; font-weight: 800; margin-bottom: 6px; }
+    .home-header p { color: #718096; font-size: 0.95rem; }
+    .level-switcher { display: flex; gap: 8px; margin-bottom: 16px; justify-content: center; }
+    .level-btn { flex: 1; padding: 10px 8px; border: 2.5px solid #e2e8f0; border-radius: 12px; background: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; color: #718096; }
+    .level-btn.active { border-color: #f7971e; background: linear-gradient(135deg, #fff9ed, #fffbea); color: #2d3748; box-shadow: 0 4px 12px rgba(247,151,30,0.2); }
+    .level-btn:hover:not(.active) { border-color: #cbd5e0; background: #f7fafc; }
+    .total-score-bar { background: linear-gradient(135deg, #0f2027, #2c5364); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
+    .total-score-bar .label { font-size: 0.9rem; opacity: 0.85; }
+    .total-score-bar .value { font-size: 1.5rem; font-weight: 900; }
+    .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
+    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+    .test-card { border-radius: 16px; padding: 24px 18px; text-align: center; cursor: pointer; transition: all 0.25s cubic-bezier(.34,1.56,.64,1); border: none; color: #fff; }
+    .test-card:nth-child(1) { background: linear-gradient(135deg, #f7971e, #ffd200); color: #2d3748; }
+    .test-card:nth-child(2) { background: linear-gradient(135deg, #21d4fd, #b721ff); }
+    .test-card:nth-child(3) { background: linear-gradient(135deg, #0f2027, #2c5364); }
+    .test-card:nth-child(4) { background: linear-gradient(135deg, #f5576c, #f093fb); }
+    .test-card:nth-child(5) { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #2d3748; }
+    .test-card:nth-child(6) { background: linear-gradient(135deg, #4facfe, #00f2fe); color: #2d3748; }
+    .test-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
+    .test-card .card-emoji { font-size: 2.4rem; margin-bottom: 8px; display: block; }
+    .test-card h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
+    .test-card .test-type { font-size: 0.75rem; opacity: 0.9; margin-bottom: 12px; background: rgba(255,255,255,0.25); border-radius: 99px; padding: 2px 10px; display: inline-block; }
+    .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
+    .test-card .best-score span { font-weight: 800; font-size: 1rem; }
+    .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; position: relative; }
+    .quiz-back { position: absolute; right: 0; top: 0; background: linear-gradient(135deg, #f7971e, #ffd200); border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #2d3748; transition: all 0.15s; box-shadow: 0 4px 12px rgba(247,151,30,0.3); }
+    .quiz-back:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(247,151,30,0.4); }
+    .quiz-title-wrap { flex: 1; }
+    .quiz-title-wrap h2 { font-size: 1.2rem; font-weight: 800; color: #2d3748; }
+    .quiz-title-wrap p { font-size: 0.8rem; color: #718096; }
+    .progress-wrap { margin-bottom: 20px; }
+    .progress-top { display: flex; justify-content: space-between; font-size: 0.82rem; color: #718096; margin-bottom: 6px; }
+    .progress-bar-bg { background: #edf2f7; border-radius: 99px; height: 10px; overflow: hidden; }
+    .progress-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #f7971e, #ffd200); transition: width 0.5s cubic-bezier(.34,1.56,.64,1); }
+    .scenario { background: linear-gradient(135deg, #f7f8ff, #fffbea); border-left: 5px solid #f7971e; border-radius: 12px; padding: 18px 20px; font-size: 1.05rem; color: #2d3748; line-height: 1.7; margin-bottom: 20px; font-weight: 600; min-height: 140px; }
+    .choices { display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
+    .choice-btn { border: 2.5px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; cursor: pointer; text-align: left; background: #fff; transition: all 0.15s; width: 100%; font-size: 0.93rem; color: #2d3748; line-height: 1.5; font-family: inherit; }
+    .choice-btn:not([disabled]):hover { border-color: #f7971e; background: #fffbea; transform: translateX(4px); }
+    .choice-btn:focus { outline: none; }
+    @media (hover: none) {
+      .choice-btn { -webkit-tap-highlight-color: transparent; }
+      .choice-btn:not([disabled]):hover { border-color: #e2e8f0; background: #fff; transform: none; }
+      .choice-btn:focus { outline: none; box-shadow: none; }
+    }
+    .choice-btn.correct { border: 7px solid #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); animation: popIn 0.3s cubic-bezier(.34,1.56,.64,1); display: flex; justify-content: space-between; align-items: center; }
+    .choice-btn.correct:hover { border-color: #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); transform: none; }
+    .choice-btn.correct .next-indicator { margin-left: 12px; flex-shrink: 0; }
+    .choice-btn.wrong { border-color: #e53e3e; background: linear-gradient(135deg, #fff5f5, #fed7d7); animation: shake 0.4s ease; }
+    .choice-btn.reveal { border: 7px solid #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); display: flex; justify-content: space-between; align-items: center; }
+    .choice-btn.reveal:hover { border-color: #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); transform: none; }
+    @keyframes popIn { 0% { transform: scale(0.95); } 60% { transform: scale(1.03); } 100% { transform: scale(1); } }
+    @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(5px); } }
+    .feedback { margin-top: 16px; padding: 14px 18px; border-radius: 12px; font-size: 1rem; font-weight: 800; animation: slideDown 0.3s ease; min-height: 80px; display: flex; align-items: center; visibility: hidden; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .feedback.correct { background: linear-gradient(135deg, #f0fff4, #c6f6d5); color: #276749; visibility: visible; }
+    .feedback.wrong { background: linear-gradient(135deg, #fff5f5, #fed7d7); color: #9b2c2c; visibility: visible; }
+    .explanation { margin-top: 10px; padding: 12px 16px; background: #f7f8ff; border-radius: 10px; font-size: 0.85rem; color: #4a5568; line-height: 1.6; font-weight: 400; border-left: 3px solid #667eea; min-height: 160px; visibility: hidden; }
+    .explanation.show { visibility: visible; animation: slideDown 0.3s ease; }
+    .next-btn { margin-top: 18px; width: 100%; padding: 15px; background: linear-gradient(135deg, #f7971e, #ffd200); color: #2d3748; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; display: none; transition: all 0.2s; font-family: inherit; letter-spacing: 0.03em; }
+    .next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(247,151,30,0.4); }
+    .result-header { text-align: center; margin-bottom: 24px; }
+    .result-header h1 { font-size: 1.6rem; font-weight: 800; color: #2d3748; }
+    .score-ring { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #f7971e, #ffd200); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 16px; box-shadow: 0 12px 40px rgba(247,151,30,0.4); animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1); }
+    .score-num { font-size: 2.2rem; font-weight: 900; color: #2d3748; line-height: 1; }
+    .score-unit { font-size: 0.8rem; color: rgba(45,55,72,0.75); }
+    .score-main { font-size: 2.2rem; font-weight: 900; }
+    .score-sub { font-size: 0.75rem; color: rgba(45,55,72,0.75); }
+    .score-area { text-align: center; margin: 16px 0; }
+    .score-stars { font-size: 1.6rem; letter-spacing: 4px; margin-bottom: 8px; }
+    .score-msg { font-size: 1rem; font-weight: 700; color: #2d3748; margin-bottom: 4px; }
+    .best-msg { font-size: 0.85rem; color: #d69e2e; font-weight: 700; }
+    .result-list { border-top: 2px solid #edf2f7; margin-top: 16px; padding-top: 16px; }
+    .result-list h3 { font-size: 0.95rem; color: #718096; margin-bottom: 14px; font-weight: 700; }
+    .answer-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 0; border-bottom: 1px solid #f7fafc; font-size: 0.84rem; }
+    .q-num { min-width: 32px; font-weight: 800; color: #a0aec0; }
+    .mark { font-size: 1.2rem; min-width: 24px; }
+    .answer-detail { color: #2d3748; line-height: 1.7; flex: 1; }
+    .answer-detail .exp { margin-top: 4px; font-size: 0.8rem; color: #718096; border-left: 2px solid #e2e8f0; padding-left: 8px; }
+    .btn-home { margin-top: 24px; width: 100%; padding: 15px; background: linear-gradient(135deg, #f7971e, #ffd200); color: #2d3748; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .btn-home:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(247,151,30,0.4); }
+    .btn-review { margin-top: 16px; width: 100%; padding: 15px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .btn-review:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
+    .confetti-wrap { position: fixed; top: 0; left: 0; right: 0; pointer-events: none; overflow: hidden; height: 100vh; z-index: 9999; }
+    .confetti-piece { position: absolute; width: 10px; height: 10px; border-radius: 2px; animation: confettiFall linear forwards; }
+    @keyframes confettiFall { 0% { transform: translateY(-20px) rotate(0deg); opacity: 1; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+    .home-top { position: relative; }
+    .btn-reset-corner { position: absolute; top: 0; right: 0; background: transparent; color: #e53e3e; border: 2px solid #e53e3e; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
+    .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div id="screen-home">
+    <div class="home-top">
+      <button class="btn-reset-corner" onclick="resetScores()">🗑️ リセット</button>
+      <div class="home-header">
+        <h1>DOP-C02 練習問題</h1>
+        <p>AWS DevOps Engineer Professional ／ 各10問・100点満点</p>
+      </div>
+    </div>
+    <div class="level-switcher">
+      <button class="level-btn active" id="level-btn-1" onclick="switchLevel(1)">🟢 基礎初級</button>
+      <button class="level-btn" id="level-btn-2" onclick="switchLevel(2)">🟡 基礎中級</button>
+      <button class="level-btn" id="level-btn-3" onclick="switchLevel(3)">🔴 基礎上級</button>
+    </div>
+    <div class="total-score-bar">
+      <div class="label">🎯 総合成績</div>
+      <div class="value" id="total-score-display">-</div>
+    </div>
+    <div class="test-grid" id="test-grid"></div>
+  </div>
+
+  <div id="screen-quiz" class="hidden">
+    <div class="quiz-header">
+      <button class="quiz-back" onclick="showHome()">テスト選択へ戻る</button>
+      <div class="quiz-title-wrap">
+        <h2 id="quiz-title"></h2>
+        <p id="quiz-subtitle"></p>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-top">
+        <span id="progress-label"></span>
+        <span id="progress-pct"></span>
+      </div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-bar"></div></div>
+    </div>
+    <div class="scenario" id="scenario"></div>
+    <div class="choices" id="choices"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="explanation" id="explanation"></div>
+    <button class="next-btn" id="next-btn"></button>
+  </div>
+
+  <div id="screen-results" class="hidden">
+    <div class="result-header"><h1 id="result-title"></h1></div>
+    <div class="score-area">
+      <div class="score-ring">
+        <span class="score-num" id="score-num"></span>
+      </div>
+      <div class="score-stars" id="score-stars"></div>
+      <p class="score-msg" id="score-msg"></p>
+      <p class="best-msg" id="best-msg"></p>
+    </div>
+    <div class="result-list">
+      <h3>📋 解答一覧</h3>
+      <div id="answer-list"></div>
+    </div>
+    <button id="review-btn" class="btn-review" onclick="startReview()" style="display:none"></button>
+    <button class="btn-home" onclick="showHome()">🏠 テスト選択に戻る</button>
+  </div>
+</div>
+<div class="confetti-wrap" id="confetti-wrap"></div>
+
+<script>
+const AC = window.AudioContext || window.webkitAudioContext;
+let ac = null;
+function getAC() { if (!ac) ac = new AC(); if (ac.state === 'suspended') ac.resume(); return ac; }
+function tone(freq, type, start, dur, vol = 0.25) {
+  try {
+    const a = getAC(), osc = a.createOscillator(), gain = a.createGain();
+    osc.connect(gain); gain.connect(a.destination);
+    osc.type = type; osc.frequency.value = freq;
+    gain.gain.setValueAtTime(vol, a.currentTime + start);
+    gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + start + dur);
+    osc.start(a.currentTime + start); osc.stop(a.currentTime + start + dur);
+  } catch(e) {}
+}
+function soundCorrect() { tone(660,'sine',0,0.12,0.25); tone(880,'sine',0.08,0.15,0.25); tone(1100,'sine',0.18,0.18,0.20); }
+function soundWrong()   { tone(330,'sawtooth',0,0.10,0.20); tone(220,'sawtooth',0.08,0.18,0.15); }
+function soundClick()   { tone(1000,'sine',0,0.05,0.10); }
+function soundFanfare() { [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => tone(f,'sine',t,0.18,0.28)); }
+function soundGood()    { tone(784,'sine',0,0.15,0.25); tone(1047,'sine',0.14,0.20,0.25); }
+
+function launchConfetti(count = 60) {
+  const wrap = document.getElementById('confetti-wrap');
+  wrap.innerHTML = '';
+  const colors = ['#f7971e','#ffd200','#21d4fd','#b721ff','#0f2027','#38a169','#f5576c'];
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.background = colors[Math.floor(Math.random() * colors.length)];
+    el.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+    el.style.animationDelay = (Math.random() * 0.8) + 's';
+    el.style.width = el.style.height = (6 + Math.random() * 8) + 'px';
+    el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    wrap.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+// Test 1: SDLC Automation
+let TESTS = [];
+const TOTAL_QUESTIONS = 60;
+let currentLevel = 1;
+
+async function loadQuestions(level = 1) {
+  try {
+    const res = await fetch(`questions${level}.json?t=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    console.log('Loaded data:', data);
+    if (!data || typeof data !== 'object') {
+      throw new Error('Data is not an object');
+    }
+    if (!data.tests) {
+      throw new Error('data.tests is undefined');
+    }
+    if (!Array.isArray(data.tests)) {
+      throw new Error(`tests is not an array, it's ${typeof data.tests}`);
+    }
+    TESTS = data.tests;
+    console.log('TESTS assigned:', TESTS.length, 'items');
+    showHome();
+  } catch (e) {
+    console.error('Failed to load questions:', e);
+    TESTS = [];
+    document.getElementById('screen-home').classList.remove('hidden');
+    document.getElementById('screen-quiz').classList.add('hidden');
+    document.getElementById('screen-results').classList.add('hidden');
+    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:20px;text-align:center;">問題ファイルの読み込みに失敗: ' + e.message + '</p>';
+  }
+}
+
+function switchLevel(level) {
+  if (level === currentLevel) return;
+  currentLevel = level;
+  [1, 2, 3].forEach(i => {
+    document.getElementById(`level-btn-${i}`).classList.toggle('active', i === level);
+  });
+  soundClick();
+  loadQuestions(level);
+}
+
+let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
+
+function getBest(id) { return parseInt(localStorage.getItem(`best_${currentLevel}_${id}`) || '-1', 10); }
+function setBest(id, s) { if (s > getBest(id)) localStorage.setItem(`best_${currentLevel}_${id}`, s); }
+function resetScores() {
+  if (!confirm('🗑️ このレベルの最高得点をリセットしますか？')) return;
+  TESTS.forEach(t => localStorage.removeItem(`best_${currentLevel}_${t.id}`));
+  soundClick(); showHome();
+}
+
+function getTotalCorrect() {
+  let total = 0, attempted = 0;
+  console.log('getTotalCorrect called, TESTS =', TESTS);
+  if (!TESTS) {
+    console.error('TESTS is null or undefined');
+    return { total: 0, attempted: 0 };
+  }
+  if (!Array.isArray(TESTS)) {
+    console.error('TESTS is not an array:', typeof TESTS, TESTS);
+    return { total: 0, attempted: 0 };
+  }
+  TESTS.forEach(t => {
+    const best = getBest(t.id);
+    if (best >= 0) { total += Math.round(best / 100 * 10); attempted++; }
+  });
+  return { total, attempted };
+}
+
+function showHome() {
+  isReviewMode = false;
+  document.getElementById('screen-home').classList.remove('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+
+  const { total, attempted } = getTotalCorrect();
+  const totalEl = document.getElementById('total-score-display');
+  if (attempted === 0) {
+    totalEl.innerHTML = `- <span>/ ${TOTAL_QUESTIONS}問</span>`;
+  } else {
+    totalEl.innerHTML = `${total} <span>/ ${TOTAL_QUESTIONS}問 正解</span>`;
+  }
+
+  document.getElementById('test-grid').innerHTML = TESTS.map(t => {
+    const best = getBest(t.id);
+    const bestTxt = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
+    return `<div class="test-card" onclick="startTest(${t.id}); soundClick();">
+      <span class="card-emoji">${t.emoji}</span>
+      <h2>${t.title}</h2>
+      <span class="test-type">${t.type}</span>
+      <p class="best-score">${bestTxt}</p>
+    </div>`;
+  }).join('');
+
+  // Debug: Show touch device detection and build time
+  const isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0));
+  };
+  const buildTime = '2026-05-06 12:30:00';
+  const debugEl = document.createElement('div');
+  debugEl.style.cssText = 'position:fixed;bottom:8px;left:8px;font-size:0.65rem;color:#999;background:rgba(0,0,0,0.1);padding:4px 8px;border-radius:4px;z-index:1000;line-height:1.3;';
+  debugEl.innerHTML = (isTouchDevice() ? '📱 Touch' : '🖥️ PC') + '<br>' + buildTime;
+  document.body.appendChild(debugEl);
+}
+
+function startTest(id) {
+  currentTest = TESTS.find(t => t.id === id);
+  currentQ = 0; answers = [];
+  document.getElementById('screen-home').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.remove('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+  renderQuestion();
+}
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const CORRECT_MSGS = ['✅ 正解！やったね！', '🎯 その通り！完璧！', '⭐ 正解！さすが！'];
+const WRONG_MSGS   = ['❌ 残念...確認しよう！', '💔 惜しい！正解を見てね'];
+
+function renderQuestion() {
+  answerInProgress = false; // 新しい問題では回答可能に
+  const q = currentTest.questions[currentQ];
+  const total = currentTest.questions.length;
+  const pct = Math.round((currentQ / total) * 100);
+
+  document.getElementById('quiz-title').textContent    = currentTest.title;
+  document.getElementById('quiz-subtitle').textContent = currentTest.subtitle;
+  document.getElementById('progress-bar').style.width  = pct + '%';
+  document.getElementById('progress-label').textContent = `第 ${currentQ + 1} 問 ／ ${total} 問`;
+  document.getElementById('progress-pct').textContent   = pct + '%';
+  document.getElementById('scenario').textContent       = q.scenario;
+  document.getElementById('feedback').className         = 'feedback';
+  document.getElementById('feedback').textContent       = '';
+  document.getElementById('explanation').className      = 'explanation';
+  document.getElementById('explanation').textContent    = '';
+  document.getElementById('next-btn').style.display     = 'none';
+
+  const choicesEl = document.getElementById('choices');
+  choicesEl.innerHTML = ''; // 前の問題の状態をクリア
+
+  const indexed = shuffle(q.choices.map((c, i) => ({ choice: c, origIdx: i })));
+  shuffledChoices = indexed;
+  const correctShuffledIdx = indexed.findIndex(x => x.origIdx === q.correct);
+
+  choicesEl.innerHTML = indexed.map((item, i) => {
+    const label = String.fromCharCode(97 + i); // a, b, c, d
+    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${item.choice}</button>`;
+  }).join('');
+
+  // 問題表示後 0.5秒はクリック受け付けない
+  setTimeout(() => {
+    shuffledChoices.forEach((_, i) => {
+      const btn = document.getElementById(`choice-${i}`);
+      if (btn) btn.disabled = false;
+    });
+  }, 500);
+}
+
+let answerInProgress = false;
+let isReviewMode = false;
+
+function answer(idx, correctIdx) {
+  if (answerInProgress) return; // 複数実行防止
+  answerInProgress = true;
+
+  const q = currentTest.questions[currentQ];
+  const ok = idx === correctIdx;
+  answers.push({ correct: ok, chosenOrigIdx: shuffledChoices[idx].origIdx });
+
+  shuffledChoices.forEach((_, i) => { document.getElementById(`choice-${i}`).disabled = true; });
+  const ansBtn = document.getElementById(`choice-${idx}`);
+  ansBtn.classList.add(ok ? 'correct' : 'wrong');
+  const isLast = currentQ === currentTest.questions.length - 1;
+  const goNext = (e) => {
+    if (e && e.key === 'Enter') e.preventDefault(); // Enter キーでの自動実行を防止
+    soundClick();
+    isLast ? showResults() : nextQuestion();
+  };
+  const nextLabel = isLast ? '→ 結果を見る' : '→ 次の問題';
+  if (ok) {
+    ansBtn.innerHTML = `<span>${ansBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    ansBtn.onclick = goNext;
+    ansBtn.onkeydown = goNext;
+    // 答え合わせ表示後 0.5秒はクリック受け付けない
+    setTimeout(() => { ansBtn.disabled = false; }, 500);
+  }
+  const correctBtn = document.getElementById(`choice-${correctIdx}`);
+  if (!ok) {
+    correctBtn.classList.add('reveal');
+    correctBtn.innerHTML = `<span>${correctBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    correctBtn.onclick = goNext;
+    correctBtn.onkeydown = goNext;
+    // 答え合わせ表示後 0.5秒はクリック受け付けない
+    setTimeout(() => { correctBtn.disabled = false; }, 500);
+  }
+
+  const fb = document.getElementById('feedback');
+  fb.className = `feedback ${ok ? 'correct' : 'wrong'}`;
+  fb.textContent = ok ? CORRECT_MSGS[Math.floor(Math.random() * CORRECT_MSGS.length)] : WRONG_MSGS[Math.floor(Math.random() * WRONG_MSGS.length)];
+
+  if (q.explanation) {
+    const exp = document.getElementById('explanation');
+    exp.textContent = '💡 ' + q.explanation;
+    exp.className = 'explanation show';
+  }
+
+  ok ? soundCorrect() : soundWrong();
+
+  document.getElementById('next-btn').style.display = 'none';
+}
+
+function nextQuestion() { currentQ++; renderQuestion(); }
+
+function showResults() {
+  const total   = currentTest.questions.length;
+  const correct = answers.filter(a => a.correct).length;
+  const score   = correct * 10; // 1問10点
+  const maxScore = total * 10;
+
+  if (!isReviewMode) {
+    setBest(currentTest.id, score);
+    const best = getBest(currentTest.id);
+    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点`;
+    document.getElementById('best-msg').style.display = '';
+  } else {
+    document.getElementById('best-msg').style.display = 'none';
+  }
+
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.remove('hidden');
+  document.getElementById('result-title').textContent = isReviewMode ? currentTest.title + ' 復習結果' : currentTest.title + ' 結果 🎉';
+  document.getElementById('score-num').innerHTML    = `<span class="score-main">${score}</span><span class="score-sub"> / ${maxScore}点</span>`;
+
+  const ratio = score / maxScore;
+  const stars = ratio === 1 ? '⭐⭐⭐' : ratio >= 0.7 ? '⭐⭐' : ratio >= 0.4 ? '⭐' : '　';
+  document.getElementById('score-stars').textContent = stars;
+  document.getElementById('score-msg').textContent = ratio === 1 ? '🏆 満点！' : ratio >= 0.8 ? '🌟 すごい！' : ratio >= 0.6 ? '💪 惜しい！' : ratio >= 0.4 ? '📚 復習しよう' : '😅 もう一度';
+
+  if (ratio === 1) { soundFanfare(); setTimeout(() => launchConfetti(80), 300); }
+  else if (ratio >= 0.7) { soundGood(); setTimeout(() => launchConfetti(30), 300); }
+  else soundClick();
+
+  const wrongCount = answers.filter(a => !a.correct).length;
+  const reviewBtn = document.getElementById('review-btn');
+  if (wrongCount > 0) {
+    const btnText = isReviewMode ? `🔁 もう一度復習 (${wrongCount}問)` : `🔁 間違えた ${wrongCount} 問を復習する`;
+    reviewBtn.textContent = btnText;
+    reviewBtn.style.display = '';
+  } else {
+    reviewBtn.style.display = 'none';
+  }
+
+  document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
+    const ans = answers[i];
+    const correctText = q.choices[q.correct];
+    const chosenText = q.choices[ans.chosenOrigIdx];
+    let detail = `<span>${q.scenario}</span><br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
+    if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
+    if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}</div>`;
+    return `<div class="answer-row"><span class="q-num">Q${i + 1}</span><span class="mark">${ans.correct ? '✅' : '❌'}</span><div class="answer-detail">${detail}</div></div>`;
+  }).join('');
+}
+
+function startReview() {
+  const wrongQuestions = currentTest.questions.filter((_, i) => !answers[i].correct);
+  currentTest = { ...currentTest, questions: wrongQuestions };
+  isReviewMode = true;
+  currentQ = 0;
+  answers = [];
+  document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.remove('hidden');
+  renderQuestion();
+}
+
+loadQuestions(1);
+
+// キーボードショートカット
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('screen-quiz').classList.contains('hidden')) return;
+  const key = e.key.toLowerCase();
+
+  if (!answerInProgress) {
+    // 回答前: a/b/c/d で選択
+    const map = { 'a': 0, 'b': 1, 'c': 2, 'd': 3 };
+    if (key in map) {
+      const btn = document.getElementById(`choice-${map[key]}`);
+      if (btn && !btn.disabled) btn.click();
+    }
+  } else if (key === 'enter') {
+    // 回答後: Enter で次へ（0.5秒ガード中は disabled なので自然に弾かれる）
+    for (let i = 0; i < 4; i++) {
+      const btn = document.getElementById(`choice-${i}`);
+      if (btn && !btn.disabled && (btn.classList.contains('correct') || btn.classList.contains('reveal'))) {
+        btn.click();
+        break;
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

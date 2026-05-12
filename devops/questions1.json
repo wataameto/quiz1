@@ -1,0 +1,719 @@
+{
+  "label": "🟢 基礎初級",
+  "tests": [
+    {
+      "id": 1,
+      "title": "📦 テスト１",
+      "type": "SDLC Automation",
+      "emoji": "📦",
+      "subtitle": "CI/CD・デプロイメント自動化の問題！",
+      "questions": [
+        {
+          "scenario": "🔧 AWS CodePipeline でソースコード管理に使うサービスは？",
+          "choices": [
+            "AWS CodeCommit",
+            "AWS CodeBuild",
+            "AWS CodeDeploy",
+            "AWS CloudFormation"
+          ],
+          "correct": 0,
+          "explanation": "CodeCommit は Git ベースのソースコード管理。CodeBuild はビルド・テスト、CodeDeploy はデプロイ、CloudFormation はインフラ定義と役割がそれぞれ異なる。"
+        },
+        {
+          "scenario": "🏗️ AWS CodeBuild の主な役割は何？",
+          "choices": [
+            "ソースコードのビルドとテストを自動化する",
+            "コードをサーバーにデプロイする",
+            "バージョン管理を行う",
+            "インフラをコードで定義する"
+          ],
+          "correct": 0,
+          "explanation": "CodeBuild はソースコードをコンパイル・テストしてアーティファクトを生成する。デプロイは CodeDeploy、バージョン管理は CodeCommit、インフラ定義は CloudFormation が担当。"
+        },
+        {
+          "scenario": "🟦🟩 ブルー/グリーンデプロイとは？",
+          "choices": [
+            "本番環境と同等の新環境に切り替える手法",
+            "既存インスタンスを段階的に更新する手法",
+            "全サーバーを同時に更新する手法",
+            "一部ユーザーに新バージョンをテストする手法"
+          ],
+          "correct": 0,
+          "explanation": "ブルー（現行）とグリーン（新規）の2環境を用意して、ロードバランサーやRoute 53で瞬時にトラフィックを切り替える。ダウンタイムゼロでロールバックも容易。段階的更新はローリング、全同時更新は All-at-once、一部ユーザーへの試験はカナリアデプロイ。"
+        },
+        {
+          "scenario": "🐦 カナリアデプロイの特徴は？",
+          "choices": [
+            "少数のユーザーで検証し段階的に展開する",
+            "全ユーザーに一度にデプロイする",
+            "環境を完全に切り替える",
+            "定時に自動的にデプロイする"
+          ],
+          "correct": 0,
+          "explanation": "カナリアは炭鉱のカナリアが語源。少数ユーザーへの先行リリースでリスクを最小化し、問題なければ全体展開する。Route 53 加重ルーティングや CodeDeploy で実装できる。"
+        },
+        {
+          "scenario": "📄 CodeDeploy でEC2へのデプロイを定義するファイルは？",
+          "choices": [
+            "appspec.yml",
+            "buildspec.yml",
+            "template.yaml",
+            "taskdef.json"
+          ],
+          "correct": 0,
+          "explanation": "appspec.yml は CodeDeploy のデプロイ手順定義ファイル。version、Resources（アーティファクト配置先）、Hooks（BeforeInstall・AfterInstall などのライフサイクル）、Permissions・Properties を記述。buildspec.yml は CodeBuild ビルド手順、template.yaml は CloudFormation インフラ定義、taskdef.json は ECS タスク定義に使用。"
+        },
+        {
+          "scenario": "📄 CodeBuild でビルド手順を定義するファイルは？",
+          "choices": [
+            "buildspec.yml",
+            "appspec.yml",
+            "Dockerfile",
+            "deploy.yaml"
+          ],
+          "correct": 0,
+          "explanation": "buildspec.yml は install（依存ライブラリ）→ pre_build（テスト前処理）→ build（コンパイル）→ post_build（テスト、アーティファクト作成）の 4 フェーズで構成。各フェーズで失敗するとそれ以降は実行されない。artifacts セクションでビルド成果物を S3 に保存可能。appspec.yml は CodeDeploy 用、Dockerfile はコンテナイメージ定義。"
+        },
+        {
+          "scenario": "🗄️ CodePipeline のステージ間でアーティファクトを保存するサービスは？",
+          "choices": [
+            "Amazon S3",
+            "Amazon EFS",
+            "Amazon DynamoDB",
+            "AWS CodeArtifact"
+          ],
+          "correct": 0,
+          "explanation": "CodePipeline はステージ間の成果物（アーティファクト）を S3 バケットに保存して受け渡す。CodeArtifact は npm・maven などのパッケージリポジトリで別用途。"
+        },
+        {
+          "scenario": "🔄 ローリングデプロイの説明として正しいのは？",
+          "choices": [
+            "既存インスタンスを少しずつ新バージョンに更新する",
+            "全インスタンスを同時に更新する",
+            "環境を完全に切り替える",
+            "定期的に自動デプロイする"
+          ],
+          "correct": 0,
+          "explanation": "ローリングは一部のインスタンスを順番に更新するため、デプロイ中も残りのインスタンスがリクエストを処理できる。全同時更新は All-at-once でダウンタイムが発生する可能性がある。"
+        },
+        {
+          "scenario": "✋ CodePipeline の手動承認アクションの目的は？",
+          "choices": [
+            "担当者の確認で次ステージに進めるかを判断する",
+            "コードを自動デプロイする",
+            "テスト結果を記録する",
+            "エラーを自動修正する"
+          ],
+          "correct": 0,
+          "explanation": "手動承認はパイプラインの特定ステージ（通常は本番デプロイ前）をゲートするアクション。SNS で承認者に通知が届き、AWS CodePipeline コンソールまたは SNS メッセージから承認/拒否を選択。タイムアウト（デフォルト 7 日）に達すると自動拒否される。承認コメントの追加も可能で、ロールバック時に参照できる。"
+        },
+        {
+          "scenario": "🌿 GitOps の基本的な考え方は？",
+          "choices": [
+            "Gitリポジトリを唯一の信頼できる情報源として管理する",
+            "コードを手動でサーバーにコピーする",
+            "コンソールでインフラを構築する",
+            "デプロイサーバーを使わずに実行する"
+          ],
+          "correct": 0,
+          "explanation": "GitOps はインフラの状態をすべて Git で管理し、変更はプルリクエスト経由で行う手法。IaC との組み合わせで変更履歴・レビュー・ロールバックが容易になる。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "🏗️ テスト２",
+      "type": "IaC & 構成管理",
+      "emoji": "🏗️",
+      "subtitle": "Infrastructure as Code の問題！",
+      "questions": [
+        {
+          "scenario": "📦 AWS CloudFormation の主な目的は？",
+          "choices": [
+            "AWSリソースをコードで定義・自動プロビジョニングする",
+            "アプリをビルドする",
+            "ログを分析する",
+            "コストを削減する"
+          ],
+          "correct": 0,
+          "explanation": "CloudFormation は YAML/JSON テンプレートでインフラを定義し、スタックとして一括作成・更新・削除できる。変更管理・再現性・ドリフト検出も可能。"
+        },
+        {
+          "scenario": "💻 AWS CDK の特徴は？",
+          "choices": [
+            "プログラミング言語でAWSリソースを定義できる",
+            "GUIでインフラを構築する",
+            "テンプレートを自動削除する",
+            "コスト分析を行う"
+          ],
+          "correct": 0,
+          "explanation": "CDK（Cloud Development Kit）は Python・TypeScript・Java などの言語でインフラを定義できる。内部的に CloudFormation テンプレートを生成するため、CloudFormation の恩恵はそのまま受けられる。"
+        },
+        {
+          "scenario": "🔐 Parameter Store の用途は？",
+          "choices": [
+            "設定値やシークレットを安全に保存・管理する",
+            "EC2 のパフォーマンスを監視する",
+            "テンプレートを保存する",
+            "S3 のアクセスを制限する"
+          ],
+          "correct": 0,
+          "explanation": "Systems Manager Parameter Store は DB 接続文字列・API キー・機密設定値などを /myapp/db/password のような階層的なパス構造で管理し、IAM で細粒度アクセス制御できる。無料の Standard と有料の Advanced がある。特に定期的な自動ローテーション（RDS パスワードなど）が必要な場合は Secrets Manager が適切。"
+        },
+        {
+          "scenario": "⚙️ AWS OpsWorks の説明として正しいのは？",
+          "choices": [
+            "Chef や Puppet を使ったサーバー構成管理サービス",
+            "コンテナオーケストレーション",
+            "CI/CDパイプライン",
+            "コスト管理"
+          ],
+          "correct": 0,
+          "explanation": "OpsWorks は Chef・Puppet のマネージドサービス。サーバーの設定を「レシピ」で管理する。コンテナは ECS/EKS、CI/CD は CodePipeline、コスト管理は Cost Explorer が担当。"
+        },
+        {
+          "scenario": "🔗 CloudFormation でスタック間で値を共有するには？",
+          "choices": [
+            "Outputs と Fn::ImportValue",
+            "Mappings",
+            "Conditions",
+            "Metadata"
+          ],
+          "correct": 0,
+          "explanation": "Outputs セクションで Export 属性を使ってエクスポート名を指定し、別スタックで Fn::ImportValue で参照する。例：Outputs: { VpcId: { Value: !Ref MyVpc, Export: { Name: MyVpcId } } }。削除時は参照スタックが先に削除される必要がある。Mappings はマッピングテーブル、Conditions は条件付きリソース、Metadata はメタ情報。"
+        },
+        {
+          "scenario": "📋 AWS Config の主な目的は？",
+          "choices": [
+            "AWSリソースの設定変更を継続的に記録・評価する",
+            "インフラをコード化する",
+            "アプリをデプロイする",
+            "コストをトラッキングする"
+          ],
+          "correct": 0,
+          "explanation": "Config は全リソースの設定履歴を記録し、Config Rules でコンプライアンス違反を自動検出する。違反時の自動修復（SSM Automation 連携）も可能。"
+        },
+        {
+          "scenario": "🌐 Terraform の説明として正しいのは？",
+          "choices": [
+            "マルチクラウド対応の IaC ツール",
+            "AWSのデプロイサービス",
+            "コンテナ管理ツール",
+            "バージョン管理ツール"
+          ],
+          "correct": 0,
+          "explanation": "Terraform は HashiCorp 製のオープンソース IaC ツール。HCL（HashiCorp Configuration Language）で記述し、AWS・Azure・GCP・オンプレミスなどマルチクラウド対応。State ファイル（terraform.tfstate）で現状を追跡し、plan（差分確認）→ apply（適用）のワークフロー。CloudFormation は AWS 限定だが、Terraform はクラウド横断的な統一管理が可能。"
+        },
+        {
+          "scenario": "🔍 CloudFormation のドリフト検出とは？",
+          "choices": [
+            "実際の設定がテンプレートと差異がないか確認する",
+            "誤削除を防ぐ",
+            "コストを予測する",
+            "構文エラーを検出する"
+          ],
+          "correct": 0,
+          "explanation": "コンソールなどで手動変更したリソースがテンプレートと乖離（ドリフト）していないかを検出する機能。ドリフトを放置すると次の CloudFormation 更新で予期しない変更が起きる可能性がある。"
+        },
+        {
+          "scenario": "🛒 Service Catalog の目的は？",
+          "choices": [
+            "承認済みのAWS構成を組織内にカタログで提供する",
+            "サービス一覧を表示する",
+            "コスト削減提案",
+            "セキュリティ脆弱性を検出する"
+          ],
+          "correct": 0,
+          "explanation": "Service Catalog は管理者が承認した CloudFormation テンプレートを製品として公開し、開発者がセルフサービスでプロビジョニングできる。ガバナンスを保ちつつ開発者の自律性を支援する仕組み。"
+        },
+        {
+          "scenario": "📁 Elastic Beanstalk の .ebextensions の用途は？",
+          "choices": [
+            "環境のカスタム設定をYAMLで定義する",
+            "アプリのソースコードを格納する",
+            "デプロイログを保存する",
+            "S3 のポリシーを設定する"
+          ],
+          "correct": 0,
+          "explanation": ".ebextensions ディレクトリに YAML ファイルを配置することで、パッケージインストール・環境変数・IAM ロールなどのカスタム設定をデプロイ時に自動適用できる。"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "⚡ テスト３",
+      "type": "Resilient Cloud Solutions",
+      "emoji": "⚡",
+      "subtitle": "高可用性・耐障害性の問題！",
+      "questions": [
+        {
+          "scenario": "🎯 RTO（Recovery Time Objective）とは？",
+          "choices": [
+            "障害から復旧までの許容時間",
+            "許容できるデータ損失量",
+            "年間稼働率の目標",
+            "バックアップ頻度"
+          ],
+          "correct": 0,
+          "explanation": "RTO は「障害から復旧完了までの最大許容時間」（例：4 時間）。RPO（Recovery Point Objective）は「障害時点で失っても許容できるデータの最大損失期間」（例：1 時間分のデータまで）。両者は DR 計画の中核で、RTO が短いほど、RPO が小さいほど高可用性が必要だがコストが増加する。例：RTO=1 時間、RPO=15 分。"
+        },
+        {
+          "scenario": "🌍 マルチAZ構成の主な目的は？",
+          "choices": [
+            "1つのAZ で障害が起きても別AZ で継続稼働できる",
+            "複数リージョンでデータ同期",
+            "ユーザーに近い場所にサーバーを配置",
+            "コストを削減する"
+          ],
+          "correct": 0,
+          "explanation": "マルチ AZ は同一リージョン内の物理的に分離されたデータセンターに冗長配置する。マルチリージョンはさらに地理的に離れた別リージョンに配置し、大規模災害にも対応できる。"
+        },
+        {
+          "scenario": "🔄 Route 53 のフェイルオーバールーティングは？",
+          "choices": [
+            "プライマリ障害時に自動でセカンダリに切り替える",
+            "リクエスト数で分散",
+            "地理的に近い場所にルーティング",
+            "ランダムに選択"
+          ],
+          "correct": 0,
+          "explanation": "Route 53 フェイルオーバールーティング（Failover Routing）はプライマリリソースにヘルスチェック（HTTP/TCP/CloudWatch メトリクス）を設定し、障害を検知すると自動でセカンダリにルーティングを切り替える。複数のセカンダリをランク付けできる。リクエスト数分散は加重ルーティング、地理的ルーティングはジオロケーション/レイテンシールーティングが別途ある。"
+        },
+        {
+          "scenario": "📊 RDS マルチAZ の特徴は？",
+          "choices": [
+            "スタンバイに自動フェイルオーバー、エンドポイントが変わらない",
+            "読み取りスループット向上",
+            "手動フェイルオーバーが必要",
+            "別リージョンにスタンバイ"
+          ],
+          "correct": 0,
+          "explanation": "RDS マルチ AZ はプライマリとスタンバイが同一リージョン内の異なる AZ に存在。同期レプリケーション（Write ハード待機）でデータ損失ゼロを保証。プライマリ障害時に自動フェイルオーバー（通常 1〜2 分）し、DNS レコードが自動更新されるためアプリ設定変更不要。読み取りスケールが必要な場合は Read Replica を追加。Multi-region 冗長化は Aurora Global Database が適切。"
+        },
+        {
+          "scenario": "🚀 ターゲット追跡スケーリングとは？",
+          "choices": [
+            "メトリクスを目標値に保つよう自動スケール",
+            "スケジュール実行",
+            "手動でインスタンス数変更",
+            "スケールイン・アウトを交互に繰り返す"
+          ],
+          "correct": 0,
+          "explanation": "例えば「CPU 使用率を 50% に保つ」という目標を設定すると、自動でインスタンスを増減させる。ステップスケーリングはメトリクス変化量に応じて段階的に増減する方式で、より細かい制御が可能。"
+        },
+        {
+          "scenario": "🌐 CloudFront オリジンフェイルオーバーの動作は？",
+          "choices": [
+            "プライマリ障害時に自動でセカンダリにフォールバック",
+            "ユーザー地域で選択",
+            "CPU使用率で分散",
+            "キャッシュミス時にフォールバック"
+          ],
+          "correct": 0,
+          "explanation": "CloudFront オリジングループにプライマリとセカンダリを設定し、プライマリが 5xx や設定した 4xx を返すか接続タイムアウト時に自動でセカンダリに切り替える。複数ステータスコード指定・リトライ間隔・リトライ回数が設定可能。クライアント側はキャッシュから提供されるため影響が最小。S3 クロスリージョンレプリケーション + CloudFront オリジンフェイルオーバーで高可用な配信構成を実現。"
+        },
+        {
+          "scenario": "💾 S3 のデータ耐久性は？",
+          "choices": [
+            "99.999999999%（イレブンナイン）",
+            "99.9%",
+            "99.99%",
+            "100%"
+          ],
+          "correct": 0,
+          "explanation": "S3 はイレブンナイン（11個の9）の耐久性で、データを複数 AZ に自動複製する。耐久性はデータが失われない確率、可用性はアクセスできる確率で別の概念。S3 Standard の可用性は 99.99%。"
+        },
+        {
+          "scenario": "🔁 ELB のヘルスチェックの役割は？",
+          "choices": [
+            "正常でないターゲットへのトラフィック送信を停止",
+            "CPU使用率を監視",
+            "ログを収集",
+            "自動パッチを適用"
+          ],
+          "correct": 0,
+          "explanation": "ELB は定期的にターゲット（EC2・コンテナ等）のヘルスチェックを行い、異常なターゲットへのルーティングを自動停止する。復旧後は自動的にルーティング再開するため、障害インスタンスへのリクエストを防げる。"
+        },
+        {
+          "scenario": "🗂️ SQS で障害耐性を高める設計は？",
+          "choices": [
+            "非同期キューで処理失敗時に再処理",
+            "同期REST連携",
+            "単一インスタンスに集約",
+            "DB を共有ストレージにする"
+          ],
+          "correct": 0,
+          "explanation": "SQS キューを挟んだ非同期設計では、処理に失敗してもメッセージがキューに残り再処理できる。DLQ（デッドレターキュー）で一定回数失敗したメッセージを別キューに隔離して原因調査できる。"
+        },
+        {
+          "scenario": "📋 ゲームデイ演習の目的は？",
+          "choices": [
+            "意図的に障害を起こしてシステムの回復力を検証",
+            "新機能の負荷テスト",
+            "チームのスキル評価",
+            "コスト最適化"
+          ],
+          "correct": 0,
+          "explanation": "ゲームデイ演習は本番相当の環境で意図的に障害を注入し、システムと対応プロセスの回復力を検証するカオスエンジニアリング実践。AWS Fault Injection Simulator（FIS）でシナリオを自動化できる。"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "📊 テスト４",
+      "type": "Monitoring & Logging",
+      "emoji": "📊",
+      "subtitle": "モニタリング・ログ管理の問題！",
+      "questions": [
+        {
+          "scenario": "📈 CloudWatch の主な機能は？",
+          "choices": [
+            "メトリクス収集・アラーム・ログ管理",
+            "ビルドとデプロイ",
+            "リソースプロビジョニング",
+            "脆弱性スキャン"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch は AWS の中核モニタリングサービス。メトリクス収集・可視化、閾値超過時のアラーム、ログの収集・保存・検索（CloudWatch Logs）、ダッシュボード作成などを提供する。"
+        },
+        {
+          "scenario": "🔎 AWS X-Ray の目的は？",
+          "choices": [
+            "分散アプリのリクエストをトレース・分析する",
+            "ログを長期保存",
+            "コストを分析",
+            "セキュリティインシデント検出"
+          ],
+          "correct": 0,
+          "explanation": "X-Ray はマイクロサービスなどの分散アプリでリクエストがどのサービスを通ったかをトレースし、レイテンシのボトルネックやエラー箇所を可視化する。サービスマップでサービス間の依存関係も把握できる。"
+        },
+        {
+          "scenario": "🚨 CloudWatch アラーム ALARM 時の自動対応は？",
+          "choices": [
+            "SNS 経由で Lambda・Auto Scaling をトリガー",
+            "手動で EC2 再起動",
+            "CloudFormation 自動更新",
+            "S3 にログ自動エクスポート"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch アラームは ALARM 状態で SNS トピックに通知を送り、SNS からメール送信や Lambda 呼び出し、Auto Scaling のポリシー実行などを連鎖的にトリガーできる。"
+        },
+        {
+          "scenario": "⚡ EventBridge の説明は？",
+          "choices": [
+            "AWS サービスのイベントをルールで配信する",
+            "ログ分析サービス",
+            "EC2 死活監視",
+            "デプロイ管理"
+          ],
+          "correct": 0,
+          "explanation": "EventBridge（旧 CloudWatch Events）は AWS サービスのイベントをルールでフィルタリングし、Lambda・SNS・SQS などのターゲットに配信するイベントバス。cron 式でスケジュール実行も可能。"
+        },
+        {
+          "scenario": "🕵️ CloudTrail の用途は？",
+          "choices": [
+            "API 呼び出しを記録・監査する",
+            "パフォーマンス監視",
+            "システムログ収集",
+            "変更履歴管理"
+          ],
+          "correct": 0,
+          "explanation": "CloudTrail は AWS API の全呼び出しを「誰が・いつ・どこから・何をしたか」として記録する監査証跡サービス。セキュリティインシデント調査や内部統制・コンプライアンス対応に不可欠。"
+        },
+        {
+          "scenario": "🔍 CloudWatch Logs Insights の用途は？",
+          "choices": [
+            "ログをクエリ言語で検索・分析",
+            "SSH 接続",
+            "テンプレートエラー検出",
+            "アクセスログ管理"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch Logs Insights は CloudWatch Logs に保存されたログを独自のクエリ言語（SQL 風）で高速検索・集計・グラフ化。| fields、| stats、| filter などで複雑な分析が可能。エラーの出現パターン集計、レスポンスタイム P50/P95/P99 算出、特定ユーザーのアクティビティ追跡など。複数ロググループを同時クエリできる。クエリ結果の保存・共有も可能。"
+        },
+        {
+          "scenario": "🛡️ GuardDuty の説明は？",
+          "choices": [
+            "脅威インテリジェンスで悪意ある活動を検出",
+            "パフォーマンス最適化",
+            "コスト管理",
+            "静的解析"
+          ],
+          "correct": 0,
+          "explanation": "GuardDuty は VPC フローログ・DNS ログ・CloudTrail を機械学習と脅威インテリジェンスで分析し、不正アクセスや異常な操作を検出する。Inspector は脆弱性スキャン（CVE 検出）で目的が異なる。"
+        },
+        {
+          "scenario": "🔔 Composite Alarms の特徴は？",
+          "choices": [
+            "複数アラームを AND/OR 条件で組み合わせ",
+            "EC2 自動再起動",
+            "ログ自動転送",
+            "コスト超過アラート"
+          ],
+          "correct": 0,
+          "explanation": "Composite Alarm は複数のアラームを AND/OR の論理式で組み合わせた複合アラーム。例えば「CPU 高騰 AND メモリ不足」の場合のみ通知することで誤報（ノイズ）を減らせる。"
+        },
+        {
+          "scenario": "📌 CloudWatch カスタムメトリクスの最小粒度は？",
+          "choices": [
+            "1秒",
+            "5秒",
+            "1分",
+            "5分"
+          ],
+          "correct": 0,
+          "explanation": "PutMetricData API でカスタムメトリクスを発行する際、高分解能メトリクスとして 1 秒粒度まで指定できる。標準は 1 分粒度。EC2 デフォルトメトリクスは 5 分（詳細モニタリング有効化で 1 分）。"
+        },
+        {
+          "scenario": "🏥 Health Dashboard の目的は？",
+          "choices": [
+            "AWS 障害情報・アカウント影響を確認",
+            "EC2 ヘルスチェック設定",
+            "アプリ死活監視",
+            "スケーリング履歴"
+          ],
+          "correct": 0,
+          "explanation": "AWS Health Dashboard は AWS サービスの障害情報と自分のアカウントへの影響を確認できる。Personal Health Dashboard（PHD）では自アカウントに影響するイベントを EventBridge 経由で通知できる。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "🚨 テスト５",
+      "type": "Incident & Event Response",
+      "emoji": "🚨",
+      "subtitle": "インシデント対応・イベント管理の問題！",
+      "questions": [
+        {
+          "scenario": "⚡ EventBridge の用途として正しいのは？",
+          "choices": [
+            "AWS サービス間のイベント駆動連携",
+            "ログ保存",
+            "リソース管理",
+            "コスト計算"
+          ],
+          "correct": 0,
+          "explanation": "EventBridge はイベント駆動アーキテクチャの基盤。EC2 起動・S3 オブジェクト作成・CodePipeline 状態変化などのイベントをルールでフィルタリングして後続処理をトリガーする。"
+        },
+        {
+          "scenario": "🔔 SNS の主な役割は？",
+          "choices": [
+            "メッセージを配信・通知する",
+            "ログを保存",
+            "リソースをプロビジョニング",
+            "アプリをビルド"
+          ],
+          "correct": 0,
+          "explanation": "SNS（Simple Notification Service）はパブリッシュ/サブスクライブ型メッセージングサービス。1 つのトピックに発行したメッセージをメール・Lambda・SQS・HTTP などの複数エンドポイントに同時配信できる。"
+        },
+        {
+          "scenario": "📋 Systems Manager OpsCenter の目的は？",
+          "choices": [
+            "運用上の問題（OpsItems）を一元管理・解決",
+            "パッチ適用自動化",
+            "スタック管理",
+            "ビルドログ保存"
+          ],
+          "correct": 0,
+          "explanation": "OpsCenter は CloudWatch アラームや Config Rules 違反などから自動作成されたインシデント（OpsItems）を一元管理し、関連情報と対応手順をまとめて確認・解決できる。パッチ適用は Patch Manager が担当。"
+        },
+        {
+          "scenario": "🔄 Systems Manager Automation の用途は？",
+          "choices": [
+            "AWS リソースの操作をワークフロー化・自動化",
+            "コードをビルド",
+            "リソース設定を定義",
+            "ログを分析"
+          ],
+          "correct": 0,
+          "explanation": "SSM Automation は EC2 再起動・AMI 作成・パッチ適用などの定型操作をワークフロー（Automation Runbook）として定義して自動実行する。手動操作のミスをなくしインシデント対応を標準化できる。"
+        },
+        {
+          "scenario": "📞 SNS と SQS の使い分けは？",
+          "choices": [
+            "SNS は通知（プッシュ）、SQS はキューイング（プル）",
+            "用途は同じ",
+            "SNS でキュー、SQS で通知",
+            "価格が異なるだけ"
+          ],
+          "correct": 0,
+          "explanation": "SNS はメッセージをサブスクライバーにプッシュ配信（ファンアウト）、SQS はメッセージをキューに蓄積してコンシューマーがプルする。SNS→SQS のパターンで両者を組み合わせることも多い。"
+        },
+        {
+          "scenario": "🎯 Lambda トリガーの例として正しいのは？",
+          "choices": [
+            "S3 PutObject・SQS メッセージ・EventBridge など",
+            "EC2 インスタンス起動のみ",
+            "VPC 変更のみ",
+            "IAM ポリシー更新のみ"
+          ],
+          "correct": 0,
+          "explanation": "Lambda は S3 イベント・SQS メッセージ・EventBridge ルール・API Gateway・DynamoDB Streams・Kinesis など多数のトリガーをサポート。サーバーレスアーキテクチャの中核として様々なイベントを処理できる。"
+        },
+        {
+          "scenario": "📊 CloudWatch Alarms を SNS・Lambda に連携させる目的は？",
+          "choices": [
+            "監視条件をトリガーに自動対応させる",
+            "ログを保存",
+            "コスト削減",
+            "リソース定義"
+          ],
+          "correct": 0,
+          "explanation": "CloudWatch アラームが閾値超過（ALARM 状態）になると SNS 通知 → Lambda 呼び出しという連鎖で自動対応が可能。例えば「エラー率上昇 → 旧バージョンにロールバック」といった自己修復アーキテクチャを実現できる。"
+        },
+        {
+          "scenario": "🔐 Secrets Manager の自動ローテーションの役割は？",
+          "choices": [
+            "定期的に機密情報を更新・管理する",
+            "ログを保存",
+            "リソースをスケール",
+            "テンプレートを定義"
+          ],
+          "correct": 0,
+          "explanation": "Secrets Manager は RDS パスワードや API キーなどを定期的に自動ローテーションする。ローテーション時は Lambda 関数が実行されてシークレット更新とアプリへの反映を自動で行う。"
+        },
+        {
+          "scenario": "📢 SNS トピックのアクセス制御は？",
+          "choices": [
+            "リソースベースのポリシーで制御",
+            "IAM ロールのみ",
+            "セキュリティグループのみ",
+            "VPC エンドポイントのみ"
+          ],
+          "correct": 0,
+          "explanation": "SNS トピックはリソースベースポリシー（トピックポリシー）で「誰がパブリッシュ・サブスクライブできるか」を制御する。クロスアカウントでの利用時もリソースポリシーで許可する。"
+        },
+        {
+          "scenario": "⏰ Lambda 実行時間制限は？",
+          "choices": [
+            "最大 15 分",
+            "最大 5 分",
+            "最大 30 分",
+            "無制限"
+          ],
+          "correct": 0,
+          "explanation": "Lambda の実行タイムアウトは最大 15 分（900 秒）。15 分を超える長時間処理は Step Functions・ECS・EC2 などで実装する。デフォルトのタイムアウトは 3 秒で、用途に合わせて設定が必要。"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "🔒 テスト６",
+      "type": "Security & Compliance",
+      "emoji": "🔒",
+      "subtitle": "セキュリティ・コンプライアンスの問題！",
+      "questions": [
+        {
+          "scenario": "🔑 最小権限の原則とは？",
+          "choices": [
+            "必要最低限の権限だけを付与",
+            "全員に管理者権限を付与",
+            "アクセスキーのみで管理",
+            "パブリックアクセスを許可"
+          ],
+          "correct": 0,
+          "explanation": "最小権限の原則（Least Privilege）はセキュリティの基本。必要な操作だけを許可し、不要な権限を持たせないことで侵害時の被害範囲を最小化する。IAM ポリシーは定期的に見直す。"
+        },
+        {
+          "scenario": "🏷️ IAM Roles と Users の違いは？",
+          "choices": [
+            "Roles は一時認証（STS）、Users は長期アクセスキー",
+            "同じもの",
+            "Roles が強力",
+            "Users が一時的"
+          ],
+          "correct": 0,
+          "explanation": "IAM Role は STS が発行する一時的なクレデンシャルを使い、有効期限が来ると自動更新される。IAM User のアクセスキーは長期有効で漏洩リスクが高い。EC2・Lambda などには必ず Role を使う。"
+        },
+        {
+          "scenario": "🔒 Secrets Manager の用途は？",
+          "choices": [
+            "機密情報を安全に保存・自動ローテーション",
+            "ログ保存",
+            "テンプレート保存",
+            "アクセス制御"
+          ],
+          "correct": 0,
+          "explanation": "Secrets Manager は DB パスワード・API キーなどを暗号化して保存し、自動ローテーション機能を持つ。Parameter Store より自動ローテーションが充実しているが有料。コードへのハードコードを防ぐために使う。"
+        },
+        {
+          "scenario": "🛡️ AWS Shield の役割は？",
+          "choices": [
+            "DDoS 攻撃から保護",
+            "SQL インジェクション防止",
+            "IAM 誤設定検出",
+            "S3 公開制限"
+          ],
+          "correct": 0,
+          "explanation": "Shield Standard は自動で有効で基本的な DDoS 保護を提供（無料）。Shield Advanced は大規模 DDoS への高度な保護・コスト補償・24 時間専門サポートを提供（有料）。WAF はアプリ層攻撃（SQLi・XSS）防止に使う。"
+        },
+        {
+          "scenario": "📜 CloudTrail の証跡を複数リージョンに適用するには？",
+          "choices": [
+            "証跡設定で「すべてのリージョンに適用」を有効化",
+            "各リージョンで個別に作成",
+            "CloudWatch と連携",
+            "IAM で設定"
+          ],
+          "correct": 0,
+          "explanation": "CloudTrail の証跡作成時に「すべてのリージョンに適用」を有効にすると、全リージョンの API 呼び出しを一か所の S3 バケットに集約できる。新しいリージョンが追加されても自動的に対象になる。"
+        },
+        {
+          "scenario": "🔍 Inspector の役割は？",
+          "choices": [
+            "EC2・コンテナの脆弱性をスキャン",
+            "脅威検出",
+            "ビルド自動化",
+            "ネットワーク分析"
+          ],
+          "correct": 0,
+          "explanation": "Inspector v2 は EC2 インスタンスや ECR コンテナイメージの OS・パッケージの CVE（既知脆弱性）を継続的にスキャンして報告する。GuardDuty は動作ベースの脅威検出で目的が異なる。"
+        },
+        {
+          "scenario": "🌐 WAF で設定できるルールは？",
+          "choices": [
+            "IP・SQLi・XSS パターンをブロック",
+            "CPU スケーリングルール",
+            "テンプレート更新制限",
+            "パスワードポリシー"
+          ],
+          "correct": 0,
+          "explanation": "WAF（Web Application Firewall）は IP アドレス・地域・HTTP ヘッダー・リクエストボディのパターンでリクエストを許可/ブロックする。OWASP Top 10 に対応するマネージドルールも利用可能。"
+        },
+        {
+          "scenario": "🏢 Organizations SCP（Service Control Policy）の用途は？",
+          "choices": [
+            "アカウントが使用できるサービス・操作を制限",
+            "請求を分割",
+            "インスタンススペック制限",
+            "ストレージ制限"
+          ],
+          "correct": 0,
+          "explanation": "SCP は AWS Organizations で OU やアカウントに適用する権限のガードレール。IAM で Allow が付与されていても SCP で Deny されていれば実行不可。管理アカウント自身には SCP が適用されない。"
+        },
+        {
+          "scenario": "🔐 S3 への意図しないパブリックアクセスを防ぐには？",
+          "choices": [
+            "S3 ブロックパブリックアクセス設定を有効化",
+            "IAM で拒否",
+            "セキュリティグループで制限",
+            "CloudFront で制限"
+          ],
+          "correct": 0,
+          "explanation": "S3 ブロックパブリックアクセスはバケットまたはアカウントレベルで設定でき、ACL やバケットポリシーによるパブリックアクセスを強制的にブロックする。Organizations の SCP でアカウント全体に強制適用も可能。"
+        },
+        {
+          "scenario": "📊 Security Hub の役割は？",
+          "choices": [
+            "GuardDuty・Inspector など複数サービスの検出結果を一元管理",
+            "DDoS 防止",
+            "SSH 管理",
+            "コスト最適化"
+          ],
+          "correct": 0,
+          "explanation": "Security Hub は GuardDuty・Inspector・Macie・Config などのセキュリティ検出結果を一か所に集約してダッシュボードで可視化する。CIS AWS Foundations Benchmark などのセキュリティ標準への準拠状況も評価できる。"
+        }
+      ]
+    }
+  ]
+}
