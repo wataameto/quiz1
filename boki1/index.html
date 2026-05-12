@@ -580,6 +580,12 @@ function switchLevel(level) {
 
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
 let bestScores = {};
+let TOTAL_QUESTIONS = 0;
+
+function calculateTotalQuestions() {
+  if (!TESTS || !Array.isArray(TESTS)) return 0;
+  return TESTS.reduce((sum, test) => sum + test.questions.length, 0);
+}
 
 function getCollectionName() {
   // quizId（boki1 or devops）をコレクション名に変換
@@ -641,6 +647,7 @@ async function showHome() {
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
 
+  TOTAL_QUESTIONS = calculateTotalQuestions();
   const { total, attempted } = await getTotalCorrect();
   const totalEl = document.getElementById('total-score-display');
   if (attempted === 0) {
