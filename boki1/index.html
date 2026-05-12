@@ -495,21 +495,19 @@ async function loadAllQuestions() {
     const configRes = await fetch('../config.json?t=' + Date.now());
     const configData = await configRes.json();
 
-    // 複数のレベルから最大レベル数を検出
-    maxLevel = 1;
-    let foundLevel = true;
-    while (foundLevel) {
-      try {
-        const res = await fetch(`questions${maxLevel + 1}.json?t=${Date.now()}`);
-        if (res.ok) {
-          maxLevel++;
-        } else {
-          foundLevel = false;
-        }
-      } catch (e) {
-        foundLevel = false;
-      }
+    // 最初のレベルを読み込んで quizId を取得
+    const firstRes = await fetch(`questions1.json?t=${Date.now()}`);
+    if (!firstRes.ok) throw new Error(`HTTP ${firstRes.status}`);
+    const firstData = await firstRes.json();
+    quizId = firstData.id;
+
+    // quizId から maxLevel を取得
+    if (!configData[quizId] || !configData[quizId].maxLevel) {
+      throw new Error(`Configuration for ${quizId} not found or missing maxLevel`);
     }
+    maxLevel = configData[quizId].maxLevel;
+    document.title = configData[quizId].title;
+    document.body.style.background = configData[quizId].bgGradient;
 
     // 各レベルのデータを読み込む
     for (let level = 1; level <= maxLevel; level++) {
@@ -520,14 +518,6 @@ async function loadAllQuestions() {
         throw new Error(`Invalid data at level ${level}`);
       }
       quizData[level] = data;
-      if (!quizId) {
-        quizId = data.id; // 最初のデータから quizId を取得
-        // config から title を動的に設定
-        if (configData[quizId]) {
-          document.title = configData[quizId].title;
-          document.body.style.background = configData[quizId].bgGradient;
-        }
-      }
     }
 
     // レベルボタンを動的に生成
