@@ -9,26 +9,6 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <style>
-    :root {
-      --primary: #667eea;
-      --secondary: #764ba2;
-      --topBar: linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085);
-      --scoreBar: linear-gradient(135deg, #667eea, #764ba2);
-      --levelBtnActive: #667eea;
-      --levelBtnActiveBg: linear-gradient(135deg, #f7f8ff, #f5f7ff);
-      --progressBar: linear-gradient(90deg, #667eea, #764ba2);
-      --scenarioBg: linear-gradient(135deg, #f7f8ff, #fff0fb);
-      --scenarioBorder: #667eea;
-      --choiceBtnHover: #667eea;
-      --choiceBtnHoverBg: #f7f8ff;
-      --nextBtn: linear-gradient(135deg, #667eea, #764ba2);
-      --reviewBtn: linear-gradient(135deg, #667eea, #764ba2);
-      --scoreRing: linear-gradient(135deg, #667eea, #764ba2);
-      --explanationBg: linear-gradient(135deg, #f0f4ff, #f5f7ff);
-      --explanationBorder: #667eea;
-      --explanationText: #667eea;
-    }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -57,7 +37,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 6px;
-      background: var(--topBar);
+      background: linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085);
     }
 
     /* ===== HOME ===== */
@@ -68,7 +48,7 @@
 
     .level-switcher { display: flex; gap: 8px; margin-bottom: 16px; justify-content: center; }
     .level-btn { flex: 1; padding: 10px 8px; border: 2.5px solid #e2e8f0; border-radius: 12px; background: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; color: #718096; }
-    .level-btn.active { border-color: var(--levelBtnActive); background: var(--levelBtnActiveBg); color: #2d3748; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .level-btn.active { border-color: #667eea; background: linear-gradient(135deg, #f7f8ff, #f5f7ff); color: #2d3748; box-shadow: 0 4px 12px rgba(102,126,234,0.2); }
     .level-btn:hover:not(.active) { border-color: #cbd5e0; background: #f7fafc; }
 
     .test-grid {
@@ -89,9 +69,9 @@
       color: #fff;
     }
 
-    .test-card:nth-child(1) { background: var(--card-1); }
-    .test-card:nth-child(2) { background: var(--card-2); }
-    .test-card:nth-child(3) { background: var(--card-3); }
+    .test-card:nth-child(1) { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .test-card:nth-child(2) { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .test-card:nth-child(3) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
 
     .test-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
 
@@ -101,7 +81,7 @@
     .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
     .test-card .best-score span { font-weight: 800; font-size: 1rem; }
 
-    .total-score-bar { background: var(--scoreBar); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
+    .total-score-bar { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
     .total-score-bar .label { font-size: 0.9rem; opacity: 0.85; }
     .total-score-bar .value { font-size: 1.5rem; font-weight: 900; }
     .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
@@ -120,13 +100,13 @@
     .progress-bar-fill {
       height: 100%;
       border-radius: 99px;
-      background: var(--progressBar);
+      background: linear-gradient(90deg, #667eea, #764ba2);
       transition: width 0.5s cubic-bezier(.34,1.56,.64,1);
     }
 
     .scenario {
-      background: var(--scenarioBg);
-      border-left: 5px solid var(--scenarioBorder);
+      background: linear-gradient(135deg, #f7f8ff, #fff0fb);
+      border-left: 5px solid #667eea;
       border-radius: 12px;
       padding: 18px 20px;
       font-size: 1.05rem;
@@ -154,8 +134,8 @@
     }
 
     .choice-btn:not([disabled]):hover {
-      border-color: var(--choiceBtnHover);
-      background: var(--choiceBtnHoverBg);
+      border-color: #667eea;
+      background: #f7f8ff;
       transform: translateX(4px);
     }
 
@@ -237,7 +217,7 @@
       margin-top: 18px;
       width: 100%;
       padding: 15px;
-      background: var(--nextBtn);
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: #fff;
       border: none;
       border-radius: 12px;
@@ -250,7 +230,7 @@
       letter-spacing: 0.03em;
     }
 
-    .next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
 
     /* ===== RESULTS ===== */
     .result-header { text-align: center; margin-bottom: 24px; }
@@ -262,13 +242,13 @@
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      background: var(--scoreRing);
+      background: linear-gradient(135deg, #667eea, #764ba2);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 12px 40px rgba(102,126,234,0.4);
       animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1);
     }
 
@@ -276,7 +256,7 @@
     .score-unit  { font-size: 0.9rem; color: rgba(255,255,255,0.85); }
     .score-stars { font-size: 1.6rem; letter-spacing: 4px; margin-bottom: 8px; }
     .score-msg   { font-size: 1.15rem; font-weight: 700; color: #2d3748; margin-bottom: 6px; }
-    .best-msg    { font-size: 0.9rem; color: var(--primary); font-weight: 700; }
+    .best-msg    { font-size: 0.9rem; color: #667eea; font-weight: 700; }
 
     .result-list { border-top: 2px solid #edf2f7; margin-top: 24px; padding-top: 20px; }
     .result-list h3 { font-size: 0.95rem; color: #718096; margin-bottom: 14px; font-weight: 700; }
@@ -298,7 +278,7 @@
       margin-top: 24px;
       width: 100%;
       padding: 15px;
-      background: var(--nextBtn);
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: #fff;
       border: none;
       border-radius: 12px;
@@ -309,7 +289,7 @@
       font-family: inherit;
     }
 
-    .btn-home:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .btn-home:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
 
     /* 紙吹雪アニメ */
     .confetti-wrap {
@@ -509,41 +489,6 @@ let quizData = {}; // 全レベルのデータをキャッシュ
 let currentLevel = 1;
 let maxLevel = 1;
 
-function applyCssVariables(colors) {
-  if (!colors) return;
-  const root = document.documentElement;
-
-  const vars = {
-    '--primary': colors.primary,
-    '--secondary': colors.secondary,
-    '--topBar': colors.topBar,
-    '--scoreBar': colors.scoreBar,
-    '--levelBtnActive': colors.levelBtnActive,
-    '--levelBtnActiveBg': colors.levelBtnActiveBg,
-    '--progressBar': colors.progressBar,
-    '--scenarioBg': colors.scenarioBg,
-    '--scenarioBorder': colors.scenarioBorder,
-    '--choiceBtnHover': colors.choiceBtnHover,
-    '--choiceBtnHoverBg': colors.choiceBtnHoverBg,
-    '--nextBtn': colors.nextBtn,
-    '--reviewBtn': colors.reviewBtn,
-    '--scoreRing': colors.scoreRing,
-    '--explanationBg': colors.explanationBg,
-    '--explanationBorder': colors.explanationBorder,
-    '--explanationText': colors.explanationText
-  };
-
-  for (const [key, value] of Object.entries(vars)) {
-    root.style.setProperty(key, value);
-  }
-
-  if (colors.cardGradients && Array.isArray(colors.cardGradients)) {
-    colors.cardGradients.forEach((gradient, idx) => {
-      root.style.setProperty(`--card-${idx + 1}`, gradient);
-    });
-  }
-}
-
 async function loadAllQuestions() {
   try {
     // config.json を読み込む
@@ -577,12 +522,10 @@ async function loadAllQuestions() {
       quizData[level] = data;
       if (!quizId) {
         quizId = data.id; // 最初のデータから quizId を取得
-        // config から title と色を動的に設定
+        // config から title を動的に設定
         if (configData[quizId]) {
           document.title = configData[quizId].title;
           document.body.style.background = configData[quizId].bgGradient;
-          // CSS変数を設定
-          applyCssVariables(configData[quizId].colors);
         }
       }
     }
