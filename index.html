@@ -149,9 +149,24 @@
 
     .auth-header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
+      gap: 16px;
       margin-bottom: 24px;
+    }
+
+    .auth-header .header {
+      margin-bottom: 0;
+      flex: 1;
+    }
+
+    .auth-header .header h1 {
+      font-size: 1.5rem;
+    }
+
+    .auth-header .header .logo {
+      font-size: 2.5rem;
+      margin-bottom: 6px;
     }
 
     .user-info {
@@ -258,6 +273,28 @@
 
     .hidden {
       display: none !important;
+    }
+
+    @media (max-width: 600px) {
+      .auth-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .auth-header .header {
+        width: 100%;
+      }
+
+      .auth-header > div:last-child {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .user-info {
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
