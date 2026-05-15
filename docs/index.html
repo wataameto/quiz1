@@ -525,6 +525,8 @@ auth.onAuthStateChanged(user => {
   timeEl.style.zIndex = '9999';
   timeEl.style.pointerEvents = 'none';
   timeEl.style.lineHeight = '1.3';
+  timeEl.style.whiteSpace = 'pre-wrap';
+  timeEl.style.width = '100px';
   timeEl.innerHTML = `${deviceType}<br>ビルド: ${BUILD_TIME}`;
   document.body.appendChild(timeEl);
 })();
