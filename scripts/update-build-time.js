@@ -11,7 +11,7 @@ const { execSync } = require('child_process');
 
 try {
   // Get last commit timestamp in JST format (YYYY-MM-DD HH:MM:SS)
-  const commitTimestamp = execSync('git log -1 --format=%ci | head -c 19', {
+  const commitTimestamp = execSync('TZ=Asia/Tokyo git log -1 --format=%ci | head -c 19', {
     encoding: 'utf-8',
   }).trim();
 
