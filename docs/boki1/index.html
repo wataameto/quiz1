@@ -377,8 +377,8 @@
       <div class="home-header">
         <div class="logo">📚</div>
         <h1>江東区最強せいちゃんへの挑戦問題</h1>
-        <p><span id="part-badge" style="background:#667eea; color:#fff; padding:4px 12px; border-radius:99px; display:inline-block; margin-bottom:8px; font-weight:700;">パート 1</span></p>
-        <p>分記法（商品売買益）レベル ／ 各10問・100点満点</p>
+        <p><span id="part-badge" style="background:#667eea; color:#fff; padding:4px 12px; border-radius:99px; display:inline-block; margin-bottom:8px; font-weight:700;"></span></p>
+        <p id="part-description"></p>
       </div>
     </div>
     <div class="level-switcher" id="level-switcher">
@@ -574,6 +574,7 @@ async function loadAllQuestions() {
     }
 
     currentLevel = 1;
+    updatePartBadge();
     loadQuestions(1);
   } catch (e) {
     console.error('Failed to load questions:', e);
@@ -598,6 +599,16 @@ async function loadQuestions(level = 1) {
   }
 }
 
+function updatePartBadge() {
+  const levelData = quizData[currentLevel];
+  const badgeEl = document.getElementById('part-badge');
+  const descEl = document.getElementById('part-description');
+  if (levelData) {
+    badgeEl.textContent = levelData.label || `パート ${currentLevel}`;
+    descEl.textContent = levelData.description || '各10問・100点満点';
+  }
+}
+
 function switchLevel(level) {
   if (level === currentLevel || level < 1 || level > maxLevel) return;
   currentLevel = level;
@@ -605,6 +616,7 @@ function switchLevel(level) {
     const btn = document.getElementById(`level-btn-${i}`);
     if (btn) btn.classList.toggle('active', i === level);
   }
+  updatePartBadge();
   soundClick();
   loadQuestions(level);
 }
