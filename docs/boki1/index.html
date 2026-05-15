@@ -81,6 +81,21 @@
     .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
     .test-card .best-score span { font-weight: 800; font-size: 1rem; }
 
+    .part-scores-section { margin-bottom: 20px; }
+    .part-score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      background: linear-gradient(135deg, #f7f8ff, #f5f7ff);
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+    .part-score-row .part-name { font-weight: 700; color: #2d3748; }
+    .part-score-row .part-value { color: #667eea; font-weight: 800; }
+
     .total-score-bar { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
     .total-score-bar .label { font-size: 0.9rem; opacity: 0.85; }
     .total-score-bar .value { font-size: 1.5rem; font-weight: 900; }
@@ -369,6 +384,10 @@
     <div class="level-switcher" id="level-switcher">
       <button class="level-btn active" id="level-btn-1" onclick="switchLevel(1)">📖 パート 1</button>
       <button class="level-btn" id="level-btn-2" onclick="switchLevel(2)">📖 パート 2</button>
+    </div>
+    <div class="part-scores-section" id="part-scores-section" style="display:none;">
+      <h3 style="font-size:0.9rem; color:#718096; margin-bottom:12px; font-weight:700;">📊 パート別成績</h3>
+      <div id="part-scores-list"></div>
     </div>
     <div class="total-score-bar">
       <div class="label">🎯 総合成績</div>
@@ -666,6 +685,43 @@ async function showHome() {
     totalEl.innerHTML = `- <span>/ ${TOTAL_QUESTIONS}問</span>`;
   } else {
     totalEl.innerHTML = `${total} <span>/ ${TOTAL_QUESTIONS}問 正解</span>`;
+  }
+
+  // パート別スコアを計算・表示
+  const partScoresSection = document.getElementById('part-scores-section');
+  const partScoresList = document.getElementById('part-scores-list');
+  if (maxLevel > 1) {
+    let partScoresHtml = '';
+    let totalPartCorrect = 0, totalPartQuestions = 0;
+
+    for (let level = 1; level <= maxLevel; level++) {
+      const levelData = quizData[level];
+      if (!levelData || !levelData.tests) continue;
+
+      let levelCorrect = 0, levelQuestions = 0;
+      for (const t of levelData.tests) {
+        levelQuestions += 10; // 各テスト10問
+        const best = await getBest(t.id);
+        if (best >= 0) {
+          levelCorrect += Math.round(best / 100 * 10);
+        }
+      }
+
+      const levelLabel = levelData.label || `パート ${level}`;
+      const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
+      partScoresHtml += `<div class="part-score-row">
+        <span class="part-name">${levelLabel}</span>
+        <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
+      </div>`;
+
+      totalPartCorrect += levelCorrect;
+      totalPartQuestions += levelQuestions;
+    }
+
+    partScoresList.innerHTML = partScoresHtml;
+    partScoresSection.style.display = 'block';
+  } else {
+    partScoresSection.style.display = 'none';
   }
 
   let html = '';

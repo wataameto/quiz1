@@ -20,6 +20,21 @@
     .level-btn { flex: 1; padding: 10px 8px; border: 2.5px solid #e2e8f0; border-radius: 12px; background: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; color: #718096; }
     .level-btn.active { border-color: #f7971e; background: linear-gradient(135deg, #fff9ed, #fffbea); color: #2d3748; box-shadow: 0 4px 12px rgba(247,151,30,0.2); }
     .level-btn:hover:not(.active) { border-color: #cbd5e0; background: #f7fafc; }
+    .part-scores-section { margin-bottom: 20px; }
+    .part-score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      background: linear-gradient(135deg, #f7f8ff, #f5f7ff);
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+    .part-score-row .part-name { font-weight: 700; color: #2d3748; }
+    .part-score-row .part-value { color: #0f2027; font-weight: 800; }
+
     .total-score-bar { background: linear-gradient(135deg, #0f2027, #2c5364); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
     .total-score-bar .label { font-size: 0.9rem; opacity: 0.85; }
     .total-score-bar .value { font-size: 1.5rem; font-weight: 900; }
@@ -135,6 +150,10 @@
       <button class="level-btn active" id="level-btn-1" onclick="switchLevel(1)">🟢 基礎初級</button>
       <button class="level-btn" id="level-btn-2" onclick="switchLevel(2)">🟡 基礎中級</button>
       <button class="level-btn" id="level-btn-3" onclick="switchLevel(3)">🔴 基礎上級</button>
+    </div>
+    <div class="part-scores-section" id="part-scores-section" style="display:none;">
+      <h3 style="font-size:0.9rem; color:#718096; margin-bottom:12px; font-weight:700;">📊 レベル別成績</h3>
+      <div id="part-scores-list"></div>
     </div>
     <div class="total-score-bar">
       <div class="label">🎯 総合成績</div>
@@ -425,6 +444,43 @@ async function showHome() {
     totalEl.innerHTML = `- <span>/ ${TOTAL_QUESTIONS}問</span>`;
   } else {
     totalEl.innerHTML = `${total} <span>/ ${TOTAL_QUESTIONS}問 正解</span>`;
+  }
+
+  // レベル別スコアを計算・表示
+  const partScoresSection = document.getElementById('part-scores-section');
+  const partScoresList = document.getElementById('part-scores-list');
+  if (maxLevel > 1) {
+    let partScoresHtml = '';
+    let totalPartCorrect = 0, totalPartQuestions = 0;
+
+    for (let level = 1; level <= maxLevel; level++) {
+      const levelData = quizData[level];
+      if (!levelData || !levelData.tests) continue;
+
+      let levelCorrect = 0, levelQuestions = 0;
+      for (const t of levelData.tests) {
+        levelQuestions += 10; // 各テスト10問
+        const best = await getBest(t.id);
+        if (best >= 0) {
+          levelCorrect += Math.round(best / 100 * 10);
+        }
+      }
+
+      const levelLabel = levelData.label || `レベル ${level}`;
+      const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
+      partScoresHtml += `<div class="part-score-row">
+        <span class="part-name">${levelLabel}</span>
+        <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
+      </div>`;
+
+      totalPartCorrect += levelCorrect;
+      totalPartQuestions += levelQuestions;
+    }
+
+    partScoresList.innerHTML = partScoresHtml;
+    partScoresSection.style.display = 'block';
+  } else {
+    partScoresSection.style.display = 'none';
   }
 
   let html = '';
