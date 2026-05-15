@@ -30,7 +30,7 @@ class ScoreManager {
     if (!tests || !Array.isArray(tests)) return 0;
     return tests.reduce((sum, test) => {
       const score = scores[`best_${test.id}`];
-      if (score !== undefined && score > 0) {
+      if (score !== undefined && score >= 0) {
         sum += this.calculateCorrectAnswers(score);
       }
       return sum;
