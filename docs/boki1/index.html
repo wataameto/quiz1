@@ -704,15 +704,15 @@ async function showHome() {
   const partScoresList = document.getElementById('part-scores-list');
   if (maxLevel > 1) {
     let partScoresHtml = '';
-    let totalPartCorrect = 0, totalPartQuestions = 0;
 
     for (let level = 1; level <= maxLevel; level++) {
       const levelData = quizData[level];
       if (!levelData || !levelData.tests) continue;
 
-      let levelCorrect = 0, levelQuestions = 0;
+      let levelCorrect = 0;
+      const levelQuestions = levelData.tests.length * 10; // 各テスト10問
+
       for (const t of levelData.tests) {
-        levelQuestions += 10; // 各テスト10問
         const best = await getBest(t.id);
         if (best >= 0) {
           levelCorrect += Math.round(best / 100 * 10);
@@ -725,9 +725,6 @@ async function showHome() {
         <span class="part-name">${levelLabel}</span>
         <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
       </div>`;
-
-      totalPartCorrect += levelCorrect;
-      totalPartQuestions += levelQuestions;
     }
 
     partScoresList.innerHTML = partScoresHtml;
