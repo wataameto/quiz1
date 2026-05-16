@@ -141,10 +141,10 @@
         {
           "scenario": "📦 AWS CloudFormation の主な目的は？",
           "choices": [
-            "YAML/JSON テンプレートでリソース定義（CloudFormation）",
-            "ソースコードをビルドして生成（CodeBuild）",
-            "アプリケーションログ収集・分析（CloudWatch）",
-            "リソース利用コストを削減最適化（Cost Explorer）"
+            "YAML/JSON でインフラを定義・管理機能（CloudFormation）",
+            "ソースコードをビルド・成果物化・生成（CodeBuild）",
+            "アプリケーションログ収集・監視・管理（CloudWatch）",
+            "リソース利用コスト削減・最適化・分析（Cost Explorer）"
           ],
           "correct": 0,
           "explanation": "CloudFormation は YAML/JSON テンプレートでインフラを定義し、スタックとして一括作成・更新・削除できる。変更管理・再現性・ドリフト検出も可能。",
@@ -153,10 +153,10 @@
         {
           "scenario": "💻 AWS CDK の特徴は？",
           "choices": [
-            "プログラミング言語でAWSリソース定義（CDK）",
-            "Web ブラウザで GUI インフラ構築（Web UI）",
-            "CloudFormation テンプレート自動削除（Auto Delete）",
-            "リソースのコスト分析最適化（Cost Analysis）"
+            "プログラミング言語でインフラを定義可能（CDK）",
+            "Web ブラウザで GUI インフラ構築・管理（Web UI）",
+            "CloudFormation テンプレート自動削除ツール（Auto Delete）",
+            "リソースコスト分析・最適化提案ツール（Cost Analysis）"
           ],
           "correct": 0,
           "explanation": "CDK（Cloud Development Kit）は Python・TypeScript・Java などの言語でインフラを定義できる。内部的に CloudFormation テンプレートを生成するため、CloudFormation の恩恵はそのまま受けられる。",
@@ -165,10 +165,10 @@
         {
           "scenario": "🔐 Parameter Store の用途は？",
           "choices": [
-            "設定値・シークレットを安全に保存（Parameter Store）",
-            "EC2 インスタンス CPU 使用率監視（CloudWatch）",
-            "CloudFormation テンプレート情報保存（CloudFormation）",
-            "Amazon S3 アクセス権限制限管理（IAM Policy）"
+            "設定値・シークレット安全保存・管理機能（Parameter Store）",
+            "EC2 インスタンス CPU 使用率監視・追跡（CloudWatch）",
+            "CloudFormation テンプレート情報保存・管理（CloudFormation）",
+            "Amazon S3 アクセス権限制限・細粒度管理（IAM Policy）"
           ],
           "correct": 0,
           "explanation": "Systems Manager Parameter Store は DB 接続文字列・API キー・機密設定値などを /myapp/db/password のような階層的なパス構造で管理し、IAM で細粒度アクセス制御できる。無料の Standard と有料の Advanced がある。特に定期的な自動ローテーション（RDS パスワードなど）が必要な場合は Secrets Manager が適切。",
@@ -178,9 +178,9 @@
           "scenario": "⚙️ AWS OpsWorks の説明として正しいのは？",
           "choices": [
             "Chef・Puppet マネージド構成管理（OpsWorks）",
-            "Kubernetes ベースコンテナオーケストレーション（EKS）",
-            "ソースコード管理デプロイパイプライン（CodePipeline）",
-            "リソース利用料金管理分析（Billing）"
+            "Kubernetes ベースコンテナ管理・実行（EKS）",
+            "ソースコード管理・デプロイ自動化（CodePipeline）",
+            "リソース利用料金・管理・分析ツール（Billing）"
           ],
           "correct": 0,
           "explanation": "OpsWorks は Chef・Puppet のマネージドサービス。サーバーの設定を「レシピ」で管理する。コンテナは ECS/EKS、CI/CD は CodePipeline、コスト管理は Cost Explorer が担当。",
@@ -189,10 +189,10 @@
         {
           "scenario": "🔗 CloudFormation でスタック間で値を共有するには？",
           "choices": [
-            "Outputs セクション Fn::ImportValue 関数（Export）",
-            "Mappings セクション マッピングテーブル定義（Mapping）",
-            "Conditions セクション 条件分岐設定（Condition）",
-            "Metadata セクション メタ情報記述（Metadata）"
+            "Outputs セクション Fn::ImportValue で参照機能（Export）",
+            "Mappings セクション マッピング定義・設定機能（Mapping）",
+            "Conditions セクション 条件分岐を設定・管理（Condition）",
+            "Metadata セクション メタ情報を記述・管理（Metadata）"
           ],
           "correct": 0,
           "explanation": "Outputs セクションで Export 属性を使ってエクスポート名を指定し、別スタックで Fn::ImportValue で参照する。例：Outputs: { VpcId: { Value: !Ref MyVpc, Export: { Name: MyVpcId } } }。削除時は参照スタックが先に削除される必要がある。Mappings はマッピングテーブル、Conditions は条件付きリソース、Metadata はメタ情報。",
@@ -201,10 +201,10 @@
         {
           "scenario": "📋 AWS Config の主な目的は？",
           "choices": [
-            "リソース設定変更を記録評価監視（AWS Config）",
-            "Infrastructure as Code でインフラコード化（IaC）",
-            "アプリケーション本番環境デプロイ（CodeDeploy）",
-            "リソース利用コスト追跡分析（Cost Analysis）"
+            "リソース設定変更を記録・評価・監視（AWS Config）",
+            "Infrastructure as Code でコード化（IaC）",
+            "アプリケーション本番環境へデプロイ（CodeDeploy）",
+            "リソース利用コスト・追跡・分析ツール（Cost Analysis）"
           ],
           "correct": 0,
           "explanation": "Config は全リソースの設定履歴を記録し、Config Rules でコンプライアンス違反を自動検出する。違反時の自動修復（SSM Automation 連携）も可能。",
@@ -214,9 +214,9 @@
           "scenario": "🌐 Terraform の説明として正しいのは？",
           "choices": [
             "マルチクラウド対応 IaC ツール（Terraform）",
-            "AWS 専用リソースプロビジョニング（AWS API）",
-            "Kubernetes ベースコンテナ管理（EKS/ECS）",
-            "ソースコード版管理ツール（Git/GitHub）"
+            "AWS 専用リソース・プロビジョニング（AWS API）",
+            "Kubernetes ベースコンテナ管理・実行（EKS/ECS）",
+            "ソースコード・バージョン管理ツール（Git/GitHub）"
           ],
           "correct": 0,
           "explanation": "Terraform は HashiCorp 製のオープンソース IaC ツール。HCL（HashiCorp Configuration Language）で記述し、AWS・Azure・GCP・オンプレミスなどマルチクラウド対応。State ファイル（terraform.tfstate）で現状を追跡し、plan（差分確認）→ apply（適用）のワークフロー。CloudFormation は AWS 限定だが、Terraform はクラウド横断的な統一管理が可能。",
@@ -225,10 +225,10 @@
         {
           "scenario": "🔍 CloudFormation のドリフト検出とは？",
           "choices": [
-            "テンプレート実際設定の差異検出通知（Drift）",
-            "誤ったリソース削除を防止（Deletion Protection）",
-            "リソース将来コストを予測（Cost Forecast）",
-            "テンプレート構文エラー自動検出（Validation）"
+            "テンプレート・実際設定の差異を検出・警告（Drift）",
+            "誤ったリソース削除を防止・保護・確保（Deletion Protection）",
+            "リソース・将来コストを予測・分析・提案（Cost Forecast）",
+            "テンプレート構文エラー自動検出・管理（Validation）"
           ],
           "correct": 0,
           "explanation": "コンソールなどで手動変更したリソースがテンプレートと乖離（ドリフト）していないかを検出する機能。ドリフトを放置すると次の CloudFormation 更新で予期しない変更が起きる可能性がある。",
@@ -237,10 +237,10 @@
         {
           "scenario": "🛒 Service Catalog の目的は？",
           "choices": [
-            "承認済みテンプレート組織内提供カタログ（Catalog）",
-            "AWS サービス機能一覧表示検索（Service List）",
-            "リソース利用コスト削減提案（Cost Savings）",
-            "セキュリティ脆弱性検出通知（Vulnerability）"
+            "承認済みテンプレート・組織内カタログ（Catalog）",
+            "AWS サービス・機能一覧表示・検索（Service List）",
+            "リソース利用コスト削減・最適化提案（Cost Savings）",
+            "セキュリティ・脆弱性検出・通知機能（Vulnerability）"
           ],
           "correct": 0,
           "explanation": "Service Catalog は管理者が承認した CloudFormation テンプレートを製品として公開し、開発者がセルフサービスでプロビジョニングできる。ガバナンスを保ちつつ開発者の自律性を支援する仕組み。",
@@ -249,10 +249,10 @@
         {
           "scenario": "📁 Elastic Beanstalk の .ebextensions の用途は？",
           "choices": [
-            "環境カスタム設定を YAML で定義適用（.ebextensions）",
-            "アプリケーションソースコード格納（Source Code）",
-            "デプロイ実行時ログを保存参照（Deploy Log）",
-            "Amazon S3 アクセスポリシー設定（S3 Policy）"
+            "環境カスタム設定を YAML で定義・適用（.ebextensions）",
+            "アプリケーション・ソースコード・格納（Source Code）",
+            "デプロイ実行時・ログを保存・参照機能（Deploy Log）",
+            "Amazon S3 アクセス・ポリシー・設定（S3 Policy）"
           ],
           "correct": 0,
           "explanation": ".ebextensions ディレクトリに YAML ファイルを配置することで、パッケージインストール・環境変数・IAM ロールなどのカスタム設定をデプロイ時に自動適用できる。",
@@ -270,10 +270,10 @@
         {
           "scenario": "🎯 RTO（Recovery Time Objective）とは？",
           "choices": [
-            "障害から復旧完了までの最大許容時間（RTO）",
-            "障害発生時に許容できるデータ損失期間（RPO）",
-            "システムが 1 年間に稼働すべき目標時間（Uptime）",
-            "定期的にバックアップを実行する頻度（Frequency）"
+            "障害から復旧するまでの目標時間・目安（RTO）",
+            "障害で許容できるデータ損失期間・範囲（RPO）",
+            "システムが年間稼働すべき目標時間・範囲（Uptime）",
+            "定期的にバックアップを実行する頻度・周期（Frequency）"
           ],
           "correct": 0,
           "explanation": "RTO は「障害から復旧完了までの最大許容時間」（例：4 時間）。RPO（Recovery Point Objective）は「障害時点で失っても許容できるデータの最大損失期間」（例：1 時間分のデータまで）。両者は DR 計画の中核で、RTO が短いほど、RPO が小さいほど高可用性が必要だがコストが増加する。例：RTO=1 時間、RPO=15 分。",
@@ -282,10 +282,10 @@
         {
           "scenario": "🌍 マルチAZ構成の主な目的は？",
           "choices": [
-            "1 つの AZ 障害時も別 AZ で継続稼働（Multi-AZ）",
-            "複数リージョンにデータ自動複製同期（Multi-region）",
+            "1 つの AZ 障害時も別 AZ で継続稼働実現（Multi-AZ）",
+            "複数リージョンにデータ自動複製・同期機能（Multi-region）",
             "地理的にユーザーに近い場所でサービス提供（Geo-close）",
-            "複数リージョンの利用コストを削減（Cost Reduction）"
+            "複数リージョン利用コストを削減・最適化機能（Cost Reduction）"
           ],
           "correct": 0,
           "explanation": "マルチ AZ は同一リージョン内の物理的に分離されたデータセンターに冗長配置する。マルチリージョンはさらに地理的に離れた別リージョンに配置し、大規模災害にも対応できる。",
@@ -294,9 +294,9 @@
         {
           "scenario": "🔄 Route 53 のフェイルオーバールーティングは？",
           "choices": [
-            "プライマリ障害を検知し自動でセカンダリ切替（Failover）",
-            "受け取ったリクエスト数で負荷分散（Weighted）",
-            "ユーザーの地理的な位置で最適サーバ選択（Geolocation）",
+            "プライマリ障害を検知し自動で切替（Failover）",
+            "受け取ったリクエスト数で負荷を分散（Weighted）",
+            "ユーザー地理的位置で最適サーバ選択（Geolocation）",
             "複数ターゲットの中からランダムに選択（Random）"
           ],
           "correct": 0,
@@ -306,7 +306,7 @@
         {
           "scenario": "📊 RDS マルチAZ の特徴は？",
           "choices": [
-            "プライマリ障害時に自動フェイルオーバー実施（Failover）",
+            "プライマリ障害時に自動フェイルオーバー（Failover）",
             "複数インスタンスで読み取りスループット向上（Read Scale）",
             "管理者による手動フェイルオーバー方式（Manual）",
             "異なるリージョンのスタンバイで冗長化（Multi-region）"
@@ -318,10 +318,10 @@
         {
           "scenario": "🚀 ターゲット追跡スケーリングとは？",
           "choices": [
-            "メトリクスを指定された目標値に保つ自動スケール（TTS）",
+            "メトリクスを指定目標値に保つ自動スケール（TTS）",
             "事前に定めたスケジュールに従い実行（Scheduled）",
             "管理者が手動でインスタンス数を増減（Manual）",
-            "スケール アウト・イン を定期的に交互実行（Alternating）"
+            "スケール・アウト・イン を定期的交互実行（Alternating）"
           ],
           "correct": 0,
           "explanation": "例えば「CPU 使用率を 50% に保つ」という目標を設定すると、自動でインスタンスを増減させる。ステップスケーリングはメトリクス変化量に応じて段階的に増減する方式で、より細かい制御が可能。",
@@ -343,9 +343,9 @@
           "scenario": "💾 S3 のデータ耐久性は？",
           "choices": [
             "99.999999999% イレブンナイン耐久性（11個の9）",
-            "99.9% で 1000 年で 1 日の損失確率（99.9%）",
+            "99.9% で 1000 年で 1 日損失確率（99.9%）",
             "99.99% で複数リージョンで複製保存（Multi-region）",
-            "100% の完全耐久性を保証（100% Perfect）"
+            "100% の完全耐久性を保証します機能（100% Perfect）"
           ],
           "correct": 0,
           "explanation": "S3 はイレブンナイン（11個の9）の耐久性で、データを複数 AZ に自動複製する。耐久性はデータが失われない確率、可用性はアクセスできる確率で別の概念。S3 Standard の可用性は 99.99%。",
@@ -354,10 +354,10 @@
         {
           "scenario": "🔁 ELB のヘルスチェックの役割は？",
           "choices": [
-            "異常なターゲットへのトラフィック送信を停止（Health Check）",
+            "異常なターゲットへのトラフィック送信停止（Health Check）",
             "EC2 インスタンスの CPU 使用率を監視（Monitoring）",
-            "アプリケーションのログを自動収集保存（Log Collection）",
-            "セキュリティパッチを自動的に適用（Patching）"
+            "アプリケーション・ログを自動収集・保存（Log Collection）",
+            "セキュリティパッチを自動的に適用機能（Patching）"
           ],
           "correct": 0,
           "explanation": "ELB は定期的にターゲット（EC2・コンテナ等）のヘルスチェックを行い、異常なターゲットへのルーティングを自動停止する。復旧後は自動的にルーティング再開するため、障害インスタンスへのリクエストを防げる。",
@@ -367,9 +367,9 @@
           "scenario": "🗂️ SQS で障害耐性を高める設計は？",
           "choices": [
             "非同期キューで処理失敗時に再処理可能（Async Queue）",
-            "リクエスト・レスポンス間で同期REST連携（Synchronous）",
-            "処理を単一インスタンスに集約一元化（Centralized）",
-            "データベースを共有ストレージで共用（Shared Storage）"
+            "リクエスト・レスポンス間で同期連携機能（Synchronous）",
+            "処理を単一インスタンスに集約・一元化（Centralized）",
+            "データベースを共有ストレージで共用機能（Shared Storage）"
           ],
           "correct": 0,
           "explanation": "SQS キューを挟んだ非同期設計では、処理に失敗してもメッセージがキューに残り再処理できる。DLQ（デッドレターキュー）で一定回数失敗したメッセージを別キューに隔離して原因調査できる。",
@@ -378,10 +378,10 @@
         {
           "scenario": "📋 ゲームデイ演習の目的は？",
           "choices": [
-            "本番環境で意図的に障害を注入し回復力検証（Chaos）",
+            "本番環境で意図的に障害を注入し検証（Chaos）",
             "本番環境で新機能についての負荷テスト実施（Load Test）",
-            "運用チームのスキルレベルを評価測定（Skill Assessment）",
-            "システム全体の利用コストを削減最適化（Cost Optimization）"
+            "運用チームのスキルレベルを評価・測定（Skill Assessment）",
+            "システム全体の利用コストを削減・最適化（Cost Optimization）"
           ],
           "correct": 0,
           "explanation": "ゲームデイ演習は本番相当の環境で意図的に障害を注入し、システムと対応プロセスの回復力を検証するカオスエンジニアリング実践。AWS Fault Injection Simulator（FIS）でシナリオを自動化できる。",
