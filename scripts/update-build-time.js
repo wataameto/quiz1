@@ -10,10 +10,12 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 try {
-  // Get last commit timestamp in JST format (YYYY-MM-DD HH:MM:SS)
-  const commitTimestamp = execSync('TZ=Asia/Tokyo git log -1 --format=%ci | head -c 19', {
+  // Get last commit timestamp in JST format (YYYY-MM-DD HH:MM:SS +0900)
+  const fullTimestamp = execSync('TZ=Asia/Tokyo git log -1 --format=%ci', {
     encoding: 'utf-8',
   }).trim();
+  // Extract just the date and time (first 19 chars) for display
+  const commitTimestamp = fullTimestamp.substring(0, 19);
 
   if (!commitTimestamp) {
     console.error('❌ Failed to get commit timestamp');
