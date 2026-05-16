@@ -1,4 +1,0 @@
-#!/bin/bash
-# Update build-info.json after commit completes
-node scripts/update-build-time.js
-exit 0
