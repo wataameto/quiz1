@@ -372,6 +372,7 @@ function switchLevel(level) {
 
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
 let bestScores = {};
+let cacheInitialized = false;
 let TOTAL_QUESTIONS = 0;
 
 function calculateTotalQuestions() {
@@ -384,20 +385,30 @@ function getCollectionName() {
   return `quiz_${quizId}`;
 }
 
-async function getBest(id, level = currentLevel) {
-  if (!currentUser) return -1;
-  if (bestScores[`best_${level}_${id}`] !== undefined) return bestScores[`best_${level}_${id}`];
+async function initializeBestScoresCache() {
+  if (cacheInitialized || !currentUser) return;
   try {
     const collection = getCollectionName();
     const doc = await db.collection(collection).doc(currentUser.uid).get();
     const scores = doc.exists ? doc.data() : {};
-    bestScores = { ...bestScores, ...scores };
-    return parseInt(scores[`best_${level}_${id}`] || '-1', 10);
-  } catch (e) { console.error(e); return -1; }
+    bestScores = scores;
+    cacheInitialized = true;
+  } catch (e) { console.error(e); }
+}
+
+async function getBest(id, level = currentLevel) {
+  if (!currentUser) return -1;
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();
+  }
+  return parseInt(bestScores[`best_${level}_${id}`] || '-1', 10);
 }
 
 async function setBest(id, s) {
   if (!currentUser) return;
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();
+  }
   const best = await getBest(id);
   if (s > best) {
     try {
@@ -419,6 +430,7 @@ async function resetScores() {
     });
     await db.collection(collection).doc(currentUser.uid).update(updates);
     bestScores = {};
+    cacheInitialized = false;
     soundClick(); showHome();
   } catch (e) { console.error(e); }
 }
