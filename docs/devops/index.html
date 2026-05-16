@@ -522,8 +522,8 @@ async function showHome() {
 
   // パート説明を表示
   const partDescEl = document.getElementById('part-description');
-  if (quizData[currentLevel] && quizData[currentLevel].label) {
-    partDescEl.textContent = quizData[currentLevel].label;
+  if (quizData[currentLevel] && quizData[currentLevel].description) {
+    partDescEl.textContent = quizData[currentLevel].description;
     partDescEl.style.display = 'block';
   } else {
     partDescEl.style.display = 'none';
@@ -549,7 +549,7 @@ async function showHome() {
         }
       }
 
-      const levelLabel = levelData.label || `レベル ${level}`;
+      const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
       const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
       const isActive = level === currentLevel ? 'style="border-color:#667eea; background:linear-gradient(135deg, #f7f8ff, #f5f7ff); cursor:pointer;"' : 'style="cursor:pointer;"';
       partScoresHtml += `<div class="part-score-row" ${isActive} onclick="switchLevel(${level}); soundClick();">
