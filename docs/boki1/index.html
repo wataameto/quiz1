@@ -96,10 +96,7 @@
     .part-score-row .part-name { font-weight: 700; color: #2d3748; }
     .part-score-row .part-value { color: #667eea; font-weight: 800; }
 
-    .total-score-bar { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
-    .total-score-bar .label { font-size: 0.9rem; opacity: 0.85; }
-    .total-score-bar .value { font-size: 1.5rem; font-weight: 900; }
-    .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
+    .total-score-bar { font-size: 0.9rem; color: #718096; margin-bottom: 16px; }
 
     /* ===== QUIZ ===== */
     .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -380,10 +377,7 @@
         <p id="part-description"></p>
       </div>
     </div>
-    <div class="total-score-bar">
-      <div class="label">🎯 総合成績</div>
-      <div class="value" id="total-score-display">-</div>
-    </div>
+    <div class="total-score-bar">🎯 総合成績: <span id="total-score-display">-</span></div>
     <div class="part-scores-section" id="part-scores-section" style="display:none;">
       <div id="part-scores-list"></div>
     </div>

@@ -35,9 +35,7 @@
     .part-score-row .part-name { font-weight: 700; color: #2d3748; }
     .part-score-row .part-value { color: #0f2027; font-weight: 800; }
 
-    .total-score-bar { background: linear-gradient(135deg, #0f2027, #2c5364); border-radius: 16px; padding: 16px 24px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; color: #fff; }
-    .total-score-bar .label { font-size: 0.9rem; opacity: 0.85; }
-    .total-score-bar .value { font-size: 1.5rem; font-weight: 900; }
+    .total-score-bar { font-size: 0.9rem; color: #718096; margin-bottom: 16px; }
     .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
     .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
     .test-card { border-radius: 16px; padding: 24px 18px; text-align: center; cursor: pointer; transition: all 0.25s cubic-bezier(.34,1.56,.64,1); border: none; color: #fff; }
@@ -147,10 +145,7 @@
         <p id="part-description"></p>
       </div>
     </div>
-    <div class="total-score-bar">
-      <div class="label">🎯 総合成績</div>
-      <div class="value" id="total-score-display">-</div>
-    </div>
+    <div class="total-score-bar">🎯 総合成績: <span id="total-score-display">-</span></div>
     <div class="part-scores-section" id="part-scores-section" style="display:none;">
       <div id="part-scores-list"></div>
     </div>
