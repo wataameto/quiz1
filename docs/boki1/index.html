@@ -675,13 +675,26 @@ async function resetScores() {
 }
 
 async function getTotalCorrect() {
+  // 全パートの合計を計算
   let total = 0, attempted = 0;
-  if (!TESTS || !Array.isArray(TESTS)) return { total: 0, attempted: 0 };
-  for (const t of TESTS) {
-    const best = await getBest(t.id);
-    if (best >= 0) { total += Math.round(best / 100 * 10); attempted++; }
+  for (let level = 1; level <= maxLevel; level++) {
+    if (!quizData[level] || !quizData[level].tests) continue;
+    for (const t of quizData[level].tests) {
+      const best = await getBest(t.id);
+      if (best >= 0) { total += Math.round(best / 100 * 10); attempted++; }
+    }
   }
   return { total, attempted };
+}
+
+function calculateTotalQuestionsAllLevels() {
+  // 全パートの総問題数を計算
+  let totalQuestions = 0;
+  for (let level = 1; level <= maxLevel; level++) {
+    if (!quizData[level] || !quizData[level].tests) continue;
+    totalQuestions += quizData[level].tests.length * 10;
+  }
+  return totalQuestions;
 }
 
 async function showHome() {
@@ -690,13 +703,14 @@ async function showHome() {
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
 
-  TOTAL_QUESTIONS = calculateTotalQuestions();
+  TOTAL_QUESTIONS = calculateTotalQuestions(); // 現在のパートの問題数
+  const totalQuestionsAllLevels = calculateTotalQuestionsAllLevels(); // 全パートの合計
   const { total, attempted } = await getTotalCorrect();
   const totalEl = document.getElementById('total-score-display');
   if (attempted === 0) {
-    totalEl.innerHTML = `- <span>/ ${TOTAL_QUESTIONS}問</span>`;
+    totalEl.innerHTML = `- <span>/ ${totalQuestionsAllLevels}問</span>`;
   } else {
-    totalEl.innerHTML = `${total} <span>/ ${TOTAL_QUESTIONS}問 正解</span>`;
+    totalEl.innerHTML = `${total} <span>/ ${totalQuestionsAllLevels}問 正解</span>`;
   }
 
   // パート別スコアを計算・表示
