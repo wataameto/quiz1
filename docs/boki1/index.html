@@ -380,12 +380,7 @@
         <p id="part-description"></p>
       </div>
     </div>
-    <div class="level-switcher" id="level-switcher">
-      <button class="level-btn active" id="level-btn-1" onclick="switchLevel(1)">📖 パート 1</button>
-      <button class="level-btn" id="level-btn-2" onclick="switchLevel(2)">📖 パート 2</button>
-    </div>
     <div class="part-scores-section" id="part-scores-section" style="display:none;">
-      <h3 style="font-size:0.9rem; color:#718096; margin-bottom:12px; font-weight:700;">📊 パート別成績</h3>
       <div id="part-scores-list"></div>
     </div>
     <div class="total-score-bar">
@@ -562,18 +557,6 @@ async function loadAllQuestions() {
       }
     }
 
-    // レベルボタンを動的に生成
-    const switcherEl = document.getElementById('level-switcher');
-    switcherEl.innerHTML = '';
-    for (let i = 1; i <= maxLevel; i++) {
-      const btn = document.createElement('button');
-      btn.className = `level-btn ${i === 1 ? 'active' : ''}`;
-      btn.id = `level-btn-${i}`;
-      btn.textContent = quizData[i].label || `レベル ${i}`;
-      btn.onclick = () => switchLevel(i);
-      switcherEl.appendChild(btn);
-    }
-
     currentLevel = 1;
     updatePartBadge();
     loadQuestions(1);
@@ -611,12 +594,7 @@ function updatePartBadge() {
 function switchLevel(level) {
   if (level === currentLevel || level < 1 || level > maxLevel) return;
   currentLevel = level;
-  for (let i = 1; i <= maxLevel; i++) {
-    const btn = document.getElementById(`level-btn-${i}`);
-    if (btn) btn.classList.toggle('active', i === level);
-  }
   updatePartBadge();
-  soundClick();
   loadQuestions(level);
 }
 
@@ -746,7 +724,8 @@ async function showHome() {
 
       const levelLabel = levelData.label || `パート ${level}`;
       const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
-      partScoresHtml += `<div class="part-score-row">
+      const isActive = level === currentLevel ? 'style="border-color:#667eea; background:linear-gradient(135deg, #f7f8ff, #f5f7ff); cursor:pointer;"' : 'style="cursor:pointer;"';
+      partScoresHtml += `<div class="part-score-row" ${isActive} onclick="switchLevel(${level}); soundClick();">
         <span class="part-name">${levelLabel}</span>
         <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
       </div>`;
