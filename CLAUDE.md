@@ -157,10 +157,15 @@ isValidTest(test)
 ```javascript
 {
   id: string,                    // クイズID ('boki1', 'devops' など)
+  label: string,                 // レベル/パートラベル（例: "1", "基礎初級"）
+  description: string,           // オプション：パート説明
   tests: [
     {
       id: number | string,       // テストID
-      title: string,             // テストタイトル
+      title: string,             // テストタイトル（形式例: "💡 簿記パート1-1" または "📦 基礎初級-1"）
+      emoji: string,             // テストアイコン（表示は非表示にされている）
+      type: string,              // テストタイプ（表示用）
+      subtitle: string,          // テストサブタイトル
       questions: [
         {
           id: number | string,
@@ -168,6 +173,7 @@ isValidTest(test)
           choices: any[],         // 選択肢（型は問題によって異なる）
           correct: number,        // 正答のインデックス
           type?: string,          // オプション: 'journal' | 'choice'
+          explanation?: string,   // オプション：解説
         },
         ...
       ],
@@ -176,6 +182,10 @@ isValidTest(test)
   ],
 }
 ```
+
+**テストタイトルフォーマット:**
+- 簿記: 「💡 簿記パート1-1」「📊 簿記パート1-2」など
+- DevOps: 「📦 基礎初級-1」「🏗️ 基礎初級-2」など
 
 ### クイズタイプ
 
@@ -288,20 +298,24 @@ quiz1/
 │   ├── utils.test.js         # ユーティリティテスト (66テスト)
 │   └── integration.test.js   # 統合テスト (16テスト)
 ├── docs/
-│   ├── index.html            # メインメニューページ
+│   ├── index.html            # メインメニューページ（カラースキーム：青系）
+│   ├── build-info.json       # コミット日時情報（自動生成）
 │   ├── boki1/
-│   │   ├── index.html        # 簿記クイズページ
-│   │   ├── questions1.json   # パート1データ
-│   │   └── questions2.json   # パート2データ
+│   │   ├── index.html        # 簿記クイズページ（2パート）
+│   │   ├── questions1.json   # パート1データ（3テスト）
+│   │   └── questions2.json   # パート2データ（3テスト）
 │   └── devops/
-│       ├── index.html        # DevOpsクイズページ
-│       ├── questions1.json   # 基礎初級データ
-│       ├── questions2.json   # 基礎中級データ
-│       └── questions3.json   # 基礎上級データ
+│       ├── index.html        # DevOpsクイズページ（3パート）
+│       ├── questions1.json   # パート1: 基礎初級データ（6テスト）
+│       ├── questions2.json   # パート2: 基礎中級データ（6テスト）
+│       └── questions3.json   # パート3: 基礎上級データ（6テスト）
 ├── scripts/
-│   └── update-build-time.js  # ビルド時刻自動注入スクリプト
+│   └── update-build-time.js  # コミット日時自動生成スクリプト
+├── hooks/
+│   └── pre-commit            # Git pre-commitフック（自動build実行）
 ├── package.json              # npm設定（build, prepare フック）
 ├── jest.config.js            # Jest設定
+├── setup-hooks.sh            # Git フック セットアップスクリプト
 ├── README.md                 # (最小限)
 ├── TEST_DOCUMENTATION.md     # テストドキュメント
 └── CLAUDE.md                 # このファイル
@@ -604,7 +618,44 @@ averageScore = Σ(attempted tests のpercentage) / attempted count
 
 ---
 
-## UI フィードバック設計
+## UI 仕様と表示設計
+
+### テスト選択ページのレイアウト
+
+**構成要素:**
+1. **ヘッダー** - クイズタイトル（例: 「江東区最強せいちゃんへ簿記挑戦」）
+2. **パート別成績表示** - クリック可能なカード（選択中はハイライト表示）
+   - レイアウト: 「レベルラベル - スコア」の横長フォーマット
+   - クリックでレベル切り替え
+3. **総合成績** - コンパクト表示（「🎯 総合成績: X / Y」）
+4. **テストグリッド** - テストカード（コンパクト化）
+   - 大きなアイコンは非表示（削除）
+   - パディング: 12px 14px（省スペース化）
+   - テスト名、タイプ、最高スコアのみ表示
+
+### メインメニュー（docs/index.html）
+
+**表示内容:**
+- ユーザーログイン情報
+- クイズ一覧（パート数を表示）
+  - 「📖 簿記（2パート）」
+  - 「☁️ DevOps（3パート）」
+- 総合成績（すべてのクイズの合計）
+
+**カラースキーム:**
+- **背景**: 濃紺グラデーション
+- **アクセント色**: 青系（`#0066ff` → `#0099ff`）
+  - ログインボタン
+  - ユーザーアバター
+  - スコア表示背景
+
+### 用語統一
+
+すべてのクイズで「パート」という表記を統一：
+- 簿記: 「2パート」
+- DevOps: 「3パート」
+  - 内部的には「レベル」という変数名を使用（コード層）
+  - UI 表示では「パート」を使用（ユーザー層）
 
 ### 星評価システム
 | スコア率 | 表示     | 意味               |
