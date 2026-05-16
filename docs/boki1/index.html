@@ -3,84 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>📚 江東区最強せいちゃんへ簿記挑戦</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>📚</text></svg>">
+  <title>☁️ DOP-C02 練習問題</title>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-
-    .container {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-      max-width: 720px;
-      width: 100%;
-      padding: 36px 32px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .container::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085);
-    }
-
-    /* ===== HOME ===== */
-    .home-header { text-align: center; margin-bottom: 32px; }
+    body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 12px 16px 16px 16px; }
+    .container { background: #fff; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.35); max-width: 720px; width: 100%; padding: 36px 32px; position: relative; overflow: hidden; }
+    .container::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #f7971e, #ffd200, #21d4fd, #b721ff); }
+    .home-header { text-align: center; margin-bottom: 24px; }
     .home-header .logo { font-size: 3rem; margin-bottom: 8px; }
     .home-header h1 { font-size: 1.8rem; color: #2d3748; font-weight: 800; margin-bottom: 6px; }
-    .home-header p  { color: #718096; font-size: 0.95rem; }
-
+    .home-header p { color: #718096; font-size: 0.95rem; }
     .level-switcher { display: flex; gap: 8px; margin-bottom: 16px; justify-content: center; }
     .level-btn { flex: 1; padding: 10px 8px; border: 2.5px solid #e2e8f0; border-radius: 12px; background: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; color: #718096; }
-    .level-btn.active { border-color: #667eea; background: linear-gradient(135deg, #f7f8ff, #f5f7ff); color: #2d3748; box-shadow: 0 4px 12px rgba(102,126,234,0.2); }
+    .level-btn.active { border-color: #f7971e; background: linear-gradient(135deg, #fff9ed, #fffbea); color: #2d3748; box-shadow: 0 4px 12px rgba(247,151,30,0.2); }
     .level-btn:hover:not(.active) { border-color: #cbd5e0; background: #f7fafc; }
-
-    .test-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 16px;
-    }
-
-    .test-card {
-      border-radius: 16px;
-      padding: 12px 14px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.25s cubic-bezier(.34,1.56,.64,1);
-      position: relative;
-      overflow: hidden;
-      border: none;
-      color: #fff;
-    }
-
-    .test-card:nth-child(1) { background: linear-gradient(135deg, #f093fb, #f5576c); }
-    .test-card:nth-child(2) { background: linear-gradient(135deg, #4facfe, #00f2fe); }
-    .test-card:nth-child(3) { background: linear-gradient(135deg, #43e97b, #38f9d7); }
-
-    .test-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
-
-    .test-card .card-emoji { display: none; }
-    .test-card h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
-    .test-card .test-type { font-size: 0.78rem; opacity: 0.9; margin-bottom: 12px; background: rgba(255,255,255,0.25); border-radius: 99px; padding: 2px 10px; display: inline-block; }
-    .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
-    .test-card .best-score span { font-weight: 800; font-size: 1rem; }
-
     .part-scores-section { margin-bottom: 20px; }
     .part-score-row {
       display: flex;
@@ -94,107 +33,91 @@
       font-size: 0.9rem;
     }
     .part-score-row .part-name { font-weight: 700; color: #2d3748; }
-    .part-score-row .part-value { color: #667eea; font-weight: 800; }
+    .part-score-row .part-value { color: #0f2027; font-weight: 800; }
 
     .total-score-bar { font-size: 0.9rem; color: #718096; margin-bottom: 16px; }
-
-    /* ===== QUIZ ===== */
-    .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-    .quiz-back { background: #f7fafc; border: none; border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 1rem; color: #4a5568; transition: background 0.15s; }
-    .quiz-back:hover { background: #edf2f7; }
+    .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
+    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+    .test-card { border-radius: 16px; padding: 12px 14px; text-align: center; cursor: pointer; transition: all 0.25s cubic-bezier(.34,1.56,.64,1); border: none; color: #fff; }
+    .test-card:nth-child(1) { background: linear-gradient(135deg, #f7971e, #ffd200); color: #2d3748; }
+    .test-card:nth-child(2) { background: linear-gradient(135deg, #21d4fd, #b721ff); }
+    .test-card:nth-child(3) { background: linear-gradient(135deg, #0f2027, #2c5364); }
+    .test-card:nth-child(4) { background: linear-gradient(135deg, #f5576c, #f093fb); }
+    .test-card:nth-child(5) { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #2d3748; }
+    .test-card:nth-child(6) { background: linear-gradient(135deg, #4facfe, #00f2fe); color: #2d3748; }
+    .test-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
+    .test-card .card-emoji { display: none; }
+    .test-card h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
+    .test-card .test-type { font-size: 0.75rem; opacity: 0.9; margin-bottom: 12px; background: rgba(255,255,255,0.25); border-radius: 99px; padding: 2px 10px; display: inline-block; }
+    .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
+    .test-card .best-score span { font-weight: 800; font-size: 1rem; }
+    .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; position: relative; }
+    .quiz-back { position: absolute; right: 0; top: 0; background: linear-gradient(135deg, #f7971e, #ffd200); border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #2d3748; transition: all 0.15s; box-shadow: 0 4px 12px rgba(247,151,30,0.3); }
+    .quiz-back:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(247,151,30,0.4); }
     .quiz-title-wrap { flex: 1; }
     .quiz-title-wrap h2 { font-size: 1.2rem; font-weight: 800; color: #2d3748; }
-    .quiz-title-wrap p  { font-size: 0.8rem; color: #718096; }
-
+    .quiz-title-wrap p { font-size: 0.8rem; color: #718096; }
     .progress-wrap { margin-bottom: 20px; }
-    .progress-top  { display: flex; justify-content: space-between; font-size: 0.82rem; color: #718096; margin-bottom: 6px; }
+    .progress-top { display: flex; justify-content: space-between; font-size: 0.82rem; color: #718096; margin-bottom: 6px; }
     .progress-bar-bg { background: #edf2f7; border-radius: 99px; height: 10px; overflow: hidden; }
-    .progress-bar-fill {
-      height: 100%;
-      border-radius: 99px;
-      background: linear-gradient(90deg, #667eea, #764ba2);
-      transition: width 0.5s cubic-bezier(.34,1.56,.64,1);
+    .progress-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #f7971e, #ffd200); transition: width 0.5s cubic-bezier(.34,1.56,.64,1); }
+    .scenario { background: linear-gradient(135deg, #f7f8ff, #fffbea); border-left: 5px solid #f7971e; border-radius: 12px; padding: 18px 20px; font-size: 1.05rem; color: #2d3748; line-height: 1.7; margin-bottom: 20px; font-weight: 600; min-height: 140px; }
+    .choices { display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
+    .choice-btn { border: 2.5px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; cursor: pointer; text-align: left; background: #fff; transition: all 0.15s; width: 100%; font-size: 0.93rem; color: #2d3748; line-height: 1.5; font-family: inherit; }
+    .choice-btn:not([disabled]):hover { border-color: #f7971e; background: #fffbea; transform: translateX(4px); }
+    .choice-btn:focus { outline: none; }
+    @media (hover: none) {
+      .choice-btn { -webkit-tap-highlight-color: transparent; }
+      .choice-btn:not([disabled]):hover { border-color: #e2e8f0; background: #fff; transform: none; }
+      .choice-btn:focus { outline: none; box-shadow: none; }
     }
+    .choice-btn.correct { border: 7px solid #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); animation: popIn 0.3s cubic-bezier(.34,1.56,.64,1); display: flex; justify-content: space-between; align-items: center; }
+    .choice-btn.correct:hover { border-color: #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); transform: none; }
+    .choice-btn.correct .next-indicator { margin-left: 12px; flex-shrink: 0; }
+    .choice-btn.wrong { border-color: #e53e3e; background: linear-gradient(135deg, #fff5f5, #fed7d7); animation: shake 0.4s ease; }
+    .choice-btn.reveal { border: 7px solid #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); display: flex; justify-content: space-between; align-items: center; }
+    .choice-btn.reveal:hover { border-color: #38a169; background: linear-gradient(135deg, #f0fff4, #c6f6d5); transform: none; }
+    @keyframes popIn { 0% { transform: scale(0.95); } 60% { transform: scale(1.03); } 100% { transform: scale(1); } }
+    @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(5px); } }
+    .feedback { margin-top: 16px; padding: 14px 18px; border-radius: 12px; font-size: 1rem; font-weight: 800; animation: slideDown 0.3s ease; min-height: 80px; display: flex; align-items: center; visibility: hidden; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .feedback.correct { background: linear-gradient(135deg, #f0fff4, #c6f6d5); color: #276749; visibility: visible; }
+    .feedback.wrong { background: linear-gradient(135deg, #fff5f5, #fed7d7); color: #9b2c2c; visibility: visible; }
+    .explanation { margin-top: 10px; padding: 12px 16px; background: #f7f8ff; border-radius: 10px; font-size: 0.85rem; color: #4a5568; line-height: 1.6; font-weight: 400; border-left: 3px solid #667eea; min-height: 160px; visibility: hidden; }
+    .explanation.show { visibility: visible; animation: slideDown 0.3s ease; }
+    .next-btn { margin-top: 18px; width: 100%; padding: 15px; background: linear-gradient(135deg, #f7971e, #ffd200); color: #2d3748; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; display: none; transition: all 0.2s; font-family: inherit; letter-spacing: 0.03em; }
+    .next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(247,151,30,0.4); }
+    .result-header { text-align: center; margin-bottom: 24px; }
+    .result-header h1 { font-size: 1.6rem; font-weight: 800; color: #2d3748; }
+    .score-ring { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #f7971e, #ffd200); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 16px; box-shadow: 0 12px 40px rgba(247,151,30,0.4); animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1); }
+    .score-num { font-size: 2.2rem; font-weight: 900; color: #2d3748; line-height: 1; }
+    .score-unit { font-size: 0.8rem; color: rgba(45,55,72,0.75); }
+    .score-main { font-size: 2.2rem; font-weight: 900; }
+    .score-sub { font-size: 0.75rem; color: rgba(45,55,72,0.75); }
+    .score-area { text-align: center; margin: 16px 0; }
+    .score-stars { font-size: 1.6rem; letter-spacing: 4px; margin-bottom: 8px; }
+    .score-msg { font-size: 1rem; font-weight: 700; color: #2d3748; margin-bottom: 4px; }
+    .best-msg { font-size: 0.85rem; color: #d69e2e; font-weight: 700; }
+    .result-list { border-top: 2px solid #edf2f7; margin-top: 16px; padding-top: 16px; }
+    .result-list h3 { font-size: 0.95rem; color: #718096; margin-bottom: 14px; font-weight: 700; }
+    .answer-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 0; border-bottom: 1px solid #f7fafc; font-size: 0.84rem; }
+    .q-num { min-width: 32px; font-weight: 800; color: #a0aec0; }
+    .mark { font-size: 1.2rem; min-width: 24px; }
+    .answer-detail { color: #2d3748; line-height: 1.7; flex: 1; }
+    .answer-detail .exp { margin-top: 4px; font-size: 0.8rem; color: #718096; border-left: 2px solid #e2e8f0; padding-left: 8px; }
+    .btn-home { margin-top: 24px; width: 100%; padding: 15px; background: linear-gradient(135deg, #f7971e, #ffd200); color: #2d3748; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .btn-home:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(247,151,30,0.4); }
+    .btn-review { margin-top: 16px; width: 100%; padding: 15px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .btn-review:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
+    .confetti-wrap { position: fixed; top: 0; left: 0; right: 0; pointer-events: none; overflow: hidden; height: 100vh; z-index: 9999; }
+    .confetti-piece { position: absolute; width: 10px; height: 10px; border-radius: 2px; animation: confettiFall linear forwards; }
+    @keyframes confettiFall { 0% { transform: translateY(-20px) rotate(0deg); opacity: 1; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
+    .home-top { position: relative; }
+    .btn-reset-corner { position: absolute; top: 0; right: 0; background: transparent; color: #e53e3e; border: 2px solid #e53e3e; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
+    .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
+    .hidden { display: none !important; }
 
-    .scenario {
-      background: linear-gradient(135deg, #f7f8ff, #fff0fb);
-      border-left: 5px solid #667eea;
-      border-radius: 12px;
-      padding: 18px 20px;
-      font-size: 1.05rem;
-      color: #2d3748;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    .choices { display: flex; flex-direction: column; gap: 10px; }
-
-    .choice-btn {
-      border: 2.5px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 14px 18px;
-      cursor: pointer;
-      text-align: left;
-      background: #fff;
-      transition: all 0.15s;
-      width: 100%;
-      font-size: 0.93rem;
-      color: #2d3748;
-      line-height: 1.5;
-      font-family: inherit;
-    }
-
-    .choice-btn:not([disabled]):hover {
-      border-color: #667eea;
-      background: #f7f8ff;
-      transform: translateX(4px);
-    }
-
-    .choice-btn.correct {
-      border-color: #38a169;
-      background: linear-gradient(135deg, #f0fff4, #c6f6d5);
-      animation: popIn 0.3s cubic-bezier(.34,1.56,.64,1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .choice-btn.wrong {
-      border-color: #e53e3e;
-      background: linear-gradient(135deg, #fff5f5, #fed7d7);
-      animation: shake 0.4s ease;
-    }
-
-    .choice-btn.reveal {
-      border-color: #38a169;
-      background: linear-gradient(135deg, #f0fff4, #c6f6d5);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .choice-btn.correct .next-indicator,
-    .choice-btn.reveal .next-indicator {
-      margin-left: 12px;
-      flex-shrink: 0;
-    }
-
-    @keyframes popIn {
-      0%   { transform: scale(0.95); }
-      60%  { transform: scale(1.03); }
-      100% { transform: scale(1); }
-    }
-
-    @keyframes shake {
-      0%,100% { transform: translateX(0); }
-      20%      { transform: translateX(-8px); }
-      40%      { transform: translateX(8px); }
-      60%      { transform: translateX(-5px); }
-      80%      { transform: translateX(5px); }
-    }
-
-    /* 仕訳レイアウト */
+    /* 仕訳レンダリング（boki1 との統一） */
     .journal {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
@@ -208,172 +131,18 @@
     .journal-sep    { color: #cbd5e0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
     .entry-line     { display: flex; flex-direction: column; gap: 3px; }
     .entry-item     { display: flex; justify-content: space-between; gap: 12px; }
-
-    /* フィードバック */
-    .feedback {
-      margin-top: 16px;
-      padding: 14px 18px;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-weight: 800;
-      display: none;
-      animation: slideDown 0.3s ease;
-    }
-
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-10px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .feedback.correct {
-      background: linear-gradient(135deg, #f0fff4, #c6f6d5);
-      color: #276749;
-      display: block;
-    }
-
-    .feedback.wrong {
-      background: linear-gradient(135deg, #fff5f5, #fed7d7);
-      color: #9b2c2c;
-      display: block;
-    }
-
-    .next-btn {
-      margin-top: 18px;
-      width: 100%;
-      padding: 15px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: none;
-      transition: all 0.2s;
-      font-family: inherit;
-      letter-spacing: 0.03em;
-    }
-
-    .next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
-
-    /* ===== RESULTS ===== */
-    .result-header { text-align: center; margin-bottom: 24px; }
-    .result-header h1 { font-size: 1.6rem; font-weight: 800; color: #2d3748; }
-
-    .score-area { text-align: center; margin: 28px 0; }
-
-    .score-ring {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      box-shadow: 0 12px 40px rgba(102,126,234,0.4);
-      animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1);
-    }
-
-    .score-num   { font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1; }
-    .score-unit  { font-size: 0.9rem; color: rgba(255,255,255,0.85); }
-    .score-stars { font-size: 1.6rem; letter-spacing: 4px; margin-bottom: 8px; }
-    .score-msg   { font-size: 1.15rem; font-weight: 700; color: #2d3748; margin-bottom: 6px; }
-    .best-msg    { font-size: 0.9rem; color: #667eea; font-weight: 700; }
-
-    .result-list { border-top: 2px solid #edf2f7; margin-top: 24px; padding-top: 20px; }
-    .result-list h3 { font-size: 0.95rem; color: #718096; margin-bottom: 14px; font-weight: 700; }
-
-    .answer-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 12px 0;
-      border-bottom: 1px solid #f7fafc;
-      font-size: 0.84rem;
-    }
-
-    .q-num         { min-width: 32px; font-weight: 800; color: #a0aec0; }
-    .mark          { font-size: 1.2rem; min-width: 24px; }
-    .answer-detail { color: #2d3748; line-height: 1.7; flex: 1; }
-
-    .btn-home {
-      margin-top: 24px;
-      width: 100%;
-      padding: 15px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-
-    .btn-home:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
-
-    /* 紙吹雪アニメ */
-    .confetti-wrap {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      pointer-events: none;
-      overflow: hidden;
-      height: 100vh;
-      z-index: 9999;
-    }
-
-    .confetti-piece {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 2px;
-      animation: confettiFall linear forwards;
-    }
-
-    @keyframes confettiFall {
-      0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
-    }
-
-    .home-top {
-      position: relative;
-    }
-
-    .btn-reset-corner {
-      position: absolute;
-      top: 0; right: 0;
-      background: transparent;
-      color: #e53e3e;
-      border: 2px solid #e53e3e;
-      border-radius: 10px;
-      padding: 6px 12px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: inherit;
-      white-space: nowrap;
-    }
-
-    .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
-
-    .hidden { display: none !important; }
   </style>
+  <style id="dynamic-colors"></style>
 </head>
 <body>
 <div class="container">
-
-  <!-- HOME -->
   <div id="screen-home">
     <div class="home-top">
       <button class="btn-reset-corner" onclick="resetScores()">🗑️ 成績リセット</button>
-      <a href="../" style="position:absolute; top:0; left:0; background:transparent; color:#667eea; border:2px solid #667eea; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#f7f8ff'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
+      <a href="../" style="position:absolute; top:0; left:0; background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
       <div class="home-header">
-        <div class="logo">📚</div>
-        <h1>江東区最強せいちゃんへ簿記挑戦</h1>
+        <h1 id="quiz-heading">クイズ</h1>
+        <p id="quiz-description"></p>
         <p id="part-description"></p>
       </div>
     </div>
@@ -384,10 +153,9 @@
     <div class="test-grid" id="test-grid"></div>
   </div>
 
-  <!-- QUIZ -->
   <div id="screen-quiz" class="hidden">
     <div class="quiz-header">
-      <button class="quiz-back" onclick="showHome()">← 戻る</button>
+      <button class="quiz-back" onclick="showHome()">テスト選択へ戻る</button>
       <div class="quiz-title-wrap">
         <h2 id="quiz-title"></h2>
         <p id="quiz-subtitle"></p>
@@ -403,20 +171,15 @@
     <div class="scenario" id="scenario"></div>
     <div class="choices" id="choices"></div>
     <div class="feedback" id="feedback"></div>
-    <div id="explanation" style="margin-top:16px; padding:14px 18px; border-radius:12px; background:linear-gradient(135deg, #f0f4ff, #f5f7ff); border-left:4px solid #667eea; display:none;">
-      <div style="font-size:0.9rem; color:#667eea; font-weight:700; margin-bottom:8px;">📝 解説</div>
-      <div id="explanation-text" style="font-size:0.9rem; color:#2d3748; line-height:1.6;"></div>
-    </div>
+    <div class="explanation" id="explanation"></div>
     <button class="next-btn" id="next-btn"></button>
   </div>
 
-  <!-- RESULTS -->
   <div id="screen-results" class="hidden">
     <div class="result-header"><h1 id="result-title"></h1></div>
     <div class="score-area">
       <div class="score-ring">
         <span class="score-num" id="score-num"></span>
-        <span class="score-unit">点 / 100点</span>
       </div>
       <div class="score-stars" id="score-stars"></div>
       <p class="score-msg" id="score-msg"></p>
@@ -426,6 +189,7 @@
       <h3>📋 解答一覧</h3>
       <div id="answer-list"></div>
     </div>
+    <button id="review-btn" class="btn-review" onclick="startReview()" style="display:none"></button>
     <button class="btn-home" onclick="showHome()">🏠 テスト選択に戻る</button>
   </div>
 
@@ -441,9 +205,7 @@
       </div>
     </div>
   </div>
-
 </div>
-
 <div class="confetti-wrap" id="confetti-wrap"></div>
 
 <script>
@@ -556,16 +318,38 @@ async function loadAllQuestions() {
       quizData[level] = data;
       if (!quizId) {
         quizId = data.id; // 最初のデータから quizId を取得
-        // config から title を動的に設定
+        // config から title, colors などを動的に設定
         if (configData[quizId]) {
-          document.title = configData[quizId].title;
-          document.body.style.background = configData[quizId].bgGradient;
+          const cfg = configData[quizId];
+          document.title = cfg.title;
+          document.body.style.background = cfg.bgGradient;
+          document.getElementById('quiz-heading').textContent = cfg.heading;
+          document.getElementById('quiz-description').textContent = cfg.description;
+
+          // 動的CSSを注入
+          const dynamicStyle = document.getElementById('dynamic-colors');
+          dynamicStyle.textContent = `
+            .container::before { background: ${cfg.topGradient}; }
+            .level-btn.active { border-color: ${cfg.accentColor}; background: ${cfg.accentActive}; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+            .progress-bar-fill { background: ${cfg.topGradient}; }
+            .quiz-back { background: ${cfg.topGradient}; color: #2d3748; }
+            .next-btn { background: ${cfg.topGradient}; color: #2d3748; }
+            .btn-home { background: ${cfg.topGradient}; color: #2d3748; }
+          `;
+
+          // メインメニューボタンの色を更新
+          const menuBtn = document.querySelector('a[href="../"]');
+          if (menuBtn) {
+            menuBtn.style.color = cfg.accentColor;
+            menuBtn.style.borderColor = cfg.accentColor;
+            menuBtn.onmouseover = function() { this.style.background = cfg.accentActive; };
+            menuBtn.onmouseout = function() { this.style.background = 'transparent'; };
+          }
         }
       }
     }
 
     currentLevel = 1;
-    updatePartBadge();
     loadQuestions(1);
   } catch (e) {
     console.error('Failed to load questions:', e);
@@ -697,7 +481,7 @@ async function resetAllLevels() {
 }
 
 async function getTotalCorrect() {
-  // 全パートの合計を計算
+  // 全レベルの合計を計算
   let total = 0, attempted = 0;
   for (let level = 1; level <= maxLevel; level++) {
     if (!quizData[level] || !quizData[level].tests) continue;
@@ -710,7 +494,7 @@ async function getTotalCorrect() {
 }
 
 function calculateTotalQuestionsAllLevels() {
-  // 全パートの総問題数を計算
+  // 全レベルの総問題数を計算
   let totalQuestions = 0;
   for (let level = 1; level <= maxLevel; level++) {
     if (!quizData[level] || !quizData[level].tests) continue;
@@ -725,8 +509,8 @@ async function showHome() {
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
 
-  TOTAL_QUESTIONS = calculateTotalQuestions(); // 現在のパートの問題数
-  const totalQuestionsAllLevels = calculateTotalQuestionsAllLevels(); // 全パートの合計
+  TOTAL_QUESTIONS = calculateTotalQuestions(); // 現在のレベルの問題数
+  const totalQuestionsAllLevels = calculateTotalQuestionsAllLevels(); // 全レベルの合計
   const { total, attempted } = await getTotalCorrect();
   const totalEl = document.getElementById('total-score-display');
   if (attempted === 0) {
@@ -735,7 +519,7 @@ async function showHome() {
     totalEl.innerHTML = `${total} / ${totalQuestionsAllLevels}`;
   }
 
-  // パート別スコアを計算・表示
+  // レベル別スコアを計算・表示
   const partScoresSection = document.getElementById('part-scores-section');
   const partScoresList = document.getElementById('part-scores-list');
   if (maxLevel > 1) {
@@ -755,7 +539,7 @@ async function showHome() {
         }
       }
 
-      const levelLabel = levelData.label || `パート ${level}`;
+      const levelLabel = levelData.label || `レベル ${level}`;
       const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
       const isActive = level === currentLevel ? 'style="border-color:#667eea; background:linear-gradient(135deg, #f7f8ff, #f5f7ff); cursor:pointer;"' : 'style="cursor:pointer;"';
       partScoresHtml += `<div class="part-score-row" ${isActive} onclick="switchLevel(${level}); soundClick();">
@@ -1060,7 +844,6 @@ document.addEventListener('keydown', (e) => {
   // Create initial display
   createBuildTimeDisplay();
   updateBuildTimeDisplay();
-  document.body.appendChild(timeEl);
 })();
 </script>
 </body>
