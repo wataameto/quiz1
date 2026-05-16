@@ -342,6 +342,10 @@
       </div>
     </div>
 
+    <div style="font-size: 0.85rem; color: #718096; margin-bottom: 12px; text-align: center;">
+      合計：<span id="score-total">0問</span> / 240問
+    </div>
+
     <div class="score-summary" id="score-summary">
       <a href="./boki1/" class="score-row score-link">
         <span>📖 簿記（2パート）</span>
@@ -351,10 +355,6 @@
         <span>☁️ DevOps（3パート）</span>
         <span id="score-devops">0問</span>
       </a>
-      <div class="score-row total">
-        <span>合計</span>
-        <span id="score-total">0問</span>
-      </div>
     </div>
 
     <div class="footer">
@@ -468,7 +468,7 @@ async function updateScoreDisplay() {
   document.getElementById('score-summary').classList.add('visible');
   document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
   document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
-  document.getElementById('score-total').textContent = `${totalCorrect}問 / ${totalQuestions}問`;
+  document.getElementById('score-total').textContent = `${totalCorrect}問`;
 }
 
 function showHomeScreen() {
