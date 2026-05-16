@@ -1,17 +1,4 @@
 #!/bin/bash
-# Auto-generate build-info.json after commit
-# This ensures build-info.json always reflects the latest commit time
-
+# Update build-info.json after commit completes
 node scripts/update-build-time.js
-
-# If build-info.json changed, amend the commit
-if git diff-index --quiet HEAD docs/build-info.json; then
-  # No changes, done
-  exit 0
-else
-  # build-info.json was updated, amend the commit
-  git add docs/build-info.json
-  git commit --amend --no-edit --no-verify
-fi
-
 exit 0

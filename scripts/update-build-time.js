@@ -20,9 +20,9 @@ try {
     process.exit(1);
   }
 
-  // Convert to JST (UTC+9)
-  const date = new Date(unixTimestamp * 1000);
-  const jstDate = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+  // Convert to JST (UTC+9): Unix timestamp * 1000 (to ms) + 9 hours in ms
+  const jstTimestamp = unixTimestamp * 1000 + (9 * 60 * 60 * 1000);
+  const jstDate = new Date(jstTimestamp);
 
   const year = jstDate.getUTCFullYear();
   const month = String(jstDate.getUTCMonth() + 1).padStart(2, '0');
@@ -33,7 +33,7 @@ try {
 
   const commitTimestamp = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
-  console.log(`📅 Last commit (JST): ${commitTimestamp}`);
+  console.log(`📅 Commit (JST): ${commitTimestamp}`);
 
   // Create build info object
   const buildInfo = {
