@@ -1,0 +1,20 @@
+#!/bin/bash
+# Auto-restore BUILD_TIME placeholders after commit
+
+# Check if any HTML files were modified in the commit
+if git diff-tree --no-commit-id --name-only -r HEAD | grep -q '\.html$'; then
+  # Run build to inject timestamps
+  npm run build > /dev/null 2>&1
+  
+  # Check if placeholders need to be restored (if they were replaced)
+  if grep -q "__BUILD_TIME__" docs/*.html docs/*/*.html 2>/dev/null; then
+    # Placeholders already exist, no need to restore
+    exit 0
+  else
+    # Restore placeholders
+    sed -i "s/const BUILD_TIME = '[^']*'/const BUILD_TIME = '__BUILD_TIME__'/g" docs/index.html docs/boki1/index.html docs/devops/index.html
+    
+    # Stage the placeholder restoration
+    git add docs/index.html docs/boki1/index.html docs/devops/index.html 2>/dev/null
+  fi
+fi
