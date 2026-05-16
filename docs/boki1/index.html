@@ -642,15 +642,12 @@ async function setBest(id, s) {
 }
 
 async function resetScores() {
-  if (!confirm('🗑️ このレベルの最高得点をリセットしますか？')) return;
+  if (!confirm('🗑️ 簿記のすべてのスコアをリセットしますか？')) return;
   if (!currentUser) return;
   try {
     const collection = getCollectionName();
-    const updates = {};
-    TESTS.forEach(t => {
-      updates[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
-    });
-    await db.collection(collection).doc(currentUser.uid).update(updates);
+    // クイズ全体のスコアを削除
+    await db.collection(collection).doc(currentUser.uid).delete();
     bestScores = {};
     cacheInitialized = false;
     soundClick(); showHome();
