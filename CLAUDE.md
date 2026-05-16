@@ -500,11 +500,21 @@ for (let level = 1; level <= maxLevel; level++) {
 
 ### 6. マルチレベルスコア管理
 - **レベル別キー:** `best_<level>_<testId>` 形式でFirestoreに保存
-- **レベル固定:** スコア取得時は常に明示的にレベルパラメータを指定
-  - `getBest(t.id, level)` のように指定
-  - デフォルト値 `currentLevel` に依存しない
+- **getBest() 呼び出しの2つのパターン：**
+  1. **全レベルをループで処理する場合** - `level` パラメータ **必須**
+     - 例：部分成績表示で複数レベルを計算する時
+     - `for (let level = 1; level <= maxLevel; level++) { const best = await getBest(t.id, level); }`
+     - デフォルト値 `currentLevel` に依存するとバグになる
+  2. **currentLevel のテストのみを処理する場合** - `level` パラメータ **不要**
+     - 例：テストカード表示（TESTS は currentLevel のテストのみ）
+     - `const best = await getBest(t.id);` でOK（デフォルト `currentLevel` を使用）
+- **ホーム画面の表示内容：**
+  - **総合成績**（ページ右上）: 全レベル全テストの合計点数のみ表示
+  - **部分成績セクション**（複数レベルある場合）: 各レベルの詳細スコア（クリックで切り替え）
+  - **テストカード**（メイン表示）: 現在の `currentLevel` のテストのみ
 - **レベル切り替え:** `switchLevel()` で `currentLevel` を更新
-  - その後 `loadQuestions(level)` → `showHome()` で全レベルの成績を再計算
+  - その後 `loadQuestions(level)` → `showHome()` で表示を再計算
+  - キャッシュは保持されるため Firestore 呼び出し不要
 - **Firestore構造:** ユーザードキュメント内に全レベル全テストのスコアを保存
   ```
   {
