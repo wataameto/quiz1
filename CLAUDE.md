@@ -378,27 +378,32 @@ quiz1/
 - ビルド後はプレースホルダーが実際の日時に置き換わる
 - 毎回のcommitでコミット日時が更新される
 
-**自動化セットアップ：**
-初回セットアップ時に以下を実行（1回のみ）：
+**セットアップ（初回のみ）：**
 ```bash
 bash setup-hooks.sh
 ```
 
-このスクリプトは git post-commit フックを設定し、以下を自動化します：
-- `git commit` の直後に自動実行
-- `npm run build` で日本時間タイムスタンプを注入
-- `__BUILD_TIME__` プレースホルダーを自動復元
+このスクリプトは git pre-commit フックを設定し、commitする前にプレースホルダーが存在するか確認します。
 
-**通常のworkflow（setup後）：**
+**確実なworkflow（毎回）：**
 ```bash
-# セットアップ後は、通常通りcommitするだけで自動化される
+# 1. コードを編集
 git add .
+
+# 2. npm run build を実行（重要）
+npm run build
+
+# 3. commitする（フックがプレースホルダーをチェック）
 git commit -m "..."
+
+# 4. pushする
 git push
 ```
 
-**重要：** 初回セットアップで `bash setup-hooks.sh` を実行してください。
-その後は、プレースホルダーの管理が完全に自動化されます。
+**重要：**
+- `npm run build` を実行しないと、commit時にエラーで止まります
+- これにより、プレースホルダーの消し忘れを防止します
+- エラーが出たら、`npm run build` を実行してから再commitしてください
 
 ---
 
