@@ -152,6 +152,7 @@
     </div>
     <div class="total-score-bar">
       <div class="label">🎯 総合成績</div>
+      <div class="value" id="total-score-display">-</div>
     </div>
     <div class="test-grid" id="test-grid"></div>
   </div>
@@ -777,7 +778,6 @@ document.addEventListener('keydown', (e) => {
   // Create initial display
   createBuildTimeDisplay();
   updateBuildTimeDisplay();
-  document.body.appendChild(timeEl);
 })();
 </script>
 </body>
