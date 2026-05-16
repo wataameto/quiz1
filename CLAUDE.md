@@ -309,6 +309,106 @@ quiz1/
 
 ---
 
+## HTMLページのスコア管理実装（docs/boki1/index.html, docs/devops/index.html）
+
+### マルチレベルスコア管理
+
+**Firestoreキー形式:**
+```
+best_<level>_<testId>: <percentage>
+
+例:
+- パート1テスト1: best_1_1: 80
+- パート2テスト1: best_2_1: 75
+- パート2テスト2: best_2_2: 90
+```
+
+### Firebase認証とキャッシュ初期化
+
+**初期化フロー:**
+1. ページ読み込み時、`auth.onAuthStateChanged()` が実行される（非同期）
+2. 認証完了時、`currentUser` が設定され、同時に `loadAllQuestions()` が呼ばれる
+3. `loadAllQuestions()` で全レベルのクイズデータを読み込む
+4. 最初の `showHome()` が呼ばれ、レベル別スコアを表示
+
+**重要:** `loadAllQuestions()` は`auth.onAuthStateChanged()` **内部** で呼ばれるため、`currentUser` が確実に設定されてから実行される。これにより初期表示でスコアが正しく表示される。
+
+### キャッシュ戦略（`bestScores`）
+
+**問題:** 複数の `getBest()` 呼び出しが並行実行されると、Firestoreレスポンスのタイミングがランダムになり、キャッシュ状態が不確定になる。
+
+**解決策:** キャッシュ初期化を1回だけ実行し、その後はキャッシュからのみ読み取る。
+
+**実装:**
+```javascript
+let bestScores = {};           // キャッシュ
+let cacheInitialized = false;  // 初期化フラグ
+
+async function initializeBestScoresCache() {
+  if (cacheInitialized || !currentUser) return;
+  try {
+    const collection = getCollectionName();
+    const doc = await db.collection(collection).doc(currentUser.uid).get();
+    const scores = doc.exists ? doc.data() : {};
+    bestScores = scores;        // 一度だけ取得
+    cacheInitialized = true;
+  } catch (e) { console.error(e); }
+}
+
+async function getBest(id, level = currentLevel) {
+  if (!currentUser) return -1;
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();  // 初回のみ初期化
+  }
+  return parseInt(bestScores[`best_${level}_${id}`] || '-1', 10);
+}
+```
+
+**キャッシュリセット:** `resetScores()` で新スコアをリセットするときは、キャッシュと初期化フラグもリセット：
+```javascript
+bestScores = {};
+cacheInitialized = false;
+```
+
+### レベル別スコア表示
+
+`showHome()` で複数レベルのスコアを集計表示：
+```javascript
+for (let level = 1; level <= maxLevel; level++) {
+  const levelData = quizData[level];
+  let levelCorrect = 0;
+  for (const t of levelData.tests) {
+    const best = await getBest(t.id, level);  // 明示的にlevelを指定
+    if (best >= 0) {
+      levelCorrect += Math.round(best / 100 * 10);
+    }
+  }
+  // レベル別の成績を表示
+}
+```
+
+**重要:** `getBest(id, level)` に **明示的に level を渡す**。デフォルト値 `currentLevel` を使用するとバグが発生する。
+
+### デバイスタイプとビルド時刻表示
+
+ページ左下に固定表示：
+- **デバイス判定:** `navigator.userAgent` で Touch/PC を判定
+- **ビルド時刻:** `docs/build-info.json` から動的に読み込み（JST表示）
+- **フォント:** 14px、2行表示（デバイス / ビルド時刻）
+
+```javascript
+fetch('../build-info.json')
+  .then(r => r.json())
+  .then(data => {
+    const isTouchDevice = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const device = isTouchDevice() ? '📱 Touch' : '🖥️ PC';
+    document.getElementById('device-info').textContent = device;
+    document.getElementById('build-time').textContent = data.buildTime;
+  });
+```
+
+---
+
 ## 実装の重要なポイント
 
 ### 1. エラーハンドリング
@@ -332,10 +432,31 @@ quiz1/
 - パーセンテージ(0-100) と 正答数(0-10) の相互変換
 - キャッシュと永続層の整合性
 
-### 5. Firebase連携（将来対応）
-- `setDB(db)` でFirebaseインスタンスを注入
-- `getCollectionName()` でコレクション名を生成
-- テストではDBをモック（null/undefined許容）
+### 5. Firebase連携と認証タイミング
+- **認証完了後の初期化:** `auth.onAuthStateChanged()` 内で `loadAllQuestions()` を呼ぶ
+  - 初期表示で `currentUser` が確実に設定されている
+  - 初期スコア取得が正常に動作する
+- **キャッシュ初期化:** `cacheInitialized` フラグで1回だけ実行
+  - 複数の `getBest()` 並行実行時の競合状態を防止
+  - Firestore呼び出しを最小化（パフォーマンス向上）
+- **スコア書き込み:** `setBest()` で新スコアをFirestore+キャッシュ両方に更新
+  - キャッシュとFirestoreの整合性を保つ
+
+### 6. マルチレベルスコア管理
+- **レベル別キー:** `best_<level>_<testId>` 形式でFirestoreに保存
+- **レベル固定:** スコア取得時は常に明示的にレベルパラメータを指定
+  - `getBest(t.id, level)` のように指定
+  - デフォルト値 `currentLevel` に依存しない
+- **レベル切り替え:** `switchLevel()` で `currentLevel` を更新
+  - その後 `loadQuestions(level)` → `showHome()` で全レベルの成績を再計算
+- **Firestore構造:** ユーザードキュメント内に全レベル全テストのスコアを保存
+  ```
+  {
+    best_1_1: 80, best_1_2: 90,
+    best_2_1: 75, best_2_2: 70,
+    best_3_1: 85, best_3_2: 88, best_3_3: 92
+  }
+  ```
 
 ### 6. UI表示仕様
 - **デバイス表示**: 左下に固定表示、フォントサイズ14px
@@ -477,6 +598,31 @@ averageScore = Σ(attempted tests のpercentage) / attempted count
 3. **非破壊**: 配列・オブジェクト操作は新しいインスタンスを返す
 4. **テスト駆動**: すべてのロジックをテストでカバー
 5. **日本語優先**: UI文字列は日本語、コメントも日本語
+
+---
+
+## 既知の制限と注意事項
+
+### 1. Firebase認証の必須性
+- スコア管理には Firebase Authentication が必須
+- `currentUser` が `null` の場合、すべての `getBest()` は -1 を返す
+- 匿名認証での動作はテストされていない
+
+### 2. キャッシュの一貫性
+- `bestScores` キャッシュはメモリ内のみ（ページリロードでリセット）
+- `setBest()` で新スコアをFirestoreに書き込んでもキャッシュは自動更新される
+- `resetScores()` 後はキャッシュと初期化フラグをリセット必須
+
+### 3. パフォーマンスに関する考慮
+- 初回ページロード時に Firestore からユーザードキュメントを1回取得
+  - 全レベル全テストのスコアを一度にキャッシュ
+  - その後の `getBest()` 呼び出しはメモリ内キャッシュから O(1) で取得
+- Firestore のネットワーク遅延により初期表示が遅延する可能性あり
+
+### 4. レベルスイッチング時の動作
+- レベル切り替え時、`currentLevel` が変更される
+- 新しい `showHome()` でレベル別スコア（全レベル）が再計算される
+- キャッシュは保持されるため、再度のFirestore呼び出しは発生しない
 
 ---
 
