@@ -2,13 +2,13 @@
   "boki1": {
     "title": "📚 江東区最強せいちゃんへの挑戦問題",
     "icon": "📚",
-    "bgColor": "#D4A574",
-    "bgGradient": "linear-gradient(135deg, #D4A574 0%, #E8C4A0 50%, #F0D9C8 100%)"
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)"
   },
   "devops": {
     "title": "☁️ DOP-C02 練習問題",
     "icon": "☁️",
-    "bgColor": "#D4A574",
-    "bgGradient": "linear-gradient(135deg, #D4A574 0%, #E8C4A0 50%, #F0D9C8 100%)"
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)"
   }
 }
