@@ -470,6 +470,8 @@ auth.onAuthStateChanged(user => {
   if (user) {
     currentUser = user;
   }
+  // 認証状態に関わらず初期化を実行
+  loadAllQuestions();
 });
 
 // ============================================================
@@ -964,9 +966,6 @@ function startReview() {
   document.getElementById('screen-quiz').classList.remove('hidden');
   renderQuestion();
 }
-
-// 初期化
-loadAllQuestions();
 
 // キーボードショートカット
 document.addEventListener('keydown', (e) => {
