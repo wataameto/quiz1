@@ -378,6 +378,21 @@ quiz1/
 - ビルド後はプレースホルダーが実際の日時に置き換わる
 - 毎回のcommitでコミット日時が更新される
 
+**自動実行ルール（守ること）：**
+```bash
+# commitする前（push前）に必ず実行
+npm run build
+
+# 例：通常のworkflow
+git add .
+npm run build              # ← この行を追加（重要）
+git commit -m "..."
+git push
+```
+
+**重要：** `npm run build` を実行しないと、コミット日時がプレースホルダーのままになります。
+毎回のpushの前に必ず実行してください。
+
 ---
 
 ## 主要な計算式
