@@ -378,32 +378,31 @@ quiz1/
 - ビルド後はプレースホルダーが実際の日時に置き換わる
 - 毎回のcommitでコミット日時が更新される
 
-**新アプローチ：コミット日時をJSONファイルで管理**
+**ビルドシステム：コミット日時の自動更新**
 
 **仕組み：**
-- `npm run build` → `docs/build-info.json` にタイムスタンプを保存（日本標準時JST）
+- git pre-commitフックで自動的に `npm run build` を実行
+- `docs/build-info.json` にタイムスタンプを保存（日本標準時JST）
 - HTMLファイルは一切変更されない
 - JavaScriptで `build-info.json` を読み込んで動的に表示
 
-**Workflow（毎回）：**
+**セットアップ（初回のみ）：**
 ```bash
-# 1. コードを編集
+bash setup-hooks.sh
+```
+
+**Workflow（セットアップ後）：**
+```bash
 git add .
-
-# 2. npm run build を実行
-npm run build
-
-# 3. commitする（docs/build-info.json のみ更新）
-git commit -m "..."
-
-# 4. pushする
+git commit -m "..."   # ← フックが自動的に npm run build を実行
 git push
 ```
 
-**メリット：**
-- HTMLファイルが変更されない → プレースホルダー管理が不要
-- build-info.jsonだけがcommitされる → 確実でシンプル
-- JavaScriptで動的表示 → 柔軟で拡張可能
+**特徴：**
+- `npm run build` は手動不要 → フックで自動実行
+- build-info.jsonは自動的にcommitに含まれる
+- HTMLファイルは変更されない → 確実でシンプル
+- 全ページで日本時間（JST）で表示
 
 ---
 

@@ -3,14 +3,16 @@
 
 echo "Setting up git hooks..."
 
-# Create symlink for post-commit hook
-ln -sf ../../hooks/post-commit .git/hooks/post-commit
-chmod +x .git/hooks/post-commit
+# Create symlink for pre-commit hook
+ln -sf ../../hooks/pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
 
 echo "✅ Git hooks installed successfully"
 echo ""
-echo "Post-commit hook will automatically:"
-echo "  1. Inject BUILD_TIME with current JST timestamp"
-echo "  2. Restore __BUILD_TIME__ placeholders"
+echo "Pre-commit hook will automatically:"
+echo "  1. Run 'npm run build' before each commit"
+echo "  2. Generate docs/build-info.json with JST timestamp"
+echo "  3. Include build-info.json in the commit"
 echo ""
-echo "No manual action needed - just commit normally!"
+echo "Workflow: git add . → git commit -m '...' → git push"
+echo "No 'npm run build' needed - it's automatic!"

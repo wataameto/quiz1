@@ -1,0 +1,10 @@
+#!/bin/bash
+# Auto-generate build-info.json before commit
+
+# Run npm build to generate/update build-info.json
+npm run build > /dev/null 2>&1
+
+# Add the generated build-info.json to the commit
+git add docs/build-info.json 2>/dev/null
+
+exit 0
