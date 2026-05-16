@@ -288,15 +288,19 @@ quiz1/
 │   ├── utils.test.js         # ユーティリティテスト (66テスト)
 │   └── integration.test.js   # 統合テスト (16テスト)
 ├── docs/
-│   ├── config.json           # クイズ設定
+│   ├── index.html            # メインメニューページ
 │   ├── boki1/
-│   │   ├── questions1.json
-│   │   └── questions2.json
+│   │   ├── index.html        # 簿記クイズページ
+│   │   ├── questions1.json   # パート1データ
+│   │   └── questions2.json   # パート2データ
 │   └── devops/
-│       ├── questions1.json
-│       ├── questions2.json
-│       └── questions3.json
-├── package.json              # npm設定
+│       ├── index.html        # DevOpsクイズページ
+│       ├── questions1.json   # 基礎初級データ
+│       ├── questions2.json   # 基礎中級データ
+│       └── questions3.json   # 基礎上級データ
+├── scripts/
+│   └── update-build-time.js  # ビルド時刻自動注入スクリプト
+├── package.json              # npm設定（build, prepare フック）
 ├── jest.config.js            # Jest設定
 ├── README.md                 # (最小限)
 ├── TEST_DOCUMENTATION.md     # テストドキュメント
@@ -332,6 +336,47 @@ quiz1/
 - `setDB(db)` でFirebaseインスタンスを注入
 - `getCollectionName()` でコレクション名を生成
 - テストではDBをモック（null/undefined許容）
+
+### 6. UI表示仕様
+- **デバイス表示**: 左下に固定表示、フォントサイズ14px
+  - Touch デバイス: 📱 Touch
+  - PC デバイス: 🖥️ PC
+- **ビルド時刻表示**: コミット日時（日本標準時 JST = UTC+9）
+  - 形式: YYYY-MM-DD HH:MM:SS（2行表示）
+  - 毎回のgit pushでcommitタイムスタンプが自動注入
+
+---
+
+## ビルドシステム
+
+### 自動時刻注入スクリプト (scripts/update-build-time.js)
+
+**目的：** HTMLファイルのコミット日時プレースホルダーを、最新のコミットタイムスタンプで自動置き換える
+
+**仕様：**
+- HTMLファイル内の `__BUILD_TIME__` プレースホルダーを検出
+- `git log -1 --format=%ci` で最新コミットの日時を取得
+- タイムゾーン: **日本標準時（JST = Asia/Tokyo = UTC+9）**
+- 形式: `YYYY-MM-DD HH:MM:SS`（秒単位）
+- 対象ファイル: `docs/index.html`, `docs/boki1/index.html`, `docs/devops/index.html`
+
+**実行タイミング：**
+- 手動実行: `npm run build`
+- 自動実行: `npm prepare` フック（git push前に自動実行）
+- package.json に以下設定:
+  ```json
+  "scripts": {
+    "build": "node scripts/update-build-time.js",
+    "prepare": "npm run build"
+  }
+  ```
+
+**仕様の重要ポイント：**
+- コミット日時は**必ず日本時間（JST）で表示**
+- TZ=Asia/Tokyo 環境変数で強制指定
+- プレースホルダー形式は `__BUILD_TIME__` (アンダースコア2つ)
+- ビルド後はプレースホルダーが実際の日時に置き換わる
+- 毎回のcommitでコミット日時が更新される
 
 ---
 
