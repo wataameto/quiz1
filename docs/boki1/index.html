@@ -377,7 +377,6 @@
       <div class="home-header">
         <div class="logo">📚</div>
         <h1>江東区最強せいちゃんへ簿記挑戦</h1>
-        <p><span id="part-badge" style="background:#667eea; color:#fff; padding:4px 12px; border-radius:99px; display:inline-block; margin-bottom:8px; font-weight:700;"></span></p>
         <p id="part-description"></p>
       </div>
     </div>
@@ -603,10 +602,8 @@ async function loadQuestions(level = 1) {
 
 function updatePartBadge() {
   const levelData = quizData[currentLevel];
-  const badgeEl = document.getElementById('part-badge');
   const descEl = document.getElementById('part-description');
   if (levelData) {
-    badgeEl.textContent = levelData.label || `パート ${currentLevel}`;
     descEl.textContent = levelData.description || '各10問・100点満点';
   }
 }
