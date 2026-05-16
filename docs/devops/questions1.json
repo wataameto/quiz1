@@ -12,7 +12,7 @@
         {
           "scenario": "🔧 AWS CodePipeline でソースコード管理に使うサービスは？",
           "choices": [
-            "Git ベースのソースコード管理サービス（CodeCommit）",
+            "Git ベースのソースコード管理サービス",
             "ソースコードのビルドとテスト自動化（CodeBuild）",
             "コードをサーバーにデプロイするサービス（CodeDeploy）",
             "インフラをコードで定義するサービス（CloudFormation）"
@@ -24,7 +24,7 @@
         {
           "scenario": "🏗️ AWS CodeBuild の主な役割は何？",
           "choices": [
-            "ソースコードのビルドとテストを自動化する（CodeBuild）",
+            "ソースコードのビルドとテストを自動化する",
             "コードをサーバーにデプロイするサービス（CodeDeploy）",
             "ソースコードのバージョン管理を行う（CodeCommit）",
             "インフラをコードで定義するサービス（CloudFormation）"
@@ -60,7 +60,7 @@
         {
           "scenario": "📄 CodeDeploy でEC2へのデプロイを定義するファイルは？",
           "choices": [
-            "CodeDeploy のデプロイ手順定義ファイル（appspec.yml）",
+            "CodeDeploy のデプロイ手順定義ファイル",
             "CodeBuild のビルド手順定義ファイル（buildspec.yml）",
             "CloudFormation のインフラ定義テンプレート（template.yaml）",
             "Amazon ECS のタスク定義ファイル（taskdef.json）"
@@ -72,7 +72,7 @@
         {
           "scenario": "📄 CodeBuild でビルド手順を定義するファイルは？",
           "choices": [
-            "CodeBuild のビルド手順定義ファイル（buildspec.yml）",
+            "CodeBuild のビルド手順定義ファイル",
             "CodeDeploy のデプロイ手順定義ファイル（appspec.yml）",
             "Docker イメージを定義するファイル（Dockerfile）",
             "デプロイ設定定義ファイル（deploy.yaml）"
@@ -84,7 +84,7 @@
         {
           "scenario": "🗄️ CodePipeline のステージ間でアーティファクトを保存するサービスは？",
           "choices": [
-            "ステージ間の成果物を保存するオブジェクトストレージ（Amazon S3）",
+            "ステージ間の成果物を保存するオブジェクトストレージ",
             "ネットワークアクセス可能なファイルシステム（Amazon EFS）",
             "NoSQL キーバリューストアデータベース（Amazon DynamoDB）",
             "npm・maven などのパッケージリポジトリ（AWS CodeArtifact）"
@@ -141,7 +141,7 @@
         {
           "scenario": "📦 AWS CloudFormation の主な目的は？",
           "choices": [
-            "YAML/JSON でインフラを定義・管理機能（CloudFormation）",
+            "YAML/JSON でインフラを定義・管理",
             "ソースコードをビルド・成果物化・生成（CodeBuild）",
             "アプリケーションログ収集・監視・管理（CloudWatch）",
             "リソース利用コスト削減・最適化・分析（Cost Explorer）"
@@ -165,7 +165,7 @@
         {
           "scenario": "🔐 Parameter Store の用途は？",
           "choices": [
-            "設定値・シークレット安全保存・管理機能（Parameter Store）",
+            "設定値・シークレット安全保存・管理機能",
             "EC2 インスタンス CPU 使用率監視・追跡（CloudWatch）",
             "CloudFormation テンプレート情報保存・管理（CloudFormation）",
             "Amazon S3 アクセス権限制限・細粒度管理（IAM Policy）"
@@ -177,7 +177,7 @@
         {
           "scenario": "⚙️ AWS OpsWorks の説明として正しいのは？",
           "choices": [
-            "Chef・Puppet マネージド構成管理（OpsWorks）",
+            "Chef・Puppet マネージド構成管理",
             "Kubernetes ベースコンテナ管理・実行（EKS）",
             "ソースコード管理・デプロイ自動化（CodePipeline）",
             "リソース利用料金・管理・分析ツール（Billing）"
@@ -213,7 +213,7 @@
         {
           "scenario": "🌐 Terraform の説明として正しいのは？",
           "choices": [
-            "マルチクラウド対応 IaC ツール（Terraform）",
+            "マルチクラウド対応 IaC ツール",
             "AWS 専用リソース・プロビジョニング（AWS API）",
             "Kubernetes ベースコンテナ管理・実行（EKS/ECS）",
             "ソースコード・バージョン管理ツール（Git/GitHub）"
@@ -270,7 +270,7 @@
         {
           "scenario": "🎯 RTO（Recovery Time Objective）とは？",
           "choices": [
-            "障害から復旧するまでの目標時間・目安（RTO）",
+            "障害から復旧するまでの目標時間・目安",
             "障害で許容できるデータ損失期間・範囲（RPO）",
             "システムが年間稼働すべき目標時間・範囲（Uptime）",
             "定期的にバックアップを実行する頻度・周期（Frequency）"
@@ -411,7 +411,7 @@
         {
           "scenario": "🔎 AWS X-Ray の目的は？",
           "choices": [
-            "分散アプリのリクエストをトレース・分析（X-Ray）",
+            "分散アプリのリクエストをトレース・分析",
             "ログを長期保存・管理・検索（S3 Lifecycle）",
             "システムのコストを分析・削減（Cost Explorer）",
             "セキュリティの異常活動を検出（GuardDuty）"
