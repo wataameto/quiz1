@@ -1,28 +1,20 @@
 #!/usr/bin/env node
 
 /**
- * Build script: Generate build-info.json with last commit timestamp in JST
+ * Build script: Generate build-info.json with current time in JST
  * Usage: node scripts/update-build-time.js
+ *
+ * Note: This script is called from pre-commit hook, so we record the current time
+ * (which is essentially the commit completion time) in JST format.
  */
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 try {
-  // Get last commit timestamp as Unix timestamp
-  const unixTimestamp = parseInt(execSync('git log -1 --format=%at', {
-    encoding: 'utf-8',
-  }).trim(), 10);
-
-  if (!unixTimestamp) {
-    console.error('❌ Failed to get commit timestamp');
-    process.exit(1);
-  }
-
-  // Convert to JST (UTC+9): Unix timestamp * 1000 (to ms) + 9 hours in ms
-  const jstTimestamp = unixTimestamp * 1000 + (9 * 60 * 60 * 1000);
-  const jstDate = new Date(jstTimestamp);
+  // Get current time in UTC and convert to JST (UTC+9)
+  const now = new Date();
+  const jstDate = new Date(now.getTime() + (9 * 60 * 60 * 1000));
 
   const year = jstDate.getUTCFullYear();
   const month = String(jstDate.getUTCMonth() + 1).padStart(2, '0');
