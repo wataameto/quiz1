@@ -2,7 +2,7 @@
   "boki1": {
     "title": "📚 江東区最強せいちゃんへ簿記挑戦",
     "heading": "江東区最強せいちゃんへ簿記挑戦",
-    "description": "簿記（会計）の基礎知識 ／ 各10問・100点満点",
+    "description": "簿記（会計）の基礎知識",
     "icon": "📚",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
@@ -13,7 +13,7 @@
   "devops": {
     "title": "☁️ DOP-C02 練習問題",
     "heading": "DOP-C02 練習問題",
-    "description": "AWS DevOps Engineer Professional ／ 各10問・100点満点",
+    "description": "AWS DevOps Engineer Professional",
     "icon": "☁️",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
