@@ -1,3 +1,10 @@
 #!/bin/bash
-# 不要になったため削除（post-commit で処理）
+# Update build-info.json before commit
+# This ensures build-info.json is always included in the commit
+
+node scripts/update-build-time.js
+
+# Add updated build-info.json to the commit
+git add docs/build-info.json
+
 exit 0
