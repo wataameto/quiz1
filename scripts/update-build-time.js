@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Build script: Generate build-info.json with last commit timestamp
+ * Build script: Generate build-info.json with last commit timestamp in JST
  * Usage: node scripts/update-build-time.js
  */
 
@@ -10,19 +10,30 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 try {
-  // Get last commit timestamp in JST format (YYYY-MM-DD HH:MM:SS +0900)
-  const fullTimestamp = execSync('TZ=Asia/Tokyo git log -1 --format=%ci', {
+  // Get last commit timestamp as Unix timestamp
+  const unixTimestamp = parseInt(execSync('git log -1 --format=%at', {
     encoding: 'utf-8',
-  }).trim();
-  // Extract just the date and time (first 19 chars) for display
-  const commitTimestamp = fullTimestamp.substring(0, 19);
+  }).trim(), 10);
 
-  if (!commitTimestamp) {
+  if (!unixTimestamp) {
     console.error('❌ Failed to get commit timestamp');
     process.exit(1);
   }
 
-  console.log(`📅 Last commit: ${commitTimestamp}`);
+  // Convert to JST (UTC+9)
+  const date = new Date(unixTimestamp * 1000);
+  const jstDate = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+
+  const year = jstDate.getUTCFullYear();
+  const month = String(jstDate.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(jstDate.getUTCDate()).padStart(2, '0');
+  const hours = String(jstDate.getUTCHours()).padStart(2, '0');
+  const minutes = String(jstDate.getUTCMinutes()).padStart(2, '0');
+  const seconds = String(jstDate.getUTCSeconds()).padStart(2, '0');
+
+  const commitTimestamp = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+  console.log(`📅 Last commit (JST): ${commitTimestamp}`);
 
   // Create build info object
   const buildInfo = {
