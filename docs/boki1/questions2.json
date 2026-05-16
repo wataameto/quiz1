@@ -66,7 +66,7 @@
             "商品の仕入時の証憑（記録）"
           ],
           "correct": 0,
-          "explanation": "受取手形は商取引で発生する有価証券で、満期日に代金を受け取る権利を表します。",
+          "explanation": "受取手形は得意先との間で発生する約束手形で、一定期間後に代金を受け取る権利を示す資産です。",
           "type": "choice"
         },
         {
@@ -752,47 +752,23 @@
           "type": "journal"
         },
         {
-          "scenario": "🛒 商品¥12,000を掛けで仕入れた。",
+          "scenario": "📝 原価¥6,000の商品を受取手形¥10,000で掛け販売した。",
           "choices": [
             {
               "debit": [
                 {
-                  "account": "商品",
-                  "amount": 12000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "買掛金",
-                  "amount": 12000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "買掛金",
-                  "amount": 12000
+                  "account": "受取手形",
+                  "amount": 10000
                 }
               ],
               "credit": [
                 {
                   "account": "商品",
-                  "amount": 12000
-                }
-              ]
-            },
-            {
-              "debit": [
+                  "amount": 6000
+                },
                 {
-                  "account": "商品",
-                  "amount": 12000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 12000
+                  "account": "商品売買益",
+                  "amount": 4000
                 }
               ]
             },
@@ -800,19 +776,55 @@
               "debit": [
                 {
                   "account": "現金",
-                  "amount": 12000
+                  "amount": 10000
                 }
               ],
               "credit": [
                 {
                   "account": "商品",
-                  "amount": 12000
+                  "amount": 6000
+                },
+                {
+                  "account": "商品売買益",
+                  "amount": 4000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "受取手形",
+                  "amount": 10000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "商品",
+                  "amount": 10000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "売掛金",
+                  "amount": 10000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "商品",
+                  "amount": 6000
+                },
+                {
+                  "account": "商品売買益",
+                  "amount": 4000
                 }
               ]
             }
           ],
           "correct": 0,
-          "explanation": "商品（資産）が増加し、買掛金（負債）が増加する取引です。",
+          "explanation": "受取手形¥10,000で掛け販売し、商品¥6,000と売買益¥4,000を貸方に記録します。受取手形は資産として計上されます。",
           "type": "journal"
         },
         {
@@ -892,19 +904,19 @@
           "type": "journal"
         },
         {
-          "scenario": "💸 買掛金¥12,000を現金で支払った。",
+          "scenario": "🏦 銀行から借入した短期借入金¥15,000を現金で返済した。",
           "choices": [
             {
               "debit": [
                 {
-                  "account": "買掛金",
-                  "amount": 12000
+                  "account": "短期借入金",
+                  "amount": 15000
                 }
               ],
               "credit": [
                 {
                   "account": "現金",
-                  "amount": 12000
+                  "amount": 15000
                 }
               ]
             },
@@ -912,27 +924,27 @@
               "debit": [
                 {
                   "account": "現金",
-                  "amount": 12000
+                  "amount": 15000
                 }
               ],
               "credit": [
                 {
-                  "account": "買掛金",
-                  "amount": 12000
+                  "account": "短期借入金",
+                  "amount": 15000
                 }
               ]
             },
             {
               "debit": [
                 {
-                  "account": "買掛金",
-                  "amount": 12000
+                  "account": "短期借入金",
+                  "amount": 15000
                 }
               ],
               "credit": [
                 {
-                  "account": "売掛金",
-                  "amount": 12000
+                  "account": "買掛金",
+                  "amount": 15000
                 }
               ]
             },
@@ -940,19 +952,19 @@
               "debit": [
                 {
                   "account": "現金",
-                  "amount": 12000
+                  "amount": 15000
                 }
               ],
               "credit": [
                 {
-                  "account": "売掛金",
-                  "amount": 12000
+                  "account": "買掛金",
+                  "amount": 15000
                 }
               ]
             }
           ],
           "correct": 0,
-          "explanation": "買掛金（負債）が減少し、現金（資産）が減少する取引です。",
+          "explanation": "短期借入金（負債）が減少し、現金（資産）が減少する取引です。短期借入金の返済を記録します。",
           "type": "journal"
         }
       ]
