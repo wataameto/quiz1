@@ -1,12 +1,3 @@
 #!/bin/bash
-# Auto-generate build-info.json before commit
-
-set -e
-
-# Run build script to update build-info.json
-node scripts/update-build-time.js
-
-# Add the updated build-info.json to staging
-git add docs/build-info.json
-
+# 不要になったため削除（post-commit で処理）
 exit 0
