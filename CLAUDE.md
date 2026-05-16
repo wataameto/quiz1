@@ -393,19 +393,61 @@ for (let level = 1; level <= maxLevel; level++) {
 
 ページ左下に固定表示：
 - **デバイス判定:** `navigator.userAgent` で Touch/PC を判定
-- **ビルド時刻:** `docs/build-info.json` から動的に読み込み（JST表示）
+- **ビルド時刻:** `docs/build-info.json` から動的に読み込み（**日本標準時 JST で表示**）
 - **フォント:** 14px、2行表示（デバイス / ビルド時刻）
+- **形式:** `YYYY-MM-DD HH:MM:SS`（秒単位、日本時間）
 
 ```javascript
-fetch('../build-info.json')
-  .then(r => r.json())
-  .then(data => {
-    const isTouchDevice = () => /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const device = isTouchDevice() ? '📱 Touch' : '🖥️ PC';
-    document.getElementById('device-info').textContent = device;
-    document.getElementById('build-time').textContent = data.buildTime;
-  });
+(function() {
+  const isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0));
+  };
+  const deviceType = isTouchDevice() ? '📱 Touch' : '🖥️ PC';
+
+  let buildTime = 'Loading...';
+  fetch('../build-info.json')
+    .then(res => res.json())
+    .then(data => {
+      buildTime = data.buildTime;  // JST で読み込み
+      updateBuildTimeDisplay();
+    })
+    .catch(err => {
+      buildTime = 'Unknown';
+      updateBuildTimeDisplay();
+    });
+
+  function updateBuildTimeDisplay() {
+    const timeEl = document.getElementById('build-time-display') || createBuildTimeDisplay();
+    timeEl.innerHTML = `${deviceType}<br>ビルド: ${buildTime}`;
+  }
+
+  function createBuildTimeDisplay() {
+    const timeEl = document.createElement('div');
+    timeEl.id = 'build-time-display';
+    timeEl.style.position = 'fixed';
+    timeEl.style.bottom = '10px';
+    timeEl.style.left = '10px';
+    timeEl.style.fontSize = '14px';
+    timeEl.style.color = '#999';
+    timeEl.style.zIndex = '9999';
+    timeEl.style.pointerEvents = 'none';
+    timeEl.style.lineHeight = '1.4';
+    timeEl.style.whiteSpace = 'nowrap';
+    document.body.appendChild(timeEl);
+    return timeEl;
+  }
+
+  createBuildTimeDisplay();
+  updateBuildTimeDisplay();
+})();
 ```
+
+**日本時間（JST）での表示：**
+- コミット日時は `docs/build-info.json` に JST 形式で保存される
+- `update-build-time.js` スクリプトが日本標準時で自動生成
+- HTML 左下に「📱 Touch（または 🖥️ PC）」と「ビルド: YYYY-MM-DD HH:MM:SS」で表示
 
 ---
 
