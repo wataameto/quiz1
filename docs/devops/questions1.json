@@ -141,10 +141,10 @@
         {
           "scenario": "📦 AWS CloudFormation の主な目的は？",
           "choices": [
-            "AWSリソースをコードで定義・自動プロビジョニング",
-            "ソースコードをビルドしてアーティファクトを生成",
-            "アプリケーションのログを収集・分析する",
-            "AWSリソースの利用コストを削減・最適化"
+            "YAML/JSON テンプレートでリソース定義（CloudFormation）",
+            "ソースコードをビルドして生成（CodeBuild）",
+            "アプリケーションログ収集・分析（CloudWatch）",
+            "リソース利用コストを削減最適化（Cost Explorer）"
           ],
           "correct": 0,
           "explanation": "CloudFormation は YAML/JSON テンプレートでインフラを定義し、スタックとして一括作成・更新・削除できる。変更管理・再現性・ドリフト検出も可能。",
@@ -153,10 +153,10 @@
         {
           "scenario": "💻 AWS CDK の特徴は？",
           "choices": [
-            "プログラミング言語でAWSリソースを定義可能",
-            "Web ブラウザで GUIインフラを構築する",
-            "CloudFormation テンプレートを自動削除する",
-            "AWSリソースのコスト分析・最適化を実施"
+            "プログラミング言語でAWSリソース定義（CDK）",
+            "Web ブラウザで GUI インフラ構築（Web UI）",
+            "CloudFormation テンプレート自動削除（Auto Delete）",
+            "リソースのコスト分析最適化（Cost Analysis）"
           ],
           "correct": 0,
           "explanation": "CDK（Cloud Development Kit）は Python・TypeScript・Java などの言語でインフラを定義できる。内部的に CloudFormation テンプレートを生成するため、CloudFormation の恩恵はそのまま受けられる。",
@@ -165,10 +165,10 @@
         {
           "scenario": "🔐 Parameter Store の用途は？",
           "choices": [
-            "設定値やシークレットを安全に保存・管理",
-            "EC2 インスタンスのパフォーマンス監視",
-            "CloudFormation テンプレート情報を保存",
-            "Amazon S3 のアクセス権限を制限・管理"
+            "設定値・シークレットを安全に保存（Parameter Store）",
+            "EC2 インスタンス CPU 使用率監視（CloudWatch）",
+            "CloudFormation テンプレート情報保存（CloudFormation）",
+            "Amazon S3 アクセス権限制限管理（IAM Policy）"
           ],
           "correct": 0,
           "explanation": "Systems Manager Parameter Store は DB 接続文字列・API キー・機密設定値などを /myapp/db/password のような階層的なパス構造で管理し、IAM で細粒度アクセス制御できる。無料の Standard と有料の Advanced がある。特に定期的な自動ローテーション（RDS パスワードなど）が必要な場合は Secrets Manager が適切。",
@@ -177,10 +177,10 @@
         {
           "scenario": "⚙️ AWS OpsWorks の説明として正しいのは？",
           "choices": [
-            "Chef・Puppet によるサーバー構成管理サービス",
-            "Kubernetes ベースのコンテナオーケストレーション",
-            "ソースコード管理から本番デプロイまでのパイプライン",
-            "AWSリソースの利用料金を管理・分析する"
+            "Chef・Puppet マネージド構成管理（OpsWorks）",
+            "Kubernetes ベースコンテナオーケストレーション（EKS）",
+            "ソースコード管理デプロイパイプライン（CodePipeline）",
+            "リソース利用料金管理分析（Billing）"
           ],
           "correct": 0,
           "explanation": "OpsWorks は Chef・Puppet のマネージドサービス。サーバーの設定を「レシピ」で管理する。コンテナは ECS/EKS、CI/CD は CodePipeline、コスト管理は Cost Explorer が担当。",
@@ -189,10 +189,10 @@
         {
           "scenario": "🔗 CloudFormation でスタック間で値を共有するには？",
           "choices": [
-            "Outputs セクション と Fn::ImportValue 関数",
-            "Mappings セクション でマッピングテーブル定義",
-            "Conditions セクション で条件分岐設定",
-            "Metadata セクション でメタ情報記述"
+            "Outputs セクション Fn::ImportValue 関数（Export）",
+            "Mappings セクション マッピングテーブル定義（Mapping）",
+            "Conditions セクション 条件分岐設定（Condition）",
+            "Metadata セクション メタ情報記述（Metadata）"
           ],
           "correct": 0,
           "explanation": "Outputs セクションで Export 属性を使ってエクスポート名を指定し、別スタックで Fn::ImportValue で参照する。例：Outputs: { VpcId: { Value: !Ref MyVpc, Export: { Name: MyVpcId } } }。削除時は参照スタックが先に削除される必要がある。Mappings はマッピングテーブル、Conditions は条件付きリソース、Metadata はメタ情報。",
@@ -201,10 +201,10 @@
         {
           "scenario": "📋 AWS Config の主な目的は？",
           "choices": [
-            "AWSリソース設定の変更を記録・評価・監視",
-            "Infrastructure as Code でインフラをコード化",
-            "アプリケーションコードを本番環境にデプロイ",
-            "AWSリソースの利用コストを追跡・分析"
+            "リソース設定変更を記録評価監視（AWS Config）",
+            "Infrastructure as Code でインフラコード化（IaC）",
+            "アプリケーション本番環境デプロイ（CodeDeploy）",
+            "リソース利用コスト追跡分析（Cost Analysis）"
           ],
           "correct": 0,
           "explanation": "Config は全リソースの設定履歴を記録し、Config Rules でコンプライアンス違反を自動検出する。違反時の自動修復（SSM Automation 連携）も可能。",
@@ -213,10 +213,10 @@
         {
           "scenario": "🌐 Terraform の説明として正しいのは？",
           "choices": [
-            "AWS・Azure・GCP などマルチクラウド対応IaC",
-            "AWS 専用のリソースプロビジョニングサービス",
-            "Kubernetes ベースのコンテナ管理ツール",
-            "ソースコードのバージョン管理ツール"
+            "マルチクラウド対応 IaC ツール（Terraform）",
+            "AWS 専用リソースプロビジョニング（AWS API）",
+            "Kubernetes ベースコンテナ管理（EKS/ECS）",
+            "ソースコード版管理ツール（Git/GitHub）"
           ],
           "correct": 0,
           "explanation": "Terraform は HashiCorp 製のオープンソース IaC ツール。HCL（HashiCorp Configuration Language）で記述し、AWS・Azure・GCP・オンプレミスなどマルチクラウド対応。State ファイル（terraform.tfstate）で現状を追跡し、plan（差分確認）→ apply（適用）のワークフロー。CloudFormation は AWS 限定だが、Terraform はクラウド横断的な統一管理が可能。",
@@ -225,10 +225,10 @@
         {
           "scenario": "🔍 CloudFormation のドリフト検出とは？",
           "choices": [
-            "テンプレートと実際の設定の差異を検出・通知",
-            "誤ったリソース削除を防ぐ機能",
-            "AWSリソースの将来のコストを予測する",
-            "テンプレート内の構文エラーを自動検出"
+            "テンプレート実際設定の差異検出通知（Drift）",
+            "誤ったリソース削除を防止（Deletion Protection）",
+            "リソース将来コストを予測（Cost Forecast）",
+            "テンプレート構文エラー自動検出（Validation）"
           ],
           "correct": 0,
           "explanation": "コンソールなどで手動変更したリソースがテンプレートと乖離（ドリフト）していないかを検出する機能。ドリフトを放置すると次の CloudFormation 更新で予期しない変更が起きる可能性がある。",
@@ -237,10 +237,10 @@
         {
           "scenario": "🛒 Service Catalog の目的は？",
           "choices": [
-            "承認済みのテンプレートをカタログで組織内に提供",
-            "AWS サービスの機能一覧を表示・検索する",
-            "AWSリソース利用のコスト削減提案を提供",
-            "セキュリティ脆弱性を検出・通知する"
+            "承認済みテンプレート組織内提供カタログ（Catalog）",
+            "AWS サービス機能一覧表示検索（Service List）",
+            "リソース利用コスト削減提案（Cost Savings）",
+            "セキュリティ脆弱性検出通知（Vulnerability）"
           ],
           "correct": 0,
           "explanation": "Service Catalog は管理者が承認した CloudFormation テンプレートを製品として公開し、開発者がセルフサービスでプロビジョニングできる。ガバナンスを保ちつつ開発者の自律性を支援する仕組み。",
@@ -249,10 +249,10 @@
         {
           "scenario": "📁 Elastic Beanstalk の .ebextensions の用途は？",
           "choices": [
-            "環境のカスタム設定を YAML で定義・自動適用",
-            "アプリケーションのソースコードを格納",
-            "デプロイ実行時のログを保存・参照",
-            "Amazon S3 バケットのアクセスポリシーを設定"
+            "環境カスタム設定を YAML で定義適用（.ebextensions）",
+            "アプリケーションソースコード格納（Source Code）",
+            "デプロイ実行時ログを保存参照（Deploy Log）",
+            "Amazon S3 アクセスポリシー設定（S3 Policy）"
           ],
           "correct": 0,
           "explanation": ".ebextensions ディレクトリに YAML ファイルを配置することで、パッケージインストール・環境変数・IAM ロールなどのカスタム設定をデプロイ時に自動適用できる。",
@@ -270,10 +270,10 @@
         {
           "scenario": "🎯 RTO（Recovery Time Objective）とは？",
           "choices": [
-            "障害から復旧完了までの最大許容時間",
-            "障害発生時に許容できるデータ損失期間",
-            "システムが 1 年間に稼働すべき目標時間",
-            "定期的にバックアップを実行する頻度"
+            "障害から復旧完了までの最大許容時間（RTO）",
+            "障害発生時に許容できるデータ損失期間（RPO）",
+            "システムが 1 年間に稼働すべき目標時間（Uptime）",
+            "定期的にバックアップを実行する頻度（Frequency）"
           ],
           "correct": 0,
           "explanation": "RTO は「障害から復旧完了までの最大許容時間」（例：4 時間）。RPO（Recovery Point Objective）は「障害時点で失っても許容できるデータの最大損失期間」（例：1 時間分のデータまで）。両者は DR 計画の中核で、RTO が短いほど、RPO が小さいほど高可用性が必要だがコストが増加する。例：RTO=1 時間、RPO=15 分。",
@@ -282,10 +282,10 @@
         {
           "scenario": "🌍 マルチAZ構成の主な目的は？",
           "choices": [
-            "1 つの AZ 障害時も別 AZ で継続稼働",
-            "複数リージョンに自動的にデータ複製同期",
-            "地理的にユーザーに近い場所でサービス提供",
-            "複数リージョンの利用コストを削減"
+            "1 つの AZ 障害時も別 AZ で継続稼働（Multi-AZ）",
+            "複数リージョンにデータ自動複製同期（Multi-region）",
+            "地理的にユーザーに近い場所でサービス提供（Geo-close）",
+            "複数リージョンの利用コストを削減（Cost Reduction）"
           ],
           "correct": 0,
           "explanation": "マルチ AZ は同一リージョン内の物理的に分離されたデータセンターに冗長配置する。マルチリージョンはさらに地理的に離れた別リージョンに配置し、大規模災害にも対応できる。",
@@ -294,10 +294,10 @@
         {
           "scenario": "🔄 Route 53 のフェイルオーバールーティングは？",
           "choices": [
-            "プライマリ障害を検知し自動でセカンダリに切替",
-            "受け取ったリクエスト数で負荷分散する方式",
-            "ユーザーの地理的な位置で最適なサーバ選択",
-            "複数ターゲットの中からランダムに選択"
+            "プライマリ障害を検知し自動でセカンダリ切替（Failover）",
+            "受け取ったリクエスト数で負荷分散（Weighted）",
+            "ユーザーの地理的な位置で最適サーバ選択（Geolocation）",
+            "複数ターゲットの中からランダムに選択（Random）"
           ],
           "correct": 0,
           "explanation": "Route 53 フェイルオーバールーティング（Failover Routing）はプライマリリソースにヘルスチェック（HTTP/TCP/CloudWatch メトリクス）を設定し、障害を検知すると自動でセカンダリにルーティングを切り替える。複数のセカンダリをランク付けできる。リクエスト数分散は加重ルーティング、地理的ルーティングはジオロケーション/レイテンシールーティングが別途ある。",
@@ -306,10 +306,10 @@
         {
           "scenario": "📊 RDS マルチAZ の特徴は？",
           "choices": [
-            "プライマリ障害時に自動フェイルオーバー実施",
-            "複数インスタンスで読み取りスループット向上",
-            "管理者による手動フェイルオーバー方式",
-            "異なるリージョンのスタンバイで冗長化"
+            "プライマリ障害時に自動フェイルオーバー実施（Failover）",
+            "複数インスタンスで読み取りスループット向上（Read Scale）",
+            "管理者による手動フェイルオーバー方式（Manual）",
+            "異なるリージョンのスタンバイで冗長化（Multi-region）"
           ],
           "correct": 0,
           "explanation": "RDS マルチ AZ はプライマリとスタンバイが同一リージョン内の異なる AZ に存在。同期レプリケーション（Write ハード待機）でデータ損失ゼロを保証。プライマリ障害時に自動フェイルオーバー（通常 1〜2 分）し、DNS レコードが自動更新されるためアプリ設定変更不要。読み取りスケールが必要な場合は Read Replica を追加。Multi-region 冗長化は Aurora Global Database が適切。",
@@ -318,10 +318,10 @@
         {
           "scenario": "🚀 ターゲット追跡スケーリングとは？",
           "choices": [
-            "メトリクスを指定された目標値に保つ自動スケール",
-            "事前に定めたスケジュールに従い実行",
-            "管理者が手動でインスタンス数を増減",
-            "スケール アウト・イン を定期的に交互実行"
+            "メトリクスを指定された目標値に保つ自動スケール（TTS）",
+            "事前に定めたスケジュールに従い実行（Scheduled）",
+            "管理者が手動でインスタンス数を増減（Manual）",
+            "スケール アウト・イン を定期的に交互実行（Alternating）"
           ],
           "correct": 0,
           "explanation": "例えば「CPU 使用率を 50% に保つ」という目標を設定すると、自動でインスタンスを増減させる。ステップスケーリングはメトリクス変化量に応じて段階的に増減する方式で、より細かい制御が可能。",
@@ -330,10 +330,10 @@
         {
           "scenario": "🌐 CloudFront オリジンフェイルオーバーの動作は？",
           "choices": [
-            "プライマリ障害時に自動でセカンダリへ切替",
-            "ユーザー所在地域に最も近いサーバ選択",
-            "バックエンドサーバーの CPU 使用率で分散",
-            "CloudFront キャッシュミス時にフォールバック"
+            "プライマリ障害時に自動でセカンダリ切替（Failover）",
+            "ユーザー所在地域に最も近いサーバ選択（Geolocation）",
+            "バックエンドサーバーの CPU 使用率で分散（Load Balancing）",
+            "CloudFront キャッシュミス時にフォールバック（Cache）"
           ],
           "correct": 0,
           "explanation": "CloudFront オリジングループにプライマリとセカンダリを設定し、プライマリが 5xx や設定した 4xx を返すか接続タイムアウト時に自動でセカンダリに切り替える。複数ステータスコード指定・リトライ間隔・リトライ回数が設定可能。クライアント側はキャッシュから提供されるため影響が最小。S3 クロスリージョンレプリケーション + CloudFront オリジンフェイルオーバーで高可用な配信構成を実現。",
@@ -342,10 +342,10 @@
         {
           "scenario": "💾 S3 のデータ耐久性は？",
           "choices": [
-            "99.999999999%（11 個の 9 イレブンナイン）",
-            "99.9% で 1000 年で 1 日の損失確率",
-            "99.99% で複数リージョンで複製保存",
-            "100% の完全耐久性を保証"
+            "99.999999999% イレブンナイン耐久性（11個の9）",
+            "99.9% で 1000 年で 1 日の損失確率（99.9%）",
+            "99.99% で複数リージョンで複製保存（Multi-region）",
+            "100% の完全耐久性を保証（100% Perfect）"
           ],
           "correct": 0,
           "explanation": "S3 はイレブンナイン（11個の9）の耐久性で、データを複数 AZ に自動複製する。耐久性はデータが失われない確率、可用性はアクセスできる確率で別の概念。S3 Standard の可用性は 99.99%。",
@@ -354,10 +354,10 @@
         {
           "scenario": "🔁 ELB のヘルスチェックの役割は？",
           "choices": [
-            "異常なターゲットへのトラフィック送信を停止",
-            "EC2 インスタンスの CPU 使用率を監視",
-            "アプリケーションのログを自動収集・保存",
-            "セキュリティパッチを自動的に適用"
+            "異常なターゲットへのトラフィック送信を停止（Health Check）",
+            "EC2 インスタンスの CPU 使用率を監視（Monitoring）",
+            "アプリケーションのログを自動収集保存（Log Collection）",
+            "セキュリティパッチを自動的に適用（Patching）"
           ],
           "correct": 0,
           "explanation": "ELB は定期的にターゲット（EC2・コンテナ等）のヘルスチェックを行い、異常なターゲットへのルーティングを自動停止する。復旧後は自動的にルーティング再開するため、障害インスタンスへのリクエストを防げる。",
@@ -366,10 +366,10 @@
         {
           "scenario": "🗂️ SQS で障害耐性を高める設計は？",
           "choices": [
-            "非同期キューで処理失敗時に再処理可能に",
-            "リクエスト・レスポンス間で同期REST連携",
-            "処理を単一インスタンスに集約・一元化",
-            "データベースを共有ストレージで共用"
+            "非同期キューで処理失敗時に再処理可能（Async Queue）",
+            "リクエスト・レスポンス間で同期REST連携（Synchronous）",
+            "処理を単一インスタンスに集約一元化（Centralized）",
+            "データベースを共有ストレージで共用（Shared Storage）"
           ],
           "correct": 0,
           "explanation": "SQS キューを挟んだ非同期設計では、処理に失敗してもメッセージがキューに残り再処理できる。DLQ（デッドレターキュー）で一定回数失敗したメッセージを別キューに隔離して原因調査できる。",
@@ -378,10 +378,10 @@
         {
           "scenario": "📋 ゲームデイ演習の目的は？",
           "choices": [
-            "本番環境で意図的に障害を注入し回復力を検証",
-            "本番環境で新機能についての負荷テスト実施",
-            "運用チームのスキルレベルを評価測定",
-            "システム全体の利用コストを削減最適化"
+            "本番環境で意図的に障害を注入し回復力検証（Chaos）",
+            "本番環境で新機能についての負荷テスト実施（Load Test）",
+            "運用チームのスキルレベルを評価測定（Skill Assessment）",
+            "システム全体の利用コストを削減最適化（Cost Optimization）"
           ],
           "correct": 0,
           "explanation": "ゲームデイ演習は本番相当の環境で意図的に障害を注入し、システムと対応プロセスの回復力を検証するカオスエンジニアリング実践。AWS Fault Injection Simulator（FIS）でシナリオを自動化できる。",
