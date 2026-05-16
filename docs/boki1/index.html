@@ -522,8 +522,8 @@ async function showHome() {
 
   // パート説明を表示
   const partDescEl = document.getElementById('part-description');
-  if (quizData[currentLevel] && quizData[currentLevel].label) {
-    partDescEl.textContent = quizData[currentLevel].label;
+  if (quizData[currentLevel] && quizData[currentLevel].description) {
+    partDescEl.textContent = quizData[currentLevel].description;
     partDescEl.style.display = 'block';
   } else {
     partDescEl.style.display = 'none';
