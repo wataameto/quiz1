@@ -524,6 +524,63 @@ for (let level = 1; level <= maxLevel; level++) {
 
 ---
 
+## テンプレートとメタデータ管理
+
+### テンプレート統一（config.json）
+
+**目的:** boki1 と devops のテンプレート HTML を統一し、quiz 固有の表示情報は config.json で管理
+
+**実装方式:**
+- `docs/boki1/index.html` と `docs/devops/index.html` は同一の HTML テンプレート
+- `docs/config.json` にクイズごとの表示メタデータを記録
+- JavaScript が `questions.json` から `quizId` を読み込む
+- `quizId` に対応する config を取得して、CSS・DOM を動的に更新
+
+**config.json の構造:**
+```json
+{
+  "boki1": {
+    "title": "📚 江東区最強せいちゃんへ簿記挑戦",
+    "heading": "江東区最強せいちゃんへ簿記挑戦",
+    "description": "簿記（会計）の基礎知識",
+    "icon": "📚",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085)",
+    "accentColor": "#667eea",
+    "accentActive": "linear-gradient(135deg, #f7f8ff, #f5f7ff)"
+  },
+  "devops": {
+    "title": "☁️ DOP-C02 練習問題",
+    "heading": "DOP-C02 練習問題",
+    "description": "AWS DevOps Engineer Professional",
+    "icon": "☁️",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #f7971e, #ffd200, #21d4fd, #b721ff)",
+    "accentColor": "#f7971e",
+    "accentActive": "linear-gradient(135deg, #fff9ed, #fffbea)"
+  }
+}
+```
+
+**HTML での動的適用例:**
+```javascript
+const cfg = configData[quizId];
+document.title = cfg.title;
+document.body.style.background = cfg.bgGradient;
+document.getElementById('quiz-heading').textContent = cfg.heading;
+
+const dynamicStyle = document.getElementById('dynamic-colors');
+dynamicStyle.textContent = `
+  .container::before { background: ${cfg.topGradient}; }
+  .level-btn.active { border-color: ${cfg.accentColor}; }
+  /* その他のスタイル */
+`;
+```
+
+---
+
 ## ビルドシステム
 
 ### 自動時刻注入スクリプト (scripts/update-build-time.js)
@@ -620,34 +677,85 @@ averageScore = Σ(attempted tests のpercentage) / attempted count
 
 ## UI 仕様と表示設計
 
-### テスト選択ページのレイアウト
+### テスト選択ページのレイアウト（docs/boki1/index.html, docs/devops/index.html）
 
 **構成要素:**
-1. **ヘッダー** - クイズタイトル（例: 「江東区最強せいちゃんへ簿記挑戦」）
-2. **パート別成績表示** - クリック可能なカード（選択中はハイライト表示）
-   - レイアウト: 「レベルラベル - スコア」の横長フォーマット
-   - クリックでレベル切り替え
-3. **総合成績** - コンパクト表示（「🎯 総合成績: X / Y」）
-4. **テストグリッド** - テストカード（コンパクト化）
-   - 大きなアイコンは非表示（削除）
-   - パディング: 12px 14px（省スペース化）
-   - テスト名、タイプ、最高スコアのみ表示
+1. **ヘッダー**
+   - クイズタイトル（config.json から動的に取得）
+   - 例: 「江東区最強せいちゃんへ簿記挑戦」
+   - ユーザー情報（ログアウトボタン付き）
+
+2. **パート別成績表示**（統合表示）
+   - クリック可能なスコア行
+   - レイアウト: 「🟢 パート X」| 「X問 / Y問」
+   - クリックでパート切り替え
+   - 選択中のパートは枠線でハイライト
+
+3. **総合成績** - ページ上部に小さく表示
+   - 形式: 「合計：X問 / Y問」
+   - 右寄せ、小さいフォント（0.85rem）
+
+4. **リセットボタン** - 総合成績エリアの右側
+   - クリックでモーダルダイアログを表示
+   - モーダルオプション:
+     - 「キャンセル」
+     - 「現在のパートのスコアをリセット」
+     - 「全パートのスコアをリセット」
+
+5. **テストグリッド** - テストカード（コンパクト化）
+   - パディング: 12px 14px（コンパクト）
+   - 大きなアイコンは非表示
+   - 表示内容: テスト名、タイプ、最高スコア
+
+**デバイス表示とビルド時刻**（全ページ共通）
+- **位置**: 左下に固定（position: fixed）
+- **フォントサイズ**: 14px
+- **色**: #999（薄いグレー）
+- **表示内容**:
+  - 1行目: デバイス判定（「📱 Touch」または「🖥️ PC」）
+  - 2行目: 「ビルド: YYYY-MM-DD HH:MM:SS」（日本標準時 JST）
+- **実装**: build-info.json を fetch して動的に表示
 
 ### メインメニュー（docs/index.html）
 
 **表示内容:**
-- ユーザーログイン情報
-- クイズ一覧（パート数を表示）
-  - 「📖 簿記（2パート）」
-  - 「☁️ DevOps（3パート）」
-- 総合成績（すべてのクイズの合計）
+- **ログイン画面**: ユーザーが未認証時に表示
+  - ロゴ（📚）、タイトル、ログインボタン
+- **ホーム画面**: ユーザー認証後に表示
+  - ユーザー情報（アバター + 名前 + ログアウトボタン）
+  - 総合成績（右寄せ、小さい表示）
+    - 形式: 「合計：X問 / 240問」
+    - 位置: スコアサマリーの上
+  - クイズ一覧（クリック可能リンク）
+    - 「📖 簿記（2パート）」- 6問 / 60問
+    - 「☁️ DevOps（3パート）」- X問 / 180問
 
 **カラースキーム:**
-- **背景**: 濃紺グラデーション
+- **背景**: 濃紺グラデーション (`linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)`)
 - **アクセント色**: 青系（`#0066ff` → `#0099ff`）
   - ログインボタン
-  - ユーザーアバター
+  - ユーザーアバター背景
   - スコア表示背景
+
+**レイアウト:**
+- トップアライン（`align-items: flex-start`）- コンテンツが上に寄せられる
+- 最大幅 600px
+- パディング: 24px 18px
+
+### 成績リセット機能
+
+**リセットボタン動作:**
+- テスト選択ページに「成績リセット」ボタンを配置
+- クリックでモーダルダイアログを表示
+- ユーザーは以下から選択可能:
+  1. **キャンセル** - リセットしない、ダイアログ閉じる
+  2. **現在のパートのみリセット** - `resetCurrentLevel()` を実行
+  3. **全パートをリセット** - `resetAllLevels()` を実行
+
+**リセット時の動作:**
+- Firestore のスコアドキュメントから該当キーを削除
+- ブラウザキャッシュ（`bestScores`）をリセット
+- ページを自動的にリロードして表示を更新
 
 ### 用語統一
 
