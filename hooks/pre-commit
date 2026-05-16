@@ -1,10 +1,12 @@
 #!/bin/bash
 # Auto-generate build-info.json before commit
 
-# Run npm build to generate/update build-info.json
-npm run build > /dev/null 2>&1
+set -e
 
-# Add the generated build-info.json to the commit
-git add docs/build-info.json 2>/dev/null
+# Run build script to update build-info.json
+node scripts/update-build-time.js
+
+# Add the updated build-info.json to staging
+git add docs/build-info.json
 
 exit 0
