@@ -429,6 +429,19 @@
     <button class="btn-home" onclick="showHome()">🏠 テスト選択に戻る</button>
   </div>
 
+  <!-- リセット確認ダイアログ -->
+  <div id="reset-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:24px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:400px; text-align:center;">
+      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">スコアをリセット</h2>
+      <p style="color:#718096; margin-bottom:24px; font-size:0.95rem;">どのスコアをリセットしますか？</p>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeResetModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
+        <button onclick="resetCurrentLevel()" style="flex:1; padding:12px; background:#f7971e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit;">現在のパートのみ</button>
+        <button onclick="resetAllLevels()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit;">全パート削除</button>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="confetti-wrap" id="confetti-wrap"></div>
@@ -641,12 +654,41 @@ async function setBest(id, s) {
   }
 }
 
-async function resetScores() {
-  if (!confirm('🗑️ 簿記のすべてのスコアをリセットしますか？')) return;
+function resetScores() {
+  const modal = document.getElementById('reset-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeResetModal() {
+  const modal = document.getElementById('reset-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+async function resetCurrentLevel() {
   if (!currentUser) return;
+  closeResetModal();
   try {
     const collection = getCollectionName();
-    // クイズ全体のスコアを削除
+    const doc = db.collection(collection).doc(currentUser.uid);
+    const fieldsToDelete = {};
+    if (!quizData[currentLevel] || !quizData[currentLevel].tests) return;
+    for (const t of quizData[currentLevel].tests) {
+      fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+    }
+    await doc.update(fieldsToDelete);
+    // キャッシュから削除
+    for (const t of quizData[currentLevel].tests) {
+      delete bestScores[`best_${currentLevel}_${t.id}`];
+    }
+    soundClick(); showHome();
+  } catch (e) { console.error(e); }
+}
+
+async function resetAllLevels() {
+  if (!currentUser) return;
+  closeResetModal();
+  try {
+    const collection = getCollectionName();
     await db.collection(collection).doc(currentUser.uid).delete();
     bestScores = {};
     cacheInitialized = false;
