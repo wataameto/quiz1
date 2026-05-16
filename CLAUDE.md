@@ -313,6 +313,11 @@ quiz1/
 │   └── update-build-time.js  # コミット日時自動生成スクリプト
 ├── hooks/
 │   └── pre-commit            # Git pre-commitフック（自動build実行）
+├── .claude/
+│   ├── hooks/
+│   │   └── session-start.sh  # セッション開始時に npm install と setup-hooks.sh を実行
+│   ├── settings.json         # SessionStart フック登録（Claude Code on the web 用）
+│   └── settings.local.json   # ローカル設定（権限許可など）
 ├── package.json              # npm設定（build, prepare フック）
 ├── jest.config.js            # Jest設定
 ├── setup-hooks.sh            # Git フック セットアップスクリプト
@@ -647,6 +652,54 @@ git push
 - build-info.jsonは自動的にcommitに含まれる
 - HTMLファイルは変更されない → 確実でシンプル
 - 全ページで日本時間（JST）で表示
+
+### セッション開始フック (.claude/hooks/session-start.sh)
+
+**目的：** リモート環境（Claude Code on the web）で毎回のセッション開始時に、自動的に npm dependencies と git pre-commit フックをセットアップする
+
+**背景：** リモート環境では毎回 fresh clone されるため、前回のセッションで設定した .git/hooks が引き継がれない。これにより、git commit 時にビルド日時の更新が自動実行されないという問題が発生していた。
+
+**実装：**
+- `.claude/hooks/session-start.sh` - セッション開始時に実行するスクリプト
+  1. `npm install` - 依存パッケージをインストール
+  2. `bash setup-hooks.sh` - git pre-commit フックをセットアップ
+
+- `.claude/settings.json` - SessionStart フックを登録
+  ```json
+  {
+    "hooks": {
+      "SessionStart": [
+        {
+          "hooks": [
+            {
+              "type": "command",
+              "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  ```
+
+**特徴：**
+- セッション開始時に自動実行 → 手動セットアップ不要
+- npm packages と git hooks が確実にセットアップされる
+- 同期モード（Synchronous）で実行 → race condition なし
+- 実行結果は `.claude/hooks/session-start.sh` のログで確認可能
+
+**動作フロー：**
+```
+セッション開始
+  ↓
+SessionStart フック実行
+  ├─ npm install （初回のみ、node_modules が無い場合）
+  └─ bash setup-hooks.sh （pre-commit フックをセットアップ）
+  ↓
+セッション準備完了 → ユーザーが git commit 実行
+  ↓
+pre-commit フック自動実行 → docs/build-info.json を最新時刻で更新
+```
 
 ---
 
