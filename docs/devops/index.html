@@ -342,6 +342,14 @@ async function loadQuestions(level = 1) {
   }
 }
 
+function updatePartBadge() {
+  const levelData = quizData[currentLevel];
+  const descEl = document.getElementById('part-description');
+  if (levelData) {
+    descEl.textContent = levelData.description || '各10問・100点満点';
+  }
+}
+
 function switchLevel(level) {
   if (level === currentLevel || level < 1 || level > maxLevel) return;
   currentLevel = level;
