@@ -145,12 +145,12 @@
       <div class="home-header">
         <h1 id="quiz-heading">クイズ</h1>
         <p id="quiz-description"></p>
-        <p id="part-description"></p>
       </div>
     </div>
     <div class="part-scores-section" id="part-scores-section" style="display:none;">
       <div id="part-scores-list"></div>
     </div>
+    <p id="part-description" style="text-align:center; font-size:0.95rem; color:#718096; margin:12px 0;"></p>
     <div class="test-grid" id="test-grid"></div>
   </div>
 
@@ -518,6 +518,15 @@ async function showHome() {
     totalEl.innerHTML = `- / ${totalQuestionsAllLevels}`;
   } else {
     totalEl.innerHTML = `${total} / ${totalQuestionsAllLevels}`;
+  }
+
+  // パート説明を表示
+  const partDescEl = document.getElementById('part-description');
+  if (quizData[currentLevel] && quizData[currentLevel].description) {
+    partDescEl.textContent = quizData[currentLevel].description;
+    partDescEl.style.display = 'block';
+  } else {
+    partDescEl.style.display = 'none';
   }
 
   // レベル別スコアを計算・表示
