@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Build script: Update BUILD_TIME placeholder with last commit timestamp
+ * Build script: Generate build-info.json with last commit timestamp
  * Usage: node scripts/update-build-time.js
  */
 
@@ -22,38 +22,18 @@ try {
 
   console.log(`📅 Last commit: ${commitTimestamp}`);
 
-  // HTML files to update
-  const htmlFiles = [
-    'docs/index.html',
-    'docs/boki1/index.html',
-    'docs/devops/index.html',
-  ];
+  // Create build info object
+  const buildInfo = {
+    buildTime: commitTimestamp,
+    timezone: 'Asia/Tokyo (JST = UTC+9)',
+  };
 
-  let updatedCount = 0;
-  htmlFiles.forEach((file) => {
-    const filePath = path.join(__dirname, '..', file);
-    if (!fs.existsSync(filePath)) {
-      console.warn(`⚠️  File not found: ${filePath}`);
-      return;
-    }
+  // Write to docs/build-info.json
+  const buildInfoPath = path.join(__dirname, '..', 'docs', 'build-info.json');
+  fs.writeFileSync(buildInfoPath, JSON.stringify(buildInfo, null, 2), 'utf-8');
+  console.log(`✅ Updated: docs/build-info.json`);
 
-    let content = fs.readFileSync(filePath, 'utf-8');
-    const originalContent = content;
-    content = content.replace(
-      /__BUILD_TIME__/g,
-      commitTimestamp
-    );
-
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf-8');
-      console.log(`✅ Updated: ${file}`);
-      updatedCount++;
-    } else {
-      console.log(`⏭️  No changes needed: ${file}`);
-    }
-  });
-
-  console.log(`\n✨ Build time updated successfully (${updatedCount} files)`);
+  console.log(`\n✨ Build info updated successfully`);
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);

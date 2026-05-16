@@ -982,13 +982,6 @@ document.addEventListener('keydown', (e) => {
   const now = new Date();
   const jstTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
   const year = jstTime.getFullYear();
-  const month = String(jstTime.getMonth() + 1).padStart(2, '0');
-  const day = String(jstTime.getDate()).padStart(2, '0');
-  const hours = String(jstTime.getHours()).padStart(2, '0');
-  const minutes = String(jstTime.getMinutes()).padStart(2, '0');
-  const seconds = String(jstTime.getSeconds()).padStart(2, '0');
-  const BUILD_TIME = '2026-05-16 00:09:41';
-
   const isTouchDevice = () => {
     return (('ontouchstart' in window) ||
             (navigator.maxTouchPoints > 0) ||
@@ -996,17 +989,43 @@ document.addEventListener('keydown', (e) => {
   };
   const deviceType = isTouchDevice() ? '📱 Touch' : '🖥️ PC';
 
-  const timeEl = document.createElement('div');
-  timeEl.style.position = 'fixed';
-  timeEl.style.bottom = '10px';
-  timeEl.style.left = '10px';
-  timeEl.style.fontSize = '14px';
-  timeEl.style.color = '#999';
-  timeEl.style.zIndex = '9999';
-  timeEl.style.pointerEvents = 'none';
-  timeEl.style.lineHeight = '1.4';
-  timeEl.style.whiteSpace = 'nowrap';
-  timeEl.innerHTML = `${deviceType}<br>ビルド: ${BUILD_TIME}`;
+  // Load build info from JSON
+  let buildTime = 'Loading...';
+  fetch('./build-info.json')
+    .then(res => res.json())
+    .then(data => {
+      buildTime = data.buildTime;
+      updateBuildTimeDisplay();
+    })
+    .catch(err => {
+      buildTime = 'Unknown';
+      updateBuildTimeDisplay();
+    });
+
+  function updateBuildTimeDisplay() {
+    const timeEl = document.getElementById('build-time-display') || createBuildTimeDisplay();
+    timeEl.innerHTML = `${deviceType}<br>ビルド: ${buildTime}`;
+  }
+
+  function createBuildTimeDisplay() {
+    const timeEl = document.createElement('div');
+    timeEl.id = 'build-time-display';
+    timeEl.style.position = 'fixed';
+    timeEl.style.bottom = '10px';
+    timeEl.style.left = '10px';
+    timeEl.style.fontSize = '14px';
+    timeEl.style.color = '#999';
+    timeEl.style.zIndex = '9999';
+    timeEl.style.pointerEvents = 'none';
+    timeEl.style.lineHeight = '1.4';
+    timeEl.style.whiteSpace = 'nowrap';
+    document.body.appendChild(timeEl);
+    return timeEl;
+  }
+
+  // Create initial display
+  createBuildTimeDisplay();
+  updateBuildTimeDisplay();
   document.body.appendChild(timeEl);
 })();
 </script>
