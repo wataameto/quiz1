@@ -418,8 +418,8 @@ async function getBokiScore() {
       }
     });
 
-    // Total questions = number of score keys * 10 (each test has 10 questions)
-    const totalQuestions = scoreKeys.length * 10;
+    // Calculate total questions from quiz definition (3 tests per level × 2 levels = 6 tests × 10 questions)
+    const totalQuestions = 6 * 10;
 
     return { correct: totalCorrect, total: totalQuestions };
   } catch (e) {
@@ -448,8 +448,8 @@ async function getDevopsScore() {
       }
     });
 
-    // Total questions = number of score keys * 10 (each test has 10 questions)
-    const totalQuestions = scoreKeys.length * 10;
+    // Calculate total questions from quiz definition (6 tests per level × 3 levels = 18 tests × 10 questions)
+    const totalQuestions = 18 * 10;
 
     return { correct: totalCorrect, total: totalQuestions };
   } catch (e) {
