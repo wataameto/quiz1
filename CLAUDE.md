@@ -408,6 +408,104 @@ for (let level = 1; level <= maxLevel; level++) {
 
 **重要:** `getBest(id, level)` に **明示的に level を渡す**。デフォルト値 `currentLevel` を使用するとバグが発生する。
 
+### 解答記録と復習機能
+
+**目的：** ユーザーが解いた問題の正解/不正解を記録し、後で間違い問題だけを復習できる機能
+
+**Firestore コレクション構造：**
+
+```
+quiz_<quizId>/{userId}
+  ├─ best_<level>_<testId>: <percentage>
+  ├─ best_1_1: 85
+  ├─ best_1_2: 92
+  ├─ best_2_1: 78
+  │ ...
+  │
+  ├─ wrongAnswers_<level>_<testId>: [<questionIds>]
+  ├─ wrongAnswers_1_1: [1, 3, 5]        // テスト1-1で間違えた問題番号
+  ├─ wrongAnswers_1_2: [2, 7, 9]        // テスト1-2で間違えた問題番号
+  ├─ wrongAnswers_2_1: [4, 6]
+  │ ...
+```
+
+**フィールド定義：**
+
+- `best_<level>_<testId>`: パーセンテージスコア（0-100）
+  - 例：`best_1_1: 85` （レベル1テスト1の最高得点は85%）
+
+- `wrongAnswers_<level>_<testId>`: 不正解だった問題番号の配列（1-indexed）
+  - 例：`wrongAnswers_1_1: [1, 3, 5]` （レベル1テスト1で問題1, 3, 5が不正解）
+  - **重要：** 10問解答時点での正解/不正解を記録。復習後の再解答では更新しない
+
+**コレクション名の生成：**
+```javascript
+function getCollectionName(quizId) {
+  return `quiz_${quizId}`;
+}
+
+// 例：
+// quizId: 'boki1' → 'quiz_boki1'
+// quizId: 'devops' → 'quiz_devops'
+```
+
+**データ例：**
+
+```javascript
+// DevOps の例
+quiz_devops/{userId}
+{
+  // 最高得点（既存）
+  best_1_1: 85,   // 基礎初級-テスト1
+  best_1_2: 92,
+  best_1_3: 78,
+  best_1_4: 88,
+  best_1_5: 95,
+  best_1_6: 82,
+  best_2_1: 75,   // 基礎中級-テスト1
+  best_2_2: 89,
+  best_3_1: 80,   // 基礎上級-テスト1
+  // ...
+  
+  // 間違い問題（新規）
+  wrongAnswers_1_1: [1, 3, 5],
+  wrongAnswers_1_2: [2, 7, 9],
+  wrongAnswers_1_3: [4, 6, 8, 10],
+  wrongAnswers_1_4: [3],
+  wrongAnswers_2_1: [1, 2, 4, 5, 7],
+  // ...
+}
+
+// 簿記の例
+quiz_boki1/{userId}
+{
+  best_1_1: 90,   // パート1-テスト1
+  best_1_2: 85,
+  best_1_3: 88,
+  best_2_1: 75,   // パート2-テスト1
+  best_2_2: 92,
+  best_2_3: 80,
+  best_3_1: 87,   // パート3-テスト1
+  
+  wrongAnswers_1_1: [2, 5],
+  wrongAnswers_1_2: [1, 4, 7],
+  wrongAnswers_2_1: [3, 6, 8, 9],
+  // ...
+}
+```
+
+**復習モード機能（実装予定）：**
+
+ユーザーが「復習モード」を選択したとき：
+1. 選択したテストの `wrongAnswers_<level>_<testId>` を取得
+2. そこに含まれる問題IDのみを出題
+3. 再解答結果は `wrongAnswers_` には反映されない（初回の記録のままキープ）
+4. 復習後、改めて通常モードで解答すれば、スコアと `wrongAnswers_` が更新される
+
+**記録タイミング：**
+- 10問解答完了後、結果画面で各問題の正解/不正解をサーバーに送信
+- Firestore の `wrongAnswers_<level>_<testId>` を作成・更新
+
 ### デバイスタイプとビルド時刻表示
 
 ページ左下に固定表示：
