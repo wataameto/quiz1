@@ -561,6 +561,7 @@ function calculateTotalQuestionsAllLevels() {
 
 async function showHome() {
   isReviewMode = false;
+  isPracticeModeActive = false;
   document.getElementById('screen-home').classList.remove('hidden');
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
@@ -628,17 +629,22 @@ async function showHome() {
     const wrongIndices = await getWrongAnswerIds(t.id, currentLevel);
     const reviewCount = wrongIndices.length;
     const reviewBtn = reviewCount > 0
-      ? `<button class="test-card-review-btn" onclick="startTest(${t.id}, true); soundClick();" style="padding:8px 12px; background:#f7971e; color:#fff; border:none; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">誤答復習(${reviewCount}問)</button>`
+      ? `<button class="test-card-review-btn" onclick="startTest(${t.id}, true, false); soundClick();" style="padding:8px 12px; background:#f7971e; color:#fff; border:none; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">誤答復習(${reviewCount}問)</button>`
+      : '';
+
+    // 未挑戦テストには練習モードボタンを追加
+    const practiceBtn = best < 0
+      ? `<button class="test-card-practice-btn" onclick="startTest(${t.id}, false, true); soundClick();" style="padding:8px 12px; background:#667eea; color:#fff; border:none; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">練習モード（10問）</button>`
       : '';
 
     html += `<div class="test-card-container" style="display:flex; flex-direction:column; gap:8px;">
-      <div class="test-card" onclick="startTest(${t.id}); soundClick();">
+      <div class="test-card" onclick="startTest(${t.id}, false, false); soundClick();">
         <span class="card-emoji">${t.emoji}</span>
         <h2>${t.title}</h2>
         <span class="test-type">${t.type}</span>
         <p class="best-score">${bestTxt}</p>
       </div>
-      ${reviewBtn}
+      ${practiceBtn}${reviewBtn}
     </div>`;
   }
   document.getElementById('test-grid').innerHTML = html;
@@ -669,7 +675,7 @@ function journalText(entry) {
        + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
 }
 
-async function startTest(id, isReview = false) {
+async function startTest(id, isReview = false, isPracticeMode = false) {
   const numId = typeof id === 'string' ? parseInt(id, 10) : id;
   const originalTest = TESTS.find(t => t.id === numId);
 
@@ -691,6 +697,7 @@ async function startTest(id, isReview = false) {
 
   currentQ = 0; answers = [];
   isReviewMode = isReview;
+  isPracticeModeActive = isPracticeMode;
 
   document.getElementById('screen-home').classList.add('hidden');
   document.getElementById('screen-quiz').classList.remove('hidden');
@@ -753,6 +760,7 @@ function renderQuestion() {
 
 let answerInProgress = false;
 let isReviewMode = false;
+let isPracticeModeActive = false;
 
 function answer(idx, correctIdx) {
   if (answerInProgress) return; // 複数実行防止
@@ -812,7 +820,7 @@ async function showResults() {
   const score   = correct * 10; // 1問10点
   const maxScore = total * 10;
 
-  if (!isReviewMode) {
+  if (!isReviewMode && !isPracticeModeActive) {
     await setBest(currentTest.id, score);
     await saveWrongAnswers(currentTest.id, answers, currentLevel);
     const best = await getBest(currentTest.id);
@@ -824,7 +832,10 @@ async function showResults() {
 
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.remove('hidden');
-  document.getElementById('result-title').textContent = isReviewMode ? currentTest.title + ' 復習結果' : currentTest.title + ' 結果 🎉';
+  let resultTitle = currentTest.title + ' 結果 🎉';
+  if (isReviewMode) resultTitle = currentTest.title + ' 復習結果';
+  if (isPracticeModeActive) resultTitle = currentTest.title + ' 練習結果';
+  document.getElementById('result-title').textContent = resultTitle;
   document.getElementById('score-num').innerHTML    = `<span class="score-main">${score}</span><span class="score-sub"> / ${maxScore}点</span>`;
 
   const ratio = score / maxScore;
@@ -861,6 +872,7 @@ function startReview() {
   const wrongQuestions = currentTest.questions.filter((_, i) => !answers[i].correct);
   currentTest = { ...currentTest, questions: wrongQuestions };
   isReviewMode = true;
+  isPracticeModeActive = false;
   currentQ = 0;
   answers = [];
   document.getElementById('screen-results').classList.add('hidden');
