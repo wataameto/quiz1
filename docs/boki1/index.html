@@ -622,7 +622,7 @@ async function showHome() {
     const wrongIndices = await getWrongAnswerIds(t.id, currentLevel);
     const reviewCount = wrongIndices.length;
     const reviewBtn = reviewCount > 0
-      ? `<button class="test-card-review-btn" onclick="startTest(${t.id}, true); soundClick(); event.stopPropagation();" style="margin-top:6px; padding:6px 10px; background:#f7971e; color:#fff; border:none; border-radius:6px; font-size:0.75rem; cursor:pointer; font-weight:600; transition:all 0.2s;">誤答復習(${reviewCount}問)</button>`
+      ? `<button class="test-card-review-btn" onclick="startTest(${t.id}, true); soundClick();" style="margin-top:6px; padding:6px 10px; background:#f7971e; color:#fff; border:none; border-radius:6px; font-size:0.75rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">誤答復習(${reviewCount}問)</button>`
       : '';
 
     html += `<div class="test-card" onclick="startTest(${t.id}); soundClick();">
@@ -630,8 +630,8 @@ async function showHome() {
       <h2>${t.title}</h2>
       <span class="test-type">${t.type}</span>
       <p class="best-score">${bestTxt}</p>
-      ${reviewBtn}
-    </div>`;
+    </div>
+    ${reviewBtn}`;
   }
   document.getElementById('test-grid').innerHTML = html;
 }
