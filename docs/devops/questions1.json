@@ -202,9 +202,9 @@
           "scenario": "📋 AWS Config の主な目的は？",
           "choices": [
             "リソース設定変更を記録・評価・監視",
-            "Infrastructure as Code でコード化（IaC）",
-            "アプリケーション本番環境へデプロイ（CodeDeploy）",
-            "リソース利用コスト・追跡・分析ツール（Cost Analysis）"
+            "Infrastructure as Code でコード化",
+            "アプリケーション本番環境へデプロイ",
+            "リソース利用コスト・追跡・分析ツール"
           ],
           "correct": 0,
           "explanation": "Config は全リソースの設定履歴を記録し、Config Rules でコンプライアンス違反を自動検出する。違反時の自動修復（SSM Automation 連携）も可能。",
@@ -226,9 +226,9 @@
           "scenario": "🔍 CloudFormation のドリフト検出とは？",
           "choices": [
             "テンプレート・実際設定の差異を検出・警告",
-            "誤ったリソース削除を防止・保護・確保（Deletion Protection）",
-            "リソース・将来コストを予測・分析・提案（Cost Forecast）",
-            "テンプレート構文エラー自動検出・管理（Validation）"
+            "誤ったリソース削除を防止・保護・確保",
+            "リソース・将来コストを予測・分析・提案",
+            "テンプレート構文エラー自動検出・管理"
           ],
           "correct": 0,
           "explanation": "コンソールなどで手動変更したリソースがテンプレートと乖離（ドリフト）していないかを検出する機能。ドリフトを放置すると次の CloudFormation 更新で予期しない変更が起きる可能性がある。",
@@ -238,9 +238,9 @@
           "scenario": "🛒 Service Catalog の目的は？",
           "choices": [
             "承認済みテンプレート・組織内カタログ",
-            "AWS サービス・機能一覧表示・検索（Service List）",
-            "リソース利用コスト削減・最適化提案（Cost Savings）",
-            "セキュリティ・脆弱性検出・通知機能（Vulnerability）"
+            "AWS サービス・機能一覧表示・検索",
+            "リソース利用コスト削減・最適化提案",
+            "セキュリティ・脆弱性検出・通知機能"
           ],
           "correct": 0,
           "explanation": "Service Catalog は管理者が承認した CloudFormation テンプレートを製品として公開し、開発者がセルフサービスでプロビジョニングできる。ガバナンスを保ちつつ開発者の自律性を支援する仕組み。",
@@ -528,7 +528,7 @@
         {
           "scenario": "⚡ EventBridge の用途として正しいのは？",
           "choices": [
-            "AWS サービス間のイベント駆動連携（EventBridge）",
+            "AWS サービス間のイベント駆動連携",
             "ログをクラウドストレージに保存（Amazon S3）",
             "インフラリソースを管理・運用（AWS Systems Manager）",
             "クラウドのコスト計算・請求管理（AWS Billing）"
@@ -657,7 +657,7 @@
         {
           "scenario": "🔑 最小権限の原則とは？",
           "choices": [
-            "必要最低限の権限だけを付与（Least Privilege）",
+            "必要最低限の権限だけを付与",
             "全員に管理者権限を付与（Admin for All）",
             "アクセスキーのみで認証・管理（Access Key Only）",
             "リソースをパブリック公開許可（Public Access）"
