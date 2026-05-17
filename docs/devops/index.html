@@ -416,6 +416,55 @@ async function initializeBestScoresCache() {
   } catch (e) { console.error(e); }
 }
 
+// ===== 解答記録と復習機能 =====
+
+function saveWrongAnswersKey(level, testId) {
+  return `wrongAnswers_${level}_${testId}`;
+}
+
+async function saveWrongAnswers(testId, answers, level) {
+  if (!currentUser || isReviewMode) return;
+
+  try {
+    const wrongQuestionNumbers = [];
+    answers.forEach((ans, idx) => {
+      if (!ans.correct) {
+        wrongQuestionNumbers.push(idx + 1); // 0-indexed → 1-indexed
+      }
+    });
+
+    const collection = getCollectionName();
+    const key = saveWrongAnswersKey(level, testId);
+
+    await db.collection(collection).doc(currentUser.uid).set(
+      { [key]: wrongQuestionNumbers },
+      { merge: true }
+    );
+  } catch (e) {
+    console.error('Failed to save wrong answers:', e);
+  }
+}
+
+async function getWrongAnswerIds(testId, level) {
+  if (!currentUser) return [];
+
+  try {
+    const collection = getCollectionName();
+    const doc = await db.collection(collection).doc(currentUser.uid).get();
+
+    if (!doc.exists) return [];
+
+    const key = saveWrongAnswersKey(level, testId);
+    const wrongNumbers = doc.data()[key] || [];
+
+    // 1-indexed → 0-indexed
+    return wrongNumbers.map(n => n - 1);
+  } catch (e) {
+    console.error('Failed to get wrong answers:', e);
+    return [];
+  }
+}
+
 async function getBest(id, level = currentLevel) {
   if (!currentUser) return -1;
   if (!cacheInitialized) {
@@ -568,11 +617,20 @@ async function showHome() {
   for (const t of TESTS) {
     const best = await getBest(t.id);
     const bestTxt = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
+
+    // 復習問題の数を取得
+    const wrongIndices = await getWrongAnswerIds(t.id, currentLevel);
+    const reviewCount = wrongIndices.length;
+    const reviewBtn = reviewCount > 0
+      ? `<button class="test-card-review-btn" onclick="startTest(${t.id}, true); soundClick(); event.stopPropagation();" style="margin-top:8px; padding:8px 12px; background:#667eea; color:#fff; border:none; border-radius:8px; font-size:0.85rem; cursor:pointer; font-weight:700; transition:all 0.2s; width:100%;">🔁 復習 (${reviewCount}問)</button>`
+      : '';
+
     html += `<div class="test-card" onclick="startTest(${t.id}); soundClick();">
       <span class="card-emoji">${t.emoji}</span>
       <h2>${t.title}</h2>
       <span class="test-type">${t.type}</span>
       <p class="best-score">${bestTxt}</p>
+      ${reviewBtn}
     </div>`;
   }
   document.getElementById('test-grid').innerHTML = html;
@@ -603,10 +661,29 @@ function journalText(entry) {
        + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
 }
 
-function startTest(id) {
+async function startTest(id, isReview = false) {
   const numId = typeof id === 'string' ? parseInt(id, 10) : id;
-  currentTest = TESTS.find(t => t.id === numId);
+  const originalTest = TESTS.find(t => t.id === numId);
+
+  if (!originalTest) return;
+
+  currentTest = { ...originalTest };
+
+  if (isReview) {
+    const wrongIndices = await getWrongAnswerIds(id, currentLevel);
+    if (wrongIndices.length === 0) {
+      alert('復習対象の問題がありません');
+      return;
+    }
+    const originalQuestions = currentTest.questions;
+    currentTest.questions = originalQuestions.filter((_, idx) =>
+      wrongIndices.includes(idx)
+    );
+  }
+
   currentQ = 0; answers = [];
+  isReviewMode = isReview;
+
   document.getElementById('screen-home').classList.add('hidden');
   document.getElementById('screen-quiz').classList.remove('hidden');
   document.getElementById('screen-results').classList.add('hidden');
@@ -729,6 +806,7 @@ async function showResults() {
 
   if (!isReviewMode) {
     await setBest(currentTest.id, score);
+    await saveWrongAnswers(currentTest.id, answers, currentLevel);
     const best = await getBest(currentTest.id);
     document.getElementById('best-msg').textContent = `🏅 最高: ${best}点`;
     document.getElementById('best-msg').style.display = '';
