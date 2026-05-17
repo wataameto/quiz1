@@ -514,6 +514,7 @@ async function resetCurrentLevel() {
     if (!quizData[currentLevel] || !quizData[currentLevel].tests) return;
     for (const t of quizData[currentLevel].tests) {
       fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+      fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
     }
     await doc.update(fieldsToDelete);
     // キャッシュから削除
