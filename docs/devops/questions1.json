@@ -153,10 +153,10 @@
         {
           "scenario": "💻 AWS CDK の特徴は？",
           "choices": [
-            "プログラミング言語でインフラを定義可能（CDK）",
-            "Web ブラウザで GUI インフラ構築・管理（Web UI）",
-            "CloudFormation テンプレート自動削除ツール（Auto Delete）",
-            "リソースコスト分析・最適化提案ツール（Cost Analysis）"
+            "プログラミング言語でインフラを定義可能",
+            "Web ブラウザで GUI インフラ構築・管理",
+            "CloudFormation テンプレート自動削除ツール",
+            "リソースコスト分析・最適化提案ツール"
           ],
           "correct": 0,
           "explanation": "CDK（Cloud Development Kit）は Python・TypeScript・Java などの言語でインフラを定義できる。内部的に CloudFormation テンプレートを生成するため、CloudFormation の恩恵はそのまま受けられる。",
@@ -201,7 +201,7 @@
         {
           "scenario": "📋 AWS Config の主な目的は？",
           "choices": [
-            "リソース設定変更を記録・評価・監視（AWS Config）",
+            "リソース設定変更を記録・評価・監視",
             "Infrastructure as Code でコード化（IaC）",
             "アプリケーション本番環境へデプロイ（CodeDeploy）",
             "リソース利用コスト・追跡・分析ツール（Cost Analysis）"
@@ -225,7 +225,7 @@
         {
           "scenario": "🔍 CloudFormation のドリフト検出とは？",
           "choices": [
-            "テンプレート・実際設定の差異を検出・警告（Drift）",
+            "テンプレート・実際設定の差異を検出・警告",
             "誤ったリソース削除を防止・保護・確保（Deletion Protection）",
             "リソース・将来コストを予測・分析・提案（Cost Forecast）",
             "テンプレート構文エラー自動検出・管理（Validation）"
@@ -237,7 +237,7 @@
         {
           "scenario": "🛒 Service Catalog の目的は？",
           "choices": [
-            "承認済みテンプレート・組織内カタログ（Catalog）",
+            "承認済みテンプレート・組織内カタログ",
             "AWS サービス・機能一覧表示・検索（Service List）",
             "リソース利用コスト削減・最適化提案（Cost Savings）",
             "セキュリティ・脆弱性検出・通知機能（Vulnerability）"
@@ -249,7 +249,7 @@
         {
           "scenario": "📁 Elastic Beanstalk の .ebextensions の用途は？",
           "choices": [
-            "環境カスタム設定を YAML で定義・適用（.ebextensions）",
+            "環境カスタム設定を YAML で定義・適用",
             "アプリケーション・ソースコード・格納（Source Code）",
             "デプロイ実行時・ログを保存・参照機能（Deploy Log）",
             "Amazon S3 アクセス・ポリシー・設定（S3 Policy）"
@@ -282,7 +282,7 @@
         {
           "scenario": "🌍 マルチAZ構成の主な目的は？",
           "choices": [
-            "1 つの AZ 障害時も別 AZ で継続稼働実現（Multi-AZ）",
+            "1 つの AZ 障害時も別 AZ で継続稼働実現",
             "複数リージョンにデータ自動複製・同期機能（Multi-region）",
             "地理的にユーザーに近い場所でサービス提供（Geo-close）",
             "複数リージョン利用コストを削減・最適化機能（Cost Reduction）"
@@ -294,7 +294,7 @@
         {
           "scenario": "🔄 Route 53 のフェイルオーバールーティングは？",
           "choices": [
-            "プライマリ障害を検知し自動で切替（Failover）",
+            "プライマリ障害を検知し自動で切替",
             "受け取ったリクエスト数で負荷を分散（Weighted）",
             "ユーザー地理的位置で最適サーバ選択（Geolocation）",
             "複数ターゲットの中からランダムに選択（Random）"
@@ -306,7 +306,7 @@
         {
           "scenario": "📊 RDS マルチAZ の特徴は？",
           "choices": [
-            "プライマリ障害時に自動フェイルオーバー（Failover）",
+            "プライマリ障害時に自動フェイルオーバー",
             "複数インスタンスで読み取りスループット向上（Read Scale）",
             "管理者による手動フェイルオーバー方式（Manual）",
             "異なるリージョンのスタンバイで冗長化（Multi-region）"
@@ -318,7 +318,7 @@
         {
           "scenario": "🚀 ターゲット追跡スケーリングとは？",
           "choices": [
-            "メトリクスを指定目標値に保つ自動スケール（TTS）",
+            "メトリクスを指定目標値に保つ自動スケール",
             "事前に定めたスケジュールに従い実行（Scheduled）",
             "管理者が手動でインスタンス数を増減（Manual）",
             "スケール・アウト・イン を定期的交互実行（Alternating）"
@@ -330,7 +330,7 @@
         {
           "scenario": "🌐 CloudFront オリジンフェイルオーバーの動作は？",
           "choices": [
-            "プライマリ障害時に自動でセカンダリ切替（Failover）",
+            "プライマリ障害時に自動でセカンダリ切替",
             "ユーザー所在地域に最も近いサーバ選択（Geolocation）",
             "バックエンドサーバーの CPU 使用率で分散（Load Balancing）",
             "CloudFront キャッシュミス時にフォールバック（Cache）"
@@ -342,7 +342,7 @@
         {
           "scenario": "💾 S3 のデータ耐久性は？",
           "choices": [
-            "99.999999999% イレブンナイン耐久性（11個の9）",
+            "99.999999999% イレブンナイン耐久性",
             "99.9% で 1000 年で 1 日損失確率（99.9%）",
             "99.99% で複数リージョンで複製保存（Multi-region）",
             "100% の完全耐久性を保証します機能（100% Perfect）"
@@ -354,7 +354,7 @@
         {
           "scenario": "🔁 ELB のヘルスチェックの役割は？",
           "choices": [
-            "異常なターゲットへのトラフィック送信停止（Health Check）",
+            "異常なターゲットへのトラフィック送信停止",
             "EC2 インスタンスの CPU 使用率を監視（Monitoring）",
             "アプリケーション・ログを自動収集・保存（Log Collection）",
             "セキュリティパッチを自動的に適用機能（Patching）"
@@ -366,7 +366,7 @@
         {
           "scenario": "🗂️ SQS で障害耐性を高める設計は？",
           "choices": [
-            "非同期キューで処理失敗時に再処理可能（Async Queue）",
+            "非同期キューで処理失敗時に再処理可能",
             "リクエスト・レスポンス間で同期連携機能（Synchronous）",
             "処理を単一インスタンスに集約・一元化（Centralized）",
             "データベースを共有ストレージで共用機能（Shared Storage）"
@@ -378,7 +378,7 @@
         {
           "scenario": "📋 ゲームデイ演習の目的は？",
           "choices": [
-            "本番環境で意図的に障害を注入し検証（Chaos）",
+            "本番環境で意図的に障害を注入し検証",
             "本番環境で新機能についての負荷テスト実施（Load Test）",
             "運用チームのスキルレベルを評価・測定（Skill Assessment）",
             "システム全体の利用コストを削減・最適化（Cost Optimization）"
@@ -399,7 +399,7 @@
         {
           "scenario": "📈 CloudWatch の主な機能は？",
           "choices": [
-            "メトリクス収集・アラーム・ログを管理（CloudWatch）",
+            "メトリクス収集・アラーム・ログを管理",
             "ソースコードをビルドしデプロイ（CodePipeline）",
             "インフラをコードで定義・プロビ（CloudFormation）",
             "セキュリティの脆弱性をスキャン（Inspector）"
@@ -435,7 +435,7 @@
         {
           "scenario": "⚡ EventBridge の説明は？",
           "choices": [
-            "AWS サービスのイベントをルールで配信（EventBridge）",
+            "AWS サービスのイベントをルールで配信",
             "ログデータを分析・検索するサービス（CloudWatch Logs Insights）",
             "EC2 インスタンスの死活を監視（Route 53）",
             "コードからインフラをデプロイ（CodeDeploy）"
@@ -447,7 +447,7 @@
         {
           "scenario": "🕵️ CloudTrail の用途は？",
           "choices": [
-            "API 呼び出しを記録・監査する（CloudTrail）",
+            "API 呼び出しを記録・監査する",
             "システムのパフォーマンスを監視（CloudWatch Metrics）",
             "アプリのシステムログを収集（CloudWatch Logs）",
             "リソースの設定変更履歴を管理（AWS Config）"
@@ -459,7 +459,7 @@
         {
           "scenario": "🔍 CloudWatch Logs Insights の用途は？",
           "choices": [
-            "ログをクエリ言語で検索・分析（CloudWatch Logs Insights）",
+            "ログをクエリ言語で検索・分析",
             "EC2 インスタンスに SSH で接続（Systems Manager Session Manager）",
             "CloudFormation テンプレートのエラーを検出（AWS CloudFormation）",
             "S3 アクセスログを保存・管理（S3 Logging）"
@@ -471,7 +471,7 @@
         {
           "scenario": "🛡️ GuardDuty の説明は？",
           "choices": [
-            "脅威インテリジェンスで悪意ある活動を検出（GuardDuty）",
+            "脅威インテリジェンスで悪意ある活動を検出",
             "AWSリソースのパフォーマンス最適化（Compute Optimizer）",
             "クラウドのコストを管理・削減（Cost Management）",
             "アプリケーションの静的解析を実施（Amazon CodeGuru）"
