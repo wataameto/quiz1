@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>☁️ DOP-C02 練習問題</title>
+  <title>10問学習アプリ</title>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
@@ -606,7 +606,7 @@ async function showHome() {
       for (const t of levelData.tests) {
         const best = await getBest(t.id, level);
         if (best >= 0) {
-          levelCorrect += Math.round(best / 100 * 10);
+          levelCorrect += Math.round(best / 10);
         }
       }
 
