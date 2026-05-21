@@ -384,11 +384,26 @@ const db = firebase.firestore();
 
 let currentUser = null;
 
+auth.getRedirectResult().catch(e => {
+  console.error('Google redirect result error:', e);
+  alert('ログインに失敗しました: ' + e.message);
+});
+
 async function loginWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
   try {
     await auth.signInWithPopup(provider);
   } catch (e) {
+    if (e.code === 'auth/popup-blocked' || e.code === 'auth/cancelled-popup-request') {
+      try {
+        await auth.signInWithRedirect(provider);
+        return;
+      } catch (redirectError) {
+        console.error('Google redirect login error:', redirectError);
+        alert('ログインに失敗しました: ' + redirectError.message);
+        return;
+      }
+    }
     console.error('Google login error:', e);
     alert('ログインに失敗しました: ' + e.message);
   }
@@ -546,7 +561,6 @@ auth.onAuthStateChanged(user => {
   // Create initial display
   createBuildTimeDisplay();
   updateBuildTimeDisplay();
-  document.body.appendChild(timeEl);
 })();
 </script>
 </body>
