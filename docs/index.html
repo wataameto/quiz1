@@ -343,12 +343,12 @@
     </div>
 
     <div style="font-size: 0.85rem; color: #718096; margin-bottom: 12px; text-align: right;">
-      合計：<span id="score-total">0問</span> / 240問
+      合計：<span id="score-total">0問</span> / <span id="score-grand-total">0問</span>
     </div>
 
     <div class="score-summary" id="score-summary">
       <a href="./boki1/" class="score-row score-link">
-        <span>📖 簿記（2パート）</span>
+        <span>📖 簿記（3パート）</span>
         <span id="score-boki">0問</span>
       </a>
       <a href="./devops/" class="score-row score-link">
@@ -383,6 +383,7 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 let currentUser = null;
+const quizTotalCache = {};
 
 auth.getRedirectResult().catch(e => {
   console.error('Google redirect result error:', e);
@@ -414,62 +415,64 @@ function logout() {
 }
 
 async function getBokiScore() {
-  if (!currentUser) return { correct: 0, total: 0 };
-  try {
-    const doc = await db.collection('quiz_boki1').doc(currentUser.uid).get();
-    if (!doc.exists) return { correct: 0, total: 0 };
-
-    const data = doc.data();
-    let totalCorrect = 0;
-
-    // Collect all score keys (best_level_id pattern)
-    const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
-    if (scoreKeys.length === 0) return { correct: 0, total: 0 };
-
-    scoreKeys.forEach(key => {
-      const score = data[key];
-      if (score > 0) {
-        totalCorrect += Math.round(score / 100 * 10);
-      }
-    });
-
-    // Calculate total questions from quiz definition (3 tests per level × 2 levels = 6 tests × 10 questions)
-    const totalQuestions = 6 * 10;
-
-    return { correct: totalCorrect, total: totalQuestions };
-  } catch (e) {
-    console.error('Error fetching boki scores:', e);
-    return { correct: 0, total: 0 };
-  }
+  return getQuizScore('quiz_boki1', './boki1/');
 }
 
 async function getDevopsScore() {
-  if (!currentUser) return { correct: 0, total: 0 };
+  return getQuizScore('quiz_devops', './devops/');
+}
+
+async function calculateQuizTotal(questionsPath) {
+  if (quizTotalCache[questionsPath] !== undefined) {
+    return quizTotalCache[questionsPath];
+  }
+
+  let level = 1;
+  let total = 0;
+  while (true) {
+    try {
+      const res = await fetch(`${questionsPath}questions${level}.json?t=${Date.now()}`);
+      if (!res.ok) break;
+      const data = await res.json();
+      if (!data || !Array.isArray(data.tests)) break;
+      total += data.tests.reduce((sum, test) => (
+        sum + (Array.isArray(test.questions) ? test.questions.length : 0)
+      ), 0);
+      level++;
+    } catch (e) {
+      break;
+    }
+  }
+
+  quizTotalCache[questionsPath] = total;
+  return total;
+}
+
+async function getQuizScore(collectionName, questionsPath) {
+  const totalQuestions = await calculateQuizTotal(questionsPath);
+  if (!currentUser) return { correct: 0, total: totalQuestions };
   try {
-    const doc = await db.collection('quiz_devops').doc(currentUser.uid).get();
-    if (!doc.exists) return { correct: 0, total: 0 };
+    const doc = await db.collection(collectionName).doc(currentUser.uid).get();
+    if (!doc.exists) return { correct: 0, total: totalQuestions };
 
     const data = doc.data();
     let totalCorrect = 0;
 
     // Collect all score keys (best_level_id pattern)
     const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
-    if (scoreKeys.length === 0) return { correct: 0, total: 0 };
+    if (scoreKeys.length === 0) return { correct: 0, total: totalQuestions };
 
     scoreKeys.forEach(key => {
       const score = data[key];
       if (score > 0) {
-        totalCorrect += Math.round(score / 100 * 10);
+        totalCorrect += Math.round(score / 10);
       }
     });
 
-    // Calculate total questions from quiz definition (6 tests per level × 3 levels = 18 tests × 10 questions)
-    const totalQuestions = 18 * 10;
-
     return { correct: totalCorrect, total: totalQuestions };
   } catch (e) {
-    console.error('Error fetching devops scores:', e);
-    return { correct: 0, total: 0 };
+    console.error(`Error fetching ${collectionName} scores:`, e);
+    return { correct: 0, total: totalQuestions };
   }
 }
 
@@ -484,6 +487,7 @@ async function updateScoreDisplay() {
   document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
   document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
   document.getElementById('score-total').textContent = `${totalCorrect}問`;
+  document.getElementById('score-grand-total').textContent = `${totalQuestions}問`;
 }
 
 function showHomeScreen() {

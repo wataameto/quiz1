@@ -544,7 +544,7 @@ async function getTotalCorrect() {
     if (!quizData[level] || !quizData[level].tests) continue;
     for (const t of quizData[level].tests) {
       const best = await getBest(t.id, level);
-      if (best >= 0) { total += Math.round(best / 100 * 10); attempted++; }
+      if (best >= 0) { total += Math.round(best / 10); attempted++; }
     }
   }
   return { total, attempted };
@@ -555,7 +555,9 @@ function calculateTotalQuestionsAllLevels() {
   let totalQuestions = 0;
   for (let level = 1; level <= maxLevel; level++) {
     if (!quizData[level] || !quizData[level].tests) continue;
-    totalQuestions += quizData[level].tests.length * 10;
+    totalQuestions += quizData[level].tests.reduce((sum, test) => (
+      sum + (Array.isArray(test.questions) ? test.questions.length : 0)
+    ), 0);
   }
   return totalQuestions;
 }
@@ -597,7 +599,9 @@ async function showHome() {
       if (!levelData || !levelData.tests) continue;
 
       let levelCorrect = 0;
-      const levelQuestions = levelData.tests.length * 10; // 各テスト10問
+      const levelQuestions = levelData.tests.reduce((sum, test) => (
+        sum + (Array.isArray(test.questions) ? test.questions.length : 0)
+      ), 0);
 
       for (const t of levelData.tests) {
         const best = await getBest(t.id, level);
@@ -860,8 +864,8 @@ async function showResults() {
 
   document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
     const ans = answers[i];
-    const correctText = q.choices[q.correct];
-    const chosenText = q.choices[ans.chosenOrigIdx];
+    const correctText = q.type === 'journal' ? journalText(q.choices[q.correct]) : q.choices[q.correct];
+    const chosenText = q.type === 'journal' ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx];
     let detail = `<span>${q.scenario}</span><br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
     if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
     if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}</div>`;
