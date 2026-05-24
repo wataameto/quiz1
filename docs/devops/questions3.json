@@ -12,10 +12,10 @@
         {
           "scenario": "大規模なマイクロサービス群で、デプロイ後の異常を検知した際に自動ロールバックを行いたい。最も「管理の手間が少なく」リアルタイム性の高い構成は？",
           "choices": [
-            "CodeDeploy のアラーム監視機能を使用し、特定の CloudWatch アラームが発火した際に自動ロールバックをトリガーする。",
-            "Lambda を毎分実行してログを解析し、異常があれば CodeDeploy API で停止・戻し操作を行う。",
-            "Route 53 のヘルスチェックを使用して DNS レベルで旧環境へ切り替える。",
-            "CloudTrail のイベントを監視し、エラー率が上昇したらスタックを削除する。"
+            "CodeDeploy に CloudWatch アラームを関連付け、発火時に自動ロールバックさせる。",
+            "EventBridge のスケジュールで Lambda を実行し、ログ解析後に手動承認へ進める。",
+            "Route 53 ヘルスチェックで異常を検知し、DNS フェイルオーバーだけで戻す。",
+            "CloudTrail の API イベントを監視し、失敗時に CloudFormation を再実行する。"
           ],
           "correct": 0,
           "explanation": "CodeDeploy のアラーム監視機能で特定の CloudWatch アラームを設定しておき、異常検知時に自動でロールバックをトリガーできます。Lambda ポーリングより簡潔で、Route 53 DNS 切り替えより管理の手間が少ないリアルタイム対応。",
@@ -25,9 +25,9 @@
           "scenario": "CloudFormation StackSets を使用して 100 近くのアカウントにデプロイする際、一部のアカウントで失敗しても全体を止めずに進めたい。調整すべきパラメータは？",
           "choices": [
             "FailureToleranceCount または FailureTolerancePercentage",
-            "MaxConcurrentCount",
-            "RetainStacksOnAccountRemoval",
-            "RegionConcurrencyType"
+            "MaxConcurrentCount または MaxConcurrentPercentage",
+            "RetainStacksOnAccountRemoval または ManagedExecution",
+            "RegionConcurrencyType または OperationPreferences"
           ],
           "correct": 0,
           "explanation": "CloudFormation StackSets で FailureToleranceCount（失敗許容アカウント数）または FailureTolerancePercentage（失敗許容率）を設定すれば、一部アカウント失敗時も他のアカウントへのデプロイを継続。",
@@ -36,10 +36,10 @@
         {
           "scenario": "AWS Organizations 内のすべてのアカウントで、パブリック S3 バケットの作成を「遡及的に」検出し、自動で非公開にする構成は？",
           "choices": [
-            "AWS Config 組織ルール（Managed Rule）と SSM Automation による自動修復を組み合わせる。",
-            "SCP でバケット作成を禁止する。",
-            "CloudWatch Logs のサブスクリプションフィルタで Lambda を動かす。",
-            "S3 バケットポリシーで一律拒否する。"
+            "AWS Config 組織ルールと SSM Automation の修復アクションを組み合わせる。",
+            "Organizations SCP で S3 の公開設定 API を拒否し、新規作成を予防する。",
+            "CloudTrail データイベントを EventBridge で拾い、Lambda で都度確認する。",
+            "S3 Block Public Access を各アカウントに手動で設定し、定期的に棚卸しする。"
           ],
           "correct": 0,
           "explanation": "AWS Config 組織ルールで遡及的にパブリック S3 バケットを検出でき、SSM Automation による修復アクションで自動非公開化。SCP は予防的で遡及的ではなく、Lambda ポーリングは遅延リスク。",
@@ -48,10 +48,10 @@
         {
           "scenario": "CodePipeline で、ソースコードの変更が反映される前に、外部の脆弱性スキャンツール（API 経由）を完了させたい。最適なアクションタイプは？",
           "choices": [
-            "カスタムアクションまたは Lambda アクションを使用して API を叩き、結果を待機する。",
-            "承認アクションを使用して手動で確認する。",
-            "CodeBuild 内で curl を使ってスキャンを開始し、そのままビルドを続ける。",
-            "S3 のイベント通知を利用する。"
+            "カスタムアクションまたは Lambda アクションで API 結果を待機する。",
+            "手動承認アクションで担当者にスキャン結果の確認と承認を依頼する。",
+            "CodeBuild でスキャンを開始し、結果確認前に進める。",
+            "S3 イベント通知で成果物アップロード後に非同期スキャンを起動する。"
           ],
           "correct": 0,
           "explanation": "CodePipeline で外部脆弱性スキャン API を組み込むには、カスタムアクションまたは Lambda アクションで API 呼び出し結果を待機し、成功/失敗を判定して次ステージへ進む。",
@@ -60,10 +60,10 @@
         {
           "scenario": "Systems Manager パッチマネージャーで、特定の「Webサーバー群」にだけ異なるスケジュールでパッチを当てたい。どう識別すべきか？",
           "choices": [
-            "リソースタグ（例: Role=WebServer）をインスタンスに付与し、パッチグループを作成する。",
-            "インスタンス ID を直接メンテナンスウィンドウに記述する。",
-            "VPC サブネットごとにパッチ適用範囲を分ける。",
-            "IAM ロール名でフィルタリングする。"
+            "対象インスタンスへタグを付与し、パッチグループやメンテナンスウィンドウで指定する。",
+            "対象インスタンス ID を一覧化し、メンテナンスウィンドウのターゲットへ固定登録する。",
+            "Web サーバー用サブネットを分け、サブネット ID を基準にパッチ適用範囲を決める。",
+            "EC2 に付与した IAM ロール名を条件にして、Patch Manager の対象を絞り込む。"
           ],
           "correct": 0,
           "explanation": "Systems Manager パッチマネージャーで Role=WebServer というタグを EC2 に付与し、パッチグループとして定義すれば、このグループだけ異なるパッチスケジュール適用が可能。",
@@ -72,10 +72,10 @@
         {
           "scenario": "Amazon EventBridge で、複数アカウントのイベントを中央のセキュリティアカウントに集約したい。送信側アカウントで必要な設定は？",
           "choices": [
-            "ターゲットとして、中央アカウントのイベントバス ARN を指定する。",
-            "IAM ロールを作成して S3 に書き出す。",
-            "VPC ピアリングを中央アカウントと接続する。",
-            "SNS トピックを中央アカウントと共有する。"
+            "ルールのターゲットに中央アカウントのイベントバス ARN を指定する。",
+            "送信側でイベントを S3 に出力し、中央側 Lambda で読む。",
+            "VPC ピアリングを作成し、イベントをプライベート転送する。",
+            "送信側 SNS トピックを共有し、中央側で購読する。"
           ],
           "correct": 0,
           "explanation": "EventBridge クロスアカウント連携では、送信側で中央アカウントの EventBus ARN をターゲット指定し、リソースベースポリシーで権限許可。中央側でルールを集約管理。",
@@ -84,10 +84,10 @@
         {
           "scenario": "CloudFormation で、DB スタックの出力値（Endpoint等）を、他のアプリ用スタックで動的に参照したい。最も標準的な方法は？",
           "choices": [
-            "Outputs セクションで Export を使用し、別スタックで Fn::ImportValue を使う。",
-            "Parameter Store に値を手動でコピーする。",
-            "同じスタック内にすべてのリソースを詰め込む。",
-            "S3 に設定ファイルを書き出し、それを読み込む。"
+            "Outputs の Export と Fn::ImportValue でクロススタック参照する。",
+            "Parameter Store に出力値を手動登録し、Parameters に渡す。",
+            "DB とアプリの全リソースを単一スタックに統合し、Ref だけで参照する。",
+            "S3 にエンドポイント情報を書き出し、アプリスタックの UserData で読む。"
           ],
           "correct": 0,
           "explanation": "CloudFormation スタック間で値を共有するには、Outputs セクションで Export を定義し、別スタックで Fn::ImportValue を使用します。クロススタック参照が実現できます。",
@@ -96,10 +96,10 @@
         {
           "scenario": "AWS Control Tower を導入した環境で、新しいアカウントが作成された際に自動的に特定のセキュリティリソースをプロビジョニングする仕組みは？",
           "choices": [
-            "Account Factory と AWS Service Catalog の連携、およびライフサイクルイベントの活用",
-            "個別のアカウントに root でログインして設定する。",
-            "IAM グループポリシーで強制する。",
-            "CloudFormation を手動で 1 つずつ実行する。"
+            "Account Factory と Service Catalog のライフサイクル連携で自動化する。",
+            "新規アカウントへ root ユーザーでログインし、標準リソースを手動作成する運用に全社で統一する。",
+            "管理アカウントの IAM グループポリシーで、全メンバーアカウントに強制する。",
+            "各アカウントで CloudFormation テンプレートを個別に手動実行する。"
           ],
           "correct": 0,
           "explanation": "AWS Control Tower + Account Factory で、新規アカウント作成時に Service Catalog でセキュリティリソースをプロビジョニングできます。ライフサイクルイベント活用で自動化。",
@@ -108,10 +108,10 @@
         {
           "scenario": "Amazon GuardDuty で「EC2 が異常なドメインに通信している」という警告が出た。これを自動で隔離（セキュリティグループ変更）するためのフローは？",
           "choices": [
-            "GuardDuty 検出イベント → EventBridge → Lambda (SG変更処理)",
-            "GuardDuty → CloudWatch Logs → SNS",
-            "Config ルールの定期実行のみ",
-            "IAM ポリシーでの制限のみ"
+            "GuardDuty 検出イベントを EventBridge で受け、Lambda で隔離する。",
+            "GuardDuty の検出結果を CloudWatch Logs に保存し、SNS 通知だけ行う。",
+            "AWS Config ルールを定期実行し、次回評価時に隔離対象を判定する。",
+            "IAM ポリシーで EC2 の通信先を制限し、検出後の変更処理を省略する。"
           ],
           "correct": 0,
           "explanation": "GuardDuty の EC2 異常通信警告を自動隔離するには、GuardDuty イベント → EventBridge ルール → Lambda で SecurityGroup を変更し、該当 EC2 のアウトバウンドを遮断。",
@@ -120,10 +120,10 @@
         {
           "scenario": "Amazon Inspector が、特定の EC2 インスタンスでスキャンを実行できていない。まず確認すべき項目は？",
           "choices": [
-            "SSM エージェントが実行中か、およびインスタンスに SSM 管理用の IAM ロールが付与されているか。",
-            "Inspector のライセンスが有効か。",
-            "S3 バケットポリシーが Inspector を許可しているか。",
-            "VPC エンドポイントが作成されているか。"
+            "SSM Agent の稼働状態と、インスタンスプロファイルの SSM 権限を確認する。",
+            "Inspector の有料ライセンス割り当てと、アカウント単位の契約状態を確認する。",
+            "S3 バケットポリシーで Inspector サービスプリンシパルを許可しているか確認する。",
+            "Inspector 専用 VPC エンドポイントが各サブネットに作成されているか確認する。"
           ],
           "correct": 0,
           "explanation": "Inspector がスキャン実行できない原因は、SSM エージェント未起動または IAM ロール権限不足。両者なく SSM エージェントがインスタンスと通信できず、脆弱性データを収集できません。",
