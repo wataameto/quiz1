@@ -2,6 +2,50 @@
 
 AIエージェント向けの詳細な実装仕様。記述が衝突する場合は、[AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) の現在の作業ルールと [QUESTION_GUIDE.md](./QUESTION_GUIDE.md) の作問ルールを優先する。
 
+## 重要仕様
+
+後で迷いやすい仕様。実装変更時はまずここを確認する。
+
+- 作業ディレクトリは /Users/user/Documents/codextest1。
+- アプリは docs/ 配下で動く静的HTMLアプリ。
+- メインメニューは docs/index.html。
+- クイズページは docs/boki1/index.html と docs/devops/index.html。
+- boki1 と devops の index.html は共通テンプレートとして意図的に同期する。
+- クイズ固有のタイトル、見出し、説明、色は docs/config.json に置く。
+- 片方の quiz index.html だけに固有表示や固有ロジックを入れない。
+- メインメニューは認証確認中にログイン画面を出さず、screen-loading を表示する。
+- 認証判定後に、ログイン済みならメニュー、未ログインならログイン画面を表示する。
+- ログインは Google popup を先に試し、失敗時に redirect へフォールバックする。
+- 問題数とパート数は questions*.json から動的に計算する。
+- 固定の「3パート」「180問」のような表示に戻さない。
+- 現在は問題データ・テストに10問前提が残る箇所があるが、UI表示は可変問題数を意識する。
+- 問題数ルールを本格的に変える場合は、表示だけでなく src/bokiQuestions.test.js も見直す。
+- Firestore collection は quiz_<quizId>。例: quiz_boki1, quiz_devops。
+- Firestore document id は currentUser.uid。
+- 現行スコアキーは best_<level>_<testId>。
+- 間違い問題キーは wrongAnswers_<level>_<testId>。
+- 旧スコアキー best_<testId> は questions1.json の後方互換としてのみ扱う。
+- スコアキャッシュ bestScores はユーザー変更・ログアウト時にクリアする。
+- resetCurrentLevel() は document の存在確認後に update する。存在しない document に update しない。
+- resetAllLevels() は quiz collection の現在ユーザー document を削除する。
+- 各クイズページは ?admin=1 で問題レビュー画面を表示する。
+- ?admin=1 は管理者認証つきではなく、URLで開ける軽量レビュー画面。
+- 管理レビューでは全パート、全テスト、全問題、選択肢、正解、解説を表示する。
+- 仕訳問題の選択肢表示には renderJournal(choice) を使う。
+- 通常テスト、間違い復習、練習モードは startTest(id, isReview, isPracticeMode) が扱う。
+- 結果スコアは correct * 10 点、満点は currentTest.questions.length * 10 点。
+- メニュー集計では Firestore の点数を Math.round(score / 10) で正答数へ戻す。
+- docs/build-info.json は scripts/update-build-time.js と hooks/pre-commit が更新する。
+- pre-commit で docs/build-info.json が変わったらコミットに含める。
+- npm install は prepare を通じて core.hooksPath hooks を設定し、ビルド日時も更新する。
+- ドキュメントだけの変更なら npm test は不要。
+- JavaScript または問題JSONを変更したら npm test を実行する。
+- 簿記の作問ルールは QUESTION_GUIDE.md を優先する。
+- 簿記問題は分記法。
+- 仕訳の勘定科目名として 売上 / 仕入 を使わない。
+- 売上代金 / 仕入れ のような自然文は問題文や解説で使ってよい。
+
+
 ## 現在の実装スナップショット
 
 このセクションは、現行コードを再現・修正するときに最初に参照する要約。後続の詳細仕様に古い記述が残っている場合は、このセクションを優先する。
