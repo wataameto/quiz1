@@ -1,3 +1,25 @@
+# AI Project Guide
+
+## Read First
+- Question authoring rules are in [QUESTION_GUIDE.md](./QUESTION_GUIDE.md).
+
+## Project
+Quiz learning app served from docs/.
+
+## Commands
+- npm install
+- npm test
+- npm run build
+
+## Rules
+- Use /Users/user/Documents/codextest1 as the working directory.
+- Quiz pages are under docs/.
+- boki1 and devops index.html are intentionally kept in sync.
+- Run npm test after changing JS or question JSON.
+- Build timestamp is updated by hooks/pre-commit.
+
+---
+
 # Quiz Learning Application - プロジェクト仕様書
 
 ## プロジェクト概要
