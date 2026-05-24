@@ -384,24 +384,20 @@
                 }
               ]
             },
-            {
-              "debit": [
-                {
-                  "account": "商品",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 12000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 4000
-                }
-              ]
-            }
+              {
+                "debit": [
+                  {
+                    "account": "商品",
+                    "amount": 12000
+                  }
+                ],
+                "credit": [
+                  {
+                    "account": "現金",
+                    "amount": 12000
+                  }
+                ]
+              }
           ],
           "correct": 0,
           "explanation": "現金¥12,000受け取り、商品¥8,000と売買益¥4,000を貸方に記録します。分記法の基本です。",
@@ -728,24 +724,20 @@
                 }
               ]
             },
-            {
-              "debit": [
-                {
-                  "account": "商品",
-                  "amount": 10000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 14000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 4000
-                }
-              ]
-            }
+              {
+                "debit": [
+                  {
+                    "account": "商品",
+                    "amount": 14000
+                  }
+                ],
+                "credit": [
+                  {
+                    "account": "現金",
+                    "amount": 14000
+                  }
+                ]
+              }
           ],
           "correct": 0,
           "explanation": "現金¥14,000受け取り、商品¥10,000と売買益¥4,000を貸方に記録します。",

@@ -137,6 +137,19 @@
     .journal-sep    { color: #cbd5e0; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
     .entry-line     { display: flex; flex-direction: column; gap: 3px; }
     .entry-item     { display: flex; justify-content: space-between; gap: 12px; }
+    .admin-top { position: relative; margin-bottom: 18px; text-align: center; }
+    .admin-title { font-size: 1.45rem; font-weight: 900; color: #2d3748; margin-bottom: 6px; }
+    .admin-subtitle { font-size: 0.85rem; color: #718096; }
+    .admin-part { border-top: 3px solid #e2e8f0; padding-top: 18px; margin-top: 20px; }
+    .admin-part h2 { font-size: 1.15rem; color: #2d3748; margin-bottom: 10px; }
+    .admin-test { margin-bottom: 18px; }
+    .admin-test h3 { font-size: 1rem; color: #4a5568; margin-bottom: 10px; padding: 8px 10px; background: #f7fafc; border-radius: 8px; }
+    .admin-question { border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 12px; margin-bottom: 10px; background: #fff; }
+    .admin-question-title { font-weight: 800; color: #2d3748; line-height: 1.6; margin-bottom: 10px; }
+    .admin-choice { border: 1px solid #e2e8f0; border-radius: 8px; padding: 9px 10px; margin-top: 7px; font-size: 0.86rem; line-height: 1.5; }
+    .admin-choice.correct { border-color: #38a169; background: #f0fff4; }
+    .admin-choice-label { font-weight: 900; margin-right: 6px; color: #4a5568; }
+    .admin-explanation { margin-top: 10px; padding: 10px; background: #f7f8ff; border-left: 3px solid #667eea; border-radius: 8px; color: #4a5568; font-size: 0.84rem; line-height: 1.6; }
   </style>
   <style id="dynamic-colors"></style>
 </head>
@@ -198,6 +211,16 @@
     </div>
     <button id="review-btn" class="btn-review" onclick="startReview()" style="display:none"></button>
     <button class="btn-home" onclick="showHome()">🏠 テスト選択に戻る</button>
+  </div>
+
+  <div id="screen-admin" class="hidden">
+    <div class="admin-top">
+      <a href="../" style="position:absolute; top:0; left:0; background:transparent; color:#667eea; border:2px solid #667eea; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;">🏠 メインメニュー</a>
+      <div style="height:42px;"></div>
+      <div class="admin-title" id="admin-title">問題一覧</div>
+      <div class="admin-subtitle" id="admin-subtitle"></div>
+    </div>
+    <div id="admin-list"></div>
   </div>
 
   <!-- リセット確認ダイアログ -->
@@ -293,6 +316,7 @@ let quizId = null;
 let quizData = {}; // 全レベルのデータをキャッシュ
 let currentLevel = 1;
 let maxLevel = 1;
+const isAdminMode = new URLSearchParams(location.search).get('admin') === '1';
 
 async function loadAllQuestions() {
   try {
@@ -360,13 +384,18 @@ async function loadAllQuestions() {
     }
 
     currentLevel = 1;
-    loadQuestions(1);
+    if (isAdminMode) {
+      showAdmin();
+    } else {
+      loadQuestions(1);
+    }
   } catch (e) {
     console.error('Failed to load questions:', e);
     TESTS = [];
     document.getElementById('screen-home').classList.remove('hidden');
     document.getElementById('screen-quiz').classList.add('hidden');
     document.getElementById('screen-results').classList.add('hidden');
+    document.getElementById('screen-admin').classList.add('hidden');
     document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:15px;text-align:center;">問題ファイルの読み込みに失敗: ' + e.message + '</p>';
   }
 }
@@ -382,6 +411,53 @@ async function loadQuestions(level = 1) {
     TESTS = [];
     document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:15px;text-align:center;">問題の読み込みに失敗しました</p>';
   }
+}
+
+function showAdmin() {
+  document.getElementById('screen-home').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-admin').classList.remove('hidden');
+
+  const title = document.getElementById('quiz-heading').textContent || 'クイズ';
+  document.getElementById('admin-title').textContent = `${title} 問題一覧`;
+  document.getElementById('admin-subtitle').textContent = `${maxLevel}パートの問題・選択肢・正解・解説を表示中`;
+
+  let html = '';
+  for (let level = 1; level <= maxLevel; level++) {
+    const levelData = quizData[level];
+    if (!levelData || !Array.isArray(levelData.tests)) continue;
+    const partLabel = levelData.description || levelData.label || `パート ${level}`;
+    html += `<section class="admin-part"><h2>${partLabel}</h2>`;
+
+    for (const test of levelData.tests) {
+      const countLabel = Array.isArray(test.questions) ? `${test.questions.length}問` : '0問';
+      html += `<div class="admin-test"><h3>${test.title} <span style="font-size:0.78rem;color:#718096;">${test.type || ''} / ${countLabel}</span></h3>`;
+
+      test.questions.forEach((question, qIndex) => {
+        const choices = question.choices.map((choice, choiceIndex) => {
+          const isCorrect = choiceIndex === question.correct;
+          const label = String.fromCharCode(65 + choiceIndex);
+          const choiceHtml = question.type === 'journal' ? renderJournal(choice) : choice;
+          return `<div class="admin-choice ${isCorrect ? 'correct' : ''}">
+            <span class="admin-choice-label">${isCorrect ? '✅' : ''}${label}.</span>${choiceHtml}
+          </div>`;
+        }).join('');
+
+        html += `<div class="admin-question">
+          <div class="admin-question-title">Q${qIndex + 1}. ${question.scenario}</div>
+          ${choices}
+          ${question.explanation ? `<div class="admin-explanation">💡 ${question.explanation}</div>` : ''}
+        </div>`;
+      });
+
+      html += '</div>';
+    }
+
+    html += '</section>';
+  }
+
+  document.getElementById('admin-list').innerHTML = html;
 }
 
 function updatePartBadge() {
@@ -568,11 +644,16 @@ function calculateTotalQuestionsAllLevels() {
 }
 
 async function showHome() {
+  if (isAdminMode) {
+    showAdmin();
+    return;
+  }
   isReviewMode = false;
   isPracticeModeActive = false;
   document.getElementById('screen-home').classList.remove('hidden');
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-admin').classList.add('hidden');
 
   TOTAL_QUESTIONS = calculateTotalQuestions(); // 現在のレベルの問題数
   const totalQuestionsAllLevels = calculateTotalQuestionsAllLevels(); // 全レベルの合計
@@ -712,6 +793,7 @@ async function startTest(id, isReview = false, isPracticeMode = false) {
   document.getElementById('screen-home').classList.add('hidden');
   document.getElementById('screen-quiz').classList.remove('hidden');
   document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-admin').classList.add('hidden');
   renderQuestion();
 }
 

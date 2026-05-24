@@ -41,4 +41,13 @@ describe('Main menu HTML', () => {
     expect(devopsHtml).toContain('const snapshot = await doc.get();');
     expect(devopsHtml).toContain('if (snapshot.exists)');
   });
+
+  test('should include admin question list mode in quiz pages', () => {
+    expect(bokiHtml).toContain('screen-admin');
+    expect(bokiHtml).toContain("get('admin') === '1'");
+    expect(bokiHtml).toContain('function showAdmin()');
+    expect(devopsHtml).toContain('screen-admin');
+    expect(devopsHtml).toContain("get('admin') === '1'");
+    expect(devopsHtml).toContain('function showAdmin()');
+  });
 });
