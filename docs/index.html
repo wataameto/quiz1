@@ -217,6 +217,12 @@
       padding: 40px 20px;
     }
 
+    .loading-screen {
+      text-align: center;
+      padding: 0;
+      min-height: 220px;
+    }
+
     .login-screen h2 {
       font-size: 1.5rem;
       color: #2d3748;
@@ -315,8 +321,12 @@
 </head>
 <body>
 <div class="container">
+  <!-- LOADING SCREEN -->
+  <div id="screen-loading" class="loading-screen">
+  </div>
+
   <!-- LOGIN SCREEN -->
-  <div id="screen-login" class="login-screen">
+  <div id="screen-login" class="login-screen hidden">
     <div class="logo" style="font-size: 3.5rem; margin-bottom: 20px;">📚</div>
     <h2>10問学習アプリ</h2>
     <p style="color: #718096; margin-bottom: 24px;">学習問題に挑戦しよう！</p>
@@ -348,11 +358,11 @@
 
     <div class="score-summary" id="score-summary">
       <a href="./boki1/" class="score-row score-link">
-        <span>📖 簿記（3パート）</span>
+        <span id="label-boki">📚 江東区最強せいちゃんへ簿記挑戦</span>
         <span id="score-boki">0問</span>
       </a>
       <a href="./devops/" class="score-row score-link">
-        <span>☁️ DevOps（3パート）</span>
+        <span id="label-devops">☁️ DOP-C02 練習問題</span>
         <span id="score-devops">0問</span>
       </a>
     </div>
@@ -383,7 +393,7 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 let currentUser = null;
-const quizTotalCache = {};
+const quizMetaCache = {};
 
 auth.getRedirectResult().catch(e => {
   console.error('Google redirect result error:', e);
@@ -422,19 +432,21 @@ async function getDevopsScore() {
   return getQuizScore('quiz_devops', './devops/');
 }
 
-async function calculateQuizTotal(questionsPath) {
-  if (quizTotalCache[questionsPath] !== undefined) {
-    return quizTotalCache[questionsPath];
+async function calculateQuizMeta(questionsPath) {
+  if (quizMetaCache[questionsPath] !== undefined) {
+    return quizMetaCache[questionsPath];
   }
 
   let level = 1;
   let total = 0;
+  let parts = 0;
   while (true) {
     try {
       const res = await fetch(`${questionsPath}questions${level}.json?t=${Date.now()}`);
       if (!res.ok) break;
       const data = await res.json();
       if (!data || !Array.isArray(data.tests)) break;
+      parts++;
       total += data.tests.reduce((sum, test) => (
         sum + (Array.isArray(test.questions) ? test.questions.length : 0)
       ), 0);
@@ -444,12 +456,13 @@ async function calculateQuizTotal(questionsPath) {
     }
   }
 
-  quizTotalCache[questionsPath] = total;
-  return total;
+  quizMetaCache[questionsPath] = { total, parts };
+  return quizMetaCache[questionsPath];
 }
 
 async function getQuizScore(collectionName, questionsPath) {
-  const totalQuestions = await calculateQuizTotal(questionsPath);
+  const meta = await calculateQuizMeta(questionsPath);
+  const totalQuestions = meta.total;
   if (!currentUser) return { correct: 0, total: totalQuestions };
   try {
     const doc = await db.collection(collectionName).doc(currentUser.uid).get();
@@ -457,17 +470,38 @@ async function getQuizScore(collectionName, questionsPath) {
 
     const data = doc.data();
     let totalCorrect = 0;
+    let level = 1;
 
-    // Collect all score keys (best_level_id pattern)
-    const scoreKeys = Object.keys(data).filter(k => k.startsWith('best_'));
-    if (scoreKeys.length === 0) return { correct: 0, total: totalQuestions };
+    while (true) {
+      const res = await fetch(`${questionsPath}questions${level}.json?t=${Date.now()}`);
+      if (!res.ok) break;
+      const questionData = await res.json();
+      if (!questionData || !Array.isArray(questionData.tests)) break;
 
-    scoreKeys.forEach(key => {
-      const score = data[key];
-      if (score > 0) {
-        totalCorrect += Math.round(score / 10);
+      questionData.tests.forEach(test => {
+        const score = data[`best_${level}_${test.id}`];
+        if (score > 0) {
+          totalCorrect += Math.round(score / 10);
+        }
+      });
+      level++;
+    }
+
+    // Backward compatibility for older score keys without level prefix.
+    if (totalCorrect === 0) {
+      const firstLevel = await fetch(`${questionsPath}questions1.json?t=${Date.now()}`);
+      if (firstLevel.ok) {
+        const questionData = await firstLevel.json();
+        if (questionData && Array.isArray(questionData.tests)) {
+          questionData.tests.forEach(test => {
+            const score = data[`best_${test.id}`];
+            if (score > 0) {
+              totalCorrect += Math.round(score / 10);
+            }
+          });
+        }
       }
-    });
+    }
 
     return { correct: totalCorrect, total: totalQuestions };
   } catch (e) {
@@ -477,6 +511,8 @@ async function getQuizScore(collectionName, questionsPath) {
 }
 
 async function updateScoreDisplay() {
+  const bokiMeta = await calculateQuizMeta('./boki1/');
+  const devopsMeta = await calculateQuizMeta('./devops/');
   const bokiScore = await getBokiScore();
   const devopsScore = await getDevopsScore();
   const totalCorrect = bokiScore.correct + devopsScore.correct;
@@ -484,6 +520,8 @@ async function updateScoreDisplay() {
 
   // 常にスコアエリアを表示（リンクが必要なため）
   document.getElementById('score-summary').classList.add('visible');
+  document.getElementById('label-boki').textContent = `📚 江東区最強せいちゃんへ簿記挑戦（${bokiMeta.parts}パート）`;
+  document.getElementById('label-devops').textContent = `☁️ DOP-C02 練習問題（${devopsMeta.parts}パート）`;
   document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
   document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
   document.getElementById('score-total').textContent = `${totalCorrect}問`;
@@ -491,6 +529,7 @@ async function updateScoreDisplay() {
 }
 
 function showHomeScreen() {
+  document.getElementById('screen-loading').classList.add('hidden');
   document.getElementById('screen-login').classList.add('hidden');
   document.getElementById('screen-home').classList.remove('hidden');
 
@@ -504,6 +543,7 @@ function showHomeScreen() {
 }
 
 function showLoginScreen() {
+  document.getElementById('screen-loading').classList.add('hidden');
   document.getElementById('screen-login').classList.remove('hidden');
   document.getElementById('screen-home').classList.add('hidden');
 }

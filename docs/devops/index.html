@@ -58,8 +58,8 @@
     .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
     .test-card .best-score span { font-weight: 800; font-size: 1rem; }
     .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; position: relative; }
-    .quiz-back { position: absolute; right: 0; top: 0; background: linear-gradient(135deg, #f7971e, #ffd200); border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #2d3748; transition: all 0.15s; box-shadow: 0 4px 12px rgba(247,151,30,0.3); }
-    .quiz-back:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(247,151,30,0.4); }
+    .quiz-back { position: absolute; right: 0; top: 0; background: #667eea; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #fff; transition: all 0.15s; box-shadow: 0 4px 12px rgba(102,126,234,0.22); }
+    .quiz-back:hover { background: #5a67d8; transform: translateY(-1px); box-shadow: 0 6px 14px rgba(102,126,234,0.28); }
     .quiz-title-wrap { flex: 1; }
     .quiz-title-wrap h2 { font-size: 1.2rem; font-weight: 800; color: #2d3748; }
     .quiz-title-wrap p { font-size: 0.8rem; color: #718096; }
@@ -235,11 +235,13 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 let currentUser = null;
+let bestScores = {};
+let cacheInitialized = false;
 
 auth.onAuthStateChanged(user => {
-  if (user) {
-    currentUser = user;
-  }
+  currentUser = user || null;
+  cacheInitialized = false;
+  bestScores = {};
   // 認証状態に関わらず初期化を実行
   loadAllQuestions();
 });
@@ -339,7 +341,8 @@ async function loadAllQuestions() {
             .container::before { background: ${cfg.topGradient}; }
             .level-btn.active { border-color: ${cfg.accentColor}; background: ${cfg.accentActive}; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
             .progress-bar-fill { background: ${cfg.topGradient}; }
-            .quiz-back { background: ${cfg.topGradient}; color: #2d3748; }
+            .quiz-back { background: ${cfg.accentColor}; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.16); }
+            .quiz-back:hover { filter: brightness(0.92); }
             .next-btn { background: ${cfg.topGradient}; color: #2d3748; }
             .btn-home { background: ${cfg.topGradient}; color: #2d3748; }
           `;
@@ -397,8 +400,6 @@ function switchLevel(level) {
 }
 
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
-let bestScores = {};
-let cacheInitialized = false;
 let TOTAL_QUESTIONS = 0;
 
 function calculateTotalQuestions() {
@@ -510,16 +511,20 @@ async function resetCurrentLevel() {
   try {
     const collection = getCollectionName();
     const doc = db.collection(collection).doc(currentUser.uid);
+    const snapshot = await doc.get();
     const fieldsToDelete = {};
     if (!quizData[currentLevel] || !quizData[currentLevel].tests) return;
     for (const t of quizData[currentLevel].tests) {
       fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
     }
-    await doc.update(fieldsToDelete);
+    if (snapshot.exists) {
+      await doc.update(fieldsToDelete);
+    }
     // キャッシュから削除
     for (const t of quizData[currentLevel].tests) {
       delete bestScores[`best_${currentLevel}_${t.id}`];
+      delete bestScores[`wrongAnswers_${currentLevel}_${t.id}`];
     }
     soundClick(); showHome();
   } catch (e) { console.error(e); }
