@@ -1,5 +1,5 @@
 # CLAUDE.md
 
-This repository keeps shared AI/project instructions in [AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md).
+Read and follow [AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) before working in this repository.
 
-Claude should read and follow that file before working in this repository.
+When adding or editing questions, also read [QUESTION_GUIDE.md](./QUESTION_GUIDE.md).
