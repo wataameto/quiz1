@@ -1,28 +1,28 @@
 # Question Guide
 
-## General Question Rules
-- Keep each question with exactly one correct answer.
-- Keep choices distinct; avoid duplicate or nearly identical choices.
-- Make distractors plausible but clearly wrong for the scenario.
-- Include an explanation when adding or changing questions.
-- Keep explanations short, concrete, and tied to the correct answer.
-- Run npm test after changing question JSON.
+## 共通の作問ルール
+- 各問題の正答は1つだけにする。
+- 選択肢は重複させない。ほぼ同じ意味の選択肢も避ける。
+- 誤答選択肢はそれらしく、ただしシナリオ上は明確に誤りにする。
+- 問題を追加・修正するときは解説を書く。
+- 解説は短く、具体的に、正答の根拠に結びつける。
+- 問題JSONを変更したら npm test を実行する。
 
-## Boki Question Rules
-- Use 分記法 for boki questions.
-- Do not use 売上 or 仕入 as journal account names.
-- Natural Japanese terms like 売上代金 or 仕入れ may be used in scenarios and explanations.
-- Journal choices must balance debit and credit totals.
-- Use account names consistently across choices and explanations.
-- Prefer beginner-friendly wording and avoid mixing multiple accounting topics in one question.
-- If adding product purchase or sale journal entries, use 商品, 商品売買益, 現金, 売掛金, 買掛金, or other appropriate 分記法 accounts.
-- Use 未払金 for non-merchandise purchases on credit, such as office supplies.
+## 簿記問題ルール
+- 簿記問題は分記法を使う。
+- 売上 または 仕入 を仕訳の勘定科目名として使わない。
+- 売上代金 や 仕入れ のような自然な日本語は、問題文や解説で使ってよい。
+- 仕訳の選択肢は借方合計と貸方合計を一致させる。
+- 勘定科目名は選択肢と解説で一貫させる。
+- 初学者向けの言い回しを優先し、1問に複数の会計論点を詰め込みすぎない。
+- 商品売買の仕訳を追加する場合は、商品、商品売買益、現金、売掛金、買掛金など、分記法として適切な勘定科目を使う。
+- 事務用品など商品以外の掛け購入には、買掛金ではなく未払金を使う。
 
-## DevOps Question Rules
-- Prefer AWS DevOps Engineer Professional / DOP-C02 style concepts and wording.
-- Make the correct answer clearly tied to the scenario, not merely generally true.
-- Avoid choices that are true in a different context.
-- Avoid obsolete AWS service names or deprecated practices.
-- Use current AWS service names and common best practices.
-- Explanations should state why the correct answer is right and, when useful, why the main distractor is wrong.
-- Avoid trivia-only questions unless the fact is directly useful for exam-style reasoning.
+## DevOps問題ルール
+- AWS DevOps Engineer Professional / DOP-C02 らしい概念と言い回しを優先する。
+- 正答は、一般論として正しいだけでなく、シナリオに対して明確に正しいものにする。
+- 別の文脈なら正しい選択肢を混ぜて、正答が曖昧になる状態を避ける。
+- 古いAWSサービス名や非推奨のプラクティスは避ける。
+- 現在のAWSサービス名と一般的なベストプラクティスを使う。
+- 解説では、なぜ正答が正しいかを書く。必要なら主要な誤答がなぜ違うかも書く。
+- 試験対策の思考に役立たない、単なる暗記クイズだけの問題は避ける。

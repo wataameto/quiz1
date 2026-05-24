@@ -1,6 +1,6 @@
 # Implementation Spec
 
-This is the detailed implementation reference for AI agents. The current workflow rules in [AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) and question-authoring rules in [QUESTION_GUIDE.md](./QUESTION_GUIDE.md) take precedence if details conflict.
+AIエージェント向けの詳細な実装仕様。記述が衝突する場合は、[AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) の現在の作業ルールと [QUESTION_GUIDE.md](./QUESTION_GUIDE.md) の作問ルールを優先する。
 
 # Quiz Learning Application - プロジェクト仕様書
 
