@@ -280,19 +280,19 @@
           "type": "choice"
         },
         {
-          "scenario": "Amazon EventBridge を使用して API Gateway の呼び出し回数が異常な場合にアラートを出したい。どのメトリクスを使用すべきか？",
+          "scenario": "API Gateway の呼び出し数やエラー率が異常な場合に通知したい。CloudWatch Alarm で監視し、EventBridge で状態変化を後続処理へ渡す場合に見るべきメトリクスは？",
           "choices": [
-            "CloudWatch メトリクスの Count または 4XXError/5XXError",
-            "VPC フローログのバイト数",
-            "IAM のサインイン試行回数",
-            "Lambda の Duration"
+            "API Gateway の Count、4XXError、5XXError",
+            "VPC Flow Logs の bytes、packets、action",
+            "CloudTrail の ConsoleLogin、AssumeRole",
+            "Lambda の Duration、IteratorAge、Throttles"
           ],
           "correct": 0,
-          "explanation": "EventBridge でイベント駆動型のメトリクス監視をするには、CloudWatch メトリクスの Count や Error 系メトリクスをルール条件に使用。",
+          "explanation": "API Gateway の異常検知は CloudWatch メトリクス（Count、4XXError、5XXError など）にアラームを設定する。EventBridge はアラーム状態変更イベントを受けて通知や自動対応へつなぐ用途で使える。",
           "type": "choice"
         },
         {
-          "scenario": "CodeDeploy の AppSpec ファイルで、スクリプトを実行する際の「実行ユーザー（Runas）」を指定できるセクションは？",
+          "scenario": "CodeDeploy の AppSpec ファイルで、フックスクリプトを実行する OS ユーザーを指定したい。どこに `runas` を書くべきか？",
           "choices": [
             "hooks セクション内の各スクリプト定義箇所",
             "version セクション",
@@ -300,7 +300,7 @@
             "files セクション"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy の AppSpec で、hooks セクション内の各スクリプト定義に『Runas』フィールドを追加することで、実行ユーザーを指定できます。",
+          "explanation": "EC2/オンプレミス向け AppSpec では、hooks セクションの各スクリプト定義に runas を指定して実行ユーザーを制御できる。",
           "type": "choice"
         },
         {
@@ -352,7 +352,7 @@
           "type": "choice"
         },
         {
-          "scenario": "AWS OpsWorks で、新しいインスタンスがレイヤーに追加された際に、既存の他のインスタンスの設定（例: ロードバランサーの参照先など）を自動更新するライフサイクルイベントは？",
+          "scenario": "Chef/Puppet 系の旧 OpsWorks Stacks で、新しいインスタンスがレイヤーに追加された際、既存インスタンス側の設定更新に使われたライフサイクルイベントは？",
           "choices": [
             "Configure イベント",
             "Setup イベント",
@@ -360,28 +360,28 @@
             "Sync イベント"
           ],
           "correct": 0,
-          "explanation": "AWS OpsWorks で Configure ライフサイクルイベント（インスタンス追加時）が発火し、既存インスタンスの設定も自動更新されます。",
+          "explanation": "旧 OpsWorks Stacks では、インスタンス追加などの構成変更時に Configure イベントが発火した。現在は終了済みサービスなので、新規設計では Systems Manager などを検討する。",
           "type": "choice"
         },
         {
           "scenario": "IAM Access Analyzer が分析するのはどの種類のリソース共有設定ですか？",
           "choices": [
-            "S3, IAM ロール, KMS, Lambda, SQS 等の「リソースベースのポリシー」による外部共有設定",
-            "ユーザーのパスワード強度",
-            "セキュリティグループのポート開放",
-            "VPC のルートテーブル"
+            "リソースベースポリシーによる外部プリンシパルへの共有",
+            "IAM ユーザーの認証情報とパスワードポリシー",
+            "Security Group のインバウンド許可範囲",
+            "VPC ルートテーブルの経路伝播設定"
           ],
           "correct": 0,
-          "explanation": "IAM Access Analyzer は、S3、IAM ロール、KMS などのリソースベースポリシーで、組織外への不正な共有がないか分析します。",
+          "explanation": "IAM Access Analyzer は、S3 バケットポリシーや KMS キーポリシーなどのリソースベースポリシーを分析し、外部プリンシパルへ意図せず共有されていないか検出する。",
           "type": "choice"
         },
         {
           "scenario": "Elastic Beanstalk で「トラフィック分割 (Traffic Splitting) デプロイ」を使用する主な利点は？",
           "choices": [
-            "少量のトラフィックを新しいバージョンに流して、カナリアテストを行いながらヘルス状態を確認できる。",
-            "DB のバックアップを同時に取れる。",
-            "デプロイ費用が無料になる。",
-            "インスタンス数を半分に減らせる。"
+            "一部トラフィックを新バージョンへ流し、ヘルス確認後に切り替えられる。",
+            "旧環境を残したまま CNAME スワップで一括切り替えられる。",
+            "既存インスタンスをバッチ単位で順番に置き換えられる。",
+            "全インスタンスへ同時に配布して最短時間で完了できる。"
           ],
           "correct": 0,
           "explanation": "Elastic Beanstalk トラフィック分割デプロイで、新バージョンへ一部トラフィックを流し、ヘルス状態確認後に段階的に切り替え可能。",
@@ -538,48 +538,48 @@
           "type": "choice"
         },
         {
-          "scenario": "Amazon EC2 Auto Scaling の「予測スケーリング (Predictive Scaling)」が基づいているデータは？",
+          "scenario": "Amazon EC2 Auto Scaling の「予測スケーリング (Predictive Scaling)」が需要予測に使う主なデータは？",
           "choices": [
-            "過去 14 日間のトラフィックと CPU 使用率の履歴データ",
-            "CloudTrail のログ",
-            "リアルタイムのメモリ使用率",
-            "S3 のアクセスログ"
+            "過去の負荷メトリクスとスケーリング履歴",
+            "CloudTrail の API 操作履歴と認証ログ",
+            "EC2 内部のリアルタイムメモリ使用率",
+            "S3 サーバーアクセスログのリクエスト履歴"
           ],
           "correct": 0,
-          "explanation": "Auto Scaling 予測スケーリングは過去 14 日のトラフィック・CPU データを ML 分析し、需要予測に基づいて事前スケール。",
+          "explanation": "予測スケーリングは過去の負荷パターンを分析し、将来の需要に合わせて事前にキャパシティを増減させる。CloudTrail や S3 ログではなく、Auto Scaling が扱う負荷メトリクスが中心。",
           "type": "choice"
         },
         {
           "scenario": "AWS AppConfig で、設定の適用中にエラーが発生した場合に自動で前の設定に戻すための仕組みは？",
           "choices": [
-            "CloudWatch アラームを設定し、アラーム発火時に自動ロールバックをトリガーする。",
-            "手動で前のバージョンをデプロイし直す。",
-            "Lambda を使って 5 分ごとにチェックする。",
-            "Route 53 を切り替える。"
+            "CloudWatch アラームを監視条件にして自動ロールバックさせる。",
+            "Lambda の定期実行で設定値を再デプロイさせる。",
+            "Route 53 の加重ルーティングで旧設定へ戻す。",
+            "Systems Manager Run Command で設定を上書きする。"
           ],
           "correct": 0,
           "explanation": "AWS AppConfig のデプロイ中にエラー検知時、CloudWatch アラーム設定で自動ロールバック可能。ガードレール機能で設定正合性チェックし、本番適用前に検証。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation の `Condition` セクションを使用して、「本番環境の時だけ RDS を作成する」ロジックを実装したい。必要な関数は？",
+          "scenario": "CloudFormation で「本番環境の時だけ RDS リソースを作成する」ロジックを実装したい。リソースに指定する属性は？",
           "choices": [
-            "Fn::If",
-            "Fn::GetAtt",
-            "Fn::Sub",
-            "Fn::Join"
+            "Condition",
+            "DependsOn",
+            "Metadata",
+            "UpdatePolicy"
           ],
           "correct": 0,
-          "explanation": "CloudFormation Condition セクションで Fn::If を使い、パラメータ値に応じて リソース作成の有無を条件分岐。",
+          "explanation": "リソース作成の有無を切り替える場合は、Conditions セクションで条件を定義し、対象リソースに Condition 属性を指定する。Fn::If は主にプロパティ値の条件分岐に使う。",
           "type": "choice"
         },
         {
           "scenario": "AWS Artifact の主な役割は？",
           "choices": [
-            "AWS のコンプライアンスレポート（SOC, ISO等）やオンライン契約にアクセスし、ダウンロードする。",
-            "ビルドしたプログラムのバイナリを保存する。",
-            "CloudFormation テンプレートを保存する。",
-            "Docker イメージを管理する。"
+            "コンプライアンスレポートやオンライン契約を取得する。",
+            "ビルド済みアーティファクトをリポジトリ管理する。",
+            "CloudFormation テンプレートをバージョン管理する。",
+            "コンテナイメージをスキャンして保存する。"
           ],
           "correct": 0,
           "explanation": "AWS Artifact で AWS コンプライアンスレポート（SOC、ISO など）やオンライン契約書を一元ダウンロード・管理。",
@@ -588,10 +588,10 @@
         {
           "scenario": "AWS Organizations で、既存のアカウントを組織に招待した際、そのアカウントに対して SCP が適用されるタイミングは？",
           "choices": [
-            "招待を承認し、アカウントが組織（または特定の OU）に参加した直後",
-            "24 時間後",
-            "次の請求サイクルから",
-            "手動で有効化した時のみ"
+            "アカウントが組織または OU に参加した時点",
+            "招待メール送信から 24 時間が経過した時点",
+            "次の請求サイクルが開始された時点",
+            "管理アカウントで手動有効化した時点"
           ],
           "correct": 0,
           "explanation": "Organizations でアカウント招待後、SCP は招待承認と同時に適用されます。新メンバーアカウントにも制限が有効。",
@@ -600,10 +600,10 @@
         {
           "scenario": "CloudWatch の「メトリクス数式 (Metric Math)」を使用して何ができますか？",
           "choices": [
-            "複数のメトリクスを組み合わせて計算し（例: 合計リクエスト数 / エラー数）、新しいメトリクスとして扱う。",
-            "ログを S3 に転送する。",
-            "SNS 通知を送る。",
-            "EC2 のパスワードを変更する。"
+            "複数メトリクスを式で計算し、可視化やアラームに使う。",
+            "ログイベントをフィルタリングして S3 へ配信する。",
+            "アラーム状態を SNS トピックへ直接通知する。",
+            "EC2 インスタンスの OS パスワードを更新する。"
           ],
           "correct": 0,
           "explanation": "CloudWatch メトリクス数式（Metric Math）で、複数メトリクス（例：成功数/エラー数）を計算し、新メトリクスとして可視化。",
@@ -636,10 +636,10 @@
         {
           "scenario": "AWS CodeDeploy の `ValidateService` ライフサイクルイベントの目的は？",
           "choices": [
-            "デプロイ完了後に、サービスが正しく起動しトラフィックを処理できるかを確認するスクリプトを実行する。",
-            "デプロイ前に IAM 権限をチェックする。",
-            "S3 からファイルをダウンロードする。",
-            "旧環境のインスタンスを削除する。"
+            "デプロイ後にアプリの稼働確認スクリプトを実行する。",
+            "デプロイ前に IAM 権限の差分を検証する。",
+            "アプリケーションファイルを S3 から取得する。",
+            "旧バージョンのインスタンスを終了する。"
           ],
           "correct": 0,
           "explanation": "CodeDeploy ValidateService イベントで、デプロイ完了後のサービス正常動作と トラフィック処理能力を検証スクリプトで確認。",
@@ -659,7 +659,7 @@
           "choices": [
             "S3 保護 (S3 Protection) の有効化",
             "S3 のパブリックアクセスブロック",
-            "CloudTrail の管理イベントのデータイベント記録",
+            "CloudTrail の S3 データイベント記録",
             "KMS 暗号化"
           ],
           "correct": 0,
@@ -675,7 +675,7 @@
             "License Manager 設定"
           ],
           "correct": 0,
-          "explanation": "AWS RAM で共有できないのは IAM ユーザー。IAM ロール、リソース（S3、Lambda等）は共有可能。",
+          "explanation": "IAM ユーザーは AWS RAM の共有対象リソースではない。Transit Gateway やサブネットなど、RAM が対応するリソース種別を組織内外のアカウントへ共有できる。",
           "type": "choice"
         },
         {

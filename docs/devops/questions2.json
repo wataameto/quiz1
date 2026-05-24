@@ -223,7 +223,7 @@
           "type": "choice"
         },
         {
-          "scenario": "OpsWorks で、インスタンスの起動や設定変更時に自動的に実行されるスクリプトの集まりを何と呼びますか？",
+          "scenario": "Chef ベースの構成管理で、インスタンス設定をまとめたスクリプト群を何と呼びますか？",
           "choices": [
             "クックブック (Cookbooks)",
             "マニフェスト (Manifests)",
@@ -231,7 +231,7 @@
             "プレイブック (Playbooks)"
           ],
           "correct": 0,
-          "explanation": "OpsWorks は Chef/Puppet で管理され、クックブックがインスタンス起動や設定変更時に自動実行されるスクリプト集です。",
+          "explanation": "Chef では、レシピや関連ファイルをまとめた単位をクックブックと呼ぶ。旧 OpsWorks Stacks の知識として問われやすいが、現在の移行先は Systems Manager などが中心。",
           "type": "choice"
         },
         {
@@ -247,15 +247,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CodeCommit で、特定のブランチ（main など）への直接プッシュを禁止し、プルリクエストを強制するために併用すべき機能は？",
+          "scenario": "CodeCommit で main ブランチへの直接プッシュを禁止し、レビュー経由の変更に寄せるために使う組み合わせは？",
           "choices": [
-            "IAM ポリシーによる Deny ルールとブランチ保護ルール",
-            "S3 バケットポリシー",
-            "VPC エンドポイント",
-            "AWS Config"
+            "IAM 条件キーによる Deny と承認ルールテンプレート",
+            "S3 バケットポリシーとオブジェクトロック",
+            "VPC エンドポイントポリシーと NACL",
+            "AWS Config ルールと修復アクション"
           ],
           "correct": 0,
-          "explanation": "CodeCommit ブランチ保護と IAM Deny ポリシーを組み合わせて、main への直接プッシュを禁止し、プルリクエスト必須にします。",
+          "explanation": "CodeCommit では IAM 条件キーで特定ブランチへの GitPush を拒否し、承認ルールテンプレートでプルリクエスト承認要件を管理できる。",
           "type": "choice"
         }
       ]

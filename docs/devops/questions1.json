@@ -10,15 +10,15 @@
       "subtitle": "CI/CD・デプロイメント自動化の問題！",
       "questions": [
         {
-          "scenario": "🔧 AWS CodePipeline でソースコード管理に使うサービスは？",
+          "scenario": "🔧 AWS CodePipeline のソースステージで AWS 管理の Git リポジトリを使う場合、該当するサービスは？",
           "choices": [
-            "バージョン管理（Git ベース）",
-            "ソースコードのビルドとテスト自動化（buildspec.yml）",
-            "コードをサーバーにデプロイするサービス（appspec.yml）",
-            "インフラをコードで定義するサービス（CloudFormation）"
+            "AWS CodeCommit",
+            "AWS CodeBuild",
+            "AWS CodeDeploy",
+            "AWS CloudFormation"
           ],
           "correct": 0,
-          "explanation": "CodeCommit は Git ベースのソースコード管理。CodeBuild はビルド・テスト、CodeDeploy はデプロイ、CloudFormation はインフラ定義と役割がそれぞれ異なる。",
+          "explanation": "CodeCommit は AWS 管理の Git リポジトリサービス。GitHub、GitLab、Bitbucket などを使う場合は CodeConnections 経由で CodePipeline に接続できる。",
           "type": "choice"
         },
         {
@@ -175,15 +175,15 @@
           "type": "choice"
         },
         {
-          "scenario": "⚙️ AWS OpsWorks の説明として正しいのは？",
+          "scenario": "⚙️ 旧 AWS OpsWorks Stacks の移行先として、運用管理を AWS の現行サービスへ寄せる場合に適切なのは？",
           "choices": [
-            "Chef・Puppet マネージド構成管理サービス（レシピ）",
-            "Kubernetes ベースコンテナ管理・実行（EKS）",
-            "ソースコード管理・デプロイ自動化（CodePipeline）",
-            "リソース利用料金を分析・管理（Billing Console）"
+            "AWS Systems Manager",
+            "Amazon EKS",
+            "AWS CodePipeline",
+            "AWS Cost Explorer"
           ],
           "correct": 0,
-          "explanation": "OpsWorks は Chef・Puppet のマネージドサービス。サーバーの設定を「レシピ」で管理する。コンテナは ECS/EKS、CI/CD は CodePipeline、コスト管理は Cost Explorer が担当。",
+          "explanation": "AWS OpsWorks Stacks は終了済みのため、既存運用は Systems Manager などへ移行する。EKS はコンテナ実行基盤、CodePipeline は CI/CD、Cost Explorer はコスト分析が主用途。",
           "type": "choice"
         },
         {
