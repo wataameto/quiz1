@@ -523,6 +523,7 @@ async function saveWrongAnswers(testId, answers, level) {
       { [key]: wrongQuestionNumbers },
       { merge: true }
     );
+    bestScores[key] = wrongQuestionNumbers;
   } catch (e) {
     console.error('Failed to save wrong answers:', e);
   }
@@ -530,15 +531,13 @@ async function saveWrongAnswers(testId, answers, level) {
 
 async function getWrongAnswerIds(testId, level) {
   if (!currentUser) return [];
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();
+  }
 
   try {
-    const collection = getCollectionName();
-    const doc = await db.collection(collection).doc(currentUser.uid).get();
-
-    if (!doc.exists) return [];
-
     const key = saveWrongAnswersKey(level, testId);
-    const wrongNumbers = doc.data()[key] || [];
+    const wrongNumbers = bestScores[key] || [];
 
     // 1-indexed → 0-indexed
     return wrongNumbers.map(n => n - 1);
