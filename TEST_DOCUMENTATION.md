@@ -2,288 +2,63 @@
 
 ## 概要
 
-このプロジェクトは、クイズ学習アプリ（簿記・DevOps）の包括的なテストスイートを含みます。Jest を使用した単体テスト、統合テスト、エッジケーステストが実装されています。
+このプロジェクトは Jest でユーティリティ、スコア計算、メニュー表示仕様、簿記問題JSON、統合的なスコア処理を検証します。
 
-### テスト統計
-- **総テストスイート**: 3
-- **総テストケース**: 107
-- **成功率**: 100% (107/107 passed)
-- **コードカバレッジ**: 100% (ステートメント) / 98.8% (ブランチ)
+現在の実行結果:
+- テストスイート: 5 passed / 5 total
+- テストケース: 118 passed / 118 total
+- 実行コマンド: npm test -- --runInBand
 
----
+## テストファイル
 
-## ファイル構成
+### src/utils.test.js
+- fmt(): 円表記と3桁区切り。
+- shuffle(): Fisher-Yates形式のシャッフル、元配列の非破壊性。
+- calculateTotalQuestions(): 複数テストの問題数集計。
+- renderJournal(): 仕訳HTML表示。
+- journalText(): 仕訳テキスト化。
+- parseScore(), getStarRating(), getScoreMessage(): スコア表示補助。
+- isValidQuizData(), isValidTest(): クイズデータ構造検証。
 
-```
-quiz1/
-├── src/
-│   ├── utils.js              # ユーティリティ関数
-│   ├── utils.test.js         # ユーティリティテスト (66 tests)
-│   ├── scoreManager.js       # スコア管理クラス
-│   ├── scoreManager.test.js  # スコア管理テスト (31 tests)
-│   └── integration.test.js   # 統合テスト + エッジケース (10 tests)
-├── package.json              # プロジェクト設定
-├── jest.config.js            # Jest設定
-└── TEST_DOCUMENTATION.md     # このファイル
-```
+### src/scoreManager.test.js
+- ScoreManager の初期化、ユーザー/DB設定、キャッシュクリア。
+- percentage から正答数への換算。
+- 複数テストの合計スコアと平均スコア。
+- quiz id から Firestore collection 名への変換。
+- スコア改善判定と試行済みテスト抽出。
 
----
+### src/integration.test.js
+- クイズデータ、スコア計算、シャッフル、仕訳/選択式問題の統合確認。
+- 複数ユーザー、空データ、高スコア、特殊文字、大規模配列などのエッジケース。
 
-## テスト内容
+### src/menu.test.js
+- docs/index.html の表示名が docs/config.json と一致すること。
+- パート数と問題数を question metadata から動的に扱うこと。
+- メニューのスコア集計が現在の question files だけを対象にすること。
+- reset 時に Firestore document の存在確認を行うこと。
+- boki1/devops の quiz page に admin question review mode があること。
 
-### 1. utils.test.js (66 tests)
+### src/bokiQuestions.test.js
+- docs/boki1/questions*.json の構造検証。
+- 各テストが現在の簿記ルールどおり10問であること。
+- 各問題に scenario, choices, correct, explanation があること。
+- 選択肢が重複しないこと。
+- 仕訳問題の借方合計と貸方合計が一致すること。
+- 仕訳の勘定科目名に 売上 / 仕入 を使っていないこと。
 
-#### fmt() - 通貨フォーマット
-- ✅ ¥マーク付きで整数部に3桁カンマ挿入
-- ✅ ゼロ、大数値、小数値の処理
-- **カバレッジ**: 100%
+## 実行方法
 
-#### shuffle() - 配列シャッフル
-- ✅ Fisher-Yatesアルゴリズムの正確性
-- ✅ 元配列の保護（非破壊）
-- ✅ 空配列・単要素配列の処理
-- ✅ シャッフルの有効性（確率的テスト）
-- **カバレッジ**: 100%
-
-#### calculateTotalQuestions() - 問題数計算
-- ✅ 複数テストからの総問題数計算
-- ✅ null/undefined/空配列の処理
-- ✅ 問題のない章のカウント
-- **カバレッジ**: 100%
-
-#### renderJournal() - 仕訳表示
-- ✅ 有効な仕訳エントリのHTML生成
-- ✅ 複数の借方・貸方エントリの処理
-- ✅ 不正なデータの処理
-- **カバレッジ**: 100%
-
-#### journalText() - 仕訳テキスト化
-- ✅ 日本語での仕訳テキスト生成
-- ✅ 複数エントリの「・」区切り
-- ✅ 不正なデータの処理
-- **カバレッジ**: 100%
-
-#### parseScore() - スコア解析
-- ✅ パーセンテージから問題数への変換
-- ✅ 小数点の丸め処理
-- ✅ 負のスコア処理
-- **カバレッジ**: 100%
-
-#### getStarRating() - 星評価
-- ✅ 100%: ⭐⭐⭐
-- ✅ 70-99%: ⭐⭐
-- ✅ 40-69%: ⭐
-- ✅ 40%未満: 　（空白）
-- **カバレッジ**: 100%
-
-#### getScoreMessage() - スコアメッセージ
-- ✅ 各スコア帯域別のメッセージ表示
-- ✅ 🏆 満点 / 🌟 すごい / 💪 惜しい / 📚 復習 / 😅 もう一度
-- **カバレッジ**: 100%
-
-#### isValidQuizData() - クイズデータ検証
-- ✅ 有効なクイズ構造の判定
-- ✅ 必須フィールド（id, tests）の確認
-- ✅ テスト配列の検証
-- **カバレッジ**: 100%
-
-#### isValidTest() - テスト構造検証
-- ✅ 有効なテスト構造の判定
-- ✅ 必須フィールド（id, title, questions）確認
-- ✅ 問題の必須フィールド検証
-- **カバレッジ**: 100%
-
----
-
-### 2. scoreManager.test.js (31 tests)
-
-#### 初期化と設定
-- ✅ デフォルト値での初期化
-- ✅ ユーザー・DB情報の設定
-- ✅ キャッシュのクリア
-- **カバレッジ**: 100%
-
-#### calculateCorrectAnswers() - 正答数計算
-- ✅ パーセンテージから正答数への変換
-- ✅ 100%, 50%, 0%の計算
-- ✅ 負のスコア処理
-- ✅ 小数点の丸め
-- **カバレッジ**: 100%
-
-#### calculateTotalScore() - 総合スコア計算
-- ✅ 複数テストのスコア合計
-- ✅ 欠落スコアの無視
-- ✅ 負のスコア処理
-- **カバレッジ**: 100%
-
-#### getCollectionName() - Firebaseコレクション名取得
-- ✅ 'boki1' → 'quiz_boki1'
-- ✅ 'devops' → 'quiz_devops'
-- ✅ 不正な入力でのエラー処理
-- **カバレッジ**: 100%
-
-#### isScoreImproved() - スコア改善判定
-- ✅ 新スコア > 旧スコア: true
-- ✅ 同点: false
-- ✅ 低下: false
-- **カバレッジ**: 100%
-
-#### getAttemptedTests() - 試行済みテスト抽出
-- ✅ スコア >= 0 のテストをフィルタ
-- ✅ 複数テスト間での処理
-- ✅ 空配列の処理
-- **カバレッジ**: 100%
-
-#### calculateAverageScore() - 平均スコア計算
-- ✅ 複数テストの平均値計算
-- ✅ 試行済みテストのみを対象
-- ✅ 丸め処理
-- **カバレッジ**: 96.15% (1行がカバーされていない)
-
----
-
-### 3. integration.test.js (10 tests + 6 エッジケーステスト)
-
-#### 統合テスト
-- ✅ クイズデータの検証と処理フロー
-- ✅ 複数テスト間でのスコア管理
-- ✅ スコア改善のフィードバック
-- ✅ ユーザー間のスコア比較
-- ✅ テスト問題のシャッフル
-- ✅ 複数のクイズ種類（仕訳・選択肢）への対応
-- ✅ パフォーマンス統計の計算
-
-#### エッジケーステスト
-- ✅ 空のクイズデータ処理
-- ✅ 非常に高いスコア（300/300など）
-- ✅ 混合スコアタイプの処理
-- ✅ 特殊文字の処理
-- ✅ 大規模配列（100テスト）での効率性
-- ✅ キャッシュ整合性
-
----
-
-## テスト実行方法
-
-### 全テストを実行
 ```bash
 npm test
-```
-
-### 特定のテストファイルのみ実行
-```bash
-npm test -- utils.test.js
-npm test -- scoreManager.test.js
-npm test -- integration.test.js
-```
-
-### ウォッチモード（自動再実行）
-```bash
+npm test -- --runInBand
+npm test -- src/menu.test.js
 npm run test:watch
-```
-
-### カバレッジレポート生成
-```bash
 npm run test:coverage
 ```
 
----
+## 運用ルール
 
-## テストカバレッジの詳細
-
-### utils.js
-```
-Statements   : 100%   ( 72/72 )
-Branches     : 100%   ( 42/42 )
-Functions    : 100%   ( 10/10 )
-Lines        : 100%   ( 72/72 )
-```
-
-### scoreManager.js
-```
-Statements   : 100%   ( 73/73 )
-Branches     : 96.15% ( 52/54 - 2 branches in error handling )
-Functions    : 100%   ( 9/9 )
-Lines        : 100%   ( 73/73 )
-```
-
----
-
-## テスト設計原則
-
-1. **単一責任の原則**: 各テストは1つの機能のみをテスト
-2. **DRY原則**: `beforeEach`で共通セットアップを実施
-3. **境界値テスト**: 0, 負数, 最大値などのエッジケースを網羅
-4. **データ検証**: 入力データの有効性を徹底的に検証
-5. **確率的テスト**: シャッフル機能の有効性を確率的に検証
-
----
-
-## CI/CDへの統合
-
-### GitHub Actions の例
-```yaml
-- name: Run tests
-  run: npm test
-  
-- name: Generate coverage
-  run: npm run test:coverage
-```
-
-### 合格条件
-- すべてのテストが成功 (107/107)
-- カバレッジ >= 95%
-- 新しいコード追加時はテスト追加が必須
-
----
-
-## 今後の改善点
-
-1. **E2Eテスト**: Puppeteer/Playwrightでブラウザ実装テスト
-2. **パフォーマンステスト**: 大規模データセットでの処理速度測定
-3. **Firebaseモック**: Firebase相互作用の完全なテスト
-4. **ビジュアルテスト**: UI要素のスクリーンショット比較
-5. **アクセシビリティテスト**: WCAG準拠性の検証
-
----
-
-## よくある質問（FAQ）
-
-### Q: テストが失敗した場合は？
-**A**: 以下を確認してください：
-1. Node.js v14+がインストール済みか
-2. `npm install`でdependenciesをインストール済みか
-3. `npm test`で全テストが実行されているか
-
-### Q: カバレッジを上げるには？
-**A**: 以下のコマンドでカバレッジレポートを確認：
-```bash
-npm run test:coverage
-```
-未カバーの行を見つけて、新しいテストケースを追加してください。
-
-### Q: 新しいテストを追加するには？
-**A**: 以下の手順で追加：
-1. `src/` ディレクトリにテストファイルを作成（`*.test.js`）
-2. `describe`と`test`でテストスイートを定義
-3. `npm test`で実行
-
----
-
-## 関連ファイル
-
-- [package.json](./package.json) - npm設定
-- [jest.config.js](./jest.config.js) - Jest設定
-- [src/utils.js](./src/utils.js) - テスト対象のユーティリティ
-- [src/scoreManager.js](./src/scoreManager.js) - テスト対象のスコア管理
-
----
-
-## ライセンス
-
-このテストコードはプロジェクトの一部です。
-
----
-
-**最終更新**: 2026-05-12
-**テストフレームワーク**: Jest v29.7.0
+- JavaScript または問題JSONを変更したら npm test を実行する。
+- ドキュメントだけの変更なら npm test は不要。
+- 問題数ルールを変更する場合は、UI表示だけでなく src/bokiQuestions.test.js も見直す。
+- 簿記問題の作問ルールは QUESTION_GUIDE.md を優先する。

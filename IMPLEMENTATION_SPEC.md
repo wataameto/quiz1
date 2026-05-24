@@ -434,9 +434,15 @@ quiz1/
 ├── package.json              # npm設定（build, prepare フック）
 ├── jest.config.js            # Jest設定
 ├── setup-hooks.sh            # Git フック セットアップスクリプト
-├── README.md                 # (最小限)
+├── README.md                 # 人間向け概要
 ├── TEST_DOCUMENTATION.md     # テストドキュメント
-└── CLAUDE.md                 # このファイル
+├── AI_PROJECT_GUIDE.md       # AI向け作業ルール
+├── QUESTION_GUIDE.md         # 作問ルール
+├── IMPLEMENTATION_SPEC.md    # 実装仕様
+├── AGENTS.md                 # Codex入口
+├── CLAUDE.md                 # Claude入口
+├── GEMINI.md                 # Gemini入口
+└── .github/copilot-instructions.md # GitHub Copilot入口
 ```
 
 ---
@@ -1147,7 +1153,7 @@ averageScore = Σ(attempted tests のpercentage) / attempted count
 
 ---
 
-## Claude Code での開発ガイドライン
+## AIエージェントでの開発ガイドライン
 
 ### 🌍 言語対応
 - **すべてのコミュニケーション**: 日本語で対応します
@@ -1157,7 +1163,7 @@ averageScore = Σ(attempted tests のpercentage) / attempted count
 ### 📋 開発時の心得
 1. **テスト駆動**: 新機能追加・バグ修正前に該当テストを確認
 2. **コミットメッセージ**: 日本語で明確に（「何を」「なぜ」を含める）
-3. **CLAUDE.md 更新**: 仕様変更時は即座に反映
+3. **関連ドキュメント更新**: 仕様変更時は AI_PROJECT_GUIDE.md / QUESTION_GUIDE.md / IMPLEMENTATION_SPEC.md の該当箇所を反映
 4. **シンプル設計**: 必要最小限の実装を心がける
 
 ### 📝 HTML ファイル管理ルール
