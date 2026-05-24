@@ -2,6 +2,79 @@
 
 AIエージェント向けの詳細な実装仕様。記述が衝突する場合は、[AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) の現在の作業ルールと [QUESTION_GUIDE.md](./QUESTION_GUIDE.md) の作問ルールを優先する。
 
+## 現在の実装スナップショット
+
+このセクションは、現行コードを再現・修正するときに最初に参照する要約。後続の詳細仕様に古い記述が残っている場合は、このセクションを優先する。
+
+### ファイル構成
+- アプリ本体は docs/ 配下の静的HTML/JSONで動く。
+- メインメニューは docs/index.html。
+- クイズ画面は docs/boki1/index.html と docs/devops/index.html。2ファイルは意図的に同じテンプレートとして同期する。
+- クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
+- 問題データは docs/boki1/questions*.json と docs/devops/questions*.json。
+- ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。
+- テストは src/*.test.js。Jestで実行する。
+
+### メインメニュー docs/index.html
+- 初期表示は screen-loading。認証判定が終わるまではログイン画面もメニューも見せない。
+- auth.onAuthStateChanged(user => ...) で currentUser を設定し、ログイン済みなら showHomeScreen()、未ログインなら showLoginScreen() を呼ぶ。
+- loginWithGoogle() は signInWithPopup を試し、失敗時に signInWithRedirect へフォールバックする。
+- calculateQuizMeta(questionsPath) は questions1.json, questions2.json ... を順に fetch し、存在しなくなったところで停止する。合計問題数とパート数を quizMetaCache に保存する。
+- getQuizScore(collectionName, questionsPath) は現在存在する question files だけを走査して、Firestoreの best_<level>_<testId> を集計する。
+- 旧形式の best_<testId> も questions1.json に対してだけ後方互換として読む。
+- メニューの総問題数、パート数、各クイズの得点表示は問題JSONから動的に計算する。固定の「3パート」「180問」などに戻さない。
+
+### クイズ画面 docs/boki1/index.html / docs/devops/index.html
+- 両方の index.html は共通テンプレート。差分を作る場合は本当に必要か確認する。
+- loadAllQuestions() が ../config.json と questions*.json を読み込み、quizId に合う config を画面へ反映する。
+- URLパラメータ admin=1 のときは通常のテスト選択ではなく showAdmin() を表示する。
+- 画面は主に screen-home, screen-quiz, screen-results, screen-admin を切り替える。
+- currentLevel は現在のパート、maxLevel は読み込めた最大パート数、quizData[level] は各パートのJSON、TESTS は現在パートの tests。
+- showHome() は全パート合計、パート別得点、現在パートのテストカードを描画する。
+- startTest(id, isReview, isPracticeMode) は通常テスト、間違い復習、練習モードを兼ねる。
+- renderQuestion() は選択肢を毎問シャッフルし、shuffledChoices に元の選択肢インデックスを保持する。
+- answer() は選択後に正誤表示、効果音、解説、次へ進む操作を出す。
+- showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。
+
+### 管理レビュー ?admin=1
+- /boki1/?admin=1 と /devops/?admin=1 で問題一覧を表示する。
+- screen-admin には全パート、全テスト、全問題、全選択肢、正解、解説を表示する。
+- 仕訳問題の選択肢は renderJournal(choice) で表示する。
+- 正解選択肢には correct class とチェック表示を付ける。
+- 管理者専用認証はない。URLを知っていれば表示できる軽量レビュー画面として扱う。
+
+### Firestore スキーマ
+- collection名は quiz_<quizId>。例: quiz_boki1, quiz_devops。
+- document id は currentUser.uid。
+- 最高点は best_<level>_<testId> に保存する。
+- 間違えた問題番号は wrongAnswers_<level>_<testId> に配列で保存する。
+- 旧キー best_<testId> はメインメニューの集計で後方互換として扱う。
+- resetCurrentLevel() は現在パートの best_* と wrongAnswers_* を FieldValue.delete() で削除する。Firestore document が存在しない場合は update しない。
+- resetAllLevels() は現在ユーザーの quiz collection document を削除する。
+- ログアウトまたは認証ユーザー変更時は currentUser と bestScores/cacheInitialized を更新し、別ユーザーのキャッシュを残さない。
+
+### 点数と問題数
+- 問題JSONは現在テスト上 1テスト10問を期待している箇所があるが、UI表示は問題数を動的に扱う。
+- クイズ画面の結果スコアは correct * 10 点、満点は currentTest.questions.length * 10 点。
+- Firestoreに保存する best_* も点数として扱う。メニュー集計では Math.round(score / 10) で正答数へ戻す。
+- 10問以外を読み込むこと自体はできるが、テストや仕様で固定を期待している箇所が残る可能性がある。問題数ルールを変えるときは src/bokiQuestions.test.js と表示仕様も見直す。
+
+### 問題JSONスキーマ
+- 1ファイルは { id, label, description, tests } を持つ。
+- tests[] は { id, title, emoji, type, subtitle, questions } を持つ。
+- questions[] は { id, scenario, choices, correct, type, explanation } を持つ。
+- type === 'choice' の choices は文字列配列。
+- type === 'journal' の choices は { debit: [{ account, amount }], credit: [{ account, amount }] } の配列。
+- correct は choices の0始まりインデックス。
+- 簿記の作問ルールは QUESTION_GUIDE.md を優先する。特に仕訳の勘定科目名として 売上 / 仕入 を使わない。
+
+### テストで守っていること
+- src/menu.test.js はメニュー名が config と一致すること、パート数/問題数を動的に扱うこと、スコア集計対象、reset時の存在確認、admin mode の存在を確認する。
+- src/bokiQuestions.test.js は簿記問題JSONの構造、10問構成、解説、重複選択肢なし、仕訳の借貸一致、禁止勘定科目を確認する。
+- src/scoreManager.test.js は ScoreManager のスコア計算、collection名、平均、試行済み判定を確認する。
+- src/utils.test.js と src/integration.test.js はユーティリティ、仕訳表示、スコア表示ロジック、統合的な計算を確認する。
+
+
 # Quiz Learning Application - プロジェクト仕様書
 
 ## プロジェクト概要
@@ -67,9 +140,9 @@ calculateAverageScore(tests, scores)
 ```
 
 **主要な計算ロジック：**
-- 1テスト = 10問
-- スコアはパーセンテージ (0-100%)
-- 正答数 = Math.round(percentage / 100 * 10)
+- src/scoreManager.js の共通計算では、1テスト10問・100点満点換算を前提にする
+- 実クイズ画面は currentTest.questions.length から満点を計算する
+- メニュー集計では保存点数を Math.round(score / 10) で正答数へ戻す
 
 ---
 
@@ -326,7 +399,7 @@ quiz1/
 │   │   ├── questions1.json   # パート1データ（3テスト）
 │   │   └── questions2.json   # パート2データ（3テスト）
 │   └── devops/
-│       ├── index.html        # DevOpsクイズページ（3パート）
+│       ├── index.html        # DevOpsクイズページ（共通テンプレート）
 │       ├── questions1.json   # パート1: 基礎初級データ（6テスト）
 │       ├── questions2.json   # パート2: 基礎中級データ（6テスト）
 │       └── questions3.json   # パート3: 基礎上級データ（6テスト）
@@ -979,7 +1052,7 @@ averageScore = Σ(attempted tests のpercentage) / attempted count
 
 すべてのクイズで「パート」という表記を統一：
 - 簿記: 「2パート」
-- DevOps: 「3パート」
+- DevOps: パート数は問題JSONから動的に表示
   - 内部的には「レベル」という変数名を使用（コード層）
   - UI 表示では「パート」を使用（ユーザー層）
 
