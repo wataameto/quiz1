@@ -8,7 +8,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "build": "node scripts/update-build-time.js",
-    "prepare": "npm run build"
+    "prepare": "git config core.hooksPath hooks && npm run build"
   },
   "keywords": [],
   "author": "",
