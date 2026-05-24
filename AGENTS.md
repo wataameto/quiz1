@@ -1,7 +1,7 @@
 # AGENTS.md
 
-このリポジトリで作業する前に、[AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) を読む。
+このリポジトリで作業するときは、まず [AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) で共通ルールを確認する。
 
-問題を追加・修正するときは、[QUESTION_GUIDE.md](./QUESTION_GUIDE.md) も読む。
+問題を追加・修正するときは、[QUESTION_GUIDE.md](./QUESTION_GUIDE.md) の作問ルールも確認する。
 
-アプリの挙動変更や実装調査をするときは、[IMPLEMENTATION_SPEC.md](./IMPLEMENTATION_SPEC.md) も読む。
+アプリの挙動変更、バグ調査、実装の深掘りをするときは、[IMPLEMENTATION_SPEC.md](./IMPLEMENTATION_SPEC.md) の詳細仕様も確認する。

@@ -1,4 +1,4 @@
-# CLAUDE.md
+# GEMINI.md
 
 このリポジトリで作業するときは、まず [AI_PROJECT_GUIDE.md](./AI_PROJECT_GUIDE.md) で共通ルールを確認する。
 
