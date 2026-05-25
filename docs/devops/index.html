@@ -34,6 +34,9 @@
     }
     .part-score-row .part-name { font-weight: 700; color: #2d3748; }
     .part-score-row .part-value { color: #0f2027; font-weight: 800; }
+    .selection-label { font-size: 0.82rem; font-weight: 800; color: #4a5568; margin: 16px 0 8px; display: flex; align-items: center; gap: 6px; }
+    .current-part-card { text-align: center; background: #f7fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 12px; margin: 8px 0 12px; color: #4a5568; font-size: 0.86rem; line-height: 1.45; }
+    .current-part-card strong { display: block; color: #2d3748; font-size: 1rem; margin-bottom: 2px; }
 
     .total-score-bar { font-size: 0.9rem; color: #718096; margin-bottom: 12px; }
     .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
@@ -55,6 +58,7 @@
     .test-card .card-emoji { display: none; }
     .test-card h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
     .test-card .test-type { font-size: 0.75rem; opacity: 0.9; margin-bottom: 12px; background: rgba(255,255,255,0.25); border-radius: 99px; padding: 2px 10px; display: inline-block; }
+    .test-card .set-summary { font-size: 0.76rem; opacity: 0.92; margin-bottom: 8px; line-height: 1.35; }
     .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
     .test-card .best-score span { font-weight: 800; font-size: 1rem; }
     @media (max-width: 520px) {
@@ -64,6 +68,7 @@
       .test-card { border-radius: 12px; padding: 10px 8px; }
       .test-card h2 { font-size: 0.92rem; line-height: 1.25; }
       .test-card .test-type { font-size: 0.62rem; padding: 2px 6px; margin-bottom: 8px; max-width: 100%; overflow-wrap: anywhere; }
+      .test-card .set-summary { font-size: 0.68rem; }
       .test-card .best-score { font-size: 0.74rem; }
       .test-card .best-score span { font-size: 0.86rem; }
       .test-card-review-btn,
@@ -169,10 +174,12 @@
         <p id="quiz-description"></p>
       </div>
     </div>
+    <div class="selection-label" id="part-selection-label" style="display:none;">① パートを選択</div>
     <div class="part-scores-section" id="part-scores-section" style="display:none;">
       <div id="part-scores-list"></div>
     </div>
-    <p id="part-description" style="text-align:center; font-size:0.95rem; color:#718096; margin:12px 0;"></p>
+    <div class="current-part-card" id="current-part-card" style="display:none;"></div>
+    <div class="selection-label" id="set-selection-label" style="display:none;">② セットを選択</div>
     <div class="test-grid" id="test-grid"></div>
   </div>
 
@@ -664,18 +671,22 @@ async function showHome() {
     totalEl.innerHTML = `${total} / ${totalQuestionsAllLevels}`;
   }
 
-  // パート説明を表示
-  const partDescEl = document.getElementById('part-description');
-  if (quizData[currentLevel] && quizData[currentLevel].description) {
-    partDescEl.textContent = quizData[currentLevel].description;
-    partDescEl.style.display = 'block';
-  } else {
-    partDescEl.style.display = 'none';
+  const currentLevelData = quizData[currentLevel];
+  const currentPartLabel = currentLevelData?.description || currentLevelData?.label || `パート ${currentLevel}`;
+  const currentPartCard = document.getElementById('current-part-card');
+  const setSelectionLabel = document.getElementById('set-selection-label');
+  if (currentLevelData && currentPartCard) {
+    currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong><span>下から挑戦するセットを選んでください</span>`;
+    currentPartCard.style.display = 'block';
+  } else if (currentPartCard) {
+    currentPartCard.style.display = 'none';
   }
+  if (setSelectionLabel) setSelectionLabel.style.display = 'flex';
 
   // レベル別スコアを計算・表示
   const partScoresSection = document.getElementById('part-scores-section');
   const partScoresList = document.getElementById('part-scores-list');
+  const partSelectionLabel = document.getElementById('part-selection-label');
   if (maxLevel > 1) {
     let partScoresHtml = '';
 
@@ -706,14 +717,17 @@ async function showHome() {
 
     partScoresList.innerHTML = partScoresHtml;
     partScoresSection.style.display = 'block';
+    if (partSelectionLabel) partSelectionLabel.style.display = 'flex';
   } else {
     partScoresSection.style.display = 'none';
+    if (partSelectionLabel) partSelectionLabel.style.display = 'none';
   }
 
   let html = '';
   for (const t of TESTS) {
     const best = await getBest(t.id);
     const bestTxt = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
+    const questionCount = Array.isArray(t.questions) ? t.questions.length : 10;
 
     // 復習問題の数を取得
     const wrongIndices = await getWrongAnswerIds(t.id, currentLevel);
@@ -730,7 +744,8 @@ async function showHome() {
     html += `<div class="test-card-container" style="display:flex; flex-direction:column; gap:8px;">
       <div class="test-card" onclick="startTest(${t.id}, false, false); soundClick();">
         <span class="card-emoji">${t.emoji}</span>
-        <h2>${t.title}</h2>
+        <h2>セット${t.id}</h2>
+        <p class="set-summary">${currentPartLabel} / ${questionCount}問</p>
         <span class="test-type">${t.type}</span>
         <p class="best-score">${bestTxt}</p>
       </div>
