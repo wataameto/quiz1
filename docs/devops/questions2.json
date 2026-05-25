@@ -10,123 +10,123 @@
       "subtitle": "CI/CD・デプロイメント自動化の問題！",
       "questions": [
         {
-          "scenario": "AWS CodePipeline でクロスアカウントデプロイを構成する際、アーティファクトストアの S3 バケットで必要な設定はどれですか？",
+          "scenario": "AWS Config の非準拠検知を契機に自動修復を実行したい。 最適な構成はどれか。",
           "choices": [
-            "送信先アカウントへのアクセスを許可するバケットポリシーを適用し、KMS カスタマーマネージドキーを使用する。",
-            "パブリックアクセスを許可する。",
-            "デフォルトの AWS マネージド型 S3 キーを使用する。",
-            "S3 静的ウェブサイトホスティングを有効にする。"
+            "AWS Config → EventBridge → Systems Manager Automation",
+            "CloudTrail → SQS → Glue",
+            "Inspector → Athena → EMR",
+            "Security Hub → Kinesis → QuickSight"
           ],
           "correct": 0,
-          "explanation": "クロスアカウントデプロイでは、送信先アカウントの CodePipeline ロールに対して S3 バケットへのアクセス許可（s3:GetObject、s3:PutObject）を付与するバケットポリシーが必須。KMS カスタマーマネージドキーを使用し、KMS キーポリシーでも送信先アカウントへのアクセスを明示的に許可する必要がある。AWS マネージド型キーではアカウント間の権限制御ができない。",
+          "explanation": "SSM Automation はランブック自動実行。 Config の評価結果から修復フローを自動化しやすい。 Glue は ETL 用であり修復処理の中心ではない。",
           "type": "choice"
         },
         {
-          "scenario": "CodeDeploy で Lambda のトラフィックを 10% ずつ 10 分ごとに増やす設定はどれですか？",
+          "scenario": "EC2 の CPU 使用率が閾値超過した際に通知を送りたい。 最適な構成はどれか。",
           "choices": [
-            "LambdaLinear10PercentEvery10Minutes",
-            "LambdaCanary10Percent10Minutes",
-            "LambdaAllAtOnce",
-            "LambdaBlueGreen10Percent"
+            "CloudWatch Alarm → SNS",
+            "CloudTrail → Athena",
+            "Config → Systems Manager Patch Manager",
+            "GuardDuty → Lambda"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy では Lambda へのトラフィック切り替え戦略を指定します。LambdaLinear10PercentEvery10Minutes は「10 分ごとに 10% ずつ増加」という線形な段階的デプロイです。Canary は少数→全体、All at once は瞬時です。",
+          "explanation": "CloudWatch Alarm はメトリクス監視。 SNS と連携して即時通知を送信できる。 CloudTrail は API 監査ログ用途。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation でスタックの削除時に特定の S3 バケットだけを残したい場合の設定はどれですか？",
+          "scenario": "複数 AWS アカウントに同じ CloudFormation スタックを配布したい。 最適なサービスはどれか。",
           "choices": [
-            "DeletionPolicy: Retain",
-            "UpdateReplacePolicy: Delete",
-            "Metadata: Keep",
-            "TerminationProtection: Enable"
+            "CloudFormation StackSets",
+            "AWS Organizations SCP",
+            "AWS Backup",
+            "Amazon Inspector"
           ],
           "correct": 0,
-          "explanation": "CloudFormation でリソースを削除から保護するには DeletionPolicy: Retain を使用。UpdateReplacePolicy はスタック更新時の動作、Metadata はメタ情報、TerminationProtection はスタック削除を禁止(スタック全体)です。",
+          "explanation": "StackSets は複数アカウント展開向け。 複数リージョンにも一括デプロイ可能。 SCP はアクセス制御であり配布機能ではない。",
           "type": "choice"
         },
         {
-          "scenario": "Auto Scaling グループで、新しいインスタンスがトラフィックを受ける前にウォームアップ時間を設けたい場合に使用する機能は？",
+          "scenario": "CI/CD パイプラインでビルド工程を担当するサービスはどれか。",
           "choices": [
-            "ヘルスチェックの猶予期間 (Health Check Grace Period)",
-            "クールダウン期間",
-            "終了ポリシー",
-            "ライフサイクルフック"
+            "AWS CodeBuild",
+            "AWS CodeDeploy",
+            "AWS Config",
+            "Amazon EventBridge"
           ],
           "correct": 0,
-          "explanation": "Auto Scaling グループでは Health Check Grace Period で、新規インスタンスがトラフィックを受け取る前のウォームアップ時間を確保できます。クールダウン期間はスケーリング操作後の待機時間です。",
+          "explanation": "CodeBuild はビルド処理担当。 テストやコンパイルを自動実行できる。 CodeDeploy はデプロイ担当サービス。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Organizations で全アカウントに対して特定のリージョン以外の使用を禁止するガードレールは？",
+          "scenario": "Security Hub の検出結果を契機に自動処理したい。 最適な連携先はどれか。",
           "choices": [
-            "サービスコントロールポリシー (SCP)",
-            "IAM 境界 (Permission Boundary)",
-            "AWS Config ルール",
-            "Resource Access Manager"
+            "EventBridge",
+            "AWS Artifact",
+            "Amazon Redshift",
+            "AWS Glue"
           ],
           "correct": 0,
-          "explanation": "SCP（サービスコントロールポリシー）は Organizations で複数アカウントへのサービス利用を制限します。IAM 境界は IAM 権限の上限、Config は設定監視、RAM はリソース共有です。",
+          "explanation": "Security Hub は EventBridge と連携可能。 findings をイベントとして処理できる。 Redshift は分析 DB であり通知用途ではない。",
           "type": "choice"
         },
         {
-          "scenario": "CodeBuild のビルド環境で、Docker イメージのレイヤーキャッシュを有効にしてビルドを高速化する方法は？",
+          "scenario": "IAM ポリシー設計で最も推奨される考え方はどれか。",
           "choices": [
-            "buildspec.yml で cache セクションに docker レイヤを定義し、プロジェクトの設定でローカルキャッシュまたは S3 キャッシュを有効にする。",
-            "インスタンスの RAM ディスクを使用する。",
-            "常に特権モードをオフにする。",
-            "ソースプロバイダーを S3 に限定する。"
+            "最小権限",
+            "全許可付与",
+            "ルートユーザー運用",
+            "共有アカウント運用"
           ],
           "correct": 0,
-          "explanation": "CodeBuild で Docker イメージレイヤーキャッシュを有効にするには、buildspec.yml で cache セクションに docker レイヤ対象を指定し、プロジェクト設定でキャッシュ場所を選択（LOCAL: ローカルキャッシュで同じビルド環境内、S3: S3 バケットで複数ビルド環境間で共有）。多段階ビルド時に中間レイヤが再利用されるため大幅に高速化できる。",
+          "explanation": "IAM は最小権限が基本。 必要最低限のみ許可する。 ルートユーザー常用は非推奨。",
           "type": "choice"
         },
         {
-          "scenario": "Systems Manager パッチマネージャーを使用して、非準拠のインスタンスを特定しつつパッチは当てない操作はどれですか？",
+          "scenario": "CloudTrail の主目的はどれか。",
           "choices": [
-            "スキャン操作 (Scan)",
-            "インストール操作 (Install)",
-            "承認済みリストの更新",
-            "インスタンスの再起動"
+            "API 操作監査",
+            "脆弱性スキャン",
+            "設定修復",
+            "メトリクス収集"
           ],
           "correct": 0,
-          "explanation": "Systems Manager パッチマネージャーのスキャン操作は非準拠インスタンスを検出するのみで、パッチは当てません。インストール操作がパッチ適用です。",
+          "explanation": "CloudTrail は API 監査ログサービス。 誰が何をしたかを追跡できる。 Inspector は脆弱性管理サービス。",
           "type": "choice"
         },
         {
-          "scenario": "Amazon EventBridge を使用して、EC2 の状態変化を検知し Lambda を起動する構成において、フィルタリングを行う場所はどこですか？",
+          "scenario": "AWS Organizations の SCP の役割はどれか。",
           "choices": [
-            "EventBridge のイベントパターン",
-            "IAM ポリシー",
-            "CloudWatch ロググループ",
-            "Lambda の環境変数"
+            "最大権限制御",
+            "リソース監視",
+            "パッチ適用",
+            "コンテナ実行"
           ],
           "correct": 0,
-          "explanation": "EventBridge でフィルタリングはイベントパターンルールで行います。IAM ポリシー、CloudWatch Logs、Lambda 環境変数はフィルタリング場所ではありません。",
+          "explanation": "SCP はアクセス上限を制御する。 組織全体のガードレールとして機能する。 CloudWatch は監視用途。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation のドリフト検出機能で特定できる内容はどれですか？",
+          "scenario": "イベント駆動アーキテクチャでイベントルーティングを担当するサービスはどれか。",
           "choices": [
-            "マネジメントコンソール等で直接変更されたリソース設定とテンプレートの差異",
-            "テンプレート内の構文エラー",
-            "リソースの削除コストの予測",
-            "IAM ユーザーのログイン履歴"
+            "Amazon EventBridge",
+            "AWS Backup",
+            "AWS Artifact",
+            "Amazon Inspector"
           ],
           "correct": 0,
-          "explanation": "ドリフト検出は、コンソール等で直接変更されたリソース設定とテンプレートの差異を特定します。構文エラーはテンプレート検証で、コスト予測や監査履歴ではありません。",
+          "explanation": "EventBridge はイベントルーティング基盤。 イベント条件で各サービスへ配信可能。 Backup はバックアップ管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "Blue/Green デプロイメントにおいて、Route 53 の加重レコードを使用する利点は？",
+          "scenario": "EC2 へ OS パッチを自動適用したい。 最適なサービスはどれか。",
           "choices": [
-            "トラフィックの割合を段階的に変更し、新バージョンのテストができる。",
-            "IP アドレスを隠蔽できる。",
-            "コストが無料になる。",
-            "SSL 証明書が不要になる。"
+            "Systems Manager Patch Manager",
+            "CloudTrail",
+            "Athena",
+            "AWS WAF"
           ],
           "correct": 0,
-          "explanation": "Route 53 の加重ルーティング（重み付け）により、トラフィックを指定割合で複数の対象に分配でき、段階的なトラフィック切り替えが可能です。",
+          "explanation": "Patch Manager はパッチ管理機能。 EC2 の更新を自動化できる。 CloudTrail は監査ログ用途。",
           "type": "choice"
         }
       ]
@@ -139,123 +139,123 @@
       "subtitle": "Infrastructure as Code の問題！",
       "questions": [
         {
-          "scenario": "AWS Secrets Manager と Parameter Store の主な違いで、Secrets Manager にしかない機能は？",
+          "scenario": "CodeDeploy の Blue/Green デプロイの利点はどれか。",
           "choices": [
-            "組み込みのシークレットローテーション機能（Lambda 連携）",
-            "暗号化機能",
-            "階層構造による管理",
-            "IAM によるアクセス制御"
+            "ダウンタイム削減",
+            "ログ長期保存",
+            "IAM 管理簡略化",
+            "コスト分析"
           ],
           "correct": 0,
-          "explanation": "Secrets Manager には**組み込みのシークレットローテーション**が特徴。Lambda 関数と連携して RDS パスワードや API キーを定期的に自動更新し、古いシークレットは一時期は並行利用できる（段階的な切り替え）。Parameter Store はローテーション機能がなく、代わりに無料で Standard パラメータ（4KB）が利用可能。安全な保存と IAM 制御は両方でサポート。",
+          "explanation": "Blue/Green は切替方式デプロイ。 新旧環境を分離して安全に更新できる。 Athena は分析サービス。",
           "type": "choice"
         },
         {
-          "scenario": "Amazon Inspector を使用して EC2 インスタンスの脆弱性をスキャンする際、必要なコンポーネントは？",
+          "scenario": "GuardDuty の主目的はどれか。",
           "choices": [
-            "AWS Systems Manager (SSM) エージェント",
-            "Inspector エージェント（レガシー版以外は SSM 経由）",
-            "CloudWatch エージェント",
-            "CodeDeploy エージェント"
+            "脅威検出",
+            "設定管理",
+            "ビルド自動化",
+            "証跡保存"
           ],
           "correct": 0,
-          "explanation": "Inspector はリモートスキャンのため、Systems Manager (SSM) エージェント経由で脆弱性情報を収集します。エージェント、CloudWatch、CodeDeploy エージェントは不要です。",
+          "explanation": "GuardDuty は脅威検出サービス。 ログを分析して異常を発見する。 Config は設定管理サービス。",
           "type": "choice"
         },
         {
-          "scenario": "Config ルールを使用して「すべての EC2 にタグが付いていること」を確認し、付いていない場合に自動で修正（修復）する機能は？",
+          "scenario": "複数アカウントの統合管理に最適なサービスはどれか。",
           "choices": [
-            "AWS Config の修復アクション (SSM Automation 連携)",
-            "CloudFormation スタックの更新",
-            "IAM ロールの継承",
-            "Lambda の定期実行のみ"
+            "AWS Organizations",
+            "AWS Batch",
+            "AWS Backup",
+            "Amazon MQ"
           ],
           "correct": 0,
-          "explanation": "AWS Config では Config ルールで非準拠を検出し、SSM Automation を使った修復アクション（Remediation Actions）で自動修正できます。CloudFormation や IAM のみでは修復できません。",
+          "explanation": "Organizations は複数アカウント統制。 OU や SCP による集中管理が可能。 Backup は保護用途。",
           "type": "choice"
         },
         {
-          "scenario": "Amazon CloudWatch Logs で機密情報をマスクするための機能は？",
+          "scenario": "CloudWatch Logs Insights の用途はどれか。",
           "choices": [
-            "ログデータの保護（Data Protection）ポリシー",
-            "サブスクリプションフィルタ",
-            "メトリクスフィルタ",
-            "ロググループの暗号化のみ"
+            "ログ検索と分析",
+            "コンテナビルド",
+            "脆弱性修復",
+            "証明書管理"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Logs の Data Protection ポリシー機能で、クレジットカード番号など機密情報をマスク（置換）できます。その他はログの保存や転送の仕組みです。",
+          "explanation": "Logs Insights はログ分析機能。 クエリでログを高速検索できる。 ACM は証明書管理サービス。",
           "type": "choice"
         },
         {
-          "scenario": "Elastic Beanstalk で、デプロイ中に新しいインスタンスのバッチを別途作成し、成功を確認してから入れ替えるポリシーは？",
+          "scenario": "Systems Manager Automation の用途はどれか。",
           "choices": [
-            "Immutable デプロイ",
-            "Rolling デプロイ",
-            "All at once デプロイ",
-            "Rebuild デプロイ"
+            "運用手順自動化",
+            "監査証跡保存",
+            "DNS 管理",
+            "データウェアハウス構築"
           ],
           "correct": 0,
-          "explanation": "Immutable デプロイは新しいインスタンスのバッチを別途起動し、ヘルスチェックに成功してから既存バッチに置き換えます。Rolling はバッチごと、All at once は一度に更新です。",
+          "explanation": "Automation はランブック実行機能。 修復や定型運用を自動化できる。 Route53 は DNS 管理サービス。",
           "type": "choice"
         },
         {
-          "scenario": "Kinesis Data Firehose から S3 にログを配信する際、分析効率を上げるために Firehose 側で実行できる処理は？",
+          "scenario": "CodePipeline の役割はどれか。",
           "choices": [
-            "データの圧縮およびフォーマット変換 (Parquet/ORC)",
-            "SQL クエリの直接実行",
-            "S3 バケットの削除",
-            "IAM ユーザーの作成"
+            "CI/CD オーケストレーション",
+            "監査ログ保存",
+            "パッチ適用",
+            "脅威分析"
           ],
           "correct": 0,
-          "explanation": "Kinesis Firehose は S3 配信設定で圧縮形式（GZIP、SNAPPY、ZIP）とフォーマット（Parquet、ORC、JSON）を指定でき、Athena による S3 Select クエリやビッグデータ分析を効率化できる。Lambda 変換を組み合わせるとさらに細粒度の処理も可能。SQL クエリ実行は Athena 側で行う。",
+          "explanation": "CodePipeline はパイプライン統合。 Build や Deploy を連携制御できる。 GuardDuty は脅威検出用途。",
           "type": "choice"
         },
         {
-          "scenario": "マルチアカウント環境で CloudTrail ログを 1 つのアカウントに集約する最適な方法は？",
+          "scenario": "AWS Config の主目的はどれか。",
           "choices": [
-            "AWS Organizations で組織のトレイルを作成し、中央アカウントの S3 にログを送信する。",
-            "各アカウントから S3 クロスリージョンレプリケーションを使う。",
-            "各アカウントの Lambda でログを転送する。",
-            "VPC ピアリング経由で転送する。"
+            "設定準拠管理",
+            "イベント通知",
+            "CI/CD 実行",
+            "コンテナ監視"
           ],
           "correct": 0,
-          "explanation": "Organizations の組織トレイルを使い、全メンバーアカウント CloudTrail のログを中央 S3 バケットに集約できます。個別設定より管理が楽です。",
+          "explanation": "Config は設定評価サービス。 準拠性と変更履歴を確認できる。 EventBridge はイベントルーティング用途。",
           "type": "choice"
         },
         {
-          "scenario": "Chef ベースの構成管理で、インスタンス設定をまとめたスクリプト群を何と呼びますか？",
+          "scenario": "CloudWatch Alarm から自動修復を起動したい。 最適な連携先はどれか。",
           "choices": [
-            "クックブック (Cookbooks)",
-            "マニフェスト (Manifests)",
-            "ビルドスペック (Buildspecs)",
-            "プレイブック (Playbooks)"
+            "Systems Manager Automation",
+            "AWS Artifact",
+            "Amazon Redshift",
+            "AWS Glue"
           ],
           "correct": 0,
-          "explanation": "Chef では、レシピや関連ファイルをまとめた単位をクックブックと呼ぶ。旧 OpsWorks Stacks の知識として問われやすいが、現在の移行先は Systems Manager などが中心。",
+          "explanation": "SSM Automation は自動修復向き。 Alarm を契機にランブック実行可能。 Redshift は分析 DB サービス。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch アラームの状態が ALARM になった際、自動的に EC2 インスタンスを終了させるアクションを追加できますか？",
+          "scenario": "AWS Backup の用途はどれか。",
           "choices": [
-            "はい、EC2 アクションとして停止、終了、再起動、または復旧を設定できる。",
-            "いいえ、Lambda を経由しなければならない。",
-            "いいえ、通知 (SNS) のみ可能である。",
-            "はい、ただし S3 バケットへの保存が必要である。"
+            "バックアップ統合管理",
+            "ログ分析",
+            "権限制御",
+            "脅威検出"
           ],
           "correct": 0,
-          "explanation": "CloudWatch アラーム ALARM 状態で EC2 停止、終了、再起動、復旧といったアクションをスケール設定で自動実行できます。Lambda 経由なしで直接設定可能です。",
+          "explanation": "AWS Backup はバックアップ統合基盤。 複数サービスを一元保護できる。 GuardDuty は脅威検出用途。",
           "type": "choice"
         },
         {
-          "scenario": "CodeCommit で main ブランチへの直接プッシュを禁止し、レビュー経由の変更に寄せるために使う組み合わせは？",
+          "scenario": "Inspector の主目的はどれか。",
           "choices": [
-            "IAM 条件キーによる Deny と承認ルールテンプレート",
-            "S3 バケットポリシーとオブジェクトロック",
-            "VPC エンドポイントポリシーと NACL",
-            "AWS Config ルールと修復アクション"
+            "脆弱性管理",
+            "イベント配信",
+            "DNS 管理",
+            "CI/CD 制御"
           ],
           "correct": 0,
-          "explanation": "CodeCommit では IAM 条件キーで特定ブランチへの GitPush を拒否し、承認ルールテンプレートでプルリクエスト承認要件を管理できる。",
+          "explanation": "Inspector は脆弱性評価サービス。 EC2 やコンテナを分析できる。 EventBridge はイベント配信用途。",
           "type": "choice"
         }
       ]
@@ -268,123 +268,123 @@
       "subtitle": "高可用性・耐障害性の問題！",
       "questions": [
         {
-          "scenario": "AWS X-Ray でアプリケーションの各コンポーネント間の呼び出し関係を可視化するツールは？",
+          "scenario": "CloudWatch Logs の保存期間を制御したい。 最適な設定はどれか。",
           "choices": [
-            "サービスマップ",
-            "トレースビューア",
-            "CloudWatch ダッシュボード",
-            "VPC フローログ"
+            "Retention Policy",
+            "Security Group",
+            "Launch Template",
+            "NACL"
           ],
           "correct": 0,
-          "explanation": "X-Ray のサービスマップはコンポーネント間の呼び出し関係を図示します。トレースビューアは個別トレースの詳細表示です。",
+          "explanation": "Retention Policy はログ保持期間設定。 古いログの自動削除を制御できる。 Security Group は通信制御用途。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation の「スタックセット (StackSets)」の主な用途は？",
+          "scenario": "EventBridge の主な役割はどれか。",
           "choices": [
-            "複数の AWS アカウントやリージョンに対して一括でスタックを作成・更新する。",
-            "スタックを削除から保護する。",
-            "リソースのコストを計算する。",
-            "テンプレートを自動生成する。"
+            "イベントルーティング",
+            "証跡暗号化",
+            "脆弱性スキャン",
+            "DNS フェイルオーバー"
           ],
           "correct": 0,
-          "explanation": "StackSets で複数アカウント・リージョンへのデプロイが一括化でき、操作が大幅に簡略化されます。",
+          "explanation": "EventBridge はイベント連携基盤。 各サービス間を疎結合で接続できる。 Inspector は脆弱性管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "Amazon GuardDuty が検出した脅威情報を自動的に修復するために推奨される組み合わせは？",
+          "scenario": "Organizations 配下で請求を一元化したい。 最適な機能はどれか。",
           "choices": [
-            "EventBridge + Lambda (または Step Functions)",
-            "S3 + Athena",
-            "CloudTrail + Config",
-            "Inspector + Systems Manager"
+            "Consolidated Billing",
+            "CloudFront",
+            "CodeArtifact",
+            "Elastic Beanstalk"
           ],
           "correct": 0,
-          "explanation": "GuardDuty が脅威を検出すると EventBridge（GuardDuty findings イベント）でそれをキャッチ、Lambda で自動修復（セキュリティグループ変更、インスタンス隔離など）、複雑なワークフローなら Step Functions で実装。その結果を SNS 通知や SecurityHub に連携。S3+Athena はログ分析、Config は設定監視が役目。",
+          "explanation": "Consolidated Billing は統合請求機能。 複数アカウントの料金をまとめられる。 CloudFront は CDN サービス。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Logs サブスクリプションフィルタでサポートされていない送信先は？",
+          "scenario": "CodePipeline でデプロイ前に手動承認を入れたい。 最適な機能はどれか。",
           "choices": [
-            "Amazon SNS",
-            "Amazon Kinesis Data Streams",
-            "Amazon Kinesis Data Firehose",
-            "AWS Lambda"
+            "Manual Approval Action",
+            "GuardDuty Findings",
+            "Route53 Health Check",
+            "Athena Query"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Logs サブスクリプションフィルタが直接サポートする送信先は Kinesis Data Streams、Kinesis Data Firehose、Lambda、および CloudWatch Logs（クロスアカウント）です。SNS は直接サポートされていません。SNS に通知したい場合は Lambda を経由する必要があります。",
+          "explanation": "Manual Approval は承認待機機能。 本番前レビュー工程を追加できる。 Athena はログ分析用途。",
           "type": "choice"
         },
         {
-          "scenario": "CodeDeploy で、オンプレミスサーバーにデプロイするために最低限必要な構成は？",
+          "scenario": "CloudTrail ログを SQL 形式で分析したい。 最適なサービスはどれか。",
           "choices": [
-            "サーバーへの CodeDeploy エージェントのインストールと、適切な IAM 権限を持つ IAM ユーザーまたはロールの紐付け",
-            "Direct Connect の接続",
-            "EC2 インスタンスへの変換",
-            "AWS への VPN 接続のみ"
+            "Amazon Athena",
+            "AWS WAF",
+            "CodeDeploy",
+            "Systems Manager Fleet Manager"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy エージェントをオンプレミスサーバーにインストール + IAM ユーザー/ロール認証情報でアクセスします。DirectConnect やVPN は必須ではありません。",
+          "explanation": "Athena は S3 上データを SQL 分析可能。 CloudTrail ログ分析でよく利用される。 WAF は Web 防御サービス。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Systems Manager セッションマネージャーの主な利点は？",
+          "scenario": "Systems Manager Session Manager の利点はどれか。",
           "choices": [
-            "SSH キーの管理や受信ポート(22番等)の開放なしに、ブラウザや CLI から安全にインスタンスを操作できる。",
-            "GUI 画面を転送できる。",
-            "インスタンスを自動で起動できる。",
-            "インターネットゲートウェイが不要になる。"
+            "踏み台サーバ不要",
+            "コンテナ自動修復",
+            "IAM 自動生成",
+            "ログ圧縮"
           ],
           "correct": 0,
-          "explanation": "Session Manager は SSH キー不要、セキュリティグループのポート 22（SSH）開放不要で安全にシェルアクセスできる。IAM ロールと Systems Manager（Session Manager）ドキュメントで権限制御。全セッションは CloudWatch Logs や S3 に自動記録でき、監査対応も容易。EC2 Instance Connect とは異なり、プライベートサブネットのインスタンスにも接続可能（VPC エンドポイント設定で）。",
+          "explanation": "Session Manager は安全なリモート接続。 踏み台 EC2 を削減できる。 IAM 自動生成機能ではない。",
           "type": "choice"
         },
         {
-          "scenario": "CodePipeline の「手動承認」アクションを実行する際、通知を送るために利用されるサービスは？",
+          "scenario": "CloudWatch でカスタムメトリクスを送信したい。 使用する API はどれか。",
           "choices": [
-            "Amazon SNS",
-            "Amazon SES",
-            "Amazon SQS",
-            "AWS Step Functions"
+            "PutMetricData",
+            "PutObject",
+            "CreateStack",
+            "StartExecution"
           ],
           "correct": 0,
-          "explanation": "CodePipeline 手動承認アクション → SNS で通知を送ります。SES はメール送信、SQS はキューイング、Step Functions はオーケストレーションです。",
+          "explanation": "PutMetricData は独自メトリクス送信 API。 CloudWatch へ任意値を登録できる。 StartExecution は Step Functions 用。",
           "type": "choice"
         },
         {
-          "scenario": "Auto Scaling ライフサイクルフックを使用中、処理が完了したことを Auto Scaling に伝えるためのコマンド（または API）は？",
+          "scenario": "Security Hub の役割はどれか。",
           "choices": [
-            "complete-lifecycle-action",
-            "put-scaling-policy",
-            "terminate-instance-in-auto-scaling-group",
-            "record-lifecycle-action-heartbeat"
+            "セキュリティ検出結果集約",
+            "DNS ルーティング",
+            "コンテナ実行",
+            "CI/CD ビルド"
           ],
           "correct": 0,
-          "explanation": "Auto Scaling ライフサイクルフック使用時に complete-lifecycle-action を呼んで、処理完了を通知します。",
+          "explanation": "Security Hub は findings 集約基盤。 複数サービスの検出を統合表示する。 ECS はコンテナ実行サービス。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Health Dashboard (旧 Personal Health Dashboard) の役割は？",
+          "scenario": "AWS Config Rules の用途はどれか。",
           "choices": [
-            "AWS のインフラ障害やメンテナンス情報のうち、自分のリソースに影響があるものを表示する。",
-            "自分の EC2 の CPU 使用率を表示する。",
-            "OS の脆弱性を報告する。",
-            "請求金額の予測を表示する。"
+            "設定準拠チェック",
+            "ログ圧縮",
+            "SQL 分析",
+            "脅威隔離"
           ],
           "correct": 0,
-          "explanation": "AWS Health Dashboard は**自分のリソースに影響がある AWS インフラ障害やメンテナンス情報**を表示します。EC2 メトリクスは CloudWatch、脆弱性は Inspector です。",
+          "explanation": "Config Rules は準拠性評価機能。 ルール違反リソースを検出できる。 Athena は分析サービス。",
           "type": "choice"
         },
         {
-          "scenario": "EC2 Auto Scaling で「古いインスタンスから順に削除したい」場合に使用する終了ポリシーは？",
+          "scenario": "CodeDeploy の Canary デプロイの特徴はどれか。",
           "choices": [
-            "OldestInstance",
-            "OldestLaunchConfiguration",
-            "ClosestToNextInstanceHour",
-            "Default"
+            "段階的トラフィック切替",
+            "一括全台更新",
+            "バックアップ暗号化",
+            "IAM 制限管理"
           ],
           "correct": 0,
-          "explanation": "OldestInstance 終了ポリシーで、最も古いインスタンスから順に削除します。OldestLaunchConfiguration は設定が古いもの、ClosestToNextInstanceHour は時間課金の最適化です。",
+          "explanation": "Canary は段階リリース方式。 少量トラフィックから安全に切替できる。 IAM は権限管理用途。",
           "type": "choice"
         }
       ]
@@ -397,123 +397,123 @@
       "subtitle": "モニタリング・ログ管理の問題！",
       "questions": [
         {
-          "scenario": "CloudWatch のカスタムメトリクスで、標準の 1 分間隔よりも細かい（最短 1 秒）頻度でデータを送信する設定は？",
+          "scenario": "CloudWatch Dashboard の用途はどれか。",
           "choices": [
-            "高解像度 (High-resolution) メトリクス",
-            "リアルタイムメトリクス",
-            "詳細モニタリング",
-            "アドバンスドメトリクス"
+            "監視可視化",
+            "脆弱性修復",
+            "コンテナ配信",
+            "パスワード保存"
           ],
           "correct": 0,
-          "explanation": "高解像度 (High-resolution) メトリクスで最短 1 秒粒度でのデータ送信が可能です。詳細モニタリングは通常の 1 分粒度です。",
+          "explanation": "Dashboard はメトリクス可視化機能。 複数監視項目をまとめて表示できる。 Secrets Manager は秘密情報保存用途。",
           "type": "choice"
         },
         {
-          "scenario": "CodeBuild で、ビルドごとに新しい IAM ロールを動的に割り当てることは可能ですか？",
+          "scenario": "Lambda を定期実行したい。 最適な構成はどれか。",
           "choices": [
-            "いいえ、プロジェクトごとに 1 つのサービスロールを事前に割り当てる必要がある。",
-            "はい、buildspec.yml で定義できる。",
-            "はい、IAM ユーザーの認証情報を使用する。",
-            "いいえ、常に root 権限で実行される。"
+            "EventBridge Scheduler",
+            "Inspector Scan",
+            "CloudFormation Drift Detection",
+            "AWS Artifact"
           ],
           "correct": 0,
-          "explanation": "CodeBuild のサービスロールはプロジェクトごとに固定で、buildspec.yml では指定できません。ただし、ロール内の権限は動的に変更可能です。",
+          "explanation": "EventBridge Scheduler は定期実行機能。 cron 式で Lambda 起動可能。 Artifact は監査レポート閲覧用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Trusted Advisor がチェックしないカテゴリはどれですか？",
+          "scenario": "IAM Role の主な用途はどれか。",
           "choices": [
-            "アプリケーションのバグ分析",
-            "コスト最適化",
-            "セキュリティ",
-            "パフォーマンス"
+            "一時権限付与",
+            "ログ分析",
+            "パッチ配布",
+            "脆弱性隔離"
           ],
           "correct": 0,
-          "explanation": "Trusted Advisor はセキュリティ、コスト、パフォーマンス、フォルトトレランス、制限値をチェック。アプリケーションバグ分析はしません。",
+          "explanation": "IAM Role は一時認証向け。 EC2 や Lambda に権限委任できる。 Patch Manager は更新管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation の「マクロ (Macros)」を使用すると何ができますか？",
+          "scenario": "Organizations OU の役割はどれか。",
           "choices": [
-            "テンプレートの処理中に Lambda 関数を呼び出してカスタムの変換（置換など）を行える。",
-            "スタックを自動で削除できる。",
-            "コストを 50% 削減できる。",
-            "マルチアカウントデプロイを行う。"
+            "アカウントグループ化",
+            "ログ暗号化",
+            "メトリクス分析",
+            "DNS 管理"
           ],
           "correct": 0,
-          "explanation": "CloudFormation マクロを使うと、テンプレート処理中に Lambda を呼び出してカスタム変換ができます。",
+          "explanation": "OU はアカウント整理単位。 SCP 適用範囲をまとめられる。 Route53 は DNS サービス。",
           "type": "choice"
         },
         {
-          "scenario": "Amazon EventBridge パイプ (Pipes) の主な目的は？",
+          "scenario": "Systems Manager Parameter Store の用途はどれか。",
           "choices": [
-            "異なるソース（SQS, DynamoDB ストリーム等）とターゲットをポイントツーポイントで簡単に統合する。",
-            "VPC 間を接続する。",
-            "S3 の容量を増やす。",
-            "Docker イメージをビルドする。"
+            "設定値保存",
+            "コンテナ監視",
+            "CI/CD 制御",
+            "DDoS 防御"
           ],
           "correct": 0,
-          "explanation": "EventBridge Pipes は異なるソースとターゲットを直接つなぎ、変換フィルタリングを簡潔に記述できます。",
+          "explanation": "Parameter Store は設定値管理機能。 秘密情報や環境変数を保持できる。 Shield は DDoS 防御用途。",
           "type": "choice"
         },
         {
-          "scenario": "EC2 で稼働中のアプリの標準出力を CloudWatch Logs に送るために推奨される方法は？",
+          "scenario": "CloudWatch Agent の用途はどれか。",
           "choices": [
-            "CloudWatch エージェントをインストールして設定する。",
-            "VPC フローログを有効にする。",
-            "EC2 インスタンスタイプを変更する。",
-            "AWS CLI を crontab で回す。"
+            "OS メトリクス収集",
+            "IAM 制御",
+            "データ変換",
+            "脆弱性隔離"
           ],
           "correct": 0,
-          "explanation": "CloudWatch エージェントをインストール + 設定ファイルでログ転送先を指定し、アプリ標準出力を CloudWatch Logs に送ります。",
+          "explanation": "CloudWatch Agent は OS 情報収集。 メモリやディスク利用率を送信できる。 IAM は権限管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Systems Manager の「インベントリ (Inventory)」機能で収集できる情報は？",
+          "scenario": "EventBridge Pipes の用途はどれか。",
           "choices": [
-            "インスタンス内の OS バージョン、インストール済みソフト、ネットワーク設定などのメタデータ",
-            "S3 バケット内のオブジェクト一覧",
-            "IAM ユーザーのパスワード",
-            "請求の詳細な明細"
+            "イベント転送簡略化",
+            "証明書管理",
+            "WAF 制御",
+            "コンテナ起動"
           ],
           "correct": 0,
-          "explanation": "Systems Manager インベントリは OS バージョン、ソフト、ネットワーク設定などのメタデータを自動収集します。",
+          "explanation": "Pipes はイベント接続簡略化機能。 SQS や Kinesis と連携しやすい。 ACM は証明書管理サービス。",
           "type": "choice"
         },
         {
-          "scenario": "CodeDeploy で「失敗した時に自動的にロールバックする」ためのトリガー条件として設定できるものは？",
+          "scenario": "CodeArtifact の用途はどれか。",
           "choices": [
-            "デプロイの失敗時、または CloudWatch アラームのしきい値超え",
-            "SNS 通知が届かなかった時",
-            "CodeCommit にプッシュされた時",
-            "S3 バケットが一杯になった時"
+            "パッケージ管理",
+            "DNS 制御",
+            "ログ暗号化",
+            "脅威分析"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy のロールバック条件として、デプロイ失敗時や CloudWatch アラーム超過時が設定できます。",
+          "explanation": "CodeArtifact は成果物リポジトリ。 依存パッケージを集中管理できる。 GuardDuty は脅威分析用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Application Cost Profiler の用途は？",
+          "scenario": "CloudFormation Drift Detection の用途はどれか。",
           "choices": [
-            "複数のユーザーや組織で共有されているリソースのコストを、アプリケーション別に詳細に配分・分析する。",
-            "単一アカウントの月額料金を見る。",
-            "EC2 のスポットインスタンスの価格を予測する。",
-            "AWS の請求書を発行する。"
+            "設定差分検出",
+            "脆弱性修復",
+            "イベント通知",
+            "請求分析"
           ],
           "correct": 0,
-          "explanation": "Application Cost Profiler で、共有リソースのコストをアプリケーション別に詳細分析・配分できます。",
+          "explanation": "Drift Detection は差分検知機能。 IaC と実環境のズレを確認できる。 Cost Explorer は料金分析用途。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch ダッシュボードで複数のリージョンのメトリクスを 1 つの画面に表示できますか？",
+          "scenario": "Systems Manager Run Command の用途はどれか。",
           "choices": [
-            "はい、表示できる。",
-            "いいえ、リージョンごとにダッシュボードが分離されている。",
-            "はい、ただし有料のアドオンが必要である。",
-            "いいえ、CloudFormation で作成した場合のみ可能。"
+            "複数 EC2 コマンド実行",
+            "証跡監査",
+            "コンテナビルド",
+            "SQL 分析"
           ],
           "correct": 0,
-          "explanation": "CloudWatch ダッシュボードは複数リージョンのメトリクスを 1 つの画面に表示できます。",
+          "explanation": "Run Command は遠隔操作機能。 複数 EC2 に一括命令できる。 Athena は SQL 分析用途。",
           "type": "choice"
         }
       ]
@@ -526,123 +526,123 @@
       "subtitle": "インシデント対応・イベント管理の問題！",
       "questions": [
         {
-          "scenario": "Step Functions で、長時間実行されるワークフローのオーケストレーションを行う利点は？",
+          "scenario": "CloudWatch Composite Alarm の利点はどれか。",
           "choices": [
-            "状態管理、エラーハンドリング、リトライ処理をコードから分離して定義できる。",
-            "Lambda の実行制限（15分）を 1 ステップで無視できる。",
-            "コストが必ず Lambda 単体より安くなる。",
-            "ソースコードを自動生成する。"
+            "複数アラーム統合判定",
+            "脆弱性スキャン高速化",
+            "DNS 切替自動化",
+            "バックアップ圧縮"
           ],
           "correct": 0,
-          "explanation": "Step Functions（StateMachine）は複数の Lambda/ECS/Glue などのタスクを並列・逐次実行するワークフローを定義。状態管理、エラーハンドリング（Catch）、リトライ・バックオフ処理、待機（Wait）タスクを JSON で宣言的に記述できるため、ビジネスロジックはタスク内に、ワークフロー制御は Step Functions に分離。最大 1 年の長時間実行も可能で、Lambda 15 分制限を超える処理に最適。",
+          "explanation": "Composite Alarm は条件統合監視。 複数 Alarm を組み合わせられる。 Route53 は DNS 管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Resource Groups の役割は？",
+          "scenario": "AWS Health Dashboard の用途はどれか。",
           "choices": [
-            "タグなどに基づいて、関連するリソースを論理的にまとめて管理・監視しやすくする。",
-            "複数の AWS アカウントを 1 つにまとめる。",
-            "ユーザーをグループ化して IAM 権限を付与する。",
-            "S3 のデータをフォルダ分けする。"
+            "AWS 障害情報確認",
+            "CI/CD 実行",
+            "脆弱性隔離",
+            "DNS キャッシュ"
           ],
           "correct": 0,
-          "explanation": "Resource Groups はタグベースでリソースをまとめ、グループごとに監視・管理を一括化できます。",
+          "explanation": "Health Dashboard は障害通知機能。 AWS 側障害や保守を確認できる。 CodePipeline は CI/CD 用途。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation の `Transform: AWS::Serverless-2016-10-31` は何を示していますか？",
+          "scenario": "IAM Access Analyzer の用途はどれか。",
           "choices": [
-            "そのテンプレートが SAM (Serverless Application Model) フォーマットであること",
-            "スタックを 2016 年の仕様にダウングレードすること",
-            "S3 バケットを自動で作成すること",
-            "Docker コンテナを起動すること"
+            "外部共有検出",
+            "ログ圧縮",
+            "イベント転送",
+            "コンテナ監視"
           ],
           "correct": 0,
-          "explanation": "SAM (Serverless Application Model) は CloudFormation の拡張で、サーバーレスアプリケーション開発を簡潔に記述できます。",
+          "explanation": "Access Analyzer は公開検出機能。 意図しない共有リソースを見つける。 EventBridge はイベント連携用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS AppConfig の主な用途は？",
+          "scenario": "Step Functions の主目的はどれか。",
           "choices": [
-            "アプリケーションの設定値（機能フラグやパラメータ）を、再デプロイなしに安全に展開・管理する。",
-            "EC2 の OS をインストールする。",
-            "VPC のサブネット分割を行う。",
-            "ソースコードの静的解析を行う。"
+            "ワークフロー制御",
+            "DNS 管理",
+            "証明書発行",
+            "ログ削除"
           ],
           "correct": 0,
-          "explanation": "AppConfig は設定値やフィーチャーフラグを分離管理し、アプリ再デプロイなしに段階的に展開（Deployment Strategy: Linear, Exponential, All-at-once）。バリデーション（JSON Schema）を設定して無効な値を自動拒否、ロールバック（CloudWatch メトリクスやカスタム Lambda）も設定可能。A/B テスト用途にも活用。",
+          "explanation": "Step Functions は状態管理ワークフロー。 複数 Lambda を順序制御できる。 ACM は証明書管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Logs Insights の機能は？",
+          "scenario": "Organizations SCP で禁止できるものはどれか。",
           "choices": [
-            "専用のクエリ言語を使用して、ログデータを高速に検索・分析・可視化する。",
-            "ログを自動で削除する。",
-            "ログを S3 にアーカイブする。",
-            "ログに電子署名を付与する。"
+            "特定 API 実行",
+            "CloudWatch メトリクス",
+            "ログ保存期間",
+            "CPU 使用率"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Logs Insights は独自のクエリ言語で、ログの高速検索・分析・グラフ化ができます。",
+          "explanation": "SCP は API レベル制御可能。 組織全体の制限を設定できる。 CloudWatch は監視サービス。",
           "type": "choice"
         },
         {
-          "scenario": "CodeDeploy エラー `Health constraints invalid` の一般的な原因は？",
+          "scenario": "CloudTrail Insights の用途はどれか。",
           "choices": [
-            "最小健全ホスト数（Minimum Healthy Hosts）の要件を満たせないため、デプロイが停止している。",
-            "IAM ロールに権限がない。",
-            "ディスク容量が不足している。",
-            "ネットワーク接続が切れている。"
+            "異常 API 検知",
+            "コンテナ配信",
+            "DNS 暗号化",
+            "脆弱性隔離"
           ],
           "correct": 0,
-          "explanation": "CodeDeploy の Health constraints invalid エラーは、最小健全ホスト数 (Minimum Healthy Hosts) の要件が満たせない時に発生します。",
+          "explanation": "Insights は異常行動分析機能。 通常と異なる API 活動を検出する。 Inspector は脆弱性管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Service Catalog で管理者が行うべき操作は？",
+          "scenario": "Systems Manager Inventory の用途はどれか。",
           "choices": [
-            "承認済みの CloudFormation テンプレートを「製品」として登録し、ユーザーにセルフサービスで提供する。",
-            "S3 にソースコードをアップロードする。",
-            "EC2 インスタンスを 1 台ずつ手動で構築する。",
-            "ドメインを登録する。"
+            "EC2 情報収集",
+            "証明書更新",
+            "CI/CD 制御",
+            "DNS フェイルオーバー"
           ],
           "correct": 0,
-          "explanation": "Service Catalog で承認済みテンプレートを製品として登録し、ユーザーがセルフサービスで利用できます。",
+          "explanation": "Inventory は構成情報収集機能。 インストールソフト等を一覧化できる。 Route53 は DNS サービス。",
           "type": "choice"
         },
         {
-          "scenario": "Amazon ECS のデプロイで「Rolling update」を選択した場合の挙動は？",
+          "scenario": "Security Hub findings を通知したい。 最適な構成はどれか。",
           "choices": [
-            "古いタスクを徐々に停止し、新しいバージョンのタスクに順次入れ替える。",
-            "すべてのタスクを一度に停止してから新しく作る。",
-            "新しいロードバランサーを自動で作成する。",
-            "デプロイを行わない。"
+            "Security Hub → EventBridge → SNS",
+            "Inspector → Athena → EMR",
+            "CloudTrail → Glue → Redshift",
+            "Config → Batch → MQ"
           ],
           "correct": 0,
-          "explanation": "ECS Rolling update では、古いタスクを徐々に停止しながら新タスクに置き換え、ダウンタイムを最小化します。",
+          "explanation": "EventBridge は findings 連携可能。 SNS で即時通知を送信できる。 Glue は ETL 処理用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS CloudMap の主な役割は？",
+          "scenario": "Config の修復アクションで利用されることが多いサービスはどれか。",
           "choices": [
-            "アプリケーション内のリソース（マイクロサービスなど）にカスタム名を付け、サービス検出を可能にする。",
-            "インフラの地図を作成する。",
-            "CloudFormation の依存関係を可視化する。",
-            "世界地図上のリソース配置を表示する。"
+            "Systems Manager Automation",
+            "CloudFront",
+            "Amazon Lex",
+            "MediaConvert"
           ],
           "correct": 0,
-          "explanation": "CloudMap でリソースにカスタム名を付け、サービス検出を容易にします。特にマイクロサービス環境で有用です。",
+          "explanation": "Automation は修復処理向き。 Config 連携で自動対応できる。 CloudFront は CDN サービス。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Audit Manager を使用して得られるメリットは？",
+          "scenario": "CloudWatch Synthetics の用途はどれか。",
           "choices": [
-            "AWS の利用状況を継続的に監査し、規制遵守 (コンプライアンス) のための証拠収集を自動化できる。",
-            "アプリケーションのバグを見つける。",
-            "AWS のコストを削減する。",
-            "ネットワーク速度を向上させる。"
+            "監視テスト自動化",
+            "脆弱性分析",
+            "権限制御",
+            "CI/CD 承認"
           ],
           "correct": 0,
-          "explanation": "Audit Manager で AWS 利用状況を継続的に監査し、コンプライアンス証拠を自動収集・管理できます。",
+          "explanation": "Synthetics は監視シナリオ実行。 Web 動作確認を自動化できる。 IAM は権限管理用途。",
           "type": "choice"
         }
       ]
@@ -655,123 +655,123 @@
       "subtitle": "セキュリティ・コンプライアンスの問題！",
       "questions": [
         {
-          "scenario": "CodePipeline の「クロスリージョン」アクションの制約は？",
+          "scenario": "CodeCommit の用途はどれか。",
           "choices": [
-            "アーティファクトストア（S3）がリージョンごとに必要になる。",
-            "1 つの S3 バケットですべてまかなえる。",
-            "クロスリージョンは不可能である。",
-            "追加料金が一切かからない。"
+            "ソースコード管理",
+            "イベント転送",
+            "監査ログ暗号化",
+            "脅威隔離"
           ],
           "correct": 0,
-          "explanation": "クロスリージョンアクションでは、各リージョンごとにアーティファクトストア(S3)が必要になります。1 つの S3 では全リージョンをカバーできません。",
+          "explanation": "CodeCommit は Git リポジトリ。 AWS 上でコード管理できる。 EventBridge はイベント連携用途。",
           "type": "choice"
         },
         {
-          "scenario": "Config ルールの「カスタムルール」を作成するために使用するサービスは？",
+          "scenario": "CloudWatch Contributor Insights の用途はどれか。",
           "choices": [
-            "AWS Lambda",
-            "Amazon S3",
-            "AWS CodeBuild",
-            "Amazon SNS"
+            "高頻度要因分析",
+            "DNS 監査",
+            "脆弱性修復",
+            "証明書管理"
           ],
           "correct": 0,
-          "explanation": "Config カスタムルールは Lambda 関数で実装され、独自のチェックロジックを定義できます。",
+          "explanation": "Contributor Insights は傾向分析機能。 大量アクセス要因などを分析できる。 ACM は証明書管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS CloudTrail Insights が検出するものは？",
+          "scenario": "AWS Artifact の用途はどれか。",
           "choices": [
-            "API コールのボリュームにおける異常なスパイクやアクティビティの増大",
-            "IAM パスワードの有効期限",
-            "EC2 の起動時間",
-            "S3 バケットの合計サイズ"
+            "監査レポート閲覧",
+            "イベント配信",
+            "CI/CD ビルド",
+            "OS パッチ適用"
           ],
           "correct": 0,
-          "explanation": "CloudTrail Insights は API コールボリュームの異常なスパイクを検出します。",
+          "explanation": "Artifact はコンプライアンス文書提供。 監査証跡や契約書を確認できる。 CodeBuild はビルド用途。",
           "type": "choice"
         },
         {
-          "scenario": "Elastic Beanstalk で `.ebextensions` フォルダを置く場所は？",
+          "scenario": "CloudFormation Change Sets の用途はどれか。",
           "choices": [
-            "アプリケーションソースコードのルートディレクトリ",
-            "S3 バケットのトップレベル",
-            "/etc/aws フォルダ",
-            "ホームディレクトリ"
+            "変更内容事前確認",
+            "脅威分析",
+            "DNS 切替",
+            "ログ圧縮"
           ],
           "correct": 0,
-          "explanation": ".ebextensions は アプリケーションソースのルートに置き、デプロイ時に自動的に設定を適用します。",
+          "explanation": "Change Sets は変更差分確認機能。 適用前に IaC 変更をレビューできる。 GuardDuty は脅威検出用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Systems Manager Patch Manager の「パッチベースライン」に設定できる内容は？",
+          "scenario": "Systems Manager State Manager の用途はどれか。",
           "choices": [
-            "承認するパッチの分類（重大度、パッケージ名など）や、適用までの待機期間",
-            "インスタンスの起動時間",
-            "S3 のアクセス制限",
-            "EC2 のインスタンスタイプ"
+            "設定状態維持",
+            "イベントルーティング",
+            "CI/CD 制御",
+            "データ分析"
           ],
           "correct": 0,
-          "explanation": "パッチベースラインで以下を設定：承認ルール（例：CRITICAL パッチは自動承認、その他は手動）、除外パッチ（例：特定バージョンは除外）、デフォルトパッチ言語（Linux: al2023 など）、承認後の適用待機期間（0〜30 日）。Compliance Scanning でパッチ適用状況も監視できる。",
+          "explanation": "State Manager は状態維持機能。 EC2 の設定準拠を継続管理できる。 EventBridge はイベント基盤。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch アラームで、一定期間データが届かない場合（データ不足）の挙動をどう設定すべきか？",
+          "scenario": "GuardDuty のデータソースとして利用されるものはどれか。",
           "choices": [
-            "missing データの処理方法（breaching、notBreaching、ignore、missing）を指定する。",
-            "必ずアラーム状態にする。",
-            "自動的にアラームを削除する。",
-            "SNS でエラーを送るのみ。"
+            "CloudTrail",
+            "CodePipeline",
+            "CloudFormation",
+            "AppConfig"
           ],
           "correct": 0,
-          "explanation": "CloudWatch アラームで missing データ処理方法を指定でき、データが来ない場合の挙動（breaching/notBreaching/ignore など）を制御できます。",
+          "explanation": "GuardDuty は CloudTrail を分析可能。 異常 API 操作検出に利用される。 CodePipeline は CI/CD サービス。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Step Functions の「Express Workflows」が適しているケースは？",
+          "scenario": "AWS Config Aggregator の用途はどれか。",
           "choices": [
-            "毎秒数千回の実行が必要な、短時間かつ高頻度のイベント駆動型ワークフロー",
-            "1 年間続く長期のワークフロー",
-            "手動承認が必要なワークフロー",
-            "低コストで月 1 回だけ動かすバッチ"
+            "複数アカウント集約",
+            "DNS 管理",
+            "動画変換",
+            "CI/CD 実行"
           ],
           "correct": 0,
-          "explanation": "Step Functions Express Workflows は毎秒数千実行の高頻度・短時間ワークフロー向けで、コスト効率的です。",
+          "explanation": "Aggregator は Config 情報統合。 複数アカウントを横断確認できる。 MediaConvert は動画変換用途。",
           "type": "choice"
         },
         {
-          "scenario": "Amazon X-Ray SDK をアプリに組み込む主な目的は？",
+          "scenario": "CodeDeploy の In-place デプロイの特徴はどれか。",
           "choices": [
-            "送信リクエスト、受信リクエスト、リソースへの呼び出しに関するメタデータ（セグメント）を収集・送信するため",
-            "動画を配信するため",
-            "パスワードを暗号化するため",
-            "ディスクをフォーマットするため"
+            "既存環境を直接更新",
+            "新環境へ完全切替",
+            "脆弱性分析専用",
+            "ログ圧縮専用"
           ],
           "correct": 0,
-          "explanation": "X-Ray SDK を組み込むと、送受信リクエスト・リソース呼び出しのメタデータ（セグメント）を自動収集し、X-Ray に送信します。",
+          "explanation": "In-place は既存環境更新方式。 Blue/Green より単純構成で利用可能。 GuardDuty は脅威分析用途。",
           "type": "choice"
         },
         {
-          "scenario": "CodePipeline で、ソースアクションの変更検出方法として推奨される（最も効率的な）ものは？",
+          "scenario": "EventBridge Archive の用途はどれか。",
           "choices": [
-            "Amazon EventBridge (旧 CloudWatch Events)",
-            "CodePipeline による定期的なポーリング",
-            "手動での実行ボタンクリック",
-            "SNS からの通知受信"
+            "イベント再実行",
+            "IAM 制御",
+            "コンテナ暗号化",
+            "DNS キャッシュ"
           ],
           "correct": 0,
-          "explanation": "CodePipeline での変更検出は EventBridge（旧 CloudWatch Events）が最も効率的です。ポーリングより低レイテンシ・低コストです。",
+          "explanation": "Archive はイベント保存機能。 Replay により再実行できる。 IAM は権限管理用途。",
           "type": "choice"
         },
         {
-          "scenario": "AWS Compute Optimizer が推奨を提供するために分析するデータは？",
+          "scenario": "CloudWatch Anomaly Detection の用途はどれか。",
           "choices": [
-            "過去 14 日間（デフォルト）の CloudWatch メトリクス（CPU、メモリ、IO 等）の使用状況",
-            "昨日の天気予報",
-            "IAM ユーザーの権限",
-            "S3 のオブジェクト数"
+            "異常値検出",
+            "証明書更新",
+            "CI/CD 承認",
+            "バックアップ削除"
           ],
           "correct": 0,
-          "explanation": "Compute Optimizer は過去 14 日間（デフォルト）の CloudWatch メトリクスを分析し、インスタンスタイプの推奨を提供します。",
+          "explanation": "Anomaly Detection は異常分析機能。 通常パターンとの差分を自動検出する。 ACM は証明書管理用途。",
           "type": "choice"
         }
       ]
