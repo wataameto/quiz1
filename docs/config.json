@@ -31,5 +31,16 @@
     "topGradient": "linear-gradient(90deg, #11998e, #38ef7d, #ff9966, #ff5e62)",
     "accentColor": "#11998e",
     "accentActive": "linear-gradient(135deg, #f0fdf4, #dcfce7)"
+  },
+  "joho1": {
+    "title": "💻 情報処理1 練習問題",
+    "heading": "情報処理1 練習問題",
+    "description": "情報社会・コンピュータ・プログラミングの基本",
+    "icon": "💻",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #00b4db, #0083b0, #3a7bd5, #3a6073)",
+    "accentColor": "#00b4db",
+    "accentActive": "linear-gradient(135deg, #f0f9ff, #e0f2fe)"
   }
 }
