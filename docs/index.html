@@ -194,25 +194,34 @@
       font-size: 0.95rem;
     }
 
-    .btn-reload {
+    .btn-reload-inline {
       background: #edf2f7;
       border: 1.5px solid #cbd5e0;
       color: #4a5568;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
       cursor: pointer;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
       font-family: inherit;
     }
 
-    .btn-reload:hover {
+    .btn-reload-inline:hover {
       background: #e2e8f0;
+      color: #2d3748;
+    }
+
+    .btn-reload-inline:hover .reload-icon {
       transform: rotate(180deg);
+    }
+
+    .reload-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
     }
 
     .btn-logout {
@@ -369,11 +378,15 @@
             <div style="font-size: 0.75rem; color: #a0aec0;">ログイン中</div>
           </div>
         </div>
-        <button class="btn-reload" onclick="forceReload()" title="最新の状態に更新">🔄</button>
         <button class="btn-logout" onclick="logout()">ログアウト</button>
       </div>
     </div>
 
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 8px;">
+      <button class="btn-reload-inline" onclick="forceReload()" title="最新の状態に更新">
+        <span class="reload-icon">🔄</span> 最新に更新
+      </button>
+    </div>
     <div style="font-size: 0.85rem; color: #718096; margin-bottom: 12px; text-align: right;">
       合計：<span id="score-total">0問</span> / <span id="score-grand-total">0問</span>
     </div>
