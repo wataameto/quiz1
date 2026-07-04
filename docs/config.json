@@ -20,5 +20,16 @@
     "topGradient": "linear-gradient(90deg, #f7971e, #ffd200, #21d4fd, #b721ff)",
     "accentColor": "#f7971e",
     "accentActive": "linear-gradient(135deg, #fff9ed, #fffbea)"
+  },
+  "kokyo1": {
+    "title": "⚖️ 公共1 期末考査対策",
+    "heading": "公共1 期末考査対策",
+    "description": "1学期期末考査 テスト対策プリント",
+    "icon": "⚖️",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #11998e, #38ef7d, #ff9966, #ff5e62)",
+    "accentColor": "#11998e",
+    "accentActive": "linear-gradient(135deg, #f0fdf4, #dcfce7)"
   }
 }

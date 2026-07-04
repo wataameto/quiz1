@@ -165,7 +165,7 @@
 <div class="container">
   <div id="screen-home">
     <div class="home-top">
-      <a href="../" style="position:absolute; top:0; left:0; background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
+      <a href="../" onclick="backToMainMenu(event)" style="position:absolute; top:0; left:0; background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
       <button class="btn-reset-corner" onclick="resetScores()">🗑️ 成績リセット</button>
       <div class="total-score-bar" style="position: absolute; top: 42px; right: 0; text-align: right; margin-bottom: 0; margin-top: 0;">🎯 総合成績: <span id="total-score-display">-</span></div>
       <div style="height: 80px;"></div>
@@ -225,7 +225,7 @@
 
   <div id="screen-admin" class="hidden">
     <div class="admin-top">
-      <a href="../" style="position:absolute; top:0; left:0; background:transparent; color:#667eea; border:2px solid #667eea; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;">🏠 メインメニュー</a>
+      <a href="../" onclick="backToMainMenu(event)" style="position:absolute; top:0; left:0; background:transparent; color:#667eea; border:2px solid #667eea; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;">🏠 メインメニュー</a>
       <div style="height:42px;"></div>
       <div class="admin-title" id="admin-title">問題一覧</div>
       <div class="admin-subtitle" id="admin-subtitle"></div>
@@ -624,6 +624,14 @@ async function resetAllLevels() {
   } catch (e) { console.error(e); }
 }
 
+function backToMainMenu(event) {
+  const isFromMenu = new URLSearchParams(location.search).get('from') === 'menu';
+  if (isFromMenu || (window.opener && !window.opener.closed)) {
+    event.preventDefault();
+    window.close();
+  }
+}
+
 async function getTotalCorrect() {
   // 全レベルの合計を計算
   let total = 0, attempted = 0;
@@ -631,7 +639,11 @@ async function getTotalCorrect() {
     if (!quizData[level] || !quizData[level].tests) continue;
     for (const t of quizData[level].tests) {
       const best = await getBest(t.id, level);
-      if (best >= 0) { total += Math.round(best / 10); attempted++; }
+      if (best >= 0) {
+        const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
+        total += Math.round(best / 100 * qCount);
+        attempted++;
+      }
     }
   }
   return { total, attempted };
@@ -675,13 +687,19 @@ async function showHome() {
   const currentPartLabel = currentLevelData?.description || currentLevelData?.label || `パート ${currentLevel}`;
   const currentPartCard = document.getElementById('current-part-card');
   const setSelectionLabel = document.getElementById('set-selection-label');
+
+  const unitName = quizId === 'kokyo1' ? 'プリント' : 'セット';
+
   if (currentLevelData && currentPartCard) {
-    currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong><span>下から挑戦するセットを選んでください</span>`;
+    currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong>`;
     currentPartCard.style.display = 'block';
   } else if (currentPartCard) {
     currentPartCard.style.display = 'none';
   }
-  if (setSelectionLabel) setSelectionLabel.style.display = 'flex';
+  if (setSelectionLabel) {
+    setSelectionLabel.textContent = `② ${unitName}を選択`;
+    setSelectionLabel.style.display = 'flex';
+  }
 
   // レベル別スコアを計算・表示
   const partScoresSection = document.getElementById('part-scores-section');
@@ -702,7 +720,8 @@ async function showHome() {
       for (const t of levelData.tests) {
         const best = await getBest(t.id, level);
         if (best >= 0) {
-          levelCorrect += Math.round(best / 10);
+          const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
+          levelCorrect += Math.round(best / 100 * qCount);
         }
       }
 
@@ -717,10 +736,16 @@ async function showHome() {
 
     partScoresList.innerHTML = partScoresHtml;
     partScoresSection.style.display = 'block';
-    if (partSelectionLabel) partSelectionLabel.style.display = 'flex';
+    if (partSelectionLabel) {
+      partSelectionLabel.style.display = 'flex';
+      partSelectionLabel.textContent = '① パートを選択';
+    }
   } else {
     partScoresSection.style.display = 'none';
-    if (partSelectionLabel) partSelectionLabel.style.display = 'none';
+    if (partSelectionLabel) {
+      partSelectionLabel.style.display = 'flex';
+      partSelectionLabel.textContent = '① パートは1個で固定です';
+    }
   }
 
   let html = '';
@@ -738,13 +763,13 @@ async function showHome() {
 
     // 未挑戦テストには練習モードボタンを追加
     const practiceBtn = best < 0
-      ? `<button class="test-card-practice-btn" onclick="startTest(${t.id}, false, true); soundClick();" style="padding:8px 12px; background:#667eea; color:#fff; border:none; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">練習モード（10問）</button>`
+      ? `<button class="test-card-practice-btn" onclick="startTest(${t.id}, false, true); soundClick();" style="padding:8px 12px; background:#667eea; color:#fff; border:none; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">練習モード（${questionCount}問）</button>`
       : '';
 
     html += `<div class="test-card-container" style="display:flex; flex-direction:column; gap:8px;">
       <div class="test-card" onclick="startTest(${t.id}, false, false); soundClick();">
         <span class="card-emoji">${t.emoji}</span>
-        <h2>セット${t.id}</h2>
+        <h2>${unitName}${t.id}</h2>
         <p class="set-summary">${currentPartLabel} / ${questionCount}問</p>
         <span class="test-type">${t.type}</span>
         <p class="best-score">${bestTxt}</p>
@@ -923,8 +948,8 @@ function nextQuestion() { currentQ++; renderQuestion(); }
 async function showResults() {
   const total   = currentTest.questions.length;
   const correct = answers.filter(a => a.correct).length;
-  const score   = correct * 10; // 1問10点
-  const maxScore = total * 10;
+  const score   = Math.round((correct / total) * 100);
+  const maxScore = 100;
 
   if (!isReviewMode && !isPracticeModeActive) {
     await setBest(currentTest.id, score);

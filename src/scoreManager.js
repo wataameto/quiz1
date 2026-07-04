@@ -20,9 +20,9 @@ class ScoreManager {
   }
 
   // Calculate number of correct answers from percentage score
-  calculateCorrectAnswers(percentageScore) {
+  calculateCorrectAnswers(percentageScore, totalQuestions = 10) {
     if (percentageScore < 0) return 0;
-    return Math.round(percentageScore / 100 * 10);
+    return Math.round(percentageScore / 100 * totalQuestions);
   }
 
   // Calculate total score from tests
@@ -31,7 +31,8 @@ class ScoreManager {
     return tests.reduce((sum, test) => {
       const score = scores[`best_${test.id}`];
       if (score !== undefined && score >= 0) {
-        sum += this.calculateCorrectAnswers(score);
+        const qCount = (test.questions && Array.isArray(test.questions)) ? test.questions.length : 10;
+        sum += this.calculateCorrectAnswers(score, qCount);
       }
       return sum;
     }, 0);

@@ -76,7 +76,7 @@ describe('Integration Tests - Quiz Application Workflow', () => {
     };
 
     const totalScore = scoreManager.calculateTotalScore(quizData.tests, scores);
-    expect(totalScore).toBe(14); // 8 + 6 points
+    expect(totalScore).toBe(3); // Test 1 (2 Qs, 80%) -> 2, Test 2 (1 Q, 60%) -> 1
 
     const averageScore = scoreManager.calculateAverageScore(quizData.tests, scores);
     expect(averageScore).toBe(70); // (80 + 60) / 2
@@ -141,8 +141,8 @@ describe('Integration Tests - Quiz Application Workflow', () => {
     const user1Total = scoreManager.calculateTotalScore(quizData.tests, user1Scores);
     const user2Total = scoreManager.calculateTotalScore(quizData.tests, user2Scores);
 
-    expect(user1Total).toBe(20);
-    expect(user2Total).toBe(10);
+    expect(user1Total).toBe(3);
+    expect(user2Total).toBe(2);
     expect(scoreManager.isScoreImproved(user1Total, user2Total)).toBe(true);
   });
 
@@ -203,7 +203,7 @@ describe('Integration Tests - Quiz Application Workflow', () => {
     expect(average).toBe(80);
 
     const total = scoreManager.calculateTotalScore(tests, scores);
-    expect(total).toBe(16); // 9 + 7 points
+    expect(total).toBe(3); // Test 1 (2 Qs, 90%) -> 2, Test 2 (1 Q, 70%) -> 1
   });
 
   test('should provide collection names for both quiz types', () => {

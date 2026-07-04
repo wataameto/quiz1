@@ -44,10 +44,10 @@ function journalText(entry) {
        + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
 }
 
-// Parse score from percentage (score is percentage, 10 questions = 100%)
-function parseScore(percentage) {
+// Parse score from percentage
+function parseScore(percentage, totalQuestions = 10) {
   if (percentage < 0) return -1;
-  return Math.round(percentage / 100 * 10);
+  return Math.round(percentage / 100 * totalQuestions);
 }
 
 // Get star rating based on ratio

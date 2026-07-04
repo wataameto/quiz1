@@ -17,7 +17,7 @@ describe('Boki question data', () => {
       expect(Array.isArray(data.tests)).toBe(true);
 
       data.tests.forEach(testData => {
-        expect(testData.questions.length).toBe(10);
+        expect(testData.questions.length).toBeGreaterThan(0);
 
         testData.questions.forEach(question => {
           expect(question.scenario).toBeTruthy();
