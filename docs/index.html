@@ -194,6 +194,27 @@
       font-size: 0.95rem;
     }
 
+    .btn-reload {
+      background: #edf2f7;
+      border: 1.5px solid #cbd5e0;
+      color: #4a5568;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .btn-reload:hover {
+      background: #e2e8f0;
+      transform: rotate(180deg);
+    }
+
     .btn-logout {
       background: transparent;
       border: 2px solid #e53e3e;
@@ -348,6 +369,7 @@
             <div style="font-size: 0.75rem; color: #a0aec0;">ログイン中</div>
           </div>
         </div>
+        <button class="btn-reload" onclick="forceReload()" title="最新の状態に更新">🔄</button>
         <button class="btn-logout" onclick="logout()">ログアウト</button>
       </div>
     </div>
@@ -632,6 +654,12 @@ auth.onAuthStateChanged(user => {
   createBuildTimeDisplay();
   updateBuildTimeDisplay();
 })();
+
+function forceReload() {
+  const url = new URL(window.location.href);
+  url.searchParams.set('t', Date.now());
+  window.location.href = url.toString();
+}
 </script>
 </body>
 </html>
