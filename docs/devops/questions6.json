@@ -7,776 +7,389 @@
       "title": "📦 模擬試験3-1",
       "type": "SDLC Automation",
       "emoji": "📦",
-      "subtitle": "CI/CD・デプロイメント自動化の問題！",
+      "subtitle": "本番レベルのSDLC自動化問題！",
       "questions": [
         {
-          "scenario": "ある企業では AWS Config により Security Group の危険設定を検知している。違反時には自動でルール修復を行いたい。最適な構成はどれか。",
+          "scenario": "あるグローバル小売企業では、開発アカウントのAWS CodePipelineから本番アカウントのAmazon ECSクラスター（AWS Fargate）へアプリケーションを自動デプロイするマルチアカウントのCI/CDパイプラインを構築しています。デプロイのセキュリティを確保するため、ビルド成果物を格納するS3バケットは本番アカウントに配置し、AWS KMSのカスタマー管理鍵（CMK）で暗号化する必要があります。セキュリティポリシーにより、パブリックネットワークを介したアクセスは禁止されており、運用のオーバーヘッドと配信の遅延を最小限に抑える必要があります。この要件を満たす最適な構成はどれか。",
           "choices": [
-            "Config → EventBridge → Systems Manager Automation",
-            "CloudTrail → Athena → Glue",
-            "CodePipeline → Backup",
-            "Inspector → MQ"
+            "本番アカウントでKMSキーポリシーを更新し、開発アカウントのCodePipelineロールとCodeBuildロールに対してキーの使用権限を付与する。本番S3バケットのポリシーで開発アカウントからのアクセスを許可し、開発アカウントのIAMロールに本番S3バケットへのアクセス権限を付与する。CodePipelineの設定で、ビルド成果物の暗号化に本番アカウントのKMS CMKを指定する。",
+            "開発アカウントと本番アカウントの間に双方向のVPCピアリングを構成し、S3用インターフェイスVPCエンドポイント（AWS PrivateLink）を経由してデータを同期する。開発S3バケットに一度ビルド成果物を格納した後、Lambda関数を使用して本番S3バケットにレプリケーションし、本番アカウントのAWS KMSのAWS管理鍵（aws/s3）で再暗号化する。",
+            "開発アカウントに一時的なIAMユーザーを作成し、そのアクセスキーとシークレットキーを開発アカウントのAWS Secrets Managerに保存する。CodeBuild実行時に本番アカウントのIAMロールをAssumeRoleするスクリプトを実行し、S3へのコピーとKMSキーでの暗号化をすべてAPI経由で直接処理する。",
+            "本番アカウントでAmazon EventBridgeバスを設定し、開発アカウントのCodePipelineの進捗状況を監視する。ビルドが完了した時点でEventBridge経由で本番アカウントのAWS Lambda関数を起動し、本番アカウント側から開発アカウントのS3バケットへインターネット経由で成果物をプルして本番S3バケットへ移行する。"
           ],
           "correct": 0,
-          "explanation": "EventBridge は違反イベント連携可能。 Automation で自動修復を実行できる。 Glue は ETL 用途。",
+          "explanation": "クロスアカウントのCodePipelineにおいて、暗号化に使用するKMSキーはAWS管理のキー（aws/s3など）はクロスアカウントで共有できないため、必ずカスタマー管理鍵（CMK）を使用する必要があります。本番アカウントのCMKとS3バケットポリシーで開発アカウントのロールへの権限を付与し、CodePipelineで暗号化プロバイダーとしてそのCMKを指定するのが、追加のリソース（VPCピアリングや複雑なレプリケーションLambdaなど）を使わずに、運用のオーバーヘッドと遅延を最小限に抑える最も標準的でセキュアな設計です。他の選択肢は、管理鍵のクロスアカウント共有不可、余計なネットワーク構成や一時アクセスキーの使用、あるいはインターネット経由の非効率なデータ移動を伴うため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "Organizations 環境で S3 パブリック公開を禁止したい。最適な方法はどれか。",
+          "scenario": "金融サービス企業が、Amazon ECS（AWS Fargate）で動作するコア取引システムのデプロイにおいて、ダウンタイムをゼロにし、新バージョンの不具合によるビジネスへの影響を最小限に抑えたいと考えています。デプロイ時にはトラフィックの10%を新しいタスクセットに誘導し、5分間問題が発生しないことを確認した上で、残りの90%のトラフィックを10分かけて段階的にシフトさせる必要があります。また、新バージョンでHTTP 5xxエラー率のスパイクまたはレイテンシの悪化が検出された場合、自動的に即時ロールバックが行われる仕組みを、運用のオーバーヘッドを最小限に抑えて実装したいと考えています。どの構成を採用すべきか。",
           "choices": [
-            "SCP で Public Access Block 無効化を拒否する",
-            "CloudWatch Alarm を設定する",
-            "Athena Query を実行する",
-            "CodeBuild を利用する"
+            "AWS CodeDeployを使用してECSブルー/グリーンデプロイを実行し、デプロイ設定として「CodeDeployDefault.ECSLinear10PercentEvery10Minutes」に似たカスタムデプロイ設定を作成する。AppSpecファイルでターゲットグループとタスク定義を指定し、新旧のターゲットグループに対するCloudWatchアラーム（HTTP 5xxエラー率とターゲット応答時間）をCodeDeployのロールバックトリガーとして設定する。",
+            "Amazon Route 53 of 加重ルーティングを使用して、新旧 of ECSサービスに対応するApplication Load Balancer（ALB）間で10:90の比率でトラフィックを分割する。各VPC内に配置したPrometheusでエラー率を監視し、しきい値を超えた場合にAWS Systems Manager Automationランブックを起動して、Route 53のレコードセットを元に戻すスクリプトを実行する。",
+            "ECSサービス定義の「最大パーセンテージ」を200%、「最小ヘルスパーセンテージ」を100%に設定したローリングアップデートを構成する。新しいコンテナイメージの起動直後に、Amazon EventBridgeでECSタスクの異常状態イベントをトリガーし、Lambda関数を呼び出して過去の安定したタスク定義へ自動でサービスを更新する。",
+            "AWS App Meshを利用してサービスメッシュを構築し、仮想ルート（Virtual Route）の重み付け設定を手動で変更するスクリプトをAWS CodeBuildで実行する。ビルドフェーズのテストスクリプトでCloudWatchメトリクスを5分間ポーリングし、エラーが検出された場合はApp Meshのルート定義を古い仮想ノードに再マッピングして終了する。"
           ],
           "correct": 0,
-          "explanation": "SCP は組織全体の権限制御可能。 危険 API を横断的に禁止できる。 Alarm は監視用途。",
+          "explanation": "AWS CodeDeployはECSのブルー/グリーンデプロイにおいて、カナリアや線形（Linear）といった段階的なトラフィック移行をネイティブにサポートしています。AppSpecファイルでデプロイ手順を定義し、CloudWatchアラームをCodeDeployの自動ロールバックトリガーとしてバインドすることで、エラー発生時に追加のカスタムスクリプトやオーケストレータを必要とせず、完全自動で即時ロールバックを実現できます。他の選択肢は、DNSキャッシュによる遅延、段階的な移行がサポートされないローリングアップデート、あるいは非常に高コストで運用負荷が高いApp Meshのカスタム実装であるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Alarm から EC2 自動復旧を行いたい。最適なサービスはどれか。",
+          "scenario": "ある企業が、AWS LambdaとAmazon API Gateway（REST API）で構築されたサーバーレスアプリケーションを展開しています。新しい関数の変更を本番環境に適用する際、新しいLambda関数のバージョンにトラフィックの10%をルーティングし、検証期間中にエラー率がしきい値を超えた場合に自動的にロールバックさせたいと考えています。開発者のデプロイ作業を最小限にし、Infrastructure as Code (IaC) で安全なリリースパイプラインを定義するための最適な方法はどれか。",
           "choices": [
-            "Systems Manager Automation",
-            "CloudTrail Insights",
-            "AWS Artifact",
-            "Amazon MQ"
+            "AWS SAM（Serverless Application Model）またはAWS CloudFormationを使用し、Lambda関数のリソースで「AutoPublishAlias」プロパティを有効にし、DeploymentPreferenceとして「Canary10Percent5Minutes」を指定する。CloudWatchアラーム（関数のエラー率など）を定義し、DeploymentPreferenceのAlarmsリストに追加する。",
+            "API Gatewayのステージ変数を使用して、古いLambda関数と新しいLambda関数の別々のエイリアス（V1, V2）を指すように設定する。Amazon Route 53のDNS加重レコードを作成し、API Gatewayのカスタムドメイン間でトラフィックを10%と90%に分割し、アラーム検知時にLambdaでステージ変数を書き換える。",
+            "Lambda関数のコード内に条件分岐ロジックを実装し、ユーザーIDのハッシュ値に基づいて10%の確率で新機能のコードパスを実行するように実装する。新旧コードの実行ログをCloudWatch Logsで収集し、エラーが多発した場合はS3上の動的フラグファイルを更新して新機能パスを無効化する。",
+            "2つの異なるAWS Lambda関数（古いバージョン用と新しいバージョン用）を並行して実行し、API Gatewayの前に配置したApplication Load Balancer（ALB）のターゲットグループ加重設定を用いて10:90で振り分ける。エラーが発生した場合は、AWS Systems ManagerのParameter Storeの値を更新してALBの設定を書き換える。"
           ],
           "correct": 0,
-          "explanation": "Automation は修復ランブック向け。 CloudWatch と連携して自動実行できる。 CloudTrail は監査用途。",
+          "explanation": "AWS SAMおよびAWS CloudFormation（CodeDeploy統合）は、Lambda関数のエイリアスに対する段階的なトラフィックシフト（Canaryデプロイ）を標準機能としてサポートしています。「AutoPublishAlias」と「DeploymentPreference」を指定するだけで、裏でCodeDeployが自動的にエイリアスのルーティング比率を調整し、指定されたCloudWatchアラームの状態を監視して、エラー発生時には自動的に古いバージョンへロールバックします。これにより運用のオーバーヘッドが極めて低くなります。他の選択肢は、DNSキャッシュ問題、複雑なアプリケーションコードの変更、あるいは不要なALBターゲットグループの設定書き換えなどの過剰な実装であるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "企業では CodePipeline のデプロイ前に手動承認を入れたい。最適な機能はどれか。",
+          "scenario": "あるSaaSプロバイダーは、マルチリージョン展開の一部としてAWS CloudFormationを使用して、DynamoDBテーブルとS3バケットをプロビジョニングし、さらにサードパーティのSaaS監視ツールにWebフックURLを登録するカスタムリソース（AWS Lambdaで実装）を含むスタックを展開しています。本番デプロイ時、まれに新機能のデータベースインデックス作成でエラーが発生した際、スタックの作成が失敗したにもかかわらずサードパーティ側へのWebフック登録だけが残ってしまう問題が発生しています。スタックの更新や作成が失敗した場合に、サードパーティの登録を自動的かつ確実にクリーンアップし、環境全体を整合性のある状態に保ちながら、手動介入なしでロールバックを完了させるための最適な設計はどれか。",
           "choices": [
-            "Manual Approval Action",
-            "Config Aggregator",
-            "GuardDuty Findings",
-            "Athena Query"
+            "カスタムリソースのLambda関数において、CloudFormationから送信されるリクエストタイプが「Delete」または「Update」（古いリソースのクリーンアップ時）の場合に、サードパーティAPIを呼び出して不要なWebフック登録を削除する削除ロジックを堅牢に実装し、常にCloudFormation応答URL（ResponseURL）にSUCCESS（または適切なステータス）を返すように設計する。",
+            "CloudFormationスタックの更新失敗をトリガーとするAmazon EventBridgeルールを設定し、AWS Step Functionsステートマシンを起動する。ステートマシンは、CloudFormationテンプレートに記述されたリソースを個別にスキャンし、サードパーティ監視ツールのAPIを実行して登録を手動で削除するワークフローを実行する。",
+            "CloudFormationテンプレートの「OnFailure」オプションを「DO_NOTHING」に設定し、デプロイ失敗時にリソースがそのまま残るようにする。その後、Systems Manager Automationをトリガーして手動でサードパーティAPIを呼び出して削除し、再度CloudFormationでロールバックコマンドを実行する。",
+            "AWS Lambdaカスタムリソースのコード内に例外処理を記述せず、エラー発生時にはそのままプロセスをクラッシュさせてCloudFormationへの応答送信をバイパスする。これによりCloudFormationがタイムアウトを検出し、削除リクエストをスキップしてそのままスタックを削除できるようにする。"
           ],
           "correct": 0,
-          "explanation": "Manual Approval は承認待機機能。 本番反映前レビューを実施できる。 Athena は分析用途。",
+          "explanation": "AWS CloudFormationのカスタムリソース（Lambda）は、スタックの作成や更新が失敗してロールバック（Deleteリクエスト）が開始された場合、CloudFormationから「Delete」イベントを受け取ります。このDeleteイベントのハンドラー内で、サードパーティ側に登録された不要なリソースをAPI経由でクリーンアップする処理を適切に実装しておく必要があります。これにより、CloudFormationの標準のロールバック処理の一部としてサードパーティのクリーンアップが自動で実行されます。他の選択肢は、CloudFormation外で非同期にクリーンアップを行うため非常に複雑なロジックを必要とするか、手動介入を要求するか、あるいはスタックが1時間ハングするため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudTrail の主な用途はどれか。",
+          "scenario": "ある電子商取引（EC）サイトを運営する企業は、Amazon Aurora PostgreSQLを使用しており、高トラフィックな環境においてアプリケーションの新しいバージョンをデプロイする際のデータベーススキーマ更新プロセスを設計しています。現在のデプロイプロセスでは、データベースのスキーマ変更（カラムの追加やデータ型の変更など）に伴ってアプリケーションを一時停止させる必要があり、ビジネス上の機会損失が発生しています。スキーマ変更とアプリケーションデプロイの間、ユーザーに対して完全にダウンタイムなし（Zero downtime）で動作し、万が一新バージョンに致命的なバグが発見された場合も、データベースの不整合を起こさずに即座に旧バージョンへ切り戻せるようにするための、DevOpsとして最も推奨されるアプローチはどれか。",
           "choices": [
-            "API 操作監査",
-            "DNS レプリケーション",
-            "CI/CD 配信",
-            "動画変換"
+            "データベースの変更において、拡大（Expand）と縮小（Contract）パターン（平行運用パターン）を適用する。まず、古いバージョンのアプリケーションが動作している状態で、新旧両方のスキーマと互換性のある変更（非NULL制約なしのカラム追加など）を実行し、新バージョンをデプロイしてトラフィックを切り替え、移行が完全に成功した後に不要になった古いスキーマ要素（古いカラムなど）を削除する。",
+            "AWS Database Migration Service (AWS DMS) を使用して、現在の本番データベースから新しいスキーマを持つクローンデータベースへの継続的レプリケーション（CDC）をセットアップする。新アプリケーションのデプロイ時に、DNSルーティングをクローンデータベースに向け、同時に旧データベースへの書き込みを完全に禁止してレプリケーションを停止する。",
+            "CloudFormationでAurora PostgreSQLのブルー/グリーンデプロイ機能をトリガーする。更新処理中、CodeDeployを用いて新旧アプリケーションインスタンスのそれぞれから対応するDBクラスターへ接続し、デプロイ完了後にAWS CLIを使用して「Switchover」コマンドを発行してDNSエンドポイントを切り替える。",
+            "デプロイ直前にAurora PostgreSQL of データベーススナップショットを作成し、新しいスキーマ定義のDDLスクリプトを実行する。新バージョンのデプロイ後にバグが発生した場合は、保存したスナップショットから新規のDBクラスターを復元し、Route 53のCNAMEをその新しい復元インスタンスに切り替える。"
           ],
           "correct": 0,
-          "explanation": "CloudTrail は API 監査ログサービス。 誰が何をしたか追跡できる。 Route53 は DNS サービス。",
+          "explanation": "ゼロダウンタイムと安全な切り戻しを実現するためには、データベースの「Expand/Contract（拡大・縮小）」パターンを適用し、アプリケーションコードとデータベーススキーマの間に後方互換性と前方互換性を保つように段階的にリリースすることがAWSおよび一般的なDevOpsのベストプラクティスです。まず両バージョンが稼働可能な状態（Expand）を作り、完全に移行した後に古い要素を削除（Contract）することで、アプリケーションの即時切り戻しが可能となり、データベースのリストアやダウンタイムを回避できます。他の選択肢は、データ不整合リスク、レプリケーションの複雑性、あるいはスナップショットリストア中のデータ消失を引き起こすため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "Security Hub の特徴として最適なものはどれか。",
+          "scenario": "金融テクノロジー企業では、セキュリティ監査要件が非常に厳しく、CI/CD環境におけるすべてのトラフィックがパブリックインターネットを経由しないように義務付けられています。AWS CodePipelineおよびAWS CodeBuildを使用してJavaアプリケーションのビルドを行っていますが、サードパーティ製のライブラリや社内共通ライブラリをホストするAWS CodeArtifactへのアクセス、およびAmazon S3からのキャッシュの取得を、完全に閉じたVPC環境内で行う必要があります。この環境で、最もセキュアでパブリックインターネットへのアクセスが発生しないネットワーク構成はどれか。",
           "choices": [
-            "セキュリティ findings 集約",
-            "動画圧縮",
-            "DNS 暗号化",
-            "CI/CD ビルド"
+            "CodeBuildプロジェクトを、インターネットゲートウェイやNATゲートウェイを持たないプライベートサブネット内のVPCに配置する。VPC内に、AWS CodeArtifact（APIおよびリポジトリ用）、S3（ゲートウェイ型）、およびCodeBuildサービス自体のためのVPCエンドポイント（AWS PrivateLink）を作成し、セキュリティグループでサブネット内からのHTTPS通信を許可する。",
+            "CodeBuildプロジェクトの環境設定で「VPCに接続しない」を選択し、パブリックIPを持たせる。CodeArtifactとS3のバケットポリシーを更新し、特定の送信元IP範囲（CodeBuildのパブリックIPレンジ）からのアクセスのみを明示的に許可するように設定する。",
+            "CodeBuildを実行するプライベートサブネットにNATゲートウェイとインターネットゲートウェイを設定し、パブリックインターネット経由でAWS CodeArtifactおよびS3にアクセスする。ただし、AWS WAFをNATゲートウェイの前面に構成して、他のパブリックWebサイトへのWebトラフィックをすべてドロップする。",
+            "AWS CodeBuild内のビルドスクリプトで、AWS Directory ServiceおよびAWS Client VPNを使用して、CodeBuildのコンテナが起動するたびに安全なトンネルを張り、オンプレミスに設置されたプロキシサーバーを介してCodeArtifactおよびS3にアクセスするように設計する。"
           ],
           "correct": 0,
-          "explanation": "Security Hub は findings 統合基盤。 複数サービス結果を集約表示できる。 MediaConvert は動画用途。",
+          "explanation": "インターネットへの通信を一切発生させず、AWSサービス（S3、CodeArtifact、CodeBuild）とプライベートVPCの間で通信を完結させるためのベストプラクティスは、VPCエンドポイント（PrivateLinkおよびS3用のGatewayエンドポイント）を使用することです。CodeBuild自体をVPC内のプライベートサブネット（IGW/NATなし）で実行し、各サービスのVPCエンドポイントを構成することで、すべての通信がAWSネットワーク内に閉じられ、セキュリティ監査要件を完全に満たすことができます。他の選択肢は、パブリックIPを必要とするか、NAT経由のパブリックルートを作成するか、あるいはオンプレミスプロキシを介した無駄なホップを強いるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "企業では EC2 への SSH 接続を禁止したい。最適なサービスはどれか。",
+          "scenario": "あるメディア企業は、Amazon CloudFrontとAmazon S3を使用してグローバルな静的コンテンツ配信ウェブサイトをホストしています。同社は可用性を最大化するため、プライマリS3バケットが存在するAWSリージョン全体で障害が発生した場合でも、自動的にセカンダリリージョンのS3バケットからコンテンツを継続して提供し、ユーザーにエラー画面（HTTP 5xx）を見せないようにしたいと考えています。運用のオーバーヘッドを最小限に抑え、DNSレコードの更新やLambda@Edgeの複雑なスクリプト実装を必要としない最適な構成はどれか。",
           "choices": [
-            "Systems Manager Session Manager",
-            "AWS Backup",
-            "CloudFront",
-            "Amazon Inspector"
+            "CloudFrontのオリジングループを設定し、プライマリS3バケットをプライマリアソシエーションとして、セカンダリリージョンのS3バケットをセカンダリアソシエーションとして登録する。フェイルオーバーの基準として、403、404、500、502、503、および504のステータスコードを指定する。",
+            "Amazon Route 53のレイテンシーベースのルーティングを使用し、2つの異なるCloudFrontディストリビューション（それぞれ異なるリージョンのS3を指す）を定義する。Route 53のアクティブ/パッシブ型ヘルスチェックを設定し、プライマリCloudFrontのヘルスが低下した際にDNSレベルでフェイルオーバーを実行する。",
+            "CloudFrontにLambda@Edgeの「Origin Request」イベントをバインドし、プライマリS3へのリクエストが失敗した場合に例外をキャッチして、リクエストオブジェクト内のオリジンドメイン名を自動的にセカンダリリージョンのS3バケットのエンドポイントに書き換えるNode.jsスクリプトを実行する。",
+            "AWS S3のクロスリージョンレプリケーション（CRR）を構成し、さらにS3 Multi-Region Access Points（MRAP）を有効にする。CloudFrontのカスタムオリジンとしてMRAPのエンドポイントを登録し、AWS Global Acceleratorを介したリージョン間フェイルオーバーを適用する。"
           ],
           "correct": 0,
-          "explanation": "Session Manager は SSH 不要接続。 踏み台サーバ削減にも有効。 Inspector は脆弱性用途。",
+          "explanation": "Amazon CloudFrontのオリジンフェイルオーバー（Origin Groups）機能を使用すると、プライマリオリジン（S3バケット）への要求が特定のHTTPステータスコード（5xxや4xxなど）を返した場合、自動的にセカンダリオリジン（セカンダリS3バケット）に要求を転送させることができます。これはCloudFrontの組み込み機能であり、複雑なLambda@Edgeの記述やRoute 53 DNSの切り替えラグがなく、最も運用のオーバーヘッドが低く効率的です。他の選択肢は、DNS切り替えに伴う伝播ラグ、Lambda@Edgeの開発・保守コスト、あるいはMRAPを使用する非効率な構成であるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation StackSets の用途として最適なものはどれか。",
+          "scenario": "あるエンタープライズ企業は、セキュリティ要件の一環として、セキュリティ専用のAWSアカウント（監査アカウント）にて、すべてのプロダクション変更の手動承認ワークフローを管理したいと考えています。CodePipelineは共有サービスアカウントで実行されており、本番アカウントへのデプロイ前に、監査アカウントの担当者がSlack通知から直接デプロイ内容を承認できる必要があります。承認の記録は監査ログとして保存し、承認者の権限は最小限に抑える必要があります。この要件を満たす最もセキュアで自動化された構成はどれか。",
           "choices": [
-            "複数アカウント IaC 展開",
-            "脅威分析",
-            "DNS フェイルオーバー",
-            "動画圧縮"
+            "CodePipelineに手動承認ステージを追加し、承認通知のSNSトピックを設定する。EventBridgeでそのSNS通知を検知し、AWS Lambdaを起動してSlackメッセージを送信する。Slackの承認ボタンはAPI Gateway経由で監査アカウントのLambdaを呼び出し、Lambdaが「auditor-role」（監査アカウントから共有サービスアカウントへAssumeRole可能な最小限の権限を持つロール）を引き受けて、CodePipelineの承認アクションを実行（PutApprovalResult）する。",
+            "CodePipelineの承認トピックとして監査アカウントのAmazon SNSを直接指定し、そのSNSトピックをSlackのChatbotと連携させる。承認者はSlack上で直接「aws codepipeline approve」コマンドを実行し、CodePipelineが動作している共有サービスアカウントのIAMフル管理者アクセス権を持つユーザーの認証情報を使用してAPIを実行する。",
+            "監査アカウント内にCodePipelineと同一のパイプラインを作成し、AWS CodeCommitのリポジトリをポーリングさせる。承認時に監査アカウントのLambdaが自動で実行され、CodeBuildを実行して本番アカウントへ直接デプロイし、承認ログを監査アカウントのS3に保存する。",
+            "AWS Systems ManagerのOpsCenterを使用してインシデントを作成し、Slackに通知を送信する。承認者がSlackで承認を選択した際、LambdaがSsm:PutParameterを実行して特定のパラメータの値を「APPROVED」に変更し、CodePipelineがそのパラメータ値を定常的にポーリングして自動的に次のステージに進むように構築する。"
           ],
           "correct": 0,
-          "explanation": "StackSets は横断 IaC 展開向け。 複数アカウントへ一括適用できる。 GuardDuty は脅威分析用途。",
+          "explanation": "CodePipelineの手動承認（Manual Approval）機能は、SNSトピックを介して通知を行い、PutApprovalResult APIを呼び出すことで承認を完了します。セキュリティ専用アカウント（監査アカウント）の担当者必要最小限の権限（AssumeRole経由）を使用してこのAPIを実行し、Slack統合はAPI GatewayとLambdaを利用することで安全に疎結合で処理できます。これにより、最小限の権限（Principle of Least Privilege）と監査ログの確保が達成されます。他の選択肢は、過剰な管理者権限の公開、パイプラインの二重管理、あるいはCodePipelineに存在しないポーリング制御を実装しようとするため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "GuardDuty の主目的はどれか。",
+          "scenario": "あるテクノロジー企業は、Amazon EKS（Elastic Kubernetes Service）上で動作するコンテナ化されたウェブアプリケーションを、AWS CodePipelineとAWS CodeBuildを使用して継続的にデプロイしています。KubernetesマニフェストおよびHelmチャート内で、外部データベース接続用の認証情報やAPIキーなどのシークレット情報をハードコードせずに、安全にポッドへ注入する必要があります。また、ポッドへのシークレット供給はAWS側のシークレットライフサイクル（ローテーション）と同期している必要があります。運用のオーバーヘッドを最小限に抑える最適なアーキテクチャはどれか。",
           "choices": [
-            "脅威検出",
-            "CI/CD 承認",
-            "DNS 管理",
-            "バックアップ削除"
+            "EKSクラスターに「Secrets Store CSI Driver」と「AWS Secrets Manager Provider」をインストールする。シークレットをAWS Secrets Managerに保存し、Kubernetesの「SecretProviderClass」リソースを作成してSecrets Manager of シークレットをマッピングする。ポッドのデプロイメント定義で、ボリュームとしてCSIドライバーを指定してマウントし、環境変数またはファイルとしてアプリケーションから参照する。",
+            "CodeBuildのビルド実行時に、ビルド環境のIAMロールを使用してAWS Secrets Managerから直接シークレット値を文字列として取得する。取得したシークレット値をHelmの「--set」パラメータでマニフェストファイルに直接埋め込み、EKSクラスターに「helm upgrade」コマンドで展開する。",
+            "AWS Secrets Managerのシークレットの内容を、Amazon DynamoDBテーブルに同期するLambda関数を作成する。EKS内のコンテナが起動する際、AWS SDKを使用してDynamoDBにアクセスし、自身に必要な認証情報をオンデマンドでクエリして取得するプログラムをアプリケーションコード内に実装する。",
+            "EKSクラスター内に独自のHashiCorp VaultクラスターをEC2インスタンス群でデプロイし、AWS Secrets ManagerからVaultへのレプリケーションジョブを定期実行する。EKSのポッドは、Vaultエージェントのサイドカーコンテナを使用して認証情報を取得する。"
           ],
           "correct": 0,
-          "explanation": "GuardDuty は脅威分析サービス。 異常行動や攻撃兆候を検出できる。 Route53 は DNS サービス。",
+          "explanation": "EKS環境においてAWS Secrets Managerのシークレットを安全かつ自動的にコンテナに同期・マウントするためのAWS推奨の標準アプローチは、「Secrets Store CSI Driver」および「AWS Secrets Manager Provider」を利用することです。これにより、マニフェストに機密情報を埋め込むことなく、EKS上のポッドのライフサイクルとシークレットが結合され、Secrets Manager側でローテーションされたシークレットも自動的にEKS側で利用可能になります。他の選択肢は、マニフェスト内への平文露出リスク、アプリケーション開発負担の増加、あるいはVaultクラスター構築による莫大な運用管理コストを強いるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Logs Insights の用途として最適なものはどれか。",
+          "scenario": "あるヘルスケア企業では、災害復旧（DR）要件として、東京リージョン（プライマリ）から大阪リージョン（セカンダリ）へのRTO（目標復旧時間）が4時間未満、RPO（目標復旧時点）が15分未満という厳しい基準が設けられています。対象のインフラは、Application Load Balancer、Amazon EC2のWebサーバー、およびAmazon Aurora PostgreSQLデータベースで構成されています。障害発生時に、大阪リージョンで同じ構成のWebサーバーをCloudFormationから自動構築し、最新のデータベースデータを復元してトラフィックを切り替える自動化パイプラインを開発したいと考えています。運用のオーバーヘッドとコストを最小限に抑つつ、この要件を満たす最適な方法はどれか。",
           "choices": [
-            "ログ検索と分析",
-            "動画変換",
-            "DNS 暗号化",
-            "CI/CD 配信"
+            "Aurora PostgreSQLのグローバルデータベース（Amazon Aurora Global Database）を構成し、大阪リージョンにリードレプリカを配置する。DR起動時は、AWS Systems Manager Automationランブックを使用して、大阪リージョンのAuroraクラスターをプライマリに昇格させ、事前に大阪リージョンに作成しておいたCloudFormationスタック（Auto Scalingグループを初期容量0で待機させていたもの）のDesired Capacityを更新してWebサーバーを起動し、Route 53のフェイルオーバー機能でトラフィックを大阪リージョンに向ける。",
+            "AWS Backupを使用して、AuroraデータベースおよびEC2インスタンスのバックアップを15分間隔で作成し、大阪リージョンに自動コピーする。DR時には、AWS Lambdaを起動して大阪リージョンで最新のバックアップからリストア（RDSの新規構築とEC2の個別起動）を実行し、CloudFormationテンプレートを新規作成してリソースをインポートする。",
+            "大阪リージョンにプライマリと全く同一のインフラ（WebサーバーとAuroraクラスターの両方がアクティブな状態）を常に稼働させておく（アクティブ/アクティブ構成）。データ同期はアプリケーションレイヤーで行い、Route 53のレイテンシーベースのルーティングを使用して両リージョンにトラフィックを常時分散する。",
+            "東京リージョンのCloudFormationスタックのテンプレートをそのまま使用し、DR時に大阪リージョンでスタックを新規作成する。データベースは、東京リージョンの定期的なS3へのエクスポートデータを元に、AWS GlueとAthenaを使用して大阪リージョンで新規のPostgresコンテナインスタンスにデータをロードするスクリプトを実行する。"
           ],
           "correct": 0,
-          "explanation": "Logs Insights はログ分析向け。 障害解析を高速化できる。 MediaConvert は動画用途。",
+          "explanation": "RPOが15分未満という非常に厳密なデータベースのデータ同期を満たすには、Aurora Global Databaseを利用してミリ秒単位でのレプリケーションを実現するのが最も確実です。また、セカンダリリージョンのEC2インスタンスは、DR起動時以外は実行しないか、もしくはCloudFormationスタックをDesired Capacity=0の状態で事前配置しておくことで、復旧時のプロビジョニング時間を最小化（RTO < 4時間を十分に達成）しつつ、不要なEC2ランニングコストを抑えることができます。他の選択肢は、データバックアップ頻度の限界値、アクティブ/アクティブによる極めて高いコスト、あるいはリストア処理の複雑さなどの理由から、DR要件を満たせないか過剰なコストがかかるため不適切です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 2,
-      "title": "🏗️ 模擬試験3-2",
-      "type": "IaC & 構成管理",
-      "emoji": "🏗️",
-      "subtitle": "Infrastructure as Code の問題！",
+      "title": "📦 模擬試験3-2",
+      "type": "Configuration Management and IaC",
+      "emoji": "📦",
+      "subtitle": "本番レベルの構成管理とIaC問題！",
       "questions": [
         {
-          "scenario": "Organizations OU の役割として最適なものはどれか。",
+          "scenario": "大規模なエンタープライズ企業が、AWS Organizations傘下のすべてのアカウント（現在100以上あり、今後も増加予定）に対し、標準的なセキュリティグループ、IAMロール、およびAWS Configのカスタムルールを自動的にデプロイする一元管理システムを構築しています。新しいアカウントが組織に追加された際には、一切の手動操作なしでこれらのベースラインリソースが自動プロビジョニングされなければなりません。また、一部のセキュリティ規制の厳しい「監査用OU」に所属するアカウントに対してのみ、追加の監査用IAMロールを配備する必要があります。運用のオーバーヘッドが最も少なく、スケーラブルな構成はどれか。",
           "choices": [
-            "アカウント論理グループ化",
-            "脆弱性隔離",
-            "DNS キャッシュ共有",
-            "ログ圧縮"
+            "AWS Control Towerを有効にし、Customizations for Control Tower（CfCT）を使用してカスタマイズパッケージを作成する。CloudFormation StackSetsで「サービス管理のアクセス許可（Service-Managed Permissions）」を有効にし、自動デプロイ（Auto-deployment）をONに設定する。特定のOU（監査用OU）をターゲットとするスタックインスタンスを追加定義する。",
+            "AWS Organizationsの管理アカウントで、アカウント作成イベント（CreateAccount）を検出する Amazon EventBridge ルールを設定する。EventBridgeからAWS Lambdaを起動し、新アカウントのIDを取得して、そのアカウント内の特定のロールをAssumeRoleしながらCloudFormationスタックをAWS CLI経由で個別にデプロイするPythonスクリプトを実行する。",
+            "共有サービスアカウントにJenkinsサーバーを構築し、AWS Organizations APIを定期的にポーリングするスクリプトを実行して新しいアカウントを検出する。新アカウントが検出された場合、AWS Systems ManagerのState Manager Associationを利用して、対象のアカウントに対して個別にSystems ManagerのAutomationドキュメントを実行する。",
+            "AWS Organizationsのすべてのメンバーアカウントに対してAWS Systems Managerのハイブリッドアクティベーションを設定し、管理アカウントから各アカウントのEC2インスタンス上で動作するSSM AgentにCloudFormationテンプレートのデプロイメントコマンドを送信する。"
           ],
           "correct": 0,
-          "explanation": "OU は組織整理単位。 SCP 適用範囲管理にも利用される。 Inspector は脆弱性用途。",
+          "explanation": "Control Tower環境において、Organizations全体のマルチアカウントベースライン展開を自動化する最も標準的かつ推奨されるツールは、Customizations for Control Tower（CfCT）またはCloudFormation StackSetsの「サービス管理のアクセス許可」機能です。StackSetsのサービス管理モデルでは、Organizationsと統合され、新しいアカウントが作成されると自動的にターゲットのOUに対してスタックがデプロイされ、アカウントが削除されるとスタックが自動削除されます。また、特定のOUを宛先に指定したデプロイもネイティブにサポートされており、運用のオーバーヘッドが最小限になります。他の選択肢は、独自のLambda実装やサードパーティのJenkins運用、あるいは不適切なSSM Agent依存といった設計であり、管理コストが高くなります。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Agent の用途はどれか。",
+          "scenario": "金融サービス会社では、すべてのAWSアカウントにおけるコンプライアンスを厳格に維持するために、以下の2つの要件を満たす必要があります。①開発者が本番アカウントで「AWS Key Management Service (AWS KMS) のカスタマー管理鍵を誤って削除すること」を完全に防止する。②すべてのアカウントで「Amazon S3バケットのパブリックアクセスブロック」が常に有効であることを保証し、もし無効化されたバケットが検出された場合は、管理者に通知するとともに、最大15分以内に自動的にパブリックアクセスブロックを再有効化する。これらの要件を、運用のオーバーヘッドを最小限に抑えて実装するための最適な組み合わせはどれか。",
           "choices": [
-            "OS メトリクス収集",
-            "CI/CD 承認",
-            "DNS フェイルオーバー",
-            "動画変換"
+            "①AWS Organizationsのサービスコントロールポリシー（SCP）を作成し、本番OUに対して「kms:ScheduleKeyDeletion」および「kms:DeleteKey」を拒否（Deny）するポリシーをアタッチする。②AWS Configのマネージドルール「s3-bucket-level-public-access-prohibited」をデプロイし、AWS Systems ManagerのAutomationドキュメント「AWS-ConfigureS3BucketPublicAccessBlock」を使用した「自動修復（Automatic Remediation）」を設定する。",
+            "①本番アカウント内のすべてのIAMユーザーおよびロールに対して、インラインポリシーで「kms:ScheduleKeyDeletion」を拒否する。②Amazon EventBridgeでS3の「PutBucketPublicAccessBlock」イベントを検知し、AWS Lambdaを起動して対象バケットの設定を強制的に上書きし、SNSで管理者に通知する。",
+            "①IAMのポリシー境界（Permission Boundary）を使用して、全開発者ロールの最大権限からKMS関連の削除アクションを除外する。②S3バケットのポリシーで「Effect: Deny」としてパブリックアクセスを制限するポリシーをCloudFormationのカスタムリソースから全バケットに埋め込み、違反時はAWS Security Hubから管理者へメール通知する。",
+            "①AWS Configルールを作成してKMSキーの削除状態を監視し、削除がスケジュールされたらSystems Managerでキーのステータスを自動的に有効化する。②AWS Organizations of SCPで、全アカウントに対して「s3:PutBucketPublicAccessBlock」の実行を拒否（Deny）する。"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Agent は OS 情報送信。 メモリやディスク利用率を取得できる。 MediaConvert は動画用途。",
+          "explanation": "KMSキーの削除防止について、管理者や開発者の誤操作を含めて組織レベルで完全に特定の破壊的アクションを防止するには、AWS OrganizationsのSCPでDenyを適用するのが最も確実で安全な方法です。また、S3のパブリックアクセスブロックのチェックと自動修復には、AWS ConfigのマネージドルールとSystems Manager Automation（AWS-ConfigureS3BucketPublicAccessBlock）の自動修復機能をバインドするのが、最も運用のオーバーヘッドが低く、かつ規定時間内（15分以内）に自動復旧を実現できるAWSベストプラクティスです。他の選択肢は、不完全なIAMコントロール、カスタムの修復コード維持、あるいはS3設定変更の完全拒否など不適切なアプローチであるため誤りです。",
           "type": "choice"
         },
         {
-          "scenario": "企業では Config Rules 違反時に Slack 通知したい。最適な構成はどれか。",
+          "scenario": "ある企業は、AWSリージョン内で実行されている数百台のAmazon EC2インスタンス（LinuxおよびWindows）と、オンプレミスのデータセンターで稼働する物理・仮想サーバーを合わせたハイブリッド環境を運用しています。OSの重要なセキュリティパッチの適用状況を一元管理し、テスト環境には毎週火曜日の夜間に、本番環境には毎週土曜日の夜間に、それぞれ自動でパッチの適用（インストールおよび再起動）を実行し、パッチ適用の成否をダッシュボードで視覚化したいと考えています。最も運用のオーバーヘッドが少なく、セキュアな構成はどれか。",
           "choices": [
-            "Config → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodeBuild → Backup",
-            "Inspector → MQ"
+            "すべての環境にAWS Systems Manager（SSM）のエージェントを導入し、オンプレミスサーバーはハイブリッドアクティベーションを使用してSSMに登録する。パッチのルールを定義した「パッチベースライン」を作成し、テスト用と本番用の2つの「メンテナンスウィンドウ」を設定して、適用対象のインスタンスをリソースタグでターゲティングし、タスクとして「AWS-RunPatchBaseline」を実行するようにスケジュールする。SSMの「コンプライアンス」機能でステータスを可視化する。",
+            "AWS Systems ManagerのState Managerを使用して、テスト環境用と本番環境用の2つのアソシエーションを作成する。オンプレミスサーバーにはAWS Systems ManagerのDistributorを使用して独自のパッチ適用スクリプトを配布し、Cron式を用いてそれぞれの時間帯にシェルスクリプトを実行して結果をS3バケットにエクスポートし、Amazon QuickSightで分析する。",
+            "AnsibleコントロールノードをAWS上に構築し、オンプレミスとAWSの両方のサーバーへのSSH/WinRM接続を構成する。Ansibleのプレイブックを作成し、AWS Systems ManagerのRun CommandからAnsibleのタスクを各サーバーに配信して実行し、実行結果をCloudWatch Logsに送信してCloudWatchダッシュボードで監視する。",
+            "AWS Organizationsに登録されたすべてのアカウントに対して、AWS CloudFormation StackSetsを使用して、毎週指定された時刻に実行されるAWS Lambda関数を配置する。LambdaはEC2 APIおよびオンプレミス接続用のVPN経由でSSHコマンドを実行し、各OSのパッケージマネージャー（yumやapt、Windows Update API）を直接操作して適用状況を管理する。"
           ],
           "correct": 0,
-          "explanation": "EventBridge はイベント転送可能。 Lambda で Slack 通知処理を実装できる。 Glue は ETL 用途。",
+          "explanation": "ハイブリッド環境（EC2およびオンプレミス）における統合パッチ管理には、AWS Systems Manager（SSM）のパッチマネージャー（Patch Manager）とメンテナンスウィンドウ（Maintenance Windows）、およびハイブリッドアクティベーションを利用するのが標準的で最も運用の手間が少ない方法です。AWS-RunPatchBaselineタスクをメンテナンスウィンドウに登録し、ターゲットをリソースタグで識別することで、スケジュール通りに自動でパッチが適用され、その結果はSSMのコンプライアンスダッシュボードで一元的に確認できます。他の選択肢は、独自のパッチスクリプト保守、Ansible管理に伴う追加インフラとセキュリティリスク、あるいはLambdaの実行時間制限やSSHによる複雑な実装を伴うため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Composite Alarm の利点はどれか。",
+          "scenario": "セキュリティに厳しい金融決済システムで、本番アカウントのAmazon Aurora PostgreSQLデータベースに対するデータベース接続情報を、セキュリティアカウントのAWS Secrets Managerで一元管理しています。企業のセキュリティポリシーにより、データベースの認証情報は30日ごとに自動的にローテーションされ、その際に接続中の既存アプリケーションに影響を与えないようにする必要があります。また、ローテーション用のLambda関数はインターネットへのアクセスが完全に遮断されたVPC内で実行される必要があり、データベースの認証情報のライフサイクルを自動化するための最適な構成はどれか。",
           "choices": [
-            "複数条件統合監視",
-            "DNS 管理",
-            "CI/CD 配信",
-            "動画圧縮"
+            "データベースが存在する本番アカウントのVPC内にローテーション用のAWS Lambda関数を配置する。セキュリティアカウントのSecrets Managerの「自動ローテーション」を有効にし、この本番VPC内のLambda関数を指定する。本番VPCにはSecrets Manager用とRDS用のVPCエンドポイント（Interface型）を設定し、Lambdaから安全に通信を行って認証情報を更新する。",
+            "セキュリティアカウント内にAWS Secrets Managerの自動ローテーションを有効にし、AWSが提供するデフォルトの「シングルユーザー」用ローテーションLambdaテンプレートを選択して配置する。Lambda関数はVPCに接続せず、パブリックインターネットを経由して本番アカウントのPostgresのパブリックIPアドレスに対して接続し、認証情報の書き換えを実行する。",
+            "本番アカウントでAmazon EventBridgeのスケジュールルールを作成し、30日ごとにAWS Systems ManagerのAutomationランブックを起動する。AutomationランブックからセキュリティアカウントのSecrets Managerの値を更新し、次にAurora PostgreSQLの管理者ユーザーのパスワードを変更するSQLコマンドをデータベースに対して直接実行する。",
+            "セキュリティアカウントのSecrets Managerから本番アカウントのS3バケットにシークレットの内容をレプリケーションする設定を行う。本番アカウントのEC2インスタンス上のcronジョブが30日ごとにS3上のファイルを読み込み、データベースのパスワードを変更し、Secrets ManagerのAPIを呼び出して値を同期する。"
           ],
           "correct": 0,
-          "explanation": "Composite Alarm は条件統合可能。 複数 Alarm を組み合わせ監視できる。 Route53 は DNS サービス。",
+          "explanation": "マルチアカウント環境においてデータベースの接続情報をSecrets Managerで安全にローテーションさせるためには、データベースに直接アクセスできるVPC（本番アカウント）にローテーション用のLambda関数を配置するのがベストです。Secrets ManagerはクロスアカウントでのローテーションLambdaの呼び出しをサポートしています。また、インターネットアクセスを遮断した状態で安全にSecrets ManagerやRDSと通信するためには、VPCエンドポイント（PrivateLink）を構成する必要があります。他の選択肢は、インターネット公開を強いるためセキュリティポリシーに反するか、ローテーションの不確実な同期、あるいはS3を中継する非常に危険な設計であるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "企業では Lambda を定期実行したい。最適な構成はどれか。",
+          "scenario": "ある企業は、数十の開発チームに対してAWS CloudFormationを利用してインフラテンプレートを提供しています。社内のガバナンスルールにより、すべてのVPC作成時に、社内の中央IP管理システム（オンプレミス）のAPIを呼び出して次に利用可能なCIDRブロックを取得し、それをVPCリソースの「CidrBlock」プロパティに動的に割り当てる必要があります。開発者のテンプレート記述の手間を最小限に抑え、かつすべての開発チームが同じロジックを容易に再利用できるようにするための最も効率的な実装方法はどれか。",
           "choices": [
-            "EventBridge Scheduler",
-            "Inspector Scan",
-            "CloudTrail Insights",
-            "AWS Backup"
+            "CloudFormationのカスタムリソース（AWS::CloudFormation::CustomResource）を実装したAWS Lambda関数を共有サービスアカウントに作成し、すべてのアカウントから呼び出せるようにLambdaの実行ポリシーを設定する。各チームには、この共有Lambda関数のARNを呼び出すだけのカスタムリソース定義を含むシンプルな「テンプレートモジュール」または「AWS CloudFormationのプライベートレジストリ拡張（Resource Provider）」を提供し、CIDRブロックを属性値（Fn::GetAtt）として取得させる。",
+            "各開発チームのCloudFormationテンプレートの「Parameters」セクションに「CidrBlock」パラメータを定義し、デプロイ時に開発者が手動で社内APIを実行してCIDRを調べ、それをパラメータ値として入力するように手順書を整備する。",
+            "AWS Systems ManagerのParameter Storeに、あらかじめ社内APIから取得した複数のCIDRブロックを登録しておく。各チームのテンプレートでは、パラメータとして「AWS::SSM::Parameter::Value<String>」形式でパラメータ名を指定して読み込ませ、Lambdaを使用してパラメータの同期状態を定期的に更新する。",
+            "CloudFormationのテンプレートを展開する前に、クライアント側（開発者の端末）で動作するカスタムのPythonスクリプト（AWS CLIおよびboto3を使用）を実行させ、オンプレミスのAPIから取得したCIDRブロックをテンプレートファイルに直接ハードコードして書き換えてから、「aws cloudformation deploy」を実行するパイプラインを構築する。"
           ],
           "correct": 0,
-          "explanation": "Scheduler は cron 実行可能。 Lambda の定期起動に適している。 Inspector は脆弱性用途。",
+          "explanation": "全社的に同一の外部システム統合ロジック（IP管理システムからのCIDR取得）をCloudFormation経由で再利用させるためには、カスタムリソース（AWS Lambda）を作成して共有サービスアカウントから提供するか、あるいはCloudFormation of プライベートレジストリ（CloudFormation Registry）にカスタムリソースプロバイダーを登録して配布するのが最もスマートです。開発者はテンプレート内でそのカスタムリソースを参照するだけでよく、IP取得の複雑なAPIロジックを意識する必要がありません。これにより開発者の手間が最小限に抑えられ、一元管理が可能になります。他の選択肢は、手動作業の発生、複数デプロイにおける重複IP割り当て（競合状態）、あるいはクライアント環境への依存を強いるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CodeDeploy Blue/Green Deployment の利点はどれか。",
+          "scenario": "金融サービス会社では、本番環境のAWSインフラストラクチャはすべてAWS CloudFormationを通じてデプロイされるよう厳密に管理されています。しかし、トラブルシューティング等の緊急作業によって、一部のEC2セキュリティグループのルールやRoute 53レコードが手動で変更され、テンプレートの定義との乖離（ドリフト）が発生する事例が相次いでいます。同社は、ドリフトが発生したリソースを自動的に検出し、未承認の手動変更があった場合にはセキュリティ担当者に通知した上で、CloudFormationの定義に基づいた状態へ自動的に復元する仕組みを構築したいと考えています。運用のオーバーヘッドを最小限に抑える構成はどれか。",
           "choices": [
-            "安全な切替と即時ロールバック",
-            "DNS キャッシュ共有",
-            "脆弱性分析高速化",
-            "CloudTrail 無効化"
+            "Amazon EventBridgeルールを使用して、CloudFormationの「Drift Detection（ドリフト検出）」APIを定期スケジュールで呼び出す。ドリフトが検出された場合（DRIFTEDステータス）、EventBridgeがAWS Systems Manager of Automationランブックをトリガーし、変更されたプロパティを修正するか、CloudFormationスタックを更新（再度デプロイ）して正しい状態に同期する。",
+            "AWS Configのカスタムルールを作成し、全リソースの手動変更イベントをポーリングする。手動変更が検出された場合、AWS Lambda関数を実行してCloudFormationスタックを強制的に削除（DeleteStack）し、その後「CreateStack」APIを呼び出して1から再プロビジョニングを実行する。",
+            "AWS Systems ManagerのState Manager Associationを利用して、毎日1回ターゲットのEC2インスタンスとセキュリティグループに対して「AWS-ApplyAnsiblePlaybooks」を実行し、すべての設定項目を定義済みの状態に上書きする。",
+            "CloudFormationテンプレートの各リソースの「DeletionPolicy」プロパティを「Retain」に設定し、CloudTrailで「UpdateSecurityGroupRule」などの手動APIが検出された際に、LambdaでそのAPIの呼び出し自体をロールバックするAPIを直接発行するスクリプトを構築する。"
           ],
           "correct": 0,
-          "explanation": "Blue/Green は安全なデプロイ方式。 異常時に以前環境へ戻しやすい。 GuardDuty は脅威分析用途。",
+          "explanation": "CloudFormationのドリフト検出機能（Drift Detection）は、スタックのテンプレート定義と実際のAWSリソースの状態との差異を検出できます。定期的なドリフト検出の実行と、それによって検出された結果に基づいてAWS Systems ManagerのAutomationなどを起動して修復処理を行うのが、最も運用のオーバーヘッドが少ない設計です。他の選択肢は、本番環境のスタック削除による深刻なダウンタイムやデータ消失、あるいはCloudFormation以外の範囲へのAnsible適用、何百もある変更APIを個別ロールバックするための膨大なLambdaコードの管理を必要とするため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "Config Aggregator の用途として最適なものはどれか。",
+          "scenario": "ある企業は、AWS Organizationsを使用して複数のAWSアカウントを管理しています。部門ごとのコスト追跡を正確に行うため、「Environment（値は dev、stage、prod のいずれか）」および「CostCenter（値は4桁の数字）」というタグが、すべての新しく作成されるAmazon EC2インスタンスおよびAmazon S3バケットに義務付けられています。開発者がこれらのタグを付けずにリソースを作成しようとした場合にAPIの実行自体を拒否し、さらに既存のリソースに不正なタグが設定されている場合は毎日レポートを作成して監査チームに送信する仕組みを実装したいと考えています。運用のオーバーヘッドを最小限に抑える方法はどれか。",
           "choices": [
-            "複数アカウント設定集約",
-            "CI/CD ビルド",
-            "DNS レプリケーション",
-            "動画変換"
+            "AWS Organizationsのサービスコントロールポリシー（SCP）を使用して、「ec2:RunInstances」および「s3:CreateBucket」時に、指定したタグキーおよび定義された値のセットが存在しない場合に作成要求を拒否（Deny）する。さらに、Organizationsの「タグポリシー（Tag Policies）」を有効にして、タグの大文字小文字や許容される値を厳格に制限し、タグポリシーのコンプライアンスレポート（S3に自動生成される）を毎日監査チームに配信する。",
+            "AWS IAMのポリシー境界（Permission Boundary）を開発者のすべてのIAMロールに適用し、タグが指定されていないリソース作成を制限する。さらに、AWS Lambda関数を毎晩実行し、全アカウントのEC2とS3のリソースを一覧取得して、不正なタグを持つリソースを監査してCSVファイルを電子メールで直接送信する。",
+            "AWS Configルールを使用して「required-tags」マネージドルールをデプロイする。ルールに違反したリソースが検出された場合、EventBridge経由でSystems ManagerのAutomationを呼び出し、その場で対象リソースを強制削除（Terminate/Delete）する。",
+            "AWS Service Catalogを使用して、開発者に対してのみEC2およびS3のプロビジョニングを許可する。Service Catalogのポートフォリオに制約（Constraint）を設け、タグ情報の入力を必須にする。既存のリソースについては、Amazon Athenaを使用してCloudTrailログをクエリしてタグ不足を検出する。"
           ],
           "correct": 0,
-          "explanation": "Aggregator は横断設定確認向け。 複数アカウントを集中管理できる。 CodeBuild は CI/CD 用途。",
+          "explanation": "AWS OrganizationsのSCPを使用すると、リソース作成時に特定のタグキーと値の存在を強制（タグが付いていない場合は作成要求を即時に拒否）できます。また、AWS Organizationsの組み込み機能である「タグポリシー」を使用すると、タグのキー名や許容される値の定義を一元管理でき、かつコンプライアンスレポートを自動で生成してS3にエクスポート可能です。これにより、カスタムコード（Lambdaなど）を作成・保守することなく、最小限の運用オーバーヘッドで要件を満たすことができます。他の選択肢は、複雑なポリシー境界の運用、重要リソースの誤った強制削除リスク、あるいはService Catalog外の作成に対応できないといった欠点があるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "企業では IAM User 利用を最小化したい。最適な構成はどれか。",
+          "scenario": "セキュリティソフトウェア企業は、AWS環境内およびオンプレミスのサーバー上で稼働する200台以上のEC2インスタンスに対して、セキュリティモニタリングエージェントをデプロイし、常に最新のバージョンに保つ必要があります。このエージェントは新バージョンがリリースされるたびに自動で更新され、また設定ファイルの変更があった場合には、すべてのインスタンスの設定が速やかに同期される必要があります。エージェントの展開と設定変更プロセスを完全に自動化し、人手によるパッチや設定スクリプトの実行をなくすための、最も運用のオーバーヘッドが少ない設計はどれか。",
           "choices": [
-            "IAM Identity Center と Role 利用",
-            "ルートユーザー共有",
-            "アクセスキー共有",
-            "CloudTrail 無効化"
+            "AWS Systems ManagerのDistributorを使用してエージェントパッケージを作成し、SSMドキュメントとして登録する。次に、SSM State Managerを使用して「Association」を作成し、ターゲットのインスタンス（タグで識別）に対してエージェントパッケージのインストールを指定したスケジュールで実行するように設定する。設定ファイルの配布も同様にState Managerを使用して、パラメータストアに保存された設定ファイルを定期的に同期する。",
+            "エージェントのインストールと設定変更を行うAnsibleプレイブックを作成し、Amazon S3バケットに配置する。各EC2インスタンスの起動スクリプト（ユーザーデータ）でAnsibleをインストールし、ローカルのcronジョブで1時間ごとにS3からプレイブックをダウンロードして実行する構成を実装する。",
+            "AWS CodeDeployを使用して、各EC2インスタンスにデプロイグループを作成する。エージェントの新しいバージョンがリリースされた場合、CodePipelineを介してすべてのインスタンスに対してエージェントパッケージと設定ファイルをインプレースデプロイでプッシュする。",
+            "AWS Systems ManagerのRun Commandを使用して、管理者が新しいエージェントのバージョンがリリースされたタイミングで、手動でAWS CLIから「AWS-ConfigureAWSPackage」を実行してインストールコマンドをすべてのアカウントに配信する。"
           ],
           "correct": 0,
-          "explanation": "Role は一時認証情報利用可能。 Identity Center で集中認証管理できる。 アクセスキー共有は非推奨。",
+          "explanation": "AWS Systems Manager Distributorは、ソフトウェアパッケージ（エージェントなど）の配布、インストール、更新を容易にする機能です。これとState Manager Associationを組み合わせることで、定期的にエージェントパッケージの最新状態をチェックし、非準拠（エージェントが古い、または未インストール）なインスタンスに対して自動的にインストール・更新が行われます。また、設定ファイルの同期についてもState Manager Associationで定期的にSSM Parameter Storeなどから取得して同期する設計にすることで、人手による操作を完全にゼロにできます。他の選択肢は、Ansibleクライアントやcronの管理、CodeDeployエージェントの不要なデプロイオーバーヘッド、あるいは管理者による手動のRun Command実行を伴うため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudFormation Change Sets の用途はどれか。",
+          "scenario": "ある保険会社では、本番環境で稼働するAmazon EC2インスタンスのセキュリティを最大化するため、毎月OSパッチと最新のウイルススキャナソフトがインストールされた「ゴールデンAMI」を自動的に更新するパイプラインを設計しています。このパイプラインでは、作成されたAMIに対して自動的にセキュリティ脆弱性のスキャンを実行し、深刻度「High」以上の脆弱性が検出された場合はAMIのリリースを自動的にブロックする必要があります。すべての検査をパスしたAMIのみを関連する他のAWSアカウントと共有する構成において、最も自動化され、運用のオーバーヘッドが少ないアーキテクチャはどれか。",
           "choices": [
-            "変更内容事前確認",
-            "脆弱性分析",
-            "DNS 管理",
-            "バックアップ削除"
+            "EC2 Image Builderを使用してイメージパイプラインを構築する。ビルドコンポーネントでOS更新とソフトインストールを定義し、テストフェーズでAmazon Inspectorによる脆弱性スキャンを自動的にトリガーする。スキャン結果で深刻度「High」以上が検出された場合にイメージ作成プロセスを失敗（Fail）させる検証スクリプトをテストコンポーネントに含め、成功したAMIのみをImage Builderの配信設定（Distribution Settings）でターゲットアカウントに自動共有する。",
+            "AWS Systems Manager Automationを使用してEC2インスタンスを起動し、Systems Manager Run Commandでパッチ適用やソフトウェアのインストールを実行する。その後、インスタンスをAMI化し、AWS Lambdaを起動してAMIから一時的なテスト用EC2インスタンスを起動し、AWS Security Hubのカスタムスキャンを実行して、結果をSlackに通知してから手動で共有処理を行う。",
+            "AWS CodePipelineを構築し、CodeBuildステージでHashiCorp Packerを実行してAMIを作成する。次のステージでTrivyによるコンテナイメージスキャンと同様のスキャンをEC2イメージに対して実行し、エラーがない場合にAWS CLIで「ModifyImageAttribute」コマンドを実行してアカウント間共有を行う。",
+            "毎月定期的に起動するAWS Lambda関数を作成する。LambdaからEC2イメージビルドを実行させ、完了後にAmazon GuardDutyの検出結果をポーリングし、重大な警告がないことを確認した上で、AMIのARNを他のアカウントのAmazon S3バケットにオブジェクトとして保存する。"
           ],
           "correct": 0,
-          "explanation": "Change Sets は差分レビュー機能。 本番適用前確認に利用される。 Inspector は脆弱性用途。",
+          "explanation": "EC2 Image Builderは、セキュアなAMIの構築、テスト、配信（共有）をエンドツーエンドで自動化するマネージドサービスです。テストフェーズにおいてAmazon Inspectorと統合されたスキャン機能を使用するか、テストコンポーネント内でInspectorの結果を検証するスクリプトを走らせることで、脆弱性が存在するAMIのリリースを容易にブロックできます。テストが成功した場合は、Image Builderの機能であるDistribution Settings（配信設定）により、ターゲットアカウントへのAMIの自動共有まで追加のコードを書かずに実行できます。これにより、運用のオーバーヘッドが最小限になります。他の選択肢は、不完全な自動化、サードパーティPackerのメンテナンス負担、あるいはGuardDutyによる不適切な静的脆弱性スキャンといった欠点があるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Alarm と組み合わせて通知に使われることが多いサービスはどれか。",
+          "scenario": "あるエンタープライズ企業では、開発者がAWSリソース（EC2、RDS、S3など）をプロビジョニングする際、セキュリティチームが承認した標準的な構成パターンのみを使用するように制限したいと考えています。しかし、開発チームの開発スピードを落とさないよう、申請からプロビジョニング完了までセルフサービスで迅速に実行できる必要があり、さらに開発者に対してAWSリソースの直接的な作成権限（ec2:RunInstances など）を付与することはセキュリティポリシーで禁止されています。このガバナンスと開発速度のトレードオフを解決する最適な構成はどれか。",
           "choices": [
-            "Amazon SNS",
-            "Amazon Athena",
-            "AWS Artifact",
-            "CodeArtifact"
+            "AWS Service Catalogを使用する。セキュリティチームがCloudFormationテンプレートを作成して「製品（Product）」として登録し、「ポートフォリオ（Portfolio）」に追加する。ポートフォリオに「起動制約（Launch Constraint）」を適用し、リソース作成に必要な権限（EC2やRDSの作成権限）を持つ専用 IAM サービスロールをバインドする。開発者にはService Catalogの製品を起動する権限のみを付与する。",
+            "AWS OrganizationsのSCPを使用して、開発者が直接EC2やRDSを作成するコマンドをすべて拒否（Deny）する。代わりに、Jiraなどのチケット管理システムと連携したAWS Lambda関数を作成し、開発者がチケットを作成して承認された時点で、Lambdaが管理者権限でCloudFormationスタックを実行するように実装する。",
+            "AWS Systems ManagerのParameter StoreにCloudFormationのテンプレートデータを格納する。開発者がSystems ManagerのSession Managerを介して特定の管理用EC2インスタンスに接続し、そのインスタンス上でローカルユーザー権限でテンプレートをデプロイするスクリプトを実行させる。",
+            "AWS IAMのポリシー境界（Permission Boundary）を使用して、開発者に対して「リソースに特定のセキュリティタグが付与されている場合のみ」EC2等の作成を許可するIAMポリシーを適用し、インフラ全体の作成は開発者が手動でAWSコンソールから実行するように設計する。"
           ],
           "correct": 0,
-          "explanation": "SNS は通知配信サービス。 Alarm 異常時に即時通知可能。 Athena は分析用途。",
+          "explanation": "開発者に直接のインフラ作成権限を与えず、承認された構成（CloudFormation）のみをセルフサービスでデプロイさせるAWSの標準機能が「AWS Service Catalog」です。「起動制約（Launch Constraint）」を使用することで、開発者自身にはEC2やRDSを作成するIAM権限がなくても、Service Catalogのバックグラウンドロール（サービスロール）が代わりにリソースをプロビジョニングするため、高いセキュリティと開発速度を両立できます。他の選択肢は、開発速度の低下、管理用EC2インスタンスの不要な運用、あるいは開発者に広い範囲の直接作成権限を依然として残してしまうといった欠点があるため不適切です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 3,
-      "title": "⚡ 模擬試験3-3",
-      "type": "Resilient Cloud Solutions",
-      "emoji": "⚡",
-      "subtitle": "高可用性・耐障害性の問題！",
+      "title": "📦 模擬試験3-3",
+      "type": "Monitoring, Logging, and Incident Response",
+      "emoji": "📦",
+      "subtitle": "本番レベルの監視・ログ・障害対応問題！",
       "questions": [
         {
-          "scenario": "企業では複数アカウントの CloudTrail を一元管理したい。最適な方法はどれか。",
+          "scenario": "グローバル金融企業は、組織内の100以上のAWSアカウントから発生するすべてのVPCフローログ、AWS CloudTrailログ、およびアプリケーションログを、セキュリティ分析と監査のために中央のセキュリティ専用アカウント（ログ集約アカウント）にリアルタイムで収集・統合するアーキテクチャを設計しています。ログデータはログ集約アカウントの単一のAmazon S3バケットに集約され、AWS KMSのカスタマー管理鍵（CMK）で暗号化される必要があります。また、ログの欠損を防ぎ、ログ量が一時的にスパイクした場合でも自動でスケールし、さらにコストと運用のオーバーヘッドを最小限に抑える必要があります。この要件を満たす最適な方法はどれか。",
           "choices": [
-            "Organizations Trail を利用する",
-            "CloudWatch Dashboard を共有する",
-            "Athena Query を停止する",
-            "Inspector findings を通知する"
+            "各メンバーアカウントでAmazon CloudWatch Logsのロググループを作成し、ログ集約アカウントのAmazon Data Firehose配信ストリームを宛先とするサブスクリプションフィルターを設定する。ログ集約アカウントのS3バケットポリシーでFirehoseのロールからの書き込みを許可し、Firehoseのデータ暗号化にログ集約アカウントのKMS CMKを使用する。",
+            "各メンバーアカウントでS3バケットを作成してログを一度保存し、S3クロスリージョンレプリケーション（CRR）を使用してログ集約アカウントの中央S3バケットへ同期する。同期したオブジェクトは、中央アカウントのAWS Lambda関数をトリガーして読み込み、ログ集約アカウントのKMS CMKで再暗号化して同じバケットに上書き保存する。",
+            "ログ集約アカウントにAmazon OpenSearch Serviceクラスターをデプロイする。各メンバーアカウントからAWS API Gatewayを経由してログデータをJSON形式で送信し、API GatewayのバックエンドのAWS Lambda関数がOpenSearchにデータをインデックス化し、同時にS3へバックアップとして書き出す構成を実装する。",
+            "AWS Organizationsの機能を利用して「組織レベルのCloudTrail」を有効にし、ログ集約アカウントのS3バケットにログを直接書き込む。VPCフローログについては、各アカウント内のEC2インスタンスにSSM Agentを配置し、ハイブリッドネットワーク内のSyslogサーバーへログを転送してから中央S3へアップロードする。"
           ],
           "correct": 0,
-          "explanation": "Organizations Trail は集中監査向け。 全アカウントへ一括適用できる。 Dashboard は監視用途。",
+          "explanation": "CloudWatch Logsから別アカウントのAmazon Data Firehoseへのサブスクリプションフィルター転送は、サーバーレスで自動スケーリングする高信頼・低遅延のリアルタイムログ収集アーキテクチャです。Firehoseを使用することで、メンバーアカウント数やログ量が急増した場合でも自動的にスケーリングし、データはS3に直接書き込まれ、KMSによる暗号化も組み込み機能で処理されるため、運用のオーバーヘッドが極めて低くなります。他の選択肢は、高コストなLambda再暗号化、高価なOpenSearch運用、あるいはEC2エージェントによる非効率なVPCフローログ収集など、運用の手間が大きすぎるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Logs Retention Policy の用途はどれか。",
+          "scenario": "あるSaaS企業は、AWS上で動作するマルチティア（Webサーバー、RDS、ElastiCache）構成のWebアプリケーションのパフォーマンスと稼働状態を監視しています。システム管理者は、CPU使用率やメモリ使用率、DBのコネクション数などが「通常とは異なる動き」を示した際に、事前定義された固定のしきい値に頼ることなく自動的に警告を発し、かつ複数の関連するアラームが発生した場合にはそれらを1つの「インシデント」としてまとめて根本原因の特定を迅速に行いたいと考えています。この要件を満たす、最も運用のオーバーヘッドが少ないアプローチはどれか。",
           "choices": [
-            "ログ保存期間制御",
-            "DNS フェイルオーバー",
-            "CI/CD 配信",
-            "動画変換"
+            "AWS Systems ManagerまたはCloudWatchコンソールから「Amazon CloudWatch Application Insights」を有効にし、アプリケーションを構成するリソースグループを選択する。検出されたメトリクスに対してCloudWatchのアノマリー検出（Anomaly Detection）アラームを自動構成し、相関関係のある複数のアラーム群をApplication Insightsが自動分析して単一のダッシュボードに問題として統合表示する構成にする。",
+            "Amazon SageMakerを使用して、過去のすべてのシステムメトリクスデータを学習させるカスタムの教師なし学習モデル（ランダムフォレストやAutoencoder）を構築する。CloudWatchのメトリクスストリームを使用してAmazon Kinesis経由でデータをSageMakerエンドポイントに送信し、異常スコアを計算して一定値を超えたらSNSで通知する。",
+            "CloudWatchのすべての個別メトリクス（CPU、メモリ、IOPSなど）に対して、手動で過去3ヶ月の最大値・最小値を元にしきい値を算出し、静的しきい値アラームを設定する。さらに「CloudWatch Composite Alarms」を作成し、すべてのアラーム条件を論理式（AND/OR）で結合した巨大なアラーム定義を作成する。",
+            "AWS Systems ManagerのOpsCenterを有効にし、CloudTrailで発生するすべてのイベントログをAmazon Athenaで定期的にスキャンする。メトリクスの乖離を検知した場合は、Lambdaを介してOpsItem（インシデントアイテム）を作成し、担当者に通知するスクリプトを毎時実行する。"
           ],
           "correct": 0,
-          "explanation": "Retention Policy は保持期間設定。 古いログを自動削除できる。 Route53 は DNS サービス。",
+          "explanation": "AWSは、アプリケーション層およびデータベース層の自動モニタリングとインシデント検出のために「Amazon CloudWatch Application Insights」を提供しています。これは特定のリソースグループ内のリソースに対してメトリクス、ログ、アラームを自動で検出し、アノマリー検出を設定し、障害発生時にはそれらの相関関係を分析して単一のダッシュボードに「問題」として要約表示します。これにより手動のアラーム設計や機械学習モデルの構築といった運用コストを大幅に削減できます。他の選択肢は、機械学習モデルの自前管理コスト、膨大なしきい値の手動メンテナンス、あるいはCloudTrailログスキャンによるリアルタイムパフォーマンスの監視漏れなどの点で不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "企業では Lambda エラー時に自動再試行したい。最適なサービスはどれか。",
+          "scenario": "あるヘルスケア関連スタートアップ企業は、すべてのAWSアカウントにわたるセキュリティ脅威の検出と対応を強化したいと考えています。Amazon GuardDutyがEC2インスタンスのクレデンシャル漏洩やC&C（コマンド＆コントロール）サーバーへの通信を検出した場合、またはAWS Security Hubで「重大（CRITICAL）」なセキュリティコンプライアンス違反が検出された場合、直ちに対象のインスタンスのセキュリティグループを「調査用セキュリティグループ（すべてのインバウンド・アウトバウンド通信を遮断）」に自動変更し、Slackに通知を送信するイベント駆動の自動修復システムを構築したいと考えています。開発期間を短縮し、インフラ全体の可観測性を維持するための最適な設計はどれか。",
           "choices": [
-            "AWS Step Functions",
-            "CloudTrail Insights",
-            "AWS Backup",
-            "Amazon Lex"
+            "Security HubとGuardDutyを一元管理アカウントに集約する。Amazon EventBridgeで、GuardDutyの脅威検出イベントおよびSecurity Hubの検出結果（Severity.Label が CRITICAL）をフィルタリングするイベントパターンを作成し、ターゲットとしてAWS Systems ManagerのAutomationランブック（AWS-CloseSecurityGroup など）を起動して対象EC2のセキュリティグループを変更し、AWS Lambdaを呼び出してSlackに通知する。",
+            "各AWSアカウントのGuardDutyとSecurity Hubから、ローカルのAmazon Kinesis Data Streamsにイベントを直接送信する。Kinesisのコンシューマーとして動作するEC2インスタンス上でPythonデーモンを実行し、AWS SDKを使用してEC2インスタンスの隔離処理とSlack APIの呼び出しを常時実行する。",
+            "Amazon EventBridgeからAWS Lambda関数を起動する。Lambda関数は、GuardDutyの検出結果に含まれるIAMロールやアクセスキーのIDを読み込み、AWS IAM APIを使用して直ちにAWS Organizationsのすべてのポリシーでそのアカウント自体を一時的に「Suspended」状態に変更し、SNSで管理者に通知する。",
+            "AWS Configのカスタムルールを作成し、全EC2インスタンスのセキュリティグループの状態を監視する。GuardDutyが脅威を検出した際、Configのルール違反として強制的にステータスを変更し、Configの「自動修復」機能（AWS Systems Manager Automation経由）でセキュリティグループを削除する。"
           ],
           "correct": 0,
-          "explanation": "Step Functions は状態管理可能。 再試行制御や分岐処理に適している。 Backup は保護用途。",
+          "explanation": "AWSにおける脅威検出後の自動修復のベストプラクティスは、Amazon GuardDutyおよびAWS Security Hubの検出結果をAmazon EventBridgeでキャッチし、AWS Systems ManagerのAutomationランブックを起動してリソースを修復（今回の場合はセキュリティグループの変更による隔離）するアーキテクチャです。これにより、独自の長大なカスタムコードを書かずに安全かつ低遅延でインシデントへの即時対応が可能となります。他の選択肢は、KinesisやEC2デーモンの管理コスト、業務全体を麻痺させるアカウントの一時停止、あるいはGuardDutyイベントのトリガーとして不適切なConfigの使用などの問題があるため誤りです。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Contributor Insights の用途はどれか。",
+          "scenario": "コンプライアンス規制の対象である金融機関は、AWSのすべてのAPIアクティビティを記録するAWS CloudTrailの監査ログについて、厳格なセキュリティと改ざん防止対策を導入しています。監査ログは単一のS3バケットに保存され、以下の要件を満たす必要があります。①ログファイルは書き込み後に変更または削除できないように物理的に保護する（WORM特性）。②ログファイルの整合性が保たれていることを確認する自動検証プロセスをサポートする。③ログファイルへのアクセスおよび復号は、セキュリティ管理者ロール（SecurityAdmin）のみに制限し、管理アカウントのルートユーザーであっても復号できないようにする。運用のオーバーヘッドを最小限に抑える構成はどれか。",
           "choices": [
-            "高頻度要因分析",
-            "DNS 暗号化",
-            "CI/CD ビルド",
-            "脆弱性隔離"
+            "AWS Organizationsで組織全体のCloudTrailを作成し、中央のログS3バケットを指定する。S3バケットで「S3オブジェクトロック（S3 Object Lock）」を「コンプライアンスモード（Compliance mode）」で有効にし、CloudTrailの「ログファイルの検証（Log file validation）」を有効にする。KMSカスタマー管理鍵（CMK）を作成し、キーポリシーで「SecurityAdmin」ロールのみに復号（kms:Decrypt）権限を付与し、ルートユーザーやCloudTrailサービス自体への過剰な権限（暗号化以外の権限）を除外する。",
+            "CloudTrailの出力先となるS3バケットポリシーで、ルートユーザーおよびすべてのIAMアイデンティティに対する s3:DeleteObject を明示的に拒否（Deny）する。暗号化にはAWS管理鍵（aws/s3）を使用し、AWS KMSのキーポリシーで他のユーザーのアクセスを制限するIAMロールを作成する。",
+            "Amazon EventBridgeを使用して、CloudTrailのログファイルがS3に保存されるイベント（PutObject）をトリガーにし、AWS Lambdaを起動する。LambdaはS3上のログファイルを読み込んでMD5ハッシュを計算し、DynamoDBにハッシュ値を保存する。監査時には別のLambdaがログファイルの現在のハッシュを計算して照合する。",
+            "AWS CloudTrailの「データイベント」と「管理イベント」の両方を有効にする。CloudTrailから直接Amazon Glacierのボールトにログを出力させ、Glacierボールトロックポリシーを定義してログの削除を防ぎ、S3 Object Lockの代わりにGlacierの組み込み検証機能を使用する。"
           ],
           "correct": 0,
-          "explanation": "Contributor Insights は傾向分析機能。 大量アクセス原因分析などに利用される。 Route53 は DNS サービス。",
+          "explanation": "S3でログの改ざん・削除を物理的に防止するWORM（Write Once Read Many）を最も低い管理コストで実現するには、S3 Object Lockのコンプライアンスモードを使用するのが最適です。また、CloudTrailには「ログファイルの検証（Log file validation）」機能が組み込まれており、有効にするだけでデジタル署名（ハッシュ値）が生成され、ログの変更や削除の有無を簡単に自動検証できます。さらにKMS CMKポリシーを使用することで、キー管理者や特定のセキュリティロール以外（ルートユーザーを含む）の復号権限を明示的に剥奪し、データを保護できます。他の選択肢は、バケットポリシーを削除可能な管理者、KMS管理鍵による制限不可能性、ハッシュ検証の自作コードによる高コスト化、あるいは直接書き込めないGlacier指定などの不適切な設計であるため誤りです。",
           "type": "choice"
         },
         {
-          "scenario": "企業では Config Rules 違反を即時通知したい。最適な構成はどれか。",
+          "scenario": "ある企業では、AWS Organizationsを使用して組織内のマルチアカウント環境を統制しています。セキュリティポリシーにより、最高機密である「SCP（サービスコントロールポリシー）の変更」や「Organizationsからのメンバーアカウントの離脱」など、セキュリティの根幹に関わる特定の管理API操作が行われた場合、即時にそのイベントを検出し、その操作を行ったIAMユーザーまたはロールのセッションを直ちに無効化し、かつセキュリティ管理者にSlackと電話（音声）で警告する自動インシデントレスポンス機能を実装したいと考えています。運用のオーバーヘッドと応答時間を最小限に抑える最適なアーキテクチャはどれか。",
           "choices": [
-            "Config → EventBridge → SNS",
-            "CloudTrail → EMR",
-            "CodeDeploy → Backup",
-            "Inspector → MQ"
+            "組織の管理アカウントでAmazon EventBridgeルールを設定し、CloudTrail経由で events.amazonaws.com から送信される DetachPolicy、DisableAWSServiceAccess、LeaveOrganization などのAPIコールを監視する。イベント検知時、Amazon SNSを介して管理者に通知するとともに、AWS Lambdaを起動して、操作を実行したアカウントの該当IAMエンティティに対してインラインで即時拒否ポリシー（明示的なDeny）をアタッチするか、ロールの一時セッションを無効化するAPIを実行し、Amazon Connectを呼び出して管理者に音声通話をかける。",
+            "すべてのアカウントのCloudWatch Logsから、CloudTrailの監査ログを1時間ごとにAmazon Athenaでスキャンするクエリを実行するスケジュールを設定する。対象のAPI操作を検出した場合、AWS Systems ManagerのAutomationランブックを実行して、該当アカウント内のすべてのIAMユーザーを削除し、Slackで連絡する。",
+            "Amazon GuardDutyを有効にし、カスタムスキャンルールとして「Organizations API監視」を有効にする。GuardDutyが脅威を検出したら、Security Hubの「カスタムアクション」をトリガーし、管理者が手動でAWS AppConfigの設定を変更して、影響を受けるアカウントのネットワーク通信を遮断する。",
+            "AWS Configのマネージドルールを使用して、Organizationsの状態変化を監視する。非準拠（Non-compliant）が検出されたら、Configの自動修復機能を利用して、LambdaからAWS Organizationsの再構築APIを呼び出し、自動的にメンバーアカウントを組織に再追加し、SCPを元の定義に上書きする。"
           ],
           "correct": 0,
-          "explanation": "EventBridge はイベント転送可能。 SNS により即時通知できる。 EMR は分析用途。",
+          "explanation": "特定の重大なAPI操作に対して「即時に」対応するためには、Amazon EventBridgeでCloudTrailの該当APIイベント（Organizations関連のAPI）をリアルタイムに検知し、AWS Lambdaをトリガーにして修復（IAMセッションの無効化や明示的拒否のポリシーアタッチ）を実行するのが最も低遅延かつ自動化された方法です。また、緊急連絡として音声通話（電話）を自動でかけるには、Amazon Connectなどの音声チャネルを利用するのが最適です。他の選択肢は、ポーリング処理によるタイムラグ、業務全体を麻痺させるアカウント停止、存在しないGuardDutyカスタム監視機能の使用、あるいはOrganizations再追加APIの誤解に基づいた不可能な設計などの問題があるため誤りです。",
           "type": "choice"
         },
         {
-          "scenario": "IAM Access Analyzer の用途として最適なものはどれか。",
+          "scenario": "ある電子商取引（EC）プラットフォームのDevOpsエンジニアが、AWS上で稼働するパブリックなApplication Load Balancer（ALB）の背後にあるウェブアプリケーションを保護しています。最近、特定の外部IPアドレス範囲からの大量の悪意のあるHTTPリクエスト（DDoSおよびスクレイピング攻撃）により、WebサーバーのCPUがスパイクし、通常のユーザーがアクセスできない問題が発生しました。エンジニアは、VPC Flow LogsおよびALBアクセスログをリアルタイムで分析し、同一IPアドレスからのリクエスト数が異常値（例えば1分間に1,000回以上）に達した場合、自動的にそのIPアドレスをAWS WAFのブロックリストに追加し、攻撃が収まったら自動でリストから削除する動的な自動防御システムを構築したいと考えています。運用のオーバーヘッドと遅延を最小限に抑える最適な方法はどれか。",
           "choices": [
-            "外部共有リソース検出",
-            "DNS キャッシュ共有",
-            "CI/CD 制御",
-            "動画圧縮"
+            "AWS WAFをALBにデプロイし、WAFの組み込みルールである「レートベースのルール（Rate-based Rule）」を設定する。レート制限の基準として「1分間に1,000回」を定義し、しきい値を超えたIPアドレスを自動的にブロックするように構成する。",
+            "VPC Flow LogsをAmazon Kinesis Data Firehose経由でAmazon S3バケットに送信し、S3のイベント通知からAWS Lambdaを起動する。LambdaはAmazon Athenaを呼び出して過去5分間のログからリクエスト元IPの件数をクエリし、しきい値を超えたIPをネットワークACL（NACL）の拒否ルールに動的に追加し、有効期限が切れたらLambdaのスケジュールイベントで削除する。",
+            "Amazon CloudWatch LogsにALBのアクセスログを送信し、メトリクスフィルターを設定して特定のステータスコードをカウントする。アラームがトリガーされたらAWS Systems ManagerのAutomationランブックを起動し、AWS Systems Manager of Session Managerを使用してすべてのWebサーバーインスタンスにログインし、ローカルのiptablesを設定して攻撃元IPをブロックする。",
+            "AWS WAFのAPIを使用して、すべてのインバウンドWebリクエストイベントをAWS Lambdaにリアルタイムで転送する。Lambdaのコード内でDynamoDBテーブルを使用してIPごとのカウンタを管理し、カウント数が1,000を超えた場合にWAFのIPセット（IP Set）を更新するスクリプトを自作する。"
           ],
           "correct": 0,
-          "explanation": "Access Analyzer は共有分析機能。 意図しない公開を検出できる。 MediaConvert は動画用途。",
+          "explanation": "AWS WAFには「レートベースのルール（Rate-based Rule）」という機能が標準で用意されています。この機能は、特定のIPアドレスからのリクエスト数が定義された制限値を超えた場合、そのIPアドレスからのリクエストを自動的にブロックし、レートが下がると自動でブロックを解除します。これはAWS WAFの完全にマネージドな機能であり、独自のログ分析パイプラインを自作・管理する必要がなく、最も低遅延かつ運用のオーバーヘッドが少ない解決策です。他の選択肢は、高レイテンシーかつNACLルール数上限超過リスク、スケールアウトするサーバー群の個別iptables管理による極めて高いオーバーヘッド、あるいは自製カウンター管理による高価なLambda/DynamoDBコストといった欠点があるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "企業では複数リージョンへ同一インフラを展開したい。最適なサービスはどれか。",
+          "scenario": "あるソーシャルネットワーキングアプリを運営するグローバル企業は、AWSの東京リージョンとアイルランドリージョンの2つのリージョンで、アクティブ/パッシブ型（ホットスタンバイ）の災害復旧（DR）構成をとっています。同社は、東京リージョン全体に深刻なインフラ障害（インターネット接続性の喪失や主要サービスの遅延悪化など）が発生した場合に、手動介入なしに（または定義されたシンプルなスイッチを通じて）、迅速かつ安全にトラフィックをアイルランドリージョンへ切り替えたいと考えています。その際、誤ったフェイルオーバー（フリッピング）を防ぎ、アプリケーションが完全に機能している状態（健全性）を確認してからルーティングを変更する必要があります。このレジリエンスを達成する最適なアーキテクチャはどれか。",
           "choices": [
-            "CloudFormation StackSets",
-            "CloudWatch Logs Insights",
-            "Amazon Inspector",
-            "AWS Artifact"
+            "Amazon Route 53 Application Recovery Controller (ARC) を導入し、両リージョンのリソースに対する「ルーティングコントロール（Routing Controls）」と「コントロールパネル（Control Panel）」を作成する。アプリケーションのヘルス状態を監視するCloudWatchアラームにバインドされた「準備状況チェック（Readiness Checks）」を設定し、Route 53のフェイルオーバールーティングポリシーにARCのルーティングコントロールの健全性ステータスを関連付け、障害検出時にARCを通じてルーティングを安全に反転（フリップ）させる。",
+            "Amazon Route 53の通常のヘルスチェック（TCP/HTTP型）を作成し、東京リーজনেরALBのDNSエンドポイントをターゲットに指定する。ヘルスチェックのしきい値を「1（連続1回の失敗）」に設定し、東京リージョンで1度でも応答がなかった場合、即時にアイルランドリージョンの加重レコードの重みを100%に切り替えるLambdaスクリプトをバックグラウンドで無限ループ実行する。",
+            "両リージョンの前面にAWS Global Acceleratorを配置し、東京リージョンとアイルランドリージョンのエンドポイントのウェイト（Weight）をそれぞれ100と0に設定する。東京リージョンで障害が発生したことを検知するAmazon EventBridgeルールを作成し、AWS Systems ManagerのIncident Managerを使用して、運用の担当者に手動でウェイトを書き換えるためのOpsItemを発行する。",
+            "AWS App Meshをマルチリージョン接続で構成し、仮想ルーターを使用してトラフィックのルーティングを管理する。Route 53のレイテンシーベースのルーティングを利用して両リージョンへ常時ルーティングさせ、アイルランドリージョンのコンテナが東京リージョンのDynamoDBのステータステーブルを定期ポーリングして、東京側が「Down」と書き込まれた際にアイルランド側で自身へのDNSレコード書き換えをRoute 53 APIで実行する。"
           ],
           "correct": 0,
-          "explanation": "StackSets は横断 IaC 展開向け。 複数リージョン配布に適している。 Inspector は脆弱性用途。",
+          "explanation": "AWSにおいて、マルチリージョンのフェイルオーバーとアプリケーションの復旧準備状況を高度に制御するマネージドサービスは「Route 53 Application Recovery Controller (ARC)」です。これを使用することで、インフラのリソース配置の整合性を検証する「準備状況チェック（Readiness Checks）」と、DNSルーティングの切り替えを安全かつ極めて低遅延（Route 53のDNS TTLに依存しないデータプレーンでの高速な切り替え）で実行できる「ルーティングコントロール（Routing Controls）」が提供され、最もレジリエンスの高いフェイルオーバーアーキテクチャが実現できます。他の選択肢は、フラッピング（誤検知による不要な切り替え頻発）リスク、手動オペレーションによる遅延、あるいはプライマリリージョンが完全にダウンした際の情報参照エラーによる動作不良などの問題があるため誤りです。",
           "type": "choice"
         },
         {
-          "scenario": "Systems Manager Run Command の用途はどれか。",
+          "scenario": "大規模なフィンテック企業が、AWS Lambdaを使用して構築した決済トランザクション処理マイクロサービスにおいて、1秒間に数万回発生する決済処理の「処理金額」「ユーザーカテゴリ」「レスポンスレイテンシー」などの高カーディナリティ（種類が膨大）なカスタムメトリクスを収集し、ほぼリアルタイムで可視化・分析したいと考えています。しかし、決済のたびに CloudWatch:PutMetricData APIを個別に呼び出すと、APIの呼び出し制限に達し、さらにメトリクスの作成コストが数千ドル以上に膨れ上がることが分かりました。システムのパフォーマンスに影響を与えず、かつコストを大幅に削減してメトリクスを可視化するための最適なアプローチはどれか。",
           "choices": [
-            "複数 EC2 一括コマンド実行",
-            "DNS 管理",
-            "CI/CD 配信",
-            "動画変換"
+            "AWS Lambda関数から、ログ出力として「CloudWatch Embedded Metric Format (EMF)」に準拠したJSONオブジェクトを標準出力（stdout）に出力する。CloudWatch LogsがこのEMF形式のログを自動的に解析し、APIコールを発生させることなく非同期かつ無料でCloudWatchのカスタムメトリクスを生成し、これをCloudWatchダッシュボードで可視化する。",
+            "Lambda関数内で決済情報を一時的にメモリ上にキャッシュし、5分間（または10,000トランザクション）に1回、バックグラウンドのスレッドを使用して集計済みの配列データを作成する。その後、CloudWatch:PutMetricData APIをバッチ処理（一度に最大1,000メトリクスデータポイント）で呼び出し、データを一括送信する。",
+            "AWS Lambda関数からAmazon Kinesis Data Streamsへログを直接送信し、そこからKinesis Data Analyticsを使用してSQLクエリでリアルタイムの平均決済金額やレイテンシーを計算する。計算結果をAmazon DynamoDBに格納し、DynamoDBのデータをAmazon QuickSightで読み込んでグラフ化する。",
+            "AWS X-Ray SDKをアプリケーションに導入し、カスタムセグメント（Custom Segments）とサブセグメントにメトリクス情報をアノテーション（Annotations）およびメタデータ（Metadata）として追加する。X-Rayコンソールでインサイトを有効にし、ログからグラフを作成する。"
           ],
           "correct": 0,
-          "explanation": "Run Command は遠隔操作機能。 SSH 不要で EC2 を管理できる。 MediaConvert は動画用途。",
+          "explanation": "大量のトランザクションが発生するサーバーレス環境において、パフォーマンスへの影響やコストを最小限に抑えつつカスタムメトリクスを発行するためのAWSベストプラクティスは、「CloudWatch Embedded Metric Format (EMF)」を利用することです。EMFを使用すると、Lambdaは単純にログとしてJSONを標準出力に出力するだけでよく、CloudWatch LogsがそのJSONを非同期でバックグラウンド解析してカスタムメトリクスを抽出・作成します。これにより、高価なPutMetricData APIの呼び出しを一切排除でき、コストとパフォーマンスの両方を劇的に改善できます。他の選択肢は、短寿命なLambdaでのキャッシュ消失リスク、大量のインフラ構築とそれに伴う高コスト化、あるいはX-Rayアノテーションによるメトリクス監視の不完全性などの問題があるため誤りです。",
           "type": "choice"
         },
         {
-          "scenario": "企業では Security Hub findings をチケット化したい。最適な構成はどれか。",
+          "scenario": "あるデジタルメディア配信プラットフォームは、Amazon ECS（AWS Fargate）、Amazon API Gateway、AWS Lambda、およびAmazon DynamoDBを使用したマイクロサービスアーキテクチャを導入しています。最近、一部のエンドユーザーから「動画リストの読み込みに10秒以上の遅延が発生する」との苦情が寄せられていますが、個々のサービスのCloudWatchメトリクス（CPUやメモリ）はすべて正常値を示しています。開発チームが、リクエストの全経路を追跡し、ボトルネックとなっている特定のデータベースクエリやダウンストリームのマイクロサービスAPI呼び出しを素早く特定するための、最も効果的で運用のオーバーヘッドが少ない診断方法はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodePipeline → Backup",
-            "Inspector → MQ"
+            "AWS X-Ray SDKを各マイクロサービスのアプリケーションコードに統合し、ECSタスクにX-Rayデーモンをサイドカーコンテナとしてデプロイする。API GatewayおよびLambdaでX-Rayトレースを有効にし、「CloudWatch ServiceLens」を使用してアプリケーションマップ（サービスマップ）を表示し、レイテンシーがスパイクしている特定のノード（DynamoDBテーブルへのスキャン操作など）をドリルダウンして調査する。",
+            "すべてのマイクロサービスの各関数の開始時と終了時に、ミリ秒単位のタイムスタンプを含む構造化ログ（JSON）を出力するように実装する。ログデータをAmazon Data Firehose経由でS3に集約し、Amazon Athenaを使用してリクエストIDでJOIN（結合）するSQLクエリを定期実行し、処理時間を計算するダッシュボードを作成する。",
+            "すべてのEC2およびECSインスタンス上でVPC Flow Logsを有効にし、パケットごとの送信日時と受信日時の差分を分析する。Route 53の問い合わせログと連携させて、DNSの名前解決遅延が発生していないかを詳細に分析する。",
+            "AWS Systems ManagerのOpsCenterを使用してインシデントワークフローを構築する。ユーザーからのリクエストを受信するたびにAPI GatewayがAWS Systems ManagerのParameter Storeの値をチェックし、実行時間が設定値を超えたら自動的にDynamoDBの読み込みキャパシティユニット（RCU）を一時的に引き上げるスクリプトを実行する。"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings を連携可能。 Lambda でチケット登録処理を実装できる。 Glue は ETL 用途。",
+          "explanation": "マイクロサービスアーキテクチャにおいて、分散トレースを実行し、サービス間の呼び出し関係や各ステップの遅延（レイテンシーボトルネック）を特定するためのAWS推奨の方法は、AWS X-RayとCloudWatch ServiceLensの組み合わせです。X-Rayを使用すると、リクエスト全体に一意のトレースIDが付与され、API Gateway、Lambda、ECS、さらにはDynamoDBへの呼び出し時間がタイムラインとして可視化されます。ServiceLensは、これらのトレースデータとCloudWatchのメトリクス・ログを統合し、リレーションマップとして直感的にボトルネックを発見させることができます。他の選択肢は、巨大なログJOINによる高コストおよびタイムラグ、ネットワーク・DNSレイヤーのみの限定的な調査、あるいは問題解決を目的としない対症療法的なキャパシティ増加であるため不適切です。",
           "type": "choice"
         },
         {
-          "scenario": "CloudTrail Insights の特徴として最適なものはどれか。",
+          "scenario": "ある証券会社では、システムのレジリエンス（回復力）を実証するため、毎年実施しているディザスタリカバリ（DR）訓練の自動化を進めています。本番環境のインフラはAWS Resilience Hubで評価されており、3ヶ月に1回、本番稼働時間外に自動的にDRテスト用のステージング環境をCloudFormationから複製し、AWS Systems Manager Incident Managerを使用してインシデント（DR擬似障害）をシミュレートし、復旧手順のランブックを自動実行してRTO（目標復旧時間）が許容値内であることを確認する仕組みを構築したいと考えています。運用のオーバーヘッドを最小限に抑え、スケジュール通りに実行させるための最適な設計はどれか。",
           "choices": [
-            "異常 API アクティビティ検知",
-            "DNS フェイルオーバー",
-            "CI/CD ビルド",
-            "動画圧縮"
+            "Amazon EventBridge Schedulerを使用して、3ヶ月に1回の実行スケジュールを設定する。ターゲットとしてAWS Systems Manager of Incident Managerの「インシデント作成（CreateIncident）」APIを指定し、対応するインシデントテンプレート（CloudFormationによる環境構築と、Systems Manager AutomationによるDR復旧ランブックの実行手順が含まれる連絡プラン）を実行し、検証結果をResilience Hubにレポートとして保存する。",
+            "cronを実行する専用の「監視用t3.microインスタンス」を常時稼働させ、Pythonスクリプト（boto3）から3ヶ月に1回、Resilience Hubの「PublishAssessment」APIを呼び出す。スクリプト内で、一時的なCloudFormationスタックの作成と削除を直接制御し、エラーが発生した場合はSlackボットから通知を送る。",
+            "AWS Organizationsの管理アカウントに、定期的に実行されるAWS Lambda関数を作成する。Lambda関数は、AWS CodePipelineを起動してステージング環境のクローンを作成し、完了後にAWS Systems Manager State Managerを使用してすべてのEC2インスタンスをシャットダウンさせ、その後復旧コマンドを送信して結果をS3に記録する。",
+            "AWS Configのカスタムルールを作成し、評価スケジュールを3ヶ月に設定する。Configルールの評価フェーズでステージング環境の自動複製スクリプト（Lambda経由）を実行し、AWS Systems Manager OpsCenterにOpsItemを生成して、エンジニアが手動で復旧手順を実行するようにする。"
           ],
           "correct": 0,
-          "explanation": "Insights は異常行動分析機能。 通常と異なる API 活動を検知できる。 MediaConvert は動画用途。",
-          "type": "choice"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "📊 模擬試験3-4",
-      "type": "Monitoring & Logging",
-      "emoji": "📊",
-      "subtitle": "モニタリング・ログ管理の問題！",
-      "questions": [
-        {
-          "scenario": "企業では Security Group の危険設定を検知したい。最適なサービスはどれか。",
-          "choices": [
-            "AWS Config",
-            "CloudFront",
-            "Amazon MQ",
-            "CodeArtifact"
-          ],
-          "correct": 0,
-          "explanation": "Config は設定準拠確認可能。 Security Group 違反も検出できる。 CloudFront は CDN サービス。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudWatch Dashboard の用途として最適なものはどれか。",
-          "choices": [
-            "監視情報可視化",
-            "脆弱性分析",
-            "DNS レプリケーション",
-            "CI/CD 承認"
-          ],
-          "correct": 0,
-          "explanation": "Dashboard は監視集約表示機能。 複数メトリクスを同時表示できる。 GuardDuty は脅威分析用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "Organizations 配下で特定リージョン以外を禁止したい。最適な方法はどれか。",
-          "choices": [
-            "SCP でリージョン制限する",
-            "CloudWatch Alarm を設定する",
-            "Athena Query を定期実行する",
-            "Backup Vault を共有する"
-          ],
-          "correct": 0,
-          "explanation": "SCP は API 制限制御可能。 利用リージョン制限にも利用される。 Alarm は監視用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CodeBuild の用途として最適なものはどれか。",
-          "choices": [
-            "ビルドと自動テスト",
-            "DNS 管理",
-            "脆弱性隔離",
-            "ログ削除"
-          ],
-          "correct": 0,
-          "explanation": "CodeBuild はビルドサービス。 自動テストも実行可能となる。 Route53 は DNS サービス。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では Session Manager 接続履歴を監査したい。最適な保存先はどれか。",
-          "choices": [
-            "CloudWatch Logs",
-            "Amazon MQ",
-            "CloudFront",
-            "Athena Federated Query"
-          ],
-          "correct": 0,
-          "explanation": "CloudWatch Logs は監査ログ保存向け。 Session Manager と連携可能。 CloudFront は CDN サービス。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudFormation Drift Detection の用途として最適なものはどれか。",
-          "choices": [
-            "IaC と実環境の差分検出",
-            "脅威検出",
-            "DNS フェイルオーバー",
-            "CI/CD 承認"
-          ],
-          "correct": 0,
-          "explanation": "Drift Detection は差分確認機能。 手動変更によるズレを検出できる。 GuardDuty は脅威分析用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では Config 違反時に自動修復したい。最適なサービスはどれか。",
-          "choices": [
-            "Systems Manager Automation",
-            "CloudFront",
-            "Amazon Lex",
-            "CodeArtifact"
-          ],
-          "correct": 0,
-          "explanation": "Automation は修復ランブック向け。 Config と組み合わせて利用される。 CloudFront は CDN サービス。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudWatch Synthetics の用途として最適なものはどれか。",
-          "choices": [
-            "Web シナリオ監視",
-            "DNS 暗号化",
-            "CI/CD 制御",
-            "動画圧縮"
-          ],
-          "correct": 0,
-          "explanation": "Synthetics は動作監視自動化。 Web 疎通確認などに利用される。 MediaConvert は動画用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では EventBridge を利用して CodePipeline 失敗通知を行いたい。最適な構成はどれか。",
-          "choices": [
-            "EventBridge → SNS",
-            "Athena → EMR",
-            "Inspector → Backup",
-            "Config → MQ"
-          ],
-          "correct": 0,
-          "explanation": "EventBridge は状態変化検知可能。 SNS により即時通知できる。 EMR は分析用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "Organizations の主目的として最適なものはどれか。",
-          "choices": [
-            "複数アカウント統合管理",
-            "脆弱性分析",
-            "DNS キャッシュ共有",
-            "動画変換"
-          ],
-          "correct": 0,
-          "explanation": "Organizations は統合管理基盤。 OU や SCP による集中制御が可能。 Inspector は脆弱性用途。",
-          "type": "choice"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "🚨 模擬試験3-5",
-      "type": "Incident & Event Response",
-      "emoji": "🚨",
-      "subtitle": "インシデント対応・イベント管理の問題！",
-      "questions": [
-        {
-          "scenario": "CloudWatch Anomaly Detection の特徴として最適なものはどれか。",
-          "choices": [
-            "異常値自動検知",
-            "DNS レプリケーション",
-            "CI/CD 承認",
-            "バックアップ削除"
-          ],
-          "correct": 0,
-          "explanation": "Anomaly Detection は異常分析機能。 通常パターンとの差異を検知する。 Route53 は DNS サービス。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では Lambda 障害時に通知したい。最適な構成はどれか。",
-          "choices": [
-            "CloudWatch Alarm → SNS",
-            "Athena → EMR",
-            "Inspector → Backup",
-            "CodeArtifact → MQ"
-          ],
-          "correct": 0,
-          "explanation": "CloudWatch Alarm は異常検知向け。 SNS で即時通知可能となる。 EMR は分析用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "Systems Manager Inventory の用途はどれか。",
-          "choices": [
-            "EC2 構成情報収集",
-            "DNS 管理",
-            "CI/CD 配信",
-            "動画変換"
-          ],
-          "correct": 0,
-          "explanation": "Inventory は構成情報収集機能。 インストールソフト一覧など確認可能。 MediaConvert は動画用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では CloudTrail ログを SQL 分析したい。最適なサービスはどれか。",
-          "choices": [
-            "Amazon Athena",
-            "AWS Backup",
-            "CloudFront",
-            "Amazon MQ"
-          ],
-          "correct": 0,
-          "explanation": "Athena は SQL 分析サービス。 S3 上ログを直接分析できる。 Backup は保護用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudWatch Logs Insights を使う場面として最適なものはどれか。",
-          "choices": [
-            "障害時ログ解析",
-            "DNS フェイルオーバー",
-            "CI/CD 配信",
-            "動画圧縮"
-          ],
-          "correct": 0,
-          "explanation": "Logs Insights はログ分析向け。 障害解析を高速化できる。 MediaConvert は動画用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では Security Hub findings を自動隔離したい。最適な構成はどれか。",
-          "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodePipeline → Backup",
-            "Inspector → MQ"
-          ],
-          "correct": 0,
-          "explanation": "EventBridge は findings を転送可能。 Lambda で隔離処理を実装できる。 Glue は ETL 用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "Config Rules の主目的として最適なものはどれか。",
-          "choices": [
-            "設定準拠性評価",
-            "動画変換",
-            "DNS 暗号化",
-            "CI/CD 配信"
-          ],
-          "correct": 0,
-          "explanation": "Config Rules は準拠チェック機能。 設定違反リソースを検出できる。 MediaConvert は動画用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CodeDeploy Canary Deployment の特徴はどれか。",
-          "choices": [
-            "段階的トラフィック切替",
-            "DNS キャッシュ共有",
-            "脆弱性分析高速化",
-            "CloudTrail 無効化"
-          ],
-          "correct": 0,
-          "explanation": "Canary は段階配信方式。 少量トラフィックから安全確認できる。 Inspector は脆弱性用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では複数アカウントへ同じ Config Rules を展開したい。最適なサービスはどれか。",
-          "choices": [
-            "CloudFormation StackSets",
-            "CloudWatch Logs Insights",
-            "Amazon MQ",
-            "AWS Artifact"
-          ],
-          "correct": 0,
-          "explanation": "StackSets は横断 IaC 展開向け。 複数アカウントへ一括適用可能。 Artifact は監査文書用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "IAM Role の最大の利点として最適なものはどれか。",
-          "choices": [
-            "一時認証情報利用",
-            "DNS レプリケーション",
-            "CI/CD 配信",
-            "動画圧縮"
-          ],
-          "correct": 0,
-          "explanation": "IAM Role は一時認証向け。 アクセスキー埋め込み不要となる。 Route53 は DNS サービス。",
-          "type": "choice"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "🔒 模擬試験3-6",
-      "type": "Security & Compliance",
-      "emoji": "🔒",
-      "subtitle": "セキュリティ・コンプライアンスの問題！",
-      "questions": [
-        {
-          "scenario": "企業では Config 違反時に EC2 を停止したい。最適な構成はどれか。",
-          "choices": [
-            "Config → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodeDeploy → Backup",
-            "Inspector → MQ"
-          ],
-          "correct": 0,
-          "explanation": "EventBridge は違反イベント連携可能。 Lambda で停止処理を実装できる。 Glue は ETL 用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudWatch Dashboard の最大の利点はどれか。",
-          "choices": [
-            "監視情報一元可視化",
-            "DNS フェイルオーバー",
-            "CI/CD ビルド",
-            "脆弱性分析"
-          ],
-          "correct": 0,
-          "explanation": "Dashboard は監視集約表示向け。 複数メトリクスを同時表示できる。 GuardDuty は脅威分析用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では Security Hub findings を Slack 通知したい。最適な構成はどれか。",
-          "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → EMR",
-            "Backup → Athena",
-            "Inspector → MQ"
-          ],
-          "correct": 0,
-          "explanation": "EventBridge は findings を連携可能。 Lambda で Slack 通知処理できる。 EMR は分析用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudWatch Agent の用途として最適なものはどれか。",
-          "choices": [
-            "OS メトリクス収集",
-            "DNS キャッシュ共有",
-            "CI/CD 承認",
-            "動画変換"
-          ],
-          "correct": 0,
-          "explanation": "CloudWatch Agent は OS 情報取得。 メモリやディスク利用率を送信できる。 MediaConvert は動画用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "Organizations 配下で CloudTrail を強制有効化したい。最適な方法はどれか。",
-          "choices": [
-            "Organizations Trail を利用する",
-            "CloudWatch Alarm を設定する",
-            "Athena Query を停止する",
-            "Inspector findings を通知する"
-          ],
-          "correct": 0,
-          "explanation": "Organizations Trail は集中監査向け。 全アカウントへ一括適用可能。 Alarm は監視用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudFormation の特徴として最適なものはどれか。",
-          "choices": [
-            "IaC によるインフラ管理",
-            "脆弱性隔離",
-            "DNS 暗号化",
-            "CI/CD 配信"
-          ],
-          "correct": 0,
-          "explanation": "CloudFormation は IaC サービス。 インフラをコード管理できる。 Inspector は脆弱性用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "企業では Session Manager 利用時の接続監査を行いたい。最適な保存先はどれか。",
-          "choices": [
-            "CloudWatch Logs",
-            "Amazon MQ",
-            "CloudFront",
-            "CodeArtifact"
-          ],
-          "correct": 0,
-          "explanation": "CloudWatch Logs は監査ログ保存向け。 Session Manager と連携できる。 CloudFront は CDN サービス。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CloudTrail ログを長期保存したい。最適な保存先はどれか。",
-          "choices": [
-            "Amazon S3",
-            "Amazon MQ",
-            "CloudFront",
-            "CodeArtifact"
-          ],
-          "correct": 0,
-          "explanation": "S3 は高耐久ストレージ。 CloudTrail 長期保存に適している。 MQ はメッセージ用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "CodePipeline の用途として最適なものはどれか。",
-          "choices": [
-            "CI/CD ワークフロー制御",
-            "DNS レプリケーション",
-            "動画圧縮",
-            "脆弱性分析"
-          ],
-          "correct": 0,
-          "explanation": "CodePipeline は CI/CD 統合基盤。 Build や Deploy を連携制御できる。 GuardDuty は脅威分析用途。",
-          "type": "choice"
-        },
-        {
-          "scenario": "EventBridge の最大の利点はどれか。",
-          "choices": [
-            "イベント駆動の疎結合設計",
-            "DNS キャッシュ共有",
-            "動画圧縮高速化",
-            "静的 IP 提供"
-          ],
-          "correct": 0,
-          "explanation": "EventBridge はイベント連携基盤。 サービス間を柔軟に接続できる。 Elastic IP は静的 IP 用途。",
+          "explanation": "定期的な自動タスク（スケジュール実行）を高い信頼性で管理するためには、Amazon EventBridge Schedulerを使用するのが最新かつ最も適したAWSサービスです。また、DRテストにおける一連のインシデントシミュレーションと、対応する修復手順（ランブック）の実行・追跡には、AWS Systems Manager Incident Managerが最適です。これらを組み合わせることで、イベントトリガーからインシデント起票、自動ランブック（Systems Manager Automation）の実行、結果の検証までの一連の流れを、サーバーレスかつ運用のオーバーヘッドを最小限に抑えて実装することができます。他の選択肢は、EC2インスタンスの常時稼働による管理コスト、CodePipelineの本来の目的と異なる不適切な使用、あるいはAWS Configをスケジュール起動用に誤用し、さらに手動復旧を想定するなどの問題があるため誤りです。",
           "type": "choice"
         }
       ]
     }
   ],
   "id": "devops",
-  "description": "AWS DOP-C02 模擬試験3"
+  "description": "AWS DOP-C02 模擬試験3 (本格版)"
 }
