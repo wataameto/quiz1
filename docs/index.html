@@ -408,6 +408,10 @@
         <span id="label-joho1">💻 情報処理1 練習問題</span>
         <span id="score-joho1">0問</span>
       </a>
+      <a href="./itpassport/?from=menu" class="score-row score-link" target="_blank">
+        <span id="label-itpassport">🧭 ITパスポート練習問題</span>
+        <span id="score-itpassport">0問</span>
+      </a>
     </div>
 
     <div class="footer">
@@ -481,6 +485,10 @@ async function getKokyo1Score() {
 
 async function getJoho1Score() {
   return getQuizScore('quiz_joho1', './joho1/');
+}
+
+async function getItpassportScore() {
+  return getQuizScore('quiz_itpassport', './itpassport/');
 }
 
 async function calculateQuizMeta(questionsPath) {
@@ -568,12 +576,14 @@ async function updateScoreDisplay() {
   const devopsMeta = await calculateQuizMeta('./devops/');
   const kokyo1Meta = await calculateQuizMeta('./kokyo1/');
   const joho1Meta = await calculateQuizMeta('./joho1/');
+  const itpassportMeta = await calculateQuizMeta('./itpassport/');
   const bokiScore = await getBokiScore();
   const devopsScore = await getDevopsScore();
   const kokyo1Score = await getKokyo1Score();
   const joho1Score = await getJoho1Score();
-  const totalCorrect = bokiScore.correct + devopsScore.correct + kokyo1Score.correct + joho1Score.correct;
-  const totalQuestions = bokiScore.total + devopsScore.total + kokyo1Score.total + joho1Score.total;
+  const itpassportScore = await getItpassportScore();
+  const totalCorrect = bokiScore.correct + devopsScore.correct + kokyo1Score.correct + joho1Score.correct + itpassportScore.correct;
+  const totalQuestions = bokiScore.total + devopsScore.total + kokyo1Score.total + joho1Score.total + itpassportScore.total;
 
   // 常にスコアエリアを表示（リンクが必要なため）
   document.getElementById('score-summary').classList.add('visible');
@@ -581,10 +591,12 @@ async function updateScoreDisplay() {
   document.getElementById('label-devops').textContent = `☁️ DOP-C02 練習問題（${devopsMeta.parts}パート）`;
   document.getElementById('label-kokyo1').textContent = `⚖️ 公共1 期末考査対策（${kokyo1Meta.parts}パート）`;
   document.getElementById('label-joho1').textContent = `💻 情報処理1 練習問題（${joho1Meta.parts}パート）`;
+  document.getElementById('label-itpassport').textContent = `🧭 ITパスポート練習問題（${itpassportMeta.parts}パート）`;
   document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
   document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
   document.getElementById('score-kokyo1').textContent = `${kokyo1Score.correct}問 / ${kokyo1Score.total}問`;
   document.getElementById('score-joho1').textContent = `${joho1Score.correct}問 / ${joho1Score.total}問`;
+  document.getElementById('score-itpassport').textContent = `${itpassportScore.correct}問 / ${itpassportScore.total}問`;
   document.getElementById('score-total').textContent = `${totalCorrect}問`;
   document.getElementById('score-grand-total').textContent = `${totalQuestions}問`;
 }
