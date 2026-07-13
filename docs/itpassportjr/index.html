@@ -38,11 +38,10 @@
       font-size: 0.9rem;
       cursor: pointer;
     }
-    .part-score-row .part-name { font-weight: 700; color: #2d3748; }
-    .part-score-row .part-value { color: #0f2027; font-weight: 800; white-space: nowrap; }
+    .part-score-row .part-name { font-weight: 700; color: #2d3748; flex: 1; min-width: 0; }
+    .part-score-row .part-value { color: #0f2027; font-weight: 800; white-space: nowrap; text-align: right; }
     .part-score-row .part-arrow { color: #a0aec0; font-size: 0.72rem; flex-shrink: 0; transition: transform 0.2s ease; }
     .part-block.open .part-score-row .part-arrow { transform: rotate(90deg); }
-    .selection-label { font-size: 0.82rem; font-weight: 800; color: #4a5568; margin: 16px 0 8px; display: flex; align-items: center; gap: 6px; }
     .current-part-card { text-align: center; background: #f7fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 12px; margin: 8px 0 12px; color: #4a5568; font-size: 0.86rem; line-height: 1.45; }
     .current-part-card strong { display: block; color: #2d3748; font-size: 1rem; margin-bottom: 2px; }
 
@@ -191,12 +190,10 @@
         <p id="quiz-description"></p>
       </div>
     </div>
-    <div class="selection-label" id="part-selection-label" style="display:none;">① パートを選択</div>
     <div class="part-scores-section" id="part-scores-section" style="display:none;">
       <div id="part-scores-list"></div>
     </div>
     <div class="current-part-card" id="current-part-card" style="display:none;"></div>
-    <div class="selection-label" id="set-selection-label" style="display:none;">② セットを選択</div>
     <div class="part-set-list" id="test-grid"></div>
   </div>
 
@@ -499,7 +496,7 @@ function switchLevel(level) {
   loadQuestions(level);
 }
 
-let homeCollapsed = false; // 現在パートのセット一覧を閉じているか
+let homeCollapsed = true; // 現在パートのセット一覧を閉じているか
 
 function toggleLevel(level) {
   soundClick();
@@ -725,18 +722,15 @@ async function showHome() {
   const currentLevelData = quizData[currentLevel];
   const currentPartLabel = currentLevelData?.description || currentLevelData?.label || `パート ${currentLevel}`;
   const currentPartCard = document.getElementById('current-part-card');
-  const setSelectionLabel = document.getElementById('set-selection-label');
 
   const unitName = quizId === 'kokyo1' ? 'プリント' : 'セット';
 
   // レベル別スコアを計算・表示
   const partScoresSection = document.getElementById('part-scores-section');
   const partScoresList = document.getElementById('part-scores-list');
-  const partSelectionLabel = document.getElementById('part-selection-label');
 
   if (maxLevel > 1) {
     if (currentPartCard) currentPartCard.style.display = 'none';
-    if (setSelectionLabel) setSelectionLabel.style.display = 'none';
 
     let partScoresHtml = '';
 
@@ -775,27 +769,15 @@ async function showHome() {
 
     partScoresList.innerHTML = partScoresHtml;
     partScoresSection.style.display = 'block';
-    if (partSelectionLabel) {
-      partSelectionLabel.style.display = 'flex';
-      partSelectionLabel.textContent = '① パートを選択';
-    }
     document.getElementById('test-grid').innerHTML = '';
   } else {
     partScoresSection.style.display = 'none';
-    if (partSelectionLabel) {
-      partSelectionLabel.style.display = 'flex';
-      partSelectionLabel.textContent = '① パートは1個で固定です';
-    }
 
     if (currentLevelData && currentPartCard) {
       currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong>`;
       currentPartCard.style.display = 'block';
     } else if (currentPartCard) {
       currentPartCard.style.display = 'none';
-    }
-    if (setSelectionLabel) {
-      setSelectionLabel.textContent = `② ${unitName}を選択`;
-      setSelectionLabel.style.display = 'flex';
     }
 
     document.getElementById('test-grid').innerHTML = await buildSetRowsHtml(TESTS, currentLevel, currentPartLabel, unitName);
