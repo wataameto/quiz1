@@ -66,29 +66,41 @@
       align-items: center;
       gap: 12px;
       padding: 10px 14px;
-      cursor: pointer;
       border-bottom: 1px solid #f0f2f5;
-      transition: background 0.15s;
     }
     .part-set-row:last-child { border-bottom: none; }
-    .part-set-row:hover { background: #f7fafc; }
     .set-icon { width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: #fff; background: linear-gradient(135deg, #667eea, #764ba2); }
     .set-main { flex: 1; min-width: 0; }
     .set-main .set-name { font-weight: 700; color: #2d3748; font-size: 0.92rem; }
     .set-main .set-sub { font-size: 0.74rem; color: #718096; margin-top: 2px; overflow-wrap: anywhere; }
-    .set-score { font-size: 0.78rem; color: #718096; text-align: right; white-space: nowrap; flex-shrink: 0; }
-    .set-score span { font-weight: 800; font-size: 0.9rem; color: #2d3748; }
     .set-actions { display: flex; gap: 6px; flex-shrink: 0; }
-    .set-actions button { padding: 6px 10px; border: none; border-radius: 6px; font-size: 0.72rem; font-weight: 600; cursor: pointer; color: #fff; white-space: nowrap; transition: all 0.15s; }
+    .set-actions button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      padding: 7px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #fff;
+      white-space: nowrap;
+      line-height: 1.25;
+      transition: all 0.15s;
+    }
+    .set-actions .btn-title { font-size: 0.76rem; font-weight: 700; }
+    .set-actions .btn-sub { font-size: 0.6rem; opacity: 0.85; }
+    .set-exam-btn { background: #667eea; }
     .set-review-btn { background: #f7971e; }
-    .set-practice-btn { background: #667eea; }
+    .set-practice-btn { background: #a0aec0; }
     @media (max-width: 520px) {
       body { padding: 8px; }
       .container { padding: 20px 12px; }
       .part-set-row { flex-wrap: wrap; padding: 10px 12px; }
-      .set-score { order: 3; margin-left: 46px; }
-      .set-actions { order: 4; margin-left: 46px; }
-      .set-actions button { padding: 6px 8px; font-size: 0.68rem; }
+      .set-actions { order: 3; margin-left: 46px; }
+      .set-actions button { padding: 6px 9px; }
+      .set-actions .btn-title { font-size: 0.72rem; }
+      .set-actions .btn-sub { font-size: 0.58rem; }
     }
     .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; position: relative; }
     .quiz-back { position: absolute; right: 0; top: 0; background: #667eea; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #fff; transition: all 0.15s; box-shadow: 0 4px 12px rgba(102,126,234,0.22); }
@@ -788,29 +800,29 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
   let html = '';
   for (const t of tests) {
     const best = await getBest(t.id, level);
-    const bestTxt = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
     const questionCount = Array.isArray(t.questions) ? t.questions.length : 10;
 
     // 復習問題の数を取得
     const wrongIndices = await getWrongAnswerIds(t.id, level);
     const reviewCount = wrongIndices.length;
-    const reviewBtn = reviewCount > 0
-      ? `<button class="set-review-btn" onclick="event.stopPropagation(); goToTest(${level}, ${t.id}, true, false);">誤答復習(${reviewCount}問)</button>`
-      : '';
 
-    // 未挑戦テストには練習モードボタンを追加
-    const practiceBtn = best < 0
-      ? `<button class="set-practice-btn" onclick="event.stopPropagation(); goToTest(${level}, ${t.id}, false, true);">練習モード（${questionCount}問）</button>`
-      : '';
+    // 2つ目のボタン：誤答があれば誤答復習、なければ演習モード（どちらも記録なし）
+    const secondaryBtn = reviewCount > 0
+      ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習(${reviewCount}問)</span><span class="btn-sub">記録なし</span></button>`
+      : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">記録なし</span></button>`;
 
-    html += `<div class="part-set-row" onclick="goToTest(${level}, ${t.id}, false, false);">
+    const scoreSuffix = best >= 0 ? ` ・ 🏆最高${best}点` : '';
+
+    html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
       <div class="set-main">
         <div class="set-name">${unitName}${t.id}　${t.type || ''}</div>
-        <div class="set-sub">${partLabel} ・ ${questionCount}問</div>
+        <div class="set-sub">${partLabel} ・ ${questionCount}問${scoreSuffix}</div>
       </div>
-      <div class="set-score">${bestTxt}</div>
-      <div class="set-actions">${practiceBtn}${reviewBtn}</div>
+      <div class="set-actions">
+        <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span><span class="btn-sub">記録あり</span></button>
+        ${secondaryBtn}
+      </div>
     </div>`;
   }
   return html;
