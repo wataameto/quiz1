@@ -73,6 +73,8 @@
     .set-main { flex: 1; min-width: 0; }
     .set-main .set-name { font-weight: 700; color: #2d3748; font-size: 0.92rem; }
     .set-main .set-sub { font-size: 0.74rem; color: #718096; margin-top: 2px; overflow-wrap: anywhere; }
+    .set-score { font-size: 0.78rem; color: #4a5568; font-weight: 700; text-align: right; white-space: nowrap; flex-shrink: 0; }
+    .set-score span { font-weight: 800; font-size: 0.95rem; color: #1a202c; }
     .set-actions { display: flex; gap: 6px; flex-shrink: 0; }
     .set-actions button {
       display: flex;
@@ -97,7 +99,8 @@
       body { padding: 8px; }
       .container { padding: 20px 12px; }
       .part-set-row { flex-wrap: wrap; padding: 10px 12px; }
-      .set-actions { order: 3; margin-left: 46px; }
+      .set-score { order: 3; margin-left: 46px; }
+      .set-actions { order: 4; margin-left: 46px; }
       .set-actions button { padding: 6px 9px; }
       .set-actions .btn-title { font-size: 0.72rem; }
       .set-actions .btn-sub { font-size: 0.58rem; }
@@ -811,14 +814,15 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
       ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習(${reviewCount}問)</span><span class="btn-sub">記録なし</span></button>`
       : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">記録なし</span></button>`;
 
-    const scoreSuffix = best >= 0 ? ` ・ 🏆最高${best}点` : '';
+    const scoreText = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
 
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
       <div class="set-main">
         <div class="set-name">${unitName}${t.id}　${t.type || ''}</div>
-        <div class="set-sub">${partLabel} ・ ${questionCount}問${scoreSuffix}</div>
+        <div class="set-sub">${partLabel} ・ ${questionCount}問</div>
       </div>
+      <div class="set-score">${scoreText}</div>
       <div class="set-actions">
         <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span><span class="btn-sub">記録あり</span></button>
         ${secondaryBtn}
