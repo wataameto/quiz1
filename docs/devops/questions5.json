@@ -10,15 +10,15 @@
       "subtitle": "CI/CD・デプロイメント自動化の問題！",
       "questions": [
         {
-          "scenario": "ある企業では Security Hub findings を利用して、危険な Security Group を自動隔離したい。最適な構成はどれか。",
+          "scenario": "企業では CloudWatch Alarm や Systems Manager Automation の実行結果を、運用チームが使うSlackやAmazon Chimeのチャットルームに直接通知し、簡単なコマンドでチャット画面から対応したい。最適なサービスはどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodePipeline → Backup",
-            "Inspector → MQ"
+            "AWS Chatbot",
+            "Amazon Connect",
+            "Amazon SES",
+            "AWS Support API"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings を連携可能。 Lambda で Security Group 修正処理を実装できる。 Glue は ETL 用途。",
+          "explanation": "AWS ChatbotはAWSの通知やアラートをSlackやAmazon Chimeなどのチャットルームに転送し、チャット画面から直接コマンドを実行できるようにするChatOpsサービス。",
           "type": "choice"
         },
         {
@@ -727,15 +727,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Security Hub findings を自動隔離したい。最適な構成はどれか。",
+          "scenario": "企業では ECS/EKS 上で動作するコンテナのCPU・メモリ使用率をタスクやサービス単位で詳細に可視化し、リソース逼迫の傾向を把握したい。最適な機能はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodePipeline → Backup",
-            "Inspector → MQ"
+            "CloudWatch Container Insights",
+            "CloudWatch Logs Insights",
+            "X-Ray Service Map",
+            "Compute Optimizer"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings を転送可能。 Lambda で隔離処理を実装できる。 Glue は ETL 用途。",
+          "explanation": "CloudWatch Container InsightsはECSやEKSなどのコンテナ環境のCPU・メモリ・ネットワークなどのメトリクスをクラスタ・サービス・タスク単位で収集し、ダッシュボードで可視化する機能。",
           "type": "choice"
         },
         {

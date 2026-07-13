@@ -82,15 +82,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業は Security Hub findings を受信した際、Critical のみ Slack 通知したい。最小構成として最適なものはどれか。",
+          "scenario": "企業では最小のコストで災害復旧体制を用意したいが、通常時のインフラコストはほぼゼロに抑えたい。RTO/RPOは数時間〜1日程度で許容できる。最適なDR戦略はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "Inspector → Batch",
-            "Config → Backup"
+            "バックアップ&リストア（Backup and Restore）",
+            "パイロットライト（Pilot Light）",
+            "ウォームスタンバイ（Warm Standby）",
+            "マルチサイト・アクティブ/アクティブ"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings 条件分岐可能。 Lambda で Slack 通知処理できる。 Glue は ETL 用途。",
+          "explanation": "バックアップ&リストアは平常時にはリソースを起動せずバックアップのみ保持し、災害時にリソースを新規構築して復旧する、最もコストが低くRTO/RPOが長くなるDR戦略。",
           "type": "choice"
         },
         {
@@ -397,15 +397,15 @@
       "subtitle": "モニタリング・ログ管理の問題！",
       "questions": [
         {
-          "scenario": "Security Hub findings に対し自動隔離処理を行いたい。最適な構成はどれか。",
+          "scenario": "企業では、最小限のコアインフラ（DBのレプリケーションなど）のみを別リージョンで常時稼働させ、障害時に残りのコンピューティングリソースをすばやくスケールアップして復旧させたい。最適なDR戦略はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodeBuild → Backup",
-            "Config → MQ"
+            "パイロットライト（Pilot Light）",
+            "バックアップ&リストア",
+            "ウォームスタンバイ",
+            "マルチサイト・アクティブ/アクティブ"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings を連携可能。 Lambda で隔離処理を実装できる。 Glue は ETL 用途。",
+          "explanation": "パイロットライトはDBなどコアとなる重要な部分のみを別リージョンで常時稼働・レプリケーションしておき、災害時に周辺のコンピューティングリソースを起動して復旧させるDR戦略。バックアップ&リストアより高速に復旧できる。",
           "type": "choice"
         },
         {
@@ -679,15 +679,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業は Security Hub findings を自動チケット化したい。最適な構成はどれか。",
+          "scenario": "企業では、本番環境の縮小版（最小構成のフルスタック）を別リージョンで常時稼働させておき、障害時にそのリージョンをスケールアップして本番トラフィックを受けられるようにしたい。最適なDR戦略はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → QuickSight",
-            "Inspector → Batch",
-            "Config → Route53"
+            "ウォームスタンバイ（Warm Standby）",
+            "パイロットライト",
+            "バックアップ&リストア",
+            "マルチサイト・アクティブ/アクティブ"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings 連携可能。 Lambda でチケット発行処理できる。 QuickSight は可視化用途。",
+          "explanation": "ウォームスタンバイは本番環境の縮小版を別リージョンで常時稼働させておき、障害時にスケールアップしてフルキャパシティに引き上げる戦略で、パイロットライトより高速に復旧できる。",
           "type": "choice"
         },
         {
@@ -703,15 +703,15 @@
           "type": "choice"
         },
         {
-          "scenario": "Organizations 環境で全アカウントに同じ Config Rules を配布したい。最適なサービスはどれか。",
+          "scenario": "企業では、複数リージョンで本番環境と同等の規模のインフラを平常時から常時稼働させ、両リージョンでトラフィックを分散処理し、障害時は即座に残ったリージョンへ全トラフィックを切り替えたい。最適なDR戦略はどれか。",
           "choices": [
-            "CloudFormation StackSets",
-            "CloudWatch Logs Insights",
-            "AWS Artifact",
-            "Amazon MQ"
+            "マルチサイト・アクティブ/アクティブ",
+            "パイロットライト",
+            "バックアップ&リストア",
+            "ウォームスタンバイ"
           ],
           "correct": 0,
-          "explanation": "StackSets は横断展開向け。 複数アカウントへ一括配布できる。 Artifact は監査文書用途。",
+          "explanation": "マルチサイト・アクティブ/アクティブは複数リージョンで本番同等の環境を常時稼働させ、平常時から両方でトラフィックを処理する戦略で、4つのDR戦略の中で最もRTO/RPOが短いがコストも最も高い。",
           "type": "choice"
         },
         {

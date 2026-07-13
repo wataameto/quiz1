@@ -58,15 +58,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Security Hub findings を Slack 通知したい。最適な構成はどれか。",
+          "scenario": "企業では Amazon RDS のデータベースにおいて、AZ障害時も自動的にフェイルオーバーし可用性を確保したい。追加のアプリケーション改修なしで実現する方法はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodeCommit → Backup",
-            "Inspector → MQ"
+            "Multi-AZ配置を有効にする",
+            "リードレプリカを1つ追加する",
+            "手動でスナップショットを定期取得する",
+            "DBインスタンスをスケールアップする"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings を連携可能。 Lambda で Slack 通知処理を実装できる。 Glue は ETL 用途。",
+          "explanation": "RDSのMulti-AZ配置は同期レプリケーションでスタンバイインスタンスを別AZに保持し、プライマリに障害が発生すると自動的にフェイルオーバーしてエンドポイントを切り替える。アプリ側の変更は不要。",
           "type": "choice"
         },
         {
@@ -304,15 +304,15 @@
           "type": "choice"
         },
         {
-          "scenario": "Security Hub と連携して自動隔離を行いたい。最適な構成はどれか。",
+          "scenario": "企業ではグローバルに展開するアプリケーションで、複数リージョンのDynamoDBテーブルを双方向で自動的に同期し、どのリージョンからでも低レイテンシで読み書きしたい。最適な機能はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodeBuild → Backup",
-            "Config → Route53"
+            "DynamoDB グローバルテーブル",
+            "DynamoDB ストリーム単体",
+            "DynamoDB Accelerator (DAX)",
+            "オンデマンドバックアップ"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings を転送可能。 Lambda で隔離処理を実装できる。 Glue は ETL 用途。",
+          "explanation": "DynamoDBグローバルテーブルは複数リージョンにまたがるテーブル間でデータを自動的に双方向レプリケーションし、各リージョンから低レイテンシな読み書きを実現するマルチリージョン・マルチアクティブなデータベース機能。",
           "type": "choice"
         },
         {
@@ -562,15 +562,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では複数リージョンへ同一インフラを展開したい。最適なサービスはどれか。",
+          "scenario": "企業ではChefやPuppetの構成管理レシピ・クックブックの資産を活かしつつ、EC2インスタンスの構成管理を自動化したい。最適なサービスはどれか。",
           "choices": [
-            "CloudFormation StackSets",
-            "CloudWatch Logs Insights",
-            "Amazon Inspector",
-            "AWS Artifact"
+            "AWS OpsWorks",
+            "AWS Config",
+            "AWS Service Catalog",
+            "AWS Systems Manager Inventory"
           ],
           "correct": 0,
-          "explanation": "StackSets はマルチ展開向け。 複数リージョン一括配布可能。 Inspector は脆弱性用途。",
+          "explanation": "AWS OpsWorksはChefやPuppetをマネージド型で提供するサービスで、既存のレシピ・クックブック資産を活かしながらEC2インスタンスの構成管理を自動化できる。",
           "type": "choice"
         },
         {
@@ -634,15 +634,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Security Hub findings をチケット化したい。最適な構成はどれか。",
+          "scenario": "企業ではオンプレミスのデータセンターとAWS VPC間で、インターネットを経由しない専用線による安定した低レイテンシ接続を確立したい。最適なサービスはどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "Config → Backup",
-            "CodeBuild → MQ"
+            "AWS Direct Connect",
+            "AWS Site-to-Site VPN",
+            "AWS PrivateLink",
+            "Amazon Route 53 Resolver"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings 連携可能。 Lambda でチケット登録できる。 Glue は ETL 用途。",
+          "explanation": "AWS Direct Connectはオンプレミスとの間に専用線を敷設し、インターネットを経由せず安定した帯域幅と低レイテンシの接続を実現するハイブリッド接続サービス。VPNより高い信頼性が必要な場合に選択する。",
           "type": "choice"
         }
       ]
