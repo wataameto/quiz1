@@ -21,68 +21,75 @@
     .level-btn.active { border-color: #f7971e; background: linear-gradient(135deg, #fff9ed, #fffbea); color: #2d3748; box-shadow: 0 4px 12px rgba(247,151,30,0.2); }
     .level-btn:hover:not(.active) { border-color: #cbd5e0; background: #f7fafc; }
     .part-scores-section { margin-bottom: 15px; }
-    .part-score-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 14px;
+    .part-block {
       background: linear-gradient(135deg, #f7f8ff, #f5f7ff);
       border: 1.5px solid #e2e8f0;
       border-radius: 12px;
       margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .part-block.active { border-color: #667eea; }
+    .part-score-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
       font-size: 0.9rem;
+      cursor: pointer;
     }
     .part-score-row .part-name { font-weight: 700; color: #2d3748; }
-    .part-score-row .part-value { color: #0f2027; font-weight: 800; }
+    .part-score-row .part-value { color: #0f2027; font-weight: 800; white-space: nowrap; }
+    .part-score-row .part-arrow { color: #a0aec0; font-size: 0.72rem; flex-shrink: 0; transition: transform 0.2s ease; }
+    .part-block.open .part-score-row .part-arrow { transform: rotate(90deg); }
     .selection-label { font-size: 0.82rem; font-weight: 800; color: #4a5568; margin: 16px 0 8px; display: flex; align-items: center; gap: 6px; }
     .current-part-card { text-align: center; background: #f7fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 10px 12px; margin: 8px 0 12px; color: #4a5568; font-size: 0.86rem; line-height: 1.45; }
     .current-part-card strong { display: block; color: #2d3748; font-size: 1rem; margin-bottom: 2px; }
 
     .total-score-bar { font-size: 0.9rem; color: #718096; margin-bottom: 12px; }
     .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
-    .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
-    .test-card-container:nth-child(1) .test-card { background: linear-gradient(135deg, #f7971e, #ffd200); color: #2d3748; }
-    .test-card-container:nth-child(2) .test-card { background: linear-gradient(135deg, #21d4fd, #b721ff); }
-    .test-card-container:nth-child(3) .test-card { background: linear-gradient(135deg, #0f2027, #2c5364); }
-    .test-card-container:nth-child(4) .test-card { background: linear-gradient(135deg, #f5576c, #f093fb); }
-    .test-card-container:nth-child(5) .test-card { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #2d3748; }
-    .test-card-container:nth-child(6) .test-card { background: linear-gradient(135deg, #4facfe, #00f2fe); color: #2d3748; }
-    .test-card-container:nth-child(7) .test-card { background: linear-gradient(135deg, #ff9966, #ff5e62); }
-    .test-card-container:nth-child(8) .test-card { background: linear-gradient(135deg, #11998e, #38ef7d); color: #2d3748; }
-    .test-card-container:nth-child(9) .test-card { background: linear-gradient(135deg, #182848, #4b6cb7); }
-    .test-card-container:nth-child(10) .test-card { background: linear-gradient(135deg, #ff007f, #ff758c); }
-    .test-card-container:nth-child(11) .test-card { background: linear-gradient(135deg, #8a2387, #e94057); }
-    .test-card { background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px; padding: 12px 14px; text-align: center; cursor: pointer; transition: all 0.25s cubic-bezier(.34,1.56,.64,1); border: none; color: #fff; }
-    .test-card-container:nth-child(1) .test-card-review-btn { background: linear-gradient(135deg, #f7971e, #ffd200) !important; color: #2d3748 !important; }
-    .test-card-container:nth-child(2) .test-card-review-btn { background: linear-gradient(135deg, #21d4fd, #b721ff) !important; }
-    .test-card-container:nth-child(3) .test-card-review-btn { background: linear-gradient(135deg, #0f2027, #2c5364) !important; }
-    .test-card-container:nth-child(4) .test-card-review-btn { background: linear-gradient(135deg, #f5576c, #f093fb) !important; }
-    .test-card-container:nth-child(5) .test-card-review-btn { background: linear-gradient(135deg, #43e97b, #38f9d7) !important; color: #2d3748 !important; }
-    .test-card-container:nth-child(6) .test-card-review-btn { background: linear-gradient(135deg, #4facfe, #00f2fe) !important; color: #2d3748 !important; }
-    .test-card-container:nth-child(7) .test-card-review-btn { background: linear-gradient(135deg, #ff9966, #ff5e62) !important; }
-    .test-card-container:nth-child(8) .test-card-review-btn { background: linear-gradient(135deg, #11998e, #38ef7d) !important; color: #2d3748 !important; }
-    .test-card-container:nth-child(9) .test-card-review-btn { background: linear-gradient(135deg, #182848, #4b6cb7) !important; }
-    .test-card-container:nth-child(10) .test-card-review-btn { background: linear-gradient(135deg, #ff007f, #ff758c) !important; }
-    .test-card-container:nth-child(11) .test-card-review-btn { background: linear-gradient(135deg, #8a2387, #e94057) !important; }
-    .test-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
-    .test-card .card-emoji { display: none; }
-    .test-card h2 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
-    .test-card .test-type { font-size: 0.75rem; opacity: 0.9; margin-bottom: 12px; background: rgba(255,255,255,0.25); border-radius: 99px; padding: 2px 10px; display: inline-block; }
-    .test-card .set-summary { font-size: 0.76rem; opacity: 0.92; margin-bottom: 8px; line-height: 1.35; }
-    .test-card .best-score { font-size: 0.85rem; opacity: 0.95; }
-    .test-card .best-score span { font-weight: 800; font-size: 1rem; }
+    .part-set-list { display: flex; flex-direction: column; }
+    .part-block .part-set-list { display: none; background: #fff; border-top: 1.5px solid #e2e8f0; }
+    .part-block.open .part-set-list { display: flex; }
+    .part-set-row:nth-child(1) .set-icon { background: linear-gradient(135deg, #f7971e, #ffd200); }
+    .part-set-row:nth-child(2) .set-icon { background: linear-gradient(135deg, #21d4fd, #b721ff); }
+    .part-set-row:nth-child(3) .set-icon { background: linear-gradient(135deg, #0f2027, #2c5364); }
+    .part-set-row:nth-child(4) .set-icon { background: linear-gradient(135deg, #f5576c, #f093fb); }
+    .part-set-row:nth-child(5) .set-icon { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .part-set-row:nth-child(6) .set-icon { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .part-set-row:nth-child(7) .set-icon { background: linear-gradient(135deg, #ff9966, #ff5e62); }
+    .part-set-row:nth-child(8) .set-icon { background: linear-gradient(135deg, #11998e, #38ef7d); }
+    .part-set-row:nth-child(9) .set-icon { background: linear-gradient(135deg, #182848, #4b6cb7); }
+    .part-set-row:nth-child(10) .set-icon { background: linear-gradient(135deg, #ff007f, #ff758c); }
+    .part-set-row:nth-child(11) .set-icon { background: linear-gradient(135deg, #8a2387, #e94057); }
+    .part-set-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      cursor: pointer;
+      border-bottom: 1px solid #f0f2f5;
+      transition: background 0.15s;
+    }
+    .part-set-row:last-child { border-bottom: none; }
+    .part-set-row:hover { background: #f7fafc; }
+    .set-icon { width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: #fff; background: linear-gradient(135deg, #667eea, #764ba2); }
+    .set-main { flex: 1; min-width: 0; }
+    .set-main .set-name { font-weight: 700; color: #2d3748; font-size: 0.92rem; }
+    .set-main .set-sub { font-size: 0.74rem; color: #718096; margin-top: 2px; overflow-wrap: anywhere; }
+    .set-score { font-size: 0.78rem; color: #718096; text-align: right; white-space: nowrap; flex-shrink: 0; }
+    .set-score span { font-weight: 800; font-size: 0.9rem; color: #2d3748; }
+    .set-actions { display: flex; gap: 6px; flex-shrink: 0; }
+    .set-actions button { padding: 6px 10px; border: none; border-radius: 6px; font-size: 0.72rem; font-weight: 600; cursor: pointer; color: #fff; white-space: nowrap; transition: all 0.15s; }
+    .set-review-btn { background: #f7971e; }
+    .set-practice-btn { background: #667eea; }
     @media (max-width: 520px) {
       body { padding: 8px; }
       .container { padding: 20px 12px; }
-      .test-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-      .test-card { border-radius: 12px; padding: 10px 8px; }
-      .test-card h2 { font-size: 0.92rem; line-height: 1.25; }
-      .test-card .test-type { font-size: 0.62rem; padding: 2px 6px; margin-bottom: 8px; max-width: 100%; overflow-wrap: anywhere; }
-      .test-card .set-summary { font-size: 0.68rem; }
-      .test-card .best-score { font-size: 0.74rem; }
-      .test-card .best-score span { font-size: 0.86rem; }
-      .test-card-review-btn,
-      .test-card-practice-btn { padding: 7px 6px !important; font-size: 0.7rem !important; }
+      .part-set-row { flex-wrap: wrap; padding: 10px 12px; }
+      .set-score { order: 3; margin-left: 46px; }
+      .set-actions { order: 4; margin-left: 46px; }
+      .set-actions button { padding: 6px 8px; font-size: 0.68rem; }
     }
     .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; position: relative; }
     .quiz-back { position: absolute; right: 0; top: 0; background: #667eea; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #fff; transition: all 0.15s; box-shadow: 0 4px 12px rgba(102,126,234,0.22); }
@@ -190,7 +197,7 @@
     </div>
     <div class="current-part-card" id="current-part-card" style="display:none;"></div>
     <div class="selection-label" id="set-selection-label" style="display:none;">② セットを選択</div>
-    <div class="test-grid" id="test-grid"></div>
+    <div class="part-set-list" id="test-grid"></div>
   </div>
 
   <div id="screen-quiz" class="hidden">
@@ -492,6 +499,28 @@ function switchLevel(level) {
   loadQuestions(level);
 }
 
+let homeCollapsed = false; // 現在パートのセット一覧を閉じているか
+
+function toggleLevel(level) {
+  soundClick();
+  if (level === currentLevel) {
+    homeCollapsed = !homeCollapsed;
+    showHome();
+  } else {
+    homeCollapsed = false;
+    switchLevel(level);
+  }
+}
+
+function goToTest(level, testId, isReview, isPractice) {
+  if (level !== currentLevel) {
+    currentLevel = level;
+    TESTS = quizData[level].tests;
+  }
+  soundClick();
+  startTest(testId, isReview, isPractice);
+}
+
 let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
 let TOTAL_QUESTIONS = 0;
 
@@ -700,22 +729,15 @@ async function showHome() {
 
   const unitName = quizId === 'kokyo1' ? 'プリント' : 'セット';
 
-  if (currentLevelData && currentPartCard) {
-    currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong>`;
-    currentPartCard.style.display = 'block';
-  } else if (currentPartCard) {
-    currentPartCard.style.display = 'none';
-  }
-  if (setSelectionLabel) {
-    setSelectionLabel.textContent = `② ${unitName}を選択`;
-    setSelectionLabel.style.display = 'flex';
-  }
-
   // レベル別スコアを計算・表示
   const partScoresSection = document.getElementById('part-scores-section');
   const partScoresList = document.getElementById('part-scores-list');
   const partSelectionLabel = document.getElementById('part-selection-label');
+
   if (maxLevel > 1) {
+    if (currentPartCard) currentPartCard.style.display = 'none';
+    if (setSelectionLabel) setSelectionLabel.style.display = 'none';
+
     let partScoresHtml = '';
 
     for (let level = 1; level <= maxLevel; level++) {
@@ -737,10 +759,17 @@ async function showHome() {
 
       const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
       const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
-      const isActive = level === currentLevel ? 'style="border-color:#667eea; background:linear-gradient(135deg, #f7f8ff, #f5f7ff); cursor:pointer;"' : 'style="cursor:pointer;"';
-      partScoresHtml += `<div class="part-score-row" ${isActive} onclick="switchLevel(${level}); soundClick();">
-        <span class="part-name">${levelLabel}</span>
-        <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
+      const isOpen = level === currentLevel && !homeCollapsed;
+      const blockClass = `part-block${isOpen ? ' open' : ''}${level === currentLevel ? ' active' : ''}`;
+      const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel, unitName);
+
+      partScoresHtml += `<div class="${blockClass}">
+        <div class="part-score-row" onclick="toggleLevel(${level});">
+          <span class="part-name">${levelLabel}</span>
+          <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
+          <span class="part-arrow">▶</span>
+        </div>
+        <div class="part-set-list">${setRowsHtml}</div>
       </div>`;
     }
 
@@ -750,44 +779,59 @@ async function showHome() {
       partSelectionLabel.style.display = 'flex';
       partSelectionLabel.textContent = '① パートを選択';
     }
+    document.getElementById('test-grid').innerHTML = '';
   } else {
     partScoresSection.style.display = 'none';
     if (partSelectionLabel) {
       partSelectionLabel.style.display = 'flex';
       partSelectionLabel.textContent = '① パートは1個で固定です';
     }
-  }
 
+    if (currentLevelData && currentPartCard) {
+      currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong>`;
+      currentPartCard.style.display = 'block';
+    } else if (currentPartCard) {
+      currentPartCard.style.display = 'none';
+    }
+    if (setSelectionLabel) {
+      setSelectionLabel.textContent = `② ${unitName}を選択`;
+      setSelectionLabel.style.display = 'flex';
+    }
+
+    document.getElementById('test-grid').innerHTML = await buildSetRowsHtml(TESTS, currentLevel, currentPartLabel, unitName);
+  }
+}
+
+async function buildSetRowsHtml(tests, level, partLabel, unitName) {
   let html = '';
-  for (const t of TESTS) {
-    const best = await getBest(t.id);
+  for (const t of tests) {
+    const best = await getBest(t.id, level);
     const bestTxt = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
     const questionCount = Array.isArray(t.questions) ? t.questions.length : 10;
 
     // 復習問題の数を取得
-    const wrongIndices = await getWrongAnswerIds(t.id, currentLevel);
+    const wrongIndices = await getWrongAnswerIds(t.id, level);
     const reviewCount = wrongIndices.length;
     const reviewBtn = reviewCount > 0
-      ? `<button class="test-card-review-btn" onclick="startTest(${t.id}, true, false); soundClick();" style="padding:8px 12px; background:#f7971e; color:#fff; border:none; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">誤答復習(${reviewCount}問)</button>`
+      ? `<button class="set-review-btn" onclick="event.stopPropagation(); goToTest(${level}, ${t.id}, true, false);">誤答復習(${reviewCount}問)</button>`
       : '';
 
     // 未挑戦テストには練習モードボタンを追加
     const practiceBtn = best < 0
-      ? `<button class="test-card-practice-btn" onclick="startTest(${t.id}, false, true); soundClick();" style="padding:8px 12px; background:#667eea; color:#fff; border:none; border-radius:6px; font-size:0.8rem; cursor:pointer; font-weight:600; transition:all 0.2s; width:100%;">練習モード（${questionCount}問）</button>`
+      ? `<button class="set-practice-btn" onclick="event.stopPropagation(); goToTest(${level}, ${t.id}, false, true);">練習モード（${questionCount}問）</button>`
       : '';
 
-    html += `<div class="test-card-container" style="display:flex; flex-direction:column; gap:8px;">
-      <div class="test-card" onclick="startTest(${t.id}, false, false); soundClick();">
-        <span class="card-emoji">${t.emoji}</span>
-        <h2>${unitName}${t.id}</h2>
-        <p class="set-summary">${currentPartLabel} / ${questionCount}問</p>
-        <span class="test-type">${t.type}</span>
-        <p class="best-score">${bestTxt}</p>
+    html += `<div class="part-set-row" onclick="goToTest(${level}, ${t.id}, false, false);">
+      <span class="set-icon">${t.emoji}</span>
+      <div class="set-main">
+        <div class="set-name">${unitName}${t.id}　${t.type || ''}</div>
+        <div class="set-sub">${partLabel} ・ ${questionCount}問</div>
       </div>
-      ${practiceBtn}${reviewBtn}
+      <div class="set-score">${bestTxt}</div>
+      <div class="set-actions">${practiceBtn}${reviewBtn}</div>
     </div>`;
   }
-  document.getElementById('test-grid').innerHTML = html;
+  return html;
 }
 
 // ============================================================
