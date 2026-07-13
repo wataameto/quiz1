@@ -106,27 +106,27 @@
           "type": "choice"
         },
         {
-          "scenario": "GuardDuty の主目的はどれか。",
+          "scenario": "AWS Trusted Advisor の主な用途はどれか。",
           "choices": [
-            "脅威検出",
-            "CI/CD 制御",
-            "DNS フェイルオーバー",
-            "バックアップ暗号化"
+            "コスト・セキュリティ・耐障害性などのベストプラクティスをチェックする",
+            "脅威をリアルタイムで検出する",
+            "ソースコードを管理する",
+            "DNSレコードを管理する"
           ],
           "correct": 0,
-          "explanation": "GuardDuty は脅威分析サービス。 異常行動や攻撃兆候を検出できる。 Backup は保護用途。",
+          "explanation": "Trusted Advisorはコスト最適化、セキュリティ、耐障害性、パフォーマンス、サービス制限の観点でベストプラクティスをチェックする診断ツール。",
           "type": "choice"
         },
         {
-          "scenario": "Organizations OU の役割はどれか。",
+          "scenario": "AWS Organizations の SCP（サービスコントロールポリシー）の役割はどれか。",
           "choices": [
-            "アカウントグループ化",
-            "コンテナ暗号化",
-            "CI/CD 承認",
-            "ログ削除"
+            "アカウントやOUに対してAWSサービスの利用上限を設定するガードレール",
+            "IAMユーザーへ直接権限を付与する",
+            "EC2インスタンスの起動を自動化する",
+            "CloudTrailのログを暗号化する"
           ],
           "correct": 0,
-          "explanation": "OU は組織整理単位。 SCP 適用範囲管理に使われる。 CodePipeline は CI/CD 用途。",
+          "explanation": "SCPはアカウントやOUに対して許可される操作の上限（ガードレール）を設定するポリシー。単体では権限を付与せず、IAMポリシーと組み合わせて使う。",
           "type": "choice"
         }
       ]
@@ -163,15 +163,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Agent の用途はどれか。",
+          "scenario": "AWS Distro for OpenTelemetry (ADOT) の用途はどれか。",
           "choices": [
-            "OS メトリクス収集",
-            "CI/CD 承認",
-            "DNS 管理",
-            "証明書更新"
+            "アプリケーションのトレース・メトリクス・ログを標準規格で収集しAWSの監視サービスへ送信する",
+            "IAMロールを発行する",
+            "DNSレコードを管理する",
+            "CI/CDを制御する"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Agent は OS 情報送信。 メモリやディスク使用率を監視できる。 ACM は証明書管理用途。",
+          "explanation": "ADOTはOpenTelemetryプロジェクトをベースにしたAWS提供のディストリビューションで、テレメトリデータを収集しX-RayやCloudWatchなどへ送信できる。",
           "type": "choice"
         },
         {
@@ -223,15 +223,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Synthetics の用途はどれか。",
+          "scenario": "AWS CodeGuru Profiler の用途はどれか。",
           "choices": [
-            "Web 動作監視",
-            "IAM Role 発行",
-            "脆弱性修復",
-            "DNS 暗号化"
+            "本番環境のアプリケーションのランタイムパフォーマンスを分析しボトルネックを特定する",
+            "ソースコードのセキュリティ脆弱性をレビューする",
+            "DNSの応答時間を測定する",
+            "CI/CDのビルドを自動化する"
           ],
           "correct": 0,
-          "explanation": "Synthetics はシナリオ監視。 Web 疎通確認を自動化できる。 IAM は認証用途。",
+          "explanation": "CodeGuru Profilerは本番稼働中のアプリケーションのCPU時間などランタイム特性を継続的にプロファイリングし、パフォーマンス改善点を提案する。",
           "type": "choice"
         },
         {
@@ -340,15 +340,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Dashboard の用途はどれか。",
+          "scenario": "Amazon CloudWatch ServiceLens の用途はどれか。",
           "choices": [
-            "監視情報可視化",
-            "コンテナ暗号化",
-            "バックアップ削除",
-            "IAM Role 発行"
+            "トレース・メトリクス・ログを統合し分散アプリの問題箇所を可視化する",
+            "EC2のログを暗号化する",
+            "IAMロールを発行する",
+            "DNSフェイルオーバーを構成する"
           ],
           "correct": 0,
-          "explanation": "Dashboard は監視集約表示機能。 複数メトリクスを可視化できる。 IAM は認証用途。",
+          "explanation": "ServiceLensはX-Rayのトレース情報とCloudWatchのメトリクス・ログを統合的に可視化し、マイクロサービス間の問題箇所を素早く特定できる機能。",
           "type": "choice"
         },
         {
@@ -397,15 +397,15 @@
       "subtitle": "モニタリング・ログ管理の問題！",
       "questions": [
         {
-          "scenario": "CloudFormation Change Sets の用途はどれか。",
+          "scenario": "AWS CloudFormation のネストされたスタック（Nested Stack）の利点はどれか。",
           "choices": [
-            "変更内容事前確認",
-            "脆弱性分析",
-            "DNS 暗号化",
-            "バックアップ圧縮"
+            "共通のリソース定義を再利用しテンプレートをモジュール化できる",
+            "スタックの作成速度を必ず高速化する",
+            "IAM権限を自動的に最小化する",
+            "DNSレコードを自動生成する"
           ],
           "correct": 0,
-          "explanation": "Change Sets は差分レビュー向け。 適用前変更確認が可能となる。 GuardDuty は脅威分析用途。",
+          "explanation": "ネストされたスタックは共通のリソース定義を親テンプレートから子テンプレートとして呼び出すことで、テンプレートの再利用性とモジュール化を実現する。",
           "type": "choice"
         },
         {
@@ -445,15 +445,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Composite Alarm の利点はどれか。",
+          "scenario": "Amazon EventBridge Pipes の用途はどれか。",
           "choices": [
-            "複数アラーム統合判定",
-            "コンテナ配信",
-            "DNS ルーティング",
-            "動画圧縮"
+            "イベントソースとターゲットの間でフィルタ・変換・拡充を行いポイントツーポイント連携する",
+            "IAM権限を発行する",
+            "DNSルーティングを構成する",
+            "動画を圧縮する"
           ],
           "correct": 0,
-          "explanation": "Composite Alarm は条件統合可能。 複数 Alarm を組み合わせて監視できる。 Route53 は DNS サービス。",
+          "explanation": "EventBridge Pipesはソース（SQS等）とターゲットの間でイベントのフィルタリング・変換・拡充を行い、ポイントツーポイントの連携を簡単に実装できる機能。",
           "type": "choice"
         },
         {
@@ -493,15 +493,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Contributor Insights の用途はどれか。",
+          "scenario": "Amazon SQS のデッドレターキュー（DLQ）の用途はどれか。",
           "choices": [
-            "高頻度要因分析",
-            "CI/CD 配信",
-            "DNS 管理",
-            "動画変換"
+            "規定回数処理に失敗したメッセージを隔離して原因調査できるようにする",
+            "メッセージの配信を高速化する",
+            "メッセージを暗号化する",
+            "キューを自動的にスケーリングする"
           ],
           "correct": 0,
-          "explanation": "Contributor Insights は傾向分析機能。 大量アクセス原因分析などに利用される。 MediaConvert は動画変換用途。",
+          "explanation": "DLQは指定した最大受信回数を超えても正常に処理されなかったメッセージを退避させるキューで、失敗の原因調査や再処理に利用される。",
           "type": "choice"
         },
         {
@@ -526,15 +526,15 @@
       "subtitle": "インシデント対応・イベント管理の問題！",
       "questions": [
         {
-          "scenario": "IAM Access Analyzer の用途はどれか。",
+          "scenario": "IAM Permission Boundary の用途はどれか。",
           "choices": [
-            "外部共有リソース検出",
-            "ログ圧縮",
-            "CI/CD 制御",
-            "DNS キャッシュ最適化"
+            "IAMエンティティに付与できる権限の上限を設定する",
+            "パスワードポリシーを設定する",
+            "MFAデバイスを登録する",
+            "ネットワークACLを管理する"
           ],
           "correct": 0,
-          "explanation": "Access Analyzer は共有分析機能。 外部公開リソースを検出できる。 CodePipeline は CI/CD 用途。",
+          "explanation": "Permission Boundaryはユーザーやロールに設定できる権限の最大範囲を定義する仕組みで、委任先の権限昇格を防ぐために使われる。",
           "type": "choice"
         },
         {
@@ -574,27 +574,27 @@
           "type": "choice"
         },
         {
-          "scenario": "CodeCommit の用途はどれか。",
+          "scenario": "Amazon ECR のイメージスキャン機能の用途はどれか。",
           "choices": [
-            "ソースコード管理",
-            "DNS 管理",
-            "脆弱性隔離",
-            "ログ圧縮"
+            "コンテナイメージ内の既知の脆弱性を自動検出する",
+            "イメージのビルド時間を短縮する",
+            "DNSレコードを管理する",
+            "IAMロールを発行する"
           ],
           "correct": 0,
-          "explanation": "CodeCommit は Git リポジトリ。 AWS 上でコード管理できる。 Route53 は DNS サービス。",
+          "explanation": "ECRのイメージスキャン機能はプッシュされたコンテナイメージに含まれるOSパッケージなどの既知の脆弱性（CVE）を自動的に検出しレポートする。",
           "type": "choice"
         },
         {
-          "scenario": "Systems Manager Inventory の用途はどれか。",
+          "scenario": "AWS Fault Injection Simulator (FIS) の用途はどれか。",
           "choices": [
-            "EC2 構成情報収集",
-            "CI/CD 配信",
-            "動画圧縮",
-            "DNS 暗号化"
+            "意図的に障害を注入してシステムの耐障害性を検証する",
+            "EC2の構成情報を収集する",
+            "ログを検索・分析する",
+            "DNSの切替を自動化する"
           ],
           "correct": 0,
-          "explanation": "Inventory は構成情報収集機能。 ソフトウェア一覧など確認できる。 MediaConvert は動画変換用途。",
+          "explanation": "FISはCPU負荷やネットワーク遅延、インスタンス停止などの障害を意図的に注入し、システムの耐障害性を検証するカオスエンジニアリングサービス。",
           "type": "choice"
         },
         {
@@ -655,15 +655,15 @@
       "subtitle": "セキュリティ・コンプライアンスの問題！",
       "questions": [
         {
-          "scenario": "CloudWatch Logs Insights を使う場面として最適なものはどれか。",
+          "scenario": "Amazon Route 53 のヘルスチェック機能の用途はどれか。",
           "choices": [
-            "障害時ログ解析",
-            "DNS 管理",
-            "CI/CD 承認",
-            "バックアップ削除"
+            "エンドポイントの正常性を監視し異常時にDNSフェイルオーバーを行う",
+            "ドメインの登録を自動化する",
+            "S3バケットを暗号化する",
+            "IAMロールを発行する"
           ],
           "correct": 0,
-          "explanation": "Logs Insights はログ検索特化。 障害解析を高速化できる。 Route53 は DNS サービス。",
+          "explanation": "Route 53のヘルスチェックはエンドポイントの正常性を定期的に監視し、異常を検知するとフェイルオーバールーティングで健全なリソースへトラフィックを切り替える。",
           "type": "choice"
         },
         {
@@ -679,15 +679,15 @@
           "type": "choice"
         },
         {
-          "scenario": "AWS Backup の用途はどれか。",
+          "scenario": "AWS DataSync の用途はどれか。",
           "choices": [
-            "バックアップ統合管理",
-            "DNS 暗号化",
-            "CI/CD 配信",
-            "動画圧縮"
+            "オンプレミスとAWSストレージ間の大容量データ転送を自動化する",
+            "EC2バックアップを統合管理する",
+            "DNSレコードを管理する",
+            "CI/CDパイプラインを制御する"
           ],
           "correct": 0,
-          "explanation": "AWS Backup は保護統合基盤。 複数サービスを一元管理できる。 MediaConvert は動画用途。",
+          "explanation": "AWS DataSyncはオンプレミスのNFS/SMBストレージとS3・EFS・FSxなどのAWSストレージ間でデータを高速かつ自動的に転送するサービス。",
           "type": "choice"
         },
         {
@@ -763,15 +763,15 @@
           "type": "choice"
         },
         {
-          "scenario": "EventBridge を利用する最大の利点はどれか。",
+          "scenario": "AWS Step Functions の Retry フィールドの用途はどれか。",
           "choices": [
-            "イベント駆動の疎結合設計",
-            "静的 IP 提供",
-            "動画圧縮高速化",
-            "DNS キャッシュ共有"
+            "ステートでエラーが発生した際に指定した条件で自動的に再試行する",
+            "ステートマシン全体の実行時間を短縮する",
+            "IAMロールを自動生成する",
+            "ログを暗号化する"
           ],
           "correct": 0,
-          "explanation": "EventBridge はイベント連携基盤。 サービス間を柔軟に接続できる。 Elastic IP は静的 IP 用途。",
+          "explanation": "Retryフィールドは指定したエラー種別が発生した際、間隔や最大試行回数などの条件に従って自動的にそのステートを再実行するエラーハンドリング機能。",
           "type": "choice"
         }
       ]

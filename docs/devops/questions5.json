@@ -46,27 +46,27 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Config 違反時に自動修復したい。最適なサービスはどれか。",
+          "scenario": "企業では S3 バケットが誤ってパブリック公開された場合に自動的に非公開へ戻したい。最適な構成はどれか。",
           "choices": [
-            "Systems Manager Automation",
-            "Amazon Athena",
-            "AWS Artifact",
-            "CloudFront"
+            "Config ルール（s3-bucket-public-read-prohibited）→ 自動修復アクションで PutPublicAccessBlock を実行",
+            "CloudTrail → Athena で検知するだけ",
+            "Inspector でスキャンするだけ",
+            "Backup で定期バックアップするだけ"
           ],
           "correct": 0,
-          "explanation": "Automation は修復ランブック実行向け。 Config と連携して自動対応可能。 Athena は分析用途。",
+          "explanation": "AWS Configのマネージドルールでパブリック公開を検出し、SSM Automationドキュメントによる自動修復アクションと組み合わせることで、違反検知から是正までを自動化できる。",
           "type": "choice"
         },
         {
-          "scenario": "CloudTrail Insights の用途として最適なものはどれか。",
+          "scenario": "Amazon CloudFront と Lambda@Edge を組み合わせる利点はどれか。",
           "choices": [
-            "異常 API アクティビティ検知",
-            "CI/CD 承認",
-            "DNS レイテンシ改善",
-            "動画変換"
+            "エッジロケーションでリクエストやレスポンスをリアルタイムに加工できる",
+            "オリジンサーバーの負荷を必ず増加させる",
+            "DNSの管理を不要にする",
+            "S3バケットを自動暗号化する"
           ],
           "correct": 0,
-          "explanation": "Insights は異常行動分析機能。 通常と異なる API 活動を検知できる。 MediaConvert は動画用途。",
+          "explanation": "Lambda@EdgeはCloudFrontのエッジロケーションでコードを実行でき、ビューワーやオリジンへのリクエスト・レスポンスをユーザーに近い場所でリアルタイムに加工できる。",
           "type": "choice"
         },
         {
@@ -94,15 +94,15 @@
           "type": "choice"
         },
         {
-          "scenario": "Security Hub の主目的はどれか。",
+          "scenario": "AWS Config アグリゲータの用途はどれか。",
           "choices": [
-            "セキュリティ findings 集約",
-            "DNS 管理",
-            "CI/CD ビルド",
-            "バックアップ削除"
+            "複数アカウント・複数リージョンのConfig情報を1つのビューに集約する",
+            "EC2のインベントリを収集する",
+            "DNSレコードを一元管理する",
+            "CI/CDパイプラインを一元制御する"
           ],
           "correct": 0,
-          "explanation": "Security Hub は findings 統合基盤。 複数サービス結果を集約表示できる。 CodeBuild は CI/CD 用途。",
+          "explanation": "Configアグリゲータは複数アカウントや複数リージョンにまたがるリソースの設定情報とコンプライアンス状況を1つのアカウントに集約して確認できる機能。",
           "type": "choice"
         },
         {
@@ -139,39 +139,39 @@
       "subtitle": "Infrastructure as Code の問題！",
       "questions": [
         {
-          "scenario": "CloudWatch Logs Insights の用途はどれか。",
+          "scenario": "Amazon CloudWatch RUM の用途はどれか。",
           "choices": [
-            "ログ検索と分析",
-            "IAM Role 発行",
-            "DNS 管理",
-            "Blue/Green 配信"
+            "Webアプリのクライアント側パフォーマンスを監視する",
+            "サーバーのCPU使用率を監視する",
+            "DBのクエリ実行計画を分析する",
+            "ネットワーク帯域を監視する"
           ],
           "correct": 0,
-          "explanation": "Logs Insights はログ分析機能。 障害解析を高速化できる。 IAM は認証用途。",
+          "explanation": "CloudWatch RUM(Real User Monitoring)はブラウザ上で実行され、実際のユーザー体験（ページロード時間やJSエラーなど）を収集する機能。",
           "type": "choice"
         },
         {
-          "scenario": "企業では Lambda を定期実行したい。最適な構成はどれか。",
+          "scenario": "企業では ECS タスクを毎日決まった時刻に実行したい。最適な構成はどれか。",
           "choices": [
-            "EventBridge Scheduler",
-            "CloudTrail Insights",
-            "Amazon Inspector",
-            "AWS Backup"
+            "EventBridge Scheduler から ECS RunTask をターゲットとして呼び出す",
+            "Lambda関数内でECSタスクをポーリングする",
+            "CodePipelineで定期実行を設定する",
+            "CloudTrailで定期実行を設定する"
           ],
           "correct": 0,
-          "explanation": "Scheduler は cron 実行可能。 Lambda の定期起動に適している。 Inspector は脆弱性用途。",
+          "explanation": "EventBridge SchedulerはECSのRunTask APIを直接ターゲットとして指定でき、cron式やレート式で定期的にECSタスクを起動できる。",
           "type": "choice"
         },
         {
-          "scenario": "GuardDuty の特徴として最適なものはどれか。",
+          "scenario": "AWS Well-Architected Tool の用途はどれか。",
           "choices": [
-            "継続的脅威検出",
-            "DNS フェイルオーバー",
-            "CI/CD 制御",
-            "動画変換"
+            "6つの柱に基づきワークロードを評価し改善点を提案する",
+            "脅威をリアルタイムで検出する",
+            "EC2をバックアップする",
+            "DNSレコードを管理する"
           ],
           "correct": 0,
-          "explanation": "GuardDuty は脅威分析サービス。 異常行動や攻撃兆候を検出する。 MediaConvert は動画用途。",
+          "explanation": "Well-Architected Toolは運用上の優秀性・セキュリティ・信頼性・パフォーマンス効率・コスト最適化・持続可能性の観点でワークロードをセルフレビューし改善提案を得られるツール。",
           "type": "choice"
         },
         {
@@ -223,15 +223,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Composite Alarm の利点はどれか。",
+          "scenario": "AWS Step Functions の Catch フィールドの用途はどれか。",
           "choices": [
-            "複数条件統合監視",
-            "DNS レプリケーション",
-            "CI/CD 配信",
-            "動画変換"
+            "ステートでエラーが発生した際に指定した別のステートへ遷移させる",
+            "ステートマシンの実行速度を上げる",
+            "IAMロールを自動生成する",
+            "DNSレコードを更新する"
           ],
           "correct": 0,
-          "explanation": "Composite Alarm は条件統合可能。 複数 Alarm を組み合わせ監視できる。 Route53 は DNS サービス。",
+          "explanation": "Catchフィールドはステート実行時に指定したエラー種別が発生した場合、フォールバック用の別ステートへ遷移させるエラーハンドリング機能。",
           "type": "choice"
         },
         {
@@ -247,15 +247,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CodePipeline の用途として最適なものはどれか。",
+          "scenario": "AWS CodePipeline のクロスアカウントデプロイの実現方法として適切なものはどれか。",
           "choices": [
-            "CI/CD ワークフロー制御",
-            "脆弱性分析",
-            "DNS フェイルオーバー",
-            "バックアップ暗号化"
+            "ターゲットアカウントに信頼関係を持つIAMロールとKMSキーポリシーを設定してアーティファクトを共有する",
+            "すべてのアカウントで同じIAMユーザーを使い回す",
+            "パイプラインをアカウントごとに完全に分離し連携しない",
+            "ターゲットアカウントのルート認証情報を直接使用する"
           ],
           "correct": 0,
-          "explanation": "CodePipeline は CI/CD 統合基盤。 Build や Deploy を連携制御できる。 GuardDuty は脅威分析用途。",
+          "explanation": "クロスアカウントデプロイではアーティファクト用S3バケットのKMSキーポリシーとターゲットアカウントのクロスアカウントIAMロールを設定し、AssumeRoleで安全にリソースへアクセスする構成が推奨される。",
           "type": "choice"
         }
       ]
@@ -304,15 +304,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Logs Retention Policy の用途はどれか。",
+          "scenario": "Amazon S3 のライフサイクルポリシーの用途はどれか。",
           "choices": [
-            "ログ保存期間制御",
-            "CI/CD 承認",
-            "DNS フェイルオーバー",
-            "脆弱性隔離"
+            "オブジェクトを経過日数に応じて自動的に別のストレージクラスへ移行または削除する",
+            "バケットへのアクセス権限を管理する",
+            "オブジェクトを自動的に暗号化する",
+            "バケットのレプリケーション先を指定する"
           ],
           "correct": 0,
-          "explanation": "Retention Policy はログ保持設定。 古いログを自動削除できる。 Route53 は DNS サービス。",
+          "explanation": "S3ライフサイクルポリシーはオブジェクトの経過日数に応じてStandard-IAやGlacierへの移行、または削除を自動的に行いストレージコストを最適化する機能。",
           "type": "choice"
         },
         {
@@ -364,27 +364,27 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Security Hub findings をチケット化したい。最適な構成はどれか。",
+          "scenario": "企業では AWS Config のルール違反を外部のチケット管理システムへ自動起票したい。最適な構成はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodeDeploy → Backup",
-            "Inspector → MQ"
+            "Config → EventBridge → Lambda（チケット作成API呼び出し）",
+            "Config → S3 → Athena",
+            "Config → CodeBuild",
+            "Config → Backup"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings 連携可能。 Lambda でチケット登録処理できる。 Glue は ETL 用途。",
+          "explanation": "Configのルール評価結果はEventBridge経由でLambdaをトリガーでき、Lambda内で外部チケット管理システムのAPIを呼び出すことで自動起票の仕組みを構築できる。",
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Contributor Insights の用途はどれか。",
+          "scenario": "Amazon SNS のメッセージフィルタリングの用途はどれか。",
           "choices": [
-            "高頻度要因分析",
-            "DNS 管理",
-            "CI/CD ビルド",
-            "動画圧縮"
+            "サブスクライバーごとに受信するメッセージ属性を絞り込む",
+            "メッセージを暗号化する",
+            "トピックの配信速度を上げる",
+            "メッセージの重複を検出する"
           ],
           "correct": 0,
-          "explanation": "Contributor Insights は傾向分析機能。 大量アクセス原因分析などに利用される。 MediaConvert は動画用途。",
+          "explanation": "SNSのメッセージフィルタリングはサブスクリプションにフィルタポリシーを設定し、特定の属性を持つメッセージのみをサブスクライバーへ配信できる機能。",
           "type": "choice"
         }
       ]
@@ -397,15 +397,15 @@
       "subtitle": "モニタリング・ログ管理の問題！",
       "questions": [
         {
-          "scenario": "企業では Config 違反時に自動通知したい。最適な構成はどれか。",
+          "scenario": "企業では IAM ユーザーの長期未使用アクセスキーを検出し無効化したい。最適な構成はどれか。",
           "choices": [
-            "Config → EventBridge → SNS",
-            "CloudTrail → EMR",
-            "CodePipeline → Backup",
+            "IAM Access Analyzer の未使用アクセス分析 → EventBridge → Lambda で無効化",
+            "CloudTrail → Athena → Glue",
+            "CodeDeploy → Backup",
             "Inspector → MQ"
           ],
           "correct": 0,
-          "explanation": "EventBridge はイベント連携可能。 SNS により即時通知できる。 EMR は分析用途。",
+          "explanation": "IAM Access Analyzerの未使用アクセス分析機能は一定期間使われていない認証情報を検出でき、EventBridge経由でLambdaをトリガーして自動的に無効化する構成が組める。",
           "type": "choice"
         },
         {
@@ -457,27 +457,27 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudTrail ログを SQL 分析したい。最適なサービスはどれか。",
+          "scenario": "AWS CloudTrail Lake の用途はどれか。",
           "choices": [
-            "Amazon Athena",
-            "AWS Backup",
-            "CloudFront",
-            "Amazon MQ"
+            "CloudTrailの証跡データをマネージドなデータストアに集約しSQLクエリで直接分析する",
+            "ログをS3へバックアップするだけの機能",
+            "EC2のインベントリを収集する",
+            "DNSの管理を行う"
           ],
           "correct": 0,
-          "explanation": "Athena は SQL 分析サービス。 S3 上ログを直接分析できる。 Backup は保護用途。",
+          "explanation": "CloudTrail LakeはCloudTrailイベントをイミュータブルなデータストアに集約し、セットアップ不要でSQLクエリを使って直接分析できるマネージド機能。",
           "type": "choice"
         },
         {
-          "scenario": "企業では複数リージョンへ同一インフラを展開したい。最適なサービスはどれか。",
+          "scenario": "企業では複数の AWS アカウントに同一のセキュリティ設定を一括適用したい。最適なサービスはどれか。",
           "choices": [
-            "CloudFormation StackSets",
+            "AWS Control Tower（Organizations・Config・SCP を統合管理）",
             "CloudWatch Logs Insights",
             "Amazon Inspector",
             "AWS Artifact"
           ],
           "correct": 0,
-          "explanation": "StackSets は横断 IaC 展開向け。 複数リージョン配布に適している。 Inspector は脆弱性用途。",
+          "explanation": "Control TowerはOrganizations・Config・SCPなどを統合し、複数アカウントに対してガードレール（セキュリティ設定）を一括適用・維持するためのマネージドサービス。",
           "type": "choice"
         },
         {
@@ -493,27 +493,27 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Synthetics の用途はどれか。",
+          "scenario": "AWS CodeGuru Reviewer の用途はどれか。",
           "choices": [
-            "Web シナリオ監視",
-            "脆弱性隔離",
-            "DNS 暗号化",
-            "CI/CD 配信"
+            "プルリクエスト時にソースコードを自動レビューしバグやセキュリティ問題を検出する",
+            "本番環境のランタイムパフォーマンスを分析する",
+            "DNSレイテンシを改善する",
+            "EC2のバックアップを取得する"
           ],
           "correct": 0,
-          "explanation": "Synthetics は動作監視自動化。 Web 疎通確認に利用される。 CodeDeploy は配信用途。",
+          "explanation": "CodeGuru Reviewerは機械学習を用いてプルリクエスト時にコードを自動レビューし、バグの可能性やセキュリティ問題、ベストプラクティス違反を検出する。",
           "type": "choice"
         },
         {
-          "scenario": "企業では Security Hub findings を Slack 通知したい。最適な構成はどれか。",
+          "scenario": "企業では GuardDuty の検出結果を自動的に修復したい。最適な構成はどれか。",
           "choices": [
-            "Security Hub → EventBridge → Lambda",
-            "CloudTrail → Athena → Glue",
-            "CodePipeline → Backup",
-            "Inspector → MQ"
+            "GuardDuty → EventBridge → Lambda（自動修復処理）",
+            "GuardDuty → S3 → Athena",
+            "GuardDuty → CodeBuild → CodeDeploy",
+            "GuardDuty → Backup → Glue"
           ],
           "correct": 0,
-          "explanation": "EventBridge は findings を転送可能。 Lambda で Slack 通知処理できる。 Glue は ETL 用途。",
+          "explanation": "GuardDutyの検出結果はEventBridge経由でLambda関数をトリガーでき、該当リソースの隔離やセキュリティグループ変更などの自動修復アクションを実行できる。",
           "type": "choice"
         }
       ]
@@ -550,15 +550,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Anomaly Detection の特徴はどれか。",
+          "scenario": "Amazon GuardDuty Malware Protection の用途はどれか。",
           "choices": [
-            "異常値自動検知",
-            "DNS レプリケーション",
-            "CI/CD 配信",
-            "動画圧縮"
+            "EBSスナップショットをスキャンしEC2やコンテナ内のマルウェアを検出する",
+            "ネットワークトラフィックのみを監視する",
+            "IAMポリシーの妥当性を検証する",
+            "S3バケットを暗号化する"
           ],
           "correct": 0,
-          "explanation": "Anomaly Detection は異常分析機能。 通常パターンとの差分を検知する。 MediaConvert は動画用途。",
+          "explanation": "GuardDuty Malware ProtectionはGuardDutyが不審な挙動を検知した際にEBSスナップショットを取得しスキャンすることで、EC2やコンテナワークロード内のマルウェアを検出する。",
           "type": "choice"
         },
         {
@@ -574,15 +574,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Logs Insights を使う場面として最適なものはどれか。",
+          "scenario": "AWS Certificate Manager (ACM) の自動更新機能の利点はどれか。",
           "choices": [
-            "障害時ログ解析",
-            "DNS 管理",
-            "CI/CD 承認",
-            "バックアップ削除"
+            "有効期限が近づくとACM発行の証明書を自動的に更新し手動作業を削減する",
+            "証明書の発行を有料化する",
+            "DNSレコードを自動的に削除する",
+            "IAMロールの権限を自動的に拡張する"
           ],
           "correct": 0,
-          "explanation": "Logs Insights はログ分析向け。 障害解析を高速化できる。 Route53 は DNS サービス。",
+          "explanation": "ACMで発行したパブリック証明書はDNS検証を設定していれば有効期限が近づくと自動的に更新され、手動でのローテーション作業が不要になる。",
           "type": "choice"
         },
         {
@@ -598,15 +598,15 @@
           "type": "choice"
         },
         {
-          "scenario": "IAM Access Analyzer の用途はどれか。",
+          "scenario": "Amazon S3 Object Lock の用途はどれか。",
           "choices": [
-            "外部共有リソース検出",
-            "動画圧縮",
-            "DNS フェイルオーバー",
-            "CI/CD 制御"
+            "指定期間オブジェクトの上書きや削除を禁止しコンプライアンス要件を満たす",
+            "S3のアクセス速度を高速化する",
+            "バケットを自動的に暗号化する",
+            "DNSでバケットへのアクセスを制御する"
           ],
           "correct": 0,
-          "explanation": "Access Analyzer は共有分析機能。 意図しない公開を検出できる。 MediaConvert は動画用途。",
+          "explanation": "Object LockはWORM（Write Once Read Many）モデルでオブジェクトの削除・上書きを一定期間禁止でき、コンプライアンス要件の保持ポリシーに利用される。",
           "type": "choice"
         },
         {
@@ -634,15 +634,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CodeDeploy Blue/Green Deployment の利点はどれか。",
+          "scenario": "CodeDeploy の Linear デプロイ設定の特徴はどれか。",
           "choices": [
-            "安全な切替と即時ロールバック",
-            "DNS キャッシュ共有",
-            "脆弱性分析高速化",
-            "CloudTrail 無効化"
+            "一定の割合ずつ均等な間隔でトラフィックを新バージョンへ段階的に切り替える",
+            "全台を一括で切り替える",
+            "手動承認のみで切り替える",
+            "DNSのみで切り替える"
           ],
           "correct": 0,
-          "explanation": "Blue/Green は安全なデプロイ方式。 異常時に以前環境へ戻しやすい。 Inspector は脆弱性用途。",
+          "explanation": "Linearデプロイ設定は「LinearXPercentEveryYMinutes」のように、一定の割合を一定間隔ごとに新バージョンへ段階的に切り替えていくデプロイ方式。",
           "type": "choice"
         }
       ]
@@ -655,27 +655,27 @@
       "subtitle": "セキュリティ・コンプライアンスの問題！",
       "questions": [
         {
-          "scenario": "企業では Config Rules 違反を即時通知したい。最適な構成はどれか。",
+          "scenario": "企業では IAM ポリシーの過剰な権限付与を継続的に検出したい。最適なサービスはどれか。",
           "choices": [
-            "Config → EventBridge → SNS",
-            "CloudTrail → EMR",
-            "CodeDeploy → Backup",
-            "Inspector → MQ"
+            "IAM Access Analyzer のポリシー検証機能",
+            "CloudTrail Insights",
+            "Systems Manager Inventory",
+            "AWS Backup"
           ],
           "correct": 0,
-          "explanation": "EventBridge はイベント転送可能。 SNS により即時通知できる。 EMR は分析用途。",
+          "explanation": "IAM Access Analyzerのポリシー検証機能はIAMポリシーの構文エラーやセキュリティのベストプラクティスからの逸脱、過剰な権限付与を継続的にチェックできる。",
           "type": "choice"
         },
         {
-          "scenario": "Systems Manager Inventory の用途はどれか。",
+          "scenario": "AWS Config の適合パック（Conformance Pack）の用途はどれか。",
           "choices": [
-            "EC2 構成情報収集",
-            "DNS レプリケーション",
-            "CI/CD 配信",
-            "動画変換"
+            "複数のConfigルールと修復アクションをまとめてテンプレートとして一括デプロイする",
+            "EC2のインベントリ情報を収集する",
+            "CI/CDパイプラインを制御する",
+            "DNSレプリケーションを構成する"
           ],
           "correct": 0,
-          "explanation": "Inventory は構成情報収集機能。 インストールソフトなど確認可能。 MediaConvert は動画用途。",
+          "explanation": "適合パックは複数のConfigルールと自動修復アクションをテンプレートとしてまとめ、アカウントやOrganizations全体へ一括適用できる仕組み。",
           "type": "choice"
         },
         {
@@ -691,15 +691,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Dashboard の用途はどれか。",
+          "scenario": "AWS Compute Optimizer の用途はどれか。",
           "choices": [
-            "監視情報可視化",
-            "脆弱性分析",
-            "DNS フェイルオーバー",
-            "CI/CD 承認"
+            "過去の利用状況からEC2やLambdaなどのリソースサイズ最適化を提案する",
+            "DNSレイテンシを改善する",
+            "CI/CDのビルドを自動化する",
+            "S3のライフサイクルを管理する"
           ],
           "correct": 0,
-          "explanation": "Dashboard は監視集約表示機能。 複数メトリクスを確認できる。 GuardDuty は脅威分析用途。",
+          "explanation": "Compute OptimizerはCloudWatchメトリクスの利用実績を機械学習で分析し、コスト効率やパフォーマンスの良いリソース設定を推奨するサービス。",
           "type": "choice"
         },
         {
@@ -715,15 +715,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Agent の用途はどれか。",
+          "scenario": "Amazon Managed Service for Prometheus の用途はどれか。",
           "choices": [
-            "OS メトリクス収集",
-            "DNS 暗号化",
-            "CI/CD 承認",
-            "動画圧縮"
+            "コンテナ環境のメトリクスをPrometheus互換で収集・保存・クエリする",
+            "DNSキャッシュを管理する",
+            "CI/CD承認を制御する",
+            "動画を変換する"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Agent は OS 情報送信。 メモリやディスク使用率を取得可能。 MediaConvert は動画用途。",
+          "explanation": "Amazon Managed Service for PrometheusはPrometheus互換のモニタリングサービスで、コンテナワークロードのメトリクス収集・保存・クエリを実現する。",
           "type": "choice"
         },
         {
@@ -763,15 +763,15 @@
           "type": "choice"
         },
         {
-          "scenario": "EventBridge の最大の利点はどれか。",
+          "scenario": "AWS Backup Vault Lock の用途はどれか。",
           "choices": [
-            "イベント駆動の疎結合設計",
-            "DNS レプリケーション",
-            "動画圧縮高速化",
-            "静的 IP 提供"
+            "バックアップボールトの保持設定を、ルートユーザーを含め誰も変更・削除できないようWORMで強制する",
+            "バックアップの取得速度を高速化する",
+            "バックアップを別リージョンへ自動複製する",
+            "IAMロールを自動生成する"
           ],
           "correct": 0,
-          "explanation": "EventBridge はイベント連携基盤。 サービス間を柔軟に接続できる。 Elastic IP は静的 IP 用途。",
+          "explanation": "Backup Vault Lockはバックアップボールトの保持ポリシーをWORM（Write Once Read Many）モデルで強制し、ルートユーザーを含め誰も削除や短縮ができないようにする機能。",
           "type": "choice"
         }
       ]

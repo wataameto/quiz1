@@ -25,7 +25,7 @@
           "scenario": "金融サービス企業が、Amazon ECS（AWS Fargate）で動作するコア取引システムのデプロイにおいて、ダウンタイムをゼロにし、新バージョンの不具合によるビジネスへの影響を最小限に抑えたいと考えています。デプロイ時にはトラフィックの10%を新しいタスクセットに誘導し、5分間問題が発生しないことを確認した上で、残りの90%のトラフィックを10分かけて段階的にシフトさせる必要があります。また、新バージョンでHTTP 5xxエラー率のスパイクまたはレイテンシの悪化が検出された場合、自動的に即時ロールバックが行われる仕組みを、運用のオーバーヘッドを最小限に抑えて実装したいと考えています。どの構成を採用すべきか。",
           "choices": [
             "AWS CodeDeployを使用してECSブルー/グリーンデプロイを実行し、デプロイ設定として「CodeDeployDefault.ECSLinear10PercentEvery10Minutes」に似たカスタムデプロイ設定を作成する。AppSpecファイルでターゲットグループとタスク定義を指定し、新旧のターゲットグループに対するCloudWatchアラーム（HTTP 5xxエラー率とターゲット応答時間）をCodeDeployのロールバックトリガーとして設定する。",
-            "Amazon Route 53 of 加重ルーティングを使用して、新旧 of ECSサービスに対応するApplication Load Balancer（ALB）間で10:90の比率でトラフィックを分割する。各VPC内に配置したPrometheusでエラー率を監視し、しきい値を超えた場合にAWS Systems Manager Automationランブックを起動して、Route 53のレコードセットを元に戻すスクリプトを実行する。",
+            "Amazon Route 53の加重ルーティングを使用して、新旧のECSサービスに対応するApplication Load Balancer（ALB）間で10:90の比率でトラフィックを分割する。各VPC内に配置したPrometheusでエラー率を監視し、しきい値を超えた場合にAWS Systems Manager Automationランブックを起動して、Route 53のレコードセットを元に戻すスクリプトを実行する。",
             "ECSサービス定義の「最大パーセンテージ」を200%、「最小ヘルスパーセンテージ」を100%に設定したローリングアップデートを構成する。新しいコンテナイメージの起動直後に、Amazon EventBridgeでECSタスクの異常状態イベントをトリガーし、Lambda関数を呼び出して過去の安定したタスク定義へ自動でサービスを更新する。",
             "AWS App Meshを利用してサービスメッシュを構築し、仮想ルート（Virtual Route）の重み付け設定を手動で変更するスクリプトをAWS CodeBuildで実行する。ビルドフェーズのテストスクリプトでCloudWatchメトリクスを5分間ポーリングし、エラーが検出された場合はApp Meshのルート定義を古い仮想ノードに再マッピングして終了する。"
           ],
@@ -63,7 +63,7 @@
             "データベースの変更において、拡大（Expand）と縮小（Contract）パターン（平行運用パターン）を適用する。まず、古いバージョンのアプリケーションが動作している状態で、新旧両方のスキーマと互換性のある変更（非NULL制約なしのカラム追加など）を実行し、新バージョンをデプロイしてトラフィックを切り替え、移行が完全に成功した後に不要になった古いスキーマ要素（古いカラムなど）を削除する。",
             "AWS Database Migration Service (AWS DMS) を使用して、現在の本番データベースから新しいスキーマを持つクローンデータベースへの継続的レプリケーション（CDC）をセットアップする。新アプリケーションのデプロイ時に、DNSルーティングをクローンデータベースに向け、同時に旧データベースへの書き込みを完全に禁止してレプリケーションを停止する。",
             "CloudFormationでAurora PostgreSQLのブルー/グリーンデプロイ機能をトリガーする。更新処理中、CodeDeployを用いて新旧アプリケーションインスタンスのそれぞれから対応するDBクラスターへ接続し、デプロイ完了後にAWS CLIを使用して「Switchover」コマンドを発行してDNSエンドポイントを切り替える。",
-            "デプロイ直前にAurora PostgreSQL of データベーススナップショットを作成し、新しいスキーマ定義のDDLスクリプトを実行する。新バージョンのデプロイ後にバグが発生した場合は、保存したスナップショットから新規のDBクラスターを復元し、Route 53のCNAMEをその新しい復元インスタンスに切り替える。"
+            "デプロイ直前にAurora PostgreSQLのデータベーススナップショットを作成し、新しいスキーマ定義のDDLスクリプトを実行する。新バージョンのデプロイ後にバグが発生した場合は、保存したスナップショットから新規のDBクラスターを復元し、Route 53のCNAMEをその新しい復元インスタンスに切り替える。"
           ],
           "correct": 0,
           "explanation": "ゼロダウンタイムと安全な切り戻しを実現するためには、データベースの「Expand/Contract（拡大・縮小）」パターンを適用し、アプリケーションコードとデータベーススキーマの間に後方互換性と前方互換性を保つように段階的にリリースすることがAWSおよび一般的なDevOpsのベストプラクティスです。まず両バージョンが稼働可能な状態（Expand）を作り、完全に移行した後に古い要素を削除（Contract）することで、アプリケーションの即時切り戻しが可能となり、データベースのリストアやダウンタイムを回避できます。他の選択肢は、データ不整合リスク、レプリケーションの複雑性、あるいはスナップショットリストア中のデータ消失を引き起こすため不適切です。",
@@ -102,13 +102,13 @@
             "AWS Systems ManagerのOpsCenterを使用してインシデントを作成し、Slackに通知を送信する。承認者がSlackで承認を選択した際、LambdaがSsm:PutParameterを実行して特定のパラメータの値を「APPROVED」に変更し、CodePipelineがそのパラメータ値を定常的にポーリングして自動的に次のステージに進むように構築する。"
           ],
           "correct": 0,
-          "explanation": "CodePipelineの手動承認（Manual Approval）機能は、SNSトピックを介して通知を行い、PutApprovalResult APIを呼び出すことで承認を完了します。セキュリティ専用アカウント（監査アカウント）の担当者必要最小限の権限（AssumeRole経由）を使用してこのAPIを実行し、Slack統合はAPI GatewayとLambdaを利用することで安全に疎結合で処理できます。これにより、最小限の権限（Principle of Least Privilege）と監査ログの確保が達成されます。他の選択肢は、過剰な管理者権限の公開、パイプラインの二重管理、あるいはCodePipelineに存在しないポーリング制御を実装しようとするため不適切です。",
+          "explanation": "CodePipelineの手動承認（Manual Approval）機能は、SNSトピックを介して通知を行い、PutApprovalResult APIを呼び出すことで承認を完了します。セキュリティ専用アカウント（監査アカウント）の担当者が必要最小限の権限（AssumeRole経由）を使用してこのAPIを実行し、Slack統合はAPI GatewayとLambdaを利用することで安全に疎結合で処理できます。これにより、最小限の権限（Principle of Least Privilege）と監査ログの確保が達成されます。他の選択肢は、過剰な管理者権限の公開、パイプラインの二重管理、あるいはCodePipelineに存在しないポーリング制御を実装しようとするため不適切です。",
           "type": "choice"
         },
         {
           "scenario": "あるテクノロジー企業は、Amazon EKS（Elastic Kubernetes Service）上で動作するコンテナ化されたウェブアプリケーションを、AWS CodePipelineとAWS CodeBuildを使用して継続的にデプロイしています。KubernetesマニフェストおよびHelmチャート内で、外部データベース接続用の認証情報やAPIキーなどのシークレット情報をハードコードせずに、安全にポッドへ注入する必要があります。また、ポッドへのシークレット供給はAWS側のシークレットライフサイクル（ローテーション）と同期している必要があります。運用のオーバーヘッドを最小限に抑える最適なアーキテクチャはどれか。",
           "choices": [
-            "EKSクラスターに「Secrets Store CSI Driver」と「AWS Secrets Manager Provider」をインストールする。シークレットをAWS Secrets Managerに保存し、Kubernetesの「SecretProviderClass」リソースを作成してSecrets Manager of シークレットをマッピングする。ポッドのデプロイメント定義で、ボリュームとしてCSIドライバーを指定してマウントし、環境変数またはファイルとしてアプリケーションから参照する。",
+            "EKSクラスターに「Secrets Store CSI Driver」と「AWS Secrets Manager Provider」をインストールする。シークレットをAWS Secrets Managerに保存し、Kubernetesの「SecretProviderClass」リソースを作成してSecrets Managerのシークレットをマッピングする。ポッドのデプロイメント定義で、ボリュームとしてCSIドライバーを指定してマウントし、環境変数またはファイルとしてアプリケーションから参照する。",
             "CodeBuildのビルド実行時に、ビルド環境のIAMロールを使用してAWS Secrets Managerから直接シークレット値を文字列として取得する。取得したシークレット値をHelmの「--set」パラメータでマニフェストファイルに直接埋め込み、EKSクラスターに「helm upgrade」コマンドで展開する。",
             "AWS Secrets Managerのシークレットの内容を、Amazon DynamoDBテーブルに同期するLambda関数を作成する。EKS内のコンテナが起動する際、AWS SDKを使用してDynamoDBにアクセスし、自身に必要な認証情報をオンデマンドでクエリして取得するプログラムをアプリケーションコード内に実装する。",
             "EKSクラスター内に独自のHashiCorp VaultクラスターをEC2インスタンス群でデプロイし、AWS Secrets ManagerからVaultへのレプリケーションジョブを定期実行する。EKSのポッドは、Vaultエージェントのサイドカーコンテナを使用して認証情報を取得する。"
@@ -156,7 +156,7 @@
             "①AWS Organizationsのサービスコントロールポリシー（SCP）を作成し、本番OUに対して「kms:ScheduleKeyDeletion」および「kms:DeleteKey」を拒否（Deny）するポリシーをアタッチする。②AWS Configのマネージドルール「s3-bucket-level-public-access-prohibited」をデプロイし、AWS Systems ManagerのAutomationドキュメント「AWS-ConfigureS3BucketPublicAccessBlock」を使用した「自動修復（Automatic Remediation）」を設定する。",
             "①本番アカウント内のすべてのIAMユーザーおよびロールに対して、インラインポリシーで「kms:ScheduleKeyDeletion」を拒否する。②Amazon EventBridgeでS3の「PutBucketPublicAccessBlock」イベントを検知し、AWS Lambdaを起動して対象バケットの設定を強制的に上書きし、SNSで管理者に通知する。",
             "①IAMのポリシー境界（Permission Boundary）を使用して、全開発者ロールの最大権限からKMS関連の削除アクションを除外する。②S3バケットのポリシーで「Effect: Deny」としてパブリックアクセスを制限するポリシーをCloudFormationのカスタムリソースから全バケットに埋め込み、違反時はAWS Security Hubから管理者へメール通知する。",
-            "①AWS Configルールを作成してKMSキーの削除状態を監視し、削除がスケジュールされたらSystems Managerでキーのステータスを自動的に有効化する。②AWS Organizations of SCPで、全アカウントに対して「s3:PutBucketPublicAccessBlock」の実行を拒否（Deny）する。"
+            "①AWS Configルールを作成してKMSキーの削除状態を監視し、削除がスケジュールされたらSystems Managerでキーのステータスを自動的に有効化する。②AWS OrganizationsのSCPで、全アカウントに対して「s3:PutBucketPublicAccessBlock」の実行を拒否（Deny）する。"
           ],
           "correct": 0,
           "explanation": "KMSキーの削除防止について、管理者や開発者の誤操作を含めて組織レベルで完全に特定の破壊的アクションを防止するには、AWS OrganizationsのSCPでDenyを適用するのが最も確実で安全な方法です。また、S3のパブリックアクセスブロックのチェックと自動修復には、AWS ConfigのマネージドルールとSystems Manager Automation（AWS-ConfigureS3BucketPublicAccessBlock）の自動修復機能をバインドするのが、最も運用のオーバーヘッドが低く、かつ規定時間内（15分以内）に自動復旧を実現できるAWSベストプラクティスです。他の選択肢は、不完全なIAMコントロール、カスタムの修復コード維持、あるいはS3設定変更の完全拒否など不適切なアプローチであるため誤りです。",
@@ -195,13 +195,13 @@
             "CloudFormationのテンプレートを展開する前に、クライアント側（開発者の端末）で動作するカスタムのPythonスクリプト（AWS CLIおよびboto3を使用）を実行させ、オンプレミスのAPIから取得したCIDRブロックをテンプレートファイルに直接ハードコードして書き換えてから、「aws cloudformation deploy」を実行するパイプラインを構築する。"
           ],
           "correct": 0,
-          "explanation": "全社的に同一の外部システム統合ロジック（IP管理システムからのCIDR取得）をCloudFormation経由で再利用させるためには、カスタムリソース（AWS Lambda）を作成して共有サービスアカウントから提供するか、あるいはCloudFormation of プライベートレジストリ（CloudFormation Registry）にカスタムリソースプロバイダーを登録して配布するのが最もスマートです。開発者はテンプレート内でそのカスタムリソースを参照するだけでよく、IP取得の複雑なAPIロジックを意識する必要がありません。これにより開発者の手間が最小限に抑えられ、一元管理が可能になります。他の選択肢は、手動作業の発生、複数デプロイにおける重複IP割り当て（競合状態）、あるいはクライアント環境への依存を強いるため不適切です。",
+          "explanation": "全社的に同一の外部システム統合ロジック（IP管理システムからのCIDR取得）をCloudFormation経由で再利用させるためには、カスタムリソース（AWS Lambda）を作成して共有サービスアカウントから提供するか、あるいはCloudFormationのプライベートレジストリ（CloudFormation Registry）にカスタムリソースプロバイダーを登録して配布するのが最もスマートです。開発者はテンプレート内でそのカスタムリソースを参照するだけでよく、IP取得の複雑なAPIロジックを意識する必要がありません。これにより開発者の手間が最小限に抑えられ、一元管理が可能になります。他の選択肢は、手動作業の発生、複数デプロイにおける重複IP割り当て（競合状態）、あるいはクライアント環境への依存を強いるため不適切です。",
           "type": "choice"
         },
         {
           "scenario": "金融サービス会社では、本番環境のAWSインフラストラクチャはすべてAWS CloudFormationを通じてデプロイされるよう厳密に管理されています。しかし、トラブルシューティング等の緊急作業によって、一部のEC2セキュリティグループのルールやRoute 53レコードが手動で変更され、テンプレートの定義との乖離（ドリフト）が発生する事例が相次いでいます。同社は、ドリフトが発生したリソースを自動的に検出し、未承認の手動変更があった場合にはセキュリティ担当者に通知した上で、CloudFormationの定義に基づいた状態へ自動的に復元する仕組みを構築したいと考えています。運用のオーバーヘッドを最小限に抑える構成はどれか。",
           "choices": [
-            "Amazon EventBridgeルールを使用して、CloudFormationの「Drift Detection（ドリフト検出）」APIを定期スケジュールで呼び出す。ドリフトが検出された場合（DRIFTEDステータス）、EventBridgeがAWS Systems Manager of Automationランブックをトリガーし、変更されたプロパティを修正するか、CloudFormationスタックを更新（再度デプロイ）して正しい状態に同期する。",
+            "Amazon EventBridgeルールを使用して、CloudFormationの「Drift Detection（ドリフト検出）」APIを定期スケジュールで呼び出す。ドリフトが検出された場合（DRIFTEDステータス）、EventBridgeがAWS Systems ManagerのAutomationランブックをトリガーし、変更されたプロパティを修正するか、CloudFormationスタックを更新（再度デプロイ）して正しい状態に同期する。",
             "AWS Configのカスタムルールを作成し、全リソースの手動変更イベントをポーリングする。手動変更が検出された場合、AWS Lambda関数を実行してCloudFormationスタックを強制的に削除（DeleteStack）し、その後「CreateStack」APIを呼び出して1から再プロビジョニングを実行する。",
             "AWS Systems ManagerのState Manager Associationを利用して、毎日1回ターゲットのEC2インスタンスとセキュリティグループに対して「AWS-ApplyAnsiblePlaybooks」を実行し、すべての設定項目を定義済みの状態に上書きする。",
             "CloudFormationテンプレートの各リソースの「DeletionPolicy」プロパティを「Retain」に設定し、CloudTrailで「UpdateSecurityGroupRule」などの手動APIが検出された際に、LambdaでそのAPIの呼び出し自体をロールバックするAPIを直接発行するスクリプトを構築する。"
@@ -332,7 +332,7 @@
           "choices": [
             "AWS WAFをALBにデプロイし、WAFの組み込みルールである「レートベースのルール（Rate-based Rule）」を設定する。レート制限の基準として「1分間に1,000回」を定義し、しきい値を超えたIPアドレスを自動的にブロックするように構成する。",
             "VPC Flow LogsをAmazon Kinesis Data Firehose経由でAmazon S3バケットに送信し、S3のイベント通知からAWS Lambdaを起動する。LambdaはAmazon Athenaを呼び出して過去5分間のログからリクエスト元IPの件数をクエリし、しきい値を超えたIPをネットワークACL（NACL）の拒否ルールに動的に追加し、有効期限が切れたらLambdaのスケジュールイベントで削除する。",
-            "Amazon CloudWatch LogsにALBのアクセスログを送信し、メトリクスフィルターを設定して特定のステータスコードをカウントする。アラームがトリガーされたらAWS Systems ManagerのAutomationランブックを起動し、AWS Systems Manager of Session Managerを使用してすべてのWebサーバーインスタンスにログインし、ローカルのiptablesを設定して攻撃元IPをブロックする。",
+            "Amazon CloudWatch LogsにALBのアクセスログを送信し、メトリクスフィルターを設定して特定のステータスコードをカウントする。アラームがトリガーされたらAWS Systems ManagerのAutomationランブックを起動し、AWS Systems ManagerのSession Managerを使用してすべてのWebサーバーインスタンスにログインし、ローカルのiptablesを設定して攻撃元IPをブロックする。",
             "AWS WAFのAPIを使用して、すべてのインバウンドWebリクエストイベントをAWS Lambdaにリアルタイムで転送する。Lambdaのコード内でDynamoDBテーブルを使用してIPごとのカウンタを管理し、カウント数が1,000を超えた場合にWAFのIPセット（IP Set）を更新するスクリプトを自作する。"
           ],
           "correct": 0,
@@ -378,7 +378,7 @@
         {
           "scenario": "ある証券会社では、システムのレジリエンス（回復力）を実証するため、毎年実施しているディザスタリカバリ（DR）訓練の自動化を進めています。本番環境のインフラはAWS Resilience Hubで評価されており、3ヶ月に1回、本番稼働時間外に自動的にDRテスト用のステージング環境をCloudFormationから複製し、AWS Systems Manager Incident Managerを使用してインシデント（DR擬似障害）をシミュレートし、復旧手順のランブックを自動実行してRTO（目標復旧時間）が許容値内であることを確認する仕組みを構築したいと考えています。運用のオーバーヘッドを最小限に抑え、スケジュール通りに実行させるための最適な設計はどれか。",
           "choices": [
-            "Amazon EventBridge Schedulerを使用して、3ヶ月に1回の実行スケジュールを設定する。ターゲットとしてAWS Systems Manager of Incident Managerの「インシデント作成（CreateIncident）」APIを指定し、対応するインシデントテンプレート（CloudFormationによる環境構築と、Systems Manager AutomationによるDR復旧ランブックの実行手順が含まれる連絡プラン）を実行し、検証結果をResilience Hubにレポートとして保存する。",
+            "Amazon EventBridge Schedulerを使用して、3ヶ月に1回の実行スケジュールを設定する。ターゲットとしてAWS Systems ManagerのIncident Managerの「インシデント作成（CreateIncident）」APIを指定し、対応するインシデントテンプレート（CloudFormationによる環境構築と、Systems Manager AutomationによるDR復旧ランブックの実行手順が含まれる連絡プラン）を実行し、検証結果をResilience Hubにレポートとして保存する。",
             "cronを実行する専用の「監視用t3.microインスタンス」を常時稼働させ、Pythonスクリプト（boto3）から3ヶ月に1回、Resilience Hubの「PublishAssessment」APIを呼び出す。スクリプト内で、一時的なCloudFormationスタックの作成と削除を直接制御し、エラーが発生した場合はSlackボットから通知を送る。",
             "AWS Organizationsの管理アカウントに、定期的に実行されるAWS Lambda関数を作成する。Lambda関数は、AWS CodePipelineを起動してステージング環境のクローンを作成し、完了後にAWS Systems Manager State Managerを使用してすべてのEC2インスタンスをシャットダウンさせ、その後復旧コマンドを送信して結果をS3に記録する。",
             "AWS Configのカスタムルールを作成し、評価スケジュールを3ヶ月に設定する。Configルールの評価フェーズでステージング環境の自動複製スクリプト（Lambda経由）を実行し、AWS Systems Manager OpsCenterにOpsItemを生成して、エンジニアが手動で復旧手順を実行するようにする。"
