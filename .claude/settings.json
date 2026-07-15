@@ -1,4 +1,20 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_console_messages",
+      "mcp__claude-in-chrome__navigate",
+      "Bash(npx tsc --noEmit -p tsconfig.json)",
+      "Bash(npm test)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__playwright__browser_resize",
+      "Bash(claude mcp list)",
+      "mcp__playwright__browser_wait_for",
+      "mcp__claude-in-chrome__read_console_messages",
+      "mcp__playwright__browser_snapshot"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
