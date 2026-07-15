@@ -164,9 +164,10 @@
       font-size: 1.5rem;
     }
 
-    .auth-header .header .logo {
-      font-size: 2.5rem;
-      margin-bottom: 6px;
+    .app-subtitle {
+      font-size: 0.8rem;
+      color: #a0aec0;
+      margin-top: 2px;
     }
 
     .btn-reload-inline {
@@ -326,17 +327,14 @@
   <div id="screen-home" class="hidden">
     <div class="auth-header" style="position: relative; display: block;">
       <div class="auth-status" id="auth-status"></div>
-      <div style="height: 32px;"></div>
-      <div class="header">
-        <div class="logo">📚</div>
-        <h1>🏠満点まで帰れません✨</h1>
-      </div>
-    </div>
-
-    <div style="display: flex; justify-content: flex-end; margin-bottom: 8px;">
-      <button class="btn-reload-inline" onclick="forceReload()" title="最新の状態に更新">
+      <button class="btn-reload-inline" onclick="forceReload()" title="最新の状態に更新" style="position: absolute; top: 0; right: 0;">
         <span class="reload-icon">🔄</span> 最新に更新
       </button>
+      <div style="height: 32px;"></div>
+      <div class="header">
+        <h1>🏠満点まで帰れません✨</h1>
+        <p class="app-subtitle">（反復学習アプリ）</p>
+      </div>
     </div>
     <div style="font-size: 0.85rem; color: #718096; margin-bottom: 12px; text-align: right;">
       合計：<span id="score-total">0問</span> / <span id="score-grand-total">0問</span>
