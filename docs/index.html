@@ -273,12 +273,25 @@
       display: block;
     }
 
+    .score-summary-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
     .score-summary-heading {
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.04em;
       color: rgba(255,255,255,0.85);
-      margin-bottom: 8px;
+    }
+
+    .score-summary-total {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.85);
+      white-space: nowrap;
     }
 
     .score-row {
@@ -458,12 +471,11 @@
         <p class="app-subtitle">（反復学習システム）</p>
       </div>
     </div>
-    <div style="font-size: 0.85rem; color: #718096; margin-bottom: 12px; text-align: right;">
-      合計：<span id="score-total">0問</span> / <span id="score-grand-total">0問</span>
-    </div>
-
     <div class="score-summary" id="score-summary">
-      <h3 class="score-summary-heading">あなたの選択教材</h3>
+      <div class="score-summary-top">
+        <h3 class="score-summary-heading">あなたの選択教材</h3>
+        <span class="score-summary-total">合計：<span id="score-total">0問</span> / <span id="score-grand-total">0問</span></span>
+      </div>
       <div id="score-summary-rows"></div>
     </div>
 
