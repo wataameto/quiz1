@@ -21,8 +21,7 @@ describe('Main menu HTML', () => {
   });
 
   test('should show part counts from question metadata', () => {
-    expect(indexHtml).toContain('${bokiMeta.parts}パート');
-    expect(indexHtml).toContain('${devopsMeta.parts}パート');
+    expect(indexHtml).toContain('${r.meta.parts}パート');
     expect(indexHtml).toContain('async function calculateQuizMeta');
   });
 

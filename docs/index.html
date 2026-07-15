@@ -303,6 +303,78 @@
       transform: translateX(4px);
     }
 
+    .score-summary-empty {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 8px 0;
+    }
+
+    .quiz-toggle-section {
+      margin-bottom: 24px;
+    }
+
+    .quiz-toggle-heading {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #2d3748;
+      margin-bottom: 2px;
+    }
+
+    .quiz-toggle-hint {
+      font-size: 0.76rem;
+      color: #a0aec0;
+      margin-bottom: 10px;
+    }
+
+    .quiz-toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 4px;
+      border-bottom: 1px solid #edf2f7;
+      font-size: 0.88rem;
+      color: #2d3748;
+    }
+
+    .quiz-toggle-row:last-child {
+      border-bottom: none;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 42px;
+      height: 24px;
+      border-radius: 99px;
+      border: none;
+      background: #e2e8f0;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .toggle-switch.on {
+      background: linear-gradient(135deg, #0066ff, #0099ff);
+    }
+
+    .toggle-switch.on::after {
+      transform: translateX(18px);
+    }
+
     .hidden {
       display: none !important;
     }
@@ -341,30 +413,13 @@
     </div>
 
     <div class="score-summary" id="score-summary">
-      <a href="./boki1/?from=menu" class="score-row score-link" target="_blank">
-        <span id="label-boki">📚 江東区最強せいちゃんへ簿記挑戦</span>
-        <span id="score-boki">0問</span>
-      </a>
-      <a href="./devops/?from=menu" class="score-row score-link" target="_blank">
-        <span id="label-devops">☁️ DOP-C02 練習問題</span>
-        <span id="score-devops">0問</span>
-      </a>
-      <a href="./kokyo1/?from=menu" class="score-row score-link" target="_blank">
-        <span id="label-kokyo1">⚖️ 公共1 期末考査対策</span>
-        <span id="score-kokyo1">0問</span>
-      </a>
-      <a href="./joho1/?from=menu" class="score-row score-link" target="_blank">
-        <span id="label-joho1">💻 情報処理1 練習問題</span>
-        <span id="score-joho1">0問</span>
-      </a>
-      <a href="./itpassport/?from=menu" class="score-row score-link" target="_blank">
-        <span id="label-itpassport">🧭 ITパスポート練習問題</span>
-        <span id="score-itpassport">0問</span>
-      </a>
-      <a href="./itpassportjr/?from=menu" class="score-row score-link" target="_blank">
-        <span id="label-itpassportjr">🌱 ITパスポートJr（やさしい版）</span>
-        <span id="score-itpassportjr">0問</span>
-      </a>
+      <div id="score-summary-rows"></div>
+    </div>
+
+    <div class="quiz-toggle-section">
+      <h3 class="quiz-toggle-heading">教材一覧</h3>
+      <p class="quiz-toggle-hint">ONにした教材だけ、上の成績一覧に表示されます</p>
+      <div id="quiz-toggle-list"></div>
     </div>
 
     <div class="footer">
@@ -405,6 +460,16 @@ const db = firebase.firestore();
 
 let currentUser = null;
 const quizMetaCache = {};
+let visiblePrefs = null; // null = not loaded from Firestore yet
+
+const QUIZZES = [
+  { id: 'boki1', emoji: '📚', name: '江東区最強せいちゃんへ簿記挑戦', path: './boki1/', collection: 'quiz_boki1' },
+  { id: 'devops', emoji: '☁️', name: 'DOP-C02 練習問題', path: './devops/', collection: 'quiz_devops' },
+  { id: 'kokyo1', emoji: '⚖️', name: '公共1 期末考査対策', path: './kokyo1/', collection: 'quiz_kokyo1' },
+  { id: 'joho1', emoji: '💻', name: '情報処理1 練習問題', path: './joho1/', collection: 'quiz_joho1' },
+  { id: 'itpassport', emoji: '🧭', name: 'ITパスポート練習問題', path: './itpassport/', collection: 'quiz_itpassport' },
+  { id: 'itpassportjr', emoji: '🌱', name: 'ITパスポートJr（やさしい版）', path: './itpassportjr/', collection: 'quiz_itpassportjr' },
+];
 
 auth.getRedirectResult().catch(e => {
   console.error('Google redirect result error:', e);
@@ -444,30 +509,6 @@ function closeLogoutModal() {
 function confirmLogout() {
   closeLogoutModal();
   auth.signOut().catch(e => console.error('Logout error:', e));
-}
-
-async function getBokiScore() {
-  return getQuizScore('quiz_boki1', './boki1/');
-}
-
-async function getDevopsScore() {
-  return getQuizScore('quiz_devops', './devops/');
-}
-
-async function getKokyo1Score() {
-  return getQuizScore('quiz_kokyo1', './kokyo1/');
-}
-
-async function getJoho1Score() {
-  return getQuizScore('quiz_joho1', './joho1/');
-}
-
-async function getItpassportScore() {
-  return getQuizScore('quiz_itpassport', './itpassport/');
-}
-
-async function getItpassportjrScore() {
-  return getQuizScore('quiz_itpassportjr', './itpassportjr/');
 }
 
 async function calculateQuizMeta(questionsPath) {
@@ -550,38 +591,78 @@ async function getQuizScore(collectionName, questionsPath) {
   }
 }
 
-async function updateScoreDisplay() {
-  const bokiMeta = await calculateQuizMeta('./boki1/');
-  const devopsMeta = await calculateQuizMeta('./devops/');
-  const kokyo1Meta = await calculateQuizMeta('./kokyo1/');
-  const joho1Meta = await calculateQuizMeta('./joho1/');
-  const itpassportMeta = await calculateQuizMeta('./itpassport/');
-  const itpassportjrMeta = await calculateQuizMeta('./itpassportjr/');
-  const bokiScore = await getBokiScore();
-  const devopsScore = await getDevopsScore();
-  const kokyo1Score = await getKokyo1Score();
-  const joho1Score = await getJoho1Score();
-  const itpassportScore = await getItpassportScore();
-  const itpassportjrScore = await getItpassportjrScore();
-  const totalCorrect = bokiScore.correct + devopsScore.correct + kokyo1Score.correct + joho1Score.correct + itpassportScore.correct + itpassportjrScore.correct;
-  const totalQuestions = bokiScore.total + devopsScore.total + kokyo1Score.total + joho1Score.total + itpassportScore.total + itpassportjrScore.total;
+function isQuizVisible(id) {
+  if (!visiblePrefs) return true; // 未設定なら全部ON扱い
+  return visiblePrefs[id] !== false;
+}
 
-  // 常にスコアエリアを表示（リンクが必要なため）
+async function loadVisiblePrefs() {
+  if (!currentUser) return null;
+  try {
+    const doc = await db.collection('menu_prefs').doc(currentUser.uid).get();
+    if (doc.exists && doc.data().visible) {
+      return doc.data().visible;
+    }
+  } catch (e) { console.error('Failed to load menu prefs:', e); }
+  return null;
+}
+
+async function saveVisiblePrefs() {
+  if (!currentUser || !visiblePrefs) return;
+  try {
+    await db.collection('menu_prefs').doc(currentUser.uid).set({ visible: visiblePrefs }, { merge: true });
+  } catch (e) { console.error('Failed to save menu prefs:', e); }
+}
+
+async function toggleQuizVisibility(id) {
+  if (!visiblePrefs) {
+    visiblePrefs = {};
+    QUIZZES.forEach(q => { visiblePrefs[q.id] = true; });
+  }
+  visiblePrefs[id] = !isQuizVisible(id);
+  await saveVisiblePrefs();
+  await updateScoreDisplay();
+}
+
+async function updateScoreDisplay() {
+  if (visiblePrefs === null) {
+    visiblePrefs = await loadVisiblePrefs();
+  }
+
+  const results = await Promise.all(QUIZZES.map(async q => {
+    const meta = await calculateQuizMeta(q.path);
+    const score = await getQuizScore(q.collection, q.path);
+    return { ...q, meta, score };
+  }));
+
+  let totalCorrect = 0;
+  let totalQuestions = 0;
+  let rowsHtml = '';
+  results.forEach(r => {
+    if (!isQuizVisible(r.id)) return;
+    totalCorrect += r.score.correct;
+    totalQuestions += r.score.total;
+    rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
+      <span>${r.emoji} ${r.name}（${r.meta.parts}パート）</span>
+      <span>${r.score.correct}問 / ${r.score.total}問</span>
+    </a>`;
+  });
+
   document.getElementById('score-summary').classList.add('visible');
-  document.getElementById('label-boki').textContent = `📚 江東区最強せいちゃんへ簿記挑戦（${bokiMeta.parts}パート）`;
-  document.getElementById('label-devops').textContent = `☁️ DOP-C02 練習問題（${devopsMeta.parts}パート）`;
-  document.getElementById('label-kokyo1').textContent = `⚖️ 公共1 期末考査対策（${kokyo1Meta.parts}パート）`;
-  document.getElementById('label-joho1').textContent = `💻 情報処理1 練習問題（${joho1Meta.parts}パート）`;
-  document.getElementById('label-itpassport').textContent = `🧭 ITパスポート練習問題（${itpassportMeta.parts}パート）`;
-  document.getElementById('label-itpassportjr').textContent = `🌱 ITパスポートJr（やさしい版）（${itpassportjrMeta.parts}パート）`;
-  document.getElementById('score-boki').textContent = `${bokiScore.correct}問 / ${bokiScore.total}問`;
-  document.getElementById('score-devops').textContent = `${devopsScore.correct}問 / ${devopsScore.total}問`;
-  document.getElementById('score-kokyo1').textContent = `${kokyo1Score.correct}問 / ${kokyo1Score.total}問`;
-  document.getElementById('score-joho1').textContent = `${joho1Score.correct}問 / ${joho1Score.total}問`;
-  document.getElementById('score-itpassport').textContent = `${itpassportScore.correct}問 / ${itpassportScore.total}問`;
-  document.getElementById('score-itpassportjr').textContent = `${itpassportjrScore.correct}問 / ${itpassportjrScore.total}問`;
+  document.getElementById('score-summary-rows').innerHTML = rowsHtml
+    || '<p class="score-summary-empty">表示する教材がありません。下の一覧でONにしてください。</p>';
   document.getElementById('score-total').textContent = `${totalCorrect}問`;
   document.getElementById('score-grand-total').textContent = `${totalQuestions}問`;
+
+  let toggleHtml = '';
+  results.forEach(r => {
+    const on = isQuizVisible(r.id);
+    toggleHtml += `<div class="quiz-toggle-row">
+      <span class="quiz-toggle-label">${r.emoji} ${r.name}</span>
+      <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
+    </div>`;
+  });
+  document.getElementById('quiz-toggle-list').innerHTML = toggleHtml;
 }
 
 function showHomeScreen() {
@@ -614,6 +695,7 @@ function showLoginScreen() {
 
 auth.onAuthStateChanged(user => {
   currentUser = user;
+  visiblePrefs = null;
   if (user) {
     showHomeScreen();
   } else {
