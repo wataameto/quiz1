@@ -158,7 +158,7 @@
     .confetti-piece { position: absolute; width: 10px; height: 10px; border-radius: 2px; animation: confettiFall linear forwards; }
     @keyframes confettiFall { 0% { transform: translateY(-20px) rotate(0deg); opacity: 1; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
     .home-top { position: relative; }
-    .btn-reset-corner { position: absolute; top: 0; right: 0; background: transparent; color: #e53e3e; border: 2px solid #e53e3e; border-radius: 10px; padding: 6px 12px; font-size: 0.68rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
+    .btn-reset-corner { position: absolute; top: 0; right: 0; background: transparent; color: #e53e3e; border: 1.5px solid #e53e3e; border-radius: 8px; padding: 3px 7px; font-size: 0.56rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
     .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
     .auth-status { position: absolute; top: 42px; left: 0; font-size: 0.78rem; }
     .btn-login-inline { background: transparent; color: #667eea; border: 2px solid #667eea; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
