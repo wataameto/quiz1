@@ -809,8 +809,8 @@ quiz_boki1/{userId}
 ```json
 {
   "boki1": {
-    "title": "📚 江東区最強せいちゃんへ簿記挑戦",
-    "heading": "江東区最強せいちゃんへ簿記挑戦",
+    "title": "📚 簿記超入門レベル",
+    "heading": "簿記超入門レベル",
     "description": "簿記（会計）の基礎知識",
     "icon": "📚",
     "bgColor": "#0f2027",
@@ -999,7 +999,7 @@ averageScore = Σ(attempted tests のpercentage) / attempted count
 **構成要素:**
 1. **ヘッダー**
    - クイズタイトル（config.json から動的に取得）
-   - 例: 「江東区最強せいちゃんへ簿記挑戦」
+   - 例: 「簿記超入門レベル」
    - ユーザー情報（ログアウトボタン付き）
 
 2. **パート別成績表示**（統合表示）
