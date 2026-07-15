@@ -487,6 +487,7 @@ const db = firebase.firestore();
 let currentUser = null;
 const quizMetaCache = {};
 let visiblePrefs = null; // null = not loaded from Firestore yet
+let pendingPrefsSave = null; // in-flight Firestore write, if any
 
 const QUIZZES = [
   { id: 'boki1', emoji: '📚', name: '簿記超入門レベル', path: './boki1/', collection: 'quiz_boki1' },
@@ -660,7 +661,8 @@ async function toggleQuizVisibility(id) {
     visiblePrefs = {};
   }
   visiblePrefs[id] = !isQuizVisible(id);
-  await saveVisiblePrefs();
+  pendingPrefsSave = saveVisiblePrefs();
+  await pendingPrefsSave;
   await updateScoreDisplay();
 }
 
@@ -798,7 +800,10 @@ auth.onAuthStateChanged(user => {
   updateBuildTimeDisplay();
 })();
 
-function forceReload() {
+async function forceReload() {
+  if (pendingPrefsSave) {
+    try { await pendingPrefsSave; } catch (e) { /* already logged in saveVisiblePrefs */ }
+  }
   const url = new URL(window.location.href);
   url.searchParams.set('t', Date.now());
   window.location.href = url.toString();
