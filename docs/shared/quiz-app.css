@@ -4,6 +4,7 @@
     .container::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, #f7971e, #ffd200, #21d4fd, #b721ff); }
     .home-header { text-align: center; margin-bottom: 18px; }
     .home-header .logo { font-size: 3rem; margin-bottom: 8px; }
+    .screen-label { font-size: 0.7rem; color: #a0aec0; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 4px; }
     .home-header h1 { font-size: 1.8rem; color: #2d3748; font-weight: 800; margin-bottom: 6px; }
     .home-header p { color: #718096; font-size: 0.95rem; }
     .level-switcher { display: flex; gap: 8px; margin-bottom: 12px; justify-content: center; }
