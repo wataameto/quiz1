@@ -2,11 +2,11 @@
 
 ## 概要
 
-このプロジェクトは Jest でユーティリティ、スコア計算、メニュー表示仕様、簿記問題JSON、統合的なスコア処理を検証します。
+このプロジェクトは Jest でユーティリティ、スコア計算、メニュー表示仕様、全クイズの問題データ品質、簿記固有ルール、統合的なスコア処理を検証します。
 
 現在の実行結果:
-- テストスイート: 5 passed / 5 total
-- テストケース: 119 passed / 119 total
+- テストスイート: 6 passed / 6 total
+- テストケース: 140 passed / 140 total
 - 実行コマンド: npm test -- --runInBand
 
 ## テストファイル
@@ -38,12 +38,16 @@
 - reset 時に Firestore document の存在確認を行うこと。
 - boki1/devops の quiz page に admin question review mode があること。
 
+### src/questionQuality.test.js
+- docs/ 配下の全クイズ（boki1, devops, kokyo1, joho1, itpassport, itpassportjr）を横断して問題データ品質を検証する共通テスト。
+- 各問題に scenario, choices（2件以上）, correct（範囲内の整数）, explanation があること。
+- 1問の中で選択肢が重複しないこと。
+- 同じクイズ内でシナリオ文が完全一致する問題が存在しないこと（コピペ重複の検出）。
+- 仕訳問題（type: journal）がある場合、全選択肢で借方合計と貸方合計が一致すること。
+- 「選択肢セット・正解が同じでシナリオだけ言い回しを変えた」近似重複は誤検知が多いため対象外（分類問題など、同じ選択肢プールを正当に使い回すパターンがあるため）。まれに見つかった場合は手動監査で対応する。
+
 ### src/bokiQuestions.test.js
-- docs/boki1/questions*.json の構造検証。
-- 各テストが現在の簿記ルールどおり10問であること。
-- 各問題に scenario, choices, correct, explanation があること。
-- 選択肢が重複しないこと。
-- 仕訳問題の借方合計と貸方合計が一致すること。
+- docs/boki1/questions*.json 固有のルール検証（構造・重複・仕訳バランスは questionQuality.test.js に統合済み）。
 - 仕訳の勘定科目名に 売上 / 仕入 を使っていないこと。
 
 ## 実行方法
@@ -60,5 +64,5 @@ npm run test:coverage
 
 - JavaScript または問題JSONを変更したら npm test を実行する。
 - ドキュメントだけの変更なら npm test は不要。
-- 問題数ルールを変更する場合は、UI表示だけでなく src/bokiQuestions.test.js も見直す。
-- 簿記問題の作問ルールは QUESTION_GUIDE.md を優先する。
+- どのクイズの問題JSONを追加・修正しても、src/questionQuality.test.js が構造・選択肢重複・シナリオ重複・仕訳バランスを自動チェックする。
+- 簿記固有の作問ルールは src/bokiQuestions.test.js と QUESTION_GUIDE.md を優先する。
