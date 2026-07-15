@@ -377,7 +377,8 @@ async function getBest(id, level = currentLevel) {
   if (!cacheInitialized) {
     await initializeBestScoresCache();
   }
-  return parseInt(bestScores[`best_${level}_${id}`] || '-1', 10);
+  const v = bestScores[`best_${level}_${id}`];
+  return (v === undefined || v === null) ? -1 : parseInt(v, 10);
 }
 
 async function setBest(id, s) {
