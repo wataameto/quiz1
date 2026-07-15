@@ -50,6 +50,7 @@ async function loginWithGoogle() {
 }
 
 function logout() {
+  if (!confirm('ログアウトしますか？')) return;
   auth.signOut().catch(e => console.error('Logout error:', e));
 }
 
