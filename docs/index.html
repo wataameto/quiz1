@@ -169,31 +169,6 @@
       margin-bottom: 6px;
     }
 
-    .user-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #2d3748;
-    }
-
-    .user-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #0066ff, #0099ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.2rem;
-    }
-
-    .user-name {
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
     .btn-reload-inline {
       background: #edf2f7;
       border: 1.5px solid #cbd5e0;
@@ -241,6 +216,11 @@
       background: #fff5f5;
       transform: translateY(-1px);
     }
+
+    .auth-status { position: absolute; top: 0; left: 0; font-size: 0.78rem; }
+    .auth-status .user-chip { display: flex; align-items: center; gap: 6px; color: #718096; }
+    .auth-status .user-chip .user-name { font-weight: 700; color: #2d3748; }
+    .auth-status .user-chip .btn-logout-inline { background: none; border: none; color: #a0aec0; font-size: 0.72rem; text-decoration: underline; cursor: pointer; font-family: inherit; padding: 0; }
 
     .login-screen {
       text-align: center;
@@ -326,27 +306,6 @@
       display: none !important;
     }
 
-    @media (max-width: 600px) {
-      .auth-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .auth-header .header {
-        width: 100%;
-      }
-
-      .auth-header > div:last-child {
-        width: 100%;
-        flex-direction: column;
-      }
-
-      .user-info {
-        width: 100%;
-        justify-content: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -366,15 +325,8 @@
   <!-- HOME SCREEN -->
   <div id="screen-home" class="hidden">
     <div class="auth-header" style="position: relative; display: block;">
-      <div class="user-info" style="position: absolute; top: 0; left: 0;">
-        <div class="user-avatar" id="user-avatar">👤</div>
-        <div>
-          <div class="user-name" id="user-name">ユーザー</div>
-          <div style="font-size: 0.75rem; color: #a0aec0;">ログイン中</div>
-        </div>
-        <button class="btn-logout" onclick="logout()">ログアウト</button>
-      </div>
-      <div style="height: 56px;"></div>
+      <div class="auth-status" id="auth-status"></div>
+      <div style="height: 32px;"></div>
       <div class="header">
         <div class="logo">📚</div>
         <h1>🏠満点まで帰れません✨</h1>
@@ -640,11 +592,19 @@ function showHomeScreen() {
   document.getElementById('screen-home').classList.remove('hidden');
 
   if (currentUser) {
-    const displayName = currentUser.displayName || 'ユーザー';
-    const firstChar = displayName.charAt(0);
-    document.getElementById('user-name').textContent = displayName;
-    document.getElementById('user-avatar').textContent = firstChar;
+    renderAuthStatus();
     updateScoreDisplay();
+  }
+}
+
+function renderAuthStatus() {
+  const el = document.getElementById('auth-status');
+  if (!el) return;
+  if (currentUser) {
+    el.innerHTML = `<span class="user-chip">👤 <span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
+    document.getElementById('auth-status-name').textContent = currentUser.displayName || 'ユーザー';
+  } else {
+    el.innerHTML = '';
   }
 }
 
