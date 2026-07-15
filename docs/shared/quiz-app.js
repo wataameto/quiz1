@@ -278,7 +278,7 @@ function switchLevel(level) {
   loadQuestions(level);
 }
 
-let homeCollapsed = true; // 現在パートのセット一覧を閉じているか
+let homeCollapsed = false; // 現在パートのセット一覧を閉じているか
 
 function toggleLevel(level) {
   soundClick();
