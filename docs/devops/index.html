@@ -169,6 +169,12 @@
     .home-top { position: relative; }
     .btn-reset-corner { position: absolute; top: 0; right: 0; background: transparent; color: #e53e3e; border: 2px solid #e53e3e; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
     .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
+    .auth-status { position: absolute; top: 42px; left: 0; font-size: 0.78rem; }
+    .btn-login-inline { background: transparent; color: #667eea; border: 2px solid #667eea; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
+    .btn-login-inline:hover { background: #f5f7ff; transform: translateY(-1px); }
+    .auth-status .user-chip { display: flex; align-items: center; gap: 6px; color: #718096; }
+    .auth-status .user-chip .user-name { font-weight: 700; color: #2d3748; }
+    .auth-status .user-chip .btn-logout-inline { background: none; border: none; color: #a0aec0; font-size: 0.72rem; text-decoration: underline; cursor: pointer; font-family: inherit; padding: 0; }
     .hidden { display: none !important; }
 
     /* 仕訳レンダリング（boki1 との統一） */
@@ -198,6 +204,7 @@
     <div class="home-top">
       <a href="../" onclick="backToMainMenu(event)" style="position:absolute; top:0; left:0; background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
       <button class="btn-reset-corner" onclick="resetScores()">🗑️ 成績リセット</button>
+      <div class="auth-status" id="auth-status"></div>
       <div class="total-score-bar" style="position: absolute; top: 42px; right: 0; text-align: right; margin-bottom: 0; margin-top: 0;">🎯 総合成績: <span id="total-score-display">-</span></div>
       <div style="height: 80px;"></div>
       <div class="home-header">
@@ -304,9 +311,45 @@ auth.onAuthStateChanged(user => {
   currentUser = user || null;
   cacheInitialized = false;
   bestScores = {};
+  renderAuthStatus();
   // 認証状態に関わらず初期化を実行
   loadAllQuestions();
 });
+
+async function loginWithGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  try {
+    await auth.signInWithPopup(provider);
+  } catch (e) {
+    if (e.code === 'auth/popup-blocked' || e.code === 'auth/cancelled-popup-request') {
+      try {
+        await auth.signInWithRedirect(provider);
+        return;
+      } catch (redirectError) {
+        console.error('Google redirect login error:', redirectError);
+        alert('ログインに失敗しました: ' + redirectError.message);
+        return;
+      }
+    }
+    console.error('Google login error:', e);
+    alert('ログインに失敗しました: ' + e.message);
+  }
+}
+
+function logout() {
+  auth.signOut().catch(e => console.error('Logout error:', e));
+}
+
+function renderAuthStatus() {
+  const el = document.getElementById('auth-status');
+  if (!el) return;
+  if (currentUser) {
+    el.innerHTML = `<span class="user-chip">👤 <span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
+    document.getElementById('auth-status-name').textContent = currentUser.displayName || 'ユーザー';
+  } else {
+    el.innerHTML = `<button class="btn-login-inline" onclick="loginWithGoogle()">🔐 ログイン</button>`;
+  }
+}
 
 // ============================================================
 // 🔊 サウンド（Web Audio API）
