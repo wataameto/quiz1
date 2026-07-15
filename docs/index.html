@@ -342,6 +342,23 @@
       border-bottom: none;
     }
 
+    .quiz-toggle-main {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .quiz-toggle-label {
+      display: block;
+      font-weight: 700;
+    }
+
+    .quiz-toggle-meta {
+      display: block;
+      font-size: 0.74rem;
+      color: #a0aec0;
+      margin-top: 2px;
+    }
+
     .toggle-switch {
       position: relative;
       width: 42px;
@@ -592,8 +609,21 @@ async function getQuizScore(collectionName, questionsPath) {
 }
 
 function isQuizVisible(id) {
-  if (!visiblePrefs) return true; // 未設定なら全部ON扱い
-  return visiblePrefs[id] !== false;
+  if (!visiblePrefs) return false; // 未設定なら全部OFF扱い
+  return visiblePrefs[id] === true;
+}
+
+let menuConfigCache = null;
+async function loadMenuConfig() {
+  if (menuConfigCache) return menuConfigCache;
+  try {
+    const res = await fetch('./config.json?t=' + Date.now());
+    menuConfigCache = await res.json();
+  } catch (e) {
+    console.error('Failed to load config.json:', e);
+    menuConfigCache = {};
+  }
+  return menuConfigCache;
 }
 
 async function loadVisiblePrefs() {
@@ -617,7 +647,6 @@ async function saveVisiblePrefs() {
 async function toggleQuizVisibility(id) {
   if (!visiblePrefs) {
     visiblePrefs = {};
-    QUIZZES.forEach(q => { visiblePrefs[q.id] = true; });
   }
   visiblePrefs[id] = !isQuizVisible(id);
   await saveVisiblePrefs();
@@ -628,11 +657,13 @@ async function updateScoreDisplay() {
   if (visiblePrefs === null) {
     visiblePrefs = await loadVisiblePrefs();
   }
+  const menuConfig = await loadMenuConfig();
 
   const results = await Promise.all(QUIZZES.map(async q => {
     const meta = await calculateQuizMeta(q.path);
     const score = await getQuizScore(q.collection, q.path);
-    return { ...q, meta, score };
+    const description = menuConfig[q.id]?.description || '';
+    return { ...q, meta, score, description };
   }));
 
   let totalCorrect = 0;
@@ -658,7 +689,10 @@ async function updateScoreDisplay() {
   results.forEach(r => {
     const on = isQuizVisible(r.id);
     toggleHtml += `<div class="quiz-toggle-row">
-      <span class="quiz-toggle-label">${r.emoji} ${r.name}</span>
+      <div class="quiz-toggle-main">
+        <span class="quiz-toggle-label">${r.emoji} ${r.name}</span>
+        <span class="quiz-toggle-meta">${r.description}${r.description ? ' ・ ' : ''}${r.meta.parts}パート・${r.meta.total}問</span>
+      </div>
       <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
     </div>`;
   });
