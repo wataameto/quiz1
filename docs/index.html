@@ -223,40 +223,10 @@
     .auth-status .user-chip .user-name { font-weight: 700; color: #2d3748; }
     .auth-status .user-chip .btn-logout-inline { background: none; border: none; color: #a0aec0; font-size: 0.72rem; text-decoration: underline; cursor: pointer; font-family: inherit; padding: 0; }
 
-    .login-screen {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
     .loading-screen {
       text-align: center;
       padding: 0;
       min-height: 220px;
-    }
-
-    .login-screen h2 {
-      font-size: 1.5rem;
-      color: #2d3748;
-      margin-bottom: 20px;
-      font-weight: 800;
-    }
-
-    .btn-login {
-      background: linear-gradient(135deg, #0066ff, #0099ff);
-      color: #fff;
-      border: none;
-      border-radius: 12px;
-      padding: 16px 32px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-
-    .btn-login:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,102,255,0.4);
     }
 
     .score-summary {
@@ -448,14 +418,6 @@
 <div class="container">
   <!-- LOADING SCREEN -->
   <div id="screen-loading" class="loading-screen">
-  </div>
-
-  <!-- LOGIN SCREEN -->
-  <div id="screen-login" class="login-screen hidden">
-    <div class="logo" style="font-size: 3.5rem; margin-bottom: 20px;">📚</div>
-    <h2>🏠満点まで帰れません✨</h2>
-    <p style="color: #718096; margin-bottom: 24px;">学習問題に挑戦しよう！</p>
-    <button class="btn-login" onclick="loginWithGoogle()">🔐 Google でログイン</button>
   </div>
 
   <!-- HOME SCREEN -->
@@ -702,6 +664,10 @@ async function saveVisiblePrefs() {
 }
 
 async function toggleQuizVisibility(id) {
+  if (!currentUser) {
+    alert('教材を選択するにはログインしてください');
+    return;
+  }
   if (!visiblePrefs) {
     visiblePrefs = {};
   }
@@ -762,11 +728,11 @@ function renderQuizToggleList() {
   filtered.forEach(r => {
     const on = isQuizVisible(r.id);
     toggleHtml += `<div class="quiz-toggle-row">
+      <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
       <div class="quiz-toggle-main">
         <span class="quiz-toggle-label">${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
         <span class="quiz-toggle-desc">${r.description}</span>
       </div>
-      <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
     </div>`;
   });
   document.getElementById('quiz-toggle-list').innerHTML = toggleHtml;
@@ -775,13 +741,9 @@ function renderQuizToggleList() {
 
 function showHomeScreen() {
   document.getElementById('screen-loading').classList.add('hidden');
-  document.getElementById('screen-login').classList.add('hidden');
   document.getElementById('screen-home').classList.remove('hidden');
-
-  if (currentUser) {
-    renderAuthStatus();
-    updateScoreDisplay();
-  }
+  renderAuthStatus();
+  updateScoreDisplay();
 }
 
 function renderAuthStatus() {
@@ -795,20 +757,10 @@ function renderAuthStatus() {
   }
 }
 
-function showLoginScreen() {
-  document.getElementById('screen-loading').classList.add('hidden');
-  document.getElementById('screen-login').classList.remove('hidden');
-  document.getElementById('screen-home').classList.add('hidden');
-}
-
 auth.onAuthStateChanged(user => {
   currentUser = user;
   visiblePrefs = null;
-  if (user) {
-    showHomeScreen();
-  } else {
-    showLoginScreen();
-  }
+  showHomeScreen();
 });
 
 (function() {

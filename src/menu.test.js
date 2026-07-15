@@ -9,10 +9,15 @@ describe('Main menu HTML', () => {
   const quizAppJs = fs.readFileSync(path.join(docsDir, 'shared', 'quiz-app.js'), 'utf8');
   const config = JSON.parse(fs.readFileSync(path.join(docsDir, 'config.json'), 'utf8'));
 
-  test('should hide login screen until auth state is resolved', () => {
+  test('should hide loading screen once auth state is resolved, without gating home behind login', () => {
     expect(indexHtml).toContain('id="screen-loading"');
-    expect(indexHtml).toContain('id="screen-login" class="login-screen hidden"');
     expect(indexHtml).toContain("document.getElementById('screen-loading').classList.add('hidden')");
+    expect(indexHtml).not.toContain('screen-login');
+  });
+
+  test('should prompt for login instead of toggling when signed out', () => {
+    expect(indexHtml).toContain("if (!currentUser) {");
+    expect(indexHtml).toContain('教材を選択するにはログインしてください');
   });
 
   test('should use configured quiz names in menu labels', () => {

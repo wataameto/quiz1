@@ -85,7 +85,7 @@
     .set-actions .btn-sub { font-size: 0.6rem; opacity: 0.85; }
     .set-exam-btn { background: #667eea; }
     .set-review-btn { background: #f7971e; }
-    .set-practice-btn { background: #a0aec0; }
+    .set-practice-btn { background: #38b2ac; }
     @media (max-width: 520px) {
       body { padding: 8px; }
       .container { padding: 20px 12px; }
