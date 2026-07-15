@@ -365,20 +365,19 @@
 
   <!-- HOME SCREEN -->
   <div id="screen-home" class="hidden">
-    <div class="auth-header">
+    <div class="auth-header" style="position: relative; display: block;">
+      <div class="user-info" style="position: absolute; top: 0; left: 0;">
+        <div class="user-avatar" id="user-avatar">👤</div>
+        <div>
+          <div class="user-name" id="user-name">ユーザー</div>
+          <div style="font-size: 0.75rem; color: #a0aec0;">ログイン中</div>
+        </div>
+        <button class="btn-logout" onclick="logout()">ログアウト</button>
+      </div>
+      <div style="height: 56px;"></div>
       <div class="header">
         <div class="logo">📚</div>
         <h1>🏠満点まで帰れません✨</h1>
-      </div>
-      <div style="display: flex; gap: 12px; align-items: center;">
-        <div class="user-info">
-          <div class="user-avatar" id="user-avatar">👤</div>
-          <div>
-            <div class="user-name" id="user-name">ユーザー</div>
-            <div style="font-size: 0.75rem; color: #a0aec0;">ログイン中</div>
-          </div>
-        </div>
-        <button class="btn-logout" onclick="logout()">ログアウト</button>
       </div>
     </div>
 

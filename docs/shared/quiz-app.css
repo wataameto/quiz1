@@ -160,7 +160,7 @@
     .home-top { position: relative; }
     .btn-reset-corner { position: absolute; top: 0; right: 0; background: transparent; color: #e53e3e; border: 2px solid #e53e3e; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
     .btn-reset-corner:hover { background: #fff5f5; transform: translateY(-1px); }
-    .auth-status { position: absolute; top: 42px; left: 0; font-size: 0.78rem; }
+    .auth-status { position: absolute; top: 0; left: 0; font-size: 0.78rem; }
     .btn-login-inline { background: transparent; color: #667eea; border: 2px solid #667eea; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
     .btn-login-inline:hover { background: #f5f7ff; transform: translateY(-1px); }
     .auth-status .user-chip { display: flex; align-items: center; gap: 6px; color: #718096; }
