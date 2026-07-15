@@ -268,499 +268,23 @@
       "subtitle": "正しい仕訳を選んでね！",
       "questions": [
         {
-          "scenario": "🛒 商品¥5,000を現金で仕入れた。",
-          "choices": [
-            {
-              "debit": [
-                {
-                  "account": "商品",
-                  "amount": 5000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 5000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 5000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 5000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "商品",
-                  "amount": 5000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "買掛金",
-                  "amount": 5000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "買掛金",
-                  "amount": 5000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 5000
-                }
-              ]
-            }
-          ],
-          "correct": 0,
-          "explanation": "商品（資産）が増加し、現金（資産）が減少する取引です。商品は借方、現金は貸方に記入します。",
-          "type": "journal"
-        },
-        {
-          "scenario": "💰 原価¥3,000の商品を¥5,000で現金販売した。",
-          "choices": [
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 5000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 3000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 2000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 5000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 5000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 3000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 2000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 5000
-                }
-              ]
-            },
-              {
-                "debit": [
-                  {
-                    "account": "商品",
-                    "amount": 5000
-                  }
-                ],
-                "credit": [
-                  {
-                    "account": "現金",
-                    "amount": 5000
-                  }
-                ]
-              }
-          ],
-          "correct": 0,
-          "explanation": "現金¥5,000受け取り、商品¥3,000と売買益¥2,000を貸方に記録します。分記法の基本です。",
-          "type": "journal"
-        },
-        {
-          "scenario": "🛒 商品¥8,000を掛けで仕入れた。",
-          "choices": [
-            {
-              "debit": [
-                {
-                  "account": "商品",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "買掛金",
-                  "amount": 8000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "買掛金",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 8000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "商品",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 8000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "売掛金",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 8000
-                }
-              ]
-            }
-          ],
-          "correct": 0,
-          "explanation": "商品（資産）が増加し、買掛金（負債）が増加する取引です。",
-          "type": "journal"
-        },
-        {
-          "scenario": "💰 原価¥4,000の商品を¥6,500で掛け販売した。",
-          "choices": [
-            {
-              "debit": [
-                {
-                  "account": "売掛金",
-                  "amount": 6500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 4000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 2500
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "売掛金",
-                  "amount": 6500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 6500
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 6500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 4000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 2500
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "商品",
-                  "amount": 4000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 2500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "売掛金",
-                  "amount": 6500
-                }
-              ]
-            }
-          ],
-          "correct": 0,
-          "explanation": "売掛金¥6,500受け取る権利が生じ、商品¥4,000と売買益¥2,500を貸方に記録します。",
-          "type": "journal"
-        },
-        {
-          "scenario": "💸 買掛金¥8,000を現金で支払った。",
-          "choices": [
-            {
-              "debit": [
-                {
-                  "account": "買掛金",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 8000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "買掛金",
-                  "amount": 8000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "売掛金",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 8000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "売掛金",
-                  "amount": 8000
-                }
-              ]
-            }
-          ],
-          "correct": 0,
-          "explanation": "買掛金（負債）が減少し、現金（資産）が減少する取引です。",
-          "type": "journal"
-        },
-        {
-          "scenario": "📥 売掛金¥6,500を現金で回収した。",
-          "choices": [
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 6500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "売掛金",
-                  "amount": 6500
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "売掛金",
-                  "amount": 6500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 6500
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 6500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "買掛金",
-                  "amount": 6500
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "買掛金",
-                  "amount": 6500
-                }
-              ],
-              "credit": [
-                {
-                  "account": "現金",
-                  "amount": 6500
-                }
-              ]
-            }
-          ],
-          "correct": 0,
-          "explanation": "現金（資産）が増加し、売掛金（資産）が減少する取引です。",
-          "type": "journal"
-        },
-        {
-          "scenario": "💰 原価¥7,000の商品を¥11,000で現金販売した。",
-          "choices": [
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 11000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 7000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 4000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 11000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 11000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "現金",
-                  "amount": 7000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 4000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 11000
-                }
-              ]
-            },
-              {
-                "debit": [
-                  {
-                    "account": "商品",
-                    "amount": 11000
-                  }
-                ],
-                "credit": [
-                  {
-                    "account": "現金",
-                    "amount": 11000
-                  }
-                ]
-              }
-          ],
-          "correct": 0,
-          "explanation": "現金¥11,000受け取り、商品¥7,000と売買益¥4,000を貸方に記録します。",
-          "type": "journal"
-        },
-        {
-          "scenario": "📝 原価¥6,000の商品を受取手形¥10,000で掛け販売した。",
+          "scenario": "📝 原価¥12,000の商品を得意先に販売し、代金として約束手形（受取手形）¥18,000を受け取った。",
           "choices": [
             {
               "debit": [
                 {
                   "account": "受取手形",
-                  "amount": 10000
+                  "amount": 18000
                 }
               ],
               "credit": [
                 {
                   "account": "商品",
-                  "amount": 6000
+                  "amount": 12000
                 },
                 {
                   "account": "商品売買益",
-                  "amount": 4000
+                  "amount": 6000
                 }
               ]
             },
@@ -768,17 +292,17 @@
               "debit": [
                 {
                   "account": "現金",
-                  "amount": 10000
+                  "amount": 18000
                 }
               ],
               "credit": [
                 {
                   "account": "商品",
-                  "amount": 6000
+                  "amount": 12000
                 },
                 {
                   "account": "商品売買益",
-                  "amount": 4000
+                  "amount": 6000
                 }
               ]
             },
@@ -786,71 +310,181 @@
               "debit": [
                 {
                   "account": "受取手形",
-                  "amount": 10000
+                  "amount": 18000
                 }
               ],
               "credit": [
                 {
                   "account": "商品",
-                  "amount": 10000
+                  "amount": 18000
                 }
               ]
             },
             {
               "debit": [
                 {
-                  "account": "売掛金",
-                  "amount": 10000
+                  "account": "商品",
+                  "amount": 12000
+                },
+                {
+                  "account": "商品売買益",
+                  "amount": 6000
                 }
               ],
               "credit": [
                 {
-                  "account": "商品",
-                  "amount": 6000
-                },
+                  "account": "受取手形",
+                  "amount": 18000
+                }
+              ]
+            }
+          ],
+          "correct": 0,
+          "explanation": "代金を約束手形で受け取ったので受取手形（資産）が増加します。商品¥12,000と商品売買益¥6,000を貸方に分けて記録するのが分記法の基本です。",
+          "type": "journal"
+        },
+        {
+          "scenario": "🎫 1年分の保険料¥6,000を現金で前払いした。",
+          "choices": [
+            {
+              "debit": [
                 {
-                  "account": "商品売買益",
+                  "account": "前払保険料",
+                  "amount": 6000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 6000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 6000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "前払保険料",
+                  "amount": 6000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "未払金",
+                  "amount": 6000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 6000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "前払保険料",
+                  "amount": 6000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "未払金",
+                  "amount": 6000
+                }
+              ]
+            }
+          ],
+          "correct": 0,
+          "explanation": "まだ保険期間が来ていない分を先払いしたので、資産である前払保険料が増加し、現金（資産）が減少します。",
+          "type": "journal"
+        },
+        {
+          "scenario": "📋 コピー用紙などの消耗品¥4,000を掛けで購入した（商品ではないため買掛金は使わない）。",
+          "choices": [
+            {
+              "debit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "未払金",
+                  "amount": 4000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "買掛金",
+                  "amount": 4000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "未払金",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 4000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
                   "amount": 4000
                 }
               ]
             }
           ],
           "correct": 0,
-          "explanation": "受取手形¥10,000で掛け販売し、商品¥6,000と売買益¥4,000を貸方に記録します。受取手形は資産として計上されます。",
+          "explanation": "商品以外の物を掛けで買ったときは買掛金ではなく未払金を使います。消耗品費（費用）が増加し、未払金（負債）が増加します。",
           "type": "journal"
         },
         {
-          "scenario": "💰 原価¥5,000の商品を¥8,000で掛け販売した。",
+          "scenario": "🚚 商品の配送業者に運搬費¥2,500を現金で支払った。",
           "choices": [
             {
               "debit": [
                 {
-                  "account": "売掛金",
-                  "amount": 8000
+                  "account": "運搬費",
+                  "amount": 2500
                 }
               ],
               "credit": [
                 {
-                  "account": "商品",
-                  "amount": 5000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 3000
-                }
-              ]
-            },
-            {
-              "debit": [
-                {
-                  "account": "売掛金",
-                  "amount": 8000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "商品",
-                  "amount": 8000
+                  "account": "現金",
+                  "amount": 2500
                 }
               ]
             },
@@ -858,57 +492,63 @@
               "debit": [
                 {
                   "account": "現金",
-                  "amount": 8000
+                  "amount": 2500
                 }
               ],
               "credit": [
                 {
-                  "account": "商品",
-                  "amount": 5000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 3000
+                  "account": "運搬費",
+                  "amount": 2500
                 }
               ]
             },
             {
               "debit": [
                 {
-                  "account": "商品",
-                  "amount": 5000
-                },
-                {
-                  "account": "商品売買益",
-                  "amount": 3000
+                  "account": "運搬費",
+                  "amount": 2500
                 }
               ],
               "credit": [
                 {
-                  "account": "売掛金",
-                  "amount": 8000
+                  "account": "未払金",
+                  "amount": 2500
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 2500
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 2500
                 }
               ]
             }
           ],
           "correct": 0,
-          "explanation": "売掛金¥8,000受け取る権利が生じ、商品¥5,000と売買益¥3,000を貸方に記録します。",
+          "explanation": "商品を運ぶためにかかった費用なので運搬費（費用）が増加し、現金（資産）が減少します。",
           "type": "journal"
         },
         {
-          "scenario": "🏦 銀行から借入した短期借入金¥15,000を現金で返済した。",
+          "scenario": "🏢 事務所の家賃（賃借料）¥30,000を現金で支払った。",
           "choices": [
             {
               "debit": [
                 {
-                  "account": "短期借入金",
-                  "amount": 15000
+                  "account": "賃借料",
+                  "amount": 30000
                 }
               ],
               "credit": [
                 {
                   "account": "現金",
-                  "amount": 15000
+                  "amount": 30000
                 }
               ]
             },
@@ -916,47 +556,367 @@
               "debit": [
                 {
                   "account": "現金",
-                  "amount": 15000
+                  "amount": 30000
                 }
               ],
               "credit": [
                 {
-                  "account": "短期借入金",
-                  "amount": 15000
+                  "account": "賃借料",
+                  "amount": 30000
                 }
               ]
             },
             {
               "debit": [
                 {
-                  "account": "短期借入金",
-                  "amount": 15000
+                  "account": "賃借料",
+                  "amount": 30000
                 }
               ],
               "credit": [
                 {
-                  "account": "買掛金",
-                  "amount": 15000
+                  "account": "未払金",
+                  "amount": 30000
                 }
               ]
             },
             {
               "debit": [
+                {
+                  "account": "運搬費",
+                  "amount": 30000
+                }
+              ],
+              "credit": [
                 {
                   "account": "現金",
-                  "amount": 15000
-                }
-              ],
-              "credit": [
-                {
-                  "account": "買掛金",
-                  "amount": 15000
+                  "amount": 30000
                 }
               ]
             }
           ],
           "correct": 0,
-          "explanation": "短期借入金（負債）が減少し、現金（資産）が減少する取引です。短期借入金の返済を記録します。",
+          "explanation": "建物を借りる代金なので賃借料（費用）が増加し、現金（資産）が減少します。",
+          "type": "journal"
+        },
+        {
+          "scenario": "📋 文房具などの消耗品¥1,800を現金で購入した。",
+          "choices": [
+            {
+              "debit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 1800
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 1800
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 1800
+                }
+              ],
+              "credit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 1800
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 1800
+                }
+              ],
+              "credit": [
+                {
+                  "account": "未払金",
+                  "amount": 1800
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "商品",
+                  "amount": 1800
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 1800
+                }
+              ]
+            }
+          ],
+          "correct": 0,
+          "explanation": "短期間で使い切る文房具の購入費用なので消耗品費（費用）が増加し、現金（資産）が減少します。",
+          "type": "journal"
+        },
+        {
+          "scenario": "📥 以前受け取っていた受取手形¥18,000が期日になり、現金で回収した。",
+          "choices": [
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 18000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "受取手形",
+                  "amount": 18000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "受取手形",
+                  "amount": 18000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 18000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 18000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "売掛金",
+                  "amount": 18000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "受取手形",
+                  "amount": 18000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "商品",
+                  "amount": 18000
+                }
+              ]
+            }
+          ],
+          "correct": 0,
+          "explanation": "手形代金を現金で受け取ったので現金（資産）が増加し、受取手形（資産）が減少します。",
+          "type": "journal"
+        },
+        {
+          "scenario": "🏦 銀行から短期の運転資金¥50,000を借り入れ、現金で受け取った。",
+          "choices": [
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "短期借入金",
+                  "amount": 50000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "短期借入金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 50000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "買掛金",
+                  "amount": 50000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "未払金",
+                  "amount": 50000
+                }
+              ]
+            }
+          ],
+          "correct": 0,
+          "explanation": "銀行からお金を借りたので現金（資産）が増加し、短期借入金（負債）が増加します。",
+          "type": "journal"
+        },
+        {
+          "scenario": "💸 消耗品購入時に生じていた未払金¥4,000を現金で支払った。",
+          "choices": [
+            {
+              "debit": [
+                {
+                  "account": "未払金",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 4000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "未払金",
+                  "amount": 4000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "買掛金",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 4000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "未払金",
+                  "amount": 4000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "消耗品費",
+                  "amount": 4000
+                }
+              ]
+            }
+          ],
+          "correct": 0,
+          "explanation": "未払金（負債）が減少し、現金（資産）が減少します。買掛金ではなく未払金を使うのは、対象が商品以外だからです。",
+          "type": "journal"
+        },
+        {
+          "scenario": "🏦 銀行から借りていた短期借入金¥50,000を現金で返済した。",
+          "choices": [
+            {
+              "debit": [
+                {
+                  "account": "短期借入金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 50000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "現金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "短期借入金",
+                  "amount": 50000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "買掛金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "現金",
+                  "amount": 50000
+                }
+              ]
+            },
+            {
+              "debit": [
+                {
+                  "account": "短期借入金",
+                  "amount": 50000
+                }
+              ],
+              "credit": [
+                {
+                  "account": "未払金",
+                  "amount": 50000
+                }
+              ]
+            }
+          ],
+          "correct": 0,
+          "explanation": "短期借入金（負債）が減少し、現金（資産）が減少します。借入金の返済取引です。",
           "type": "journal"
         }
       ]
