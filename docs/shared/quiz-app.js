@@ -130,31 +130,29 @@ async function loadAllQuestions() {
     const configRes = await fetch('../config.json?t=' + Date.now());
     const configData = await configRes.json();
 
-    // 複数のレベルから最大レベル数を検出
-    maxLevel = 1;
-    let foundLevel = true;
-    while (foundLevel) {
-      try {
-        const res = await fetch(`questions${maxLevel + 1}.json?t=${Date.now()}`);
-        if (res.ok) {
-          maxLevel++;
-        } else {
-          foundLevel = false;
+    // 各レベルを1回のfetchで読み込みつつ、次のレベルの有無を検出する
+    // （レベル1は必須。レベル2以降は存在しなければそこで打ち切り）
+    maxLevel = 0;
+    for (let level = 1; ; level++) {
+      let res;
+      if (level === 1) {
+        res = await fetch(`questions${level}.json?t=${Date.now()}`);
+      } else {
+        try {
+          res = await fetch(`questions${level}.json?t=${Date.now()}`);
+        } catch (e) {
+          break; // 次のレベルが存在しない
         }
-      } catch (e) {
-        foundLevel = false;
+        if (!res.ok) break; // 次のレベルが存在しない
       }
-    }
+      if (level === 1 && !res.ok) throw new Error(`HTTP ${res.status}`);
 
-    // 各レベルのデータを読み込む
-    for (let level = 1; level <= maxLevel; level++) {
-      const res = await fetch(`questions${level}.json?t=${Date.now()}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       if (!data || !data.tests || !Array.isArray(data.tests)) {
         throw new Error(`Invalid data at level ${level}`);
       }
       quizData[level] = data;
+      maxLevel = level;
       if (!quizId) {
         quizId = data.id; // 最初のデータから quizId を取得
         // config から title, colors などを動的に設定
