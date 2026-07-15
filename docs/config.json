@@ -13,7 +13,7 @@
   "devops": {
     "title": "☁️ DOP-C02 練習問題",
     "heading": "DOP-C02 練習問題",
-    "description": "AWS DevOps Engineer Professional",
+    "description": "AWS DevOps Engineer Professional（DOP-C02）試験対策。CI/CD、IaC（Infrastructure as Code）、監視・ロギング、インシデント対応、高可用性設計を基礎から模擬試験まで段階的に学べる",
     "icon": "☁️",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
@@ -24,7 +24,7 @@
   "kokyo1": {
     "title": "⚖️ 公共1 高校１年１学期末考査対策",
     "heading": "公共1 高校１年１学期末考査対策",
-    "description": "1学期期末考査 テスト対策プリント",
+    "description": "高校「公共」1学期期末考査のテスト対策プリント。民主政治と人権保障、法の支配と三権分立、自由・権利と責任・義務、日本国憲法の基本原理などを扱う",
     "icon": "⚖️",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
@@ -35,7 +35,7 @@
   "joho1": {
     "title": "💻 情報処理1 練習問題",
     "heading": "情報処理1 練習問題",
-    "description": "情報社会・コンピュータ・プログラミングの基本",
+    "description": "高校「情報Ⅰ」の基礎。情報システム、IoT・AI・クラウド、情報デザインとUI、情報モラル・セキュリティ、著作権・個人情報保護、コンピュータの仕組み（CPU・メモリ・記憶装置）まで幅広くカバー",
     "icon": "💻",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
@@ -46,7 +46,7 @@
   "itpassport": {
     "title": "🧭 ITパスポート練習問題",
     "heading": "ITパスポート練習問題",
-    "description": "ストラテジ系・マネジメント系・テクノロジ系の基礎知識",
+    "description": "ITパスポート試験対策。ストラテジ系（経営戦略・法務・会計財務）、マネジメント系（開発技術・プロジェクト・サービスマネジメント）、テクノロジ系（基礎理論・ネットワーク・セキュリティ・DB）の3分野をカバー",
     "icon": "🧭",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
@@ -57,7 +57,7 @@
   "itpassportjr": {
     "title": "🌱 ITパスポートJr（やさしい版）",
     "heading": "ITパスポートJr（やさしい版）",
-    "description": "中高生向け、やさしい言葉で学ぶIT・経営・情報モラルの基本",
+    "description": "中高生向けのやさしいITパスポート入門。経営戦略・法務、開発・品質管理、コンピュータ・ネットワーク・セキュリティの基本を、専門用語をかみ砕いた言葉で学ぶ",
     "icon": "🌱",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",

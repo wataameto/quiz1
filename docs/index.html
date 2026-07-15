@@ -335,6 +335,30 @@
       margin-bottom: 10px;
     }
 
+    .quiz-search-input {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-family: inherit;
+      color: #2d3748;
+      margin-bottom: 6px;
+      box-sizing: border-box;
+    }
+
+    .quiz-search-input:focus {
+      outline: none;
+      border-color: #0066ff;
+    }
+
+    .quiz-search-empty {
+      font-size: 0.85rem;
+      color: #a0aec0;
+      text-align: center;
+      padding: 16px 0;
+    }
+
     .quiz-toggle-row {
       display: flex;
       align-items: center;
@@ -445,7 +469,15 @@
     <div class="quiz-toggle-section">
       <h3 class="quiz-toggle-heading">教材一覧</h3>
       <p class="quiz-toggle-hint">ONにした教材だけ、上の成績一覧に表示されます</p>
+      <input
+        type="text"
+        id="quiz-search-input"
+        class="quiz-search-input"
+        placeholder="🔍 教材を検索（タイトル・説明）"
+        oninput="renderQuizToggleList()"
+      >
       <div id="quiz-toggle-list"></div>
+      <p id="quiz-search-empty" class="quiz-search-empty hidden">一致する教材がありません</p>
     </div>
 
     <div class="footer">
@@ -666,6 +698,8 @@ async function toggleQuizVisibility(id) {
   await updateScoreDisplay();
 }
 
+let lastQuizResults = [];
+
 async function updateScoreDisplay() {
   if (visiblePrefs === null) {
     visiblePrefs = await loadVisiblePrefs();
@@ -678,6 +712,7 @@ async function updateScoreDisplay() {
     const description = menuConfig[q.id]?.description || '';
     return { ...q, meta, score, description };
   }));
+  lastQuizResults = results;
 
   let totalCorrect = 0;
   let totalQuestions = 0;
@@ -698,8 +733,20 @@ async function updateScoreDisplay() {
   document.getElementById('score-total').textContent = `${totalCorrect}問`;
   document.getElementById('score-grand-total').textContent = `${totalQuestions}問`;
 
+  renderQuizToggleList();
+}
+
+function renderQuizToggleList() {
+  const searchInput = document.getElementById('quiz-search-input');
+  const query = (searchInput?.value || '').trim().toLowerCase();
+
+  const filtered = lastQuizResults.filter(r => {
+    if (!query) return true;
+    return r.name.toLowerCase().includes(query) || r.description.toLowerCase().includes(query);
+  });
+
   let toggleHtml = '';
-  results.forEach(r => {
+  filtered.forEach(r => {
     const on = isQuizVisible(r.id);
     toggleHtml += `<div class="quiz-toggle-row">
       <div class="quiz-toggle-main">
@@ -710,6 +757,7 @@ async function updateScoreDisplay() {
     </div>`;
   });
   document.getElementById('quiz-toggle-list').innerHTML = toggleHtml;
+  document.getElementById('quiz-search-empty').classList.toggle('hidden', filtered.length > 0);
 }
 
 function showHomeScreen() {
