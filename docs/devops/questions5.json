@@ -106,15 +106,15 @@
           "type": "choice"
         },
         {
-          "scenario": "CloudWatch Alarm と組み合わせて通知によく利用されるサービスはどれか。",
+          "scenario": "複数の CloudWatch Alarm 条件を論理演算（AND/OR）でまとめて1つの通知にしたい。最適な機能はどれか。",
           "choices": [
-            "Amazon SNS",
-            "Amazon Athena",
-            "AWS Artifact",
-            "CodeArtifact"
+            "CloudWatch Composite Alarm",
+            "CloudWatch Contributor Insights",
+            "CloudWatch Synthetics",
+            "CloudWatch Evidently"
           ],
           "correct": 0,
-          "explanation": "SNS は通知配信サービス。 Alarm 異常時に即時通知可能。 Athena は分析用途。",
+          "explanation": "Composite Alarm は複数のアラーム状態を AND/OR で組み合わせて1つの通知にまとめられ、個別アラームの通知乱立を防げます。Synthetics は死活監視、Evidently は機能フラグ/実験用のサービスです。",
           "type": "choice"
         },
         {
@@ -235,15 +235,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Config Rules 違反時に Slack 通知したい。最適な構成はどれか。",
+          "scenario": "企業では Config Rules 違反時に Slack へ直接通知したい。AWS のマネージドな連携方法として最適なものはどれか。",
           "choices": [
-            "Config → EventBridge → Lambda",
+            "Config → EventBridge → SNS → AWS Chatbot",
             "CloudTrail → EMR",
             "Backup → Athena",
             "CodeDeploy → MQ"
           ],
           "correct": 0,
-          "explanation": "EventBridge はイベント転送可能。 Lambda で Slack 通知を実装できる。 EMR は分析用途。",
+          "explanation": "AWS Chatbot は SNS 経由の通知を Slack や Chime に直接連携できるマネージドサービスです。Lambda で Webhook を自前実装するより設定が簡単で推奨されます。",
           "type": "choice"
         },
         {
@@ -586,15 +586,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Config 違反時に自動修復したい。最適な構成はどれか。",
+          "scenario": "複数の Config Rule と修復アクションをテンプレート化し、複数アカウント・リージョンに一括デプロイしたい。最適な機能はどれか。",
           "choices": [
-            "Config → Systems Manager Automation",
-            "CloudTrail → Athena",
-            "CodeBuild → Backup",
-            "Inspector → MQ"
+            "AWS Config Conformance Pack",
+            "AWS Config Aggregator",
+            "AWS Firewall Manager",
+            "AWS Control Tower Guardrails"
           ],
           "correct": 0,
-          "explanation": "Automation は修復ランブック向け。 Config と連携して利用される。 Athena は分析用途。",
+          "explanation": "Conformance Pack は複数の Config Rule と修復アクションをテンプレート化し、StackSets 経由で複数アカウント・リージョンに一括展開できます。Aggregator は結果の集約閲覧が主目的です。",
           "type": "choice"
         },
         {
@@ -622,15 +622,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では Session Manager 利用時の接続監査を行いたい。最適な保存先はどれか。",
+          "scenario": "企業では Session Manager のセッションログを低コストで長期アーカイブしたい。最適な保存先はどれか。",
           "choices": [
-            "CloudWatch Logs",
+            "Amazon S3（ライフサイクルルールで Glacier に移行）",
             "Amazon MQ",
             "CloudFront",
             "Athena Federated Query"
           ],
           "correct": 0,
-          "explanation": "CloudWatch Logs は監査ログ保存向け。 Session Manager と連携可能。 CloudFront は CDN サービス。",
+          "explanation": "S3 はセッションログの長期保存に適し、ライフサイクルルールで Glacier に自動移行すればコストを抑えられます。リアルタイム監査には CloudWatch Logs が向いています。",
           "type": "choice"
         },
         {
@@ -679,15 +679,15 @@
           "type": "choice"
         },
         {
-          "scenario": "企業では EventBridge を利用して EC2 起動イベントを取得したい。最適なイベントソースはどれか。",
+          "scenario": "企業では EC2 インスタンスの状態変化（起動・停止）を最も低レイテンシで検知したい。最適なイベントソースはどれか。",
           "choices": [
-            "CloudTrail",
+            "EC2 Instance State-change Notification（EC2 ネイティブイベント）",
+            "CloudTrail 経由の API コールイベント",
             "AWS Backup",
-            "Amazon MQ",
             "CloudFront"
           ],
           "correct": 0,
-          "explanation": "CloudTrail は API イベント記録。 EC2 起動イベント取得に利用される。 Backup は保護用途。",
+          "explanation": "EC2 は状態変化を EventBridge にネイティブイベントとして直接送出します。CloudTrail 経由は API 呼び出しの記録であり、実際のインスタンス状態変化を直接検知するには EC2 ネイティブイベントの方が適切です。",
           "type": "choice"
         },
         {
