@@ -360,7 +360,7 @@
       font-weight: 700;
     }
 
-    .quiz-toggle-meta {
+    .quiz-toggle-desc {
       display: block;
       font-size: 0.74rem;
       color: #4a5568;
@@ -701,8 +701,8 @@ async function updateScoreDisplay() {
     const on = isQuizVisible(r.id);
     toggleHtml += `<div class="quiz-toggle-row">
       <div class="quiz-toggle-main">
-        <span class="quiz-toggle-label">${r.emoji} ${r.name}</span>
-        <span class="quiz-toggle-meta">${r.description}${r.description ? ' ・ ' : ''}${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
+        <span class="quiz-toggle-label">${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
+        <span class="quiz-toggle-desc">${r.description}</span>
       </div>
       <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
     </div>`;
