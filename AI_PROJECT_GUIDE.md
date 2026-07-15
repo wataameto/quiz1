@@ -4,7 +4,7 @@
 - 共通の作業ルールと運用ルールはこのファイルにまとめる。
 - 問題の追加・修正ルールは [QUESTION_GUIDE.md](./QUESTION_GUIDE.md) を読む。
 - 実装の詳しい仕様やコード理解には [IMPLEMENTATION_SPEC.md](./IMPLEMENTATION_SPEC.md) を読む。
-- 作業ディレクトリは /Users/user/Documents/codextest1 を使う。
+- 作業ディレクトリは /Users/user/work/ai/quiz1 を使う。
 
 ## プロジェクト
 このリポジトリは、docs/ から配信する静的なクイズ学習アプリ。アプリ名は「🏠満点まで帰れません✨（反復学習システム）」。間違えた問題を何度も復習して満点にする、という反復学習をコンセプトにしている。

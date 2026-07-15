@@ -1,14 +1,23 @@
 # quiz1
 
-簿記とDevOpsのクイズ学習アプリ。静的サイトとして docs/ から配信します。
+反復学習クイズアプリ「🏠満点まで帰れません✨（反復学習システム）」。間違えた問題を何度も復習して満点を目指す、静的サイトです。docs/ から配信します。
+
+## クイズ一覧
+- boki1: 簿記超入門レベル
+- devops: DOP-C02 練習問題（AWS DevOps Engineer Professional）
+- kokyo1: 公共1（高校向け）
+- joho1: 情報処理1 練習問題
+- itpassport: ITパスポート練習問題
+- itpassportjr: ITパスポートJr（やさしい版）
 
 ## 主なファイル
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/boki1/index.html: 簿記クイズページ。
-- docs/devops/index.html: DevOpsクイズページ。
+- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（6ファイルは同一内容で同期）。
+- docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
+- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携）。
 - docs/config.json: クイズごとの表示名、色、説明。
-- docs/boki1/questions*.json: 簿記問題。
-- docs/devops/questions*.json: DevOps問題。
+- docs/{quiz}/questions*.json: 各クイズの問題データ。
+- docs/build-info.json: 自動生成されるビルド日時。
 
 ## 開発コマンド
 - npm install
@@ -31,5 +40,4 @@ python3 -m http.server 8000
 ```
 
 - http://localhost:8000/
-- http://localhost:8000/boki1/?admin=1
-- http://localhost:8000/devops/?admin=1
+- 各クイズは `?admin=1` で問題レビュー画面を表示できます（例: http://localhost:8000/boki1/?admin=1 ）。

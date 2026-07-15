@@ -6,7 +6,7 @@
 
 現在の実行結果:
 - テストスイート: 5 passed / 5 total
-- テストケース: 118 passed / 118 total
+- テストケース: 119 passed / 119 total
 - 実行コマンド: npm test -- --runInBand
 
 ## テストファイル
