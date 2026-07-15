@@ -8,9 +8,9 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 
 - このファイル内で記述が衝突した場合は、「重要仕様」と「現在の実装スナップショット」を優先する。
 - AI_PROJECT_GUIDE.md の作業ルールと QUESTION_GUIDE.md の作問ルールは、この詳細仕様より優先する。
-- boki1 と devops の index.html は共通テンプレートとして同期する。片方だけに固有表示や固有ロジックを入れない。
-- クイズ固有のタイトル、見出し、説明、色は docs/config.json に置く。HTMLへ個別に戻さない。
-- 認証確認中はログイン画面を一瞬出さず、screen-loading を表示する。
+- 各クイズページ（docs/{quiz}/index.html）のCSS/JSは docs/shared/quiz-app.css・quiz-app.js に一本化されている。個別の index.html はHTML骨格だけを持ち、6ファイルとも内容は同一。骨格自体を変えるときだけ6ファイルへコピーする。
+- クイズ固有のタイトル、見出し、説明、色は docs/config.json に置く。HTMLへ個別に戻さない。メインメニューの教材一覧・検索も同じ description を参照する。
+- メインメニューは認証状態に関わらず常にホーム画面（教材一覧・検索・成績枠）を表示する。専用ログイン画面はない。ログインが必要な操作（教材トグルなど）だけ、その場でログインを促す。
 - 問題数とパート数は questions*.json から動的に計算する。固定の「3パート」「180問」のような表示に戻さない。
 - 現在はテストに10問前提が残る箇所がある。問題数ルールを本格的に変える場合は src/bokiQuestions.test.js と表示仕様を見直す。
 - 旧スコアキー best_<testId> は questions1.json の後方互換としてのみ扱う。新規保存は best_<level>_<testId> を使う。
@@ -20,50 +20,62 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - docs/build-info.json は scripts/update-build-time.js と hooks/pre-commit が更新する。pre-commit で変わったらコミットに含める。
 - ドキュメントだけの変更なら npm test は不要。JavaScript または問題JSONを変更したら npm test を実行する。
 - 簿記の作問ルールは QUESTION_GUIDE.md を優先する。特に分記法、売上/仕入の勘定科目禁止、自然文では使用可の扱いを守る。
+- 確認ダイアログは `confirm()`/`alert()` を多用せず、破壊的操作（ログアウト、成績リセット）は自前モーダル（`logout-modal`, `reset-modal` と同じパターン）を使う。iOS Safari系ブラウザは繰り返しダイアログを出すページで「今後表示しない」を選ばれると、以降の `confirm()`/`alert()` が無言で失敗するため。
+- Firestoreに新しいコレクションを追加するときは、セキュリティルールが `scores` または `^quiz_.*` にマッチするコレクション名しか許可していないことに注意する（例: メニュー設定は `menu_prefs` ではなく `quiz_menu_prefs`）。
 
 ## 現在の実装スナップショット
 
 このセクションは、現行コードを再現・修正するときに最初に参照する要約。後続の詳細仕様に古い記述が残っている場合は、このセクションを優先する。
 
 ### ファイル構成
-- アプリ本体は docs/ 配下の静的HTML/JSONで動く。
-- メインメニューは docs/index.html。
-- クイズ画面は docs/boki1/index.html と docs/devops/index.html。2ファイルは意図的に同じテンプレートとして同期する。
+- アプリ本体は docs/ 配下の静的HTML/JSONで動く。アプリ名は「🏠満点まで帰れません✨」。
+- メインメニューは docs/index.html（単独ファイル、CSS/JSも内包）。
+- クイズページは docs/{quiz}/index.html（boki1, devops, kokyo1, joho1, itpassport, itpassportjr の6種）。6ファイルとも内容が同一で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
 - クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
-- 問題データは docs/boki1/questions*.json と docs/devops/questions*.json。
+- 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。
 - ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。
 - テストは src/*.test.js。Jestで実行する。
 
 ### メインメニュー docs/index.html
-- 初期表示は screen-loading。認証判定が終わるまではログイン画面もメニューも見せない。
-- auth.onAuthStateChanged(user => ...) で currentUser を設定し、ログイン済みなら showHomeScreen()、未ログインなら showLoginScreen() を呼ぶ。
-- loginWithGoogle() は signInWithPopup を試し、失敗時に signInWithRedirect へフォールバックする。
-- calculateQuizMeta(questionsPath) は questions1.json, questions2.json ... を順に fetch し、存在しなくなったところで停止する。合計問題数とパート数を quizMetaCache に保存する。
-- getQuizScore(collectionName, questionsPath) は現在存在する question files だけを走査して、Firestoreの best_<level>_<testId> を集計する。
-- 旧形式の best_<testId> も questions1.json に対してだけ後方互換として読む。
-- メニューの総問題数、パート数、各クイズの得点表示は問題JSONから動的に計算する。固定の「3パート」「180問」などに戻さない。
+- 初期表示は screen-loading。auth.onAuthStateChanged(user => ...) が currentUser を設定したら、ログイン状態に関わらず常に showHomeScreen() を呼ぶ（専用ログイン画面はない）。
+- loginWithGoogle() は signInWithPopup を試し、失敗時に signInWithRedirect へフォールバックする。ログアウトは confirm() ではなく logout-modal（自前モーダル）を経由する confirmLogout()。
+- 左上の auth-status に、未ログイン時は「🔐 ログイン」ボタン、ログイン時は「👤 ユーザー名 ログアウト」を表示する（renderAuthStatus）。
+- QUIZZES 配列（id, emoji, name, path, collection）が6クイズのメタ定義。クイズを追加するときはここに1行足す。
+- calculateQuizMeta(questionsPath) は questions1.json, questions2.json ... を順に fetch し、存在しなくなったところで停止する。合計問題数・パート数・セット数（tests.length の合計）を quizMetaCache に保存する。
+- getQuizScore(collectionName, questionsPath) は現在存在する question files だけを走査して、Firestoreの best_<level>_<testId> を集計する。未ログイン時は {correct: 0, total} を返す（エラーにしない）。
+- 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。
+- 「教材一覧」（quiz-toggle-section）は全クイズをトグルスイッチ（左側）付きで一覧表示し、上に検索ボックス（quiz-search-input）でタイトル・説明を絞り込める。
+- 教材ごとのON/OFFは visiblePrefs（{quizId: boolean}）で管理し、Firestoreの `quiz_menu_prefs/{uid}` ドキュメントに保存する。初回（ドキュメント未作成）はデフォルト全部OFF。
+- toggleQuizVisibility(id) は未ログイン時、保存せずに「教材を選択するにはログインしてください」とアラートを出して終了する。
+- forceReload()（最新に更新ボタン）は、直前のトグル保存（pendingPrefsSave）を待ってから location.href でリロードする。
+- コンテナ幅は1500pxだが、score-summary ボックスだけ600px固定で中央寄せ。
 
-### クイズ画面 docs/boki1/index.html / docs/devops/index.html
-- 両方の index.html は共通テンプレート。差分を作る場合は本当に必要か確認する。
-- loadAllQuestions() が ../config.json と questions*.json を読み込み、quizId に合う config を画面へ反映する。
+### クイズ画面 docs/{quiz}/index.html（共通: docs/shared/quiz-app.js）
+- 全クイズページで共通のJSを使う。差分を作る場合は本当に必要か確認する。
+- 起動時に ../config.json と questions*.json を読み込み、quizId に合う config を画面へ反映する。
 - URLパラメータ admin=1 のときは通常のテスト選択ではなく showAdmin() を表示する。
-- 画面は主に screen-home, screen-quiz, screen-results, screen-admin を切り替える。
+- 画面は主に screen-home（「教材トップ」ラベル表示）, screen-quiz, screen-results, screen-admin を切り替える。
 - currentLevel は現在のパート、maxLevel は読み込めた最大パート数、quizData[level] は各パートのJSON、TESTS は現在パートの tests。
-- showHome() は全パート合計、パート別得点、現在パートのテストカードを描画する。
-- startTest(id, isReview, isPracticeMode) は通常テスト、間違い復習、練習モードを兼ねる。
+- showHome() はパートごとに `.part-block` を描画する（アコーディオン）。パート行クリックで toggleLevel() が呼ばれ、シングルアコーディオン（1つ開くと他は閉じる）で開閉する。初期状態は全パート閉じている（homeCollapsed = true）。
+- 各セットは `.part-set-row`（横長のリスト行、Finder風）で、行自体はクリック不可。ボタンは「試験モード（記録あり）」（goToTest → startTest(id, false, false)、常時表示）と、誤答があれば「誤答復習(n問)」、なければ「演習モード」（どちらも記録なし）の2つ。
+- goToTest(level, testId, isReview, isPractice) は必要ならパートを切り替えてから startTest() を呼ぶ。
+- startTest(id, isReview, isPracticeMode) は通常テスト（記録あり）、間違い復習、練習モードを兼ねる。記録されるのは isReview も isPracticeMode も false のときだけ（showResults() 内）。
 - renderQuestion() は選択肢を毎問シャッフルし、shuffledChoices に元の選択肢インデックスを保持する。
 - answer() は選択後に正誤表示、効果音、解説、次へ進む操作を出す。
 - showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。
+- 成績リセット（resetScores）とログアウト（logout）は、いずれも自前モーダル（reset-modal, logout-modal）で確認してから実行する。
 
 ### 管理レビュー ?admin=1
-- /boki1/?admin=1 と /devops/?admin=1 で問題一覧を表示する。
+- docs/{quiz}/?admin=1 で問題一覧を表示する（6クイズ共通）。
 - screen-admin には全パート、全テスト、全問題、全選択肢、正解、解説を表示する。
 - 仕訳問題の選択肢は renderJournal(choice) で表示する。
 - 正解選択肢には correct class とチェック表示を付ける。
 - 管理者専用認証はない。URLを知っていれば表示できる軽量レビュー画面として扱う。
 
 ### Firestore スキーマ
-- collection名は quiz_<quizId>。例: quiz_boki1, quiz_devops。
+- スコア用collection名は quiz_<quizId>。例: quiz_boki1, quiz_devops, quiz_kokyo1, quiz_joho1, quiz_itpassport, quiz_itpassportjr。
+- メインメニューの教材トグル設定は quiz_menu_prefs（document id は uid、フィールド visible が {quizId: boolean}）。
+- セキュリティルールは `request.auth.uid == userId && (collection == 'scores' || collection.matches('^quiz_.*'))` の形。新規コレクションは `quiz_` プレフィックス必須（`scores` は現状未使用）。
 - document id は currentUser.uid。
 - 最高点は best_<level>_<testId> に保存する。
 - 間違えた問題番号は wrongAnswers_<level>_<testId> に配列で保存する。
