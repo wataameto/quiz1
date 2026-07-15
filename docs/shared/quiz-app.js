@@ -1,0 +1,894 @@
+// ============================================================
+// 🔥 Firebase 初期化
+// ============================================================
+
+const firebaseConfig = {
+  apiKey: "AIzaSyASXTkFt2cm-lG5zrPL0uygNMpY6u_OWwY",
+  authDomain: "boki1-b66ad.firebaseapp.com",
+  projectId: "boki1-b66ad",
+  storageBucket: "boki1-b66ad.firebasestorage.app",
+  messagingSenderId: "416766529196",
+  appId: "1:416766529196:web:9a451e15d3e1c4057c9909",
+  measurementId: "G-HQKC6V6J1F"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+let currentUser = null;
+let bestScores = {};
+let cacheInitialized = false;
+
+auth.onAuthStateChanged(user => {
+  currentUser = user || null;
+  cacheInitialized = false;
+  bestScores = {};
+  renderAuthStatus();
+  // 認証状態に関わらず初期化を実行
+  loadAllQuestions();
+});
+
+async function loginWithGoogle() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  try {
+    await auth.signInWithPopup(provider);
+  } catch (e) {
+    if (e.code === 'auth/popup-blocked' || e.code === 'auth/cancelled-popup-request') {
+      try {
+        await auth.signInWithRedirect(provider);
+        return;
+      } catch (redirectError) {
+        console.error('Google redirect login error:', redirectError);
+        alert('ログインに失敗しました: ' + redirectError.message);
+        return;
+      }
+    }
+    console.error('Google login error:', e);
+    alert('ログインに失敗しました: ' + e.message);
+  }
+}
+
+function logout() {
+  auth.signOut().catch(e => console.error('Logout error:', e));
+}
+
+function renderAuthStatus() {
+  const el = document.getElementById('auth-status');
+  if (!el) return;
+  if (currentUser) {
+    el.innerHTML = `<span class="user-chip">👤 <span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
+    document.getElementById('auth-status-name').textContent = currentUser.displayName || 'ユーザー';
+  } else {
+    el.innerHTML = `<button class="btn-login-inline" onclick="loginWithGoogle()">🔐 ログイン</button>`;
+  }
+}
+
+// ============================================================
+// 🔊 サウンド（Web Audio API）
+// ============================================================
+
+const AC = window.AudioContext || window.webkitAudioContext;
+let ac = null;
+function getAC() { if (!ac) ac = new AC(); if (ac.state === 'suspended') ac.resume(); return ac; }
+function tone(freq, type, start, dur, vol = 0.25) {
+  try {
+    const a = getAC(), osc = a.createOscillator(), gain = a.createGain();
+    osc.connect(gain); gain.connect(a.destination);
+    osc.type = type; osc.frequency.value = freq;
+    gain.gain.setValueAtTime(vol, a.currentTime + start);
+    gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + start + dur);
+    osc.start(a.currentTime + start); osc.stop(a.currentTime + start + dur);
+  } catch(e) {}
+}
+function soundCorrect() { tone(660,'sine',0,0.12,0.25); tone(880,'sine',0.08,0.15,0.25); tone(1100,'sine',0.18,0.18,0.20); }
+function soundWrong()   { tone(330,'sawtooth',0,0.10,0.20); tone(220,'sawtooth',0.08,0.18,0.15); }
+function soundClick()   { tone(1000,'sine',0,0.05,0.10); }
+function soundFanfare() { [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => tone(f,'sine',t,0.18,0.28)); }
+function soundGood()    { tone(784,'sine',0,0.15,0.25); tone(1047,'sine',0.14,0.20,0.25); }
+
+function launchConfetti(count = 60) {
+  const wrap = document.getElementById('confetti-wrap');
+  wrap.innerHTML = '';
+  const colors = ['#f7971e','#ffd200','#21d4fd','#b721ff','#0f2027','#38a169','#f5576c'];
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    el.className = 'confetti-piece';
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.background = colors[Math.floor(Math.random() * colors.length)];
+    el.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+    el.style.animationDelay = (Math.random() * 0.8) + 's';
+    el.style.width = el.style.height = (6 + Math.random() * 8) + 'px';
+    el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+    wrap.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+// Test 1: SDLC Automation
+let TESTS = [];
+let quizId = null;
+let quizData = {}; // 全レベルのデータをキャッシュ
+let currentLevel = 1;
+let maxLevel = 1;
+const isAdminMode = new URLSearchParams(location.search).get('admin') === '1';
+
+async function loadAllQuestions() {
+  try {
+    // config.json を読み込む
+    const configRes = await fetch('../config.json?t=' + Date.now());
+    const configData = await configRes.json();
+
+    // 複数のレベルから最大レベル数を検出
+    maxLevel = 1;
+    let foundLevel = true;
+    while (foundLevel) {
+      try {
+        const res = await fetch(`questions${maxLevel + 1}.json?t=${Date.now()}`);
+        if (res.ok) {
+          maxLevel++;
+        } else {
+          foundLevel = false;
+        }
+      } catch (e) {
+        foundLevel = false;
+      }
+    }
+
+    // 各レベルのデータを読み込む
+    for (let level = 1; level <= maxLevel; level++) {
+      const res = await fetch(`questions${level}.json?t=${Date.now()}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!data || !data.tests || !Array.isArray(data.tests)) {
+        throw new Error(`Invalid data at level ${level}`);
+      }
+      quizData[level] = data;
+      if (!quizId) {
+        quizId = data.id; // 最初のデータから quizId を取得
+        // config から title, colors などを動的に設定
+        if (configData[quizId]) {
+          const cfg = configData[quizId];
+          document.title = cfg.title;
+          document.body.style.background = cfg.bgGradient;
+          document.getElementById('quiz-heading').textContent = cfg.heading;
+          document.getElementById('quiz-description').textContent = cfg.description;
+
+          // 動的CSSを注入
+          const dynamicStyle = document.getElementById('dynamic-colors');
+          dynamicStyle.textContent = `
+            .container::before { background: ${cfg.topGradient}; }
+            .level-btn.active { border-color: ${cfg.accentColor}; background: ${cfg.accentActive}; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+            .progress-bar-fill { background: ${cfg.topGradient}; }
+            .quiz-back { background: ${cfg.accentColor}; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.16); }
+            .quiz-back:hover { filter: brightness(0.92); }
+            .next-btn { background: ${cfg.topGradient}; color: #2d3748; }
+            .btn-home { background: ${cfg.topGradient}; color: #2d3748; }
+          `;
+
+          // メインメニューボタンの色を更新
+          const menuBtn = document.querySelector('a[href="../"]');
+          if (menuBtn) {
+            menuBtn.style.color = cfg.accentColor;
+            menuBtn.style.borderColor = cfg.accentColor;
+            menuBtn.onmouseover = function() { this.style.background = cfg.accentActive; };
+            menuBtn.onmouseout = function() { this.style.background = 'transparent'; };
+          }
+        }
+      }
+    }
+
+    currentLevel = 1;
+    if (isAdminMode) {
+      showAdmin();
+    } else {
+      loadQuestions(1);
+    }
+  } catch (e) {
+    console.error('Failed to load questions:', e);
+    TESTS = [];
+    document.getElementById('screen-home').classList.remove('hidden');
+    document.getElementById('screen-quiz').classList.add('hidden');
+    document.getElementById('screen-results').classList.add('hidden');
+    document.getElementById('screen-admin').classList.add('hidden');
+    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:15px;text-align:center;">問題ファイルの読み込みに失敗: ' + e.message + '</p>';
+  }
+}
+
+async function loadQuestions(level = 1) {
+  try {
+    if (!quizData[level]) throw new Error(`Level ${level} data not found`);
+    const data = quizData[level];
+    TESTS = data.tests;
+    showHome();
+  } catch (e) {
+    console.error('Failed to load questions:', e);
+    TESTS = [];
+    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:15px;text-align:center;">問題の読み込みに失敗しました</p>';
+  }
+}
+
+function showAdmin() {
+  document.getElementById('screen-home').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-admin').classList.remove('hidden');
+
+  const title = document.getElementById('quiz-heading').textContent || 'クイズ';
+  document.getElementById('admin-title').textContent = `${title} 問題一覧`;
+  document.getElementById('admin-subtitle').textContent = `${maxLevel}パートの問題・選択肢・正解・解説を表示中`;
+
+  const lines = [];
+  for (let level = 1; level <= maxLevel; level++) {
+    const levelData = quizData[level];
+    if (!levelData || !Array.isArray(levelData.tests)) continue;
+    const partLabel = levelData.description || levelData.label || `パート ${level}`;
+    lines.push(`## ${partLabel}`);
+
+    for (const test of levelData.tests) {
+      const countLabel = Array.isArray(test.questions) ? `${test.questions.length}問` : '0問';
+      lines.push('');
+      lines.push(`### ${test.title} ${test.type || ''} / ${countLabel}`);
+
+      test.questions.forEach((question, qIndex) => {
+        lines.push('');
+        lines.push(`Q${qIndex + 1}. ${question.scenario}`);
+        question.choices.forEach((choice, choiceIndex) => {
+          const isCorrect = choiceIndex === question.correct;
+          const label = String.fromCharCode(65 + choiceIndex);
+          const choiceText = question.type === 'journal' ? journalText(choice) : choice;
+          lines.push(`${isCorrect ? '*' : ' '} ${label}. ${choiceText}`);
+        });
+        if (question.explanation) {
+          lines.push(`解説: ${question.explanation}`);
+        }
+      });
+    }
+
+    lines.push('');
+  }
+
+  document.getElementById('admin-list').innerHTML = `<pre class="admin-text"></pre>`;
+  document.querySelector('#admin-list .admin-text').textContent = lines.join('\n');
+}
+
+function updatePartBadge() {
+  const levelData = quizData[currentLevel];
+  const descEl = document.getElementById('part-description');
+  if (levelData && descEl) {
+    descEl.textContent = levelData.description || '各10問・100点満点';
+  }
+}
+
+function switchLevel(level) {
+  if (level === currentLevel || level < 1 || level > maxLevel) return;
+  currentLevel = level;
+  updatePartBadge();
+  loadQuestions(level);
+}
+
+let homeCollapsed = true; // 現在パートのセット一覧を閉じているか
+
+function toggleLevel(level) {
+  soundClick();
+  if (level === currentLevel) {
+    homeCollapsed = !homeCollapsed;
+    showHome();
+  } else {
+    homeCollapsed = false;
+    switchLevel(level);
+  }
+}
+
+function goToTest(level, testId, isReview, isPractice) {
+  if (level !== currentLevel) {
+    currentLevel = level;
+    TESTS = quizData[level].tests;
+  }
+  soundClick();
+  startTest(testId, isReview, isPractice);
+}
+
+let currentTest = null, currentQ = 0, answers = [], shuffledChoices = [];
+let TOTAL_QUESTIONS = 0;
+
+function calculateTotalQuestions() {
+  if (!TESTS || !Array.isArray(TESTS)) return 0;
+  return TESTS.reduce((sum, test) => sum + test.questions.length, 0);
+}
+
+function getCollectionName() {
+  // quizId（boki1 or devops）をコレクション名に変換
+  return `quiz_${quizId}`;
+}
+
+async function initializeBestScoresCache() {
+  if (cacheInitialized || !currentUser) return;
+  try {
+    const collection = getCollectionName();
+    const doc = await db.collection(collection).doc(currentUser.uid).get();
+    const scores = doc.exists ? doc.data() : {};
+    bestScores = scores;
+    cacheInitialized = true;
+  } catch (e) { console.error(e); }
+}
+
+// ===== 解答記録と復習機能 =====
+
+function saveWrongAnswersKey(level, testId) {
+  return `wrongAnswers_${level}_${testId}`;
+}
+
+async function saveWrongAnswers(testId, answers, level) {
+  if (!currentUser || isReviewMode) return;
+
+  try {
+    const wrongQuestionNumbers = [];
+    answers.forEach((ans, idx) => {
+      if (!ans.correct) {
+        wrongQuestionNumbers.push(idx + 1); // 0-indexed → 1-indexed
+      }
+    });
+
+    const collection = getCollectionName();
+    const key = saveWrongAnswersKey(level, testId);
+
+    await db.collection(collection).doc(currentUser.uid).set(
+      { [key]: wrongQuestionNumbers },
+      { merge: true }
+    );
+    bestScores[key] = wrongQuestionNumbers;
+  } catch (e) {
+    console.error('Failed to save wrong answers:', e);
+  }
+}
+
+async function getWrongAnswerIds(testId, level) {
+  if (!currentUser) return [];
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();
+  }
+
+  try {
+    const key = saveWrongAnswersKey(level, testId);
+    const wrongNumbers = bestScores[key] || [];
+
+    // 1-indexed → 0-indexed
+    return wrongNumbers.map(n => n - 1);
+  } catch (e) {
+    console.error('Failed to get wrong answers:', e);
+    return [];
+  }
+}
+
+async function getBest(id, level = currentLevel) {
+  if (!currentUser) return -1;
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();
+  }
+  return parseInt(bestScores[`best_${level}_${id}`] || '-1', 10);
+}
+
+async function setBest(id, s) {
+  if (!currentUser) return;
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();
+  }
+  const best = await getBest(id);
+  if (s > best) {
+    try {
+      const collection = getCollectionName();
+      await db.collection(collection).doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
+      bestScores[`best_${currentLevel}_${id}`] = s;
+    } catch (e) { console.error(e); }
+  }
+}
+
+function resetScores() {
+  const modal = document.getElementById('reset-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeResetModal() {
+  const modal = document.getElementById('reset-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+async function resetCurrentLevel() {
+  if (!currentUser) return;
+  closeResetModal();
+  try {
+    const collection = getCollectionName();
+    const doc = db.collection(collection).doc(currentUser.uid);
+    const snapshot = await doc.get();
+    const fieldsToDelete = {};
+    if (!quizData[currentLevel] || !quizData[currentLevel].tests) return;
+    for (const t of quizData[currentLevel].tests) {
+      fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+      fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+    }
+    if (snapshot.exists) {
+      await doc.update(fieldsToDelete);
+    }
+    // キャッシュから削除
+    for (const t of quizData[currentLevel].tests) {
+      delete bestScores[`best_${currentLevel}_${t.id}`];
+      delete bestScores[`wrongAnswers_${currentLevel}_${t.id}`];
+    }
+    soundClick(); showHome();
+  } catch (e) { console.error(e); }
+}
+
+async function resetAllLevels() {
+  if (!currentUser) return;
+  closeResetModal();
+  try {
+    const collection = getCollectionName();
+    await db.collection(collection).doc(currentUser.uid).delete();
+    bestScores = {};
+    cacheInitialized = false;
+    soundClick(); showHome();
+  } catch (e) { console.error(e); }
+}
+
+function backToMainMenu(event) {
+  const isFromMenu = new URLSearchParams(location.search).get('from') === 'menu';
+  if (isFromMenu || (window.opener && !window.opener.closed)) {
+    event.preventDefault();
+    window.close();
+  }
+}
+
+async function getTotalCorrect() {
+  // 全レベルの合計を計算
+  let total = 0, attempted = 0;
+  for (let level = 1; level <= maxLevel; level++) {
+    if (!quizData[level] || !quizData[level].tests) continue;
+    for (const t of quizData[level].tests) {
+      const best = await getBest(t.id, level);
+      if (best >= 0) {
+        const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
+        total += Math.round(best / 100 * qCount);
+        attempted++;
+      }
+    }
+  }
+  return { total, attempted };
+}
+
+function calculateTotalQuestionsAllLevels() {
+  // 全レベルの総問題数を計算
+  let totalQuestions = 0;
+  for (let level = 1; level <= maxLevel; level++) {
+    if (!quizData[level] || !quizData[level].tests) continue;
+    totalQuestions += quizData[level].tests.reduce((sum, test) => (
+      sum + (Array.isArray(test.questions) ? test.questions.length : 0)
+    ), 0);
+  }
+  return totalQuestions;
+}
+
+async function showHome() {
+  if (isAdminMode) {
+    showAdmin();
+    return;
+  }
+  isReviewMode = false;
+  isPracticeModeActive = false;
+  document.getElementById('screen-home').classList.remove('hidden');
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-admin').classList.add('hidden');
+
+  TOTAL_QUESTIONS = calculateTotalQuestions(); // 現在のレベルの問題数
+  const totalQuestionsAllLevels = calculateTotalQuestionsAllLevels(); // 全レベルの合計
+  const { total, attempted } = await getTotalCorrect();
+  const totalEl = document.getElementById('total-score-display');
+  if (attempted === 0) {
+    totalEl.innerHTML = `- / ${totalQuestionsAllLevels}`;
+  } else {
+    totalEl.innerHTML = `${total} / ${totalQuestionsAllLevels}`;
+  }
+
+  const currentLevelData = quizData[currentLevel];
+  const currentPartLabel = currentLevelData?.description || currentLevelData?.label || `パート ${currentLevel}`;
+  const currentPartCard = document.getElementById('current-part-card');
+
+  const unitName = quizId === 'kokyo1' ? 'プリント' : 'セット';
+
+  // レベル別スコアを計算・表示
+  const partScoresSection = document.getElementById('part-scores-section');
+  const partScoresList = document.getElementById('part-scores-list');
+
+  if (maxLevel > 1) {
+    if (currentPartCard) currentPartCard.style.display = 'none';
+
+    let partScoresHtml = '';
+
+    for (let level = 1; level <= maxLevel; level++) {
+      const levelData = quizData[level];
+      if (!levelData || !levelData.tests) continue;
+
+      let levelCorrect = 0;
+      const levelQuestions = levelData.tests.reduce((sum, test) => (
+        sum + (Array.isArray(test.questions) ? test.questions.length : 0)
+      ), 0);
+
+      for (const t of levelData.tests) {
+        const best = await getBest(t.id, level);
+        if (best >= 0) {
+          const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
+          levelCorrect += Math.round(best / 100 * qCount);
+        }
+      }
+
+      const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
+      const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
+      const isOpen = level === currentLevel && !homeCollapsed;
+      const blockClass = `part-block${isOpen ? ' open' : ''}${level === currentLevel ? ' active' : ''}`;
+      const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel, unitName);
+
+      partScoresHtml += `<div class="${blockClass}">
+        <div class="part-score-row" onclick="toggleLevel(${level});">
+          <span class="part-name">${levelLabel}</span>
+          <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
+          <span class="part-arrow">▶</span>
+        </div>
+        <div class="part-set-list">${setRowsHtml}</div>
+      </div>`;
+    }
+
+    partScoresList.innerHTML = partScoresHtml;
+    partScoresSection.style.display = 'block';
+    document.getElementById('test-grid').innerHTML = '';
+  } else {
+    partScoresSection.style.display = 'none';
+
+    if (currentLevelData && currentPartCard) {
+      currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong>`;
+      currentPartCard.style.display = 'block';
+    } else if (currentPartCard) {
+      currentPartCard.style.display = 'none';
+    }
+
+    document.getElementById('test-grid').innerHTML = await buildSetRowsHtml(TESTS, currentLevel, currentPartLabel, unitName);
+  }
+}
+
+async function buildSetRowsHtml(tests, level, partLabel, unitName) {
+  let html = '';
+  for (const t of tests) {
+    const best = await getBest(t.id, level);
+    const questionCount = Array.isArray(t.questions) ? t.questions.length : 10;
+
+    // 復習問題の数を取得
+    const wrongIndices = await getWrongAnswerIds(t.id, level);
+    const reviewCount = wrongIndices.length;
+
+    // 2つ目のボタン：誤答があれば誤答復習、なければ演習モード（どちらも記録なし）
+    const secondaryBtn = reviewCount > 0
+      ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習(${reviewCount}問)</span><span class="btn-sub">記録なし</span></button>`
+      : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">記録なし</span></button>`;
+
+    const scoreText = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
+
+    html += `<div class="part-set-row">
+      <span class="set-icon">${t.emoji}</span>
+      <div class="set-main">
+        <div class="set-name">${unitName}${t.id}　${t.type || ''}</div>
+        <div class="set-sub">${partLabel} ・ ${questionCount}問</div>
+      </div>
+      <div class="set-score">${scoreText}</div>
+      <div class="set-actions">
+        <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span><span class="btn-sub">記録あり</span></button>
+        ${secondaryBtn}
+      </div>
+    </div>`;
+  }
+  return html;
+}
+
+// ============================================================
+// 仕訳レンダリング（boki1 との統一性のため）
+// ============================================================
+
+function fmt(n) { return '¥' + n.toLocaleString(); }
+
+function renderJournal(entry) {
+  const dLines = entry.debit.map(e =>
+    `<div class="entry-item journal-debit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+  ).join('');
+  const cLines = entry.credit.map(e =>
+    `<div class="entry-item journal-credit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+  ).join('');
+  return `<div class="journal">
+    <div><div class="journal-header">借方（左）</div><div class="entry-line">${dLines}</div></div>
+    <div class="journal-sep">｜</div>
+    <div><div class="journal-header">貸方（右）</div><div class="entry-line">${cLines}</div></div>
+  </div>`;
+}
+
+function journalText(entry) {
+  return '借: ' + entry.debit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・')
+       + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
+}
+
+async function startTest(id, isReview = false, isPracticeMode = false) {
+  const numId = typeof id === 'string' ? parseInt(id, 10) : id;
+  const originalTest = TESTS.find(t => t.id === numId);
+
+  if (!originalTest) return;
+
+  currentTest = { ...originalTest };
+
+  if (isReview) {
+    const wrongIndices = await getWrongAnswerIds(id, currentLevel);
+    if (wrongIndices.length === 0) {
+      alert('復習対象の問題がありません');
+      return;
+    }
+    const originalQuestions = currentTest.questions;
+    currentTest.questions = originalQuestions.filter((_, idx) =>
+      wrongIndices.includes(idx)
+    );
+  }
+
+  currentQ = 0; answers = [];
+  isReviewMode = isReview;
+  isPracticeModeActive = isPracticeMode;
+
+  document.getElementById('screen-home').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.remove('hidden');
+  document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-admin').classList.add('hidden');
+  renderQuestion();
+}
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+const CORRECT_MSGS = ['✅ 正解！やったね！', '🎯 その通り！完璧！', '⭐ 正解！さすが！'];
+const WRONG_MSGS   = ['❌ 残念...確認しよう！', '💔 惜しい！正解を見てね'];
+
+function renderQuestion() {
+  answerInProgress = false; // 新しい問題では回答可能に
+  const q = currentTest.questions[currentQ];
+  const total = currentTest.questions.length;
+  const isJ = q.type === 'journal'; // 仕訳問題判定
+  const pct = Math.round((currentQ / total) * 100);
+
+  document.getElementById('quiz-title').textContent    = currentTest.title;
+  document.getElementById('quiz-subtitle').textContent = currentTest.subtitle;
+  document.getElementById('progress-bar').style.width  = pct + '%';
+  document.getElementById('progress-label').textContent = `第 ${currentQ + 1} 問 ／ ${total} 問`;
+  document.getElementById('progress-pct').textContent   = pct + '%';
+  document.getElementById('scenario').textContent       = q.scenario;
+  document.getElementById('feedback').className         = 'feedback';
+  document.getElementById('feedback').textContent       = '';
+  document.getElementById('explanation').className      = 'explanation';
+  document.getElementById('explanation').textContent    = '';
+  document.getElementById('next-btn').style.display     = 'none';
+
+  const choicesEl = document.getElementById('choices');
+  choicesEl.innerHTML = ''; // 前の問題の状態をクリア
+
+  const indexed = shuffle(q.choices.map((c, i) => ({ choice: c, origIdx: i })));
+  shuffledChoices = indexed;
+  const correctShuffledIdx = indexed.findIndex(x => x.origIdx === q.correct);
+
+  choicesEl.innerHTML = indexed.map((item, i) => {
+    const label = String.fromCharCode(97 + i); // a, b, c, d
+    const choiceHtml = isJ ? renderJournal(item.choice) : item.choice;
+    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${choiceHtml}</button>`;
+  }).join('');
+
+  // 問題表示後 0.5秒はクリック受け付けない
+  setTimeout(() => {
+    shuffledChoices.forEach((_, i) => {
+      const btn = document.getElementById(`choice-${i}`);
+      if (btn) btn.disabled = false;
+    });
+  }, 500);
+}
+
+let answerInProgress = false;
+let isReviewMode = false;
+let isPracticeModeActive = false;
+
+function answer(idx, correctIdx) {
+  if (answerInProgress) return; // 複数実行防止
+  answerInProgress = true;
+
+  const q = currentTest.questions[currentQ];
+  const ok = idx === correctIdx;
+  answers.push({ correct: ok, chosenOrigIdx: shuffledChoices[idx].origIdx });
+
+  shuffledChoices.forEach((_, i) => { document.getElementById(`choice-${i}`).disabled = true; });
+  const ansBtn = document.getElementById(`choice-${idx}`);
+  ansBtn.classList.add(ok ? 'correct' : 'wrong');
+  const isLast = currentQ === currentTest.questions.length - 1;
+  const goNext = (e) => {
+    if (e && e.key === 'Enter') e.preventDefault(); // Enter キーでの自動実行を防止
+    soundClick();
+    isLast ? showResults() : nextQuestion();
+  };
+  const nextLabel = isLast ? '→ 結果を見る' : '→ 次の問題';
+  if (ok) {
+    ansBtn.innerHTML = `<span>${ansBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    ansBtn.onclick = goNext;
+    ansBtn.onkeydown = goNext;
+    // 答え合わせ表示後 0.5秒はクリック受け付けない
+    setTimeout(() => { ansBtn.disabled = false; }, 500);
+  }
+  const correctBtn = document.getElementById(`choice-${correctIdx}`);
+  if (!ok) {
+    correctBtn.classList.add('reveal');
+    correctBtn.innerHTML = `<span>${correctBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    correctBtn.onclick = goNext;
+    correctBtn.onkeydown = goNext;
+    // 答え合わせ表示後 0.5秒はクリック受け付けない
+    setTimeout(() => { correctBtn.disabled = false; }, 500);
+  }
+
+  const fb = document.getElementById('feedback');
+  fb.className = `feedback ${ok ? 'correct' : 'wrong'}`;
+  fb.textContent = ok ? CORRECT_MSGS[Math.floor(Math.random() * CORRECT_MSGS.length)] : WRONG_MSGS[Math.floor(Math.random() * WRONG_MSGS.length)];
+
+  if (q.explanation) {
+    const exp = document.getElementById('explanation');
+    exp.textContent = '💡 ' + q.explanation;
+    exp.className = 'explanation show';
+  }
+
+  ok ? soundCorrect() : soundWrong();
+
+  document.getElementById('next-btn').style.display = 'none';
+}
+
+function nextQuestion() { currentQ++; renderQuestion(); }
+
+async function showResults() {
+  const total   = currentTest.questions.length;
+  const correct = answers.filter(a => a.correct).length;
+  const score   = Math.round((correct / total) * 100);
+  const maxScore = 100;
+
+  if (!isReviewMode && !isPracticeModeActive) {
+    await setBest(currentTest.id, score);
+    await saveWrongAnswers(currentTest.id, answers, currentLevel);
+    const best = await getBest(currentTest.id);
+    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点`;
+    document.getElementById('best-msg').style.display = '';
+  } else {
+    document.getElementById('best-msg').style.display = 'none';
+  }
+
+  document.getElementById('screen-quiz').classList.add('hidden');
+  document.getElementById('screen-results').classList.remove('hidden');
+  let resultTitle = currentTest.title + ' 結果 🎉';
+  if (isReviewMode) resultTitle = currentTest.title + ' 復習結果';
+  if (isPracticeModeActive) resultTitle = currentTest.title + ' 練習結果';
+  document.getElementById('result-title').textContent = resultTitle;
+  document.getElementById('score-num').innerHTML    = `<span class="score-main">${score}</span><span class="score-sub"> / ${maxScore}点</span>`;
+
+  const ratio = score / maxScore;
+  const stars = ratio === 1 ? '⭐⭐⭐' : ratio >= 0.7 ? '⭐⭐' : ratio >= 0.4 ? '⭐' : '　';
+  document.getElementById('score-stars').textContent = stars;
+  document.getElementById('score-msg').textContent = ratio === 1 ? '🏆 満点！' : ratio >= 0.8 ? '🌟 すごい！' : ratio >= 0.6 ? '💪 惜しい！' : ratio >= 0.4 ? '📚 復習しよう' : '😅 もう一度';
+
+  if (ratio === 1) { soundFanfare(); setTimeout(() => launchConfetti(80), 300); }
+  else if (ratio >= 0.7) { soundGood(); setTimeout(() => launchConfetti(30), 300); }
+  else soundClick();
+
+  const wrongCount = answers.filter(a => !a.correct).length;
+  const reviewBtn = document.getElementById('review-btn');
+  if (wrongCount > 0) {
+    const btnText = isReviewMode ? `🔁 もう一度復習 (${wrongCount}問)` : `🔁 間違えた ${wrongCount} 問を復習する`;
+    reviewBtn.textContent = btnText;
+    reviewBtn.style.display = '';
+  } else {
+    reviewBtn.style.display = 'none';
+  }
+
+  document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
+    const ans = answers[i];
+    const correctText = q.type === 'journal' ? journalText(q.choices[q.correct]) : q.choices[q.correct];
+    const chosenText = q.type === 'journal' ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx];
+    let detail = `<span>${q.scenario}</span><br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
+    if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
+    if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}</div>`;
+    return `<div class="answer-row"><span class="q-num">Q${i + 1}</span><span class="mark">${ans.correct ? '✅' : '❌'}</span><div class="answer-detail">${detail}</div></div>`;
+  }).join('');
+}
+
+function startReview() {
+  const wrongQuestions = currentTest.questions.filter((_, i) => !answers[i].correct);
+  currentTest = { ...currentTest, questions: wrongQuestions };
+  isReviewMode = true;
+  isPracticeModeActive = false;
+  currentQ = 0;
+  answers = [];
+  document.getElementById('screen-results').classList.add('hidden');
+  document.getElementById('screen-quiz').classList.remove('hidden');
+  renderQuestion();
+}
+
+// キーボードショートカット
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('screen-quiz').classList.contains('hidden')) return;
+  const key = e.key.toLowerCase();
+
+  if (!answerInProgress) {
+    // 回答前: a/b/c/d で選択
+    const map = { 'a': 0, 'b': 1, 'c': 2, 'd': 3 };
+    if (key in map) {
+      const btn = document.getElementById(`choice-${map[key]}`);
+      if (btn && !btn.disabled) btn.click();
+    }
+  } else if (key === 'enter') {
+    // 回答後: Enter で次へ（0.5秒ガード中は disabled なので自然に弾かれる）
+    for (let i = 0; i < 4; i++) {
+      const btn = document.getElementById(`choice-${i}`);
+      if (btn && !btn.disabled && (btn.classList.contains('correct') || btn.classList.contains('reveal'))) {
+        btn.click();
+        break;
+      }
+    }
+  }
+});
+
+(function() {
+  const now = new Date();
+  const jstTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+  const year = jstTime.getFullYear();
+  const isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0));
+  };
+  const deviceType = isTouchDevice() ? '📱 Touch' : '🖥️ PC';
+
+  // Load build info from JSON
+  let buildTime = 'Loading...';
+  fetch('../build-info.json')
+    .then(res => res.json())
+    .then(data => {
+      buildTime = data.buildTime;
+      updateBuildTimeDisplay();
+    })
+    .catch(err => {
+      buildTime = 'Unknown';
+      updateBuildTimeDisplay();
+    });
+
+  function updateBuildTimeDisplay() {
+    const timeEl = document.getElementById('build-time-display') || createBuildTimeDisplay();
+    timeEl.innerHTML = `${deviceType}<br>ビルド: ${buildTime}`;
+  }
+
+  function createBuildTimeDisplay() {
+    const timeEl = document.createElement('div');
+    timeEl.id = 'build-time-display';
+    timeEl.style.position = 'fixed';
+    timeEl.style.bottom = '10px';
+    timeEl.style.left = '10px';
+    timeEl.style.fontSize = '14px';
+    timeEl.style.color = '#999';
+    timeEl.style.zIndex = '9999';
+    timeEl.style.pointerEvents = 'none';
+    timeEl.style.lineHeight = '1.4';
+    timeEl.style.whiteSpace = 'nowrap';
+    document.body.appendChild(timeEl);
+    return timeEl;
+  }
+
+  // Create initial display
+  createBuildTimeDisplay();
+  updateBuildTimeDisplay();
+})();

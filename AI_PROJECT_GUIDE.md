@@ -11,8 +11,9 @@
 
 主な入口:
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/boki1/index.html: 簿記クイズページ。
-- docs/devops/index.html: DevOpsクイズページ。
+- docs/{quiz}/index.html: 各クイズページ（boki1, devops, kokyo1, joho1, itpassport, itpassportjr など）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。
+- docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
+- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携など）。
 - docs/config.json: 各クイズの表示メタデータ。
 - docs/build-info.json: 自動生成されるビルド日時。
 
@@ -31,10 +32,9 @@
 - 新しい clone で hook が未設定なら、npm install または npm run prepare を実行する。
 
 ## HTML と config のルール
-- boki1 と devops の index.html は意図的に同期している。
-- クイズごとのラベル、見出し、色、説明文は docs/config.json に置く。
-- 片方のクイズページだけに、クイズ固有の表示名をハードコードしない。
-- 片方の quiz index.html を変更したら、もう片方との差分も確認する。
+- 各クイズページの見た目・挙動ロジックは docs/shared/quiz-app.css と docs/shared/quiz-app.js に一本化している。クイズ固有の index.html はHTML骨格（画面のdiv構造）だけを持ち、内容はすべて同一。
+- クイズを追加・修正するときは docs/shared/ の共通ファイルを編集する。docs/{quiz}/index.html 自体を個別に書き換える必要は基本的にない。
+- クイズごとのラベル、見出し、色、説明文は docs/config.json に置く。共通JSが起動時に config.json を読んで適用する。
 - 各クイズページでは ?admin=1 で問題レビュー画面を表示できる。
 
 ## 問題データ

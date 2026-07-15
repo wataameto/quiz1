@@ -6,6 +6,7 @@ describe('Main menu HTML', () => {
   const indexHtml = fs.readFileSync(path.join(docsDir, 'index.html'), 'utf8');
   const bokiHtml = fs.readFileSync(path.join(docsDir, 'boki1', 'index.html'), 'utf8');
   const devopsHtml = fs.readFileSync(path.join(docsDir, 'devops', 'index.html'), 'utf8');
+  const quizAppJs = fs.readFileSync(path.join(docsDir, 'shared', 'quiz-app.js'), 'utf8');
   const config = JSON.parse(fs.readFileSync(path.join(docsDir, 'config.json'), 'utf8'));
 
   test('should hide login screen until auth state is resolved', () => {
@@ -31,23 +32,20 @@ describe('Main menu HTML', () => {
   });
 
   test('should clear current user when auth signs out in quiz pages', () => {
-    expect(bokiHtml).toContain('currentUser = user || null;');
-    expect(devopsHtml).toContain('currentUser = user || null;');
+    expect(quizAppJs).toContain('currentUser = user || null;');
   });
 
   test('should avoid updating missing Firestore score documents during reset', () => {
-    expect(bokiHtml).toContain('const snapshot = await doc.get();');
-    expect(bokiHtml).toContain('if (snapshot.exists)');
-    expect(devopsHtml).toContain('const snapshot = await doc.get();');
-    expect(devopsHtml).toContain('if (snapshot.exists)');
+    expect(quizAppJs).toContain('const snapshot = await doc.get();');
+    expect(quizAppJs).toContain('if (snapshot.exists)');
   });
 
   test('should include admin question list mode in quiz pages', () => {
     expect(bokiHtml).toContain('screen-admin');
-    expect(bokiHtml).toContain("get('admin') === '1'");
-    expect(bokiHtml).toContain('function showAdmin()');
     expect(devopsHtml).toContain('screen-admin');
-    expect(devopsHtml).toContain("get('admin') === '1'");
-    expect(devopsHtml).toContain('function showAdmin()');
+    expect(bokiHtml).toContain('src="../shared/quiz-app.js"');
+    expect(devopsHtml).toContain('src="../shared/quiz-app.js"');
+    expect(quizAppJs).toContain("get('admin') === '1'");
+    expect(quizAppJs).toContain('function showAdmin()');
   });
 });
