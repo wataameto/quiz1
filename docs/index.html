@@ -673,7 +673,7 @@ async function loadMenuConfig() {
 async function loadVisiblePrefs() {
   if (!currentUser) return null;
   try {
-    const doc = await db.collection('menu_prefs').doc(currentUser.uid).get();
+    const doc = await db.collection('quiz_menu_prefs').doc(currentUser.uid).get();
     if (doc.exists && doc.data().visible) {
       return doc.data().visible;
     }
@@ -684,7 +684,7 @@ async function loadVisiblePrefs() {
 async function saveVisiblePrefs() {
   if (!currentUser || !visiblePrefs) return;
   try {
-    await db.collection('menu_prefs').doc(currentUser.uid).set({ visible: visiblePrefs }, { merge: true });
+    await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ visible: visiblePrefs }, { merge: true });
   } catch (e) { console.error('Failed to save menu prefs:', e); }
 }
 
