@@ -588,10 +588,12 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
         <div class="set-name">${unitName}${t.id}　${t.type || ''}</div>
         <div class="set-sub">${partLabel} ・ ${questionCount}問</div>
       </div>
-      <div class="set-score">${scoreText}</div>
-      <div class="set-actions">
-        <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span><span class="btn-sub">記録あり</span></button>
-        ${secondaryBtn}
+      <div class="set-meta">
+        <div class="set-score">${scoreText}</div>
+        <div class="set-actions">
+          <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span><span class="btn-sub">記録あり</span></button>
+          ${secondaryBtn}
+        </div>
       </div>
     </div>`;
   }

@@ -65,6 +65,7 @@
     .set-main { flex: 1; min-width: 0; }
     .set-main .set-name { font-weight: 700; color: #2d3748; font-size: 0.92rem; }
     .set-main .set-sub { font-size: 0.74rem; color: #718096; margin-top: 2px; overflow-wrap: anywhere; }
+    .set-meta { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
     .set-score { font-size: 0.78rem; color: #4a5568; font-weight: 700; text-align: right; white-space: nowrap; flex-shrink: 0; }
     .set-score span { font-weight: 800; font-size: 0.95rem; color: #1a202c; }
     .set-actions { display: flex; gap: 6px; flex-shrink: 0; }
@@ -93,8 +94,7 @@
       .screen-label { display: none; }
       .part-set-row { flex-wrap: wrap; padding: 10px 12px; gap: 6px; }
       .set-icon { width: 1em; height: 1em; min-width: 0; flex: none; display: inline-flex; font-size: 0.92rem; line-height: 1; padding: 0; background: none !important; border-radius: 0; color: inherit; }
-      .set-score { order: 3; margin-left: 24px; }
-      .set-actions { order: 4; margin-left: 24px; }
+      .set-meta { flex-basis: calc(100% - 24px); justify-content: space-between; margin-left: 24px; gap: 8px; }
       .set-actions button { padding: 6px 9px; }
       .set-actions .btn-title { font-size: 0.72rem; }
       .set-actions .btn-sub { font-size: 0.58rem; }
