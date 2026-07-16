@@ -96,7 +96,7 @@
       .part-set-row { flex-wrap: wrap; padding: 10px 12px; gap: 6px; }
       .set-icon { display: none; }
       .set-icon-inline { display: inline; margin-right: 4px; }
-      .set-meta { flex-basis: 100%; justify-content: space-between; gap: 8px; }
+      .set-meta { flex-basis: 100%; justify-content: flex-end; gap: 8px; }
       .set-actions button { padding: 6px 9px; }
       .set-actions .btn-title { font-size: 0.72rem; }
       .set-actions .btn-sub { font-size: 0.58rem; }
