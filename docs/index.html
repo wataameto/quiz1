@@ -177,7 +177,7 @@
       border: 1.5px solid #cbd5e0;
       color: #4a5568;
       border-radius: 8px;
-      padding: 5px 10px;
+      padding: 3px 10px;
       font-size: 0.78rem;
       font-weight: 700;
       cursor: pointer;
@@ -259,11 +259,11 @@
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.04em;
-      color: rgba(255,255,255,0.85);
+      color: #000;
     }
 
     .score-summary-total {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 800;
       color: #fff;
       white-space: nowrap;
@@ -278,8 +278,28 @@
       font-size: 0.88rem;
     }
 
+    .score-row-top-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
     .score-row-name {
       overflow-wrap: break-word;
+    }
+
+    .score-row-chevron {
+      flex-shrink: 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      opacity: 0.7;
+      transition: transform 0.2s;
+    }
+
+    .score-link:hover .score-row-chevron {
+      transform: translateX(3px);
+      opacity: 1;
     }
 
     .score-row-meta {
@@ -776,7 +796,10 @@ async function updateScoreDisplay() {
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
-      <span class="score-row-name">${r.emoji} ${r.name}</span>
+      <span class="score-row-top-line">
+        <span class="score-row-name">${r.emoji} ${r.name}</span>
+        <span class="score-row-chevron">開く ›</span>
+      </span>
       <span class="score-row-meta">
         <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
         <span class="score-row-correct">✅ ${r.score.correct}問正解</span>
