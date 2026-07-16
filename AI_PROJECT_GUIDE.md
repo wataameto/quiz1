@@ -61,6 +61,7 @@
   2. [Google Cloud Console](https://console.cloud.google.com/apis/credentials) → 認証情報 → 該当の OAuth 2.0 クライアント ID（Web クライアント。Firebase Console の Authentication → Sign-in method → Google → ウェブ SDK の構成 で確認できる）→ **承認済みの JavaScript 生成元** に同じドメインを追加する。Firebase 側の承認済みドメインとは別設定なので、両方必要。
   3. どちらの設定変更も反映まで数分〜十数分のタイムラグがあることがある（`origin_mismatch` エラーが一時的に出ても、設定自体が誤っているとは限らない）。
 - 新しいクイズページを増やす、または `docs/shared/quiz-app.js` のログイン部分を書き換えるときは、上記の GIS 方式を壊さないこと。Firebase の popup/redirect に戻すと iPhone Chrome のログインが再び壊れる。
+- **将来的な代替案**: 独自ドメインを取得した場合、`authDomain` をその独自ドメインの子（親ドメインを共有する）サブドメインにすれば、ブラウザからファーストパーティ扱いされてサードパーティストレージ制限を受けなくなり、Firebase標準の `signInWithPopup`/`signInWithRedirect` がそのまま動くようになる可能性が高い（GitHub Pagesの `wataameto.github.io` のような他社ドメイン配下ではこの手が使えないため、今回はGIS方式を採用した）。独自ドメインに移行する機会があれば検討の余地あり。
 
 ## ビルド日時
 - docs/build-info.json は自動生成される。pre-commit hook で変更されたらコミットに含める。
