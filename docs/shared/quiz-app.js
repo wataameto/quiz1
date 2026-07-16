@@ -29,8 +29,27 @@ auth.onAuthStateChanged(user => {
   loadAllQuestions();
 });
 
+function isMobileDevice() {
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+
 async function loginWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
+  // signInWithPopup relies on window.open() succeeding, which mobile
+  // browsers (notably iOS Chrome/Safari) often can't do reliably for
+  // OAuth popups — instead of a catchable Firebase error, it can fail
+  // at the browser level with a native "このページを開けません" error
+  // page before our try/catch ever runs. Firebase's own guidance is to
+  // use signInWithRedirect on mobile, so skip the popup attempt there.
+  if (isMobileDevice()) {
+    try {
+      await auth.signInWithRedirect(provider);
+    } catch (e) {
+      console.error('Google redirect login error:', e);
+      alert('ログインに失敗しました: ' + e.message);
+    }
+    return;
+  }
   try {
     await auth.signInWithPopup(provider);
   } catch (e) {
