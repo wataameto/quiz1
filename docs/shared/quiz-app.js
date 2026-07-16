@@ -29,14 +29,33 @@ auth.onAuthStateChanged(user => {
   loadAllQuestions();
 });
 
+auth.getRedirectResult().catch(e => {
+  console.error('Google redirect result error:', e);
+  alert('ログインに失敗しました: ' + e.message);
+});
+
+function isIOSChrome() {
+  return /CriOS/i.test(navigator.userAgent);
+}
+
 async function loginWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
-  // The original "このページを開けません" error on iPhone Chrome turned
-  // out to be caused by wataameto.github.io not being in Firebase's
-  // authorized domains list (fixed in the Firebase console), not by
-  // popups being unreliable on mobile. Reverted the mobile-specific
-  // signInWithRedirect branch — popup (falling back to redirect only
-  // if actually blocked) works fine now that the domain is authorized.
+  // Confirmed working via popup on: iPad, Android, iPhone Safari.
+  // Confirmed broken via popup on: iPhone Chrome specifically. All iOS
+  // browsers are required to use WebKit, but only Safari itself gets
+  // full window.open()/popup support — third-party WebKit wrapper apps
+  // like Chrome for iOS (identifiable by "CriOS" in the UA, distinct
+  // from desktop/Android Chrome's "Chrome" token) often can't host the
+  // OAuth popup. Route just that browser to signInWithRedirect.
+  if (isIOSChrome()) {
+    try {
+      await auth.signInWithRedirect(provider);
+    } catch (e) {
+      console.error('Google redirect login error:', e);
+      alert('ログインに失敗しました: ' + e.message);
+    }
+    return;
+  }
   try {
     await auth.signInWithPopup(provider);
   } catch (e) {
