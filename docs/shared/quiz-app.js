@@ -692,9 +692,11 @@ function runTermSearch() {
     // it, this tab simply never actually navigates away.
     window.location.href = url;
   } else {
+    // A fixed target name (instead of "_blank") reuses the same tab on
+    // repeat searches rather than opening a new one every time.
     const link = document.createElement('a');
     link.href = url;
-    link.target = '_blank';
+    link.target = 'quiz-term-search';
     link.rel = 'noopener';
     document.body.appendChild(link);
     link.click();
