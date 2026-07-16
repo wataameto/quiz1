@@ -628,6 +628,7 @@ function journalText(entry) {
 // ============================================================
 
 let searchTextRegistry = [];
+let lastModalSelection = '';
 
 function escapeHtml(str) {
   return String(str)
@@ -643,12 +644,28 @@ function searchIconHtml(text) {
   return `<button type="button" class="search-icon-btn" onclick="event.stopPropagation(); openSearchModal(${idx});" aria-label="用語を検索">🔍</button>`;
 }
 
+// iPad等では選択範囲外をタップした時点でOSが選択を解除してしまい、
+// ボタンのclickハンドラが実行される頃には window.getSelection() が
+// 空になっている。selectionchange で選択直後に随時記憶しておくことで、
+// タップによる選択解除より前の状態を検索時に使えるようにする。
+document.addEventListener('selectionchange', () => {
+  const modal = document.getElementById('search-modal');
+  const textEl = document.getElementById('search-modal-text');
+  if (!modal || !textEl || modal.style.display !== 'flex') return;
+  const selection = window.getSelection();
+  const text = selection ? selection.toString().trim() : '';
+  if (text && selection.anchorNode && textEl.contains(selection.anchorNode)) {
+    lastModalSelection = text;
+  }
+});
+
 function openSearchModal(idx) {
   const text = searchTextRegistry[idx];
   if (text === undefined) return;
   const modal = document.getElementById('search-modal');
   const textEl = document.getElementById('search-modal-text');
   if (!modal || !textEl) return;
+  lastModalSelection = '';
   textEl.textContent = text;
   modal.style.display = 'flex';
 }
@@ -656,15 +673,13 @@ function openSearchModal(idx) {
 function closeSearchModal() {
   const modal = document.getElementById('search-modal');
   if (modal) modal.style.display = 'none';
+  lastModalSelection = '';
 }
 
 function runTermSearch() {
   const textEl = document.getElementById('search-modal-text');
   if (!textEl) return;
-  const selection = window.getSelection();
-  const selectedText = selection ? selection.toString().trim() : '';
-  const isInsideModal = selection && selection.anchorNode && textEl.contains(selection.anchorNode);
-  const query = (selectedText && isInsideModal) ? selectedText : textEl.textContent;
+  const query = lastModalSelection || textEl.textContent;
   if (!query) return;
   window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank', 'noopener');
 }
