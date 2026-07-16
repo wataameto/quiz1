@@ -970,7 +970,7 @@ document.addEventListener('keydown', (e) => {
 
   // Load build info from JSON
   let buildTime = 'Loading...';
-  fetch('../build-info.json')
+  fetch('../build-info.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       buildTime = data.buildTime;
