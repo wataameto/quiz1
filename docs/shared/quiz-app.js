@@ -681,7 +681,18 @@ function runTermSearch() {
   if (!textEl) return;
   const query = lastModalSelection || textEl.textContent;
   if (!query) return;
-  window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank', 'noopener');
+  // window.open() creates a new blank tab and loads the URL into it
+  // slightly afterward. On iOS, if that URL gets intercepted by a
+  // Universal Link (e.g. handed off to the Google app), the blank tab
+  // is left behind in Chrome. Clicking a real <a target="_blank">
+  // avoids that two-step tab creation and doesn't leave a stray tab.
+  const link = document.createElement('a');
+  link.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+  link.target = '_blank';
+  link.rel = 'noopener';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
 }
 
 async function startTest(id, isReview = false, isPracticeMode = false) {
