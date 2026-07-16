@@ -92,7 +92,7 @@
       .container { padding: 20px 12px; }
       .screen-label { display: none; }
       .part-set-row { flex-wrap: wrap; padding: 10px 12px; gap: 6px; }
-      .set-icon { width: auto; height: auto; font-size: 0.92rem; background: none !important; border-radius: 0; color: inherit; }
+      .set-icon { width: 1em; height: 1em; min-width: 0; flex: none; display: inline-flex; font-size: 0.92rem; line-height: 1; padding: 0; background: none !important; border-radius: 0; color: inherit; }
       .set-score { order: 3; margin-left: 24px; }
       .set-actions { order: 4; margin-left: 24px; }
       .set-actions button { padding: 6px 9px; }
