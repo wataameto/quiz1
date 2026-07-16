@@ -11,8 +11,8 @@
     "accentActive": "linear-gradient(135deg, #f7f8ff, #f5f7ff)"
   },
   "devops": {
-    "title": "☁️ AWS認定 DevOpsエンジニア試験対策（DOP-C02）",
-    "heading": "AWS認定 DevOpsエンジニア試験対策（DOP-C02）",
+    "title": "☁️ AWS認定DevOpsエンジニア(DOP-C02)",
+    "heading": "AWS認定DevOpsエンジニア(DOP-C02)",
     "description": "AWS DevOps Engineer Professional（DOP-C02）試験対策。CI/CD、IaC（Infrastructure as Code）、監視・ロギング、インシデント対応、高可用性設計を基礎から模擬試験まで段階的に学べる",
     "icon": "☁️",
     "bgColor": "#0f2027",

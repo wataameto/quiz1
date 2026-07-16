@@ -832,8 +832,8 @@ quiz_boki1/{userId}
     "accentActive": "linear-gradient(135deg, #f7f8ff, #f5f7ff)"
   },
   "devops": {
-    "title": "☁️ AWS認定 DevOpsエンジニア試験対策（DOP-C02）",
-    "heading": "AWS認定 DevOpsエンジニア試験対策（DOP-C02）",
+    "title": "☁️ AWS認定DevOpsエンジニア(DOP-C02)",
+    "heading": "AWS認定DevOpsエンジニア(DOP-C02)",
     "description": "AWS DevOps Engineer Professional",
     "icon": "☁️",
     "bgColor": "#0f2027",
