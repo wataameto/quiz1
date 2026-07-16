@@ -628,10 +628,10 @@ function fmt(n) { return '¥' + n.toLocaleString(); }
 
 function renderJournal(entry) {
   const dLines = entry.debit.map(e =>
-    `<div class="entry-item journal-debit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+    `<div class="entry-item journal-debit"><span>${escapeHtml(e.account)}</span><span>${fmt(e.amount)}</span></div>`
   ).join('');
   const cLines = entry.credit.map(e =>
-    `<div class="entry-item journal-credit"><span>${e.account}</span><span>${fmt(e.amount)}</span></div>`
+    `<div class="entry-item journal-credit"><span>${escapeHtml(e.account)}</span><span>${fmt(e.amount)}</span></div>`
   ).join('');
   return `<div class="journal">
     <div><div class="journal-header">借方（左）</div><div class="entry-line">${dLines}</div></div>
@@ -797,7 +797,7 @@ function renderQuestion() {
 
   choicesEl.innerHTML = indexed.map((item, i) => {
     const label = String.fromCharCode(97 + i); // a, b, c, d
-    const choiceHtml = isJ ? renderJournal(item.choice) : item.choice;
+    const choiceHtml = isJ ? renderJournal(item.choice) : escapeHtml(item.choice);
     const searchText = isJ ? journalText(item.choice) : item.choice;
     return `<div class="choice-row"><button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${choiceHtml}</button>${searchIconHtml(searchText)}</div>`;
   }).join('');
@@ -912,11 +912,11 @@ async function showResults() {
 
   document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
     const ans = answers[i];
-    const correctText = q.type === 'journal' ? journalText(q.choices[q.correct]) : q.choices[q.correct];
-    const chosenText = q.type === 'journal' ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx];
-    let detail = `<span>${q.scenario}</span>${searchIconHtml(q.scenario)}<br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
+    const correctText = escapeHtml(q.type === 'journal' ? journalText(q.choices[q.correct]) : q.choices[q.correct]);
+    const chosenText = escapeHtml(q.type === 'journal' ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx]);
+    let detail = `<span>${escapeHtml(q.scenario)}</span>${searchIconHtml(q.scenario)}<br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
     if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
-    if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}${searchIconHtml(q.explanation)}</div>`;
+    if (q.explanation) detail += `<div class="exp">💡 ${escapeHtml(q.explanation)}${searchIconHtml(q.explanation)}</div>`;
     return `<div class="answer-row"><span class="q-num">Q${i + 1}</span><span class="mark">${ans.correct ? '✅' : '❌'}</span><div class="answer-detail">${detail}</div></div>`;
   }).join('');
 }
