@@ -29,38 +29,44 @@ auth.onAuthStateChanged(user => {
   loadAllQuestions();
 });
 
-auth.getRedirectResult().catch(e => {
-  console.error('Google redirect result error:', e);
-  alert('ログインに失敗しました: ' + e.message);
-});
+// Firebase の signInWithPopup/signInWithRedirect は iPhone Chrome (CriOS)
+// で機能しない（redirect は firebaseapp.com への別ドメインiframeに依存
+// しており、Chrome M115+等のサードパーティストレージ制限でブロックされる）。
+// 代わりに Google Identity Services (GIS) の OAuth トークンクライアントを
+// 直接呼び出し、取得したアクセストークンを Firebase の認証情報に変換する。
+// GIS はGoogle自身が管理するポップアップ機構のため、iPhone Chromeでも動作する。
+const GOOGLE_CLIENT_ID = '416766529196-d28cbbfr864eaahh8o9s5h3mopsa2dpo.apps.googleusercontent.com';
+let gisTokenClient = null;
 
-async function loginWithGoogle() {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  // Popup works on iPad, Android, and iPhone Safari. iPhone Chrome
-  // (CriOS) is broken on both popup AND signInWithRedirect — the
-  // latter relies on a cross-origin iframe at the firebaseapp.com
-  // authDomain, which Chrome M115+/Safari 16.1+'s third-party storage
-  // partitioning blocks (see Firebase's redirect-best-practices docs).
-  // Routing CriOS to redirect also wrongly caught iPad Chrome (same UA
-  // token), breaking a previously-working case. No branching for now —
-  // fixing iPhone Chrome for real needs authDomain on our own origin
-  // (custom domain or a root-level GitHub Pages site), not JS alone.
-  try {
-    await auth.signInWithPopup(provider);
-  } catch (e) {
-    if (e.code === 'auth/popup-blocked' || e.code === 'auth/cancelled-popup-request') {
-      try {
-        await auth.signInWithRedirect(provider);
-        return;
-      } catch (redirectError) {
-        console.error('Google redirect login error:', redirectError);
-        alert('ログインに失敗しました: ' + redirectError.message);
+function getGISTokenClient() {
+  if (gisTokenClient) return gisTokenClient;
+  if (!window.google || !window.google.accounts || !window.google.accounts.oauth2) return null;
+  gisTokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: GOOGLE_CLIENT_ID,
+    scope: 'openid email profile',
+    callback: (tokenResponse) => {
+      if (tokenResponse.error) {
+        console.error('Google sign-in error:', tokenResponse);
+        alert('ログインに失敗しました: ' + tokenResponse.error);
         return;
       }
-    }
-    console.error('Google login error:', e);
-    alert('ログインに失敗しました: ' + e.message);
+      const credential = firebase.auth.GoogleAuthProvider.credential(null, tokenResponse.access_token);
+      auth.signInWithCredential(credential).catch(e => {
+        console.error('Firebase sign-in error:', e);
+        alert('ログインに失敗しました: ' + e.message);
+      });
+    },
+  });
+  return gisTokenClient;
+}
+
+function loginWithGoogle() {
+  const client = getGISTokenClient();
+  if (!client) {
+    alert('Googleログインの読み込みに失敗しました。しばらくしてから再度お試しください。');
+    return;
   }
+  client.requestAccessToken();
 }
 
 function logout() {
