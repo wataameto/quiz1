@@ -585,7 +585,7 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
       <div class="set-main">
-        <div class="set-name">${unitName}${t.id}　${t.type || ''}</div>
+        <div class="set-name"><span class="set-icon-inline">${t.emoji}</span>${unitName}${t.id}　${t.type || ''}</div>
         <div class="set-sub">${partLabel} ・ ${questionCount}問</div>
       </div>
       <div class="set-meta">

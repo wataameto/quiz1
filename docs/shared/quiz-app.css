@@ -62,6 +62,7 @@
     }
     .part-set-row:last-child { border-bottom: none; }
     .set-icon { width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: #fff; background: linear-gradient(135deg, #667eea, #764ba2); }
+    .set-icon-inline { display: none; }
     .set-main { flex: 1; min-width: 0; }
     .set-main .set-name { font-weight: 700; color: #2d3748; font-size: 0.92rem; }
     .set-main .set-sub { font-size: 0.74rem; color: #718096; margin-top: 2px; overflow-wrap: anywhere; }
@@ -93,8 +94,9 @@
       .container { padding: 20px 12px; }
       .screen-label { display: none; }
       .part-set-row { flex-wrap: wrap; padding: 10px 12px; gap: 6px; }
-      .set-icon { width: 1em; height: 1em; min-width: 0; flex: none; display: inline-flex; font-size: 0.92rem; line-height: 1; padding: 0; background: none !important; border-radius: 0; color: inherit; }
-      .set-meta { flex-basis: calc(100% - 24px); justify-content: space-between; margin-left: 24px; gap: 8px; }
+      .set-icon { display: none; }
+      .set-icon-inline { display: inline; margin-right: 4px; }
+      .set-meta { flex-basis: 100%; justify-content: space-between; gap: 8px; }
       .set-actions button { padding: 6px 9px; }
       .set-actions .btn-title { font-size: 0.72rem; }
       .set-actions .btn-sub { font-size: 0.58rem; }
