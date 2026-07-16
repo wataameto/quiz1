@@ -29,27 +29,14 @@ auth.onAuthStateChanged(user => {
   loadAllQuestions();
 });
 
-function isMobileDevice() {
-  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-}
-
 async function loginWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
-  // signInWithPopup relies on window.open() succeeding, which mobile
-  // browsers (notably iOS Chrome/Safari) often can't do reliably for
-  // OAuth popups — instead of a catchable Firebase error, it can fail
-  // at the browser level with a native "このページを開けません" error
-  // page before our try/catch ever runs. Firebase's own guidance is to
-  // use signInWithRedirect on mobile, so skip the popup attempt there.
-  if (isMobileDevice()) {
-    try {
-      await auth.signInWithRedirect(provider);
-    } catch (e) {
-      console.error('Google redirect login error:', e);
-      alert('ログインに失敗しました: ' + e.message);
-    }
-    return;
-  }
+  // The original "このページを開けません" error on iPhone Chrome turned
+  // out to be caused by wataameto.github.io not being in Firebase's
+  // authorized domains list (fixed in the Firebase console), not by
+  // popups being unreliable on mobile. Reverted the mobile-specific
+  // signInWithRedirect branch — popup (falling back to redirect only
+  // if actually blocked) works fine now that the domain is authorized.
   try {
     await auth.signInWithPopup(provider);
   } catch (e) {
