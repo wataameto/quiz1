@@ -105,6 +105,19 @@
       </div>
     </div>
   </div>
+
+  <!-- 用語検索ダイアログ -->
+  <div id="search-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:480px; width:90%; text-align:left;">
+      <h2 style="font-size:1.05rem; color:#2d3748; margin-bottom:10px; font-weight:800;">🔍 用語を検索</h2>
+      <p style="color:#a0aec0; font-size:0.78rem; margin-bottom:10px;">気になる部分をドラッグして選択すると、その範囲だけ検索できます。選択しなければ全文で検索します。</p>
+      <div id="search-modal-text" style="background:#f7f8ff; border-radius:10px; padding:14px; font-size:0.9rem; color:#2d3748; line-height:1.6; max-height:240px; overflow-y:auto; user-select:text; -webkit-user-select:text; margin-bottom:16px;"></div>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeSearchModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; white-space:nowrap;">閉じる</button>
+        <button onclick="runTermSearch()" style="flex:1; padding:12px; background:#667eea; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; white-space:nowrap;">🔍 Googleで検索</button>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
 <script src="../shared/quiz-app.js"></script>

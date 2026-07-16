@@ -623,6 +623,52 @@ function journalText(entry) {
        + ' ／ 貸: ' + entry.credit.map(e=>`${e.account} ${fmt(e.amount)}`).join('・');
 }
 
+// ============================================================
+// 🔍 用語検索
+// ============================================================
+
+let searchTextRegistry = [];
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function searchIconHtml(text) {
+  const idx = searchTextRegistry.push(text) - 1;
+  return `<button type="button" class="search-icon-btn" onclick="event.stopPropagation(); openSearchModal(${idx});" aria-label="用語を検索">🔍</button>`;
+}
+
+function openSearchModal(idx) {
+  const text = searchTextRegistry[idx];
+  if (text === undefined) return;
+  const modal = document.getElementById('search-modal');
+  const textEl = document.getElementById('search-modal-text');
+  if (!modal || !textEl) return;
+  textEl.textContent = text;
+  modal.style.display = 'flex';
+}
+
+function closeSearchModal() {
+  const modal = document.getElementById('search-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+function runTermSearch() {
+  const textEl = document.getElementById('search-modal-text');
+  if (!textEl) return;
+  const selection = window.getSelection();
+  const selectedText = selection ? selection.toString().trim() : '';
+  const isInsideModal = selection && selection.anchorNode && textEl.contains(selection.anchorNode);
+  const query = (selectedText && isInsideModal) ? selectedText : textEl.textContent;
+  if (!query) return;
+  window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank', 'noopener');
+}
+
 async function startTest(id, isReview = false, isPracticeMode = false) {
   const numId = typeof id === 'string' ? parseInt(id, 10) : id;
   const originalTest = TESTS.find(t => t.id === numId);
@@ -678,7 +724,7 @@ function renderQuestion() {
   document.getElementById('progress-bar').style.width  = pct + '%';
   document.getElementById('progress-label').textContent = `第 ${currentQ + 1} 問 ／ ${total} 問`;
   document.getElementById('progress-pct').textContent   = pct + '%';
-  document.getElementById('scenario').textContent       = q.scenario;
+  document.getElementById('scenario').innerHTML          = escapeHtml(q.scenario) + searchIconHtml(q.scenario);
   document.getElementById('feedback').className         = 'feedback';
   document.getElementById('feedback').textContent       = '';
   document.getElementById('explanation').className      = 'explanation';
@@ -695,7 +741,8 @@ function renderQuestion() {
   choicesEl.innerHTML = indexed.map((item, i) => {
     const label = String.fromCharCode(97 + i); // a, b, c, d
     const choiceHtml = isJ ? renderJournal(item.choice) : item.choice;
-    return `<button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${choiceHtml}</button>`;
+    const searchText = isJ ? journalText(item.choice) : item.choice;
+    return `<div class="choice-row"><button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${choiceHtml}</button>${searchIconHtml(searchText)}</div>`;
   }).join('');
 
   // 問題表示後 0.5秒はクリック受け付けない
@@ -752,7 +799,7 @@ function answer(idx, correctIdx) {
 
   if (q.explanation) {
     const exp = document.getElementById('explanation');
-    exp.textContent = '💡 ' + q.explanation;
+    exp.innerHTML = '💡 ' + escapeHtml(q.explanation) + searchIconHtml(q.explanation);
     exp.className = 'explanation show';
   }
 
@@ -810,9 +857,9 @@ async function showResults() {
     const ans = answers[i];
     const correctText = q.type === 'journal' ? journalText(q.choices[q.correct]) : q.choices[q.correct];
     const chosenText = q.type === 'journal' ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx];
-    let detail = `<span>${q.scenario}</span><br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
+    let detail = `<span>${q.scenario}</span>${searchIconHtml(q.scenario)}<br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
     if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
-    if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}</div>`;
+    if (q.explanation) detail += `<div class="exp">💡 ${q.explanation}${searchIconHtml(q.explanation)}</div>`;
     return `<div class="answer-row"><span class="q-num">Q${i + 1}</span><span class="mark">${ans.correct ? '✅' : '❌'}</span><div class="answer-detail">${detail}</div></div>`;
   }).join('');
 }
