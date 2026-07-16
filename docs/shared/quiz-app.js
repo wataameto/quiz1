@@ -988,7 +988,7 @@ document.addEventListener('keydown', (e) => {
 
   function updateBuildTimeDisplay() {
     const timeEl = document.getElementById('build-time-display') || createBuildTimeDisplay();
-    timeEl.innerHTML = `${deviceType}<br>ビルド: ${buildTime}`;
+    timeEl.innerHTML = `ビルド: ${buildTime}　${deviceType}`;
   }
 
   function createBuildTimeDisplay() {
