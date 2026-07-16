@@ -102,6 +102,9 @@
       .set-actions button { padding: 6px 9px; }
       .set-actions .btn-title { font-size: 0.72rem; }
       .set-actions .btn-sub { font-size: 0.58rem; }
+      .quiz-header { flex-direction: column; align-items: stretch; gap: 10px; }
+      .quiz-back { position: static; align-self: flex-end; }
+      .quiz-title-wrap { order: 2; }
     }
     .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; position: relative; }
     .quiz-back { position: absolute; right: 0; top: 0; background: #667eea; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #fff; transition: all 0.15s; box-shadow: 0 4px 12px rgba(102,126,234,0.22); }
