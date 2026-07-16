@@ -259,7 +259,7 @@
       font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 0.04em;
-      color: #000;
+      color: #2e140a;
     }
 
     .score-summary-total {
@@ -291,10 +291,10 @@
 
     .score-row-chevron {
       flex-shrink: 0;
-      font-size: 1.6rem;
+      font-size: 0.9rem;
       font-weight: 700;
       line-height: 1;
-      opacity: 0.7;
+      opacity: 0.8;
       transition: transform 0.2s;
     }
 
@@ -799,7 +799,7 @@ async function updateScoreDisplay() {
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
       <span class="score-row-top-line">
         <span class="score-row-name">${r.emoji} ${r.name}</span>
-        <span class="score-row-chevron">›</span>
+        <span class="score-row-chevron">入る ›</span>
       </span>
       <span class="score-row-meta">
         <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
