@@ -44,8 +44,8 @@
     "accentActive": "linear-gradient(135deg, #f0f9ff, #e0f2fe)"
   },
   "itpassport": {
-    "title": "🧭 ITパスポート練習問題",
-    "heading": "ITパスポート練習問題",
+    "title": "🧭 （IPA）ITパスポート試験",
+    "heading": "（IPA）ITパスポート試験",
     "description": "ITパスポート試験対策。ストラテジ系（経営戦略・法務・会計財務）、マネジメント系（開発技術・プロジェクト・サービスマネジメント）、テクノロジ系（基礎理論・ネットワーク・セキュリティ・DB）の3分野をカバー",
     "icon": "🧭",
     "bgColor": "#0f2027",

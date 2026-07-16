@@ -7,7 +7,7 @@
 - devops: AWS認定 DevOpsエンジニア試験対策（DOP-C02）
 - kokyo1: 公共1（高校向け）
 - joho1: 情報処理1 練習問題
-- itpassport: ITパスポート練習問題
+- itpassport: （IPA）ITパスポート試験
 - itpassportjr: ITパスポートJr（やさしい版）
 
 ## 主なファイル
