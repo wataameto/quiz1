@@ -120,9 +120,9 @@
     .progress-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #f7971e, #ffd200); transition: width 0.5s cubic-bezier(.34,1.56,.64,1); }
     .scenario { background: linear-gradient(135deg, #f7f8ff, #fffbea); border-left: 5px solid #f7971e; border-radius: 12px; padding: 18px 20px; font-size: 1.05rem; color: #2d3748; line-height: 1.7; margin-bottom: 15px; font-weight: 600; min-height: 140px; }
     .choices { display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
-    .choice-row { display: flex; align-items: stretch; gap: 6px; }
+    .choice-row { display: flex; align-items: center; gap: 6px; }
     .choice-row .choice-btn { flex: 1; width: auto; min-width: 0; }
-    .search-icon-btn { flex-shrink: 0; border: 2px solid #e2e8f0; border-radius: 10px; background: #fff; cursor: pointer; font-size: 0.95rem; padding: 0 12px; color: #718096; transition: all 0.15s; font-family: inherit; }
+    .search-icon-btn { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 2px solid #e2e8f0; border-radius: 10px; background: #fff; cursor: pointer; font-size: 0.85rem; padding: 0; color: #718096; transition: all 0.15s; font-family: inherit; }
     .search-icon-btn:hover { border-color: #667eea; background: #f5f7ff; color: #667eea; }
     @media (hover: none) {
       .search-icon-btn { -webkit-tap-highlight-color: transparent; }
