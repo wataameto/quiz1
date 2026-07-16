@@ -21,6 +21,17 @@
     "accentColor": "#f7971e",
     "accentActive": "linear-gradient(135deg, #fff9ed, #fffbea)"
   },
+  "sap": {
+    "title": "🏛️ AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
+    "heading": "AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
+    "description": "AWS Solutions Architect Professional（SAP-C02）試験対策。組織の複雑性に対応する設計、新規ソリューション設計、既存ソリューションの継続的改善、ワークロード移行・モダナイゼーションを基礎から模擬試験まで段階的に学べる",
+    "icon": "🏛️",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #ff9a56, #ff6a88, #6a82fb, #17ead9)",
+    "accentColor": "#ff6a88",
+    "accentActive": "linear-gradient(135deg, #fff5f2, #ffeef0)"
+  },
   "kokyo1": {
     "title": "⚖️ 公共1 高校１年１学期末考査対策",
     "heading": "公共1 高校１年１学期末考査対策",
