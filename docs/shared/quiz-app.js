@@ -681,18 +681,25 @@ function runTermSearch() {
   if (!textEl) return;
   const query = lastModalSelection || textEl.textContent;
   if (!query) return;
-  // window.open() creates a new blank tab and loads the URL into it
-  // slightly afterward. On iOS, if that URL gets intercepted by a
-  // Universal Link (e.g. handed off to the Google app), the blank tab
-  // is left behind in Chrome. Clicking a real <a target="_blank">
-  // avoids that two-step tab creation and doesn't leave a stray tab.
-  const link = document.createElement('a');
-  link.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
-  link.target = '_blank';
-  link.rel = 'noopener';
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
+  const url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  if (isIOS) {
+    // Any new-tab approach (window.open, a clicked <a target="_blank">)
+    // creates a second tab before the navigation resolves. If iOS hands
+    // the URL off to the Google app via a Universal Link, that tab is
+    // left behind blank. Navigating the current tab never creates a
+    // second tab, so there's nothing to strand — if the app intercepts
+    // it, this tab simply never actually navigates away.
+    window.location.href = url;
+  } else {
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
 }
 
 async function startTest(id, isReview = false, isPracticeMode = false) {
