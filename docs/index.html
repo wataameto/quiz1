@@ -375,9 +375,8 @@
 
     .quiz-toggle-row {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      flex-direction: column;
+      gap: 4px;
       padding: 10px 4px;
       border-bottom: 1px solid #edf2f7;
       font-size: 0.88rem;
@@ -388,21 +387,24 @@
       border-bottom: none;
     }
 
-    .quiz-toggle-main {
-      min-width: 0;
-      flex: 1;
+    .quiz-toggle-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .quiz-toggle-label {
-      display: block;
+      flex: 1;
+      min-width: 0;
       font-weight: 700;
+      overflow-wrap: break-word;
     }
 
     .quiz-toggle-desc {
       display: block;
+      width: 100%;
       font-size: 0.74rem;
       color: #4a5568;
-      margin-top: 2px;
     }
 
     .toggle-switch {
@@ -787,11 +789,11 @@ function renderQuizToggleList() {
   filtered.forEach(r => {
     const on = isQuizVisible(r.id);
     toggleHtml += `<div class="quiz-toggle-row">
-      <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
-      <div class="quiz-toggle-main">
+      <div class="quiz-toggle-top">
+        <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
         <span class="quiz-toggle-label">${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
-        <span class="quiz-toggle-desc">${r.description}</span>
       </div>
+      <span class="quiz-toggle-desc">${r.description}</span>
     </div>`;
   });
   document.getElementById('quiz-toggle-list').innerHTML = toggleHtml;
