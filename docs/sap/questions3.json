@@ -1,6 +1,7 @@
 {
   "level": 3,
   "label": "🔴 基礎上級",
+  "description": "基礎上級",
   "tests": [
     {
       "id": 1,

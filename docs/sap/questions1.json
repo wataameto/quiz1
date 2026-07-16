@@ -1,6 +1,7 @@
 {
   "level": 1,
   "label": "🟢 基礎初級",
+  "description": "基礎初級",
   "tests": [
     {
       "id": 1,
@@ -776,7 +777,5 @@
         }
       ]
     }
-  ],
-  "id": "sap",
-  "description": "基礎初級"
+  ]
 }
