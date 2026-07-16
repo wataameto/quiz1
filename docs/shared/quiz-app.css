@@ -90,6 +90,7 @@
     @media (max-width: 520px) {
       body { padding: 8px; }
       .container { padding: 20px 12px; }
+      .screen-label { display: none; }
       .part-set-row { flex-wrap: wrap; padding: 10px 12px; }
       .set-score { order: 3; margin-left: 46px; }
       .set-actions { order: 4; margin-left: 46px; }
