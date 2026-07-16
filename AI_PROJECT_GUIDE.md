@@ -51,6 +51,17 @@
 - 教材トグルのON/OFF状態は Firestore の `quiz_menu_prefs/{uid}` に保存する。Firestoreのセキュリティルールが `scores` または `^quiz_.*` にマッチするコレクションだけを許可しているため、新しいコレクションを追加するときは必ず `quiz_` プレフィックスを付ける。
 - スコア表示は現在の問題データから計算し、古い固定値に依存しない。
 
+### ログイン方式（重要・Firebase の signInWithPopup/signInWithRedirect は使わない）
+- Googleログインは Firebase Auth の `signInWithPopup`/`signInWithRedirect` を使わず、**Google Identity Services (GIS)** の OAuth トークンクライアントを直接呼び出す方式にしている（`docs/index.html` と `docs/shared/quiz-app.js` の `loginWithGoogle()` / `getGISTokenClient()`）。
+  - 理由: Firebase の popup は iPhone Chrome (CriOS) で開けない。redirect は認証状態を `boki1-b66ad.firebaseapp.com` という別ドメインの iframe に保存する仕組みで、Chrome M115+/Safari 16.1+ 等のサードパーティストレージ制限によりブロックされ、無言で失敗する（Firebase 公式の [redirect-best-practices](https://firebase.google.com/docs/auth/web/redirect-best-practices) にも明記されている既知の問題）。この2つを何度も試したが iPhone Chrome だけ直せなかった。
+  - GIS はブラウザに依存しない Google 自身の OAuth ポップアップ機構なので、`accounts.google.com/gsi/client` を読み込み、`google.accounts.oauth2.initTokenClient()` でアクセストークンを取得し、`firebase.auth.GoogleAuthProvider.credential(null, accessToken)` → `signInWithCredential()` で Firebase にログインさせている。
+  - `loginWithGoogle()` は同期関数（async ではない）。GIS の `requestAccessToken()` はユーザー操作（クリック）に直接紐づけて同期的に呼ぶ必要があるため。
+- **必須の外部設定（コードだけでは完結しない）**:
+  1. Firebase Console → Authentication → Settings → 承認済みドメイン に実際のホスティングドメイン（例: `wataameto.github.io`）を追加する。
+  2. [Google Cloud Console](https://console.cloud.google.com/apis/credentials) → 認証情報 → 該当の OAuth 2.0 クライアント ID（Web クライアント。Firebase Console の Authentication → Sign-in method → Google → ウェブ SDK の構成 で確認できる）→ **承認済みの JavaScript 生成元** に同じドメインを追加する。Firebase 側の承認済みドメインとは別設定なので、両方必要。
+  3. どちらの設定変更も反映まで数分〜十数分のタイムラグがあることがある（`origin_mismatch` エラーが一時的に出ても、設定自体が誤っているとは限らない）。
+- 新しいクイズページを増やす、または `docs/shared/quiz-app.js` のログイン部分を書き換えるときは、上記の GIS 方式を壊さないこと。Firebase の popup/redirect に戻すと iPhone Chrome のログインが再び壊れる。
+
 ## ビルド日時
 - docs/build-info.json は自動生成される。pre-commit hook で変更されたらコミットに含める。
 - タイムスタンプは JST。
