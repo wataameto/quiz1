@@ -4,7 +4,7 @@
 
 ## クイズ一覧
 - boki1: 簿記超入門レベル
-- devops: DOP-C02 練習問題（AWS DevOps Engineer Professional）
+- devops: AWS認定 DevOpsエンジニア試験対策（DOP-C02）
 - kokyo1: 公共1（高校向け）
 - joho1: 情報処理1 練習問題
 - itpassport: ITパスポート練習問題
