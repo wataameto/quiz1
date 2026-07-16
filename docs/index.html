@@ -271,19 +271,35 @@
     .score-row {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
       gap: 2px;
       padding: 10px 0;
       font-size: 0.95rem;
     }
 
-    .score-row > span:first-child {
+    .score-row-name {
       overflow-wrap: break-word;
     }
 
-    .score-row > span:last-child {
+    .score-row-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
       font-size: 0.85rem;
       color: rgba(255,255,255,0.85);
+    }
+
+    .score-row-count {
+      min-width: 0;
+      overflow-wrap: break-word;
+    }
+
+    .score-row-correct {
+      flex-shrink: 0;
+      white-space: nowrap;
+      font-weight: 700;
+      color: #fff;
     }
 
     .score-row.total {
@@ -741,8 +757,11 @@ async function updateScoreDisplay() {
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
-      <span>${r.emoji} ${r.name}（${r.meta.parts}パート）</span>
-      <span>${r.score.correct}問 / ${r.score.total}問</span>
+      <span class="score-row-name">${r.emoji} ${r.name}</span>
+      <span class="score-row-meta">
+        <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
+        <span class="score-row-correct">✅ ${r.score.correct}問正解</span>
+      </span>
     </a>`;
   });
 
