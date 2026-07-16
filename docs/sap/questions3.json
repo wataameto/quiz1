@@ -5,9 +5,9 @@
     {
       "id": 1,
       "title": "📦 基礎上級-1",
-      "type": "Multi-Account Governance",
+      "type": "Organizational Complexity & Multi-Account Governance",
       "emoji": "📦",
-      "subtitle": "組織ガバナンスとマルチアカウント統制の問題！",
+      "subtitle": "マルチアカウント統治とガバナンスの問題！",
       "questions": [
         {
           "scenario": "グローバル製造業のA社はAWS Organizationsで200アカウントを運用している。買収した子会社のAWSアカウント（既存のOrganizationには属さない独立契約）を統合したいが、子会社側では独自のRIとSavings Plansを購入済みで、統合後もその割引を活かしたい。また統合作業中も子会社の本番システムを停止させたくない。最適な統合方法はどれか。",
@@ -136,7 +136,7 @@
       "title": "🌐 基礎上級-2",
       "type": "Networking & Hybrid Connectivity",
       "emoji": "🌐",
-      "subtitle": "ハイブリッド接続とネットワーク設計の問題！",
+      "subtitle": "ネットワーク・ハイブリッド接続の問題！",
       "questions": [
         {
           "scenario": "K社は東京リージョンと大阪リージョンそれぞれにVPCを持ち、さらにオンプレミスデータセンターとDirect Connectで接続している。将来的にVPC数が増加してもフルメッシュにならない構成で、かつオンプレからも東京・大阪両方のVPCへ到達できる必要がある。最適な構成はどれか。",
@@ -263,9 +263,9 @@
     {
       "id": 3,
       "title": "⚡ 基礎上級-3",
-      "type": "High Availability & DR",
+      "type": "High Availability, Resilience & DR",
       "emoji": "⚡",
-      "subtitle": "可用性設計と災害対策の問題！",
+      "subtitle": "高可用性・レジリエンス・DR設計の問題！",
       "questions": [
         {
           "scenario": "U社はグローバルECサイトを運営しており、東京・バージニア北部の2リージョンでアクティブ/アクティブ構成にしたい。書き込みはどちらのリージョンからも受け付け、リージョン間のレプリケーションはミリ秒単位の遅延で反映される必要がある。かつRDBMSのSQL互換性も求められる。最適なデータベース構成はどれか。",
@@ -392,9 +392,9 @@
     {
       "id": 4,
       "title": "💰 基礎上級-4",
-      "type": "Cost Optimization & Migration",
+      "type": "Cost Optimization & Migration Strategy",
       "emoji": "💰",
-      "subtitle": "コスト最適化と大規模移行戦略の問題！",
+      "subtitle": "コスト最適化・移行戦略の問題！",
       "questions": [
         {
           "scenario": "AE社はオンプレミスのモノリシックな基幹システムを段階的にAWSへ移行したい。一部機能はすでにコンテナ化可能だが、レガシー部分は当面オンプレミスに残す必要があり、移行中も新旧システム間でデータ整合性を保つ必要がある。最適な移行アプローチはどれか。",
@@ -523,7 +523,7 @@
       "title": "🗄️ 基礎上級-5",
       "type": "Data & Storage Architecture",
       "emoji": "🗄️",
-      "subtitle": "データレイクと大規模ストレージ設計の問題！",
+      "subtitle": "データ・ストレージアーキテクチャの問題！",
       "questions": [
         {
           "scenario": "AO社は複数リージョンにまたがる部門から生成される大量のログデータを一元的なデータレイクに集約し、Athenaでクエリしたい。データはリージョンごとに生成されるが、コンプライアンス上一部データは生成元リージョンから移動させてはならない制約がある。最適なアーキテクチャはどれか。",
@@ -652,7 +652,7 @@
       "title": "🔒 基礎上級-6",
       "type": "Security & Compliance at Scale",
       "emoji": "🔒",
-      "subtitle": "組織規模のセキュリティとコンプライアンスの問題！",
+      "subtitle": "大規模セキュリティ・コンプライアンスの問題！",
       "questions": [
         {
           "scenario": "AY社は複数リージョン・複数アカウントで運用するSaaSサービスにおいて、顧客データの暗号化キーを各リージョンで管理しつつ、リージョン障害時には別リージョンでも同じキーで暗号化されたデータを復号できる必要がある。キーのローテーションも一元管理したい。最適なKMS構成はどれか。",

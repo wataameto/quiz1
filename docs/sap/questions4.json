@@ -5,7 +5,7 @@
     {
       "id": 1,
       "title": "📦 模擬試験1-1",
-      "type": "Organizational Complexity",
+      "type": "Organizational Complexity & Multi-Account Governance",
       "emoji": "📦",
       "subtitle": "マルチアカウント統治とガバナンスの問題！",
       "questions": [
@@ -136,7 +136,7 @@
       "title": "🌐 模擬試験1-2",
       "type": "Networking & Hybrid Connectivity",
       "emoji": "🌐",
-      "subtitle": "ネットワーキングとハイブリッド接続の問題！",
+      "subtitle": "ネットワーク・ハイブリッド接続の問題！",
       "questions": [
         {
           "scenario": "商社K社は本社データセンターと東京・大阪の2つのAWSリージョンにあるVPCを相互接続する必要がある。「将来的にVPC数が30個以上に増える見込みがあり、フルメッシュのピアリングは管理が煩雑になるため避けたい」「オンプレミスとすべてのVPC間で経路を一元管理したい」「帯域は事前に固定せず必要に応じて柔軟にスケールさせたい」という要件がある。最適な構成はどれか。",
@@ -263,9 +263,9 @@
     {
       "id": 3,
       "title": "⚡ 模擬試験1-3",
-      "type": "High Availability & DR",
+      "type": "High Availability, Resilience & DR",
       "emoji": "⚡",
-      "subtitle": "高可用性・レジリエンス・DRの問題！",
+      "subtitle": "高可用性・レジリエンス・DR設計の問題！",
       "questions": [
         {
           "scenario": "オンラインバンキングU社の基幹システムは東京リージョンのAmazon Aurora MySQLで稼働している。事業継続計画では「RPOを1秒未満」「RTOを1分未満」「大阪リージョンへのフェイルオーバーを自動で実行」という極めて厳しい要件が定められている。最適な構成はどれか。",
@@ -392,9 +392,9 @@
     {
       "id": 4,
       "title": "💰 模擬試験1-4",
-      "type": "Cost Optimization & Migration",
+      "type": "Cost Optimization & Migration Strategy",
       "emoji": "💰",
-      "subtitle": "コスト最適化と移行戦略の問題！",
+      "subtitle": "コスト最適化・移行戦略の問題！",
       "questions": [
         {
           "scenario": "地方銀行AE社は、オンプレミスのVMware環境で稼働する300台の仮想サーバーをAWSへ移行する計画である。「移行前にオンプレミス環境のCPU・メモリ使用率の実績データを収集し、適切なインスタンスサイズを推奨してほしい」「アプリケーションの依存関係も可視化したい」という要件がある。最適なツールはどれか。",
@@ -652,7 +652,7 @@
       "title": "🔒 模擬試験1-6",
       "type": "Security & Compliance at Scale",
       "emoji": "🔒",
-      "subtitle": "大規模環境のセキュリティとコンプライアンスの問題！",
+      "subtitle": "大規模セキュリティ・コンプライアンスの問題！",
       "questions": [
         {
           "scenario": "決済処理企業AY社は、PCI DSS準拠のためカード情報を扱うワークロードを他のワークロードから完全にネットワーク分離する必要がある。「同一VPC内であっても他のサブネットからカード情報処理サブネットへの通信は明示的に許可されたもの以外すべて拒否したい」「異常なアウトバウンド通信（データ漏えいの兆候）を検知したい」という要件がある。最適な組み合わせはどれか。",

@@ -7,7 +7,7 @@
       "title": "📦 基礎中級-1",
       "type": "Organizational Complexity & Multi-Account Governance",
       "emoji": "📦",
-      "subtitle": "マルチアカウント統治とAWS Organizationsの問題！",
+      "subtitle": "マルチアカウント統治とガバナンスの問題！",
       "questions": [
         {
           "scenario": "急成長中のSaaS企業が50個のAWSアカウントを事業部ごとに分散運用しており、請求の一元化とアカウント発行の標準化を進めたい。最小の運用負荷で実現する方法はどれか。",
@@ -136,7 +136,7 @@
       "title": "🌐 基礎中級-2",
       "type": "Networking & Hybrid Connectivity",
       "emoji": "🌐",
-      "subtitle": "ハイブリッド接続とルーティング設計の問題！",
+      "subtitle": "ネットワーク・ハイブリッド接続の問題！",
       "questions": [
         {
           "scenario": "物流企業が15個のVPCを相互接続する必要があり、今後もVPC数が増加する見込みである。フルメッシュのVPCピアリングでは管理が煩雑になってきた。最適なアーキテクチャはどれか。",
@@ -265,7 +265,7 @@
       "title": "⚡ 基礎中級-3",
       "type": "High Availability, Resilience & DR",
       "emoji": "⚡",
-      "subtitle": "可用性・災害復旧戦略の問題！",
+      "subtitle": "高可用性・レジリエンス・DR設計の問題！",
       "questions": [
         {
           "scenario": "証券会社のシステムでRTOを数分以内、RPOをほぼゼロに近づける必要があるが、コストの上限も設定されている。年間数回程度の完全なリージョン障害を想定して最も費用対効果の高いDR戦略はどれか。",
@@ -394,7 +394,7 @@
       "title": "💰 基礎中級-4",
       "type": "Cost Optimization & Migration Strategy",
       "emoji": "💰",
-      "subtitle": "コスト最適化と移行戦略の問題！",
+      "subtitle": "コスト最適化・移行戦略の問題！",
       "questions": [
         {
           "scenario": "安定稼働中の基幹バッチシステムが3年間同じインスタンスファミリーで稼働し続ける見込みである。最大限の割引率を得たいが、インスタンスタイプの変更は行わない前提の場合、最適な購入オプションはどれか。",
@@ -523,7 +523,7 @@
       "title": "🗄️ 基礎中級-5",
       "type": "Data & Storage Architecture",
       "emoji": "🗄️",
-      "subtitle": "データ・ストレージ設計最適化の問題！",
+      "subtitle": "データ・ストレージアーキテクチャの問題！",
       "questions": [
         {
           "scenario": "メディア企業が過去のログファイルを法的要件で7年間保持する必要があるが、アクセスはほぼ発生せず、取り出しに数時間かかっても問題ない。最もコスト効率の良いストレージクラスはどれか。",
@@ -652,7 +652,7 @@
       "title": "🔒 基礎中級-6",
       "type": "Security & Compliance at Scale",
       "emoji": "🔒",
-      "subtitle": "大規模組織のセキュリティ統制の問題！",
+      "subtitle": "大規模セキュリティ・コンプライアンスの問題！",
       "questions": [
         {
           "scenario": "医療データを暗号化するKMSキーについて、特定のIAMロールだけが復号できるようにしたいが、そのIAMロールのIAMポリシー側でkms:Decryptが許可されていても、キーポリシー側で許可がなければアクセスできない設計にしたい。この理解として正しいのはどれか。",

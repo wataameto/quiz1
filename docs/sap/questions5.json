@@ -7,7 +7,7 @@
       "title": "📦 模擬試験2-1",
       "type": "Organizational Complexity & Multi-Account Governance",
       "emoji": "📦",
-      "subtitle": "マルチアカウント統制・組織設計の問題！",
+      "subtitle": "マルチアカウント統治とガバナンスの問題！",
       "questions": [
         {
           "scenario": "全国に病院を展開する医療法人が、AWS Organizations 配下に200を超えるアカウントを持つ。各病院のIT部門は独自にリソースを構築できる自由度を維持しつつ、①患者データを扱うS3バケットが暗号化なしで作成されることを組織全体で技術的に禁止し、②各アカウントの請求を診療科ごとに分離して可視化し、③新規アカウント作成時に標準的なセキュリティベースラインを自動適用したい。運用負荷を最小化しつつこれらを満たす構成はどれか。",
@@ -650,7 +650,7 @@
     {
       "id": 6,
       "title": "🔒 模擬試験2-6",
-      "type": "Security & Compliance",
+      "type": "Security & Compliance at Scale",
       "emoji": "🔒",
       "subtitle": "大規模セキュリティ・コンプライアンスの問題！",
       "questions": [

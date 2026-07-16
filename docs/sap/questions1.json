@@ -7,7 +7,7 @@
       "title": "📦 基礎初級-1",
       "type": "Organizational Complexity & Multi-Account Governance",
       "emoji": "📦",
-      "subtitle": "マルチアカウント統制の問題！",
+      "subtitle": "マルチアカウント統治とガバナンスの問題！",
       "questions": [
         {
           "scenario": "急成長中のスタートアップが、部署ごとにAWSアカウントを分割して請求と権限境界を明確にしたい。複数アカウントを一元管理する基盤サービスは？",
@@ -265,7 +265,7 @@
       "title": "⚡ 基礎初級-3",
       "type": "High Availability, Resilience & DR",
       "emoji": "⚡",
-      "subtitle": "高可用性・災害復旧戦略の問題！",
+      "subtitle": "高可用性・レジリエンス・DR設計の問題！",
       "questions": [
         {
           "scenario": "災害復旧要件として、コストを最優先しつつ復旧時間が数時間かかっても許容できる中小企業向けのDR戦略として最も適切なのは？",
@@ -523,7 +523,7 @@
       "title": "🗄️ 基礎初級-5",
       "type": "Data & Storage Architecture",
       "emoji": "🗄️",
-      "subtitle": "データ・ストレージ設計の問題！",
+      "subtitle": "データ・ストレージアーキテクチャの問題！",
       "questions": [
         {
           "scenario": "アクセス頻度が低いが、アクセス時には即座に取得できる必要があるログアーカイブデータを、コストを抑えて保存したい。適したS3ストレージクラスは？",
