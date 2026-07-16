@@ -34,28 +34,17 @@ auth.getRedirectResult().catch(e => {
   alert('ログインに失敗しました: ' + e.message);
 });
 
-function isIOSChrome() {
-  return /CriOS/i.test(navigator.userAgent);
-}
-
 async function loginWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
-  // Confirmed working via popup on: iPad, Android, iPhone Safari.
-  // Confirmed broken via popup on: iPhone Chrome specifically. All iOS
-  // browsers are required to use WebKit, but only Safari itself gets
-  // full window.open()/popup support — third-party WebKit wrapper apps
-  // like Chrome for iOS (identifiable by "CriOS" in the UA, distinct
-  // from desktop/Android Chrome's "Chrome" token) often can't host the
-  // OAuth popup. Route just that browser to signInWithRedirect.
-  if (isIOSChrome()) {
-    try {
-      await auth.signInWithRedirect(provider);
-    } catch (e) {
-      console.error('Google redirect login error:', e);
-      alert('ログインに失敗しました: ' + e.message);
-    }
-    return;
-  }
+  // Popup works on iPad, Android, and iPhone Safari. iPhone Chrome
+  // (CriOS) is broken on both popup AND signInWithRedirect — the
+  // latter relies on a cross-origin iframe at the firebaseapp.com
+  // authDomain, which Chrome M115+/Safari 16.1+'s third-party storage
+  // partitioning blocks (see Firebase's redirect-best-practices docs).
+  // Routing CriOS to redirect also wrongly caught iPad Chrome (same UA
+  // token), breaking a previously-working case. No branching for now —
+  // fixing iPhone Chrome for real needs authDomain on our own origin
+  // (custom domain or a root-level GitHub Pages site), not JS alone.
   try {
     await auth.signInWithPopup(provider);
   } catch (e) {
