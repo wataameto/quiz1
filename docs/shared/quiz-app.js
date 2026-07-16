@@ -661,8 +661,13 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-function searchIconHtml(text) {
+function searchIconHtml(text, asSpan) {
   const idx = searchTextRegistry.push(text) - 1;
+  // 選択肢ボタンの中に置く場合はHTML仕様上<button>を入れ子にできない（パーサーが
+  // 外側のbuttonを閉じてDOMが壊れる）ため、<span role="button">で代用する。
+  if (asSpan) {
+    return `<span class="search-icon-btn" role="button" tabindex="0" onclick="event.stopPropagation(); openSearchModal(${idx});" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();openSearchModal(${idx});}" aria-label="用語を検索">🔍</span>`;
+  }
   return `<button type="button" class="search-icon-btn" onclick="event.stopPropagation(); openSearchModal(${idx});" aria-label="用語を検索">🔍</button>`;
 }
 
@@ -799,7 +804,7 @@ function renderQuestion() {
     const label = String.fromCharCode(97 + i); // a, b, c, d
     const choiceHtml = isJ ? renderJournal(item.choice) : escapeHtml(item.choice);
     const searchText = isJ ? journalText(item.choice) : item.choice;
-    return `<div class="choice-row"><button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled>${label}. ${choiceHtml}</button>${searchIconHtml(searchText)}</div>`;
+    return `<div class="choice-row"><button class="choice-btn" onclick="answer(${i},${correctShuffledIdx})" id="choice-${i}" disabled><span class="choice-text">${label}. ${choiceHtml}</span>${searchIconHtml(searchText, true)}</button></div>`;
   }).join('');
 
   // 問題表示後 0.5秒はクリック受け付けない
@@ -834,7 +839,7 @@ function answer(idx, correctIdx) {
   };
   const nextLabel = isLast ? '→ 結果を見る' : '→ 次の問題';
   if (ok) {
-    ansBtn.innerHTML = `<span>${ansBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    ansBtn.innerHTML = `<span>${ansBtn.querySelector('.choice-text').textContent}</span><span class="next-indicator">${nextLabel}</span>`;
     ansBtn.onclick = goNext;
     ansBtn.onkeydown = goNext;
     // 答え合わせ表示後 0.5秒はクリック受け付けない
@@ -843,7 +848,7 @@ function answer(idx, correctIdx) {
   const correctBtn = document.getElementById(`choice-${correctIdx}`);
   if (!ok) {
     correctBtn.classList.add('reveal');
-    correctBtn.innerHTML = `<span>${correctBtn.textContent}</span><span class="next-indicator">${nextLabel}</span>`;
+    correctBtn.innerHTML = `<span>${correctBtn.querySelector('.choice-text').textContent}</span><span class="next-indicator">${nextLabel}</span>`;
     correctBtn.onclick = goNext;
     correctBtn.onkeydown = goNext;
     // 答え合わせ表示後 0.5秒はクリック受け付けない
