@@ -222,6 +222,8 @@
     .auth-status .user-chip { display: flex; align-items: center; gap: 6px; color: #718096; }
     .auth-status .user-chip .user-name { font-weight: 700; color: #2d3748; }
     .auth-status .user-chip .btn-logout-inline { background: none; border: none; color: #a0aec0; font-size: 0.72rem; text-decoration: underline; cursor: pointer; font-family: inherit; padding: 0; }
+    .btn-login-inline { background: transparent; color: #667eea; border: 2px solid #667eea; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
+    .btn-login-inline:hover { background: #f5f7ff; transform: translateY(-1px); }
 
     .loading-screen {
       text-align: center;
@@ -471,6 +473,17 @@
       </div>
     </div>
   </div>
+
+  <!-- ログイン誘導ダイアログ -->
+  <div id="login-prompt-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:440px; width:90%; text-align:center;">
+      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">教材を選択するにはログインしてください</h2>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeLoginPromptModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; white-space:nowrap;">キャンセル</button>
+        <button onclick="loginFromPromptModal()" style="flex:1; padding:12px; background:#667eea; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; white-space:nowrap;">🔐 ログイン</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -544,6 +557,21 @@ function closeLogoutModal() {
 function confirmLogout() {
   closeLogoutModal();
   auth.signOut().catch(e => console.error('Logout error:', e));
+}
+
+function showLoginPromptModal() {
+  const modal = document.getElementById('login-prompt-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeLoginPromptModal() {
+  const modal = document.getElementById('login-prompt-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+function loginFromPromptModal() {
+  closeLoginPromptModal();
+  loginWithGoogle();
 }
 
 async function calculateQuizMeta(questionsPath) {
@@ -666,7 +694,7 @@ async function saveVisiblePrefs() {
 
 async function toggleQuizVisibility(id) {
   if (!currentUser) {
-    alert('教材を選択するにはログインしてください');
+    showLoginPromptModal();
     return;
   }
   if (!visiblePrefs) {
@@ -754,7 +782,7 @@ function renderAuthStatus() {
     el.innerHTML = `<span class="user-chip">👤 <span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
     document.getElementById('auth-status-name').textContent = currentUser.displayName || 'ユーザー';
   } else {
-    el.innerHTML = '';
+    el.innerHTML = `<button class="btn-login-inline" onclick="loginWithGoogle()">🔐 ログイン</button>`;
   }
 }
 
