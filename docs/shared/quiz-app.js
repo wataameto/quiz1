@@ -477,7 +477,7 @@ async function showScoreHistory() {
     }
 
     partSections.push(
-      `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#f7971e; border-bottom:2px solid #edf2f7; padding-bottom:4px; margin-bottom:10px;">${escapeHtml(partLabel)}</div>${setSections.join('')}</div>`
+      `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c3a00; background:linear-gradient(135deg, #fff3e0, #ffe8cc); border-radius:8px; padding:8px 12px; margin-bottom:10px;">${escapeHtml(partLabel)}</div>${setSections.join('')}</div>`
     );
   }
   if (listEl) listEl.innerHTML = partSections.join('') || '<p>パートがありません</p>';
