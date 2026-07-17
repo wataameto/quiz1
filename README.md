@@ -9,15 +9,18 @@
 - joho1: 情報処理1 練習問題
 - itpassport: （IPA）ITパスポート試験
 - itpassportjr: ITパスポートJr（やさしい版）
+- sap: AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)
+- sample: 動作確認・お試し用のミニ教材
 
 ## 主なファイル
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（6ファイルは同一内容で同期）。
+- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（8ファイルは同一内容で同期）。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
-- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携）。
+- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、全クリア・周回、Firebase連携）。
 - docs/config.json: クイズごとの表示名、色、説明。
-- docs/{quiz}/questions*.json: 各クイズの問題データ。
+- docs/{quiz}/questions*.json: 各クイズの問題データ（各ファイルに `id` フィールド必須）。
 - docs/build-info.json: 自動生成されるビルド日時。
+- docs/quiz-meta.json: 自動生成される全クイズのパート数・セット数・問題数（メインメニューが使う）。
 
 ## 開発コマンド
 - npm install

@@ -22,6 +22,9 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 簿記の作問ルールは QUESTION_GUIDE.md を優先する。特に分記法、売上/仕入の勘定科目禁止、自然文では使用可の扱いを守る。
 - 確認ダイアログは `confirm()`/`alert()` を多用せず、破壊的操作（ログアウト、成績リセット）は自前モーダル（`logout-modal`, `reset-modal` と同じパターン）を使う。iOS Safari系ブラウザは繰り返しダイアログを出すページで「今後表示しない」を選ばれると、以降の `confirm()`/`alert()` が無言で失敗するため。
 - Firestoreに新しいコレクションを追加するときは、セキュリティルールが `scores` または `^quiz_.*` にマッチするコレクション名しか許可していないことに注意する（例: メニュー設定は `menu_prefs` ではなく `quiz_menu_prefs`）。
+- 新しいクイズの questions1.json（以降の各レベルファイルも）には必ず `id` フィールド（クイズスラッグと同じ値）を入れる。これが無いと `quizId` が undefined のままになり、成績が `quiz_undefined` コレクションに保存される（実際に発生した事故。sap/sample追加時に発覚し修正済み）。
+- メインメニューは docs/quiz-meta.json（ビルド時生成）を読んで各クイズの parts/sets/total/setCounts を得る。questions*.json 自体をメインメニューから直接fetchするのは、quiz-meta.jsonに載っていない教材（ローカルで新規追加してまだコミット/ビルドしていない場合など）へのフォールバックのみ。
+- 全クリア・周回機能（`isFullyCleared()`/`getLap()`/`advanceLap()`）は、周回を進めても `best_`/`wrongAnswers_` は削除するが `history_`/`lap`/`lapHistory` は消さない。「周回のたびに成績は初期化されるが、過去の挑戦履歴と周回数は積み上がる」という設計。
 
 ## 現在の実装スナップショット
 
@@ -30,20 +33,20 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### ファイル構成
 - アプリ本体は docs/ 配下の静的HTML/JSONで動く。アプリ名は「🏠満点まで帰れません✨」。
 - メインメニューは docs/index.html（単独ファイル、CSS/JSも内包）。
-- クイズページは docs/{quiz}/index.html（boki1, devops, kokyo1, joho1, itpassport, itpassportjr の6種）。6ファイルとも内容が同一で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
+- クイズページは docs/{quiz}/index.html（boki1, devops, kokyo1, joho1, itpassport, itpassportjr, sap, sample の8種）。8ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
 - クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
-- 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。
-- ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。
+- 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。各ファイルは `id`（クイズスラッグ）を持つ必須フィールド。
+- ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。同スクリプトが8クイズページの `?v=` キャッシュバスティングと docs/quiz-meta.json（パート/セット/問題数の集計）も同時に生成する。
 - テストは src/*.test.js。Jestで実行する。
 
 ### メインメニュー docs/index.html
 - 初期表示は screen-loading。auth.onAuthStateChanged(user => ...) が currentUser を設定したら、ログイン状態に関わらず常に showHomeScreen() を呼ぶ（専用ログイン画面はない）。
-- loginWithGoogle() は signInWithPopup を試し、失敗時に signInWithRedirect へフォールバックする。ログアウトは confirm() ではなく logout-modal（自前モーダル）を経由する confirmLogout()。
+- loginWithGoogle() は Google Identity Services (GIS) のトークンクライアントを同期的に呼び出す方式（signInWithPopup/signInWithRedirectは使わない。詳細はAI_PROJECT_GUIDE.mdのログイン方式の節）。ログアウトは confirm() ではなく logout-modal（自前モーダル）を経由する confirmLogout()。
 - 左上の auth-status に、未ログイン時は「🔐 ログイン」ボタン、ログイン時は「👤 ユーザー名 ログアウト」を表示する（renderAuthStatus）。
-- QUIZZES 配列（id, emoji, name, path, collection）が6クイズのメタ定義。クイズを追加するときはここに1行足す。
-- calculateQuizMeta(questionsPath) は questions1.json, questions2.json ... を順に fetch し、存在しなくなったところで停止する。合計問題数・パート数・セット数（tests.length の合計）を quizMetaCache に保存する。
-- getQuizScore(collectionName, questionsPath) は現在存在する question files だけを走査して、Firestoreの best_<level>_<testId> を集計する。未ログイン時は {correct: 0, total} を返す（エラーにしない）。
-- 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。
+- QUIZZES 配列（id, emoji, name, path, collection）が8クイズのメタ定義。クイズを追加するときはここに1行足す。
+- loadQuizMetaAll() は docs/quiz-meta.json を1回だけfetchする（Promiseをキャッシュして並列呼び出しでも1リクエストに集約）。calculateQuizMeta(quizId, questionsPath) はこのメタを優先して使い、載っていないクイズだけ questions*.json を直接fetchするフォールバックに落ちる。
+- getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の best_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
+- 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。各行には `⭐×N`（lap>0のとき）を正答数表示の直前に出す。
 - 「教材一覧」（quiz-toggle-section）は全クイズをトグルスイッチ（左側）付きで一覧表示し、上に検索ボックス（quiz-search-input）でタイトル・説明を絞り込める。
 - 教材ごとのON/OFFは visiblePrefs（{quizId: boolean}）で管理し、Firestoreの `quiz_menu_prefs/{uid}` ドキュメントに保存する。初回（ドキュメント未作成）はデフォルト全部OFF。
 - toggleQuizVisibility(id) は未ログイン時、保存せずに「教材を選択するにはログインしてください」とアラートを出して終了する。
@@ -62,26 +65,38 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - startTest(id, isReview, isPracticeMode) は通常テスト（記録あり）、間違い復習、練習モードを兼ねる。記録されるのは isReview も isPracticeMode も false のときだけ（showResults() 内）。
 - renderQuestion() は選択肢を毎問シャッフルし、shuffledChoices に元の選択肢インデックスを保持する。
 - answer() は選択後に正誤表示、効果音、解説、次へ進む操作を出す。
-- showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。
-- 成績リセット（resetScores）とログアウト（logout）は、いずれも自前モーダル（reset-modal, logout-modal）で確認してから実行する。
+- showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。試験モードのときは recordTestResult() を呼び、最高: X点/N回（N回＝getAttemptCount、attemptCount_フィールド優先・無ければhistory.length）も表示する。
+- 成績リセット（resetScores）とログアウト（logout）は、いずれも自前モーダル（reset-modal, logout-modal）で確認してから実行する。「📊 成績/設定」ボタン（openScoreModal）から成績履歴・成績リセット・表示サイズ設定を開く。
+
+### 成績履歴・全クリア・周回機能
+- recordTestResult(id, score) は試験モード完走のたびに `history_<level>_<id>` へ `{no, score, date}` を追記する。no は attemptCount_<level>_<id>（削除されない通し番号）から採番。追記後、配列が11件（初回1件＋直近10件）を超えたら [先頭, ...末尾10件] に間引く。
+- getAttemptCount(id, level) は attemptCount フィールドを返す。showScoreHistory() での表示回数は `Math.max(attemptCount, history.length)` を使う（この機能追加前からの古い履歴には attemptCount が無いため）。
+- showScoreHistory() は各セットの履歴をチェックボックス付きで表示し、deleteSelectedHistory() でチェックした要素だけ history_ 配列から取り除く（best_やattemptCount_には触れない）。
+- isFullyCleared() は読み込み済み全レベル・全セットの best が100かどうかを判定する（1セットも無ければfalse）。getLap()/advanceLap() が周回数を管理する。advanceLap() は best_・wrongAnswers_ を削除しつつ lap を+1し、lapHistory に `{lap, date}` を追記する（history_は消さない）。
+- showHome() は #full-clear-banner に、lap>0なら「🌟 全クリア ×N」バッジ、isFullyCleared()がtrueなら「🎉 全問正解達成！」＋「🏁 次の周へ進む」ボタンを両方とも表示できる（周回を無限に進められる設計）。
+- showScoreHistory() の周回履歴セクションは、最初の挑戦日時（全セットのhistory_から最も古い日付を検索）を「🌟 1周目開始」として、lapHistoryの各エントリを「🌟 (lap+1)周目開始」として表示する。
+- resetCurrentLevel() は現在パートの best_/wrongAnswers_/history_/attemptCount_ を削除するが、lap/lapHistoryは触らない（周回トロフィーは維持）。resetAllLevels() はdocument自体を削除するのでlapも含め全部消える。
 
 ### 管理レビュー ?admin=1
-- docs/{quiz}/?admin=1 で問題一覧を表示する（6クイズ共通）。
+- docs/{quiz}/?admin=1 で問題一覧を表示する（全クイズ共通）。
 - screen-admin には全パート、全テスト、全問題、全選択肢、正解、解説を表示する。
 - 仕訳問題の選択肢は renderJournal(choice) で表示する。
 - 正解選択肢には correct class とチェック表示を付ける。
 - 管理者専用認証はない。URLを知っていれば表示できる軽量レビュー画面として扱う。
 
 ### Firestore スキーマ
-- スコア用collection名は quiz_<quizId>。例: quiz_boki1, quiz_devops, quiz_kokyo1, quiz_joho1, quiz_itpassport, quiz_itpassportjr。
+- スコア用collection名は quiz_<quizId>。例: quiz_boki1, quiz_devops, quiz_kokyo1, quiz_joho1, quiz_itpassport, quiz_itpassportjr, quiz_sap, quiz_sample。quizId は questions1.json の `id` フィールドから取得するため、新規クイズでは必ずこれを設定すること（無いと quiz_undefined に保存される）。
 - メインメニューの教材トグル設定は quiz_menu_prefs（document id は uid、フィールド visible が {quizId: boolean}）。
 - セキュリティルールは `request.auth.uid == userId && (collection == 'scores' || collection.matches('^quiz_.*'))` の形。新規コレクションは `quiz_` プレフィックス必須（`scores` は現状未使用）。
 - document id は currentUser.uid。
 - 最高点は best_<level>_<testId> に保存する。
 - 間違えた問題番号は wrongAnswers_<level>_<testId> に配列で保存する。
+- 挑戦履歴は history_<level>_<testId> に `[{no, score, date}, ...]` で保存する（初回1件＋直近10件まで）。
+- 通しの挑戦回数は attemptCount_<level>_<testId>（履歴が間引かれても減らない）。
+- 全クリア周回数は lap（整数）、周回開始日時は lapHistory（`[{lap, date}, ...]`）。
 - 旧キー best_<testId> はメインメニューの集計で後方互換として扱う。
-- resetCurrentLevel() は現在パートの best_* と wrongAnswers_* を FieldValue.delete() で削除する。Firestore document が存在しない場合は update しない。
-- resetAllLevels() は現在ユーザーの quiz collection document を削除する。
+- resetCurrentLevel() は現在パートの best_*・wrongAnswers_*・history_*・attemptCount_* を FieldValue.delete() で削除する（lap/lapHistoryは触らない）。Firestore document が存在しない場合は update しない。
+- resetAllLevels() は現在ユーザーの quiz collection document を削除する（lap/lapHistory含め全部消える）。
 - ログアウトまたは認証ユーザー変更時は currentUser と bestScores/cacheInitialized を更新し、別ユーザーのキャッシュを残さない。
 
 ### 点数と問題数
