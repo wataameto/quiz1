@@ -103,17 +103,14 @@
       .set-actions .btn-title { font-size: 0.72rem; }
       .set-actions .btn-sub { font-size: 0.58rem; }
     }
-    .quiz-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; position: relative; }
-    .quiz-back { position: absolute; right: 0; top: 0; background: #667eea; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #fff; transition: all 0.15s; box-shadow: 0 4px 12px rgba(102,126,234,0.22); }
+    .quiz-header { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
+    .quiz-header-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    .quiz-back { background: #667eea; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-size: 0.9rem; font-weight: 700; color: #fff; transition: all 0.15s; box-shadow: 0 4px 12px rgba(102,126,234,0.22); white-space: nowrap; }
     .quiz-back:hover { background: #5a67d8; transform: translateY(-1px); box-shadow: 0 6px 14px rgba(102,126,234,0.28); }
-    .quiz-title-wrap { flex: 1; }
+    .quiz-score-btn { background: transparent; border: 1.5px solid #e53e3e; border-radius: 8px; padding: 9px 14px; cursor: pointer; font-size: 0.85rem; font-weight: 700; color: #e53e3e; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
+    .quiz-score-btn:hover { background: #fff5f5; transform: translateY(-1px); }
     .quiz-title-wrap h2 { font-size: 1.2rem; font-weight: 800; color: #2d3748; }
     .quiz-title-wrap p { font-size: 0.8rem; color: #718096; }
-    @media (max-width: 520px) {
-      .quiz-header { flex-direction: column; align-items: stretch; gap: 10px; }
-      .quiz-back { position: static; align-self: flex-end; }
-      .quiz-title-wrap { order: 2; }
-    }
     .progress-wrap { margin-bottom: 15px; }
     .progress-top { display: flex; justify-content: space-between; font-size: 0.82rem; color: #718096; margin-bottom: 6px; }
     .progress-bar-bg { background: #edf2f7; border-radius: 99px; height: 10px; overflow: hidden; }
