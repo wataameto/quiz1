@@ -918,6 +918,7 @@ function runTermSearch() {
   if (!textEl) return;
   const query = lastModalSelection || textEl.textContent;
   if (!query) return;
+  closeSearchModal();
   const url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
   if (isIOS) {
