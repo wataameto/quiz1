@@ -472,7 +472,8 @@ async function recordTestResult(id, s) {
     const countField = attemptCountKey(currentLevel, id);
     const best = await getBest(id);
     const history = await getHistory(id);
-    const newCount = getAttemptCount(id) + 1;
+    // 機能追加前からの履歴（attemptCountが未設定）でも既存件数から番号を続けられるようにする
+    const newCount = Math.max(getAttemptCount(id), history.length) + 1;
     let updatedHistory = [...history, { no: newCount, score: s, date: nowJstString() }];
     // 初回1件＋直近10件だけ残す（間の分は間引く）
     if (updatedHistory.length > HISTORY_KEEP_LATEST + 1) {
@@ -521,7 +522,8 @@ async function showScoreHistory() {
     for (const t of tests) {
       const history = await getHistory(t.id, level);
       const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
-      const attemptCount = getAttemptCount(t.id, level) || history.length;
+      // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
+      const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
       history.forEach(h => {
         const ts = parseJstDateString(h.date);
         if (ts !== null && (earliestDate === null || ts < earliestDate.ts)) {
