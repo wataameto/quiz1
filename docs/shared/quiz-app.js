@@ -514,7 +514,7 @@ async function showScoreHistory() {
           ).join('')
         : `<p style="font-size:0.82rem; color:#a0aec0; padding:4px 0; margin:0;">まだ記録がありません</p>`;
       setSections.push(
-        `<div style="margin-bottom:14px;"><div style="font-weight:800; color:#2d3748; margin-bottom:4px;">${t.emoji || ''} ${escapeHtml(t.title || '')}（${history.length}回）</div>${entriesHtml}</div>`
+        `<div style="margin-bottom:14px;"><div style="font-weight:800; color:#2d3748; margin-bottom:4px;">${escapeHtml(t.title || '')}（${history.length}回）</div>${entriesHtml}</div>`
       );
     }
 
