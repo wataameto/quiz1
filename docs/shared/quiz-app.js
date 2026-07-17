@@ -603,6 +603,43 @@ function calculateTotalQuestionsAllLevels() {
   return totalQuestions;
 }
 
+async function isFullyCleared() {
+  if (!currentUser) return false;
+  if (!cacheInitialized) await initializeBestScoresCache();
+  let sawAnyTest = false;
+  for (let level = 1; level <= maxLevel; level++) {
+    if (!quizData[level] || !quizData[level].tests) continue;
+    for (const t of quizData[level].tests) {
+      sawAnyTest = true;
+      const best = await getBest(t.id, level);
+      if (best !== 100) return false;
+    }
+  }
+  return sawAnyTest; // テストが1つも無ければ「クリア」扱いにしない
+}
+
+function getLap() {
+  const v = bestScores['lap'];
+  return (v === undefined || v === null) ? 0 : parseInt(v, 10);
+}
+
+// 全問正解を達成した状態で呼ばれる。既存のbest/history/wrongAnswersは一切変更せず、
+// 周回数(lap)だけを加算する。best_が消えない限り何度でも呼べる設計。
+async function advanceLap() {
+  if (!currentUser) return;
+  if (!cacheInitialized) await initializeBestScoresCache();
+  try {
+    const newLap = getLap() + 1;
+    const updates = { lap: newLap };
+    const collection = getCollectionName();
+    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
+    Object.assign(bestScores, updates);
+    soundFanfare();
+    launchConfetti(80);
+    showHome();
+  } catch (e) { console.error(e); }
+}
+
 async function showHome() {
   if (isAdminMode) {
     showAdmin();
@@ -624,6 +661,22 @@ async function showHome() {
   } else {
     const totalPercent = totalQuestionsAllLevels > 0 ? Math.round((total / totalQuestionsAllLevels) * 100) : 0;
     totalEl.innerHTML = `✅${total}/${totalQuestionsAllLevels}問正解(${totalPercent}%)`;
+  }
+
+  const fullyCleared = await isFullyCleared();
+  const lap = getLap();
+  const bannerEl = document.getElementById('full-clear-banner');
+  if (bannerEl) {
+    let bannerHtml = '';
+    if (lap > 0) bannerHtml += `<div class="full-clear-badge">🌟 全クリア ×${lap}</div>`;
+    if (fullyCleared) {
+      bannerHtml += `<div class="full-clear-celebrate">
+        <p>🎉 全問正解達成！</p>
+        <button onclick="advanceLap()">🏁 次の周へ進む</button>
+      </div>`;
+    }
+    bannerEl.innerHTML = bannerHtml;
+    bannerEl.style.display = bannerHtml ? 'block' : 'none';
   }
 
   const currentLevelData = quizData[currentLevel];

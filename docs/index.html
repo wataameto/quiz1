@@ -289,6 +289,19 @@
       overflow-wrap: break-word;
     }
 
+    .full-clear-mark {
+      display: inline-block;
+      background: rgba(255,255,255,0.28);
+      border: 1px solid rgba(255,215,0,0.8);
+      color: #fffbea;
+      font-size: 0.72rem;
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
     .score-row-chevron {
       display: inline-flex;
       align-items: center;
@@ -813,9 +826,10 @@ async function updateScoreDisplay() {
     if (!isQuizVisible(r.id)) return;
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
+    const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
       <span class="score-row-top-line">
-        <span class="score-row-name">${r.emoji} ${r.name}</span>
+        <span class="score-row-name">${r.emoji} ${r.name}${isFull ? ' <span class=\"full-clear-mark\">✨全クリア</span>' : ''}</span>
         <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
       </span>
       <span class="score-row-meta">
