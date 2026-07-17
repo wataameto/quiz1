@@ -431,6 +431,28 @@ function attemptCountKey(level, id) {
   return `attemptCount_${level}_${id}`;
 }
 
+function practiceCountKey(level, id) {
+  return `practiceCount_${level}_${id}`;
+}
+
+function getPracticeCount(id, level = currentLevel) {
+  const v = bestScores[practiceCountKey(level, id)];
+  return (v === undefined || v === null) ? 0 : parseInt(v, 10);
+}
+
+// 演習モード・誤答復習の完走回数を区別せず1つのカウンターで数える
+async function recordPracticeAttempt(id) {
+  if (!currentUser) return;
+  if (!cacheInitialized) await initializeBestScoresCache();
+  try {
+    const field = practiceCountKey(currentLevel, id);
+    const updates = { [field]: getPracticeCount(id) + 1 };
+    const collection = getCollectionName();
+    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
+    Object.assign(bestScores, updates);
+  } catch (e) { console.error(e); }
+}
+
 // 保存する履歴の上限（初回1件＋直近10件）
 const HISTORY_KEEP_LATEST = 10;
 
@@ -631,6 +653,7 @@ async function resetCurrentLevel() {
       fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[historyKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[attemptCountKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
+      fieldsToDelete[practiceCountKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
     }
     if (snapshot.exists) {
       await doc.update(fieldsToDelete);
@@ -641,6 +664,7 @@ async function resetCurrentLevel() {
       delete bestScores[`wrongAnswers_${currentLevel}_${t.id}`];
       delete bestScores[historyKey(currentLevel, t.id)];
       delete bestScores[attemptCountKey(currentLevel, t.id)];
+      delete bestScores[practiceCountKey(currentLevel, t.id)];
     }
     soundClick(); showHome();
   } catch (e) { console.error(e); }
@@ -811,6 +835,8 @@ async function showHome() {
       if (!levelData || !levelData.tests) continue;
 
       let levelCorrect = 0;
+      let levelExamAttempts = 0;
+      let levelPracticeAttempts = 0;
       const levelQuestions = levelData.tests.reduce((sum, test) => (
         sum + (Array.isArray(test.questions) ? test.questions.length : 0)
       ), 0);
@@ -821,6 +847,9 @@ async function showHome() {
           const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
           levelCorrect += Math.round(best / 100 * qCount);
         }
+        const history = await getHistory(t.id, level);
+        levelExamAttempts += Math.max(getAttemptCount(t.id, level), history.length);
+        levelPracticeAttempts += getPracticeCount(t.id, level);
       }
 
       const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
@@ -831,7 +860,7 @@ async function showHome() {
       partScoresHtml += `<div class="${blockClass}">
         <div class="part-score-row" onclick="toggleLevel(${level});">
           <span class="part-name">${levelLabel}</span>
-          <span class="part-value">${levelCorrect}/${levelQuestions}問</span>
+          <span class="part-value">${levelCorrect}/${levelQuestions}問(${levelExamAttempts}回)・演習/復習(${levelPracticeAttempts}回)</span>
           <span class="part-arrow">▶</span>
         </div>
         <div class="part-set-list">${setRowsHtml}</div>
@@ -865,16 +894,20 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
     const wrongIndices = await getWrongAnswerIds(t.id, level);
     const reviewCount = wrongIndices.length;
 
-    // 2つ目のボタン：誤答があれば誤答復習、なければ演習モード（どちらも記録なし）
+    const practiceCount = getPracticeCount(t.id, level);
+    // 2つ目のボタン：誤答があれば誤答復習、なければ演習モード（どちらも記録なし、実施回数は区別せず合算）
     const secondaryBtn = reviewCount > 0
-      ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習(${reviewCount}問)</span><span class="btn-sub">記録なし</span></button>`
-      : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">記録なし</span></button>`;
+      ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習(${reviewCount}問)</span><span class="btn-sub">結果記録なし(${practiceCount}回)</span></button>`
+      : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">結果記録なし(${practiceCount}回)</span></button>`;
 
     const bestCorrect = Math.round(best / 100 * questionCount);
     // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
     const history = await getHistory(t.id, level);
     const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
     const scoreText = best >= 0 ? `🏆 最高 <span>${bestCorrect}/${questionCount}問</span>(${attemptCount}回)` : '🔰 未挑戦';
+    const examSub = best >= 0
+      ? `<span class="btn-sub btn-sub-score">最高 ${bestCorrect}/${questionCount}問(${attemptCount}回)</span>`
+      : `<span class="btn-sub">記録あり</span>`;
 
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
@@ -885,7 +918,7 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
       <div class="set-meta">
         <div class="set-score">${scoreText}</div>
         <div class="set-actions">
-          <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span><span class="btn-sub">記録あり</span></button>
+          <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span>${examSub}</button>
           ${secondaryBtn}
         </div>
       </div>
@@ -1158,10 +1191,12 @@ async function showResults() {
     await saveWrongAnswers(currentTest.id, answers, currentLevel);
     const best = await getBest(currentTest.id);
     const history = await getHistory(currentTest.id);
-    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点 / ${history.length}回`;
+    const attemptCount = Math.max(getAttemptCount(currentTest.id), history.length);
+    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点 / ${attemptCount}回`;
     document.getElementById('best-msg').style.display = '';
   } else {
     document.getElementById('best-msg').style.display = 'none';
+    await recordPracticeAttempt(currentTest.id);
   }
 
   document.getElementById('screen-quiz').classList.add('hidden');
