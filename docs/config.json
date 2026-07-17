@@ -1,4 +1,15 @@
 {
+  "sample": {
+    "title": "🎲 サンプル教材",
+    "heading": "サンプル教材",
+    "description": "動作確認・お試し用のサンプル教材。雑学トリビア、ことわざ、世界の不思議、映画雑学など、気軽に楽しめる小ネタを2パート・各2セット・各2問というミニ構成で収録",
+    "icon": "🎲",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #a8ff78, #78ffd6, #f6d365, #fda085)",
+    "accentColor": "#38b48b",
+    "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
+  },
   "boki1": {
     "title": "📚 簿記超入門レベル",
     "heading": "簿記超入門レベル",

@@ -562,6 +562,7 @@ let visiblePrefs = null; // null = not loaded from Firestore yet
 let pendingPrefsSave = null; // in-flight Firestore write, if any
 
 const QUIZZES = [
+  { id: 'sample', emoji: '🎲', name: 'サンプル教材', path: './sample/', collection: 'quiz_sample' },
   { id: 'boki1', emoji: '📚', name: '簿記超入門レベル', path: './boki1/', collection: 'quiz_boki1' },
   { id: 'devops', emoji: '☁️', name: 'AWS認定DevOpsエンジニア(DOP-C02)', path: './devops/', collection: 'quiz_devops' },
   { id: 'sap', emoji: '🏛️', name: 'AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)', path: './sap/', collection: 'quiz_sap' },
