@@ -830,16 +830,16 @@ async function updateScoreDisplay() {
     const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
     const lap = r.score.lap || 0;
     const clearMark = lap > 0
-      ? ` <span class="full-clear-mark">⭐×${lap}</span>`
-      : (isFull ? ' <span class="full-clear-mark">✨全クリア</span>' : '');
+      ? `<span class="full-clear-mark">⭐×${lap}</span> `
+      : (isFull ? '<span class="full-clear-mark">✨全クリア</span> ' : '');
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
       <span class="score-row-top-line">
-        <span class="score-row-name">${r.emoji} ${r.name}${clearMark}</span>
+        <span class="score-row-name">${r.emoji} ${r.name}</span>
         <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
       </span>
       <span class="score-row-meta">
         <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット</span>
-        <span class="score-row-correct">✅ ${r.score.correct}/${r.meta.total}問正解</span>
+        <span class="score-row-correct">${clearMark}✅ ${r.score.correct}/${r.meta.total}問正解</span>
       </span>
     </a>`;
   });
