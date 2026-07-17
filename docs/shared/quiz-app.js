@@ -705,7 +705,8 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
       ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習(${reviewCount}問)</span><span class="btn-sub">記録なし</span></button>`
       : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">記録なし</span></button>`;
 
-    const scoreText = best >= 0 ? `🏆 最高 <span>${best}点</span>` : '🔰 未挑戦';
+    const bestCorrect = Math.round(best / 100 * questionCount);
+    const scoreText = best >= 0 ? `🏆 最高 <span>${bestCorrect}/${questionCount}問</span>` : '🔰 未挑戦';
 
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
