@@ -450,26 +450,37 @@ function closeScoreModal() {
 
 async function showScoreHistory() {
   closeScoreModal();
-  const levelData = quizData[currentLevel];
   const labelEl = document.getElementById('history-part-label');
-  if (labelEl) labelEl.textContent = levelData?.description || levelData?.label || `パート ${currentLevel}`;
+  if (labelEl) labelEl.textContent = '全パート';
 
   const listEl = document.getElementById('history-list');
-  const tests = (levelData && levelData.tests) || [];
+  if (listEl) listEl.innerHTML = '<p style="text-align:center; color:#a0aec0;">読み込み中…</p>';
 
-  const sections = [];
-  for (const t of tests) {
-    const history = await getHistory(t.id, currentLevel);
-    const entriesHtml = history.length
-      ? [...history].reverse().map(h =>
-          `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">${h.score}点</span></div>`
-        ).join('')
-      : `<p style="font-size:0.82rem; color:#a0aec0; padding:4px 0; margin:0;">まだ記録がありません</p>`;
-    sections.push(
-      `<div style="margin-bottom:14px;"><div style="font-weight:800; color:#2d3748; margin-bottom:4px;">${t.emoji || ''} ${escapeHtml(t.title || '')}</div>${entriesHtml}</div>`
+  const partSections = [];
+  for (let level = 1; level <= maxLevel; level++) {
+    const levelData = quizData[level];
+    if (!levelData) continue;
+    const partLabel = levelData.description || levelData.label || `パート ${level}`;
+    const tests = levelData.tests || [];
+
+    const setSections = [];
+    for (const t of tests) {
+      const history = await getHistory(t.id, level);
+      const entriesHtml = history.length
+        ? [...history].reverse().map(h =>
+            `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">${h.score}点</span></div>`
+          ).join('')
+        : `<p style="font-size:0.82rem; color:#a0aec0; padding:4px 0; margin:0;">まだ記録がありません</p>`;
+      setSections.push(
+        `<div style="margin-bottom:14px;"><div style="font-weight:800; color:#2d3748; margin-bottom:4px;">${t.emoji || ''} ${escapeHtml(t.title || '')}（${history.length}回）</div>${entriesHtml}</div>`
+      );
+    }
+
+    partSections.push(
+      `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#f7971e; border-bottom:2px solid #edf2f7; padding-bottom:4px; margin-bottom:10px;">${escapeHtml(partLabel)}</div>${setSections.join('')}</div>`
     );
   }
-  if (listEl) listEl.innerHTML = sections.join('') || '<p>セットがありません</p>';
+  if (listEl) listEl.innerHTML = partSections.join('') || '<p>パートがありません</p>';
 
   const modal = document.getElementById('history-modal');
   if (modal) modal.style.display = 'flex';
