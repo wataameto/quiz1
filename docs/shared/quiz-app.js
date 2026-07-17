@@ -427,6 +427,18 @@ function historyKey(level, id) {
   return `history_${level}_${id}`;
 }
 
+function attemptCountKey(level, id) {
+  return `attemptCount_${level}_${id}`;
+}
+
+// 保存する履歴の上限（初回1件＋直近10件）
+const HISTORY_KEEP_LATEST = 10;
+
+function getAttemptCount(id, level = currentLevel) {
+  const v = bestScores[attemptCountKey(level, id)];
+  return (v === undefined || v === null) ? 0 : parseInt(v, 10);
+}
+
 function nowJstString() {
   return new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour12: false });
 }
@@ -457,11 +469,17 @@ async function recordTestResult(id, s) {
   try {
     const bestField = `best_${currentLevel}_${id}`;
     const historyField = historyKey(currentLevel, id);
+    const countField = attemptCountKey(currentLevel, id);
     const best = await getBest(id);
     const history = await getHistory(id);
-    const updatedHistory = [...history, { score: s, date: nowJstString() }];
+    const newCount = getAttemptCount(id) + 1;
+    let updatedHistory = [...history, { no: newCount, score: s, date: nowJstString() }];
+    // 初回1件＋直近10件だけ残す（間の分は間引く）
+    if (updatedHistory.length > HISTORY_KEEP_LATEST + 1) {
+      updatedHistory = [updatedHistory[0], ...updatedHistory.slice(-HISTORY_KEEP_LATEST)];
+    }
 
-    const updates = { [historyField]: updatedHistory };
+    const updates = { [historyField]: updatedHistory, [countField]: newCount };
     if (s > best) updates[bestField] = s;
 
     const collection = getCollectionName();
@@ -503,19 +521,26 @@ async function showScoreHistory() {
     for (const t of tests) {
       const history = await getHistory(t.id, level);
       const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
+      const attemptCount = getAttemptCount(t.id, level) || history.length;
       history.forEach(h => {
         const ts = parseJstDateString(h.date);
         if (ts !== null && (earliestDate === null || ts < earliestDate.ts)) {
           earliestDate = { ts, date: h.date };
         }
       });
-      const entriesHtml = history.length
-        ? [...history].reverse().map(h =>
-            `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">${Math.round(h.score / 100 * qCount)}/${qCount}問</span></div>`
+      const decorated = history.map((h, idx) => ({ ...h, idx }));
+      const entriesHtml = decorated.length
+        ? [...decorated].reverse().map(h =>
+            `<div style="display:flex; align-items:center; gap:8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
+              <input type="checkbox" class="history-check" data-level="${level}" data-test="${t.id}" data-idx="${h.idx}">
+              <span style="flex-shrink:0; color:#a0aec0; font-size:0.76rem; min-width:2.6em;">${h.no ? h.no + '回目' : ''}</span>
+              <span style="flex:1; min-width:0;">${escapeHtml(h.date)}</span>
+              <span style="font-weight:700; flex-shrink:0;">${Math.round(h.score / 100 * qCount)}/${qCount}問</span>
+            </div>`
           ).join('')
         : `<p style="font-size:0.82rem; color:#a0aec0; padding:4px 0; margin:0;">まだ記録がありません</p>`;
       setSections.push(
-        `<div style="margin-bottom:14px;"><div style="font-weight:800; color:#2d3748; margin-bottom:4px;">${escapeHtml(t.title || '')}（${history.length}回）</div>${entriesHtml}</div>`
+        `<div style="margin-bottom:14px;"><div style="font-weight:800; color:#2d3748; margin-bottom:4px;">${escapeHtml(t.title || '')}（${attemptCount}回）</div>${entriesHtml}</div>`
       );
     }
 
@@ -528,7 +553,7 @@ async function showScoreHistory() {
   if (lapHistory.length > 0 || earliestDate) {
     const lapEntries = [];
     if (earliestDate) lapEntries.push({ date: earliestDate.date, label: '🌟 1周目開始' });
-    lapHistory.forEach(h => lapEntries.push({ date: h.date, label: `🌟 ${h.lap + 1}周目へ` }));
+    lapHistory.forEach(h => lapEntries.push({ date: h.date, label: `🌟 ${h.lap + 1}周目開始` }));
     const lapEntriesHtml = [...lapEntries].reverse().map(e =>
       `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(e.date)}</span><span style="font-weight:700;">${e.label}</span></div>`
     ).join('');
@@ -545,6 +570,38 @@ async function showScoreHistory() {
 function closeHistoryModal() {
   const modal = document.getElementById('history-modal');
   if (modal) modal.style.display = 'none';
+}
+
+// チェックした履歴だけまとめて削除する（history_配列からその要素を取り除くだけで、
+// best_やattemptCount_、周回数などには触れない）
+async function deleteSelectedHistory() {
+  if (!currentUser) return;
+  const checked = document.querySelectorAll('.history-check:checked');
+  if (checked.length === 0) return;
+
+  const groups = {};
+  checked.forEach(cb => {
+    const level = cb.dataset.level;
+    const testId = cb.dataset.test;
+    const idx = parseInt(cb.dataset.idx, 10);
+    const key = historyKey(level, testId);
+    if (!groups[key]) groups[key] = new Set();
+    groups[key].add(idx);
+  });
+
+  const updates = {};
+  Object.keys(groups).forEach(field => {
+    const current = Array.isArray(bestScores[field]) ? bestScores[field] : [];
+    updates[field] = current.filter((_, i) => !groups[field].has(i));
+  });
+
+  try {
+    const collection = getCollectionName();
+    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
+    Object.assign(bestScores, updates);
+    soundClick();
+    showScoreHistory();
+  } catch (e) { console.error(e); }
 }
 
 function resetScores() {
@@ -571,6 +628,7 @@ async function resetCurrentLevel() {
       fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[historyKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
+      fieldsToDelete[attemptCountKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
     }
     if (snapshot.exists) {
       await doc.update(fieldsToDelete);
@@ -580,6 +638,7 @@ async function resetCurrentLevel() {
       delete bestScores[`best_${currentLevel}_${t.id}`];
       delete bestScores[`wrongAnswers_${currentLevel}_${t.id}`];
       delete bestScores[historyKey(currentLevel, t.id)];
+      delete bestScores[attemptCountKey(currentLevel, t.id)];
     }
     soundClick(); showHome();
   } catch (e) { console.error(e); }
