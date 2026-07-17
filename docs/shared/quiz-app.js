@@ -431,6 +431,14 @@ function nowJstString() {
   return new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour12: false });
 }
 
+// nowJstString()が生成する「YYYY/M/D HH:mm:ss」形式を比較可能なタイムスタンプに変換
+function parseJstDateString(s) {
+  const m = /^(\d+)\/(\d+)\/(\d+)\s+(\d+):(\d+):(\d+)$/.exec(s || '');
+  if (!m) return null;
+  const [, y, mo, d, hh, mm, ss] = m.map(Number);
+  return new Date(y, mo - 1, d, hh, mm, ss).getTime();
+}
+
 async function getHistory(id, level = currentLevel) {
   if (!currentUser) return [];
   if (!cacheInitialized) {
@@ -483,16 +491,8 @@ async function showScoreHistory() {
   if (listEl) listEl.innerHTML = '<p style="text-align:center; color:#a0aec0;">読み込み中…</p>';
 
   const partSections = [];
+  let earliestDate = null; // 初めてどれか1セットを終えた日時＝1周目開始日時
 
-  const lapHistory = getLapHistory();
-  if (lapHistory.length > 0) {
-    const lapEntriesHtml = [...lapHistory].reverse().map(h =>
-      `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">🌟 ${h.lap + 1}周目へ</span></div>`
-    ).join('');
-    partSections.push(
-      `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c4a00; background:linear-gradient(135deg, #fffbea, #fff3c4); border-radius:8px; padding:8px 12px; margin-bottom:10px;">🌟 周回履歴</div>${lapEntriesHtml}</div>`
-    );
-  }
   for (let level = 1; level <= maxLevel; level++) {
     const levelData = quizData[level];
     if (!levelData) continue;
@@ -502,6 +502,12 @@ async function showScoreHistory() {
     const setSections = [];
     for (const t of tests) {
       const history = await getHistory(t.id, level);
+      history.forEach(h => {
+        const ts = parseJstDateString(h.date);
+        if (ts !== null && (earliestDate === null || ts < earliestDate.ts)) {
+          earliestDate = { ts, date: h.date };
+        }
+      });
       const entriesHtml = history.length
         ? [...history].reverse().map(h =>
             `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">${h.score}点</span></div>`
@@ -514,6 +520,19 @@ async function showScoreHistory() {
 
     partSections.push(
       `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c3a00; background:linear-gradient(135deg, #fff3e0, #ffe8cc); border-radius:8px; padding:8px 12px; margin-bottom:10px;">${escapeHtml(partLabel)}</div>${setSections.join('')}</div>`
+    );
+  }
+
+  const lapHistory = getLapHistory();
+  if (lapHistory.length > 0 || earliestDate) {
+    const lapEntries = [];
+    if (earliestDate) lapEntries.push({ date: earliestDate.date, label: '🌟 1周目開始' });
+    lapHistory.forEach(h => lapEntries.push({ date: h.date, label: `🌟 ${h.lap + 1}周目へ` }));
+    const lapEntriesHtml = [...lapEntries].reverse().map(e =>
+      `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(e.date)}</span><span style="font-weight:700;">${e.label}</span></div>`
+    ).join('');
+    partSections.unshift(
+      `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c4a00; background:linear-gradient(135deg, #fffbea, #fff3c4); border-radius:8px; padding:8px 12px; margin-bottom:10px;">🌟 周回履歴</div>${lapEntriesHtml}</div>`
     );
   }
   if (listEl) listEl.innerHTML = partSections.join('') || '<p>パートがありません</p>';
