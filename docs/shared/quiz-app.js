@@ -1144,7 +1144,7 @@ function answer(idx, correctIdx) {
     soundClick();
     isLast ? showResults() : nextQuestion();
   };
-  const nextLabel = isLast ? '→ 結果を見る' : '→ 次の問題';
+  const nextLabel = isLast ? '➡️ 結果を見る' : '➡️ 次の問題';
   if (ok) {
     ansBtn.innerHTML = `<span>${ansBtn.querySelector('.choice-text').textContent}</span><span class="next-indicator">${nextLabel}</span>`;
     ansBtn.onclick = goNext;
