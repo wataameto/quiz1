@@ -22,12 +22,14 @@ let cacheInitialized = false;
 
 // ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
 const FONT_SIZE_KEY = 'quizFontSize';
-const FONT_SIZES = { small: '87.5%', medium: '100%', large: '115%' };
+const FONT_SIZES = { xs: '85%', s: '92%', m: '100%', l: '110%', xl: '120%' };
+const FONT_SIZE_LEGACY = { small: 's', medium: 'm', large: 'l' }; // 旧3段階からの移行
 
 function applyFontSizePref() {
-  const size = localStorage.getItem(FONT_SIZE_KEY) || 'medium';
-  document.documentElement.style.fontSize = FONT_SIZES[size] || FONT_SIZES.medium;
-  ['small', 'medium', 'large'].forEach(s => {
+  let size = localStorage.getItem(FONT_SIZE_KEY) || 'm';
+  if (FONT_SIZE_LEGACY[size]) size = FONT_SIZE_LEGACY[size];
+  document.documentElement.style.fontSize = FONT_SIZES[size] || FONT_SIZES.m;
+  Object.keys(FONT_SIZES).forEach(s => {
     const btn = document.getElementById(`font-size-btn-${s}`);
     if (btn) btn.style.borderColor = s === size ? '#667eea' : 'transparent';
   });

@@ -8,7 +8,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260717140850">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260717141136">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -92,10 +92,12 @@
         <button onclick="resetScores()" style="padding:12px; background:#fff5f5; border:1.5px solid #e53e3e; border-radius:8px; cursor:pointer; font-weight:700; color:#e53e3e; font-family:inherit;">🗑️ 成績をリセット</button>
         <div style="border-top:1.5px solid #edf2f7; margin-top:6px; padding-top:14px; text-align:left;">
           <p style="font-size:0.8rem; color:#718096; font-weight:700; margin-bottom:8px;">⚙️ 表示サイズ</p>
-          <div style="display:flex; gap:8px;">
-            <button id="font-size-btn-small" onclick="setFontSize('small')" style="flex:1; padding:10px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">小</button>
-            <button id="font-size-btn-medium" onclick="setFontSize('medium')" style="flex:1; padding:10px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">中</button>
-            <button id="font-size-btn-large" onclick="setFontSize('large')" style="flex:1; padding:10px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">大</button>
+          <div style="display:flex; gap:6px;">
+            <button id="font-size-btn-xs" onclick="setFontSize('xs')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.8rem;">極小</button>
+            <button id="font-size-btn-s" onclick="setFontSize('s')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.8rem;">小</button>
+            <button id="font-size-btn-m" onclick="setFontSize('m')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.8rem;">中</button>
+            <button id="font-size-btn-l" onclick="setFontSize('l')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.8rem;">大</button>
+            <button id="font-size-btn-xl" onclick="setFontSize('xl')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.8rem;">極大</button>
           </div>
         </div>
         <button onclick="closeScoreModal()" style="padding:12px; background:transparent; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#718096; font-family:inherit;">閉じる</button>
@@ -150,6 +152,6 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260717140850"></script>
+<script src="../shared/quiz-app.js?v=20260717141136"></script>
 </body>
 </html>
