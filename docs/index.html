@@ -833,9 +833,10 @@ async function updateScoreDisplay() {
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
     const lap = r.score.lap || 0;
-    const clearMark = lap > 0
-      ? `<span class="full-clear-mark">⭐×${lap}</span> `
-      : '';
+    const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
+    let markText = lap > 0 ? `⭐×${lap}` : '';
+    if (isFull) markText += '+⭐';
+    const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
       <span class="score-row-top-line">
         <span class="score-row-name">${r.emoji} ${r.name}</span>
