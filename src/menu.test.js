@@ -47,8 +47,8 @@ describe('Main menu HTML', () => {
   test('should include admin question list mode in quiz pages', () => {
     expect(bokiHtml).toContain('screen-admin');
     expect(devopsHtml).toContain('screen-admin');
-    expect(bokiHtml).toContain('src="../shared/quiz-app.js"');
-    expect(devopsHtml).toContain('src="../shared/quiz-app.js"');
+    expect(bokiHtml).toMatch(/src="\.\.\/shared\/quiz-app\.js(\?v=\d+)?"/);
+    expect(devopsHtml).toMatch(/src="\.\.\/shared\/quiz-app\.js(\?v=\d+)?"/);
     expect(quizAppJs).toContain("get('admin') === '1'");
     expect(quizAppJs).toContain('function showAdmin()');
   });
