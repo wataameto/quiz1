@@ -20,6 +20,28 @@ let currentUser = null;
 let bestScores = {};
 let cacheInitialized = false;
 
+// ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
+const FONT_SIZE_KEY = 'quizFontSize';
+const FONT_SIZES = { small: '87.5%', medium: '100%', large: '115%' };
+
+function applyFontSizePref() {
+  const size = localStorage.getItem(FONT_SIZE_KEY) || 'medium';
+  document.documentElement.style.fontSize = FONT_SIZES[size] || FONT_SIZES.medium;
+  ['small', 'medium', 'large'].forEach(s => {
+    const btn = document.getElementById(`font-size-btn-${s}`);
+    if (btn) btn.style.borderColor = s === size ? '#667eea' : 'transparent';
+  });
+}
+
+function setFontSize(size) {
+  if (!FONT_SIZES[size]) return;
+  localStorage.setItem(FONT_SIZE_KEY, size);
+  applyFontSizePref();
+  soundClick();
+}
+
+applyFontSizePref();
+
 auth.onAuthStateChanged(user => {
   currentUser = user || null;
   cacheInitialized = false;
@@ -439,6 +461,7 @@ async function recordTestResult(id, s) {
 }
 
 function openScoreModal() {
+  applyFontSizePref(); // ボタンの選択中ハイライトを最新化
   const modal = document.getElementById('score-modal');
   if (modal) modal.style.display = 'flex';
 }

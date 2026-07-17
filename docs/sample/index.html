@@ -8,7 +8,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260717140701">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260717140850">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -17,7 +17,7 @@
     <div class="home-top">
       <p class="screen-label" style="position:absolute; top:6px; left:0; right:0; text-align:center; margin:0;">教材トップ</p>
       <a href="../" onclick="backToMainMenu(event)" style="position:absolute; top:0; left:0; background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
-      <button class="btn-reset-corner" onclick="openScoreModal()">📊 成績</button>
+      <button class="btn-reset-corner" onclick="openScoreModal()">📊 成績/設定</button>
       <div class="auth-status" id="auth-status"></div>
       <div class="total-score-bar" style="position: absolute; top: 0; right: 0; text-align: right; margin-bottom: 0; margin-top: 0;"><span id="total-score-display">-</span></div>
       <div style="height: 80px;"></div>
@@ -86,10 +86,18 @@
   <!-- 成績メニュー（履歴確認・リセット） -->
   <div id="score-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
     <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:400px; width:90%; text-align:center;">
-      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">📊 成績</h2>
+      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">📊 成績・設定</h2>
       <div style="display:flex; flex-direction:column; gap:10px;">
         <button onclick="showScoreHistory()" style="padding:12px; background:#edf2f7; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">📜 成績履歴を見る</button>
         <button onclick="resetScores()" style="padding:12px; background:#fff5f5; border:1.5px solid #e53e3e; border-radius:8px; cursor:pointer; font-weight:700; color:#e53e3e; font-family:inherit;">🗑️ 成績をリセット</button>
+        <div style="border-top:1.5px solid #edf2f7; margin-top:6px; padding-top:14px; text-align:left;">
+          <p style="font-size:0.8rem; color:#718096; font-weight:700; margin-bottom:8px;">⚙️ 表示サイズ</p>
+          <div style="display:flex; gap:8px;">
+            <button id="font-size-btn-small" onclick="setFontSize('small')" style="flex:1; padding:10px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">小</button>
+            <button id="font-size-btn-medium" onclick="setFontSize('medium')" style="flex:1; padding:10px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">中</button>
+            <button id="font-size-btn-large" onclick="setFontSize('large')" style="flex:1; padding:10px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">大</button>
+          </div>
+        </div>
         <button onclick="closeScoreModal()" style="padding:12px; background:transparent; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#718096; font-family:inherit;">閉じる</button>
       </div>
     </div>
@@ -142,6 +150,6 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260717140701"></script>
+<script src="../shared/quiz-app.js?v=20260717140850"></script>
 </body>
 </html>
