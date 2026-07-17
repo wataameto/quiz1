@@ -93,15 +93,17 @@
       body { padding: 8px; }
       .container { padding: 20px 12px; }
       .screen-label { display: none; }
-      .part-score-row { flex-wrap: wrap; }
+      .part-score-row { flex-wrap: wrap; padding: 5px 12px; }
       .part-value { order: 3; flex-basis: 100%; flex-shrink: 0; text-align: left; }
-      .part-set-row { flex-wrap: wrap; padding: 7px 12px; gap: 5px; }
+      .part-block { margin-bottom: 3px; }
+      .part-set-row { flex-wrap: wrap; padding: 5px 10px; gap: 3px; }
       .set-icon { display: none; }
       .set-icon-inline { display: inline; margin-right: 4px; }
-      .set-meta { flex-basis: 100%; justify-content: flex-end; gap: 8px; }
-      .set-actions button { padding: 5px 9px; }
-      .set-actions .btn-title { font-size: 0.72rem; }
-      .set-actions .btn-sub { font-size: 0.58rem; }
+      .set-main .set-sub { margin-top: 0; }
+      .set-meta { flex-basis: 100%; justify-content: flex-end; gap: 6px; }
+      .set-actions button { padding: 3px 8px; }
+      .set-actions .btn-title { font-size: 0.7rem; }
+      .set-actions .btn-sub { font-size: 0.56rem; }
     }
     .quiz-header { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
     .quiz-header-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
