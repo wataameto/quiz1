@@ -487,7 +487,7 @@ async function showScoreHistory() {
   const lapHistory = getLapHistory();
   if (lapHistory.length > 0) {
     const lapEntriesHtml = [...lapHistory].reverse().map(h =>
-      `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">🌟 ${h.lap}周目へ</span></div>`
+      `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">🌟 ${h.lap + 1}周目へ</span></div>`
     ).join('');
     partSections.push(
       `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c4a00; background:linear-gradient(135deg, #fffbea, #fff3c4); border-radius:8px; padding:8px 12px; margin-bottom:10px;">🌟 周回履歴</div>${lapEntriesHtml}</div>`
