@@ -897,17 +897,17 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
     const practiceCount = getPracticeCount(t.id, level);
     // 2つ目のボタン：誤答があれば誤答復習、なければ演習モード（どちらも記録なし、実施回数は区別せず合算）
     const secondaryBtn = reviewCount > 0
-      ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習(${reviewCount}問)</span><span class="btn-sub">結果記録なし(${practiceCount}回)</span></button>`
-      : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">結果記録なし(${practiceCount}回)</span></button>`;
+      ? `<button class="set-review-btn" onclick="goToTest(${level}, ${t.id}, true, false);"><span class="btn-title">誤答復習</span><span class="btn-sub btn-sub-score">${reviewCount}/${questionCount}問(${practiceCount}回)</span></button>`
+      : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習</span><span class="btn-sub btn-sub-score">非記録モード(${practiceCount}回)</span></button>`;
 
     const bestCorrect = Math.round(best / 100 * questionCount);
     // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
     const history = await getHistory(t.id, level);
     const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
-    // 最高点・未挑戦の表示は試験モードボタン内に統一する
+    // 最高点・未挑戦の表示は試験ボタン内に統一する
     const examSub = best >= 0
       ? `<span class="btn-sub btn-sub-score">最高 ${bestCorrect}/${questionCount}問(${attemptCount}回)</span>`
-      : `<span class="btn-sub btn-sub-score">成績記録あり　🔰未挑戦</span>`;
+      : `<span class="btn-sub btn-sub-score">記録モード(${attemptCount}回)</span>`;
 
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
@@ -917,7 +917,7 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
       </div>
       <div class="set-meta">
         <div class="set-actions">
-          <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span>${examSub}</button>
+          <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験</span>${examSub}</button>
           ${secondaryBtn}
         </div>
       </div>
