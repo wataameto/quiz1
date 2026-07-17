@@ -124,8 +124,9 @@
       .search-icon-btn { -webkit-tap-highlight-color: transparent; }
       .search-icon-btn:hover { border-color: #e2e8f0; background: #fff; color: #718096; }
     }
-    .scenario .search-icon-btn, .explanation .search-icon-btn, .answer-detail .search-icon-btn, .choice-btn .search-icon-btn { margin-left: 8px; vertical-align: middle; }
-    .choice-btn { border: 2.5px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; cursor: pointer; text-align: left; background: #fff; transition: all 0.15s; width: 100%; font-size: 0.93rem; color: #2d3748; line-height: 1.5; font-family: inherit; }
+    .scenario .search-icon-btn, .explanation .search-icon-btn, .answer-detail .search-icon-btn { margin-left: 8px; vertical-align: middle; }
+    .choice-btn .search-icon-btn { float: right; margin-left: 8px; }
+    .choice-btn { border: 2.5px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; cursor: pointer; text-align: left; background: #fff; transition: all 0.15s; width: 100%; font-size: 0.93rem; color: #2d3748; line-height: 1.5; font-family: inherit; overflow: hidden; }
     .choice-btn:not([disabled]):hover { border-color: #f7971e; background: #fffbea; transform: translateX(4px); }
     .choice-btn:focus { outline: none; }
     @media (hover: none) {
