@@ -438,7 +438,50 @@ async function recordTestResult(id, s) {
   } catch (e) { console.error(e); }
 }
 
+function openScoreModal() {
+  const modal = document.getElementById('score-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeScoreModal() {
+  const modal = document.getElementById('score-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+async function showScoreHistory() {
+  closeScoreModal();
+  const levelData = quizData[currentLevel];
+  const labelEl = document.getElementById('history-part-label');
+  if (labelEl) labelEl.textContent = levelData?.description || levelData?.label || `パート ${currentLevel}`;
+
+  const listEl = document.getElementById('history-list');
+  const tests = (levelData && levelData.tests) || [];
+
+  const sections = [];
+  for (const t of tests) {
+    const history = await getHistory(t.id, currentLevel);
+    const entriesHtml = history.length
+      ? [...history].reverse().map(h =>
+          `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">${h.score}点</span></div>`
+        ).join('')
+      : `<p style="font-size:0.82rem; color:#a0aec0; padding:4px 0; margin:0;">まだ記録がありません</p>`;
+    sections.push(
+      `<div style="margin-bottom:14px;"><div style="font-weight:800; color:#2d3748; margin-bottom:4px;">${t.emoji || ''} ${escapeHtml(t.title || '')}</div>${entriesHtml}</div>`
+    );
+  }
+  if (listEl) listEl.innerHTML = sections.join('') || '<p>セットがありません</p>';
+
+  const modal = document.getElementById('history-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeHistoryModal() {
+  const modal = document.getElementById('history-modal');
+  if (modal) modal.style.display = 'none';
+}
+
 function resetScores() {
+  closeScoreModal();
   const modal = document.getElementById('reset-modal');
   if (modal) modal.style.display = 'flex';
 }
