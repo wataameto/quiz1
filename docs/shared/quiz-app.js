@@ -22,8 +22,8 @@ let cacheInitialized = false;
 
 // ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
 const FONT_SIZE_KEY = 'quizFontSize';
-const FONT_SIZES = { xs: '85%', s: '92%', m: '100%', l: '110%', xl: '120%' };
-const FONT_SIZE_LEGACY = { small: 's', medium: 'm', large: 'l' }; // 旧3段階からの移行
+const FONT_SIZES = { xxs: '70%', xs: '80%', s: '90%', m: '100%', l: '115%' };
+const FONT_SIZE_LEGACY = { small: 's', medium: 'm', large: 'l', xl: 'l' }; // 旧段階からの移行
 
 function applyFontSizePref() {
   let size = localStorage.getItem(FONT_SIZE_KEY) || 'm';
