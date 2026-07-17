@@ -918,7 +918,7 @@ async function showHome() {
       partScoresHtml += `<div class="${blockClass}">
         <div class="part-score-row" onclick="toggleLevel(${level});">
           <span class="part-name">${levelLabel}</span>
-          <span class="part-value">${levelCorrect}/${levelQuestions}問(${levelExamAttempts}回)・演習/復習(${levelPracticeAttempts}回)</span>
+          <span class="part-value">試験 ${levelCorrect}/${levelQuestions}問(${levelExamAttempts}回)・演習/復習(${levelPracticeAttempts}回)</span>
           <span class="part-arrow">▶</span>
         </div>
         <div class="part-set-list">${setRowsHtml}</div>
