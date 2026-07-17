@@ -93,17 +93,18 @@
       body { padding: 8px; }
       .container { padding: 20px 12px; }
       .screen-label { display: none; }
-      .part-score-row { flex-wrap: wrap; padding: 5px 12px; }
+      .part-score-row { flex-wrap: wrap; padding: 4px 10px; }
       .part-value { order: 3; flex-basis: 100%; flex-shrink: 0; text-align: left; }
-      .part-block { margin-bottom: 3px; }
-      .part-set-row { flex-wrap: wrap; padding: 5px 10px; gap: 3px; }
+      .part-block { margin-bottom: 2px; }
+      .part-set-row { flex-wrap: wrap; padding: 4px 8px; gap: 2px; }
       .set-icon { display: none; }
-      .set-icon-inline { display: inline; margin-right: 4px; }
-      .set-main .set-sub { margin-top: 0; }
-      .set-meta { flex-basis: 100%; justify-content: flex-end; gap: 6px; }
-      .set-actions button { padding: 3px 8px; }
-      .set-actions .btn-title { font-size: 0.7rem; }
-      .set-actions .btn-sub { font-size: 0.56rem; }
+      .set-icon-inline { display: inline; margin-right: 3px; }
+      .set-main .set-name { font-size: 0.86rem; }
+      .set-main .set-sub { margin-top: 0; font-size: 0.68rem; }
+      .set-meta { flex-basis: 100%; justify-content: flex-end; gap: 5px; }
+      .set-actions button { padding: 2px 7px; gap: 0; }
+      .set-actions .btn-title { font-size: 0.68rem; }
+      .set-actions .btn-sub { font-size: 0.54rem; }
     }
     .quiz-header { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
     .quiz-header-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
