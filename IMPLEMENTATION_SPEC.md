@@ -24,7 +24,8 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - Firestoreに新しいコレクションを追加するときは、セキュリティルールが `scores` または `^quiz_.*` にマッチするコレクション名しか許可していないことに注意する（例: メニュー設定は `menu_prefs` ではなく `quiz_menu_prefs`）。
 - 新しいクイズの questions1.json（以降の各レベルファイルも）には必ず `id` フィールド（クイズスラッグと同じ値）を入れる。これが無いと `quizId` が undefined のままになり、成績が `quiz_undefined` コレクションに保存される（実際に発生した事故。sap/sample追加時に発覚し修正済み）。
 - メインメニューは docs/quiz-meta.json（ビルド時生成）を読んで各クイズの parts/sets/total/setCounts を得る。questions*.json 自体をメインメニューから直接fetchするのは、quiz-meta.jsonに載っていない教材（ローカルで新規追加してまだコミット/ビルドしていない場合など）へのフォールバックのみ。
-- 全クリア・周回機能（`isFullyCleared()`/`getLap()`/`advanceLap()`）は、周回を進めても `best_`/`wrongAnswers_` は削除するが `history_`/`lap`/`lapHistory` は消さない。「周回のたびに成績は初期化されるが、過去の挑戦履歴と周回数は積み上がる」という設計。
+- 全クリア・周回機能（`isFullyCleared()`/`getLap()`/`advanceLap()`）は、周回を進めても `best_`/`wrongAnswers_` は削除するが `history_`/`lap`/`lapHistory`/`fullClearHistory` は消さない。`lapAttemptCount` だけは周回が進むたびに0へ明示的にリセットする。「周回のたびに成績は初期化されるが、過去の挑戦履歴と周回数・達成記録は積み上がる」という設計。
+- 「次の周へ進む」「選択した履歴を削除」は破壊的操作のため、実行前に自前モーダル（advance-lap-modal, delete-history-modal）で確認する。confirmAdvanceLap()/confirmDeleteSelectedHistory() が確認モーダルを開き、advanceLap()/deleteSelectedHistory() が実処理を行う2段構え。
 
 ## 現在の実装スナップショット
 
@@ -46,7 +47,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - QUIZZES 配列（id, emoji, name, path, collection）が8クイズのメタ定義。クイズを追加するときはここに1行足す。
 - loadQuizMetaAll() は docs/quiz-meta.json を1回だけfetchする（Promiseをキャッシュして並列呼び出しでも1リクエストに集約）。calculateQuizMeta(quizId, questionsPath) はこのメタを優先して使い、載っていないクイズだけ questions*.json を直接fetchするフォールバックに落ちる。
 - getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の best_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
-- 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。各行には `⭐×N`（lap>0のとき）を正答数表示の直前に出す。
+- 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。各行には正答数表示の直前に `⭐×N`（lap>0のとき）を出し、さらに全問正解済みだが「次の周へ進む」をまだ押していない状態（correct===totalかつ）なら `+⭐` を追記する（メインメニューはFirestoreを都度読み直さない設計のため、この判定だけは既存のcorrect/totalから導出する）。
 - 「教材一覧」（quiz-toggle-section）は全クイズをトグルスイッチ（左側）付きで一覧表示し、上に検索ボックス（quiz-search-input）でタイトル・説明を絞り込める。
 - 教材ごとのON/OFFは visiblePrefs（{quizId: boolean}）で管理し、Firestoreの `quiz_menu_prefs/{uid}` ドキュメントに保存する。初回（ドキュメント未作成）はデフォルト全部OFF。
 - toggleQuizVisibility(id) は未ログイン時、保存せずに「教材を選択するにはログインしてください」とアラートを出して終了する。
@@ -59,8 +60,8 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - URLパラメータ admin=1 のときは通常のテスト選択ではなく showAdmin() を表示する。
 - 画面は主に screen-home（「教材トップ」ラベル表示）, screen-quiz, screen-results, screen-admin を切り替える。
 - currentLevel は現在のパート、maxLevel は読み込めた最大パート数、quizData[level] は各パートのJSON、TESTS は現在パートの tests。
-- showHome() はパートごとに `.part-block` を描画する（アコーディオン）。パート行クリックで toggleLevel() が呼ばれ、シングルアコーディオン（1つ開くと他は閉じる）で開閉する。初期状態は全パート閉じている（homeCollapsed = true）。
-- 各セットは `.part-set-row`（横長のリスト行、Finder風）で、行自体はクリック不可。ボタンは「試験モード（記録あり）」（goToTest → startTest(id, false, false)、常時表示）と、誤答があれば「誤答復習(n問)」、なければ「演習モード」（どちらも記録なし）の2つ。
+- showHome() はパートごとに `.part-block` を描画する（アコーディオン）。パート行クリックで toggleLevel() が呼ばれ、シングルアコーディオン（1つ開くと他は閉じる）で開閉する。初期状態は全パート閉じている（homeCollapsed = true）。パート行の集計表示（`.part-value`）は「試験 X/Y問(N回)・演習/復習(M回)」の形式で、先頭に「試験」ラベルを明記する（演習/復習の回数と並べたときにどちらの回数か分かるように）。
+- 各セットは `.part-set-row`（横長のリスト行、Finder風）で、行自体はクリック不可。ボタンは「試験」（.set-exam-btn、goToTest → startTest(id, false, false)、常時表示）と、誤答があれば「誤答復習」（.set-review-btn）、なければ「演習」（.set-practice-btn）（どちらも記録なし）の2つ。ボタン内の2行目（成績や回数）は `.btn-sub-score` クラスで1行目より大きいフォントにする。3つのボタンとも文言の長さで幅が揃わないことがあるため `.set-actions button` に min-width（PC 7.8rem / 520px以下 7.0rem）を指定して幅を揃える。
 - goToTest(level, testId, isReview, isPractice) は必要ならパートを切り替えてから startTest() を呼ぶ。
 - startTest(id, isReview, isPracticeMode) は通常テスト（記録あり）、間違い復習、練習モードを兼ねる。記録されるのは isReview も isPracticeMode も false のときだけ（showResults() 内）。
 - renderQuestion() は選択肢を毎問シャッフルし、shuffledChoices に元の選択肢インデックスを保持する。
@@ -72,10 +73,12 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - recordTestResult(id, score) は試験モード完走のたびに `history_<level>_<id>` へ `{no, score, date}` を追記する。no は attemptCount_<level>_<id>（削除されない通し番号）から採番。追記後、配列が11件（初回1件＋直近10件）を超えたら [先頭, ...末尾10件] に間引く。
 - getAttemptCount(id, level) は attemptCount フィールドを返す。showScoreHistory() での表示回数は `Math.max(attemptCount, history.length)` を使う（この機能追加前からの古い履歴には attemptCount が無いため）。
 - showScoreHistory() は各セットの履歴をチェックボックス付きで表示し、deleteSelectedHistory() でチェックした要素だけ history_ 配列から取り除く（best_やattemptCount_には触れない）。
-- isFullyCleared() は読み込み済み全レベル・全セットの best が100かどうかを判定する（1セットも無ければfalse）。getLap()/advanceLap() が周回数を管理する。advanceLap() は best_・wrongAnswers_ を削除しつつ lap を+1し、lapHistory に `{lap, date}` を追記する（history_は消さない）。
+- isFullyCleared() は読み込み済み全レベル・全セットの best が100かどうかを判定する（1セットも無ければfalse）。getLap()/advanceLap() が周回数を管理する。advanceLap() は confirmAdvanceLap() の確認モーダル経由で呼ばれ、best_・wrongAnswers_ を削除しつつ lap を+1、lapHistory に `{lap, date}` を追記、lapAttemptCount を0にリセットする（history_/fullClearHistoryは消さない）。
 - showHome() は #full-clear-banner に、lap>0なら「🌟 全クリア ×N」バッジ、isFullyCleared()がtrueなら「🎉 全問正解達成！」＋「🏁 次の周へ進む」ボタンを両方とも表示できる（周回を無限に進められる設計）。
-- showScoreHistory() の周回履歴セクションは、最初の挑戦日時（全セットのhistory_から最も古い日付を検索）を「🌟 1周目開始」として、lapHistoryの各エントリを「🌟 (lap+1)周目開始」として表示する。
-- resetCurrentLevel() は現在パートの best_/wrongAnswers_/history_/attemptCount_ を削除するが、lap/lapHistoryは触らない（周回トロフィーは維持）。resetAllLevels() はdocument自体を削除するのでlapも含め全部消える。
+- lapAttemptCount は「今の周回に入ってから試験モードを何回受けたか」を数える通しカウンター。recordTestResult() が試験モード完走のたびに+1し、advanceLap() が0に戻す。
+- recordTestResult() は更新前後で isFullyCleared() を比較し、false→trueに転じた瞬間（＝その周回で初めて全問正解を達成した瞬間）だけ fullClearHistory に `{lap: getLap()+1, date, attempts: その時点のlapAttemptCount}` を追記する。以後同じ周回中に再度全問正解の状態が続いても追記しない（次にlapが進んでリセットされるまで再発火しない）。
+- showScoreHistory() の周回履歴セクションは、最初の挑戦日時（全セットのhistory_から最も古い日付を検索）による「🌟 1周目開始」、lapHistoryの各エントリによる「🌟 (lap+1)周目開始」、fullClearHistoryの各エントリによる「🎉 N周目全問正解（M回挑戦）」を、parseJstDateString()で実際の日時順にソートしてから表示する（push順ではなく日時順）。
+- resetCurrentLevel() は現在パートの best_/wrongAnswers_/history_/attemptCount_ を削除するが、lap/lapHistory/lapAttemptCount/fullClearHistoryは触らない（周回トロフィーは維持）。resetAllLevels() はdocument自体を削除するのでlapも含め全部消える。
 
 ### 管理レビュー ?admin=1
 - docs/{quiz}/?admin=1 で問題一覧を表示する（全クイズ共通）。
@@ -94,6 +97,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 挑戦履歴は history_<level>_<testId> に `[{no, score, date}, ...]` で保存する（初回1件＋直近10件まで）。
 - 通しの挑戦回数は attemptCount_<level>_<testId>（履歴が間引かれても減らない）。
 - 全クリア周回数は lap（整数）、周回開始日時は lapHistory（`[{lap, date}, ...]`）。
+- 今の周回に入ってからの試験挑戦回数は lapAttemptCount（整数、advanceLap()で0にリセット）。全問正解を達成した日時は fullClearHistory（`[{lap, date, attempts}, ...]`、周回ごとにfalse→true転換時のみ追記）。
 - 旧キー best_<testId> はメインメニューの集計で後方互換として扱う。
 - resetCurrentLevel() は現在パートの best_*・wrongAnswers_*・history_*・attemptCount_* を FieldValue.delete() で削除する（lap/lapHistoryは触らない）。Firestore document が存在しない場合は update しない。
 - resetAllLevels() は現在ユーザーの quiz collection document を削除する（lap/lapHistory含め全部消える）。
