@@ -622,7 +622,8 @@ async function showHome() {
   if (attempted === 0) {
     totalEl.innerHTML = `✅未挑戦/${totalQuestionsAllLevels}`;
   } else {
-    totalEl.innerHTML = `✅${total}問正解/${totalQuestionsAllLevels}`;
+    const totalPercent = totalQuestionsAllLevels > 0 ? Math.round((total / totalQuestionsAllLevels) * 100) : 0;
+    totalEl.innerHTML = `✅${total}/${totalQuestionsAllLevels}問正解(${totalPercent}%)`;
   }
 
   const currentLevelData = quizData[currentLevel];
@@ -658,7 +659,6 @@ async function showHome() {
       }
 
       const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
-      const levelPercent = levelQuestions > 0 ? Math.round((levelCorrect / levelQuestions) * 100) : 0;
       const isOpen = level === currentLevel && !homeCollapsed;
       const blockClass = `part-block${isOpen ? ' open' : ''}${level === currentLevel ? ' active' : ''}`;
       const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel, unitName);
@@ -666,7 +666,7 @@ async function showHome() {
       partScoresHtml += `<div class="${blockClass}">
         <div class="part-score-row" onclick="toggleLevel(${level});">
           <span class="part-name">${levelLabel}</span>
-          <span class="part-value">${levelCorrect}問 / ${levelQuestions}問 (${levelPercent}%)</span>
+          <span class="part-value">${levelCorrect}/${levelQuestions}問</span>
           <span class="part-arrow">▶</span>
         </div>
         <div class="part-set-list">${setRowsHtml}</div>
