@@ -489,6 +489,8 @@ async function recordTestResult(id, s) {
     await initializeBestScoresCache();
   }
   try {
+    const wasFullyCleared = await isFullyCleared();
+
     const bestField = `best_${currentLevel}_${id}`;
     const historyField = historyKey(currentLevel, id);
     const countField = attemptCountKey(currentLevel, id);
@@ -502,12 +504,23 @@ async function recordTestResult(id, s) {
       updatedHistory = [updatedHistory[0], ...updatedHistory.slice(-HISTORY_KEEP_LATEST)];
     }
 
-    const updates = { [historyField]: updatedHistory, [countField]: newCount };
+    const newLapAttemptCount = getLapAttemptCount() + 1;
+    const updates = { [historyField]: updatedHistory, [countField]: newCount, lapAttemptCount: newLapAttemptCount };
     if (s > best) updates[bestField] = s;
 
     const collection = getCollectionName();
-    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
+    const docRef = db.collection(collection).doc(currentUser.uid);
+    await docRef.set(updates, { merge: true });
     Object.assign(bestScores, updates);
+
+    // このテストの結果で「初めて」全問正解の状態になったときだけ、達成日時を記録する
+    const nowFullyCleared = await isFullyCleared();
+    if (!wasFullyCleared && nowFullyCleared) {
+      const entry = { lap: getLap() + 1, date: nowJstString(), attempts: newLapAttemptCount };
+      const newFullClearHistory = [...getFullClearHistory(), entry];
+      await docRef.set({ fullClearHistory: newFullClearHistory }, { merge: true });
+      bestScores.fullClearHistory = newFullClearHistory;
+    }
   } catch (e) { console.error(e); }
 }
 
@@ -574,10 +587,19 @@ async function showScoreHistory() {
   }
 
   const lapHistory = getLapHistory();
-  if (lapHistory.length > 0 || earliestDate) {
+  const fullClearHistory = getFullClearHistory();
+  if (lapHistory.length > 0 || earliestDate || fullClearHistory.length > 0) {
     const lapEntries = [];
-    if (earliestDate) lapEntries.push({ date: earliestDate.date, label: '🌟 1周目開始' });
-    lapHistory.forEach(h => lapEntries.push({ date: h.date, label: `🌟 ${h.lap + 1}周目開始` }));
+    if (earliestDate) lapEntries.push({ date: earliestDate.date, ts: earliestDate.ts, label: '🌟 1周目開始' });
+    lapHistory.forEach(h => {
+      const ts = parseJstDateString(h.date);
+      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🌟 ${h.lap + 1}周目開始` });
+    });
+    fullClearHistory.forEach(h => {
+      const ts = parseJstDateString(h.date);
+      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🎉 ${h.lap}周目全問正解（${h.attempts}回挑戦）` });
+    });
+    lapEntries.sort((a, b) => a.ts - b.ts);
     const lapEntriesHtml = [...lapEntries].reverse().map(e =>
       `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(e.date)}</span><span style="font-weight:700;">${e.label}</span></div>`
     ).join('');
@@ -761,6 +783,17 @@ function getLapHistory() {
   return Array.isArray(h) ? h : [];
 }
 
+// 今の周回に入ってから試験モードを何回受けたか（advanceLap()で0に戻る）
+function getLapAttemptCount() {
+  const v = bestScores['lapAttemptCount'];
+  return (v === undefined || v === null) ? 0 : parseInt(v, 10);
+}
+
+function getFullClearHistory() {
+  const h = bestScores['fullClearHistory'];
+  return Array.isArray(h) ? h : [];
+}
+
 function confirmAdvanceLap() {
   const modal = document.getElementById('advance-lap-modal');
   if (modal) modal.style.display = 'flex';
@@ -778,7 +811,7 @@ async function advanceLap() {
   try {
     const newLap = getLap() + 1;
     const newLapHistory = [...getLapHistory(), { lap: newLap, date: nowJstString() }];
-    const fieldsToDelete = { lap: newLap, lapHistory: newLapHistory };
+    const fieldsToDelete = { lap: newLap, lapHistory: newLapHistory, lapAttemptCount: 0 };
     for (let level = 1; level <= maxLevel; level++) {
       if (!quizData[level] || !quizData[level].tests) continue;
       for (const t of quizData[level].tests) {
@@ -788,10 +821,11 @@ async function advanceLap() {
     }
     const collection = getCollectionName();
     await db.collection(collection).doc(currentUser.uid).set(fieldsToDelete, { merge: true });
-    // ローカルキャッシュも同期: best_/wrongAnswers_は削除、lap/lapHistoryだけ更新
+    // ローカルキャッシュも同期: best_/wrongAnswers_は削除、lap/lapHistory/lapAttemptCountだけ更新
     Object.keys(fieldsToDelete).forEach(key => {
       if (key === 'lap') { bestScores.lap = newLap; return; }
       if (key === 'lapHistory') { bestScores.lapHistory = newLapHistory; return; }
+      if (key === 'lapAttemptCount') { bestScores.lapAttemptCount = 0; return; }
       delete bestScores[key];
     });
     soundFanfare();
