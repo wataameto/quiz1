@@ -490,7 +490,7 @@
     <div class="score-summary" id="score-summary">
       <div class="score-summary-top">
         <h3 class="score-summary-heading">あなたの選択教材</h3>
-        <span class="score-summary-total">合計：<span id="score-total">0問</span> / <span id="score-grand-total">0問</span></span>
+        <span class="score-summary-total">合計：<span id="score-total">0</span>/<span id="score-grand-total">0</span>問正解</span>
       </div>
       <div id="score-summary-rows"></div>
     </div>
@@ -812,8 +812,8 @@ async function updateScoreDisplay() {
   document.getElementById('score-summary').classList.add('visible');
   document.getElementById('score-summary-rows').innerHTML = rowsHtml
     || '<p class="score-summary-empty">表示する教材がありません。下の一覧でONにしてください。</p>';
-  document.getElementById('score-total').textContent = `${totalCorrect}問`;
-  document.getElementById('score-grand-total').textContent = `${totalQuestions}問`;
+  document.getElementById('score-total').textContent = `${totalCorrect}`;
+  document.getElementById('score-grand-total').textContent = `${totalQuestions}`;
 
   renderQuizToggleList();
 }
