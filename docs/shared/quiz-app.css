@@ -104,7 +104,7 @@
       .set-main .set-name { font-size: 0.86rem; }
       .set-main .set-sub { margin-top: 0; font-size: 0.68rem; }
       .set-meta { flex-basis: 100%; justify-content: flex-end; gap: 5px; }
-      .set-actions button { padding: 2px 7px; gap: 0; min-width: 6.2rem; }
+      .set-actions button { padding: 2px 7px; gap: 0; min-width: 7.0rem; }
       .set-actions .btn-title { font-size: 0.68rem; }
       .set-actions .btn-sub { font-size: 0.54rem; }
       .set-actions .btn-sub-score { font-size: 0.66rem; }
