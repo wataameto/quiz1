@@ -904,7 +904,8 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
     // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
     const history = await getHistory(t.id, level);
     const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
-    const scoreText = best >= 0 ? `🏆 最高 <span>${bestCorrect}/${questionCount}問</span>(${attemptCount}回)` : '🔰 未挑戦';
+    // 最高点は試験モードボタン内に表示するので、ここでは未挑戦のときだけ出す
+    const scoreText = best >= 0 ? '' : '🔰 未挑戦';
     const examSub = best >= 0
       ? `<span class="btn-sub btn-sub-score">最高 ${bestCorrect}/${questionCount}問(${attemptCount}回)</span>`
       : `<span class="btn-sub">記録あり</span>`;
