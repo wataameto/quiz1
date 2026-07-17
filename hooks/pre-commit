@@ -4,7 +4,7 @@
 
 node scripts/update-build-time.js
 
-# Add updated build-info.json and the version-bumped quiz index.html files to the commit
-git add docs/build-info.json docs/*/index.html
+# Add updated build-info.json, generated quiz-meta.json, and the version-bumped quiz index.html files to the commit
+git add docs/build-info.json docs/quiz-meta.json docs/*/index.html
 
 exit 0

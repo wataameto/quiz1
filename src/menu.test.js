@@ -31,7 +31,7 @@ describe('Main menu HTML', () => {
   });
 
   test('should count only current question files for menu scores', () => {
-    expect(indexHtml).toContain('data[`best_${level}_${test.id}`]');
+    expect(indexHtml).toContain('data[`best_${level}_${testId}`]');
     expect(indexHtml).not.toContain("Object.keys(data).filter(k => k.startsWith('best_'))");
   });
 

@@ -666,15 +666,37 @@ function loginFromPromptModal() {
   loginWithGoogle();
 }
 
-async function calculateQuizMeta(questionsPath) {
-  if (quizMetaCache[questionsPath] !== undefined) {
-    return quizMetaCache[questionsPath];
+// ビルド時に scripts/update-build-time.js が生成する quiz-meta.json を1回だけ読む。
+// これで問題数計算のために各教材の questions*.json を全部ダウンロードせずに済む。
+let quizMetaAll = null;
+async function loadQuizMetaAll() {
+  if (quizMetaAll) return quizMetaAll;
+  try {
+    const res = await fetch('./quiz-meta.json?t=' + Date.now());
+    quizMetaAll = res.ok ? await res.json() : {};
+  } catch (e) {
+    quizMetaAll = {};
+  }
+  return quizMetaAll;
+}
+
+async function calculateQuizMeta(quizId, questionsPath) {
+  if (quizMetaCache[quizId] !== undefined) {
+    return quizMetaCache[quizId];
   }
 
+  const all = await loadQuizMetaAll();
+  if (all[quizId] && all[quizId].setCounts) {
+    quizMetaCache[quizId] = all[quizId];
+    return quizMetaCache[quizId];
+  }
+
+  // quiz-meta.json に無い教材（生成前のローカル環境など）だけ従来方式で数える
   let level = 1;
   let total = 0;
   let parts = 0;
   let sets = 0;
+  const setCounts = {};
   while (true) {
     try {
       const res = await fetch(`${questionsPath}questions${level}.json?t=${Date.now()}`);
@@ -683,21 +705,24 @@ async function calculateQuizMeta(questionsPath) {
       if (!data || !Array.isArray(data.tests)) break;
       parts++;
       sets += data.tests.length;
-      total += data.tests.reduce((sum, test) => (
-        sum + (Array.isArray(test.questions) ? test.questions.length : 0)
-      ), 0);
+      setCounts[level] = {};
+      data.tests.forEach(test => {
+        const qCount = Array.isArray(test.questions) ? test.questions.length : 0;
+        setCounts[level][test.id] = qCount;
+        total += qCount;
+      });
       level++;
     } catch (e) {
       break;
     }
   }
 
-  quizMetaCache[questionsPath] = { total, parts, sets };
-  return quizMetaCache[questionsPath];
+  quizMetaCache[quizId] = { total, parts, sets, setCounts };
+  return quizMetaCache[quizId];
 }
 
-async function getQuizScore(collectionName, questionsPath) {
-  const meta = await calculateQuizMeta(questionsPath);
+async function getQuizScore(collectionName, quizId, questionsPath) {
+  const meta = await calculateQuizMeta(quizId, questionsPath);
   const totalQuestions = meta.total;
   if (!currentUser) return { correct: 0, total: totalQuestions, lap: 0 };
   try {
@@ -706,40 +731,26 @@ async function getQuizScore(collectionName, questionsPath) {
 
     const data = doc.data();
     const lap = parseInt(data.lap, 10) || 0;
+    const setCounts = meta.setCounts || {};
     let totalCorrect = 0;
-    let level = 1;
 
-    while (true) {
-      const res = await fetch(`${questionsPath}questions${level}.json?t=${Date.now()}`);
-      if (!res.ok) break;
-      const questionData = await res.json();
-      if (!questionData || !Array.isArray(questionData.tests)) break;
-
-      questionData.tests.forEach(test => {
-        const score = data[`best_${level}_${test.id}`];
+    Object.keys(setCounts).forEach(level => {
+      Object.keys(setCounts[level]).forEach(testId => {
+        const score = data[`best_${level}_${testId}`];
         if (score > 0) {
-          const qCount = Array.isArray(test.questions) ? test.questions.length : 10;
-          totalCorrect += Math.round(score / 100 * qCount);
+          totalCorrect += Math.round(score / 100 * setCounts[level][testId]);
         }
       });
-      level++;
-    }
+    });
 
     // Backward compatibility for older score keys without level prefix.
-    if (totalCorrect === 0) {
-      const firstLevel = await fetch(`${questionsPath}questions1.json?t=${Date.now()}`);
-      if (firstLevel.ok) {
-        const questionData = await firstLevel.json();
-        if (questionData && Array.isArray(questionData.tests)) {
-          questionData.tests.forEach(test => {
-            const score = data[`best_${test.id}`];
-            if (score > 0) {
-              const qCount = Array.isArray(test.questions) ? test.questions.length : 10;
-              totalCorrect += Math.round(score / 100 * qCount);
-            }
-          });
+    if (totalCorrect === 0 && setCounts[1]) {
+      Object.keys(setCounts[1]).forEach(testId => {
+        const score = data[`best_${testId}`];
+        if (score > 0) {
+          totalCorrect += Math.round(score / 100 * setCounts[1][testId]);
         }
-      }
+      });
     }
 
     return { correct: totalCorrect, total: totalQuestions, lap };
@@ -808,8 +819,8 @@ async function updateScoreDisplay() {
   const menuConfig = await loadMenuConfig();
 
   const results = await Promise.all(QUIZZES.map(async q => {
-    const meta = await calculateQuizMeta(q.path);
-    const score = await getQuizScore(q.collection, q.path);
+    const meta = await calculateQuizMeta(q.id, q.path);
+    const score = await getQuizScore(q.collection, q.id, q.path);
     const description = menuConfig[q.id]?.description || '';
     return { ...q, meta, score, description };
   }));

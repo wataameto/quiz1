@@ -64,6 +64,34 @@ try {
   });
   console.log(`✅ Bumped shared asset cache-busting version (${version}) in ${quizDirs.length} quiz pages`);
 
+  // Generate docs/quiz-meta.json: per-quiz part/set/question counts so the
+  // main menu can render totals and compute scores without downloading every
+  // questions*.json on each load.
+  const quizMeta = {};
+  quizDirs.forEach(quiz => {
+    const setCounts = {};
+    let total = 0, parts = 0, sets = 0, level = 1;
+    while (true) {
+      const qPath = path.join(docsDir, quiz, `questions${level}.json`);
+      if (!fs.existsSync(qPath)) break;
+      let data;
+      try { data = JSON.parse(fs.readFileSync(qPath, 'utf-8')); } catch (e) { break; }
+      if (!data || !Array.isArray(data.tests)) break;
+      parts++;
+      sets += data.tests.length;
+      setCounts[level] = {};
+      data.tests.forEach(test => {
+        const qCount = Array.isArray(test.questions) ? test.questions.length : 0;
+        setCounts[level][test.id] = qCount;
+        total += qCount;
+      });
+      level++;
+    }
+    if (parts > 0) quizMeta[quiz] = { parts, sets, total, setCounts };
+  });
+  fs.writeFileSync(path.join(docsDir, 'quiz-meta.json'), JSON.stringify(quizMeta, null, 2), 'utf-8');
+  console.log(`✅ Generated docs/quiz-meta.json (${Object.keys(quizMeta).length} quizzes)`);
+
   console.log(`\n✨ Build info updated successfully`);
 } catch (error) {
   console.error('❌ Error:', error.message);
