@@ -399,19 +399,43 @@ async function getBest(id, level = currentLevel) {
   return (v === undefined || v === null) ? -1 : parseInt(v, 10);
 }
 
-async function setBest(id, s) {
+function historyKey(level, id) {
+  return `history_${level}_${id}`;
+}
+
+function nowJstString() {
+  return new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour12: false });
+}
+
+async function getHistory(id, level = currentLevel) {
+  if (!currentUser) return [];
+  if (!cacheInitialized) {
+    await initializeBestScoresCache();
+  }
+  const h = bestScores[historyKey(level, id)];
+  return Array.isArray(h) ? h : [];
+}
+
+// 試験モード完走のたびに、日時付きで履歴に積み、必要なら最高得点も更新する
+async function recordTestResult(id, s) {
   if (!currentUser) return;
   if (!cacheInitialized) {
     await initializeBestScoresCache();
   }
-  const best = await getBest(id);
-  if (s > best) {
-    try {
-      const collection = getCollectionName();
-      await db.collection(collection).doc(currentUser.uid).set({ [`best_${currentLevel}_${id}`]: s }, { merge: true });
-      bestScores[`best_${currentLevel}_${id}`] = s;
-    } catch (e) { console.error(e); }
-  }
+  try {
+    const bestField = `best_${currentLevel}_${id}`;
+    const historyField = historyKey(currentLevel, id);
+    const best = await getBest(id);
+    const history = await getHistory(id);
+    const updatedHistory = [...history, { score: s, date: nowJstString() }];
+
+    const updates = { [historyField]: updatedHistory };
+    if (s > best) updates[bestField] = s;
+
+    const collection = getCollectionName();
+    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
+    Object.assign(bestScores, updates);
+  } catch (e) { console.error(e); }
 }
 
 function resetScores() {
@@ -436,6 +460,7 @@ async function resetCurrentLevel() {
     for (const t of quizData[currentLevel].tests) {
       fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+      fieldsToDelete[historyKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
     }
     if (snapshot.exists) {
       await doc.update(fieldsToDelete);
@@ -444,6 +469,7 @@ async function resetCurrentLevel() {
     for (const t of quizData[currentLevel].tests) {
       delete bestScores[`best_${currentLevel}_${t.id}`];
       delete bestScores[`wrongAnswers_${currentLevel}_${t.id}`];
+      delete bestScores[historyKey(currentLevel, t.id)];
     }
     soundClick(); showHome();
   } catch (e) { console.error(e); }
@@ -879,10 +905,11 @@ async function showResults() {
   const maxScore = 100;
 
   if (!isReviewMode && !isPracticeModeActive) {
-    await setBest(currentTest.id, score);
+    await recordTestResult(currentTest.id, score);
     await saveWrongAnswers(currentTest.id, answers, currentLevel);
     const best = await getBest(currentTest.id);
-    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点`;
+    const history = await getHistory(currentTest.id);
+    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点 / ${history.length}回`;
     document.getElementById('best-msg').style.display = '';
   } else {
     document.getElementById('best-msg').style.display = 'none';
