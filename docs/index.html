@@ -704,12 +704,13 @@ async function calculateQuizMeta(questionsPath) {
 async function getQuizScore(collectionName, questionsPath) {
   const meta = await calculateQuizMeta(questionsPath);
   const totalQuestions = meta.total;
-  if (!currentUser) return { correct: 0, total: totalQuestions };
+  if (!currentUser) return { correct: 0, total: totalQuestions, lap: 0 };
   try {
     const doc = await db.collection(collectionName).doc(currentUser.uid).get();
-    if (!doc.exists) return { correct: 0, total: totalQuestions };
+    if (!doc.exists) return { correct: 0, total: totalQuestions, lap: 0 };
 
     const data = doc.data();
+    const lap = parseInt(data.lap, 10) || 0;
     let totalCorrect = 0;
     let level = 1;
 
@@ -746,10 +747,10 @@ async function getQuizScore(collectionName, questionsPath) {
       }
     }
 
-    return { correct: totalCorrect, total: totalQuestions };
+    return { correct: totalCorrect, total: totalQuestions, lap };
   } catch (e) {
     console.error(`Error fetching ${collectionName} scores:`, e);
-    return { correct: 0, total: totalQuestions };
+    return { correct: 0, total: totalQuestions, lap: 0 };
   }
 }
 
@@ -827,9 +828,13 @@ async function updateScoreDisplay() {
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
     const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
+    const lap = r.score.lap || 0;
+    const clearMark = lap > 0
+      ? ` <span class="full-clear-mark">⭐×${lap}</span>`
+      : (isFull ? ' <span class="full-clear-mark">✨全クリア</span>' : '');
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
       <span class="score-row-top-line">
-        <span class="score-row-name">${r.emoji} ${r.name}${isFull ? ' <span class=\"full-clear-mark\">✨全クリア</span>' : ''}</span>
+        <span class="score-row-name">${r.emoji} ${r.name}${clearMark}</span>
         <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
       </span>
       <span class="score-row-meta">
