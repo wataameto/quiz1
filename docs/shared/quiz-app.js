@@ -475,6 +475,7 @@ function closeScoreModal() {
 
 async function showScoreHistory() {
   closeScoreModal();
+  if (!cacheInitialized) await initializeBestScoresCache();
   const labelEl = document.getElementById('history-part-label');
   if (labelEl) labelEl.textContent = '全パート';
 
@@ -482,6 +483,16 @@ async function showScoreHistory() {
   if (listEl) listEl.innerHTML = '<p style="text-align:center; color:#a0aec0;">読み込み中…</p>';
 
   const partSections = [];
+
+  const lapHistory = getLapHistory();
+  if (lapHistory.length > 0) {
+    const lapEntriesHtml = [...lapHistory].reverse().map(h =>
+      `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">🌟 ${h.lap}周目へ</span></div>`
+    ).join('');
+    partSections.push(
+      `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c4a00; background:linear-gradient(135deg, #fffbea, #fff3c4); border-radius:8px; padding:8px 12px; margin-bottom:10px;">🌟 周回履歴</div>${lapEntriesHtml}</div>`
+    );
+  }
   for (let level = 1; level <= maxLevel; level++) {
     const levelData = quizData[level];
     if (!levelData) continue;
@@ -627,12 +638,18 @@ function getLap() {
 // 周回数(lap)だけを加算する。best_が消えない限り何度でも呼べる設計。
 // 2周目に入る＝各セットの最高点・誤答記録を振り出しに戻す（挑戦履歴histoy_だけは残す）。
 // これで「もう一度全問正解を取り直す」という周回の実感が出る。
+function getLapHistory() {
+  const h = bestScores['lapHistory'];
+  return Array.isArray(h) ? h : [];
+}
+
 async function advanceLap() {
   if (!currentUser) return;
   if (!cacheInitialized) await initializeBestScoresCache();
   try {
     const newLap = getLap() + 1;
-    const fieldsToDelete = { lap: newLap };
+    const newLapHistory = [...getLapHistory(), { lap: newLap, date: nowJstString() }];
+    const fieldsToDelete = { lap: newLap, lapHistory: newLapHistory };
     for (let level = 1; level <= maxLevel; level++) {
       if (!quizData[level] || !quizData[level].tests) continue;
       for (const t of quizData[level].tests) {
@@ -642,9 +659,10 @@ async function advanceLap() {
     }
     const collection = getCollectionName();
     await db.collection(collection).doc(currentUser.uid).set(fieldsToDelete, { merge: true });
-    // ローカルキャッシュも同期: best_/wrongAnswers_は削除、lapだけ更新
+    // ローカルキャッシュも同期: best_/wrongAnswers_は削除、lap/lapHistoryだけ更新
     Object.keys(fieldsToDelete).forEach(key => {
       if (key === 'lap') { bestScores.lap = newLap; return; }
+      if (key === 'lapHistory') { bestScores.lapHistory = newLapHistory; return; }
       delete bestScores[key];
     });
     soundFanfare();
