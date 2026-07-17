@@ -596,9 +596,22 @@ function closeHistoryModal() {
   if (modal) modal.style.display = 'none';
 }
 
+function confirmDeleteSelectedHistory() {
+  const checked = document.querySelectorAll('.history-check:checked');
+  if (checked.length === 0) return;
+  const modal = document.getElementById('delete-history-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeDeleteHistoryModal() {
+  const modal = document.getElementById('delete-history-modal');
+  if (modal) modal.style.display = 'none';
+}
+
 // チェックした履歴だけまとめて削除する（history_配列からその要素を取り除くだけで、
 // best_やattemptCount_、周回数などには触れない）
 async function deleteSelectedHistory() {
+  closeDeleteHistoryModal();
   if (!currentUser) return;
   const checked = document.querySelectorAll('.history-check:checked');
   if (checked.length === 0) return;
@@ -748,7 +761,18 @@ function getLapHistory() {
   return Array.isArray(h) ? h : [];
 }
 
+function confirmAdvanceLap() {
+  const modal = document.getElementById('advance-lap-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeAdvanceLapModal() {
+  const modal = document.getElementById('advance-lap-modal');
+  if (modal) modal.style.display = 'none';
+}
+
 async function advanceLap() {
+  closeAdvanceLapModal();
   if (!currentUser) return;
   if (!cacheInitialized) await initializeBestScoresCache();
   try {
@@ -808,7 +832,7 @@ async function showHome() {
     if (fullyCleared) {
       bannerHtml += `<div class="full-clear-celebrate">
         <p>🎉 全問正解達成！</p>
-        <button onclick="advanceLap()">🏁 次の周へ進む</button>
+        <button onclick="confirmAdvanceLap()">🏁 次の周へ進む</button>
       </div>`;
     }
     bannerEl.innerHTML = bannerHtml;
