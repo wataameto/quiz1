@@ -502,6 +502,7 @@ async function showScoreHistory() {
     const setSections = [];
     for (const t of tests) {
       const history = await getHistory(t.id, level);
+      const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
       history.forEach(h => {
         const ts = parseJstDateString(h.date);
         if (ts !== null && (earliestDate === null || ts < earliestDate.ts)) {
@@ -510,7 +511,7 @@ async function showScoreHistory() {
       });
       const entriesHtml = history.length
         ? [...history].reverse().map(h =>
-            `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">${h.score}点</span></div>`
+            `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(h.date)}</span><span style="font-weight:700;">${Math.round(h.score / 100 * qCount)}/${qCount}問</span></div>`
           ).join('')
         : `<p style="font-size:0.82rem; color:#a0aec0; padding:4px 0; margin:0;">まだ記録がありません</p>`;
       setSections.push(
