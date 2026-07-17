@@ -515,9 +515,9 @@ async function showHome() {
   const { total, attempted } = await getTotalCorrect();
   const totalEl = document.getElementById('total-score-display');
   if (attempted === 0) {
-    totalEl.innerHTML = `☑️未挑戦/${totalQuestionsAllLevels}`;
+    totalEl.innerHTML = `✅未挑戦/${totalQuestionsAllLevels}`;
   } else {
-    totalEl.innerHTML = `☑️${total}問正解/${totalQuestionsAllLevels}`;
+    totalEl.innerHTML = `✅${total}問正解/${totalQuestionsAllLevels}`;
   }
 
   const currentLevelData = quizData[currentLevel];
