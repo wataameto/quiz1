@@ -871,7 +871,10 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
       : `<button class="set-practice-btn" onclick="goToTest(${level}, ${t.id}, false, true);"><span class="btn-title">演習モード</span><span class="btn-sub">記録なし</span></button>`;
 
     const bestCorrect = Math.round(best / 100 * questionCount);
-    const scoreText = best >= 0 ? `🏆 最高 <span>${bestCorrect}/${questionCount}問</span>` : '🔰 未挑戦';
+    // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
+    const history = await getHistory(t.id, level);
+    const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
+    const scoreText = best >= 0 ? `🏆 最高 <span>${bestCorrect}/${questionCount}問</span>(${attemptCount}回)` : '🔰 未挑戦';
 
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
