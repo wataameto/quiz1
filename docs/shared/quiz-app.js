@@ -625,15 +625,28 @@ function getLap() {
 
 // 全問正解を達成した状態で呼ばれる。既存のbest/history/wrongAnswersは一切変更せず、
 // 周回数(lap)だけを加算する。best_が消えない限り何度でも呼べる設計。
+// 2周目に入る＝各セットの最高点・誤答記録を振り出しに戻す（挑戦履歴histoy_だけは残す）。
+// これで「もう一度全問正解を取り直す」という周回の実感が出る。
 async function advanceLap() {
   if (!currentUser) return;
   if (!cacheInitialized) await initializeBestScoresCache();
   try {
     const newLap = getLap() + 1;
-    const updates = { lap: newLap };
+    const fieldsToDelete = { lap: newLap };
+    for (let level = 1; level <= maxLevel; level++) {
+      if (!quizData[level] || !quizData[level].tests) continue;
+      for (const t of quizData[level].tests) {
+        fieldsToDelete[`best_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+        fieldsToDelete[`wrongAnswers_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+      }
+    }
     const collection = getCollectionName();
-    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
-    Object.assign(bestScores, updates);
+    await db.collection(collection).doc(currentUser.uid).set(fieldsToDelete, { merge: true });
+    // ローカルキャッシュも同期: best_/wrongAnswers_は削除、lapだけ更新
+    Object.keys(fieldsToDelete).forEach(key => {
+      if (key === 'lap') { bestScores.lap = newLap; return; }
+      delete bestScores[key];
+    });
     soundFanfare();
     launchConfetti(80);
     showHome();
