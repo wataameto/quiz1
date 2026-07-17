@@ -904,11 +904,10 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
     // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
     const history = await getHistory(t.id, level);
     const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
-    // 最高点は試験モードボタン内に表示するので、ここでは未挑戦のときだけ出す
-    const scoreText = best >= 0 ? '' : '🔰 未挑戦';
+    // 最高点・未挑戦の表示は試験モードボタン内に統一する
     const examSub = best >= 0
       ? `<span class="btn-sub btn-sub-score">最高 ${bestCorrect}/${questionCount}問(${attemptCount}回)</span>`
-      : `<span class="btn-sub">記録あり</span>`;
+      : `<span class="btn-sub btn-sub-score">成績記録あり　🔰未挑戦</span>`;
 
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
@@ -917,7 +916,6 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
         <div class="set-sub">${escapeHtml(t.subtitle || partLabel)} ${questionCount}問</div>
       </div>
       <div class="set-meta">
-        <div class="set-score">${scoreText}</div>
         <div class="set-actions">
           <button class="set-exam-btn" onclick="goToTest(${level}, ${t.id}, false, false);"><span class="btn-title">試験モード</span>${examSub}</button>
           ${secondaryBtn}
