@@ -824,9 +824,12 @@ async function updateScoreDisplay() {
     totalQuestions += r.score.total;
     const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
     const lap = r.score.lap || 0;
-    const clearMark = lap > 0
-      ? `<span class="full-clear-mark">⭐×${lap}</span> `
-      : (isFull ? '<span class="full-clear-mark">✨全クリア</span> ' : '');
+    const markParts = [];
+    if (lap > 0) markParts.push(`⭐×${lap}`);
+    if (isFull) markParts.push('✨全クリア');
+    const clearMark = markParts.length
+      ? `<span class="full-clear-mark">${markParts.join(' ')}</span> `
+      : '';
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
       <span class="score-row-top-line">
         <span class="score-row-name">${r.emoji} ${r.name}</span>
