@@ -668,16 +668,15 @@ function loginFromPromptModal() {
 
 // ビルド時に scripts/update-build-time.js が生成する quiz-meta.json を1回だけ読む。
 // これで問題数計算のために各教材の questions*.json を全部ダウンロードせずに済む。
-let quizMetaAll = null;
-async function loadQuizMetaAll() {
-  if (quizMetaAll) return quizMetaAll;
-  try {
-    const res = await fetch('./quiz-meta.json?t=' + Date.now());
-    quizMetaAll = res.ok ? await res.json() : {};
-  } catch (e) {
-    quizMetaAll = {};
+// Promise自体をキャッシュすることで、8教材ぶん並列に呼ばれてもfetchは1回だけになる
+let quizMetaAllPromise = null;
+function loadQuizMetaAll() {
+  if (!quizMetaAllPromise) {
+    quizMetaAllPromise = fetch('./quiz-meta.json?t=' + Date.now())
+      .then(res => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
   }
-  return quizMetaAll;
+  return quizMetaAllPromise;
 }
 
 async function calculateQuizMeta(quizId, questionsPath) {
