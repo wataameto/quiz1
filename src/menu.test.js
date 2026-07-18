@@ -20,9 +20,12 @@ describe('Main menu HTML', () => {
     expect(indexHtml).toContain('教材を選択するにはログインしてください');
   });
 
-  test('should use configured quiz names in menu labels', () => {
-    expect(indexHtml).toContain(config.bokinyu.heading);
-    expect(indexHtml).toContain(config.devops.heading);
+  test('should build the quiz list from config.json instead of duplicating it in index.html', () => {
+    // 教材一覧はconfig.jsonのキーから動的に組み立てる（QUIZZES配列のような
+    // 別の静的一覧をindex.html側に持たせない、二重管理を避ける設計）
+    expect(indexHtml).toContain('Object.keys(menuConfig)');
+    expect(indexHtml).toContain('cfg.heading');
+    expect(indexHtml).not.toContain(`id: '${Object.keys(config)[0]}'`);
   });
 
   test('should show part counts from question metadata', () => {

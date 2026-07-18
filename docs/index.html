@@ -644,23 +644,6 @@ const quizMetaCache = {};
 let visiblePrefs = null; // null = not loaded from Firestore yet
 let pendingPrefsSave = null; // in-flight Firestore write, if any
 
-const QUIZZES = [
-  { id: 'sample', emoji: '🎲', name: 'サンプル教材', path: './sample/', collection: 'quiz_sample' },
-  { id: 'sample2', emoji: '🎲', name: 'サンプル教材2（最小構成）', path: './sample2/', collection: 'quiz_sample2' },
-  { id: 'bokinyu', emoji: '📚', name: '簿記超入門レベル', path: './bokinyu/', collection: 'quiz_bokinyu' },
-  { id: 'devops', emoji: '☁️', name: 'AWS認定DevOpsエンジニア(DOP-C02)', path: './devops/', collection: 'quiz_devops' },
-  { id: 'sapc02', emoji: '🏛️', name: 'AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)', path: './sapc02/', collection: 'quiz_sapc02' },
-  { id: 'koukyou1', emoji: '⚖️', name: '公共1 高校１年１学期末考査対策', path: './koukyou1/', collection: 'quiz_koukyou1' },
-  { id: 'jouhou1', emoji: '💻', name: '情報処理1 練習問題', path: './jouhou1/', collection: 'quiz_jouhou1' },
-  { id: 'itpass', emoji: '🧭', name: '（IPA）ITパスポート試験', path: './itpass/', collection: 'quiz_itpass' },
-  { id: 'itpassjr', emoji: '🌱', name: 'ITパスポートJr（やさしい版）', path: './itpassjr/', collection: 'quiz_itpassjr' },
-  { id: 'fp3kyuu', emoji: '💰', name: 'FP技能検定3級', path: './fp3kyuu/', collection: 'quiz_fp3kyuu' },
-  { id: 'takken', emoji: '🏘️', name: '宅地建物取引士（宅建士）', path: './takken/', collection: 'quiz_takken' },
-  { id: 'shouwa', emoji: '🎏', name: '昭和レトロ雑学', path: './shouwa/', collection: 'quiz_shouwa' },
-  { id: 'heisei', emoji: '📼', name: '平成レトロ雑学', path: './heisei/', collection: 'quiz_heisei' },
-  { id: 'capital', emoji: '🌍', name: '世界の首都クイズ', path: './capital/', collection: 'quiz_capital' },
-];
-
 // Firebase の signInWithPopup/signInWithRedirect は iPhone Chrome (CriOS)
 // で機能しない（redirect は firebaseapp.com への別ドメインiframeに依存
 // しており、Chrome M115+等のサードパーティストレージ制限でブロックされる）。
@@ -921,11 +904,15 @@ async function updateScoreDisplay() {
   }
   const menuConfig = await loadMenuConfig();
 
-  const results = await Promise.all(QUIZZES.map(async q => {
-    const meta = await calculateQuizMeta(q.id, q.path);
-    const score = await getQuizScore(q.collection, q.id, q.path);
-    const description = menuConfig[q.id]?.description || '';
-    return { ...q, meta, score, description };
+  // 教材の一覧はconfig.jsonのキーから組み立てる（path=./<id>/、collection=quiz_<id>という
+  // 命名規則で導出できるため、docs/index.html側に別途一覧を持つ必要がない）。
+  const results = await Promise.all(Object.keys(menuConfig).map(async id => {
+    const cfg = menuConfig[id] || {};
+    const path = `./${id}/`;
+    const collection = `quiz_${id}`;
+    const meta = await calculateQuizMeta(id, path);
+    const score = await getQuizScore(collection, id, path);
+    return { id, path, collection, emoji: cfg.icon || '', name: cfg.heading || id, description: cfg.description || '', meta, score };
   }));
   lastQuizResults = results;
 
