@@ -677,6 +677,38 @@ function closeResetModal() {
   if (modal) modal.style.display = 'none';
 }
 
+// リセットは危険操作なので、実行前にもう1段階「本当に消しますか」の確認を挟む
+let pendingResetType = null;
+
+function confirmResetCurrentLevel() {
+  pendingResetType = 'current';
+  const msgEl = document.getElementById('reset-danger-message');
+  if (msgEl) msgEl.textContent = '現在のパートの最高点・誤答記録・挑戦履歴・通し回数を削除します。';
+  const modal = document.getElementById('reset-danger-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function confirmResetAllLevels() {
+  pendingResetType = 'all';
+  const msgEl = document.getElementById('reset-danger-message');
+  if (msgEl) msgEl.textContent = 'この教材の成績データを全部（周回数・周回履歴・全問正解達成記録も含む）削除します。';
+  const modal = document.getElementById('reset-danger-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeResetDangerModal() {
+  pendingResetType = null;
+  const modal = document.getElementById('reset-danger-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+async function executeResetDanger() {
+  const type = pendingResetType;
+  closeResetDangerModal();
+  if (type === 'current') await resetCurrentLevel();
+  else if (type === 'all') await resetAllLevels();
+}
+
 async function resetCurrentLevel() {
   if (!currentUser) return;
   closeResetModal();

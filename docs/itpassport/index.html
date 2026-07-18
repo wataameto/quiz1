@@ -8,7 +8,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260718094501">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260718094812">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -152,14 +152,28 @@
       <p style="color:#718096; margin-bottom:18px; font-size:0.95rem;">どのスコアをリセットしますか？</p>
       <div style="display:flex; flex-direction:column; gap:10px;">
         <div style="text-align:left; border:1.5px solid #f7971e; border-radius:10px; padding:10px 12px;">
-          <button onclick="resetCurrentLevel()" style="width:100%; padding:10px; background:#f7971e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">現在のパートのみ</button>
+          <button onclick="confirmResetCurrentLevel()" style="width:100%; padding:10px; background:#f7971e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">現在のパートのみ</button>
           <p style="margin:0; font-size:0.76rem; color:#7c4a00; line-height:1.5;">消える: このパートの最高点・誤答記録・挑戦履歴・通し回数<br>残る: 周回数(⭐)・周回履歴・全問正解達成記録、他のパートの成績</p>
         </div>
         <div style="text-align:left; border:1.5px solid #e53e3e; border-radius:10px; padding:10px 12px;">
-          <button onclick="resetAllLevels()" style="width:100%; padding:10px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">全パート削除</button>
+          <button onclick="confirmResetAllLevels()" style="width:100%; padding:10px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">全パート削除</button>
           <p style="margin:0; font-size:0.76rem; color:#9b2c2c; line-height:1.5;">消える: この教材の成績データを全部（周回数・周回履歴・全問正解達成記録も含む）</p>
         </div>
         <button onclick="closeResetModal()" style="padding:10px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- リセット最終確認（危険操作） -->
+  <div id="reset-danger-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; z-index:10001;">
+    <div style="background:#fff; border-radius:16px; padding:20px; box-shadow:0 20px 60px rgba(0,0,0,0.45); max-width:400px; width:90%; text-align:center; border:3px solid #e53e3e;">
+      <div style="font-size:2.6rem; margin-bottom:6px; line-height:1;">💣</div>
+      <h2 style="font-size:1.15rem; color:#c53030; margin-bottom:10px; font-weight:800; letter-spacing:0.05em;">⚠️ 危険操作 ⚠️</h2>
+      <p id="reset-danger-message" style="color:#4a5568; margin-bottom:8px; font-size:0.9rem; font-weight:700; line-height:1.5;"></p>
+      <p style="color:#e53e3e; margin-bottom:20px; font-size:0.85rem; font-weight:800;">この操作は取り消せません。本当によろしいですか？</p>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeResetDangerModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
+        <button onclick="executeResetDanger()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:800; color:#fff; font-family:inherit;">💣 実行する</button>
       </div>
     </div>
   </div>
@@ -189,6 +203,6 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260718094501"></script>
+<script src="../shared/quiz-app.js?v=20260718094812"></script>
 </body>
 </html>
