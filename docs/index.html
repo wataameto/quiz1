@@ -284,6 +284,75 @@
       min-height: 220px;
     }
 
+    .pwa-install-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+      border: 1.5px solid #c7d2fe;
+      border-radius: 12px;
+      padding: 10px 14px;
+      max-width: 600px;
+      margin: 0 auto 16px;
+      font-size: 0.85rem;
+      color: #3730a3;
+    }
+
+    .pwa-install-banner-text {
+      flex: 1;
+      min-width: 0;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .pwa-install-banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .pwa-install-btn {
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+
+    .pwa-install-btn:hover {
+      background: #4338ca;
+      transform: translateY(-1px);
+    }
+
+    .pwa-install-close {
+      background: transparent;
+      border: none;
+      color: #6366f1;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 2px 6px;
+      font-family: inherit;
+    }
+
+    .pwa-install-footer-hint {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #edf2f7;
+      font-size: 0.76rem;
+      color: #a0aec0;
+      text-align: center;
+      line-height: 1.6;
+    }
+
     .score-summary {
       background: linear-gradient(135deg, #fffbea, #fff3c4);
       border-radius: 16px;
@@ -576,6 +645,13 @@
         <p class="app-subtitle">（反復学習システム）</p>
       </div>
     </div>
+    <div class="pwa-install-banner hidden" id="pwa-install-banner">
+      <span class="pwa-install-banner-text" id="pwa-install-banner-text"></span>
+      <span class="pwa-install-banner-actions">
+        <button class="pwa-install-btn hidden" id="pwa-install-btn" onclick="installPwa()">インストール</button>
+        <button class="pwa-install-close" onclick="dismissPwaInstallBanner()" aria-label="閉じる">✕</button>
+      </span>
+    </div>
     <div class="score-summary" id="score-summary">
       <div class="score-summary-top">
         <h3 class="score-summary-heading">あなたの選択教材</h3>
@@ -596,6 +672,7 @@
       >
       <div id="quiz-toggle-list"></div>
       <p id="quiz-search-empty" class="quiz-search-empty hidden">一致する教材がありません</p>
+      <p class="pwa-install-footer-hint hidden" id="pwa-install-footer-hint"></p>
     </div>
 
     <div class="footer">
@@ -986,6 +1063,82 @@ function showHomeScreen() {
   document.getElementById('screen-home').classList.remove('hidden');
   renderAuthStatus();
   updateScoreDisplay();
+  renderPwaInstallUI();
+}
+
+// ===== PWAインストール導線 =====
+let deferredInstallPrompt = null;
+const PWA_BANNER_SNOOZE_KEY = 'pwaInstallBannerDismissedAt';
+const PWA_BANNER_SNOOZE_DAYS = 14;
+
+function isRunningStandalone() {
+  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+}
+
+function isIosDevice() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  renderPwaInstallUI();
+});
+
+window.addEventListener('appinstalled', () => {
+  deferredInstallPrompt = null;
+  const banner = document.getElementById('pwa-install-banner');
+  const footerHint = document.getElementById('pwa-install-footer-hint');
+  if (banner) banner.classList.add('hidden');
+  if (footerHint) footerHint.classList.add('hidden');
+});
+
+// バナー（×で閉じられる）とフッターの常設ヒント（×で閉じても消えない）を出し分ける。
+// すでにホーム画面から起動済み（standalone）なら両方とも不要。
+function renderPwaInstallUI() {
+  const banner = document.getElementById('pwa-install-banner');
+  const bannerText = document.getElementById('pwa-install-banner-text');
+  const installBtn = document.getElementById('pwa-install-btn');
+  const footerHint = document.getElementById('pwa-install-footer-hint');
+  if (!banner || !bannerText || !installBtn || !footerHint) return;
+
+  if (isRunningStandalone()) {
+    banner.classList.add('hidden');
+    footerHint.classList.add('hidden');
+    return;
+  }
+
+  const ios = isIosDevice();
+
+  footerHint.textContent = ios
+    ? '📲 Safariの共有ボタン（□に↑）→「ホーム画面に追加」でアプリのように使えます（Chromeなど他のブラウザでは追加できません）'
+    : '📲 ブラウザのインストールボタン（アドレスバー付近）から、ホーム画面に追加できます';
+  footerHint.classList.remove('hidden');
+
+  const dismissedAt = parseInt(localStorage.getItem(PWA_BANNER_SNOOZE_KEY) || '0', 10);
+  const snoozeMs = PWA_BANNER_SNOOZE_DAYS * 24 * 60 * 60 * 1000;
+  if (dismissedAt && Date.now() - dismissedAt < snoozeMs) {
+    banner.classList.add('hidden');
+    return;
+  }
+
+  bannerText.textContent = 'ホーム画面に追加すると、アプリのようにすぐ開けます';
+  installBtn.classList.toggle('hidden', !deferredInstallPrompt);
+  banner.classList.remove('hidden');
+}
+
+async function installPwa() {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  document.getElementById('pwa-install-btn')?.classList.add('hidden');
+}
+
+function dismissPwaInstallBanner() {
+  localStorage.setItem(PWA_BANNER_SNOOZE_KEY, String(Date.now()));
+  const banner = document.getElementById('pwa-install-banner');
+  if (banner) banner.classList.add('hidden');
 }
 
 function renderAuthStatus() {
