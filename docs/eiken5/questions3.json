@@ -1,0 +1,198 @@
+{
+  "id": "eiken5",
+  "level": 3,
+  "label": "🔤 基礎単語編③",
+  "description": "英検5級レベルの基本英単語③（動詞・名詞・形容詞・代名詞・前置詞・日常会話）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編⑤",
+      "type": "Basic Verbs 5",
+      "emoji": "🏊",
+      "subtitle": "いろいろな動作や生活を表す動詞",
+      "questions": [
+        {"scenario": "「swim」の意味として最も適切なものは？", "choices": ["泳ぐ", "走る", "飛ぶ", "潜る"], "correct": 0, "explanation": "swimは「泳ぐ」という意味の動詞です。例: swim in the pool（プールで泳ぐ）", "type": "choice"},
+        {"scenario": "「cook」の意味として最も適切なものは？", "choices": ["料理する", "食べる", "洗う", "切る"], "correct": 0, "explanation": "cookは「料理する、食事を作る」という意味の動詞です。例: cook dinner（夕食を作る）", "type": "choice"},
+        {"scenario": "「live」の意味として最も適切なものは？", "choices": ["住む、生きる", "去る", "死ぬ", "働く"], "correct": 0, "explanation": "liveは「住む」「生きる」という意味の動詞です。例: live in Tokyo（東京に住む）", "type": "choice"},
+        {"scenario": "「meet」の意味として最も適切なものは？", "choices": ["会う、見かける", "別れる", "話す", "紹介する"], "correct": 0, "explanation": "meetは「（約束して、または偶然）会う」という意味の動詞です。例: meet friends（友達に会う）", "type": "choice"},
+        {"scenario": "「sit」の意味として最も適切なものは？", "choices": ["座る", "立つ", "歩く", "走る"], "correct": 0, "explanation": "sitは「座る」という意味の動詞です。通常 sit down（座る）の形でよく使います。", "type": "choice"},
+        {"scenario": "「stand」の意味として最も適切なものは？", "choices": ["立つ、立っている", "座る", "横たわる", "跳ぶ"], "correct": 0, "explanation": "standは「立つ、立っている」という意味の動詞です。通常 stand up（立ち上がる）の形でよく使います。", "type": "choice"},
+        {"scenario": "「talk」の意味として最も適切なものは？", "choices": ["話す、おしゃべりする", "聞く", "歌う", "叫ぶ"], "correct": 0, "explanation": "talkは「（誰かと）話す、おしゃべりする」という意味の動詞です。通常 talk with 〜（〜と話す）のように使います。", "type": "choice"},
+        {"scenario": "「tell」の意味として最も適切なものは？", "choices": ["言う、教える、伝える", "尋ねる", "信じる", "知る"], "correct": 0, "explanation": "tellは「（情報を相手に）言う、教える、伝える」という意味の動詞です。例: tell a story（話を伝える）", "type": "choice"},
+        {"scenario": "「ask」の意味として最も適切なものは？", "choices": ["尋ねる、頼む", "答える", "断る", "忘れる"], "correct": 0, "explanation": "askは「（質問を）尋ねる」「（お願いを）頼む」という意味の動詞です。例: ask a question（質問をする）", "type": "choice"},
+        {"scenario": "「call」の意味として最も適切なものは？", "choices": ["呼ぶ、電話する", "答える", "聞く", "話す"], "correct": 0, "explanation": "callは「大声で呼ぶ」「電話をかける」という意味の動詞です。例: call me later（後で電話してね）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編⑥",
+      "type": "Basic Verbs 6",
+      "emoji": "💃",
+      "subtitle": "表現力や学びに関する動詞",
+      "questions": [
+        {"scenario": "「dance」の意味として最も適切なものは？", "choices": ["踊る、ダンスをする", "歌う", "走る", "跳ぶ"], "correct": 0, "explanation": "danceは「踊る、ダンスをする」という意味の動詞です。名詞で「踊り」という意味もあります。", "type": "choice"},
+        {"scenario": "「ride」の意味として最も適切なものは？", "choices": ["（自転車や馬に）乗る", "運転する", "歩く", "走る"], "correct": 0, "explanation": "rideは自転車、バイク、馬などに跨って「乗る」という意味の動詞です。例: ride a bike（自転車に乗る）", "type": "choice"},
+        {"scenario": "「drive」の意味として最も適切なものは？", "choices": ["（車を）運転する", "乗る", "歩く", "止める"], "correct": 0, "explanation": "driveは車などを「運転する」という意味の動詞です。例: drive a car（車を運転する）", "type": "choice"},
+        {"scenario": "「teach」の意味として最も適切なものは？", "choices": ["教える", "学ぶ", "話す", "質問する"], "correct": 0, "explanation": "teachは勉強や技術を「教える」という意味の動詞です。例: teach English（英語を教える）", "type": "choice"},
+        {"scenario": "「learn」の意味として最も適切なものは？", "choices": ["学ぶ、習う", "教える", "忘れる", "思い出す"], "correct": 0, "explanation": "learnは勉強や技術を「学ぶ、習う」という意味の動詞です。例: learn piano（ピアノを習う）", "type": "choice"},
+        {"scenario": "「fly」の意味として最も適切なものは？", "choices": ["飛ぶ、飛行機で行く", "走る", "泳ぐ", "跳ぶ"], "correct": 0, "explanation": "flyは「（空を）飛ぶ」という意味の動詞です。例: birds fly（鳥が飛ぶ）", "type": "choice"},
+        {"scenario": "「bring」の意味として最も適切なものは？", "choices": ["持ってくる、連れてくる", "持っていく", "捨てる", "置く"], "correct": 0, "explanation": "bringは「持ってくる、連れてくる」という意味の動詞です。対義語はtake（持っていく）です。", "type": "choice"},
+        {"scenario": "「carry」の意味として最も適切なものは？", "choices": ["運ぶ、持ち歩く", "置く", "投げる", "落とす"], "correct": 0, "explanation": "carryは荷物などを「運ぶ、持ち歩く」という意味の動詞です。例: carry a bag（バッグを運ぶ）", "type": "choice"},
+        {"scenario": "「cry」の意味として最も適切なものは？", "choices": ["泣く、叫ぶ", "笑う", "怒る", "歌う"], "correct": 0, "explanation": "cryは「泣く」または大声で「叫ぶ」という意味の動詞です。例: The baby is crying.（赤ちゃんが泣いています。）", "type": "choice"},
+        {"scenario": "「smile」の意味として最も適切なものは？", "choices": ["ほほえむ、にっこり笑う", "泣く", "怒る", "叫ぶ"], "correct": 0, "explanation": "smileは「ほほえむ、にっこり笑う」という意味の動詞です。名詞で「笑顔」という意味もあります。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編⑨：衣類・身の回りのもの",
+      "type": "Nouns: Clothes & Belongings",
+      "emoji": "🧢",
+      "subtitle": "身につけるものや持ち物に関する名詞",
+      "questions": [
+        {"scenario": "「cap」の意味として最も適切なものは？", "choices": ["（前につばのある）帽子", "（ふちのある）帽子", "靴下", "手袋"], "correct": 0, "explanation": "capは野球帽などの「前につばのある帽子」を表す名詞です。", "type": "choice"},
+        {"scenario": "「hat」の意味として最も適切なものは？", "choices": ["（ふちがまわりにある）帽子", "つばのない帽子", "スカーフ", "カバン"], "correct": 0, "explanation": "hatは麦わら帽子などの「周囲全体にふちがある帽子」を表す名詞です。", "type": "choice"},
+        {"scenario": "「shoes」の意味として最も適切なものは？", "choices": ["靴（一足）", "靴下", "帽子", "洋服"], "correct": 0, "explanation": "shoesは「靴」という意味の名詞です。通常左右で一足のため複数形で使われます。", "type": "choice"},
+        {"scenario": "「coat」の意味として最も適切なものは？", "choices": ["コート、上着", "ズボン", "スカート", "シャツ"], "correct": 0, "explanation": "coatは「コート、上着」という意味の名詞です。寒い日に着る防寒着です。", "type": "choice"},
+        {"scenario": "「shirt」の意味として最も適切なものは？", "choices": ["シャツ、ワイシャツ", "ズボン", "帽子", "靴下"], "correct": 0, "explanation": "shirtは「シャツ、ワイシャツ」を表す名詞です。T-shirt（Tシャツ）もここから来ています。", "type": "choice"},
+        {"scenario": "「cup」の意味として最も適切なものは？", "choices": ["カップ、茶わん", "皿", "箸", "スプーン"], "correct": 0, "explanation": "cupは「カップ、湯飲み、茶わん」を表す名詞です。温かい飲み物を入れる器です。", "type": "choice"},
+        {"scenario": "「ring」の意味として最も適切なものは？", "choices": ["指輪、輪", "時計", "鍵", "財布"], "correct": 0, "explanation": "ringは「指輪」または「輪」という意味の名詞です。例: a gold ring（金の指輪）", "type": "choice"},
+        {"scenario": "「clock」の意味として最も適切なものは？", "choices": ["（壁掛け・置き）時計", "腕時計", "カレンダー", "鏡"], "correct": 0, "explanation": "clockは壁や机に置く「（携帯しない）時計」を表す名詞です。腕時計はwatchと言います。", "type": "choice"},
+        {"scenario": "「money」の意味として最も適切なものは？", "choices": ["お金", "財布", "カード", "切符"], "correct": 0, "explanation": "moneyは「お金」という意味の名詞です。例: save money（お金を貯める）", "type": "choice"},
+        {"scenario": "「card」の意味として最も適切なものは？", "choices": ["カード、はがき", "紙", "本", "ノート"], "correct": 0, "explanation": "cardは「カード」または「トランプ」「はがき」などを表す名詞です。例: library card（図書カード）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編⑩：家の中のもの",
+      "type": "Nouns: House Items",
+      "emoji": "🛋️",
+      "subtitle": "家や部屋の中にある家具や設備の名前",
+      "questions": [
+        {"scenario": "「door」の意味として最も適切なものは？", "choices": ["ドア、扉", "窓", "床", "壁"], "correct": 0, "explanation": "doorは「ドア、扉、出入り口」という意味の名詞です。例: open the door（ドアを開ける）", "type": "choice"},
+        {"scenario": "「window」の意味として最も適切なものは？", "choices": ["窓", "ドア", "屋根", "庭"], "correct": 0, "explanation": "windowは「窓」という意味の名詞です。例: close the window（窓を閉める）", "type": "choice"},
+        {"scenario": "「bed」の意味として最も適切なものは？", "choices": ["ベッド、寝台", "布団", "ソファー", "机"], "correct": 0, "explanation": "bedは「ベッド、寝台」という意味の名詞です。例: go to bed（寝る）", "type": "choice"},
+        {"scenario": "「table」の意味として最も適切なものは？", "choices": ["テーブル、食卓", "学習机", "椅子", "本棚"], "correct": 0, "explanation": "tableは主に食事や作業に使う「テーブル、食卓」を表す名詞です。", "type": "choice"},
+        {"scenario": "「box」の意味として最も適切なものは？", "choices": ["箱、ボックス", "袋", "カゴ", "缶"], "correct": 0, "explanation": "boxは「箱、ボックス」という意味の名詞です。例: lunch box（お弁当箱）", "type": "choice"},
+        {"scenario": "「key」の意味として最も適切なものは？", "choices": ["鍵", "錠前", "ドアノブ", "財布"], "correct": 0, "explanation": "keyは「鍵（かぎ）」という意味の名詞です。例: find a key（鍵を見つける）", "type": "choice"},
+        {"scenario": "「telephone」の意味として最も適切なものは？", "choices": ["電話", "テレビ", "パソコン", "カメラ"], "correct": 0, "explanation": "telephoneは「電話、電話機」という意味の名詞です。短縮してphoneとも言います。", "type": "choice"},
+        {"scenario": "「computer」の意味として最も適切なものは？", "choices": ["コンピューター、パソコン", "テレビ", "ラジオ", "電卓"], "correct": 0, "explanation": "computerは「コンピューター、パソコン」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「TV」の意味として最も適切なものは？", "choices": ["テレビ", "ラジオ", "ビデオ", "電話"], "correct": 0, "explanation": "TVはtelevisionの略で、「テレビ」という意味の名詞です。例: watch TV（テレビを見る）", "type": "choice"},
+        {"scenario": "「kitchen」の意味として最も適切なものは？", "choices": ["台所、キッチン", "居間", "寝室", "浴室"], "correct": 0, "explanation": "kitchenは料理を作る「台所、キッチン」を表す名詞です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編⑪：乗り物・街の様子",
+      "type": "Nouns: Vehicles & Streets",
+      "emoji": "🚌",
+      "subtitle": "交通機関や街の中にあるものの名前",
+      "questions": [
+        {"scenario": "「bus」の意味として最も適切なものは？", "choices": ["バス", "電車", "タクシー", "自転車"], "correct": 0, "explanation": "busは「バス」という公共交通機関を表す名詞です。例: take a bus（バスに乗る）", "type": "choice"},
+        {"scenario": "「train」の意味として最も適切なものは？", "choices": ["電車、列車", "バス", "飛行機", "船"], "correct": 0, "explanation": "trainは「電車、列車」という意味の名詞です。例: go by train（電車で行く）", "type": "choice"},
+        {"scenario": "「car」の意味として最も適切なものは？", "choices": ["車、乗用車", "自転車", "バス", "トラック"], "correct": 0, "explanation": "carは「車、乗用車」という意味の名詞です。例: drive a car（車を運転する）", "type": "choice"},
+        {"scenario": "「bike」の意味として最も適切なものは？", "choices": ["自転車、バイク", "車", "バス", "一輪車"], "correct": 0, "explanation": "bikeはbicycleの略語で「自転車」、または「オートバイ（motorcycle）」を表す名詞です。", "type": "choice"},
+        {"scenario": "「plane」の意味として最も適切なものは？", "choices": ["飛行機", "ヘリコプター", "船", "列車"], "correct": 0, "explanation": "planeはairplaneの略語で「飛行機」を表す名詞です。例: go by plane（飛行機で行く）", "type": "choice"},
+        {"scenario": "「boat」の意味として最も適切なものは？", "choices": ["小舟、ボート", "大型船", "ヨット", "カヌー"], "correct": 0, "explanation": "boatは「小舟、ボート」を表す名詞です。より大きな船はshipと言います。", "type": "choice"},
+        {"scenario": "「shop」の意味として最も適切なものは？", "choices": ["小売店、ショップ", "デパート", "工場", "事務所"], "correct": 0, "explanation": "shopは比較的小さな「店、ショップ」を表す名詞です。例: flower shop（花屋）", "type": "choice"},
+        {"scenario": "「road」の意味として最も適切なものは？", "choices": ["道路、道", "公園", "川", "駅"], "correct": 0, "explanation": "roadは車などが通る「道路、道」を表す名詞です。例: cross the road（道を渡る）", "type": "choice"},
+        {"scenario": "「bridge」の意味として最も適切なものは？", "choices": ["橋", "トンネル", "踏切", "歩道"], "correct": 0, "explanation": "bridgeは川や道路の上に架かる「橋（はし）」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「star」の意味として最も適切なものは？", "choices": ["星", "太陽", "月", "地球"], "correct": 0, "explanation": "starは夜空に見える「星」を表す名詞です。例: stars in the sky（空の星）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編⑫：月・季節・天気",
+      "type": "Nouns: Months, Seasons & Weather",
+      "emoji": "🌧️",
+      "subtitle": "暦や季節、自然の天候に関する名詞",
+      "questions": [
+        {"scenario": "「month」の意味として最も適切なものは？", "choices": ["（暦の上の）月、1ヶ月", "週", "日", "年"], "correct": 0, "explanation": "monthは「（カレンダー上の）月、1ヶ月」を表す名詞です。例: next month（来月）", "type": "choice"},
+        {"scenario": "「week」の意味として最も適切なものは？", "choices": ["週、1週間", "月", "日", "時間"], "correct": 0, "explanation": "weekは「週、1週間」を表す名詞です。例: this week（今週）", "type": "choice"},
+        {"scenario": "「day」の意味として最も適切なものは？", "choices": ["日、曜日、昼間", "月", "年", "朝"], "correct": 0, "explanation": "dayは「日、一日」「曜日」「昼間」などの意味を持つ名詞です。例: What day is it?（何曜日ですか？）", "type": "choice"},
+        {"scenario": "「spring」の意味として最も適切なものは？", "choices": ["春、泉", "夏", "秋", "冬"], "correct": 0, "explanation": "springは「春」を指す名詞です。「泉」や「バネ」という意味もあります。", "type": "choice"},
+        {"scenario": "「autumn」の意味として最も適切なものは？", "choices": ["秋", "春", "夏", "冬"], "correct": 0, "explanation": "autumnは「秋」を指す名詞です。アメリカ英語ではfallもよく使われます。", "type": "choice"},
+        {"scenario": "「fall」を季節名として使うとどんな意味か？", "choices": ["秋", "春", "夏", "冬"], "correct": 0, "explanation": "fallは「落ちる」という動詞のほかに、アメリカ英語で「秋」を意味する名詞になります。", "type": "choice"},
+        {"scenario": "「rain」の意味として最も適切なものは？", "choices": ["雨", "雪", "晴れ", "風"], "correct": 0, "explanation": "rainは「雨」という意味の名詞です。動詞で「雨が降る」という意味もあります。例: heavy rain（大雨）", "type": "choice"},
+        {"scenario": "「snow」の意味として最も適切なものは？", "choices": ["雪", "雨", "あられ", "氷"], "correct": 0, "explanation": "snowは「雪」という意味の名詞です。動詞で「雪が降る」という意味もあります。例: white snow（白い雪）", "type": "choice"},
+        {"scenario": "「wind」の意味として最も適切なものは？", "choices": ["風", "雲", "嵐", "霧"], "correct": 0, "explanation": "windは「風」という意味の名詞です。例: strong wind（強い風）", "type": "choice"},
+        {"scenario": "「cloud」の意味として最も適切なものは？", "choices": ["雲", "霧", "煙", "雨"], "correct": 0, "explanation": "cloudは「雲」という意味の名詞です。例: white clouds（白い雲）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "形容詞編④：様子・気候",
+      "type": "Adjectives: State & Weather",
+      "emoji": "🍂",
+      "subtitle": "温度や様子を表す形容詞",
+      "questions": [
+        {"scenario": "「warm」の意味として最も適切なものは？", "choices": ["暖かい、温かい", "涼しい", "暑い", "冷たい"], "correct": 0, "explanation": "warmは「暖かい、温かい」という意味の形容詞です。例: warm spring（暖かい春）", "type": "choice"},
+        {"scenario": "「cool」の意味として最も適切なものは？", "choices": ["涼しい、かっこいい", "暖かい", "寒い", "熱い"], "correct": 0, "explanation": "coolは「涼しい」、または「かっこいい」という意味の形容詞です。例: cool weather（涼しい気候）", "type": "choice"},
+        {"scenario": "「wet」の意味として最も適切なものは？", "choices": ["濡れた、湿った", "乾いた", "汚れた", "冷たい"], "correct": 0, "explanation": "wetは水などで「濡れた、湿った」という意味の形容詞です。対義語はdry（乾いた）です。", "type": "choice"},
+        {"scenario": "「dry」の意味として最も適切なものは？", "choices": ["乾いた、乾燥した", "濡れた", "暑い", "寒い"], "correct": 0, "explanation": "dryは「乾いた、乾燥した」という意味の形容詞です。対義語はwet（濡れた）です。", "type": "choice"},
+        {"scenario": "「dirty」の意味として最も適切なものは？", "choices": ["汚い、汚れた", "きれいな", "新しい", "古い"], "correct": 0, "explanation": "dirtyは「汚い、汚れた」という意味の形容詞です。cleanの対義語です。例: dirty hands（汚れた手）", "type": "choice"},
+        {"scenario": "「heavy」の意味として最も適切なものは？", "choices": ["重い", "軽い", "大きい", "長い"], "correct": 0, "explanation": "heavyは「重い」という意味の形容詞です。対義語はlight（軽い）です。例: a heavy bag（重いカバン）", "type": "choice"},
+        {"scenario": "「light」を重さの形容詞として使うとどんな意味か？", "choices": ["軽い", "重い", "明るい", "暗い"], "correct": 0, "explanation": "lightは「光、明かり」という意味のほかに、重さが「軽い」という意味の形容詞としても使われます。", "type": "choice"},
+        {"scenario": "「dark」の意味として最も適切なものは？", "choices": ["暗い、濃い", "明るい", "薄い", "冷たい"], "correct": 0, "explanation": "darkは「暗い」、または色の「濃い」という意味の形容詞です。例: dark blue（濃い青）", "type": "choice"},
+        {"scenario": "「bright」の意味として最も適切なものは？", "choices": ["明るい、輝いている", "暗い", "重い", "冷たい"], "correct": 0, "explanation": "brightは光が「明るい、輝いている」という意味の形容詞です。対義語はdark（暗い）です。", "type": "choice"},
+        {"scenario": "「quiet」の意味として最も適切なものは？", "choices": ["静かな", "うるさい", "暗い", "速い"], "correct": 0, "explanation": "quietは「静かな、穏やかな」という意味の形容詞です。例: a quiet room（静かな部屋）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "代名詞・前置詞編②",
+      "type": "Pronouns & Prepositions 2",
+      "emoji": "📍",
+      "subtitle": "人を指す言葉と、場所を示す言葉",
+      "questions": [
+        {"scenario": "「me」の意味として最も適切なものは？", "choices": ["私を、私に", "私は", "私の", "私のもの"], "correct": 0, "explanation": "meはIの目的格で「私を、私に」という意味の代名詞です。例: Tell me.（私に教えて。）", "type": "choice"},
+        {"scenario": "「him」の意味として最も適切なものは？", "choices": ["彼を、彼に", "彼は", "彼の", "彼のもの"], "correct": 0, "explanation": "himはheの目的格で「彼を、彼に」という意味の代名詞です。例: I know him.（私は彼を知っています。）", "type": "choice"},
+        {"scenario": "「her」の目的格としての意味として最も適切なものは？", "choices": ["彼女を、彼女に", "彼女は", "彼女のもの", "彼に"], "correct": 0, "explanation": "herはsheの所有格（彼女の）のほか、目的格として「彼女を、彼女に」という意味もあります。", "type": "choice"},
+        {"scenario": "「us」の意味として最も適切なものは？", "choices": ["私たちを、私たちに", "私たちは", "私たちの", "私たちのもの"], "correct": 0, "explanation": "usはweの目的格で「私たちを、私たちに」という意味の代名詞です。例: join us（私たちに加わる）", "type": "choice"},
+        {"scenario": "「them」の意味として最も適切なものは？", "choices": ["彼らを（に）、彼女らを（に）、それらを（に）", "彼らは", "彼らの", "彼らのもの"], "correct": 0, "explanation": "themはtheyの目的格で「彼らを（に）、彼女らを（に）、それらを（に）」という意味の代名詞です。", "type": "choice"},
+        {"scenario": "「under」の意味として最も適切なものは？", "choices": ["〜の下に（で）", "〜の上に", "〜の中に", "〜の前に"], "correct": 0, "explanation": "underは「〜の下に（で）」と位置を表す前置詞です。対義語はonやoverです。例: under the tree（木の下で）", "type": "choice"},
+        {"scenario": "「near」の意味として最も適切なものは？", "choices": ["〜の近くに（で）", "〜の遠くに", "〜の上に", "〜の中に"], "correct": 0, "explanation": "nearは「〜の近くに（で）」と距離の近さを表す前置詞・形容詞です。例: near the station（駅の近くに）", "type": "choice"},
+        {"scenario": "「by」の意味として最も適切なものは？", "choices": ["〜のそばに、〜によって、〜（交通手段）で", "〜の中に", "〜の上に", "〜から"], "correct": 0, "explanation": "byは「〜のそばに」という位置や、「〜（交通手段）で」という方法を表す前置詞です。例: by bus（バスで）", "type": "choice"},
+        {"scenario": "「about」の意味として最も適切なものは？", "choices": ["〜について、およそ", "〜のために", "〜の間", "〜と一緒に"], "correct": 0, "explanation": "aboutは「〜について」という話題や、「およそ、約」という数量を表す前置詞・副詞です。例: read about Japan（日本について読む）", "type": "choice"},
+        {"scenario": "「at」の意味として最も適切なものは？", "choices": ["〜で（特定の場所）、〜に（時刻）", "〜の中に", "〜の上に", "〜まで"], "correct": 0, "explanation": "atは「〜で（ある地点）」という場所や、「〜に（時刻）」を表す前置詞です。例: at the school（学校で）、at seven（7時に）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "指示代名詞・疑問詞編②",
+      "type": "Pronouns & Question Words 2",
+      "emoji": "❔",
+      "subtitle": "指し示す言葉と、選択・たずねる言葉",
+      "questions": [
+        {"scenario": "「which」の意味として最も適切なものは？", "choices": ["どちら、どちらの", "何", "誰", "いつ"], "correct": 0, "explanation": "whichは「どちら、どちらの」と選択肢からたずねる疑問詞です。例: Which do you like?（どちらが好きですか？）", "type": "choice"},
+        {"scenario": "「whose」の意味として最も適切なものは？", "choices": ["だれの、だれのもの", "だれが", "だれに", "何を"], "correct": 0, "explanation": "whoseは「だれの、だれのもの」と所有者をたずねる疑問詞です。例: Whose book is this?（これは誰の本ですか？）", "type": "choice"},
+        {"scenario": "「this」の意味として最も適切なものは？", "choices": ["これ、この", "あれ、あの", "それ、その", "彼"], "correct": 0, "explanation": "thisは話し手の近くの「これ、この」を指し示す代名詞・形容詞です。複数形はtheseです。", "type": "choice"},
+        {"scenario": "「that」の意味として最も適切なものは？", "choices": ["あれ、あの、それ、その", "これ、この", "彼", "彼女"], "correct": 0, "explanation": "thatは話し手から離れた「あれ、あの」や「それ、その」を指し示す代名詞・形容詞です。複数形はthoseです。", "type": "choice"},
+        {"scenario": "「these」の意味として最も適切なものは？", "choices": ["これら、これらの", "あれら、あれらの", "それ", "私たち"], "correct": 0, "explanation": "theseはthis（これ、この）の複数形で、「これら、これらの」を指します。", "type": "choice"},
+        {"scenario": "「those」の意味として最も適切なものは？", "choices": ["あれら、あれらの、それら、それらの", "これら", "彼ら", "私たち"], "correct": 0, "explanation": "thoseはthat（あれ、あの）の複数形で、「あれら、あれらの、それら、それらの」を指します。", "type": "choice"},
+        {"scenario": "「here」の意味として最も適切なものは？", "choices": ["ここに、ここで", "あそこに", "そこ", "どこ"], "correct": 0, "explanation": "hereは「ここに、ここで」という話し手の近くの場所を表す副詞です。例: Come here.（ここに来て。）", "type": "choice"},
+        {"scenario": "「there」の意味として最も適切なものは？", "choices": ["そこに、あそこに（で）", "ここに", "どこに", "家で"], "correct": 0, "explanation": "thereは「そこに、あそこに（で）」という話し手から離れた場所を表す副詞です。例: go there（そこへ行く）", "type": "choice"},
+        {"scenario": "「some」の意味として最も適切なものは？", "choices": ["いくつかの、いくらかの", "まったく〜ない", "すべての", "多くの"], "correct": 0, "explanation": "someは主に肯定文で「いくつかの、いくらかの」と不特定の数量を表す代名詞・形容詞です。疑問・否定ではanyがよく使われます。", "type": "choice"},
+        {"scenario": "「any」の意味として最も適切なものは？", "choices": ["（疑問・否定で）いくつかの、いくらかの、少しも（〜ない）", "すべての", "少しだけ", "いつも"], "correct": 0, "explanation": "anyは主に疑問文や否定文で「いくつかの」「少しも（〜ない）」と数量を指し示す代名詞・形容詞です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "日常会話表現③",
+      "type": "Everyday Conversations 3",
+      "emoji": "🗣️",
+      "subtitle": "挨拶やよく使う便利なフレーズ",
+      "questions": [
+        {"scenario": "「good afternoon」の意味として最も適切なものは？", "choices": ["こんにちは（午後の挨拶）", "おはようございます", "こんばんは", "さようなら"], "correct": 0, "explanation": "good afternoonは昼過ぎから夕方前に交わす「こんにちは」という挨拶です。", "type": "choice"},
+        {"scenario": "「good evening」の意味として最も適切なものは？", "choices": ["こんばんは（夕方・夜の挨拶）", "こんにちは", "おやすみなさい", "はじめまして"], "correct": 0, "explanation": "good eveningは夕方や夜に人に会った時の「こんばんは」という挨拶です。", "type": "choice"},
+        {"scenario": "「good night」の意味として最も適切なものは？", "choices": ["おやすみなさい（別れの挨拶）", "こんばんは", "おはよう", "また明日ね"], "correct": 0, "explanation": "good nightは夜別れるときや、寝る前に交わす「おやすみなさい」という挨拶です。", "type": "choice"},
+        {"scenario": "「happy birthday」の意味として最も適切なものは？", "choices": ["お誕生日おめでとう", "あけましておめでとう", "メリークリスマス", "よくやった"], "correct": 0, "explanation": "happy birthdayは誕生日を祝う「お誕生日おめでとう」という定番表現です。", "type": "choice"},
+        {"scenario": "「here you are」の意味として最も適切なものは？", "choices": ["はい、どうぞ（物を渡すとき）", "ここにいます", "どうぞ座ってください", "またね"], "correct": 0, "explanation": "here you areは相手に物を手渡すときの「はい、どうぞ」というフレーズです。", "type": "choice"},
+        {"scenario": "「just a moment」の意味として最も適切なものは？", "choices": ["少々お待ちください、ちょっと待って", "ちょうど今", "もうすぐです", "大丈夫です"], "correct": 0, "explanation": "just a moment（または just a minute）は相手を少し待たせる時の「ちょっと待って」「少々お待ちください」という表現です。", "type": "choice"},
+        {"scenario": "「pardon」の意味として最も適切なものは？", "choices": ["（聞き返して）もう一度言ってください、何ですか？", "すみません（謝罪）", "どういたしまして", "いいですよ"], "correct": 0, "explanation": "pardon? (または Pardon me?) は相手の言葉が聞き取れず、聞き返す時の「何とおっしゃいましたか？」という表現です。", "type": "choice"},
+        {"scenario": "「I'm home」の意味として最も適切なものは？", "choices": ["ただいま（帰宅時の挨拶）", "家にいます", "ようこそ", "お邪魔します"], "correct": 0, "explanation": "I'm home.は帰宅したときに「ただいま」と家族などに告げる挨拶です。", "type": "choice"},
+        {"scenario": "「good luck」の意味として最も適切なものは？", "choices": ["がんばって！、幸運を祈ります！", "よくやったね", "おめでとう", "気をつけてね"], "correct": 0, "explanation": "good luckはテストや試合に挑む人に対して「がんばって！」「幸運を祈る！」と声をかける表現です。", "type": "choice"},
+        {"scenario": "「I don't know」の意味として最も適切なものは？", "choices": ["分かりません、知りません", "そう思いません", "大丈夫です", "知りたくないです"], "correct": 0, "explanation": "I don't know.は質問に対して「分かりません」「知りません」と答える定番のフレーズです。", "type": "choice"}
+      ]
+    }
+  ]
+}

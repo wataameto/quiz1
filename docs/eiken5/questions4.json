@@ -1,0 +1,198 @@
+{
+  "id": "eiken5",
+  "level": 4,
+  "label": "🔤 基礎単語編④",
+  "description": "英検5級レベルの基本英単語④（動詞・名詞・形容詞・前置詞・数字）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編⑦：日常の動作",
+      "type": "Basic Verbs 7",
+      "emoji": "🛌",
+      "subtitle": "日常的によく行う一連の動作",
+      "questions": [
+        {"scenario": "「get up」の意味として最も適切なものは？", "choices": ["起きる、起床する", "寝る", "出かける", "帰る"], "correct": 0, "explanation": "get upは「起きる、起床する」という意味の群動詞（熟語）です。例: get up early（早く起きる）", "type": "choice"},
+        {"scenario": "「go to bed」の意味として最も適切なものは？", "choices": ["寝る、就寝する", "起きる", "ベッドを買う", "部屋を片付ける"], "correct": 0, "explanation": "go to bedは「寝る、ベッドに入る」という意味の群動詞（熟語）です。例: I go to bed at ten.（私は10時に寝ます。）", "type": "choice"},
+        {"scenario": "「clean up」の意味として最も適切なものは？", "choices": ["片付ける、掃除する", "汚す", "捨てる", "洗濯する"], "correct": 0, "explanation": "clean upは「きれいに片付ける、掃除する」という意味の熟語です。例: clean up my room（部屋を片付ける）", "type": "choice"},
+        {"scenario": "「look for」の意味として最も適切なものは？", "choices": ["〜を探す", "〜を見る", "〜の世話をする", "〜に似ている"], "correct": 0, "explanation": "look forは「〜を探す、求める」という意味の熟語です。例: look for my key（鍵を探す）", "type": "choice"},
+        {"scenario": "「brush」の意味として最も適切なものは？", "choices": ["（ブラシで）磨く、毛を払う", "洗う", "切る", "塗る"], "correct": 0, "explanation": "brushは「磨く」「（ブラシや筆で）払う」という意味の動詞です。例: brush teeth（歯を磨く）", "type": "choice"},
+        {"scenario": "「laugh」の意味として最も適切なものは？", "choices": ["（声を立てて）笑う", "泣く", "怒る", "微笑む"], "correct": 0, "explanation": "laughは声を立てて「笑う」という意味の動詞です。smile（ほほえむ）と区別して覚えます。", "type": "choice"},
+        {"scenario": "「catch」の意味として最も適切なものは？", "choices": ["捕まえる、捕らえる", "逃がす", "投げる", "落とす"], "correct": 0, "explanation": "catchは「捕まえる、キャッチする」という意味の動詞です。例: catch a ball（ボールを捕まえる）", "type": "choice"},
+        {"scenario": "「touch」の意味として最も適切なものは？", "choices": ["触る、触れる", "見る", "聞く", "投げる"], "correct": 0, "explanation": "touchは「触る、触れる」という意味の動詞です。名詞で「接触、タッチ」という意味もあります。", "type": "choice"},
+        {"scenario": "「push」の意味として最も適切なものは？", "choices": ["押す", "引く", "投げる", "叩く"], "correct": 0, "explanation": "pushは「押す」という意味の動詞です。対義語はpull（引く）です。", "type": "choice"},
+        {"scenario": "「pull」の意味として最も適切なものは？", "choices": ["引く、引っ張る", "押す", "持ち上げる", "置く"], "correct": 0, "explanation": "pullは「引く、引っ張る」という意味の動詞です。対義語はpush（押す）です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編⑬：家・部屋のパーツ",
+      "type": "Nouns: House Parts",
+      "emoji": "🏡",
+      "subtitle": "家や建物の部分を表す単語",
+      "questions": [
+        {"scenario": "「wall」の意味として最も適切なものは？", "choices": ["壁", "床", "天井", "屋根"], "correct": 0, "explanation": "wallは「壁（かべ）」という意味の名詞です。例: paint the wall（壁にペンキを塗る）", "type": "choice"},
+        {"scenario": "「floor」の意味として最も適切なものは？", "choices": ["床、階", "壁", "天井", "窓"], "correct": 0, "explanation": "floorは「床（ゆか）」、または建物の「〜階」を表す名詞です。例: second floor（2階）", "type": "choice"},
+        {"scenario": "「garden」の意味として最も適切なものは？", "choices": ["庭、庭園", "家", "公園", "畑"], "correct": 0, "explanation": "gardenは「庭、庭園」という意味の名詞です。例: flowers in the garden（庭の花）", "type": "choice"},
+        {"scenario": "「bathroom」の意味として最も適切なものは？", "choices": ["浴室、お風呂場、お手洗い", "居間", "寝室", "台所"], "correct": 0, "explanation": "bathroomは「浴室、お風呂場」を指します。英語圏ではトイレを兼ねていることも多いため「お手洗い」の意味もあります。", "type": "choice"},
+        {"scenario": "「bedroom」の意味として最も適切なものは？", "choices": ["寝室、ベッドルーム", "浴室", "居間", "台所"], "correct": 0, "explanation": "bedroomはベッドなどが置いてある「寝室」を表す名詞です。", "type": "choice"},
+        {"scenario": "「toilet」の意味として最も適切なものは？", "choices": ["トイレ、便所、化粧室", "浴室", "居間", "台所"], "correct": 0, "explanation": "toiletは「トイレ、便所」を表す名詞です。restroomやbathroomとも言います。", "type": "choice"},
+        {"scenario": "「bath」の意味として最も適切なものは？", "choices": ["入浴、お風呂", "シャワー", "洗面台", "トイレ"], "correct": 0, "explanation": "bathは「入浴」「お風呂（浴槽）」を表す名詞です。例: take a bath（お風呂に入る）", "type": "choice"},
+        {"scenario": "「ceiling」の意味として最も適切なものは？", "choices": ["天井", "床", "壁", "屋根"], "correct": 0, "explanation": "ceilingは部屋の「天井（てんじょう）」を表す名詞です。対義語はfloor（床）です。", "type": "choice"},
+        {"scenario": "「roof」の意味として最も適切なものは？", "choices": ["屋根", "壁", "床", "ドア"], "correct": 0, "explanation": "roofは建物の「屋根（やね）」を表す名詞です。例: on the roof（屋根の上に）", "type": "choice"},
+        {"scenario": "「gate」の意味として最も適切なものは？", "choices": ["門、出入り口", "扉", "窓", "壁"], "correct": 0, "explanation": "gateは敷地の入り口などにある「門、出入り口」を表す名詞です。例: school gate（校門）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編⑭：学校生活",
+      "type": "Nouns: School Life",
+      "emoji": "🧑‍🎓",
+      "subtitle": "学校で使うアイテムや人物に関する単語",
+      "questions": [
+        {"scenario": "「homework」の意味として最も適切なものは？", "choices": ["宿題", "授業", "試験", "部活"], "correct": 0, "explanation": "homeworkは「宿題」という意味の名詞です。通常 do homework（宿題をする）の形で使います。", "type": "choice"},
+        {"scenario": "「student」の意味として最も適切なものは？", "choices": ["生徒、学生", "先生", "親", "友達"], "correct": 0, "explanation": "studentは「生徒、学生」という意味の名詞です。例: high school student（高校生）", "type": "choice"},
+        {"scenario": "「classroom」の意味として最も適切なものは？", "choices": ["教室", "体育館", "職員室", "図書室"], "correct": 0, "explanation": "classroomは学校の「教室」を表す名詞です。class（授業・学級）とroom（部屋）からなっています。", "type": "choice"},
+        {"scenario": "「blackboard」の意味として最も適切なものは？", "choices": ["黒板", "ホワイトボード", "机", "ノート"], "correct": 0, "explanation": "blackboardは教室にある「黒板（こくばん）」を表す名詞です。", "type": "choice"},
+        {"scenario": "「dictionary」の意味として最も適切なものは？", "choices": ["辞書、辞典", "教科書", "ノート", "絵本"], "correct": 0, "explanation": "dictionaryは「辞書、辞典」という意味の名詞です。例: use a dictionary（辞書を使う）", "type": "choice"},
+        {"scenario": "「eraser」の意味として最も適切なものは？", "choices": ["消しゴム、黒板消し", "鉛筆", "ものさし", "ペンケース"], "correct": 0, "explanation": "eraserは「消しゴム」や「黒板消し」など、文字を消すための文房具を表す名詞です。", "type": "choice"},
+        {"scenario": "「ruler」の意味として最も適切なものは？", "choices": ["定規、ものさし", "鉛筆", "消しゴム", "ハサミ"], "correct": 0, "explanation": "rulerは長さを測ったり直線を引く「定規、ものさし」を表す名詞です。", "type": "choice"},
+        {"scenario": "「textbook」の意味として最も適切なものは？", "choices": ["教科書", "参考書", "問題集", "ノート"], "correct": 0, "explanation": "textbookは授業で使われる「教科書」を表す名詞です。例: open your textbook（教科書を開いて）", "type": "choice"},
+        {"scenario": "「test」の意味として最も適切なものは？", "choices": ["テスト、試験、検査", "授業", "宿題", "教科書"], "correct": 0, "explanation": "testは「テスト、試験」という意味の名詞です。動詞で「テストする」という意味もあります。", "type": "choice"},
+        {"scenario": "「exam」の意味として最も適切なものは？", "choices": ["試験、検査", "授業", "発表", "宿題"], "correct": 0, "explanation": "examはexaminationの短縮形で、主に大きな「試験、検査」を表す名詞です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編⑮：身の回りの小物・食器",
+      "type": "Nouns: Goods & Dishes",
+      "emoji": "⛱️",
+      "subtitle": "おもちゃや楽器、食事用の器具の名前",
+      "questions": [
+        {"scenario": "「toy」の意味として最も適切なものは？", "choices": ["おもちゃ、玩具", "ゲーム", "本", "人形"], "correct": 0, "explanation": "toyは「おもちゃ、玩具」という意味の名詞です。例: toy store（おもちゃ屋）", "type": "choice"},
+        {"scenario": "「doll」の意味として最も適切なものは？", "choices": ["人形", "ぬいぐるみ", "ロボット", "カード"], "correct": 0, "explanation": "dollは「人形」という意味の名詞です。例: play with dolls（人形で遊ぶ）", "type": "choice"},
+        {"scenario": "「guitar」の意味として最も適切なものは？", "choices": ["ギター", "ピアノ", "バイオリン", "ドラム"], "correct": 0, "explanation": "guitarは楽器の「ギター」を表す名詞です。例: play the guitar（ギターを弾く）", "type": "choice"},
+        {"scenario": "「piano」の意味として最も適切なものは？", "choices": ["ピアノ", "オルガン", "キーボード", "ギター"], "correct": 0, "explanation": "pianoは楽器の「ピアノ」を表す名詞です。例: play the piano（ピアノを弾く）", "type": "choice"},
+        {"scenario": "「mirror」の意味として最も適切なものは？", "choices": ["鏡", "窓", "壁", "時計"], "correct": 0, "explanation": "mirrorは「鏡（かがみ）」という意味の名詞です。例: look in the mirror（鏡を見る）", "type": "choice"},
+        {"scenario": "「umbrella」の意味として最も適切なものは？", "choices": ["傘", "帽子", "コート", "カバン"], "correct": 0, "explanation": "umbrellaは「傘」という意味の名詞です。例: open an umbrella（傘を開く）", "type": "choice"},
+        {"scenario": "「glass」の意味として最も適切なものは？", "choices": ["コップ、ガラス、（複数形で）メガネ", "皿", "茶わん", "ナイフ"], "correct": 0, "explanation": "glassは「ガラス」「コップ」を指します。複数形のglassesは「メガネ」という意味になります。", "type": "choice"},
+        {"scenario": "「dish」の意味として最も適切なものは？", "choices": ["皿、料理", "コップ", "箸", "スプーン"], "correct": 0, "explanation": "dishは「お皿」、または「（皿に盛られた）料理」を表す名詞です。例: wash dishes（皿を洗う）", "type": "choice"},
+        {"scenario": "「fork」の意味として最も適切なものは？", "choices": ["フォーク", "スプーン", "ナイフ", "箸"], "correct": 0, "explanation": "forkは食事で使う「フォーク」を表す名詞です。例: eat with a fork（フォークで食べる）", "type": "choice"},
+        {"scenario": "「spoon」の意味として最も適切なものは？", "choices": ["スプーン", "フォーク", "ナイフ", "皿"], "correct": 0, "explanation": "spoonは食事で使う「スプーン」を表す名詞です。例: tea spoon（ティースプーン）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編⑯：身の回りの自然・公共機関",
+      "type": "Nouns: Nature & Public Buildings",
+      "emoji": "⛰️",
+      "subtitle": "自然の地形や便利な公共施設の名前",
+      "questions": [
+        {"scenario": "「sea」の意味として最も適切なものは？", "choices": ["海", "川", "湖", "池"], "correct": 0, "explanation": "seaは「海」という意味の名詞です。例: swim in the sea（海で泳ぐ）", "type": "choice"},
+        {"scenario": "「mountain」の意味として最も適切なものは？", "choices": ["山", "川", "森", "丘"], "correct": 0, "explanation": "mountainは「山」という意味の名詞です。例: climb a mountain（山に登る）", "type": "choice"},
+        {"scenario": "「river」の意味として最も適切なものは？", "choices": ["川", "海", "湖", "橋"], "correct": 0, "explanation": "riverは「川」という意味の名詞です。例: cross the river（川を渡る）", "type": "choice"},
+        {"scenario": "「lake」の意味として最も適切なものは？", "choices": ["湖", "川", "海", "池"], "correct": 0, "explanation": "lakeは「湖（みずうみ）」という意味の名詞です。例: Biwa Lake（琵琶湖）", "type": "choice"},
+        {"scenario": "「forest」の意味として最も適切なものは？", "choices": ["森、森林", "川", "海", "山"], "correct": 0, "explanation": "forestは「森、森林」という意味の名詞です。例: walk in the forest（森を歩く）", "type": "choice"},
+        {"scenario": "「beach」の意味として最も適切なものは？", "choices": ["砂浜、ビーチ", "海", "プール", "公園"], "correct": 0, "explanation": "beachは「砂浜、ビーチ」という意味の名詞です。例: walk on the beach（砂浜を歩く）", "type": "choice"},
+        {"scenario": "「bank」の意味として最も適切なものは？", "choices": ["銀行、土手", "郵便局", "病院", "店"], "correct": 0, "explanation": "bankは「銀行」、または川の「土手、堤防」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「post office」の意味として最も適切なものは？", "choices": ["郵便局", "銀行", "駅", "図書館"], "correct": 0, "explanation": "post officeは「郵便局」を表す名詞です。post（郵便）とoffice（事務所）が合わさっています。", "type": "choice"},
+        {"scenario": "「office」の意味として最も適切なものは？", "choices": ["事務所、オフィス", "家", "学校", "お店"], "correct": 0, "explanation": "officeは仕事をする「事務所、オフィス、会社」を表す名詞です。", "type": "choice"},
+        {"scenario": "「country」の意味として最も適切なものは？", "choices": ["国、田舎", "都市", "地球", "島"], "correct": 0, "explanation": "countryは「国」または「田舎、地方」という意味の名詞です。例: visit a foreign country（外国を訪ねる）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編⑰：日付・曜日・気象",
+      "type": "Nouns: Days & Weather",
+      "emoji": "⛈️",
+      "subtitle": "暦や天候に関する言葉",
+      "questions": [
+        {"scenario": "「Tuesday」の意味として最も適切なものは？", "choices": ["火曜日", "水曜日", "木曜日", "金曜日"], "correct": 0, "explanation": "Tuesdayは「火曜日」を指す名詞です。曜日の頭文字は大文字にします。", "type": "choice"},
+        {"scenario": "「Wednesday」の意味として最も適切なものは？", "choices": ["水曜日", "火曜日", "木曜日", "金曜日"], "correct": 0, "explanation": "Wednesdayは「水曜日」を指す名詞です。発音のスペルに注意しましょう。", "type": "choice"},
+        {"scenario": "「Thursday」の意味として最も適切なものは？", "choices": ["木曜日", "火曜日", "金曜日", "土曜日"], "correct": 0, "explanation": "Thursdayは「木曜日」を指す名詞です。曜日の頭文字は大文字にします。", "type": "choice"},
+        {"scenario": "「Friday」の意味として最も適切なものは？", "choices": ["金曜日", "木曜日", "土曜日", "日曜日"], "correct": 0, "explanation": "Fridayは「金曜日」を指す名詞です。曜日の頭文字は大文字にします。", "type": "choice"},
+        {"scenario": "「weekend」の意味として最も適切なものは？", "choices": ["週末（土曜日・日曜日）", "平日", "祝日", "週明け"], "correct": 0, "explanation": "weekendは「週末（土日）」を表す名詞です。対義語はweekday（平日）です。", "type": "choice"},
+        {"scenario": "「hour」の意味として最も適切なものは？", "choices": ["時間（60分）", "分", "秒", "日付"], "correct": 0, "explanation": "hourは「1時間、60分」を表す名詞です。hは発音しません。例: one hour（1時間）", "type": "choice"},
+        {"scenario": "「minute」の意味として最も適切なものは？", "choices": ["分（時間の単位）", "時間", "秒", "曜日"], "correct": 0, "explanation": "minuteは「分」を表す名詞です。例: Wait a minute.（ちょっと待って。）", "type": "choice"},
+        {"scenario": "「second」を時間の単位として使うとどんな意味か？", "choices": ["秒", "時間", "分", "日付"], "correct": 0, "explanation": "secondは「2番目の」という意味のほかに、時間の単位の「秒」を表す名詞になります。", "type": "choice"},
+        {"scenario": "「season」の意味として最も適切なものは？", "choices": ["季節、四季", "天気", "温度", "カレンダー"], "correct": 0, "explanation": "seasonは「季節」を表す名詞です。日本にはfour seasons（四季）があります。", "type": "choice"},
+        {"scenario": "「weather」の意味として最も適切なものは？", "choices": ["天気、天候", "季節", "温度", "気圧"], "correct": 0, "explanation": "weatherは「天気、天候」を表す名詞です。例: nice weather（良い天気）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "形容詞編⑤：状態・強さ",
+      "type": "Adjectives: Feelings & Strengths",
+      "emoji": "🦁",
+      "subtitle": "気分や強弱などを表す形容詞",
+      "questions": [
+        {"scenario": "「sleepy」の意味として最も適切なものは？", "choices": ["眠い、眠そうな", "疲れた", "怒った", "悲しい"], "correct": 0, "explanation": "sleepyは「眠い」という意味の形容詞です。例: I feel sleepy.（眠いです。）", "type": "choice"},
+        {"scenario": "「angry」の意味として最も適切なものは？", "choices": ["怒った、腹を立てた", "悲しい", "うれしい", "驚いた"], "correct": 0, "explanation": "angryは「怒った」という意味の形容詞です。例: get angry（怒る）", "type": "choice"},
+        {"scenario": "「thirsty」の意味として最も適切なものは？", "choices": ["のどが渇いた", "お腹がすいた", "眠い", "疲れた"], "correct": 0, "explanation": "thirstyは「のどが渇いた」という意味の形容詞です。例: I'm thirsty.（のどが渇きました。）", "type": "choice"},
+        {"scenario": "「cute」の意味として最も適切なものは？", "choices": ["かわいい、愛らしい", "美しい", "格好いい", "汚い"], "correct": 0, "explanation": "cuteは「かわいい、愛らしい」という意味の形容詞です。主に小さなものや動物、子供に使われます。", "type": "choice"},
+        {"scenario": "「safe」の意味として最も適切なものは？", "choices": ["安全な", "危険な", "暗い", "重い"], "correct": 0, "explanation": "safeは「安全な」という意味の形容詞です。対義語はdangerous（危険な）です。", "type": "choice"},
+        {"scenario": "「smart」の意味として最も適切なものは？", "choices": ["賢い、頭が良い、利口な", "細い", "太った", "格好悪い"], "correct": 0, "explanation": "smartは「賢い、頭が良い」という意味の形容詞です。日本語の「スマート＝細い」とは意味が異なります。", "type": "choice"},
+        {"scenario": "「high」の意味として最も適切なものは？", "choices": ["高い", "低い", "重い", "軽い"], "correct": 0, "explanation": "highは「（位置やレベルが）高い」という意味の形容詞です。対義語はlow（低い）です。", "type": "choice"},
+        {"scenario": "「low」の意味として最も適切なものは？", "choices": ["低い", "高い", "重い", "軽い"], "correct": 0, "explanation": "lowは「（位置やレベルが）低い」という意味の形容詞です。対義語はhigh（高い）です。", "type": "choice"},
+        {"scenario": "「weak」の意味として最も適切なものは？", "choices": ["弱い、かすかな", "強い", "速い", "遅い"], "correct": 0, "explanation": "weakは「弱い」という意味の形容詞です。対義語はstrong（強い）です。", "type": "choice"},
+        {"scenario": "「strong」の意味として最も適切なものは？", "choices": ["強い、たくましい", "弱い", "優しい", "厳しい"], "correct": 0, "explanation": "strongは「強い、たくましい」という意味の形容詞です。対義語はweak（弱い）です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "前置詞編③：位置・方向",
+      "type": "Prepositions 3",
+      "emoji": "🏹",
+      "subtitle": "位置関係や方向を示す前置詞",
+      "questions": [
+        {"scenario": "「from」の意味として最も適切なものは？", "choices": ["〜から、〜出身で", "〜まで", "〜のために", "〜と一緒に"], "correct": 0, "explanation": "fromは「〜から（起点）」「〜出身で」という意味の前置詞です。例: from Tokyo to Osaka（東京から大阪まで）", "type": "choice"},
+        {"scenario": "「between」の意味として最も適切なものは？", "choices": ["〜の間に（で）", "〜の上に", "〜の下に", "〜の中に"], "correct": 0, "explanation": "betweenは「（2つのもの・人の）間に」という意味の前置詞です。between A and B の形でよく使われます。", "type": "choice"},
+        {"scenario": "「behind」の意味として最も適切なものは？", "choices": ["〜の後ろに（で）", "〜の前に", "〜の上に", "〜の近くに"], "correct": 0, "explanation": "behindは「〜の後ろに（で）」という意味の前置詞です。例: behind the door（ドアの後ろに）", "type": "choice"},
+        {"scenario": "「in front of」の意味として最も適切なものは？", "choices": ["〜の前に（で）", "〜の後ろに", "〜の中に", "〜の上に"], "correct": 0, "explanation": "in front ofは「〜の正面に、〜の前に」という意味の熟語（前置詞句）です。例: in front of the station（駅の前で）", "type": "choice"},
+        {"scenario": "「next to」の意味として最も適切なものは？", "choices": ["〜の隣に（で）", "〜の前に", "〜の後ろに", "〜の下に"], "correct": 0, "explanation": "next toは「〜の隣に（で）」という意味の熟語（前置詞句）です。例: sit next to me（私の隣に座って）", "type": "choice"},
+        {"scenario": "「out」の意味として最も適切なものは？", "choices": ["外へ、外に", "中に", "上に", "下に"], "correct": 0, "explanation": "outは「外へ、外に」という意味の副詞・前置詞です。対義語はinです。例: go out（外に出る）", "type": "choice"},
+        {"scenario": "「off」の意味として最も適切なものは？", "choices": ["（接触面から）離れて、休みで", "接触して", "〜の中に", "〜の下に"], "correct": 0, "explanation": "offは「（くっついていたものが）離れて」という意味の副詞・前置詞です。例: take off my coat（コートを脱ぐ）", "type": "choice"},
+        {"scenario": "「up」の意味として最も適切なものは？", "choices": ["上へ、上がって", "下へ", "中へ", "外へ"], "correct": 0, "explanation": "upは「上へ、上の方向に」という意味の副詞・前置詞です。対義語はdownです。例: stand up（立ち上がる）", "type": "choice"},
+        {"scenario": "「down」の意味として最も適切なものは？", "choices": ["下へ、下がって", "上へ", "中へ", "外へ"], "correct": 0, "explanation": "downは「下へ、下の方向に」という意味の副詞・前置詞です。対義語はupです。例: sit down（座る）", "type": "choice"},
+        {"scenario": "「over」の意味として最も適切なものは？", "choices": ["〜を越えて、〜の上に（接触せず覆うように）", "〜の下に", "〜の中に", "〜の近くに"], "correct": 0, "explanation": "overは「〜を越えて」や「〜の真上に（離れて）」という意味の前置詞・副詞です。例: fly over the river（川を飛び越える）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "数字編①（1〜10）",
+      "type": "Numbers 1 (1-10)",
+      "emoji": "1️⃣",
+      "subtitle": "基本の数字1から10まで",
+      "questions": [
+        {"scenario": "「one」の意味として最も適切なものは？", "choices": ["1（いち）", "2", "3", "5"], "correct": 0, "explanation": "oneは数字の「1」を表します。", "type": "choice"},
+        {"scenario": "「two」の意味として最も適切なものは？", "choices": ["2（に）", "1", "3", "4"], "correct": 0, "explanation": "twoは数字の「2」を表します。", "type": "choice"},
+        {"scenario": "「three」の意味として最も適切なものは？", "choices": ["3（さん）", "2", "4", "5"], "correct": 0, "explanation": "threeは数字の「3」を表します。", "type": "choice"},
+        {"scenario": "「four」の意味として最も適切なものは？", "choices": ["4（よん）", "3", "5", "6"], "correct": 0, "explanation": "fourは数字の「4」を表します。", "type": "choice"},
+        {"scenario": "「five」の意味として最も適切なものは？", "choices": ["5（ご）", "4", "6", "10"], "correct": 0, "explanation": "fiveは数字の「5」を表します。", "type": "choice"},
+        {"scenario": "「six」の意味として最も適切なものは？", "choices": ["6（ろく）", "5", "7", "8"], "correct": 0, "explanation": "sixは数字の「6」を表します。", "type": "choice"},
+        {"scenario": "「seven」の意味として最も適切なものは？", "choices": ["7（なな）", "6", "8", "9"], "correct": 0, "explanation": "sevenは数字の「7」を表します。", "type": "choice"},
+        {"scenario": "「eight」の意味として最も適切なものは？", "choices": ["8（はち）", "7", "9", "10"], "correct": 0, "explanation": "eightは数字の「8」を表します。", "type": "choice"},
+        {"scenario": "「nine」の意味として最も適切なものは？", "choices": ["9（きゅう）", "8", "10", "1"], "correct": 0, "explanation": "nineは数字の「9」を表します。", "type": "choice"},
+        {"scenario": "「ten」の意味として最も適切なものは？", "choices": ["10（じゅう）", "9", "100", "0"], "correct": 0, "explanation": "tenは数字の「10」を表します。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "数字編②（11〜20）",
+      "type": "Numbers 2 (11-20)",
+      "emoji": "🔟",
+      "subtitle": "数字の11から20まで",
+      "questions": [
+        {"scenario": "「eleven」の意味として最も適切なものは？", "choices": ["11（じゅういち）", "12", "20", "10"], "correct": 0, "explanation": "elevenは数字の「11」を表します。", "type": "choice"},
+        {"scenario": "「twelve」の意味として最も適切なものは？", "choices": ["12（じゅうに）", "11", "20", "13"], "correct": 0, "explanation": "twelveは数字の「12」を表します。", "type": "choice"},
+        {"scenario": "「thirteen」の意味として最も適切なものは？", "choices": ["13（じゅうさん）", "30", "14", "3"], "correct": 0, "explanation": "thirteenは数字の「13」を表します。30 (thirty) との聞き分けに注意しましょう。", "type": "choice"},
+        {"scenario": "「fourteen」の意味として最も適切なものは？", "choices": ["14（じゅうよん）", "40", "15", "4"], "correct": 0, "explanation": "fourteenは数字の「14」を表します。40 (forty) と混同しないようにします。", "type": "choice"},
+        {"scenario": "「fifteen」の意味として最も適切なものは？", "choices": ["15（じゅうご）", "50", "16", "5"], "correct": 0, "explanation": "fifteenは数字の「15」を表します。", "type": "choice"},
+        {"scenario": "「sixteen」の意味として最も適切なものは？", "choices": ["16（じゅうろく）", "60", "17", "6"], "correct": 0, "explanation": "sixteenは数字の「16」を表します。", "type": "choice"},
+        {"scenario": "「seventeen」の意味として最も適切なものは？", "choices": ["17（じゅうなな）", "70", "18", "7"], "correct": 0, "explanation": "seventeenは数字の「17」を表します。", "type": "choice"},
+        {"scenario": "「eighteen」の意味として最も適切なものは？", "choices": ["18（じゅうはち）", "80", "19", "8"], "correct": 0, "explanation": "eighteen is the number 18 in English.", "type": "choice"},
+        {"scenario": "「nineteen」の意味として最も適切なものは？", "choices": ["19（じゅうきゅう）", "90", "20", "9"], "correct": 0, "explanation": "nineteenは数字の「19」を表します。", "type": "choice"},
+        {"scenario": "「twenty」の意味として最も適切なものは？", "choices": ["20（にじゅう）", "12", "21", "2"], "correct": 0, "explanation": "twentyは数字の「20」を表します。", "type": "choice"}
+      ]
+    }
+  ]
+}
