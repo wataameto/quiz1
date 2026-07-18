@@ -163,5 +163,16 @@
     "topGradient": "linear-gradient(90deg, #4facfe, #00f2fe, #43e97b, #38f9d7)",
     "accentColor": "#4facfe",
     "accentActive": "linear-gradient(135deg, #eff9ff, #e0f4ff)"
+  },
+  "gentsuki": {
+    "title": "🛵 原付学科試験",
+    "heading": "原付学科試験",
+    "description": "原動機付自転車運転免許の学科試験対策。標識・信号、通行方法・交通ルール、原付特有のルール、安全運転・整備の4分野を実際の試験と同じ○×（正誤）形式で出題",
+    "icon": "🛵",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #ff5f6d, #ffc371, #2c3e50, #4ca1af)",
+    "accentColor": "#ff5f6d",
+    "accentActive": "linear-gradient(135deg, #fff5f5, #ffe8e8)"
   }
 }
