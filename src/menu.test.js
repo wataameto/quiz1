@@ -25,7 +25,7 @@ describe('Main menu HTML', () => {
     // 別の静的一覧をindex.html側に持たせない、二重管理を避ける設計）
     expect(indexHtml).toContain('Object.keys(menuConfig)');
     expect(indexHtml).toContain('cfg.heading');
-    expect(indexHtml).not.toContain(`id: '${Object.keys(config)[0]}'`);
+    expect(indexHtml).not.toContain(`path: './${Object.keys(config)[0]}/'`);
   });
 
   test('should show part counts from question metadata', () => {
@@ -54,5 +54,21 @@ describe('Main menu HTML', () => {
     expect(devopsHtml).toMatch(/src="\.\.\/shared\/quiz-app\.js(\?v=\d+)?"/);
     expect(quizAppJs).toContain("get('admin') === '1'");
     expect(quizAppJs).toContain('function showAdmin()');
+  });
+
+  test('every config.json entry has a valid genreMajor/genreMinor for menu grouping', () => {
+    // メインメニューのジャンル別グループ表示（docs/index.htmlのGENRE_ORDER）と対になる集合。
+    // 新しい教材を追加したときに分類を書き忘れると失敗する（quiz_undefined事故の再発防止と同じ考え方）。
+    const KNOWN_MAJORS = ['sample', 'shikaku', 'gakkou', 'zatsugaku'];
+    const KNOWN_MINORS = ['it_shikaku', 'kaikei_kinyu_shikaku', 'houritsu_sonota_shikaku'];
+
+    Object.entries(config).forEach(([id, cfg]) => {
+      expect(KNOWN_MAJORS).toContain(cfg.genreMajor);
+      if (cfg.genreMajor === 'shikaku') {
+        expect(KNOWN_MINORS).toContain(cfg.genreMinor);
+      } else {
+        expect(cfg.genreMinor).toBeNull();
+      }
+    });
   });
 });

@@ -566,6 +566,28 @@
       padding: 16px 0;
     }
 
+    .genre-heading-major {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #4a5568;
+      margin: 16px 0 4px;
+      padding-top: 10px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .genre-heading-major:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .genre-heading-minor {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #a0aec0;
+      margin: 10px 0 2px 10px;
+    }
+
     .quiz-toggle-row {
       display: flex;
       flex-direction: column;
@@ -1082,6 +1104,54 @@ function quizCodeBadgeHtml(id) {
   return `<span class="quiz-code-badge">${(id || '').toUpperCase()}</span>`;
 }
 
+// ジャンルの表示ラベル・階層・並び順（内容ではなく表示上の関心事なのでconfig.jsonには持たせない）
+const GENRE_ORDER = [
+  { id: 'sample', label: '🎲 サンプル', children: null },
+  { id: 'shikaku', label: '📜 資格試験', children: [
+      { id: 'it_shikaku', label: '💻 IT資格' },
+      { id: 'kaikei_kinyu_shikaku', label: '💰 会計・金融資格' },
+      { id: 'houritsu_sonota_shikaku', label: '⚖️ 法律・その他資格' },
+    ] },
+  { id: 'gakkou', label: '🏫 学校教材', children: null },
+  { id: 'zatsugaku', label: '🎉 雑学', children: null },
+];
+
+// items を大分類→(小分類)の階層にグループ化する。空グループ（該当教材が0件）は大分類・小分類とも出さない。
+function groupByGenre(items) {
+  const known = new Set(GENRE_ORDER.map(g => g.id));
+  const groups = GENRE_ORDER.map(major => {
+    if (!major.children) {
+      return { ...major, items: items.filter(r => r.genreMajor === major.id) };
+    }
+    const children = major.children
+      .map(child => ({ ...child, items: items.filter(r => r.genreMajor === major.id && r.genreMinor === child.id) }))
+      .filter(c => c.items.length > 0);
+    return { ...major, children };
+  }).filter(major => major.children ? major.children.length > 0 : major.items.length > 0);
+
+  const rest = items.filter(r => !known.has(r.genreMajor));
+  if (rest.length > 0) groups.push({ id: 'other', label: 'その他', children: null, items: rest });
+  return groups;
+}
+
+function renderScoreRowHtml(r) {
+  const lap = r.score.lap || 0;
+  const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
+  let markText = lap > 0 ? `⭐×${lap}` : '';
+  if (isFull) markText += '+⭐';
+  const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
+  return `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
+      <span class="score-row-top-line">
+        <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}</span>
+        <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
+      </span>
+      <span class="score-row-meta">
+        <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット</span>
+        <span class="score-row-correct">${clearMark}✅ ${r.score.correct}/${r.meta.total}問正解</span>
+      </span>
+    </a>`;
+}
+
 async function updateScoreDisplay() {
   if (visiblePrefs === null) {
     visiblePrefs = await loadVisiblePrefs();
@@ -1099,34 +1169,36 @@ async function updateScoreDisplay() {
     const collection = `quiz_${id}`;
     const meta = await calculateQuizMeta(id, path);
     const score = await getQuizScore(collection, id, path);
-    return { id, path, collection, emoji: cfg.icon || '', name: cfg.heading || id, description: cfg.description || '', meta, score };
+    return { id, path, collection, emoji: cfg.icon || '', name: cfg.heading || id, description: cfg.description || '', genreMajor: cfg.genreMajor || null, genreMinor: cfg.genreMinor || null, meta, score };
   }));
   lastQuizResults = results;
 
   let totalCorrect = 0;
   let totalQuestions = 0;
-  let rowsHtml = '';
-  // 📌固定した教材を先頭にまとめる（固定同士・非固定同士の相対順序はそのまま保つ安定ソート）
-  const sortedResults = [...results].sort((a, b) => (isQuizPinned(b.id) ? 1 : 0) - (isQuizPinned(a.id) ? 1 : 0));
-  sortedResults.forEach(r => {
-    if (!isQuizVisible(r.id)) return;
+  const visibleResults = results.filter(r => isQuizVisible(r.id));
+  visibleResults.forEach(r => {
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
-    const lap = r.score.lap || 0;
-    const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
-    let markText = lap > 0 ? `⭐×${lap}` : '';
-    if (isFull) markText += '+⭐';
-    const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
-    rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
-      <span class="score-row-top-line">
-        <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}</span>
-        <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
-      </span>
-      <span class="score-row-meta">
-        <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット</span>
-        <span class="score-row-correct">${clearMark}✅ ${r.score.correct}/${r.meta.total}問正解</span>
-      </span>
-    </a>`;
+  });
+
+  const pinned = visibleResults.filter(r => isQuizPinned(r.id));
+  const unpinned = visibleResults.filter(r => !isQuizPinned(r.id));
+
+  let rowsHtml = '';
+  if (pinned.length > 0) {
+    rowsHtml += `<h4 class="genre-heading-major">📌 固定教材</h4>`;
+    pinned.forEach(r => { rowsHtml += renderScoreRowHtml(r); });
+  }
+  groupByGenre(unpinned).forEach(major => {
+    rowsHtml += `<h4 class="genre-heading-major">${major.label}</h4>`;
+    if (major.children) {
+      major.children.forEach(child => {
+        rowsHtml += `<h5 class="genre-heading-minor">${child.label}</h5>`;
+        child.items.forEach(r => { rowsHtml += renderScoreRowHtml(r); });
+      });
+    } else {
+      major.items.forEach(r => { rowsHtml += renderScoreRowHtml(r); });
+    }
   });
 
   document.getElementById('score-summary').classList.add('visible');
@@ -1162,13 +1234,12 @@ function renderQuizToggleList() {
       || (r.id || '').toLowerCase().includes(query);
   });
 
-  let toggleHtml = '';
-  filtered.forEach(r => {
+  function toggleRowHtml(r) {
     const on = isQuizVisible(r.id);
     const pinned = isQuizPinned(r.id);
     const metaText = compact ? '' : `　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問`;
     const descHtml = compact ? '' : `<span class="quiz-toggle-desc">${r.description}</span>`;
-    toggleHtml += `<div class="quiz-toggle-row">
+    return `<div class="quiz-toggle-row">
       <div class="quiz-toggle-top">
         <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
         <button class="pin-toggle-btn${pinned ? ' pinned' : ''}" onclick="toggleQuizPin('${r.id}')" aria-pressed="${pinned}" title="あなたの選択教材の上に固定">📌</button>
@@ -1176,6 +1247,19 @@ function renderQuizToggleList() {
       </div>
       ${descHtml}
     </div>`;
+  }
+
+  let toggleHtml = '';
+  groupByGenre(filtered).forEach(major => {
+    toggleHtml += `<h4 class="genre-heading-major">${major.label}</h4>`;
+    if (major.children) {
+      major.children.forEach(child => {
+        toggleHtml += `<h5 class="genre-heading-minor">${child.label}</h5>`;
+        child.items.forEach(r => { toggleHtml += toggleRowHtml(r); });
+      });
+    } else {
+      major.items.forEach(r => { toggleHtml += toggleRowHtml(r); });
+    }
   });
   document.getElementById('quiz-toggle-list').innerHTML = toggleHtml;
   document.getElementById('quiz-search-empty').classList.toggle('hidden', filtered.length > 0);
