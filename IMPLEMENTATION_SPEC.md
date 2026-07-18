@@ -115,9 +115,9 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### 問題JSONスキーマ
 - 1ファイルは { id, label, description, tests } を持つ。
 - tests[] は { id, title, emoji, type, subtitle, questions } を持つ。
-- questions[] は { id, scenario, choices, correct, type, explanation } を持つ。
-- type === 'choice' の choices は文字列配列。要素数は4択が基本だが、gentsuki（原付学科試験）は実際の試験形式に合わせて`["正しい", "誤り"]`の2択にしている（choices/correctの仕組み自体は要素数を問わないため、他の教材も2択で作問できる）。
-- type === 'journal' の choices は { debit: [{ account, amount }], credit: [{ account, amount }] } の配列。
+- questions[] は { id, scenario, choices, correct, type, explanation } を持つ。questionsレベルの`type`フィールドは現在コードから読まれておらず、実質未使用（後方互換のため既存データには残っている）。
+- 仕訳問題（choicesが { debit: [{ account, amount }], credit: [{ account, amount }] } の配列）かどうかは、`isJournalQuestion(q)`（docs/shared/quiz-app.js）が`choices[0]`が文字列かオブジェクトかで自動判別する。新規に仕訳問題を作るときも`type`フィールドを付ける必要はない。
+- 通常の選択式（choicesが文字列配列）は要素数4択が基本だが、gentsuki（原付学科試験）は実際の試験形式に合わせて`["正しい", "誤り"]`の2択にしている（choices/correctの仕組み自体は要素数を問わないため、他の教材も2択で作問できる）。
 - correct は choices の0始まりインデックス。
 - 簿記の作問ルールは QUESTION_GUIDE.md を優先する。特に仕訳の勘定科目名として 売上 / 仕入 を使わない。
 
