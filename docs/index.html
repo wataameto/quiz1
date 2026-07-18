@@ -842,13 +842,48 @@ async function loadMenuConfig() {
   return menuConfigCache;
 }
 
+// このセッションで行った教材idリネームの旧→新対応表。
+// quiz_menu_prefsは旧idキーのまま残っているユーザーがいるため、
+// 読み込み時に見つかったら新idへ引き継いで書き戻す（1回だけの遅延移行）。
+const OLD_TO_NEW_QUIZ_IDS = {
+  boki1: 'bokinyu',
+  sap: 'sapc02',
+  kokyo1: 'koukyou1',
+  joho1: 'jouhou1',
+  itpassport: 'itpass',
+  itpassportjr: 'itpassjr',
+  fp3: 'fp3kyuu',
+  showa: 'shouwa',
+  capitals: 'capital',
+};
+
 async function loadVisiblePrefs() {
   if (!currentUser) return null;
   try {
-    const doc = await db.collection('quiz_menu_prefs').doc(currentUser.uid).get();
-    if (doc.exists && doc.data().visible) {
-      return doc.data().visible;
+    const docRef = db.collection('quiz_menu_prefs').doc(currentUser.uid);
+    const doc = await docRef.get();
+    if (!doc.exists || !doc.data().visible) return null;
+    const visible = doc.data().visible;
+
+    const migrationUpdates = {};
+    let needsMigration = false;
+    Object.keys(OLD_TO_NEW_QUIZ_IDS).forEach(oldId => {
+      if (Object.prototype.hasOwnProperty.call(visible, oldId)) {
+        const newId = OLD_TO_NEW_QUIZ_IDS[oldId];
+        // 新id側にまだ明示的な設定が無いときだけ、旧idの値を引き継ぐ
+        if (!Object.prototype.hasOwnProperty.call(visible, newId)) {
+          visible[newId] = visible[oldId];
+          migrationUpdates[`visible.${newId}`] = visible[oldId];
+        }
+        delete visible[oldId];
+        migrationUpdates[`visible.${oldId}`] = firebase.firestore.FieldValue.delete();
+        needsMigration = true;
+      }
+    });
+    if (needsMigration) {
+      try { await docRef.update(migrationUpdates); } catch (e) { console.error('Failed to migrate menu prefs:', e); }
     }
+    return visible;
   } catch (e) { console.error('Failed to load menu prefs:', e); }
   return null;
 }
