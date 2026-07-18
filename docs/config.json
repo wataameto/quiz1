@@ -152,5 +152,16 @@
     "topGradient": "linear-gradient(90deg, #1cd8d2, #93edc7, #4568dc, #b06ab3)",
     "accentColor": "#1cd8d2",
     "accentActive": "linear-gradient(135deg, #ecfffe, #e0fbf8)"
+  },
+  "eiken2": {
+    "title": "📘 英検2級 単語・熟語",
+    "heading": "英検2級 単語・熟語",
+    "description": "実用英語技能検定2級レベルの単語・熟語クイズ。動詞・形容詞・名詞・イディオムの6セットで頻出語彙を反復練習できる",
+    "icon": "📘",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #4facfe, #00f2fe, #43e97b, #38f9d7)",
+    "accentColor": "#4facfe",
+    "accentActive": "linear-gradient(135deg, #eff9ff, #e0f4ff)"
   }
 }

@@ -1,0 +1,482 @@
+{
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "英検2級 単語・熟語",
+  "id": "eiken2",
+  "tests": [
+    {
+      "id": 1,
+      "title": "🔤 動詞1",
+      "type": "Verbs 1",
+      "emoji": "🔤",
+      "subtitle": "英検2級レベルの動詞クイズ！",
+      "questions": [
+        {
+          "scenario": "「accomplish」の意味として最も適切なものは？",
+          "choices": ["成し遂げる", "拒否する", "忘れる", "疑う"],
+          "correct": 0,
+          "explanation": "accomplish＝成し遂げる、達成する。例：accomplish a goal（目標を達成する）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emphasize」の意味として最も適切なものは？",
+          "choices": ["強調する", "縮小する", "無視する", "分割する"],
+          "correct": 0,
+          "explanation": "emphasize＝強調する。名詞形はemphasis（強調）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distinguish」の意味として最も適切なものは？",
+          "choices": ["区別する", "混同する", "破壊する", "承認する"],
+          "correct": 0,
+          "explanation": "distinguish＝区別する。distinguish A from B（AをBと区別する）の形でよく使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accompany」の意味として最も適切なものは？",
+          "choices": ["同行する", "反対する", "逃げる", "遅らせる"],
+          "correct": 0,
+          "explanation": "accompany＝同行する、伴う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exaggerate」の意味として最も適切なものは？",
+          "choices": ["誇張する", "縮小して言う", "正確に言う", "黙る"],
+          "correct": 0,
+          "explanation": "exaggerate＝誇張する、大げさに言う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「estimate」の意味として最も適切なものは？",
+          "choices": ["見積もる", "保証する", "削除する", "禁止する"],
+          "correct": 0,
+          "explanation": "estimate＝見積もる、推定する。名詞としても「見積もり」の意味で使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eliminate」の意味として最も適切なものは？",
+          "choices": ["排除する", "追加する", "保存する", "発見する"],
+          "correct": 0,
+          "explanation": "eliminate＝排除する、取り除く。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anticipate」の意味として最も適切なものは？",
+          "choices": ["予期する", "後悔する", "拒絶する", "記録する"],
+          "correct": 0,
+          "explanation": "anticipate＝予期する、予想する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sustain」の意味として最も適切なものは？",
+          "choices": ["持続させる", "破壊する", "中断する", "縮小する"],
+          "correct": 0,
+          "explanation": "sustain＝持続させる、維持する。sustainable（持続可能な）の語源。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hesitate」の意味として最も適切なものは？",
+          "choices": ["ためらう", "急ぐ", "決断する", "命令する"],
+          "correct": 0,
+          "explanation": "hesitate＝ためらう。without hesitation（ためらわずに）の形もよく出る。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "🔤 動詞2",
+      "type": "Verbs 2",
+      "emoji": "🔤",
+      "subtitle": "英検2級レベルの動詞クイズ！パート2",
+      "questions": [
+        {
+          "scenario": "「contribute」の意味として最も適切なものは？",
+          "choices": ["貢献する", "妨害する", "無視する", "拒否する"],
+          "correct": 0,
+          "explanation": "contribute＝貢献する、寄付する。contribute to〜（〜に貢献する）の形が頻出。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compensate」の意味として最も適切なものは？",
+          "choices": ["埋め合わせる", "無効にする", "混乱させる", "悪化させる"],
+          "correct": 0,
+          "explanation": "compensate＝埋め合わせる、補償する。compensate for〜（〜を埋め合わせる）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「resemble」の意味として最も適切なものは？",
+          "choices": ["似ている", "異なる", "対立する", "反発する"],
+          "correct": 0,
+          "explanation": "resemble＝似ている。resemble自体が他動詞で、前置詞不要（resemble to とはしない）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reveal」の意味として最も適切なものは？",
+          "choices": ["明らかにする", "隠す", "忘れる", "拒む"],
+          "correct": 0,
+          "explanation": "reveal＝明らかにする、暴露する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「undermine」の意味として最も適切なものは？",
+          "choices": ["弱体化させる", "強化する", "修理する", "称賛する"],
+          "correct": 0,
+          "explanation": "undermine＝弱体化させる、損なう。undermine confidence（自信を損なう）など。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accumulate」の意味として最も適切なものは？",
+          "choices": ["蓄積する", "消費する", "分配する", "放棄する"],
+          "correct": 0,
+          "explanation": "accumulate＝蓄積する、積み重なる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tolerate」の意味として最も適切なものは？",
+          "choices": ["我慢する", "拒否する", "攻撃する", "賞賛する"],
+          "correct": 0,
+          "explanation": "tolerate＝我慢する、容認する。名詞形はtolerance（寛容）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exceed」の意味として最も適切なものは？",
+          "choices": ["超える", "下回る", "一致する", "均衡する"],
+          "correct": 0,
+          "explanation": "exceed＝超える、上回る。exceed expectations（期待を超える）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「postpone」の意味として最も適切なものは？",
+          "choices": ["延期する", "早める", "中止する", "決定する"],
+          "correct": 0,
+          "explanation": "postpone＝延期する。postpone A until B（AをBまで延期する）の形もよく出る。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cooperate」の意味として最も適切なものは？",
+          "choices": ["協力する", "妨害する", "競争する", "孤立する"],
+          "correct": 0,
+          "explanation": "cooperate＝協力する。名詞形cooperation（協力）もあわせて覚える。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "📝 形容詞1",
+      "type": "Adjectives 1",
+      "emoji": "📝",
+      "subtitle": "英検2級レベルの形容詞クイズ！",
+      "questions": [
+        {
+          "scenario": "「essential」の意味として最も適切なものは？",
+          "choices": ["不可欠な", "些細な", "過剰な", "一時的な"],
+          "correct": 0,
+          "explanation": "essential＝不可欠な、必要不可欠の。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sufficient」の意味として最も適切なものは？",
+          "choices": ["十分な", "不足した", "過剰な", "無関係な"],
+          "correct": 0,
+          "explanation": "sufficient＝十分な。反対語はinsufficient（不十分な）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「controversial」の意味として最も適切なものは？",
+          "choices": ["物議を醸す", "明白な", "平凡な", "単純な"],
+          "correct": 0,
+          "explanation": "controversial＝物議を醸す、論争の的となる。名詞形controversy（論争）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inevitable」の意味として最も適切なものは？",
+          "choices": ["避けられない", "回避可能な", "偶然の", "珍しい"],
+          "correct": 0,
+          "explanation": "inevitable＝避けられない、必然の。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reluctant」の意味として最も適切なものは？",
+          "choices": ["気が進まない", "熱心な", "積極的な", "素直な"],
+          "correct": 0,
+          "explanation": "reluctant＝気が進まない、渋っている。be reluctant to do（〜するのに気が進まない）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「remarkable」の意味として最も適切なものは？",
+          "choices": ["注目すべき", "ありふれた", "取るに足らない", "曖昧な"],
+          "correct": 0,
+          "explanation": "remarkable＝顕著な、注目すべき。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「considerable」の意味として最も適切なものは？",
+          "choices": ["かなりの", "わずかな", "皆無の", "一定の"],
+          "correct": 0,
+          "explanation": "considerable＝かなりの、相当な。considerate（思いやりのある）と混同注意。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「skeptical」の意味として最も適切なものは？",
+          "choices": ["懐疑的な", "楽観的な", "無関心な", "確信している"],
+          "correct": 0,
+          "explanation": "skeptical＝懐疑的な。be skeptical about〜（〜に懐疑的である）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genuine」の意味として最も適切なものは？",
+          "choices": ["本物の", "偽の", "一時的な", "疑わしい"],
+          "correct": 0,
+          "explanation": "genuine＝本物の、心からの。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vulnerable」の意味として最も適切なものは？",
+          "choices": ["脆弱な", "頑丈な", "無敵の", "冷淡な"],
+          "correct": 0,
+          "explanation": "vulnerable＝傷つきやすい、脆弱な。be vulnerable to〜（〜に対して脆弱である）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "📝 形容詞2",
+      "type": "Adjectives 2",
+      "emoji": "📝",
+      "subtitle": "英検2級レベルの形容詞クイズ！パート2",
+      "questions": [
+        {
+          "scenario": "「flexible」の意味として最も適切なものは？",
+          "choices": ["柔軟な", "頑固な", "厳格な", "単調な"],
+          "correct": 0,
+          "explanation": "flexible＝柔軟な。flexible schedule（融通の利くスケジュール）など。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reliable」の意味として最も適切なものは？",
+          "choices": ["信頼できる", "疑わしい", "不安定な", "一時的な"],
+          "correct": 0,
+          "explanation": "reliable＝信頼できる。名詞形reliability（信頼性）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beneficial」の意味として最も適切なものは？",
+          "choices": ["有益な", "有害な", "無関係な", "中立の"],
+          "correct": 0,
+          "explanation": "beneficial＝有益な。反対語はharmful（有害な）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adequate」の意味として最も適切なものは？",
+          "choices": ["適切な", "不十分な", "過度な", "不適切な"],
+          "correct": 0,
+          "explanation": "adequate＝適切な、十分な。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「diverse」の意味として最も適切なものは？",
+          "choices": ["多様な", "均一な", "単純な", "一様の"],
+          "correct": 0,
+          "explanation": "diverse＝多様な。名詞形diversity（多様性）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「subsequent」の意味として最も適切なものは？",
+          "choices": ["その後の", "以前の", "同時の", "永久の"],
+          "correct": 0,
+          "explanation": "subsequent＝その後の、続く。subsequent to〜（〜の後に）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gradual」の意味として最も適切なものは？",
+          "choices": ["徐々の", "急激な", "突然の", "瞬間的な"],
+          "correct": 0,
+          "explanation": "gradual＝徐々の。副詞形gradually（徐々に）も頻出。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「superficial」の意味として最も適切なものは？",
+          "choices": ["表面的な", "徹底的な", "本質的な", "深刻な"],
+          "correct": 0,
+          "explanation": "superficial＝表面的な。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「legitimate」の意味として最も適切なものは？",
+          "choices": ["合法の", "違法の", "疑わしい", "曖昧な"],
+          "correct": 0,
+          "explanation": "legitimate＝合法の、正当な。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambiguous」の意味として最も適切なものは？",
+          "choices": ["曖昧な", "明確な", "単純な", "具体的な"],
+          "correct": 0,
+          "explanation": "ambiguous＝曖昧な。名詞形ambiguity（曖昧さ）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "📖 名詞",
+      "type": "Nouns",
+      "emoji": "📖",
+      "subtitle": "英検2級レベルの名詞クイズ！",
+      "questions": [
+        {
+          "scenario": "「phenomenon」の意味として最も適切なものは？",
+          "choices": ["現象", "原因", "結果", "法則"],
+          "correct": 0,
+          "explanation": "phenomenon＝現象。複数形はphenomena。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「controversy」の意味として最も適切なものは？",
+          "choices": ["論争", "合意", "沈黙", "協力"],
+          "correct": 0,
+          "explanation": "controversy＝論争。形容詞形controversial（物議を醸す）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consequence」の意味として最も適切なものは？",
+          "choices": ["結果", "原因", "過程", "目的"],
+          "correct": 0,
+          "explanation": "consequence＝結果、影響。as a consequence of〜（〜の結果として）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「atmosphere」の意味として最も適切なものは？",
+          "choices": ["雰囲気", "建物", "制度", "組織"],
+          "correct": 0,
+          "explanation": "atmosphere＝雰囲気、大気。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「characteristic」の意味として最も適切なものは？",
+          "choices": ["特徴", "欠陥", "例外", "規則"],
+          "correct": 0,
+          "explanation": "characteristic＝特徴。形容詞としても「特徴的な」の意味で使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「perspective」の意味として最も適切なものは？",
+          "choices": ["観点", "結論", "証拠", "手段"],
+          "correct": 0,
+          "explanation": "perspective＝観点、視点。from a different perspective（違う観点から）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tendency」の意味として最も適切なものは？",
+          "choices": ["傾向", "例外", "原則", "結果"],
+          "correct": 0,
+          "explanation": "tendency＝傾向。have a tendency to do（〜する傾向がある）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dilemma」の意味として最も適切なものは？",
+          "choices": ["ジレンマ", "解決策", "結論", "合意"],
+          "correct": 0,
+          "explanation": "dilemma＝ジレンマ、板挟みの状態。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「obstacle」の意味として最も適切なものは？",
+          "choices": ["障害", "支援", "目標", "結果"],
+          "correct": 0,
+          "explanation": "obstacle＝障害。overcome an obstacle（障害を乗り越える）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「outcome」の意味として最も適切なものは？",
+          "choices": ["結果", "原因", "過程", "目的"],
+          "correct": 0,
+          "explanation": "outcome＝結果、成果。consequenceと似ているが、outcomeは「最終的な成果」のニュアンスが強い。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "🔗 熟語・イディオム",
+      "type": "Idioms",
+      "emoji": "🔗",
+      "subtitle": "英検2級レベルの熟語・イディオムクイズ！",
+      "questions": [
+        {
+          "scenario": "「in terms of」の意味として最も適切なものは？",
+          "choices": ["〜の点で", "〜にもかかわらず", "〜の代わりに", "〜のために"],
+          "correct": 0,
+          "explanation": "in terms of＝〜の点で、〜に関して。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on behalf of」の意味として最も適切なものは？",
+          "choices": ["〜を代表して", "〜に反対して", "〜と比べて", "〜のせいで"],
+          "correct": 0,
+          "explanation": "on behalf of＝〜を代表して、〜の代わりに。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take advantage of」の意味として最も適切なものは？",
+          "choices": ["〜を利用する", "〜を無視する", "〜を拒否する", "〜を疑う"],
+          "correct": 0,
+          "explanation": "take advantage of＝〜を利用する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come up with」の意味として最も適切なものは？",
+          "choices": ["思いつく", "諦める", "忘れる", "拒絶する"],
+          "correct": 0,
+          "explanation": "come up with＝（アイデアなどを）思いつく。come up with a solution（解決策を思いつく）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put up with」の意味として最も適切なものは？",
+          "choices": ["我慢する", "楽しむ", "期待する", "提案する"],
+          "correct": 0,
+          "explanation": "put up with＝我慢する。tolerateとほぼ同じ意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get rid of」の意味として最も適切なものは？",
+          "choices": ["取り除く", "手に入れる", "保存する", "修理する"],
+          "correct": 0,
+          "explanation": "get rid of＝取り除く、処分する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make up for」の意味として最も適切なものは？",
+          "choices": ["埋め合わせる", "悪化させる", "無視する", "妨害する"],
+          "correct": 0,
+          "explanation": "make up for＝埋め合わせる、補う。compensate forとほぼ同じ意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as a result of」の意味として最も適切なものは？",
+          "choices": ["〜の結果として", "〜にもかかわらず", "〜の代わりに", "〜以前に"],
+          "correct": 0,
+          "explanation": "as a result of＝〜の結果として。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in spite of」の意味として最も適切なものは？",
+          "choices": ["〜にもかかわらず", "〜のおかげで", "〜のために", "〜と同時に"],
+          "correct": 0,
+          "explanation": "in spite of＝〜にもかかわらず。despiteとほぼ同じ意味（despiteは前置詞1語）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep track of」の意味として最も適切なものは？",
+          "choices": ["〜を把握する", "〜を無視する", "〜を破棄する", "〜を疑う"],
+          "correct": 0,
+          "explanation": "keep track of＝〜を把握する、記録し続ける。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}
