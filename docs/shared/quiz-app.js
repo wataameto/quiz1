@@ -508,20 +508,20 @@ async function recordTestResult(id, s) {
     const updates = { [historyField]: updatedHistory, [countField]: newCount, lapAttemptCount: newLapAttemptCount };
     if (s > best) updates[bestField] = s;
 
+    // このテストの結果で「初めて」全問正解の状態になるかを、書き込み前に判定する。
+    // すでに全問正解済みならbest_は上がることはあっても下がらないので、再スキャンせず true とみなせる。
+    // まだFirestoreに書き込んでいないupdatesの値をoverridesとして渡すことで、
+    // fullClearHistoryの更新も同じ1回の書き込みにまとめられる。
+    const nowFullyCleared = wasFullyCleared ? true : await isFullyCleared(updates);
+    if (!wasFullyCleared && nowFullyCleared) {
+      const entry = { lap: getLap() + 1, date: nowJstString(), attempts: newLapAttemptCount };
+      updates.fullClearHistory = [...getFullClearHistory(), entry];
+    }
+
     const collection = getCollectionName();
     const docRef = db.collection(collection).doc(currentUser.uid);
     await docRef.set(updates, { merge: true });
     Object.assign(bestScores, updates);
-
-    // このテストの結果で「初めて」全問正解の状態になったときだけ、達成日時を記録する。
-    // すでに全問正解済みならbest_は上がることはあっても下がらないので、再スキャンせず true とみなせる。
-    const nowFullyCleared = wasFullyCleared ? true : await isFullyCleared();
-    if (!wasFullyCleared && nowFullyCleared) {
-      const entry = { lap: getLap() + 1, date: nowJstString(), attempts: newLapAttemptCount };
-      const newFullClearHistory = [...getFullClearHistory(), entry];
-      await docRef.set({ fullClearHistory: newFullClearHistory }, { merge: true });
-      bestScores.fullClearHistory = newFullClearHistory;
-    }
   } catch (e) { console.error(e); }
 }
 
@@ -809,7 +809,10 @@ function calculateTotalQuestionsAllLevels() {
   return totalQuestions;
 }
 
-async function isFullyCleared() {
+// overridesに { best_<level>_<id>: 100 } のような「まだFirestoreに書き込んでいない
+// 予定の値」を渡すと、キャッシュより優先してその値で判定する。書き込み前に
+// 「この更新で全問正解になるか」を判定し、1回の書き込みにまとめるために使う。
+async function isFullyCleared(overrides) {
   if (!currentUser) return false;
   if (!cacheInitialized) await initializeBestScoresCache();
   let sawAnyTest = false;
@@ -817,7 +820,9 @@ async function isFullyCleared() {
     if (!quizData[level] || !quizData[level].tests) continue;
     for (const t of quizData[level].tests) {
       sawAnyTest = true;
-      const best = await getBest(t.id, level);
+      const key = `best_${level}_${t.id}`;
+      const v = (overrides && overrides[key] !== undefined) ? overrides[key] : bestScores[key];
+      const best = (v === undefined || v === null) ? -1 : parseInt(v, 10);
       if (best !== 100) return false;
     }
   }
