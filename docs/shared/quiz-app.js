@@ -1354,10 +1354,11 @@ function submitTextAnswer() {
   };
   const nextLabel = isLast ? '➡️ 結果を見る' : '➡️ 次の問題';
 
+  const nextIndicator = `<span class="next-indicator">${nextLabel}</span>`;
   const resultHtml = ok
-    ? `<div class="text-answer-result correct">✅ 正解！「${escapeHtml(typed)}」</div>`
-    : `<div class="text-answer-result wrong">❌ 正解: ${escapeHtml(q.correctText)}（あなたの回答: ${escapeHtml(typed || '(空欄)')}）</div>`;
-  document.getElementById('choices').insertAdjacentHTML('beforeend', `${resultHtml}<button class="choice-btn" id="text-next-btn" disabled>${nextLabel}</button>`);
+    ? `<button class="text-answer-result correct" id="text-next-btn" disabled>✅ 正解！「${escapeHtml(typed)}」${nextIndicator}</button>`
+    : `<button class="text-answer-result wrong" id="text-next-btn" disabled>❌ 正解: ${escapeHtml(q.correctText)}（あなたの回答: ${escapeHtml(typed || '(空欄)')}）${nextIndicator}</button>`;
+  document.getElementById('choices').insertAdjacentHTML('beforeend', resultHtml);
   const nextBtn = document.getElementById('text-next-btn');
   nextBtn.onclick = goNext;
   // 答え合わせ表示後 0.5秒はクリック受け付けない

@@ -150,7 +150,8 @@
     .text-answer-input:focus { outline: none; border-color: #f7971e; }
     .text-submit-btn { border: none; border-radius: 12px; padding: 14px 20px; background: linear-gradient(135deg, #f7971e, #ffd200); color: #fff; font-weight: 700; font-size: 0.93rem; cursor: pointer; font-family: inherit; }
     .text-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .text-answer-result { border-radius: 12px; padding: 14px 18px; margin-top: 10px; font-size: 0.93rem; line-height: 1.6; }
+    .text-answer-result { display: block; width: 100%; border: none; border-radius: 12px; padding: 14px 18px; margin-top: 10px; font-size: 0.93rem; line-height: 1.6; text-align: left; font-family: inherit; cursor: pointer; overflow: hidden; }
+    .text-answer-result:disabled { cursor: not-allowed; }
     .text-answer-result.correct { background: linear-gradient(135deg, #f0fff4, #c6f6d5); color: #276749; font-weight: 700; }
     .text-answer-result.wrong { background: linear-gradient(135deg, #fff5f5, #fed7d7); color: #9b2c2c; }
     @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-8px); } 40% { transform: translateX(8px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(5px); } }
