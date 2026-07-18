@@ -143,8 +143,8 @@
     "accentActive": "linear-gradient(135deg, #eef7ff, #e0f0ff)"
   },
   "capital": {
-    "title": "🌍 世界首都網羅クイズ",
-    "heading": "世界首都網羅クイズ",
+    "title": "🌍 世界の首都クイズ",
+    "heading": "世界の首都クイズ",
     "description": "アジア・ヨーロッパ・南北アメリカ・アフリカ/オセアニアの国々の首都を問う雑学クイズ。定番から意外と間違えやすい首都まで幅広く出題",
     "icon": "🌍",
     "bgColor": "#0f2027",

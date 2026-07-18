@@ -15,7 +15,7 @@
 - takken: 宅地建物取引士（宅建士）
 - shouwa: 昭和レトロ雑学
 - heisei: 平成レトロ雑学
-- capital: 世界首都網羅クイズ
+- capital: 世界の首都クイズ
 
 ## 主なファイル
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
