@@ -289,7 +289,7 @@ function showAdmin() {
         question.choices.forEach((choice, choiceIndex) => {
           const isCorrect = choiceIndex === question.correct;
           const label = String.fromCharCode(65 + choiceIndex);
-          const choiceText = question.type === 'journal' ? journalText(choice) : choice;
+          const choiceText = isJournalQuestion(question) ? journalText(choice) : choice;
           lines.push(`${isCorrect ? '*' : ' '} ${label}. ${choiceText}`);
         });
         if (question.explanation) {
@@ -1056,6 +1056,12 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
 // 仕訳レンダリング（boki1 との統一性のため）
 // ============================================================
 
+// 仕訳問題かどうかは choices の中身の形（文字列かオブジェクトか）で自動判別する。
+// 問題JSON側の"type"フィールドに依存しないため、typeを書き忘れても正しく判定できる。
+function isJournalQuestion(q) {
+  return Array.isArray(q.choices) && q.choices.length > 0 && typeof q.choices[0] === 'object';
+}
+
 function fmt(n) { return '¥' + n.toLocaleString(); }
 
 function renderJournal(entry) {
@@ -1211,7 +1217,7 @@ function renderQuestion() {
   answerInProgress = false; // 新しい問題では回答可能に
   const q = currentTest.questions[currentQ];
   const total = currentTest.questions.length;
-  const isJ = q.type === 'journal'; // 仕訳問題判定
+  const isJ = isJournalQuestion(q); // 仕訳問題判定（choicesの中身の形で自動判別）
   const pct = Math.round((currentQ / total) * 100);
 
   document.getElementById('quiz-title').textContent    = currentTest.title;
@@ -1355,8 +1361,8 @@ async function showResults() {
 
   document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
     const ans = answers[i];
-    const correctText = escapeHtml(q.type === 'journal' ? journalText(q.choices[q.correct]) : q.choices[q.correct]);
-    const chosenText = escapeHtml(q.type === 'journal' ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx]);
+    const correctText = escapeHtml(isJournalQuestion(q) ? journalText(q.choices[q.correct]) : q.choices[q.correct]);
+    const chosenText = escapeHtml(isJournalQuestion(q) ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx]);
     let detail = `<span>${escapeHtml(q.scenario)}</span>${searchIconHtml(q.scenario)}<br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
     if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
     if (q.explanation) detail += `<div class="exp">💡 ${escapeHtml(q.explanation)}${searchIconHtml(q.explanation)}</div>`;
