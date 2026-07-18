@@ -97,5 +97,16 @@
     "topGradient": "linear-gradient(90deg, #f7b733, #fc4a1a, #16a085, #2c3e50)",
     "accentColor": "#f7b733",
     "accentActive": "linear-gradient(135deg, #fffaf0, #fff3e0)"
+  },
+  "takken": {
+    "title": "🏘️ 宅地建物取引士（宅建士）",
+    "heading": "宅地建物取引士（宅建士）",
+    "description": "宅地建物取引士試験（宅建士）の基礎知識。宅建業法、権利関係（民法・借地借家法・区分所有法等）、法令上の制限（都市計画法・建築基準法・農地法等）、税・その他の4分野を扱う",
+    "icon": "🏘️",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #396afc, #2948ff, #c471ed, #f7797d)",
+    "accentColor": "#2948ff",
+    "accentActive": "linear-gradient(135deg, #f0f4ff, #e8ecff)"
   }
 }
