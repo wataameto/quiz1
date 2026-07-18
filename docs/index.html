@@ -407,6 +407,12 @@
       overflow-wrap: break-word;
     }
 
+    .score-row-count {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: rgba(124,74,0,0.75);
+    }
+
     .full-clear-mark {
       color: #b8860b;
       font-size: 0.78rem;
@@ -416,16 +422,11 @@
 
     .score-row-meta {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: baseline;
       gap: 10px;
       font-size: 0.78rem;
       color: rgba(124,74,0,0.75);
-    }
-
-    .score-row-count {
-      min-width: 0;
-      overflow-wrap: break-word;
     }
 
     .score-row-result {
@@ -501,22 +502,31 @@
       margin: 0 0 8px 10px;
     }
 
-    .genre-nav-link {
-      text-decoration: none;
+    .genre-nav-btn {
       cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
     }
 
-    .genre-nav-major-link {
+    .genre-nav-major-btn {
+      background: none;
+      border: none;
+      padding: 0;
       font-size: 0.88rem;
       font-weight: 800;
       color: #2d3748;
     }
 
-    .genre-nav-major-link:hover {
+    .genre-nav-major-btn:hover {
       color: #0066ff;
     }
 
-    .genre-nav-minor-link {
+    .genre-nav-major-btn.selected {
+      color: #0066ff;
+      text-decoration: underline;
+    }
+
+    .genre-nav-minor-btn {
       display: inline-block;
       padding: 3px 10px;
       background: #f7fafc;
@@ -527,7 +537,32 @@
       font-size: 0.76rem;
     }
 
-    .genre-nav-minor-link:hover {
+    .genre-nav-minor-btn:hover {
+      border-color: #0066ff;
+      color: #0066ff;
+    }
+
+    .genre-nav-minor-btn.selected {
+      background: #0066ff;
+      border-color: #0066ff;
+      color: #fff;
+    }
+
+    .genre-nav-reset-btn {
+      display: block;
+      margin-top: 6px;
+      padding: 4px 12px;
+      background: none;
+      border: 1px solid #cbd5e0;
+      border-radius: 999px;
+      color: #718096;
+      font-weight: 700;
+      font-size: 0.74rem;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .genre-nav-reset-btn:hover {
       border-color: #0066ff;
       color: #0066ff;
     }
@@ -537,10 +572,12 @@
     }
 
     .quiz-toggle-heading {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       font-weight: 800;
       color: #2d3748;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
+      padding-left: 10px;
+      border-left: 5px solid #f7971e;
     }
 
     .quiz-toggle-heading-row {
@@ -600,8 +637,8 @@
       font-size: 0.82rem;
       font-weight: 800;
       color: #4a5568;
-      margin: 16px 0 4px;
-      padding-top: 10px;
+      margin: 6px 0 1px;
+      padding-top: 4px;
       border-top: 1px solid #e2e8f0;
     }
 
@@ -615,7 +652,7 @@
       font-size: 0.74rem;
       font-weight: 700;
       color: #a0aec0;
-      margin: 10px 0 2px 10px;
+      margin: 3px 0 1px 10px;
     }
 
     .quiz-toggle-row {
@@ -1169,21 +1206,43 @@ function groupByGenre(items) {
   return groups;
 }
 
+// 選択中の教材ジャンル（大分類id・小分類idを区別せず同じSetに入れる。空＝絞り込みなし＝全部表示）
+let selectedGenres = new Set();
+
+function toggleGenreFilter(id) {
+  if (selectedGenres.has(id)) selectedGenres.delete(id); else selectedGenres.add(id);
+  renderGenreNav();
+  renderQuizToggleList();
+}
+
+function resetGenreFilter() {
+  selectedGenres.clear();
+  renderGenreNav();
+  renderQuizToggleList();
+}
+
+function genreNavButtonHtml(id, label, count, sizeClass) {
+  const selected = selectedGenres.has(id);
+  return `<button type="button" class="genre-nav-btn ${sizeClass}${selected ? ' selected' : ''}" onclick="toggleGenreFilter('${id}')" aria-pressed="${selected}">${label}（${count}）</button>`;
+}
+
 function renderGenreNav() {
   const groups = groupByGenre(lastQuizResults);
   let html = '';
   groups.forEach(major => {
     if (major.children) {
-      html += `<div class="genre-nav-major"><a href="#genre-anchor-${major.id}" class="genre-nav-link genre-nav-major-link">${major.label}</a></div>`;
+      const totalCount = major.children.reduce((sum, c) => sum + c.items.length, 0);
+      html += `<div class="genre-nav-major">${genreNavButtonHtml(major.id, major.label, totalCount, 'genre-nav-major-btn')}</div>`;
       html += `<div class="genre-nav-minor-list">`;
       major.children.forEach(child => {
-        html += `<a href="#genre-anchor-${child.id}" class="genre-nav-link genre-nav-minor-link">${child.label}（${child.items.length}）</a>`;
+        html += genreNavButtonHtml(child.id, child.label, child.items.length, 'genre-nav-minor-btn');
       });
       html += `</div>`;
     } else {
-      html += `<div class="genre-nav-major"><a href="#genre-anchor-${major.id}" class="genre-nav-link genre-nav-major-link">${major.label}（${major.items.length}）</a></div>`;
+      html += `<div class="genre-nav-major">${genreNavButtonHtml(major.id, major.label, major.items.length, 'genre-nav-major-btn')}</div>`;
     }
   });
+  html += `<button type="button" class="genre-nav-reset-btn" onclick="resetGenreFilter()">🔄 リセット</button>`;
   document.getElementById('quiz-genre-nav').innerHTML = html;
 }
 
@@ -1194,9 +1253,8 @@ function renderScoreRowHtml(r) {
   if (isFull) markText += '+⭐';
   const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
   return `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
-      <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}</span>
+      <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name} <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット</span></span>
       <span class="score-row-meta">
-        <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット</span>
         <span class="score-row-result">
           <span class="score-row-correct">${clearMark}✅ ${r.score.correct}/${r.meta.total}問正解</span>
           <span class="score-row-enter">入る</span>
@@ -1282,10 +1340,14 @@ function renderQuizToggleList() {
   const compact = isCompactListMode();
 
   const filtered = lastQuizResults.filter(r => {
-    if (!query) return true;
-    return r.name.toLowerCase().includes(query)
+    const matchesQuery = !query
+      || r.name.toLowerCase().includes(query)
       || r.description.toLowerCase().includes(query)
       || (r.id || '').toLowerCase().includes(query);
+    const matchesGenre = selectedGenres.size === 0
+      || selectedGenres.has(r.genreMajor)
+      || selectedGenres.has(r.genreMinor);
+    return matchesQuery && matchesGenre;
   });
 
   function toggleRowHtml(r) {
@@ -1305,10 +1367,10 @@ function renderQuizToggleList() {
 
   let toggleHtml = '';
   groupByGenre(filtered).forEach(major => {
-    toggleHtml += `<h4 class="genre-heading-major" id="genre-anchor-${major.id}">${major.label}</h4>`;
+    toggleHtml += `<h4 class="genre-heading-major">${major.label}</h4>`;
     if (major.children) {
       major.children.forEach(child => {
-        toggleHtml += `<h5 class="genre-heading-minor" id="genre-anchor-${child.id}">${child.label}</h5>`;
+        toggleHtml += `<h5 class="genre-heading-minor">${child.label}</h5>`;
         child.items.forEach(r => { toggleHtml += toggleRowHtml(r); });
       });
     } else {
