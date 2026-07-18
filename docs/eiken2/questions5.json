@@ -1,0 +1,798 @@
+{
+  "id": "eiken2",
+  "level": 5,
+  "label": "📖 名詞編1",
+  "description": "基本名詞（社会・日常生活の語彙）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "名詞編1-1",
+      "type": "General Nouns Group A",
+      "emoji": "📘",
+      "subtitle": "英検2級レベルの語彙クイズ！社会生活に関わる基本名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「agriculture」の意味として最も適切なものは？",
+          "choices": ["農業", "漁業", "建築業", "製造業"],
+          "correct": 0,
+          "explanation": "agricultureは「農業」。agri-（畑）+cultureで、農地を耕す営みを指す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appliance」の意味として最も適切なものは？",
+          "choices": ["(家庭用)電化製品", "家具", "装飾品", "衣類"],
+          "correct": 0,
+          "explanation": "applianceは主に家庭用電化製品を指す。例: a kitchen appliance（台所用電化製品）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「atmosphere」の意味として最も適切なものは？",
+          "choices": ["雰囲気、大気", "気候変動", "天気予報", "騒音"],
+          "correct": 0,
+          "explanation": "atmosphereは「大気」の意味に加え、場の「雰囲気」も表す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「authority」の意味として最も適切なものは？",
+          "choices": ["権威、当局", "罰金", "許可証", "義務"],
+          "correct": 0,
+          "explanation": "authorityは「権威」「権限」、複数形the authoritiesで「当局」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「behavior」の意味として最も適切なものは？",
+          "choices": ["行動、振る舞い", "感情", "習慣", "性格"],
+          "correct": 0,
+          "explanation": "behaviorは人や動物の「行動・振る舞い」を指す語。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「burden」の意味として最も適切なものは？",
+          "choices": ["負担、重荷", "利益", "義務教育", "貯蓄"],
+          "correct": 0,
+          "explanation": "burdenは精神的・物理的な「重荷、負担」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「category」の意味として最も適切なものは？",
+          "choices": ["部門、範疇", "結果", "比較", "基準"],
+          "correct": 0,
+          "explanation": "categoryは物事を分類した「部門、種類」を指す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ceremony」の意味として最も適切なものは？",
+          "choices": ["式典", "祭日", "記念品", "招待状"],
+          "correct": 0,
+          "explanation": "ceremonyは結婚式や卒業式などの「儀式、式典」を指す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circumstance」の意味として最も適切なものは？",
+          "choices": ["状況、事情", "結果", "原因", "理由"],
+          "correct": 0,
+          "explanation": "circumstanceは人を取り巻く「状況、事情」を意味し、しばしば複数形で使われる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「colleague」の意味として最も適切なものは？",
+          "choices": ["同僚", "上司", "顧客", "部下"],
+          "correct": 0,
+          "explanation": "colleagueは同じ職場・専門分野で働く「同僚」を指す。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編1-2",
+      "type": "Business & Relationship Nouns",
+      "emoji": "💼",
+      "subtitle": "英検2級レベルの語彙クイズ！ビジネス・人間関係の名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「commodity」の意味として最も適切なものは？",
+          "choices": ["商品、必需品", "広告", "在庫", "値段"],
+          "correct": 0,
+          "explanation": "commodityは特に売買される「商品」、農産物や原材料を指すことが多い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commuter」の意味として最も適切なものは？",
+          "choices": ["通勤者、通学者", "旅行者", "移民", "観光客"],
+          "correct": 0,
+          "explanation": "commuterは電車やバスで定期的に通勤・通学する人を指す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「companion」の意味として最も適切なものは？",
+          "choices": ["仲間、連れ", "競争相手", "客", "案内人"],
+          "correct": 0,
+          "explanation": "companionは一緒に行動する「仲間、連れ」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compensation」の意味として最も適切なものは？",
+          "choices": ["補償、報酬", "罰則", "割引", "保険料"],
+          "correct": 0,
+          "explanation": "compensationは損失に対する「補償」や労働への「報酬」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「component」の意味として最も適切なものは？",
+          "choices": ["構成要素、部品", "完成品", "説明書", "材料費"],
+          "correct": 0,
+          "explanation": "componentは機械やシステムを構成する「部品、要素」を指す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conflict」の意味として最も適切なものは？",
+          "choices": ["対立、紛争", "協力", "合意", "和解"],
+          "correct": 0,
+          "explanation": "conflictは意見や利害の「対立」、または武力「紛争」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consent」の意味として最も適切なものは？",
+          "choices": ["同意、承諾", "拒否", "命令", "警告"],
+          "correct": 0,
+          "explanation": "consentは相手の要求などへの「同意」を意味し、give consentのように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consequence」の意味として最も適切なものは？",
+          "choices": ["結果、影響", "原因", "目的", "過程"],
+          "correct": 0,
+          "explanation": "consequenceは行動や出来事によって生じる「結果」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consumer」の意味として最も適切なものは？",
+          "choices": ["消費者", "生産者", "販売者", "投資家"],
+          "correct": 0,
+          "explanation": "consumerは商品やサービスを購入・利用する「消費者」を指す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「container」の意味として最も適切なものは？",
+          "choices": ["容器", "内容物", "包装紙", "貯蔵庫"],
+          "correct": 0,
+          "explanation": "containerは物を入れる「容器」で、輸送用のコンテナも指す。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編1-3",
+      "type": "Society & Agreement Nouns",
+      "emoji": "📜",
+      "subtitle": "英検2級レベルの語彙クイズ！社会・契約に関する名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「contract」の意味として最も適切なものは？",
+          "choices": ["契約", "提案", "申請", "報告書"],
+          "correct": 0,
+          "explanation": "contractは法的拘束力のある「契約」を意味する。動詞では「契約する、収縮する」の意味も。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contribution」の意味として最も適切なものは？",
+          "choices": ["貢献、寄付", "反対", "批判", "損失"],
+          "correct": 0,
+          "explanation": "contributionは組織や社会への「貢献」、または「寄付」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「controversy」の意味として最も適切なものは？",
+          "choices": ["論争、物議", "合意", "解決策", "調査"],
+          "correct": 0,
+          "explanation": "controversyは意見が対立する「論争、物議」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convenience」の意味として最も適切なものは？",
+          "choices": ["便利さ、便宜", "不便", "複雑さ", "混乱"],
+          "correct": 0,
+          "explanation": "convenienceは「便利さ」を意味し、convenience storeはコンビニのこと。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「correspondence」の意味として最も適切なものは？",
+          "choices": ["文通、通信", "会話", "会議", "契約書"],
+          "correct": 0,
+          "explanation": "correspondenceは手紙などの「文通・通信」、または物事の「一致・対応関係」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「council」の意味として最も適切なものは？",
+          "choices": ["議会、評議会", "法律", "選挙", "市民"],
+          "correct": 0,
+          "explanation": "councilは地方議会などの「評議会、議会」を指す。city council（市議会）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crew」の意味として最も適切なものは？",
+          "choices": ["乗組員、作業班", "乗客", "荷物", "船"],
+          "correct": 0,
+          "explanation": "crewは船や飛行機の「乗組員」、作業を行う「班」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crisis」の意味として最も適切なものは？",
+          "choices": ["危機", "解決", "安定", "繁栄"],
+          "correct": 0,
+          "explanation": "crisisは経済危機や健康危機など重大な「危機」を意味する。複数形はcrises。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「custom」の意味として最も適切なものは？",
+          "choices": ["習慣、慣習", "法律", "規則", "伝説"],
+          "correct": 0,
+          "explanation": "customは社会や個人の「習慣、慣習」を意味する。customsで「税関」の意味もある。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「debt」の意味として最も適切なものは？",
+          "choices": ["借金、負債", "貯金", "利益", "投資"],
+          "correct": 0,
+          "explanation": "debtは返済すべき「借金、負債」を意味する。be in debtで「借金がある」。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編1-4",
+      "type": "Time, Places & Values Nouns",
+      "emoji": "🗺️",
+      "subtitle": "英検2級レベルの語彙クイズ！時間・場所・価値に関する名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「decade」の意味として最も適切なものは？",
+          "choices": ["10年間", "1世紀", "1年間", "1世代"],
+          "correct": 0,
+          "explanation": "decadeは「10年間」を意味する。ラテン語のdecem（10）に由来。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deficit」の意味として最も適切なものは？",
+          "choices": ["赤字、不足", "黒字", "利益", "余剰"],
+          "correct": 0,
+          "explanation": "deficitは支出が収入を上回る「赤字」、または不足分を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「destination」の意味として最も適切なものは？",
+          "choices": ["目的地", "出発地", "経路", "距離"],
+          "correct": 0,
+          "explanation": "destinationは旅行や配送の「目的地」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「device」の意味として最も適切なものは？",
+          "choices": ["装置、機器", "方法", "計画", "素材"],
+          "correct": 0,
+          "explanation": "deviceは特定の目的のために作られた「装置、機器」を指す。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dignity」の意味として最も適切なものは？",
+          "choices": ["尊厳", "恥", "権力", "名声"],
+          "correct": 0,
+          "explanation": "dignityは人としての「尊厳、威厳」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discipline」の意味として最も適切なものは？",
+          "choices": ["規律、訓練", "自由", "娯楽", "混乱"],
+          "correct": 0,
+          "explanation": "disciplineは「規律」、また学問の「分野」という意味もある。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disaster」の意味として最も適切なものは？",
+          "choices": ["災害、大惨事", "成功", "救助", "予防"],
+          "correct": 0,
+          "explanation": "disasterは地震や洪水などの「災害」、転じて「大失敗」も意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discount」の意味として最も適切なものは？",
+          "choices": ["割引", "定価", "税金", "手数料"],
+          "correct": 0,
+          "explanation": "discountは価格の「割引」を意味する。at a discountで「割引価格で」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「district」の意味として最も適切なものは？",
+          "choices": ["地区、地域", "国境", "都市全体", "建物"],
+          "correct": 0,
+          "explanation": "districtは行政上・地理上の「地区」を意味する。business district（商業地区）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「diversity」の意味として最も適切なものは？",
+          "choices": ["多様性", "統一性", "類似性", "均一性"],
+          "correct": 0,
+          "explanation": "diversityは人種や文化などの「多様性」を意味する。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編1-5",
+      "type": "Economy & Crisis Nouns",
+      "emoji": "🌍",
+      "subtitle": "英検2級レベルの語彙クイズ！経済・社会情勢の名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「donation」の意味として最も適切なものは？",
+          "choices": ["寄付", "借金", "税金", "罰金"],
+          "correct": 0,
+          "explanation": "donationは慈善団体などへの「寄付、寄付金」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drought」の意味として最も適切なものは？",
+          "choices": ["干ばつ", "洪水", "台風", "地震"],
+          "correct": 0,
+          "explanation": "droughtは長期間雨が降らない「干ばつ」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「economy」の意味として最も適切なものは？",
+          "choices": ["経済", "政治", "文化", "教育"],
+          "correct": 0,
+          "explanation": "economyは国や地域の「経済」を意味する。形容詞economicも重要。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「edition」の意味として最も適切なものは？",
+          "choices": ["(出版物の)版", "著者", "出版社", "印刷所"],
+          "correct": 0,
+          "explanation": "editionは本や新聞の「版」を意味する。the latest editionで「最新版」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emergency」の意味として最も適切なものは？",
+          "choices": ["緊急事態", "平常時", "休暇", "予定"],
+          "correct": 0,
+          "explanation": "emergencyは急を要する「緊急事態」を意味する。emergency exit（非常口）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emotion」の意味として最も適切なものは？",
+          "choices": ["感情", "理性", "事実", "意見"],
+          "correct": 0,
+          "explanation": "emotionは喜怒哀楽などの「感情」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「employer」の意味として最も適切なものは？",
+          "choices": ["雇用主", "従業員", "求職者", "仲介業者"],
+          "correct": 0,
+          "explanation": "employerは人を雇う「雇用主、雇い主」を意味する。対義語はemployee。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enterprise」の意味として最も適切なものは？",
+          "choices": ["企業、事業", "従業員", "製品", "利益"],
+          "correct": 0,
+          "explanation": "enterpriseは「企業」、または「進取の気性、事業」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「environment」の意味として最も適切なものは？",
+          "choices": ["環境", "天気", "資源", "汚染"],
+          "correct": 0,
+          "explanation": "environmentは自然環境や周囲の「環境」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「epidemic」の意味として最も適切なものは？",
+          "choices": ["(伝染病の)流行", "予防接種", "治療法", "病院"],
+          "correct": 0,
+          "explanation": "epidemicは病気が急速に広がる「流行、伝染病」を意味する。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編1-6",
+      "type": "Facilities & Costs Nouns",
+      "emoji": "🏢",
+      "subtitle": "英検2級レベルの語彙クイズ！施設・費用に関する名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「equipment」の意味として最も適切なものは？",
+          "choices": ["設備、備品", "道具の使い方", "建物", "材料"],
+          "correct": 0,
+          "explanation": "equipmentは作業や活動に必要な「設備、装備」を意味する不可算名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「essence」の意味として最も適切なものは？",
+          "choices": ["本質、真髄", "表面", "形式", "外見"],
+          "correct": 0,
+          "explanation": "essenceは物事の「本質」を意味する。in essenceで「本質的には」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「estate」の意味として最も適切なものは？",
+          "choices": ["地所、財産", "借金", "給料", "税金"],
+          "correct": 0,
+          "explanation": "estateは広い「土地・地所」や死後残す「財産」を意味する。real estate（不動産）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「evidence」の意味として最も適切なものは？",
+          "choices": ["証拠", "疑い", "判決", "告発"],
+          "correct": 0,
+          "explanation": "evidenceは事実を裏付ける「証拠」を意味する不可算名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exhibition」の意味として最も適切なものは？",
+          "choices": ["展示会", "講演会", "競技会", "式典"],
+          "correct": 0,
+          "explanation": "exhibitionは美術品や製品の「展示会」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expense」の意味として最も適切なものは？",
+          "choices": ["費用、支出", "収入", "利益", "貯蓄"],
+          "correct": 0,
+          "explanation": "expenseは何かにかかる「費用、支出」を意味する。at the expense ofで「〜を犠牲にして」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「facility」の意味として最も適切なものは？",
+          "choices": ["施設、設備", "職員", "規則", "利用者"],
+          "correct": 0,
+          "explanation": "facilityは病院や体育館などの「施設」を意味する。複数形facilitiesがよく使われる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「faculty」の意味として最も適切なものは？",
+          "choices": ["(大学の)学部、能力", "学生", "校舎", "授業料"],
+          "correct": 0,
+          "explanation": "facultyは大学の「学部」や、生まれ持った「能力」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fare」の意味として最も適切なものは？",
+          "choices": ["運賃", "料金体系", "割引券", "時刻表"],
+          "correct": 0,
+          "explanation": "fareはバスや電車、タクシーの「運賃」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fatigue」の意味として最も適切なものは？",
+          "choices": ["疲労", "休息", "活力", "緊張"],
+          "correct": 0,
+          "explanation": "fatigueは肉体的・精神的な「疲労」を意味する。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "名詞編1-7",
+      "type": "Abstract & Household Nouns",
+      "emoji": "🪑",
+      "subtitle": "英検2級レベルの語彙クイズ！抽象概念・家庭生活の名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「flaw」の意味として最も適切なものは？",
+          "choices": ["欠陥、傷", "長所", "改善", "評価"],
+          "correct": 0,
+          "explanation": "flawは製品や性格の「欠陥、欠点」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fortune」の意味として最も適切なものは？",
+          "choices": ["財産、幸運", "不幸", "貧困", "努力"],
+          "correct": 0,
+          "explanation": "fortuneは「幸運」、また「莫大な財産」も意味する。make a fortuneで「大金を稼ぐ」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fraction」の意味として最も適切なものは？",
+          "choices": ["ごく一部、分数", "全体", "合計", "割合の平均"],
+          "correct": 0,
+          "explanation": "fractionは数学の「分数」、また「ごく一部、小部分」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fragment」の意味として最も適切なものは？",
+          "choices": ["断片、破片", "全体像", "起源", "完成品"],
+          "correct": 0,
+          "explanation": "fragmentは壊れたものの「断片、破片」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「framework」の意味として最も適切なものは？",
+          "choices": ["枠組み、構造", "内容", "結論", "背景"],
+          "correct": 0,
+          "explanation": "frameworkは物事を組み立てる「枠組み、体制」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fund」の意味として最も適切なものは？",
+          "choices": ["資金、基金", "負債", "支出", "税金"],
+          "correct": 0,
+          "explanation": "fundは特定目的のための「資金、基金」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「furniture」の意味として最も適切なものは？",
+          "choices": ["家具", "電化製品", "装飾品", "建材"],
+          "correct": 0,
+          "explanation": "furnitureは椅子や机などの「家具」を指す不可算名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gender」の意味として最も適切なものは？",
+          "choices": ["性別", "年齢", "国籍", "人種"],
+          "correct": 0,
+          "explanation": "genderは社会的・文化的観点からの「性別」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「generation」の意味として最も適切なものは？",
+          "choices": ["世代", "時代", "歴史", "子孫"],
+          "correct": 0,
+          "explanation": "generationは同時期に生まれ育った「世代」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「generosity」の意味として最も適切なものは？",
+          "choices": ["寛大さ、気前の良さ", "けち", "冷酷さ", "無関心"],
+          "correct": 0,
+          "explanation": "generosityは物惜しみしない「寛大さ、気前の良さ」を意味する。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "名詞編1-8",
+      "type": "Nature & Everyday Life Nouns",
+      "emoji": "🌾",
+      "subtitle": "英検2級レベルの語彙クイズ！自然・日常生活の名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「gesture」の意味として最も適切なものは？",
+          "choices": ["身振り、しぐさ", "表情", "発言", "態度全般"],
+          "correct": 0,
+          "explanation": "gestureは手や体を使った「身振り」、また「意思表示の行為」も意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grocery」の意味として最も適切なものは？",
+          "choices": ["食料雑貨(店)", "衣料品店", "文房具", "家電製品"],
+          "correct": 0,
+          "explanation": "groceryは食料品などの「日用雑貨」、grocery storeで「食料品店」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「habitat」の意味として最も適切なものは？",
+          "choices": ["生息地", "絶滅", "繁殖", "進化"],
+          "correct": 0,
+          "explanation": "habitatは動植物が自然に生息する「生息地、生育地」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「harvest」の意味として最も適切なものは？",
+          "choices": ["収穫(物)", "播種", "肥料", "農地"],
+          "correct": 0,
+          "explanation": "harvestは農作物を「収穫すること、収穫物」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hazard」の意味として最も適切なものは？",
+          "choices": ["危険(要因)", "安全対策", "保険金", "規則"],
+          "correct": 0,
+          "explanation": "hazardは事故などを引き起こす「危険(要因)」を意味する。a health hazard（健康被害の恐れ）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「heritage」の意味として最も適切なものは？",
+          "choices": ["(文化的)遺産", "借金", "記念碑", "博物館"],
+          "correct": 0,
+          "explanation": "heritageは受け継がれる文化的・歴史的な「遺産」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hierarchy」の意味として最も適切なものは？",
+          "choices": ["階層制、序列", "平等", "民主主義", "組織図"],
+          "correct": 0,
+          "explanation": "hierarchyは地位や階級による「階層制、上下関係」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「horizon」の意味として最も適切なものは？",
+          "choices": ["地平線、視野", "水平線の反対語", "天候", "距離"],
+          "correct": 0,
+          "explanation": "horizonは「地平線・水平線」、比喩的に「視野、展望」も意味する。broaden one's horizons（視野を広げる）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「household」の意味として最も適切なものは？",
+          "choices": ["世帯、家庭", "家系", "近所", "家賃"],
+          "correct": 0,
+          "explanation": "householdは同居する「世帯、家族」を意味する。household chores（家事）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hygiene」の意味として最も適切なものは？",
+          "choices": ["衛生(状態)", "病気", "医療費", "治療"],
+          "correct": 0,
+          "explanation": "hygieneは清潔を保つ「衛生」を意味する。personal hygiene（個人衛生）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "名詞編1-9",
+      "type": "Social & Economic Nouns",
+      "emoji": "🏙️",
+      "subtitle": "英検2級レベルの語彙クイズ！社会・経済に関する名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「identity」の意味として最も適切なものは？",
+          "choices": ["身元、独自性", "名声", "国籍のみ", "職業"],
+          "correct": 0,
+          "explanation": "identityは個人や集団の「身元、独自性」を意味する。identity card（身分証明書）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「immigrant」の意味として最も適切なものは？",
+          "choices": ["(入国する)移民", "旅行者", "難民のみ", "外交官"],
+          "correct": 0,
+          "explanation": "immigrantは他国から移り住んできた「移民」を意味する。出て行く場合はemigrant。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「impact」の意味として最も適切なものは？",
+          "choices": ["影響、衝撃", "原因", "予測", "結論"],
+          "correct": 0,
+          "explanation": "impactは物事に与える「大きな影響、衝撃」を意味する。have an impact on〜。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「incident」の意味として最も適切なものは？",
+          "choices": ["出来事、事件", "結果", "習慣", "法律"],
+          "correct": 0,
+          "explanation": "incidentは特に注目すべき「出来事、事件」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「income」の意味として最も適切なものは？",
+          "choices": ["収入", "支出", "貯蓄額のみ", "税率"],
+          "correct": 0,
+          "explanation": "incomeは仕事などから得る「収入」を意味する。income tax（所得税）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「index」の意味として最も適切なものは？",
+          "choices": ["指数、索引", "統計局", "調査方法", "目次のみ"],
+          "correct": 0,
+          "explanation": "indexは物価「指数」や本の「索引」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inflation」の意味として最も適切なものは？",
+          "choices": ["インフレ、物価上昇", "デフレ", "不況", "景気回復"],
+          "correct": 0,
+          "explanation": "inflationは物価が持続的に上昇する「インフレーション」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「infrastructure」の意味として最も適切なものは？",
+          "choices": ["インフラ、基盤設備", "建築様式", "人口密度", "国土面積"],
+          "correct": 0,
+          "explanation": "infrastructureは道路や電力網などの「社会基盤、インフラ」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ingredient」の意味として最も適切なものは？",
+          "choices": ["(料理の)材料、成分", "調理器具", "レシピのみ", "味付け"],
+          "correct": 0,
+          "explanation": "ingredientは料理の「材料」、比喩的に成功の「要素」も意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inhabitant」の意味として最も適切なものは？",
+          "choices": ["住民、居住者", "観光客", "移民のみ", "所有者"],
+          "correct": 0,
+          "explanation": "inhabitantはある地域に住む「住民」を意味する。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "名詞編1-10",
+      "type": "Institution & Planning Nouns",
+      "emoji": "🏦",
+      "subtitle": "英検2級レベルの語彙クイズ！制度・計画に関する名詞をチェック",
+      "questions": [
+        {
+          "scenario": "「initiative」の意味として最も適切なものは？",
+          "choices": ["主導権、新たな取り組み", "結果", "責任のみ", "義務"],
+          "correct": 0,
+          "explanation": "initiativeは物事を「率先して行うこと」や「新たな取り組み」を意味する。take the initiative（率先する）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「injury」の意味として最も適切なものは？",
+          "choices": ["けが、負傷", "病気全般", "疲労", "事故のみ"],
+          "correct": 0,
+          "explanation": "injuryは事故やスポーツなどによる「けが、負傷」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「institution」の意味として最も適切なものは？",
+          "choices": ["機関、制度", "建物のみ", "規則", "会員"],
+          "correct": 0,
+          "explanation": "institutionは学校や銀行などの「機関」、社会的な「制度」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「instruction」の意味として最も適切なものは？",
+          "choices": ["指示、説明(書)", "結果", "質問", "許可"],
+          "correct": 0,
+          "explanation": "instructionは物事のやり方を示す「指示、説明」を意味する。複数形instructionsで「取扱説明書」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「instrument」の意味として最も適切なものは？",
+          "choices": ["器具、楽器", "部品のみ", "機械の一部のみ", "家具"],
+          "correct": 0,
+          "explanation": "instrumentは精密な「器具」や「楽器」を意味する。musical instrument（楽器）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「insurance」の意味として最も適切なものは？",
+          "choices": ["保険", "貯蓄", "投資", "年金のみ"],
+          "correct": 0,
+          "explanation": "insuranceは事故や病気に備える「保険」を意味する。health insurance（健康保険）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「intention」の意味として最も適切なものは？",
+          "choices": ["意図、意向", "結果", "方法", "義務"],
+          "correct": 0,
+          "explanation": "intentionは何かをしようとする「意図、つもり」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「interval」の意味として最も適切なものは？",
+          "choices": ["間隔、合間", "期間全体", "休日", "距離のみ"],
+          "correct": 0,
+          "explanation": "intervalは時間や空間の「間隔」、劇の「幕間」も意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inventory」の意味として最も適切なものは？",
+          "choices": ["在庫(目録)", "注文", "販売", "広告"],
+          "correct": 0,
+          "explanation": "inventoryは店や倉庫の「在庫(品)」やその「目録」を意味する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「investment」の意味として最も適切なものは？",
+          "choices": ["投資", "貯金のみ", "借金", "寄付"],
+          "correct": 0,
+          "explanation": "investmentは利益を見込んで資金を投じる「投資」を意味する。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

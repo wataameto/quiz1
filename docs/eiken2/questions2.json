@@ -1,0 +1,798 @@
+{
+  "id": "eiken2",
+  "level": 2,
+  "label": "🔤 動詞編2",
+  "description": "応用動詞・句動詞（phrasal verbs）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編2-1",
+      "type": "Verbs Group A: put",
+      "emoji": "📥",
+      "subtitle": "putを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「put off」の意味として最も適切なものは？",
+          "choices": ["延期する", "急いで行う", "取り消す", "強く勧める"],
+          "correct": 0,
+          "explanation": "put off は「(予定などを)延期する」という意味。例: put off the meeting（会議を延期する）。postponeとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put up with」の意味として最も適切なものは？",
+          "choices": ["我慢する", "褒める", "支払う", "紹介する"],
+          "correct": 0,
+          "explanation": "put up with ~ で「~を我慢する」。endureやtolerateと同義。例: I can't put up with his rudeness.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put down」の意味として最も適切なものは？",
+          "choices": ["書き留める、けなす", "持ち上げる", "許可する", "支持する"],
+          "correct": 0,
+          "explanation": "put down は「(メモなどに)書き留める」または「けなす、けなして自信を失わせる」という意味がある。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put out」の意味として最も適切なものは？",
+          "choices": ["(火・明かりを)消す", "点火する", "拡大する", "取り戻す"],
+          "correct": 0,
+          "explanation": "put out a fire で「火を消す」。extinguishと同義で使われる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put away」の意味として最も適切なものは？",
+          "choices": ["片付ける", "散らかす", "投げ捨てる", "貸し出す"],
+          "correct": 0,
+          "explanation": "put away は「(使った物を)しまう、片付ける」という意味。例: put away the toys.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put on」の意味として最も適切なものは？",
+          "choices": ["(服などを)身につける、装う", "脱ぐ", "捨てる", "壊す"],
+          "correct": 0,
+          "explanation": "put on は「服・靴などを身につける」「ふりをする」という意味。反対語はtake off。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put forward」の意味として最も適切なものは？",
+          "choices": ["(意見・案を)提案する", "却下する", "隠す", "延期する"],
+          "correct": 0,
+          "explanation": "put forward は「提案する、(候補として)推薦する」という意味。例: put forward a proposal.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put together」の意味として最も適切なものは？",
+          "choices": ["組み立てる、まとめる", "分解する", "捨てる", "配布する"],
+          "correct": 0,
+          "explanation": "put together は「部品などを組み立てる」「情報などをまとめる」という意味。assembleに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put across」の意味として最も適切なものは？",
+          "choices": ["(考えなどを)理解させる、伝える", "隠す", "破棄する", "延期する"],
+          "correct": 0,
+          "explanation": "put across は「自分の考えを相手にわかりやすく伝える」という意味。例: put an idea across clearly.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put back」の意味として最も適切なものは？",
+          "choices": ["元の場所に戻す", "取り除く", "前倒しにする", "壊す"],
+          "correct": 0,
+          "explanation": "put back は「物を元の場所に戻す」という意味。また時計の針を遅らせる意味もある。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編2-2",
+      "type": "Verbs Group B: take",
+      "emoji": "🛫",
+      "subtitle": "takeを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「take off」の意味として最も適切なものは？",
+          "choices": ["離陸する、(服を)脱ぐ", "着陸する", "延期する", "隠す"],
+          "correct": 0,
+          "explanation": "take off は飛行機が「離陸する」、または服・靴などを「脱ぐ」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take over」の意味として最も適切なものは？",
+          "choices": ["引き継ぐ、(会社などを)買収する", "放棄する", "延期する", "紹介する"],
+          "correct": 0,
+          "explanation": "take over は「(仕事・地位・会社などを)引き継ぐ、買収する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take up」の意味として最も適切なものは？",
+          "choices": ["(趣味などを)始める、(時間・space を)取る", "やめる", "拒否する", "軽視する"],
+          "correct": 0,
+          "explanation": "take up は「新しい趣味・活動を始める」または「時間・場所を占める」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take in」の意味として最も適切なものは？",
+          "choices": ["理解する、だます", "追い出す", "拒絶する", "捨てる"],
+          "correct": 0,
+          "explanation": "take in は「情報を理解する、吸収する」または「人をだます」という意味がある。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take after」の意味として最も適切なものは？",
+          "choices": ["(親などに)似ている", "追いかける", "無視する", "反抗する"],
+          "correct": 0,
+          "explanation": "take after ~ で「(容姿・性格が)~に似ている」という意味。例: She takes after her mother.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take back」の意味として最も適切なものは？",
+          "choices": ["(発言を)撤回する", "強調する", "書き留める", "拡大する"],
+          "correct": 0,
+          "explanation": "take back は「発言を取り消す、撤回する」という意味。例: I take back what I said.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take on」の意味として最も適切なものは？",
+          "choices": ["(仕事・責任を)引き受ける", "断る", "無視する", "延期する"],
+          "correct": 0,
+          "explanation": "take on は「新しい仕事・責任・従業員などを引き受ける」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take apart」の意味として最も適切なものは？",
+          "choices": ["分解する", "組み立てる", "修理する", "隠す"],
+          "correct": 0,
+          "explanation": "take apart は「機械などを分解する」という意味。比喩的に「厳しく批判する」にも使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take down」の意味として最も適切なものは？",
+          "choices": ["取り壊す、書き留める", "組み立てる", "持ち上げる", "配布する"],
+          "correct": 0,
+          "explanation": "take down は「建物などを取り壊す」または「メモを書き留める」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take out」の意味として最も適切なものは？",
+          "choices": ["取り出す、連れ出す", "しまい込む", "隠す", "延期する"],
+          "correct": 0,
+          "explanation": "take out は「物を取り出す」「人を(食事などに)連れ出す」という意味。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "動詞編2-3",
+      "type": "Verbs Group C: come",
+      "emoji": "🚶",
+      "subtitle": "comeを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「come across」の意味として最も適切なものは？",
+          "choices": ["偶然出会う、見つける", "避ける", "計画する", "反対する"],
+          "correct": 0,
+          "explanation": "come across ~ で「~に偶然出会う、見つける」という意味。例: I came across an old photo.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come up with」の意味として最も適切なものは？",
+          "choices": ["(アイデアなどを)思いつく", "捨てる", "反論する", "遅れる"],
+          "correct": 0,
+          "explanation": "come up with ~ で「~を思いつく、考え出す」という意味。例: come up with a solution.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come about」の意味として最も適切なものは？",
+          "choices": ["起こる、生じる", "終わる", "消える", "戻る"],
+          "correct": 0,
+          "explanation": "come about は「(出来事が)起こる、生じる」という意味。happenと同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come along」の意味として最も適切なものは？",
+          "choices": ["一緒に来る、進展する", "拒否する", "遅刻する", "諦める"],
+          "correct": 0,
+          "explanation": "come along は「一緒について来る」または「物事が順調に進む」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come down with」の意味として最も適切なものは？",
+          "choices": ["(病気に)かかる", "回復する", "予防する", "無視する"],
+          "correct": 0,
+          "explanation": "come down with ~ で「(比較的軽い病気に)かかる」という意味。例: come down with a cold.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come into」の意味として最も適切なものは？",
+          "choices": ["(財産などを)相続する", "手放す", "拒絶する", "隠す"],
+          "correct": 0,
+          "explanation": "come into money/a fortune のように使い、「(財産などを)相続する、手に入れる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come round」の意味として最も適切なものは？",
+          "choices": ["意識を取り戻す、考えを変える", "気絶する", "怒る", "去る"],
+          "correct": 0,
+          "explanation": "come round(米: come around)は「意識を取り戻す」または「(反対していた)意見を変えて賛成する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come through」の意味として最も適切なものは？",
+          "choices": ["(困難などを)切り抜ける", "失敗する", "拒否する", "延期する"],
+          "correct": 0,
+          "explanation": "come through は「困難な状況を無事に切り抜ける」という意味。例: come through the crisis.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come up against」の意味として最も適切なものは？",
+          "choices": ["(問題・困難に)直面する", "避ける", "解決する", "無視する"],
+          "correct": 0,
+          "explanation": "come up against ~ で「~に直面する、対峙する」という意味。例: come up against opposition.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come off」の意味として最も適切なものは？",
+          "choices": ["取れる、(計画などが)成功する", "取り付ける", "失敗が確定する", "延期される"],
+          "correct": 0,
+          "explanation": "come off は「(ボタンなどが)取れる」または「(計画などが)うまくいく、成功する」という意味。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "動詞編2-4",
+      "type": "Verbs Group D: go",
+      "emoji": "🚦",
+      "subtitle": "goを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「go through」の意味として最も適切なものは？",
+          "choices": ["経験する、詳しく調べる", "無視する", "省略する", "拒否する"],
+          "correct": 0,
+          "explanation": "go through は「(つらい経験などを)経験する」または「(書類などを)詳しく調べる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go over」の意味として最も適切なものは？",
+          "choices": ["見直す、復習する", "見逃す", "捨てる", "秘密にする"],
+          "correct": 0,
+          "explanation": "go over ~ で「~を見直す、復習する、確認する」という意味。例: go over the notes before the exam.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go without」の意味として最も適切なものは？",
+          "choices": ["(~が)なしで済ます", "十分に得る", "求める", "浪費する"],
+          "correct": 0,
+          "explanation": "go without ~ で「~なしで済ませる、我慢する」という意味。例: go without sleep.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go off」の意味として最も適切なものは？",
+          "choices": ["爆発する、(アラームが)鳴る", "組み立てられる", "解決する", "止まる"],
+          "correct": 0,
+          "explanation": "go off は「爆弾が爆発する」「アラームが鳴る」という意味。食品が「腐る」の意味でも使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go along with」の意味として最も適切なものは？",
+          "choices": ["(意見・提案に)賛成する", "反対する", "分解する", "延期する"],
+          "correct": 0,
+          "explanation": "go along with ~ で「~に賛成する、同意して従う」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go back on」の意味として最も適切なものは？",
+          "choices": ["(約束などを)破る", "守る", "延長する", "強調する"],
+          "correct": 0,
+          "explanation": "go back on a promise で「約束を破る」という意味。break a promiseとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go under」の意味として最も適切なものは？",
+          "choices": ["(会社などが)倒産する、沈む", "成長する", "上場する", "拡大する"],
+          "correct": 0,
+          "explanation": "go under は「(会社が)倒産する」または「(船などが)沈む」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go for」の意味として最も適切なものは？",
+          "choices": ["選ぶ、挑戦する", "避ける", "拒否する", "延期する"],
+          "correct": 0,
+          "explanation": "go for ~ で「~を選ぶ」「~に挑戦する、目指す」という意味。例: go for the safer option.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go beyond」の意味として最も適切なものは？",
+          "choices": ["(範囲・限度を)超える", "下回る", "一致する", "近づく"],
+          "correct": 0,
+          "explanation": "go beyond ~ で「~を超える、上回る」という意味。例: go beyond expectations.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go with」の意味として最も適切なものは？",
+          "choices": ["(~と)調和する、~を選ぶ", "対立する", "無視する", "壊す"],
+          "correct": 0,
+          "explanation": "go with ~ で「~と合う、調和する」または「(提案などを)選ぶ、採用する」という意味。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "動詞編2-5",
+      "type": "Verbs Group E: get",
+      "emoji": "🏃",
+      "subtitle": "getを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「get over」の意味として最も適切なものは？",
+          "choices": ["(病気・困難を)乗り越える", "始める", "遅らせる", "拡大する"],
+          "correct": 0,
+          "explanation": "get over ~ で「~を乗り越える、克服する」という意味。例: get over an illness.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get through」の意味として最も適切なものは？",
+          "choices": ["やり遂げる、連絡がつく", "失敗する", "拒否する", "延期する"],
+          "correct": 0,
+          "explanation": "get through は「困難をやり遂げる」または電話などで「連絡がつく」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get along with」の意味として最も適切なものは？",
+          "choices": ["(人と)仲良くやっていく", "対立する", "無視する", "監視する"],
+          "correct": 0,
+          "explanation": "get along with ~ で「~と仲良くやっていく、うまくやる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get away with」の意味として最も適切なものは？",
+          "choices": ["(悪いことをして)うまく逃れる", "罰せられる", "自首する", "謝罪する"],
+          "correct": 0,
+          "explanation": "get away with ~ で「(悪事などが)ばれずに済む、うまく逃れる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get down to」の意味として最も適切なものは？",
+          "choices": ["(仕事などに)本腰を入れる", "先延ばしにする", "諦める", "無視する"],
+          "correct": 0,
+          "explanation": "get down to ~ で「~に本格的に取り組み始める」という意味。例: get down to work.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get by」の意味として最も適切なものは？",
+          "choices": ["何とかやっていく", "豊かに暮らす", "失敗する", "拒否する"],
+          "correct": 0,
+          "explanation": "get by は「限られた資源などで何とかやっていく、暮らしていく」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get across」の意味として最も適切なものは？",
+          "choices": ["(意味などが)伝わる、伝える", "隠れる", "遮る", "破棄する"],
+          "correct": 0,
+          "explanation": "get across は「(考え・メッセージが)相手に伝わる、伝える」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get rid of」の意味として最も適切なものは？",
+          "choices": ["取り除く、処分する", "手に入れる", "保管する", "修理する"],
+          "correct": 0,
+          "explanation": "get rid of ~ で「~を取り除く、処分する」という意味。例: get rid of old clothes.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get around」の意味として最も適切なものは？",
+          "choices": ["(噂などが)広まる、(規則を)回避する", "隠す", "禁止する", "定着する"],
+          "correct": 0,
+          "explanation": "get around は「情報や噂が広まる」または「規則・問題をうまく回避する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get ahead」の意味として最も適切なものは？",
+          "choices": ["出世する、成功する", "後退する", "失敗する", "遅刻する"],
+          "correct": 0,
+          "explanation": "get ahead は「仕事などで出世する、成功を収める」という意味。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "動詞編2-6",
+      "type": "Verbs Group F: make / turn",
+      "emoji": "🔄",
+      "subtitle": "make・turnを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「make up for」の意味として最も適切なものは？",
+          "choices": ["埋め合わせをする", "無視する", "非難する", "拒否する"],
+          "correct": 0,
+          "explanation": "make up for ~ で「~の埋め合わせをする、補う」という意味。例: make up for lost time.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make out」の意味として最も適切なものは？",
+          "choices": ["理解する、何とか見分ける", "誤解する", "隠す", "破棄する"],
+          "correct": 0,
+          "explanation": "make out は「かろうじて理解する、見分ける」という意味。例: I can't make out what he said.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make do with」の意味として最も適切なものは？",
+          "choices": ["(不十分なもので)済ませる", "十分に満足する", "拒否する", "交換する"],
+          "correct": 0,
+          "explanation": "make do with ~ で「(理想的でなくても)~で間に合わせる、済ませる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn down」の意味として最も適切なものは？",
+          "choices": ["断る、却下する", "承諾する", "強調する", "延期する"],
+          "correct": 0,
+          "explanation": "turn down は「申し出や依頼を断る、却下する」という意味。例: turn down a job offer.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn out」の意味として最も適切なものは？",
+          "choices": ["(結果的に)判明する", "拒否する", "隠れる", "延期する"],
+          "correct": 0,
+          "explanation": "turn out は「結局~だと判明する」という意味。例: It turned out to be true.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn into」の意味として最も適切なものは？",
+          "choices": ["(~に)変わる", "元に戻る", "拒絶する", "無視する"],
+          "correct": 0,
+          "explanation": "turn into ~ で「~に変化する」という意味。例: The caterpillar turned into a butterfly.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn up」の意味として最も適切なものは？",
+          "choices": ["(予期せず)現れる", "消える", "拒否する", "延期する"],
+          "correct": 0,
+          "explanation": "turn up は「(人や物が)ひょっこり現れる、姿を見せる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn away」の意味として最も適切なものは？",
+          "choices": ["(人を)追い返す、断る", "迎え入れる", "紹介する", "励ます"],
+          "correct": 0,
+          "explanation": "turn away は「人の入場や依頼を拒否して追い返す」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn over」の意味として最も適切なものは？",
+          "choices": ["ひっくり返す、(権限などを)委ねる", "組み立てる", "無視する", "拒否する"],
+          "correct": 0,
+          "explanation": "turn over は「物をひっくり返す」または「(任務・権限を)人に委ねる、引き渡す」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn against」の意味として最も適切なものは？",
+          "choices": ["(味方などが)敵対するようになる", "味方になる", "無視する", "従う"],
+          "correct": 0,
+          "explanation": "turn against ~ で「(それまで味方だった人が)~に敵対するようになる」という意味。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "動詞編2-7",
+      "type": "Verbs Group G: bring / break",
+      "emoji": "💥",
+      "subtitle": "bring・breakを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「bring about」の意味として最も適切なものは？",
+          "choices": ["引き起こす", "防止する", "延期する", "無視する"],
+          "correct": 0,
+          "explanation": "bring about ~ で「(変化・出来事を)引き起こす」という意味。causeとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bring up」の意味として最も適切なものは？",
+          "choices": ["(子供を)育てる、(話題を)持ち出す", "見捨てる", "無視する", "隠す"],
+          "correct": 0,
+          "explanation": "bring up は「子供を育てる」または「話題を持ち出す、提起する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bring back」の意味として最も適切なものは？",
+          "choices": ["(記憶などを)呼び戻す、持ち帰る", "忘れさせる", "破壊する", "隠す"],
+          "correct": 0,
+          "explanation": "bring back は「昔のことを思い出させる」または単に「持ち帰る」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bring in」の意味として最も適切なものは？",
+          "choices": ["導入する、(収入を)もたらす", "撤去する", "拒否する", "延期する"],
+          "correct": 0,
+          "explanation": "bring in は「新しい制度・人材を導入する」または「(利益・収入を)もたらす」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break down」の意味として最も適切なものは？",
+          "choices": ["故障する、精神的に参る", "修理する", "成功する", "拡大する"],
+          "correct": 0,
+          "explanation": "break down は「機械が故障する」または「人が精神的に打ちのめされる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break out」の意味として最も適切なものは？",
+          "choices": ["(戦争・火事などが)勃発する", "終息する", "予防される", "延期される"],
+          "correct": 0,
+          "explanation": "break out は「戦争・火災・伝染病などが突然発生する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break up」の意味として最も適切なものは？",
+          "choices": ["(関係が)終わる、別れる", "結婚する", "和解する", "強化する"],
+          "correct": 0,
+          "explanation": "break up は「恋人・夫婦などが別れる」または「集団が解散する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break away」の意味として最も適切なものは？",
+          "choices": ["(組織などから)離脱する", "加入する", "従う", "統合する"],
+          "correct": 0,
+          "explanation": "break away は「グループ・組織から離脱する、逃げ出す」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break into」の意味として最も適切なものは？",
+          "choices": ["(建物などに)侵入する", "退去する", "修理する", "守る"],
+          "correct": 0,
+          "explanation": "break into ~ で「(家などに)不法に侵入する」という意味。例: break into a house.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break through」の意味として最も適切なものは？",
+          "choices": ["(障壁などを)突破する", "諦める", "後退する", "無視する"],
+          "correct": 0,
+          "explanation": "break through は「障害・防御などを突破する」という意味。名詞形breakthroughは「大発見」。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "動詞編2-8",
+      "type": "Verbs Group H: look / carry / hand",
+      "emoji": "👀",
+      "subtitle": "look・carry・handを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「look after」の意味として最も適切なものは？",
+          "choices": ["世話をする", "無視する", "追い出す", "疑う"],
+          "correct": 0,
+          "explanation": "look after ~ で「~の世話をする、面倒を見る」という意味。takes care ofと同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look into」の意味として最も適切なものは？",
+          "choices": ["調査する", "無視する", "隠す", "承認する"],
+          "correct": 0,
+          "explanation": "look into ~ で「~を調査する、詳しく調べる」という意味。investigateに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look up to」の意味として最も適切なものは？",
+          "choices": ["尊敬する", "見下す", "疑う", "無視する"],
+          "correct": 0,
+          "explanation": "look up to ~ で「~を尊敬する」という意味。respectとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look down on」の意味として最も適切なものは？",
+          "choices": ["見下す、軽蔑する", "尊敬する", "見習う", "励ます"],
+          "correct": 0,
+          "explanation": "look down on ~ で「~を見下す、軽蔑する」という意味。look up toの反対。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look forward to」の意味として最も適切なものは？",
+          "choices": ["楽しみに待つ", "恐れる", "忘れる", "拒否する"],
+          "correct": 0,
+          "explanation": "look forward to ~ で「~を楽しみに待つ」という意味。後ろに名詞または動名詞が続く。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carry out」の意味として最も適切なものは？",
+          "choices": ["(計画などを)実行する", "中止する", "延期する", "無視する"],
+          "correct": 0,
+          "explanation": "carry out ~ で「計画・実験・命令などを実行する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carry on」の意味として最も適切なものは？",
+          "choices": ["続ける", "やめる", "中断する", "拒否する"],
+          "correct": 0,
+          "explanation": "carry on は「(活動などを)続ける」という意味。continueとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carry away」の意味として最も適切なものは？",
+          "choices": ["(感情などが)我を忘れさせる", "落ち着かせる", "無視させる", "冷静にさせる"],
+          "correct": 0,
+          "explanation": "be carried away で「興奮して我を忘れる」という意味。carry away自体は「運び去る」が原義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hand in」の意味として最も適切なものは？",
+          "choices": ["(書類などを)提出する", "受け取る", "破棄する", "隠す"],
+          "correct": 0,
+          "explanation": "hand in ~ で「宿題やレポートなどを提出する」という意味。submitに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hand out」の意味として最も適切なものは？",
+          "choices": ["配る", "回収する", "隠す", "破棄する"],
+          "correct": 0,
+          "explanation": "hand out ~ で「プリントなどを配布する」という意味。distributeに近い。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "動詞編2-9",
+      "type": "Verbs Group I: give / hold / keep",
+      "emoji": "🤲",
+      "subtitle": "give・hold・keepを使った句動詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「give up」の意味として最も適切なものは？",
+          "choices": ["あきらめる", "続ける", "達成する", "始める"],
+          "correct": 0,
+          "explanation": "give up は「あきらめる、断念する」という意味。give up smokingのように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give in」の意味として最も適切なものは？",
+          "choices": ["屈する、降参する", "反抗する", "拒否する", "勝利する"],
+          "correct": 0,
+          "explanation": "give in は「圧力や要求に屈する、降参する」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give away」の意味として最も適切なものは？",
+          "choices": ["無料で譲る、(秘密を)漏らす", "高値で売る", "隠し通す", "購入する"],
+          "correct": 0,
+          "explanation": "give away は「物をただで人にあげる」または「秘密をうっかり漏らす」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give off」の意味として最も適切なものは？",
+          "choices": ["(においや熱などを)発する", "吸収する", "取り除く", "冷やす"],
+          "correct": 0,
+          "explanation": "give off ~ で「(におい・光・熱などを)発する、放出する」という意味。例: give off a strong smell.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold on」の意味として最も適切なものは？",
+          "choices": ["(電話などで)待つ、持ちこたえる", "切る", "諦める", "急ぐ"],
+          "correct": 0,
+          "explanation": "hold on は「(電話を切らずに)待つ」または「持ちこたえる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold up」の意味として最も適切なものは？",
+          "choices": ["遅らせる、持ちこたえる", "早める", "壊す", "解放する"],
+          "correct": 0,
+          "explanation": "hold up は「(交通渋滞などが)人を遅らせる」または「(圧力の下で)持ちこたえる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold back」の意味として最も適切なものは？",
+          "choices": ["(感情などを)抑える、ためらう", "解放する", "促進する", "公表する"],
+          "correct": 0,
+          "explanation": "hold back は「涙・怒りなどの感情を抑える」または「ためらって行動しない」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold off」の意味として最も適切なものは？",
+          "choices": ["延期する、寄せ付けない", "急いで行う", "許可する", "促進する"],
+          "correct": 0,
+          "explanation": "hold off は「(行動を)先延ばしにする」または「(相手を)寄せ付けない」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep up with」の意味として最も適切なものは？",
+          "choices": ["(進度などに)遅れずについていく", "追い越す", "無視する", "見捨てる"],
+          "correct": 0,
+          "explanation": "keep up with ~ で「~のペースに遅れずについていく」という意味。例: keep up with the news.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep on」の意味として最も適切なものは？",
+          "choices": ["し続ける", "やめる", "中断する", "拒否する"],
+          "correct": 0,
+          "explanation": "keep on ~ing で「~し続ける」という意味。continueとほぼ同義。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "動詞編2-10",
+      "type": "Verbs Group J: set / call / work など",
+      "emoji": "⚙️",
+      "subtitle": "応用の句動詞で総仕上げ！",
+      "questions": [
+        {
+          "scenario": "「set up」の意味として最も適切なものは？",
+          "choices": ["設立する、設置する", "解散する", "撤去する", "延期する"],
+          "correct": 0,
+          "explanation": "set up ~ で「会社などを設立する」「機材などを設置する」という意味。establishに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「set off」の意味として最も適切なものは？",
+          "choices": ["出発する、引き起こす", "到着する", "中止する", "延期する"],
+          "correct": 0,
+          "explanation": "set off は「旅などに出発する」または「(反応・警報などを)引き起こす」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「set out」の意味として最も適切なものは？",
+          "choices": ["(目的を持って)出発する、着手する", "到着する", "諦める", "延期する"],
+          "correct": 0,
+          "explanation": "set out は「(旅・計画などに)出発する、乗り出す」という意味。set out to do ~の形もよく使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「call off」の意味として最も適切なものは？",
+          "choices": ["中止する", "開催する", "延長する", "承認する"],
+          "correct": 0,
+          "explanation": "call off ~ で「予定されていたイベントなどを中止する」という意味。cancelとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「call for」の意味として最も適切なものは？",
+          "choices": ["必要とする、要求する", "拒否する", "延期する", "禁止する"],
+          "correct": 0,
+          "explanation": "call for ~ で「~を必要とする、要求する」という意味。例: The situation calls for immediate action.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「figure out」の意味として最も適切なものは？",
+          "choices": ["理解する、解決する", "誤解する", "無視する", "隠す"],
+          "correct": 0,
+          "explanation": "figure out ~ で「~を理解する、答えを見つけ出す」という意味。understandに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「work out」の意味として最も適切なものは？",
+          "choices": ["うまくいく、運動する", "失敗する", "中止する", "隠す"],
+          "correct": 0,
+          "explanation": "work out は「物事がうまく解決する」または「運動する、トレーニングする」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run into」の意味として最も適切なものは？",
+          "choices": ["偶然出会う、(問題に)ぶつかる", "避ける", "解決する", "予測する"],
+          "correct": 0,
+          "explanation": "run into ~ で「人に偶然出会う」または「問題・困難にぶつかる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wear out」の意味として最も適切なものは？",
+          "choices": ["使い古す、疲れさせる", "新品にする", "修理する", "保存する"],
+          "correct": 0,
+          "explanation": "wear out は「衣類や靴などが使い古されてすり減る」または「人をひどく疲れさせる」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pull off」の意味として最も適切なものは？",
+          "choices": ["(困難なことを)成し遂げる", "失敗する", "延期する", "拒否する"],
+          "correct": 0,
+          "explanation": "pull off ~ で「難しいことをうまくやり遂げる、成功させる」という意味。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

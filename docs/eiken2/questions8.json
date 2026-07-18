@@ -1,0 +1,698 @@
+{
+  "id": "eiken2",
+  "level": 8,
+  "label": "🔗 熟語編2",
+  "description": "熟語・イディオム（前置詞句・会話表現中心）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "熟語編2-1",
+      "type": "Prepositional Phrases A",
+      "emoji": "🧭",
+      "subtitle": "前置詞を使った熟語をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「in terms of」の意味として最も適切なものは？",
+          "choices": ["〜の点では", "〜にもかかわらず", "〜の代わりに", "〜のせいで"],
+          "correct": 0,
+          "explanation": "in terms of ~ で「~の観点/点から言うと」という意味。例: In terms of cost, this plan is better.（費用の点では、この計画の方が良い）"
+        },
+        {
+          "scenario": "「on behalf of」の意味として最も適切なものは？",
+          "choices": ["〜を代表して", "〜に反対して", "〜の隣に", "〜を除いて"],
+          "correct": 0,
+          "explanation": "on behalf of ~ で「~を代表して、~の代わりに」という意味。式典などで代理として発言する際によく使われる。"
+        },
+        {
+          "scenario": "「in spite of」の意味として最も適切なものは？",
+          "choices": ["〜にもかかわらず", "〜のおかげで", "〜と比べて", "〜に応じて"],
+          "correct": 0,
+          "explanation": "in spite of ~ は despite とほぼ同義で「~にもかかわらず」。逆接を表す前置詞句。"
+        },
+        {
+          "scenario": "「with regard to」の意味として最も適切なものは？",
+          "choices": ["〜に関して", "〜を条件として", "〜の途中で", "〜を超えて"],
+          "correct": 0,
+          "explanation": "with regard to ~ で「~に関して、~について」。regarding や concerning と近い意味を持つ。"
+        },
+        {
+          "scenario": "「at the expense of」の意味として最も適切なものは？",
+          "choices": ["〜を犠牲にして", "〜の期待通りに", "〜の予想に反して", "〜に賛成して"],
+          "correct": 0,
+          "explanation": "at the expense of ~ で「~を犠牲にして、~を代償にして」。何かを得るために別のものを失う状況を表す。"
+        },
+        {
+          "scenario": "「in the face of」の意味として最も適切なものは？",
+          "choices": ["〜に直面して", "〜を無視して", "〜の背後で", "〜を利用して"],
+          "correct": 0,
+          "explanation": "in the face of ~ で「~に直面して、~をものともせず」。困難や危険に直面する状況で使う。"
+        },
+        {
+          "scenario": "「for the sake of」の意味として最も適切なものは？",
+          "choices": ["〜のために", "〜の結果として", "〜を条件に", "〜を除いては"],
+          "correct": 0,
+          "explanation": "for the sake of ~ で「~のために、~の利益のために」。目的や理由を強調する表現。"
+        },
+        {
+          "scenario": "「by means of」の意味として最も適切なものは？",
+          "choices": ["〜の手段によって", "〜の代わりに", "〜のうちに", "〜と引き換えに"],
+          "correct": 0,
+          "explanation": "by means of ~ で「~の手段によって、~を用いて」。方法や道具を示す前置詞句。"
+        },
+        {
+          "scenario": "「in accordance with」の意味として最も適切なものは？",
+          "choices": ["〜に従って", "〜に反抗して", "〜を疑って", "〜を見下して"],
+          "correct": 0,
+          "explanation": "in accordance with ~ で「~に従って、~に一致して」。規則や指示に沿う場合によく使われる。"
+        },
+        {
+          "scenario": "「on account of」の意味として最も適切なものは？",
+          "choices": ["〜の理由で", "〜にかかわらず", "〜の見返りとして", "〜を待って"],
+          "correct": 0,
+          "explanation": "on account of ~ で「~の理由で、~のために」。because of と同様に原因を示す表現。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "熟語編2-2",
+      "type": "Prepositional Phrases B",
+      "emoji": "🧩",
+      "subtitle": "後半戦も前置詞句をどんどん覚えよう！",
+      "questions": [
+        {
+          "scenario": "「in the wake of」の意味として最も適切なものは？",
+          "choices": ["〜の後を追って、〜の結果として", "〜より前に", "〜の反対側で", "〜を上回って"],
+          "correct": 0,
+          "explanation": "in the wake of ~ で「~の後に続いて、~の結果として」。大きな出来事の余波を表す際に使う。"
+        },
+        {
+          "scenario": "「in contrast to」の意味として最も適切なものは？",
+          "choices": ["〜とは対照的に", "〜と一致して", "〜の助けを借りて", "〜の期間中"],
+          "correct": 0,
+          "explanation": "in contrast to ~ で「~とは対照的に」。二つの物事の違いを強調する時に使う表現。"
+        },
+        {
+          "scenario": "「with a view to」の意味として最も適切なものは？",
+          "choices": ["〜を目的として", "〜を心配して", "〜の代わりに", "〜を疑って"],
+          "correct": 0,
+          "explanation": "with a view to ~ing で「~する目的で」。to の後は動名詞が続くことが多い点に注意。"
+        },
+        {
+          "scenario": "「at the mercy of」の意味として最も適切なものは？",
+          "choices": ["〜のなすがままで", "〜を支配して", "〜に感謝して", "〜と協力して"],
+          "correct": 0,
+          "explanation": "at the mercy of ~ で「~のなすがままで、~に翻弄されて」。自然の力などに対して無力な状態を表す。"
+        },
+        {
+          "scenario": "「in proportion to」の意味として最も適切なものは？",
+          "choices": ["〜に比例して", "〜に反対して", "〜を除いて", "〜の代理として"],
+          "correct": 0,
+          "explanation": "in proportion to ~ で「~に比例して」。数量や程度が対応して変化する関係を示す。"
+        },
+        {
+          "scenario": "「for fear of」の意味として最も適切なものは？",
+          "choices": ["〜を恐れて", "〜を望んで", "〜を条件に", "〜に感心して"],
+          "correct": 0,
+          "explanation": "for fear of ~ で「~を恐れて、~しないように」。悪い結果を避けるための行動理由を示す。"
+        },
+        {
+          "scenario": "「in the event of」の意味として最も適切なものは？",
+          "choices": ["〜の場合には", "〜の記念に", "〜のかいあって", "〜を通り過ぎて"],
+          "correct": 0,
+          "explanation": "in the event of ~ で「~の場合には」。仮定の状況について備える文脈でよく使われる。"
+        },
+        {
+          "scenario": "「at the risk of」の意味として最も適切なものは？",
+          "choices": ["〜の危険を冒して", "〜の許可を得て", "〜を条件として", "〜と引き換えに"],
+          "correct": 0,
+          "explanation": "at the risk of ~ で「~の危険を冒して」。何かを失うリスクを承知の上で行動することを示す。"
+        },
+        {
+          "scenario": "「in defiance of」の意味として最も適切なものは？",
+          "choices": ["〜を無視して、〜に逆らって", "〜に感謝して", "〜に基づいて", "〜の間ずっと"],
+          "correct": 0,
+          "explanation": "in defiance of ~ で「~を無視して、~に反抗して」。規則や権威に逆らう態度を表す。"
+        },
+        {
+          "scenario": "「on the grounds of」の意味として最も適切なものは？",
+          "choices": ["〜という理由で", "〜の期間中", "〜の隣接地で", "〜を交換して"],
+          "correct": 0,
+          "explanation": "on the grounds of ~ で「~という理由で」。正式な文書や判断理由を述べる際に用いられる。"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "熟語編2-3",
+      "type": "Conversation Expressions A",
+      "emoji": "💬",
+      "subtitle": "会話でよく使う定番フレーズをチェック！",
+      "questions": [
+        {
+          "scenario": "「You're telling me!」の意味として最も適切なものは？",
+          "choices": ["本当にその通り！", "教えてくれてありがとう", "私に言わないで", "それは知らなかった"],
+          "correct": 0,
+          "explanation": "You're telling me! は「まさにその通り！全く同感だ」と強く共感を示す口語表現。"
+        },
+        {
+          "scenario": "「Suit yourself.」の意味として最も適切なものは？",
+          "choices": ["好きにすれば", "似合っているよ", "それは無理だよ", "急いでください"],
+          "correct": 0,
+          "explanation": "Suit yourself. は相手の意見や選択を軽く突き放して「好きにすれば、勝手にどうぞ」と伝える表現。"
+        },
+        {
+          "scenario": "「I couldn't agree more.」の意味として最も適切なものは？",
+          "choices": ["完全に同意する", "全く同意できない", "考えておくよ", "気にしないで"],
+          "correct": 0,
+          "explanation": "I couldn't agree more. は「これ以上同意できないほど賛成」つまり「全く同感」という強い同意表現。"
+        },
+        {
+          "scenario": "「Never mind.」の意味として最も適切なものは？",
+          "choices": ["気にしないで、何でもない", "決して忘れないで", "心配しないでいい理由がある", "頭を使って"],
+          "correct": 0,
+          "explanation": "Never mind. は「気にしないで、大したことじゃない」と話を切り上げる時によく使う表現。"
+        },
+        {
+          "scenario": "「It's up to you.」の意味として最も適切なものは？",
+          "choices": ["それはあなた次第だ", "もう時間切れだ", "それは上向きだ", "あなたのせいだ"],
+          "correct": 0,
+          "explanation": "It's up to you. は「決めるのはあなただ、あなた次第だ」と選択・決定権を相手に委ねる表現。"
+        },
+        {
+          "scenario": "「Take it easy.」の意味として最も適切なものは？",
+          "choices": ["気楽にね、無理しないで", "早く済ませて", "簡単に取って", "落ち着いて座って"],
+          "correct": 0,
+          "explanation": "Take it easy. は別れ際の挨拶や、相手を励ます時に「気楽に、無理しないで」という意味で使う。"
+        },
+        {
+          "scenario": "「That does it!」の意味として最も適切なものは？",
+          "choices": ["もう我慢の限界だ！", "それで解決だ", "それはよくやった", "そういうことにしよう"],
+          "correct": 0,
+          "explanation": "That does it! は不満や怒りが限界に達した時に「もう我慢できない！」という意味で使う口語表現。"
+        },
+        {
+          "scenario": "「I'm all ears.」の意味として最も適切なものは？",
+          "choices": ["ちゃんと聞いているよ", "耳が痛い", "もう聞き飽きた", "耳を疑うよ"],
+          "correct": 0,
+          "explanation": "I'm all ears. は「しっかり聞いているよ、話を聞かせて」と関心を持って耳を傾ける姿勢を表す。"
+        },
+        {
+          "scenario": "「You can say that again.」の意味として最も適切なものは？",
+          "choices": ["全くその通りだ", "もう一度言ってくれ", "それは言い過ぎだ", "冗談はやめて"],
+          "correct": 0,
+          "explanation": "You can say that again. は相手の発言に強く同意して「本当にその通り」と言う口語表現。"
+        },
+        {
+          "scenario": "「It's none of your business.」の意味として最も適切なものは？",
+          "choices": ["あなたには関係ないことだ", "それはあなたの仕事だ", "商売は順調だ", "それは重要な問題だ"],
+          "correct": 0,
+          "explanation": "It's none of your business. は「あなたには関係ない、口出ししないで」と相手を突き放す表現。"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "熟語編2-4",
+      "type": "Conversation Expressions B",
+      "emoji": "🗣️",
+      "subtitle": "リスニングでも役立つ会話表現の続き！",
+      "questions": [
+        {
+          "scenario": "「What's the catch?」の意味として最も適切なものは？",
+          "choices": ["何か裏があるの？", "何を捕まえたの？", "それはいくらするの？", "何が起きたの？"],
+          "correct": 0,
+          "explanation": "What's the catch? は都合の良すぎる話に対して「何か裏や落とし穴があるのでは？」と尋ねる表現。"
+        },
+        {
+          "scenario": "「Don't get me wrong.」の意味として最も適切なものは？",
+          "choices": ["誤解しないでほしい", "私を怒らせないで", "私に間違えさせないで", "私を信じないで"],
+          "correct": 0,
+          "explanation": "Don't get me wrong. は自分の発言が誤解されないよう「誤解しないでほしいんだけど」と前置きする表現。"
+        },
+        {
+          "scenario": "「It slipped my mind.」の意味として最も適切なものは？",
+          "choices": ["うっかり忘れてしまった", "考えが浮かんだ", "心を落ち着けた", "気が変わった"],
+          "correct": 0,
+          "explanation": "It slipped my mind. は「うっかり忘れてしまった」という意味。約束などを失念した時に使う。"
+        },
+        {
+          "scenario": "「I'm on it.」の意味として最も適切なものは？",
+          "choices": ["今すぐ取り掛かります", "もう終わりました", "その上に乗っています", "興味があります"],
+          "correct": 0,
+          "explanation": "I'm on it. は「今それに取り組んでいます、すぐやります」と即座の対応を示す口語表現。"
+        },
+        {
+          "scenario": "「Beats me.」の意味として最も適切なものは？",
+          "choices": ["さっぱり分からない", "私を打ち負かす", "私には簡単だ", "とても素晴らしい"],
+          "correct": 0,
+          "explanation": "Beats me. はくだけた表現で「私には分からない、見当もつかない」という意味。"
+        },
+        {
+          "scenario": "「Bear with me.」の意味として最も適切なものは？",
+          "choices": ["少し我慢して付き合って", "私と一緒に運んで", "私を信頼して", "私と競争して"],
+          "correct": 0,
+          "explanation": "Bear with me. は「少しの間我慢して待って、付き合って」というお願いの表現。"
+        },
+        {
+          "scenario": "「Cut it out!」の意味として最も適切なものは？",
+          "choices": ["やめてくれ！", "切り取ってくれ", "それを外に出して", "それは無理だ"],
+          "correct": 0,
+          "explanation": "Cut it out! は迷惑な行為を止めさせたい時に「やめて！」と強く言う口語表現。"
+        },
+        {
+          "scenario": "「I'll take your word for it.」の意味として最も適切なものは？",
+          "choices": ["あなたの言葉を信じるよ", "その単語を借りるよ", "自分で確かめるよ", "反対の立場を取るよ"],
+          "correct": 0,
+          "explanation": "I'll take your word for it. は証拠なしに「あなたの言うことを信じるよ」と伝える表現。"
+        },
+        {
+          "scenario": "「It's a piece of cake.」の意味として最も適切なものは？",
+          "choices": ["それはとても簡単だ", "それはお菓子だ", "それは無駄なことだ", "それは重要な事だ"],
+          "correct": 0,
+          "explanation": "It's a piece of cake. は「それは朝飯前、とても簡単だ」という意味の口語イディオム。"
+        },
+        {
+          "scenario": "「Hang in there.」の意味として最も適切なものは？",
+          "choices": ["頑張って持ちこたえて", "そこにぶら下がって", "そこで待っていて", "そこに置いておいて"],
+          "correct": 0,
+          "explanation": "Hang in there. は困難な状況にいる人を励まして「頑張って、諦めないで」と言う表現。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "熟語編2-5",
+      "type": "Phrasal Verbs A",
+      "emoji": "⚙️",
+      "subtitle": "動詞+前置詞の句動詞を集中攻略！",
+      "questions": [
+        {
+          "scenario": "「bank on」の意味として最も適切なものは？",
+          "choices": ["〜を当てにする", "〜を疑う", "〜を無視する", "〜を拒否する"],
+          "correct": 0,
+          "explanation": "bank on ~ で「~を当てにする、頼りにする」という意味。rely on と近い意味を持つ。"
+        },
+        {
+          "scenario": "「bail out」の意味として最も適切なものは？",
+          "choices": ["（苦境から）救済する、保釈する", "見捨てる", "追い込む", "妨害する"],
+          "correct": 0,
+          "explanation": "bail out ~ で「（苦境にある人・組織を）救済する」または「保釈する」という意味。"
+        },
+        {
+          "scenario": "「bump into」の意味として最も適切なものは？",
+          "choices": ["偶然出くわす", "意図的に避ける", "見送る", "招待する"],
+          "correct": 0,
+          "explanation": "bump into ~ で「~に偶然出くわす」という意味。come across と近い意味を持つ。"
+        },
+        {
+          "scenario": "「boil down to」の意味として最も適切なものは？",
+          "choices": ["要するに〜ということになる", "〜と無関係である", "〜を複雑にする", "〜を隠す"],
+          "correct": 0,
+          "explanation": "boil down to ~ で「（複雑な事柄が）要するに~ということになる」という意味。It all boils down to money.（結局は全てお金の問題だ）"
+        },
+        {
+          "scenario": "「butt in」の意味として最も適切なものは？",
+          "choices": ["（話や物事に）割り込む、口出しする", "静かに見守る", "手伝う", "提案する"],
+          "correct": 0,
+          "explanation": "butt in で「（会話や物事に）割り込む、口出しする」という意味。Don't butt in while I'm talking.（話している時に割り込まないで）"
+        },
+        {
+          "scenario": "「break even」の意味として最も適切なものは？",
+          "choices": ["損益なしになる、収支が均衡する", "大きな利益を得る", "大きな損失を出す", "破産する"],
+          "correct": 0,
+          "explanation": "break even で「収支がとんとんになる、損益がゼロになる」という意味。ビジネスの場面でよく使われる。"
+        },
+        {
+          "scenario": "「set out to」の意味として最も適切なものは？",
+          "choices": ["〜しようと着手する", "〜を取り消す", "〜を無視する", "〜に反対する"],
+          "correct": 0,
+          "explanation": "set out to ~ で「~しようと意図して取りかかる」という意味。目標に向けて行動を開始する表現。"
+        },
+        {
+          "scenario": "「cool off」の意味として最も適切なものは？",
+          "choices": ["冷静になる、頭を冷やす", "興奮する", "焦る", "怒り出す"],
+          "correct": 0,
+          "explanation": "cool off で「（怒りなどが収まって）冷静になる、頭を冷やす」という意味。Let's cool off before we talk.（話す前に頭を冷やそう）"
+        },
+        {
+          "scenario": "「hold on to」の意味として最も適切なものは？",
+          "choices": ["〜をしっかり持ち続ける", "〜を手放す", "〜を疑う", "〜を要求する"],
+          "correct": 0,
+          "explanation": "hold on to ~ で「~をしっかりつかんでおく、~を保持する」という意味。物理的にも比喩的にも使われる。"
+        },
+        {
+          "scenario": "「blow over」の意味として最も適切なものは？",
+          "choices": ["（騒動などが）おさまる、過ぎ去る", "激化する", "再燃する", "広がる"],
+          "correct": 0,
+          "explanation": "blow over で「（嵐・騒動などが）おさまる、過ぎ去る」という意味。The scandal will blow over eventually.（そのスキャンダルはやがておさまるだろう）"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "熟語編2-6",
+      "type": "Phrasal Verbs B",
+      "emoji": "🔧",
+      "subtitle": "句動詞をさらに掘り下げよう！",
+      "questions": [
+        {
+          "scenario": "「burn out」の意味として最も適切なものは？",
+          "choices": ["燃え尽きる、精根尽き果てる", "活力を得る", "落ち着く", "加速する"],
+          "correct": 0,
+          "explanation": "burn out で「（過労などで）燃え尽きる、精根尽き果てる」という意味。burnout（燃え尽き症候群）の動詞形。"
+        },
+        {
+          "scenario": "「brace for」の意味として最も適切なものは？",
+          "choices": ["（困難などに）備える、覚悟する", "油断する", "無視する", "回避する"],
+          "correct": 0,
+          "explanation": "brace for ~ で「（困難・衝撃などに）備える、覚悟する」という意味。brace for impactで「衝撃に備える」。"
+        },
+        {
+          "scenario": "「buckle down」の意味として最も適切なものは？",
+          "choices": ["本腰を入れて取り組む", "手を抜く", "諦める", "先延ばしにする"],
+          "correct": 0,
+          "explanation": "buckle down で「本腰を入れて取り組む、真剣に取りかかる」という意味。buckle down to workで「仕事に本腰を入れる」。"
+        },
+        {
+          "scenario": "「back up」の意味として最も適切なものは？",
+          "choices": ["支持する、後方に下がる", "急かす", "取り消す", "軽視する"],
+          "correct": 0,
+          "explanation": "back up ~ は「~を支持・裏付けする」または「後ろに下がる」という意味を持つ句動詞。"
+        },
+        {
+          "scenario": "「branch out」の意味として最も適切なものは？",
+          "choices": ["（事業・活動の分野を）広げる", "縮小する", "統合する", "停止する"],
+          "correct": 0,
+          "explanation": "branch out で「（事業・活動の分野を）広げる、新たな分野に進出する」という意味。branch out into new marketsで「新市場に進出する」。"
+        },
+        {
+          "scenario": "「clam up」の意味として最も適切なものは？",
+          "choices": ["（急に）口を閉ざす、黙り込む", "べらべら話し出す", "冷静に説明する", "正直に打ち明ける"],
+          "correct": 0,
+          "explanation": "clam up で「（緊張や警戒から）急に口を閉ざす、黙り込む」という意味。He clammed up when asked about it.（それについて聞かれると彼は黙り込んだ）"
+        },
+        {
+          "scenario": "「stem from」の意味として最も適切なものは？",
+          "choices": ["〜に由来する", "〜を切り離す", "〜を強調する", "〜を妨げる"],
+          "correct": 0,
+          "explanation": "stem from ~ で「~に起因する、~から生じる」という意味。原因や起源を説明する際によく使われる。"
+        },
+        {
+          "scenario": "「level off」の意味として最も適切なものは？",
+          "choices": ["横ばいになる、安定する", "水平にする作業", "急上昇する", "急降下する"],
+          "correct": 0,
+          "explanation": "level off は「（増減していたものが）横ばいになる、安定する」という意味。グラフや統計の説明でよく使われる。"
+        },
+        {
+          "scenario": "「dwell on」の意味として最も適切なものは？",
+          "choices": ["〜をくよくよ考え続ける", "〜に住む", "〜を軽く扱う", "〜を発見する"],
+          "correct": 0,
+          "explanation": "dwell on ~ で「~についてくよくよ考え続ける、こだわる」という意味。過去の失敗などにとらわれる状況を表す。"
+        },
+        {
+          "scenario": "「cash in on」の意味として最も適切なものは？",
+          "choices": ["（機会などを）利用して儲ける", "損をする", "無視する", "見逃す"],
+          "correct": 0,
+          "explanation": "cash in on ~ で「（機会・状況などを）利用して儲ける」という意味。cash in on the trendで「流行に乗じて儲ける」。"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "熟語編2-7",
+      "type": "Idioms with Body Parts",
+      "emoji": "🖐️",
+      "subtitle": "体の部位を使ったイディオムに挑戦！",
+      "questions": [
+        {
+          "scenario": "「keep an eye on」の意味として最も適切なものは？",
+          "choices": ["〜に気を配る、注意して見る", "〜を無視する", "〜を目撃する", "〜を忘れる"],
+          "correct": 0,
+          "explanation": "keep an eye on ~ で「~に目を配る、注意して見守る」という意味。watch carefully に近い表現。"
+        },
+        {
+          "scenario": "「lend a hand」の意味として最も適切なものは？",
+          "choices": ["手を貸す", "手を引っ込める", "拍手する", "握手する"],
+          "correct": 0,
+          "explanation": "lend a hand で「手を貸す、手伝う」という意味。give someone a hand とほぼ同義。"
+        },
+        {
+          "scenario": "「keep one's fingers crossed」の意味として最も適切なものは？",
+          "choices": ["幸運を祈る", "指を切る", "約束を破る", "反対の意思を示す"],
+          "correct": 0,
+          "explanation": "keep one's fingers crossed は「幸運を祈る」というジェスチャーに由来する表現。良い結果を願う時に使う。"
+        },
+        {
+          "scenario": "「turn a blind eye to」の意味として最も適切なものは？",
+          "choices": ["〜を見て見ぬふりをする", "〜を鋭く観察する", "〜に驚く", "〜を称賛する"],
+          "correct": 0,
+          "explanation": "turn a blind eye to ~ で「~を見て見ぬふりをする、意図的に無視する」という意味。"
+        },
+        {
+          "scenario": "「foot the bill」の意味として最も適切なものは？",
+          "choices": ["費用を負担する", "足を怪我する", "請求を拒否する", "予算を組む"],
+          "correct": 0,
+          "explanation": "foot the bill で「勘定・費用を支払う」という意味。誰かが費用を負担する状況を表す口語表現。"
+        },
+        {
+          "scenario": "「have a change of heart」の意味として最も適切なものは？",
+          "choices": ["気持ちが変わる", "心臓病になる", "興奮する", "落胆する"],
+          "correct": 0,
+          "explanation": "have a change of heart で「気持ち・決心が変わる」という意味。以前の考えを翻す時に使う。"
+        },
+        {
+          "scenario": "「give someone the cold shoulder」の意味として最も適切なものは？",
+          "choices": ["〜を冷たくあしらう", "〜を温かく迎える", "〜に協力する", "〜を紹介する"],
+          "correct": 0,
+          "explanation": "give someone the cold shoulder で「（人を）冷たく無視する、そっけなくする」という意味。"
+        },
+        {
+          "scenario": "「pull someone's leg」の意味として最も適切なものは？",
+          "choices": ["からかう、冗談を言う", "助けを求める", "足を引っ張って邪魔する", "本気で怒らせる"],
+          "correct": 0,
+          "explanation": "pull someone's leg で「（人を）からかう、冗談を言う」という意味。深刻に受け取らないでという文脈で使われる。"
+        },
+        {
+          "scenario": "「be all thumbs」の意味として最も適切なものは？",
+          "choices": ["不器用である", "とても器用である", "とても急いでいる", "強く同意している"],
+          "correct": 0,
+          "explanation": "be all thumbs で「（手先が）不器用である」という意味。細かい作業がうまくできない様子を表す。"
+        },
+        {
+          "scenario": "「have one's head in the clouds」の意味として最も適切なものは？",
+          "choices": ["空想にふけっている", "とても頭が良い", "現実的である", "怒っている"],
+          "correct": 0,
+          "explanation": "have one's head in the clouds で「非現実的な空想にふけっている」という意味。地に足がついていない様子を表す。"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "熟語編2-8",
+      "type": "Idioms of Time and Frequency",
+      "emoji": "⏳",
+      "subtitle": "時や頻度に関する熟語をおさえよう！",
+      "questions": [
+        {
+          "scenario": "「once in a while」の意味として最も適切なものは？",
+          "choices": ["時々、たまに", "いつも", "二度と〜ない", "しばらくの間"],
+          "correct": 0,
+          "explanation": "once in a while で「時々、たまに」という頻度を表す表現。occasionally とほぼ同義。"
+        },
+        {
+          "scenario": "「on and off」の意味として最も適切なものは？",
+          "choices": ["断続的に、途切れ途切れに", "絶え間なく", "すぐに", "永遠に"],
+          "correct": 0,
+          "explanation": "on and off で「断続的に、時々中断しながら」という意味。継続と中断を繰り返す様子を表す。"
+        },
+        {
+          "scenario": "「in the long run」の意味として最も適切なものは？",
+          "choices": ["長い目で見れば", "急いで", "その場しのぎで", "一瞬のうちに"],
+          "correct": 0,
+          "explanation": "in the long run で「長期的に見れば、結局は」という意味。短期的な視点と対比される表現。"
+        },
+        {
+          "scenario": "「ahead of time」の意味として最も適切なものは？",
+          "choices": ["前もって、早めに", "時間通りに", "遅れて", "同時に"],
+          "correct": 0,
+          "explanation": "ahead of time で「前もって、予定より早く」という意味。in advance と似た意味を持つ。"
+        },
+        {
+          "scenario": "「around the clock」の意味として最も適切なものは？",
+          "choices": ["24時間ずっと", "時々", "時間ぴったりに", "時計回りに"],
+          "correct": 0,
+          "explanation": "around the clock で「24時間休みなく、昼夜を問わず」という意味。continuously に近い表現。"
+        },
+        {
+          "scenario": "「at the drop of a hat」の意味として最も適切なものは？",
+          "choices": ["即座に、ためらわずに", "帽子を脱いで", "予告なしに終わる", "ゆっくりと考えて"],
+          "correct": 0,
+          "explanation": "at the drop of a hat で「即座に、何のためらいもなく」という意味。すぐに行動を起こす様子を表す。"
+        },
+        {
+          "scenario": "「from time to time」の意味として最も適切なものは？",
+          "choices": ["時々", "常に", "二度と", "その瞬間に"],
+          "correct": 0,
+          "explanation": "from time to time で「時々、たまに」という意味。occasionally や sometimes と同義。"
+        },
+        {
+          "scenario": "「in no time」の意味として最も適切なものは？",
+          "choices": ["すぐに、あっという間に", "決して〜ない", "長い時間をかけて", "時間切れで"],
+          "correct": 0,
+          "explanation": "in no time で「あっという間に、すぐに」という意味。非常に短い時間で何かが起こることを表す。"
+        },
+        {
+          "scenario": "「once and for all」の意味として最も適切なものは？",
+          "choices": ["これを最後に、きっぱりと", "一度だけ試しに", "みんなのために", "一時的に"],
+          "correct": 0,
+          "explanation": "once and for all で「これを最後に、きっぱりと最終的に」という意味。問題を完全に解決する際に使う。"
+        },
+        {
+          "scenario": "「every now and then」の意味として最も適切なものは？",
+          "choices": ["時々", "絶えず", "今すぐに", "永久に"],
+          "correct": 0,
+          "explanation": "every now and then で「時々、たまに」という意味。from time to time とほぼ同義の頻度表現。"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "熟語編2-9",
+      "type": "Business & Formal Expressions",
+      "emoji": "💼",
+      "subtitle": "ビジネス・フォーマルな熟語表現！",
+      "questions": [
+        {
+          "scenario": "「come into effect」の意味として最も適切なものは？",
+          "choices": ["（法律・規則が）施行される", "効果を失う", "会議に出席する", "計画を中止する"],
+          "correct": 0,
+          "explanation": "come into effect で「（法律・規則などが）発効する、施行される」という意味。take effect も同義で使われる。"
+        },
+        {
+          "scenario": "「take into account」の意味として最も適切なものは？",
+          "choices": ["〜を考慮に入れる", "〜を計算し忘れる", "〜を拒否する", "〜を無視する"],
+          "correct": 0,
+          "explanation": "take ~ into account で「~を考慮に入れる」という意味。consider とほぼ同義のフォーマルな表現。"
+        },
+        {
+          "scenario": "「be subject to」の意味として最も適切なものは？",
+          "choices": ["〜を受けやすい、〜次第である", "〜を提出する", "〜に反対する", "〜を管理する"],
+          "correct": 0,
+          "explanation": "be subject to ~ で「~を受けやすい、~の対象となる」という意味。契約書や規則の文脈でよく使われる。"
+        },
+        {
+          "scenario": "「in compliance with」の意味として最も適切なものは？",
+          "choices": ["〜を遵守して", "〜を無視して", "〜と競合して", "〜を批判して"],
+          "correct": 0,
+          "explanation": "in compliance with ~ で「~を遵守して、~に従って」という意味。法律や規則に従う際のフォーマルな表現。"
+        },
+        {
+          "scenario": "「on a first-come, first-served basis」の意味として最も適切なものは？",
+          "choices": ["先着順で", "抽選で", "予約優先で", "会員限定で"],
+          "correct": 0,
+          "explanation": "on a first-come, first-served basis で「先着順に」という意味。予約やサービス提供の順序を説明する定型表現。"
+        },
+        {
+          "scenario": "「at one's disposal」の意味として最も適切なものは？",
+          "choices": ["〜の自由に使える状態で", "〜の処分待ちで", "〜の管理下で禁止されて", "〜の許可待ちで"],
+          "correct": 0,
+          "explanation": "at one's disposal で「（人・物が）自由に使える状態で」という意味。資源や人材が利用可能であることを示す。"
+        },
+        {
+          "scenario": "「in the pipeline」の意味として最も適切なものは？",
+          "choices": ["準備・計画中である", "すでに完了している", "廃止が決まっている", "販売中止である"],
+          "correct": 0,
+          "explanation": "in the pipeline で「（計画・製品などが）進行中、準備中である」という意味。ビジネスでよく使われる比喩表現。"
+        },
+        {
+          "scenario": "「to the best of one's knowledge」の意味として最も適切なものは？",
+          "choices": ["自分の知る限りでは", "全く知らない範囲で", "他人の意見によれば", "公式発表によれば"],
+          "correct": 0,
+          "explanation": "to the best of one's knowledge で「自分の知る限りでは」という意味。確信の程度に留保をつける際に使う表現。"
+        },
+        {
+          "scenario": "「as a rule of thumb」の意味として最も適切なものは？",
+          "choices": ["経験則として、大まかな目安として", "法律の規定として", "例外的な場合として", "厳密な計算として"],
+          "correct": 0,
+          "explanation": "as a rule of thumb で「経験則として、大まかな目安として」という意味。正確ではないが実用的な基準を示す表現。"
+        },
+        {
+          "scenario": "「in the long term」の意味として最も適切なものは？",
+          "choices": ["長期的には", "短期的には", "即座に", "過去において"],
+          "correct": 0,
+          "explanation": "in the long term で「長期的には」という意味。in the short term（短期的には）と対比して使われる。"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "熟語編2-10",
+      "type": "Everyday Idioms & Collocations",
+      "emoji": "🌟",
+      "subtitle": "日常でよく使う熟語・コロケーションの総まとめ！",
+      "questions": [
+        {
+          "scenario": "「make ends meet」の意味として最も適切なものは？",
+          "choices": ["収支を合わせる、家計をやりくりする", "目標を達成する", "友人を作る", "議論を終わらせる"],
+          "correct": 0,
+          "explanation": "make ends meet で「収入と支出を合わせる、何とか生計を立てる」という意味。経済的に苦しい状況で使われることが多い。"
+        },
+        {
+          "scenario": "「go the extra mile」の意味として最も適切なものは？",
+          "choices": ["期待以上の努力をする", "遠回りをする", "諦めて撤退する", "他人任せにする"],
+          "correct": 0,
+          "explanation": "go the extra mile で「（義務以上に）一層の努力をする」という意味。期待を上回るサービスや努力を表す。"
+        },
+        {
+          "scenario": "「hit the nail on the head」の意味として最も適切なものは？",
+          "choices": ["核心を突く、的確に言い当てる", "無駄な努力をする", "計画を台無しにする", "話をそらす"],
+          "correct": 0,
+          "explanation": "hit the nail on the head で「まさに核心を突く、正確に言い当てる」という意味。正しい指摘をした時に使う。"
+        },
+        {
+          "scenario": "「break the ice」の意味として最も適切なものは？",
+          "choices": ["緊張をほぐす、場を和ませる", "氷を割る作業をする", "関係を絶つ", "計画を中止する"],
+          "correct": 0,
+          "explanation": "break the ice で「（初対面などの）緊張した雰囲気を和らげる」という意味。会話のきっかけを作る際に使う。"
+        },
+        {
+          "scenario": "「under the weather」の意味として最も適切なものは？",
+          "choices": ["体調が優れない", "天気に恵まれている", "とても元気である", "外出を控えている"],
+          "correct": 0,
+          "explanation": "under the weather で「体調が悪い、気分が優れない」という意味。軽い体調不良を表す口語表現。"
+        },
+        {
+          "scenario": "「read between the lines」の意味として最も適切なものは？",
+          "choices": ["言外の意味を読み取る", "文章を音読する", "行間を空けて書く", "文章を要約する"],
+          "correct": 0,
+          "explanation": "read between the lines で「行間を読む、言葉に表れない真意を察する」という意味。"
+        },
+        {
+          "scenario": "「in the same boat」の意味として最も適切なものは？",
+          "choices": ["同じ境遇にある", "同じ船に乗って旅行する", "対立関係にある", "全く無関係である"],
+          "correct": 0,
+          "explanation": "in the same boat で「同じ苦しい状況・境遇にある」という意味。共通の困難を抱えている人同士の連帯感を表す。"
+        },
+        {
+          "scenario": "「a blessing in disguise」の意味として最も適切なものは？",
+          "choices": ["一見不運に見えて実は幸運なこと", "見た目通りの幸運", "隠された危険", "予想通りの結果"],
+          "correct": 0,
+          "explanation": "a blessing in disguise で「一見悪いことに見えるが、実は良い結果につながること」という意味。"
+        },
+        {
+          "scenario": "「call it a day」の意味として最も適切なものは？",
+          "choices": ["その日の作業を切り上げる", "一日中働き続ける", "予定を変更する", "会議を招集する"],
+          "correct": 0,
+          "explanation": "call it a day で「（その日の仕事などを）切り上げる、終わりにする」という意味。作業を終える時の口語表現。"
+        },
+        {
+          "scenario": "「get the ball rolling」の意味として最も適切なものは？",
+          "choices": ["物事を始動させる", "計画を白紙に戻す", "議論を打ち切る", "責任を回避する"],
+          "correct": 0,
+          "explanation": "get the ball rolling で「物事を始動させる、動き出させる」という意味。プロジェクトや議論を開始する際に使う表現。"
+        }
+      ]
+    }
+  ]
+}

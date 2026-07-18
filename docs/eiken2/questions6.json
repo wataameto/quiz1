@@ -1,0 +1,198 @@
+{
+  "id": "eiken2",
+  "level": 6,
+  "label": "📖 名詞編2",
+  "description": "応用名詞（抽象語・学術寄りの語彙）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "名詞編2-1",
+      "type": "Abstract Concepts",
+      "emoji": "🤔",
+      "subtitle": "英検2級レベルの語彙クイズ！抽象的な概念を表す名詞をマスターしよう",
+      "questions": [
+        {"scenario": "「concept」の意味として最も適切なものは？", "choices": ["概念", "実験", "契約", "感情"], "correct": 0, "explanation": "「概念」という意味の名詞。抽象的な考えやアイデアを指す。例: the concept of freedom（自由という概念）", "type": "choice"},
+        {"scenario": "「perspective」の意味として最も適切なものは？", "choices": ["観点、視点", "結論", "証拠", "習慣"], "correct": 0, "explanation": "物事を見る「視点」「観点」を意味する。from a different perspective（異なる視点から）のように使う。", "type": "choice"},
+        {"scenario": "「tendency」の意味として最も適切なものは？", "choices": ["傾向", "義務", "権威", "起源"], "correct": 0, "explanation": "「傾向」という意味。have a tendency to ~（~する傾向がある）という形でよく使われる。", "type": "choice"},
+        {"scenario": "「assumption」の意味として最も適切なものは？", "choices": ["仮定、思い込み", "結果", "発明", "規則"], "correct": 0, "explanation": "「仮定」「前提」を意味する。make an assumption（仮定する）のように使う。", "type": "choice"},
+        {"scenario": "「contradiction」の意味として最も適切なものは？", "choices": ["矛盾", "協力", "同意", "発展"], "correct": 0, "explanation": "「矛盾」を意味する名詞。動詞contradict（矛盾する）の名詞形。", "type": "choice"},
+        {"scenario": "「repercussion」の意味として最も適切なものは？", "choices": ["（悪い）影響、余波", "起源", "提案", "習慣"], "correct": 0, "explanation": "ある行為による「（好ましくない）影響、余波」を意味する。consequenceと近い意味を持つ。", "type": "choice"},
+        {"scenario": "「predicament」の意味として最も適切なものは？", "choices": ["苦境、窮地", "才能", "義務", "伝統"], "correct": 0, "explanation": "抜け出しにくい「苦境」「窮地」を意味する名詞。in a predicament（窮地に陥って）。", "type": "choice"},
+        {"scenario": "「phenomenon」の意味として最も適切なものは？", "choices": ["現象", "制度", "結論", "仮説"], "correct": 0, "explanation": "「現象」を意味する。複数形はphenomena。natural phenomenon（自然現象）。", "type": "choice"},
+        {"scenario": "「dilemma」の意味として最も適切なものは？", "choices": ["ジレンマ、板挟み", "解決策", "発見", "意見"], "correct": 0, "explanation": "二者択一で困る「ジレンマ」を意味する。face a dilemma（ジレンマに直面する）。", "type": "choice"},
+        {"scenario": "「dispute」の意味として最も適切なものは？", "choices": ["論争、紛争", "一致", "協定", "発明"], "correct": 0, "explanation": "意見が対立する「論争」「紛争」を意味する。controversyと近い意味を持つ。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編2-2",
+      "type": "Academic Research",
+      "emoji": "🔬",
+      "subtitle": "英検2級レベルの語彙クイズ！研究・論文でよく使う名詞を確認しよう",
+      "questions": [
+        {"scenario": "「hypothesis」の意味として最も適切なものは？", "choices": ["仮説", "結論", "規則", "伝統"], "correct": 0, "explanation": "研究の前提となる「仮説」を意味する。複数形はhypotheses。", "type": "choice"},
+        {"scenario": "「methodology」の意味として最も適切なものは？", "choices": ["方法論", "感情", "起源", "権威"], "correct": 0, "explanation": "研究などの「方法論」を意味する。research methodology（研究方法論）。", "type": "choice"},
+        {"scenario": "「analysis」の意味として最も適切なものは？", "choices": ["分析", "発明", "習慣", "予測"], "correct": 0, "explanation": "物事を細かく調べる「分析」を意味する。動詞analyze（分析する）の名詞形。", "type": "choice"},
+        {"scenario": "「testimony」の意味として最も適切なものは？", "choices": ["証言", "意見", "提案", "傾向"], "correct": 0, "explanation": "法廷などでの「証言」を意味する名詞。give testimony（証言する）。", "type": "choice"},
+        {"scenario": "「criteria」の意味として最も適切なものは？", "choices": ["基準", "結果", "仮定", "矛盾"], "correct": 0, "explanation": "「基準」を意味する複数形の名詞（単数形はcriterion）。selection criteria（選考基準）。", "type": "choice"},
+        {"scenario": "「structure」の意味として最も適切なものは？", "choices": ["構造", "内容", "目的", "起源"], "correct": 0, "explanation": "物事の「構造」を意味する。frameworkと近い意味を持つ。social structure（社会構造）。", "type": "choice"},
+        {"scenario": "「theory」の意味として最も適切なものは？", "choices": ["理論", "事実", "習慣", "制度"], "correct": 0, "explanation": "「理論」を意味する。in theory（理論上は）という表現もよく使われる。", "type": "choice"},
+        {"scenario": "「observation」の意味として最も適切なものは？", "choices": ["観察", "想像", "発明", "議論"], "correct": 0, "explanation": "注意深く見る「観察」を意味する。動詞observe（観察する）の名詞形。", "type": "choice"},
+        {"scenario": "「conclusion」の意味として最も適切なものは？", "choices": ["結論", "仮説", "序論", "疑問"], "correct": 0, "explanation": "議論や研究の「結論」を意味する。draw a conclusion（結論を導く）。", "type": "choice"},
+        {"scenario": "「experiment」の意味として最も適切なものは？", "choices": ["実験", "調査", "発表", "規則"], "correct": 0, "explanation": "「実験」を意味する。conduct an experiment（実験を行う）。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編2-3",
+      "type": "Society and Culture",
+      "emoji": "🏛️",
+      "subtitle": "英検2級レベルの語彙クイズ！社会・文化を語る名詞を身につけよう",
+      "questions": [
+        {"scenario": "「tradition」の意味として最も適切なものは？", "choices": ["伝統", "制度", "発明", "契約"], "correct": 0, "explanation": "「伝統」を意味する。by tradition（伝統的に）。", "type": "choice"},
+        {"scenario": "「convention」の意味として最も適切なものは？", "choices": ["慣習、しきたり", "概念", "証拠", "権威"], "correct": 0, "explanation": "社会や個人の「慣習」「しきたり」を意味する。customと近い意味を持つ。", "type": "choice"},
+        {"scenario": "「organization」の意味として最も適切なものは？", "choices": ["組織", "現象", "感情", "傾向"], "correct": 0, "explanation": "学校・企業などの「組織」を意味する。institutionと近い意味を持つ。", "type": "choice"},
+        {"scenario": "「community」の意味として最も適切なものは？", "choices": ["地域社会、共同体", "階層", "遺産", "起源"], "correct": 0, "explanation": "「地域社会」「共同体」を意味する。local community（地域社会）。", "type": "choice"},
+        {"scenario": "「multiplicity」の意味として最も適切なものは？", "choices": ["多数性、多様性", "一致", "均衡", "伝統"], "correct": 0, "explanation": "「多数性」「多様性」を意味する。diversityと近い意味を持つ。", "type": "choice"},
+        {"scenario": "「legacy」の意味として最も適切なものは？", "choices": ["遺産、レガシー", "規則", "証拠", "概念"], "correct": 0, "explanation": "文化的・歴史的な「遺産」を意味する。heritageと近い意味を持つ。cultural legacy（文化的遺産）。", "type": "choice"},
+        {"scenario": "「individuality」の意味として最も適切なものは？", "choices": ["個性", "権威", "義務", "傾向"], "correct": 0, "explanation": "「個性」「独自性」を意味する。identityと近い意味を持つ。", "type": "choice"},
+        {"scenario": "「norm」の意味として最も適切なものは？", "choices": ["規範", "結論", "発明", "起源"], "correct": 0, "explanation": "社会の「規範」「標準」を意味する。social norm（社会規範）。", "type": "choice"},
+        {"scenario": "「ranking」の意味として最も適切なものは？", "choices": ["序列、順位", "多様性", "伝統", "証拠"], "correct": 0, "explanation": "組織などの「序列」「順位」を意味する。hierarchyと近い意味を持つ。social ranking（社会的な序列）。", "type": "choice"},
+        {"scenario": "「lineage」の意味として最も適切なものは？", "choices": ["血統、系統", "制度", "発明", "習慣"], "correct": 0, "explanation": "「血統」「家系」を意味する。generationと関連の深い語。family lineage（家系）。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編2-4",
+      "type": "Economy and Business",
+      "emoji": "💰",
+      "subtitle": "英検2級レベルの語彙クイズ！経済・ビジネスの名詞を押さえよう",
+      "questions": [
+        {"scenario": "「finance」の意味として最も適切なものは？", "choices": ["財政、金融", "政策", "契約", "発明"], "correct": 0, "explanation": "「財政」「金融」を意味する。economyと関連の深い語。public finance（財政）。", "type": "choice"},
+        {"scenario": "「commerce」の意味として最も適切なものは？", "choices": ["商業", "農業", "工業", "外交"], "correct": 0, "explanation": "「商業」「通商」を意味する。international commerce（国際商業）。", "type": "choice"},
+        {"scenario": "「expenditure」の意味として最も適切なものは？", "choices": ["支出", "貯蓄", "寄付", "負債"], "correct": 0, "explanation": "「支出」を意味する。investmentと対になる資金の流れを表す語。government expenditure（政府支出）。", "type": "choice"},
+        {"scenario": "「revenue」の意味として最も適切なものは？", "choices": ["収入、歳入", "支出", "負債", "利子"], "correct": 0, "explanation": "企業や国の「収入」「歳入」を意味する。tax revenue（税収）。", "type": "choice"},
+        {"scenario": "「surplus」の意味として最も適切なものは？", "choices": ["余剰、黒字", "不況", "均衡", "節約"], "correct": 0, "explanation": "必要以上に残る「余剰」「黒字」を意味する。trade surplus（貿易黒字）。", "type": "choice"},
+        {"scenario": "「recession」の意味として最も適切なものは？", "choices": ["不況、景気後退", "好況", "発展", "改革"], "correct": 0, "explanation": "「不況」「景気後退」を意味する。economic recession（経済不況）。", "type": "choice"},
+        {"scenario": "「asset」の意味として最も適切なものは？", "choices": ["資産", "負債", "費用", "税金"], "correct": 0, "explanation": "「資産」を意味する。valuable asset（貴重な資産）のように使う。", "type": "choice"},
+        {"scenario": "「profit」の意味として最も適切なものは？", "choices": ["利益", "損失", "費用", "負債"], "correct": 0, "explanation": "商売などで得る「利益」を意味する。make a profit（利益を上げる）。", "type": "choice"},
+        {"scenario": "「transaction」の意味として最も適切なものは？", "choices": ["取引", "契約書", "発明", "規則"], "correct": 0, "explanation": "商取引などの「取引」を意味する。business transaction（商取引）。", "type": "choice"},
+        {"scenario": "「merchandise」の意味として最も適切なものは？", "choices": ["商品", "資産", "通貨", "遺産"], "correct": 0, "explanation": "売買される「商品」を意味する。commodityと近い意味を持つ。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編2-5",
+      "type": "Psychology and Mind",
+      "emoji": "🧠",
+      "subtitle": "英検2級レベルの語彙クイズ！心理・感情に関する名詞を学ぼう",
+      "questions": [
+        {"scenario": "「perception」の意味として最も適切なものは？", "choices": ["知覚、認識", "概念", "結論", "傾向"], "correct": 0, "explanation": "物事の「知覚」「認識」を意味する。public perception（世間の認識）。", "type": "choice"},
+        {"scenario": "「cognition」の意味として最も適切なものは？", "choices": ["認知", "感情", "本能", "習慣"], "correct": 0, "explanation": "知識を得るための心の働き「認知」を意味する。cognitive（認知の）は形容詞形。", "type": "choice"},
+        {"scenario": "「instinct」の意味として最も適切なものは？", "choices": ["本能", "知性", "意志", "良心"], "correct": 0, "explanation": "生まれつき備わった「本能」を意味する。by instinct（本能的に）。", "type": "choice"},
+        {"scenario": "「motivation」の意味として最も適切なものは？", "choices": ["動機、やる気", "結果", "義務", "伝統"], "correct": 0, "explanation": "行動の「動機」「やる気」を意味する。lack of motivation（やる気の欠如）。", "type": "choice"},
+        {"scenario": "「anxiety」の意味として最も適切なものは？", "choices": ["不安", "好奇心", "自信", "謙虚さ"], "correct": 0, "explanation": "心配や「不安」を意味する。anxiety about the future（将来への不安）。", "type": "choice"},
+        {"scenario": "「curiosity」の意味として最も適切なものは？", "choices": ["好奇心", "不安", "傲慢さ", "忍耐"], "correct": 0, "explanation": "「好奇心」を意味する。out of curiosity（好奇心から）。", "type": "choice"},
+        {"scenario": "「empathy」の意味として最も適切なものは？", "choices": ["共感", "同意", "権威", "義務"], "correct": 0, "explanation": "他人の気持ちを理解する「共感」を意味する。show empathy（共感を示す）。", "type": "choice"},
+        {"scenario": "「intuition」の意味として最も適切なものは？", "choices": ["直感", "論理", "証拠", "分析"], "correct": 0, "explanation": "理屈ではなく感じ取る「直感」を意味する。trust one's intuition（直感を信じる）。", "type": "choice"},
+        {"scenario": "「temperament」の意味として最も適切なものは？", "choices": ["気質", "才能", "習慣", "伝統"], "correct": 0, "explanation": "生まれつきの「気質」「性質」を意味する。calm temperament（穏やかな気質）。", "type": "choice"},
+        {"scenario": "「resilience」の意味として最も適切なものは？", "choices": ["回復力、立ち直る力", "傲慢さ", "好奇心", "謙虚さ"], "correct": 0, "explanation": "困難から立ち直る「回復力」を意味する。emotional resilience（精神的な回復力）。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編2-6",
+      "type": "Science and Nature",
+      "emoji": "🌿",
+      "subtitle": "英検2級レベルの語彙クイズ！科学・自然に関する名詞を確認しよう",
+      "questions": [
+        {"scenario": "「ecosystem」の意味として最も適切なものは？", "choices": ["生態系", "気候", "地形", "資源"], "correct": 0, "explanation": "生物と環境の関係全体「生態系」を意味する。marine ecosystem（海洋生態系）。", "type": "choice"},
+        {"scenario": "「species」の意味として最も適切なものは？", "choices": ["種（生物の種類）", "属性", "個体", "現象"], "correct": 0, "explanation": "生物学における「種」を意味する。単数・複数同形。endangered species（絶滅危惧種）。", "type": "choice"},
+        {"scenario": "「evolution」の意味として最も適切なものは？", "choices": ["進化", "退化", "発明", "革命"], "correct": 0, "explanation": "生物の「進化」を意味する。theory of evolution（進化論）。", "type": "choice"},
+        {"scenario": "「molecule」の意味として最も適切なものは？", "choices": ["分子", "原子核", "細胞", "元素"], "correct": 0, "explanation": "化学における「分子」を意味する。water molecule（水分子）。", "type": "choice"},
+        {"scenario": "「gravity」の意味として最も適切なものは？", "choices": ["重力", "摩擦", "圧力", "密度"], "correct": 0, "explanation": "物体を引き寄せる「重力」を意味する。the force of gravity（重力）。", "type": "choice"},
+        {"scenario": "「magnitude」の意味として最も適切なものは？", "choices": ["規模、大きさ", "地殻", "海流", "気候"], "correct": 0, "explanation": "物事の「規模」「大きさ」を意味する。the magnitude of the damage（被害の規模）。", "type": "choice"},
+        {"scenario": "「organism」の意味として最も適切なものは？", "choices": ["生物、有機体", "器官", "細胞", "分子"], "correct": 0, "explanation": "「生物」「有機体」を意味する。living organism（生物）。", "type": "choice"},
+        {"scenario": "「terrain」の意味として最も適切なものは？", "choices": ["地形", "気候", "資源", "領土"], "correct": 0, "explanation": "土地の「地形」を意味する。habitatと関連の深い語。rough terrain（起伏の激しい地形）。", "type": "choice"},
+        {"scenario": "「equilibrium」の意味として最も適切なものは？", "choices": ["均衡、平衡", "進化", "循環", "変化"], "correct": 0, "explanation": "力や状態が釣り合う「均衡」を意味する。ecological equilibrium（生態学的均衡）。", "type": "choice"},
+        {"scenario": "「mechanism」の意味として最も適切なものは？", "choices": ["仕組み、機構", "現象", "結果", "起源"], "correct": 0, "explanation": "物事が機能する「仕組み」「機構」を意味する。defense mechanism（防御機構）。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "名詞編2-7",
+      "type": "Politics and Law",
+      "emoji": "⚖️",
+      "subtitle": "英検2級レベルの語彙クイズ！政治・法律に関する名詞を覚えよう",
+      "questions": [
+        {"scenario": "「democracy」の意味として最も適切なものは？", "choices": ["民主主義", "独裁", "君主制", "官僚制"], "correct": 0, "explanation": "国民が政治に参加する「民主主義」を意味する。", "type": "choice"},
+        {"scenario": "「legislation」の意味として最も適切なものは？", "choices": ["法律、立法", "選挙", "裁判", "条約"], "correct": 0, "explanation": "議会が制定する「法律」「立法」を意味する。pass legislation（法律を可決する）。", "type": "choice"},
+        {"scenario": "「jurisdiction」の意味として最も適切なものは？", "choices": ["管轄権", "責任", "義務", "名誉"], "correct": 0, "explanation": "「管轄権」「支配権」を意味する。fall under the jurisdiction of ~（~の管轄下にある）。", "type": "choice"},
+        {"scenario": "「policy」の意味として最も適切なものは？", "choices": ["政策", "規則", "伝統", "契約"], "correct": 0, "explanation": "政府や組織の「政策」を意味する。foreign policy（外交政策）。", "type": "choice"},
+        {"scenario": "「reform」の意味として最も適切なものは？", "choices": ["改革", "革命", "制度", "伝統"], "correct": 0, "explanation": "制度などを改善する「改革」を意味する。education reform（教育改革）。", "type": "choice"},
+        {"scenario": "「diplomacy」の意味として最も適切なものは？", "choices": ["外交", "貿易", "軍事", "経済"], "correct": 0, "explanation": "国家間の交渉「外交」を意味する。through diplomacy（外交を通じて）。", "type": "choice"},
+        {"scenario": "「regulation」の意味として最も適切なものは？", "choices": ["規則、規制", "提案", "契約", "権利"], "correct": 0, "explanation": "「規則」「規制」を意味する。safety regulation（安全規制）。", "type": "choice"},
+        {"scenario": "「bureaucracy」の意味として最も適切なものは？", "choices": ["官僚制、お役所仕事", "民主主義", "資本主義", "独裁制"], "correct": 0, "explanation": "行政組織による「官僚制」を意味する。しばしば非効率な手続きを指す否定的な意味でも使われる。", "type": "choice"},
+        {"scenario": "「constitution」の意味として最も適切なものは？", "choices": ["憲法", "条約", "法案", "規則"], "correct": 0, "explanation": "国家の基本法「憲法」を意味する。constitutional（憲法上の）は形容詞形。", "type": "choice"},
+        {"scenario": "「negotiation」の意味として最も適切なものは？", "choices": ["交渉", "妥協", "抗議", "合意"], "correct": 0, "explanation": "話し合いによる「交渉」を意味する。enter into negotiation（交渉に入る）。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "名詞編2-8",
+      "type": "Communication and Language",
+      "emoji": "💬",
+      "subtitle": "英検2級レベルの語彙クイズ！言葉やコミュニケーションの名詞を学ぼう",
+      "questions": [
+        {"scenario": "「rhetoric」の意味として最も適切なものは？", "choices": ["修辞法、レトリック", "文法", "発音", "翻訳"], "correct": 0, "explanation": "説得力のある話し方「修辞法」を意味する。political rhetoric（政治的な言い回し）。", "type": "choice"},
+        {"scenario": "「terminology」の意味として最も適切なものは？", "choices": ["専門用語", "方言", "文脈", "語源"], "correct": 0, "explanation": "特定分野の「専門用語」を意味する。technical terminology（専門用語）。", "type": "choice"},
+        {"scenario": "「narrative」の意味として最も適切なものは？", "choices": ["物語、語り", "議論", "要約", "解説"], "correct": 0, "explanation": "出来事を語る「物語」「語り口」を意味する。personal narrative（個人的な体験談）。", "type": "choice"},
+        {"scenario": "「metaphor」の意味として最も適切なものは？", "choices": ["隠喩、比喩", "皮肉", "誇張", "反復"], "correct": 0, "explanation": "「~のようだ」を使わない比喩「隠喩」を意味する。life is a journey.（人生は旅である）のような表現。", "type": "choice"},
+        {"scenario": "「ambiguity」の意味として最も適切なものは？", "choices": ["曖昧さ", "明確さ", "一貫性", "正確さ"], "correct": 0, "explanation": "意味がはっきりしない「曖昧さ」を意味する。avoid ambiguity（曖昧さを避ける）。", "type": "choice"},
+        {"scenario": "「connotation」の意味として最も適切なものは？", "choices": ["言外の意味、含意", "発音", "語源", "文法"], "correct": 0, "explanation": "言葉が持つ「言外の意味」「含意」を意味する。negative connotation（否定的な含意）。", "type": "choice"},
+        {"scenario": "「discourse」の意味として最も適切なものは？", "choices": ["談話、言説", "独白", "翻訳", "演説"], "correct": 0, "explanation": "社会的な「談話」「言説」を意味する。public discourse（公共の言説）。", "type": "choice"},
+        {"scenario": "「dialect」の意味として最も適切なものは？", "choices": ["方言", "母語", "外国語", "標準語"], "correct": 0, "explanation": "地域特有の言葉「方言」を意味する。local dialect（地元の方言）。", "type": "choice"},
+        {"scenario": "「eloquence」の意味として最も適切なものは？", "choices": ["雄弁", "沈黙", "謙虚", "率直"], "correct": 0, "explanation": "説得力があり流暢な話し方「雄弁」を意味する。speak with eloquence（雄弁に話す）。", "type": "choice"},
+        {"scenario": "「syntax」の意味として最も適切なものは？", "choices": ["統語論、構文", "語彙", "発音", "意味論"], "correct": 0, "explanation": "文の構造を扱う「構文」「統語論」を意味する。sentence syntax（文の構文）。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "名詞編2-9",
+      "type": "Personal Qualities",
+      "emoji": "✨",
+      "subtitle": "英検2級レベルの語彙クイズ！人の性質や美徳を表す名詞を身につけよう",
+      "questions": [
+        {"scenario": "「integrity」の意味として最も適切なものは？", "choices": ["誠実さ、高潔さ", "傲慢さ", "好奇心", "忍耐力"], "correct": 0, "explanation": "道徳的な「誠実さ」「高潔さ」を意味する。act with integrity（誠実に行動する）。", "type": "choice"},
+        {"scenario": "「wisdom」の意味として最も適切なものは？", "choices": ["知恵", "知識", "才能", "経験"], "correct": 0, "explanation": "経験に基づく「知恵」を意味する。単なる知識（knowledge）とは区別される。", "type": "choice"},
+        {"scenario": "「virtue」の意味として最も適切なものは？", "choices": ["美徳", "悪徳", "欠点", "弱点"], "correct": 0, "explanation": "道徳的に優れた性質「美徳」を意味する。patience is a virtue.（忍耐は美徳である）。", "type": "choice"},
+        {"scenario": "「ambition」の意味として最も適切なものは？", "choices": ["野心、大志", "謙虚さ", "忍耐", "同情"], "correct": 0, "explanation": "強い成功への願望「野心」を意味する。have great ambition（大きな野心を持つ）。", "type": "choice"},
+        {"scenario": "「humility」の意味として最も適切なものは？", "choices": ["謙虚さ", "傲慢さ", "野心", "好奇心"], "correct": 0, "explanation": "控えめで謙遜な態度「謙虚さ」を意味する。with humility（謙虚に）。", "type": "choice"},
+        {"scenario": "「sincerity」の意味として最も適切なものは？", "choices": ["誠実、正直さ", "皮肉", "偏見", "疑い"], "correct": 0, "explanation": "偽りのない態度「誠実さ」「正直さ」を意味する。speak with sincerity（誠実に話す）。", "type": "choice"},
+        {"scenario": "「arrogance」の意味として最も適切なものは？", "choices": ["傲慢さ", "謙虚さ", "誠実さ", "寛容さ"], "correct": 0, "explanation": "自分を過大評価する態度「傲慢さ」を意味する。out of arrogance（傲慢さから）。", "type": "choice"},
+        {"scenario": "「diligence」の意味として最も適切なものは？", "choices": ["勤勉", "怠惰", "冷淡", "傲慢"], "correct": 0, "explanation": "熱心に努力する性質「勤勉」を意味する。work with diligence（勤勉に働く）。", "type": "choice"},
+        {"scenario": "「compassion」の意味として最も適切なものは？", "choices": ["思いやり、同情", "嫉妬", "疑念", "敵意"], "correct": 0, "explanation": "他者の苦しみに寄り添う「思いやり」を意味する。show compassion（思いやりを示す）。", "type": "choice"},
+        {"scenario": "「perseverance」の意味として最も適切なものは？", "choices": ["忍耐、粘り強さ", "短気", "怠慢", "軽率"], "correct": 0, "explanation": "困難にも屈しない「忍耐」「粘り強さ」を意味する。succeed through perseverance（粘り強さで成功する）。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "名詞編2-10",
+      "type": "Advanced Concepts",
+      "emoji": "🚀",
+      "subtitle": "英検2級レベルの語彙クイズ！時事・社会問題に関する応用語彙に挑戦しよう",
+      "questions": [
+        {"scenario": "「paradox」の意味として最も適切なものは？", "choices": ["逆説、パラドックス", "結論", "仮説", "比喩"], "correct": 0, "explanation": "一見矛盾するが真実を含む主張「逆説」を意味する。it is a paradox that ~（~は逆説的である）。", "type": "choice"},
+        {"scenario": "「innovation」の意味として最も適切なものは？", "choices": ["革新", "伝統", "保守", "模倣"], "correct": 0, "explanation": "新しい技術や方法を生み出す「革新」を意味する。technological innovation（技術革新）。", "type": "choice"},
+        {"scenario": "「logistics」の意味として最も適切なものは？", "choices": ["物流、兵站", "制度", "資産", "遺産"], "correct": 0, "explanation": "物資の輸送・供給を管理する「物流」「兵站」を意味する。infrastructureと関連の深い語。", "type": "choice"},
+        {"scenario": "「sustainability」の意味として最も適切なものは？", "choices": ["持続可能性", "効率性", "生産性", "収益性"], "correct": 0, "explanation": "環境などを維持し続けられる性質「持続可能性」を意味する。environmental sustainability（環境の持続可能性）。", "type": "choice"},
+        {"scenario": "「globalization」の意味として最も適切なものは？", "choices": ["グローバル化", "地域化", "工業化", "都市化"], "correct": 0, "explanation": "経済や文化が世界規模でつながる「グローバル化」を意味する。", "type": "choice"},
+        {"scenario": "「bias」の意味として最も適切なものは？", "choices": ["偏り、偏見", "正義", "中立", "公平"], "correct": 0, "explanation": "特定の方向への「偏り」を意味する。unconscious bias（無意識の偏見）。", "type": "choice"},
+        {"scenario": "「stereotype」の意味として最も適切なものは？", "choices": ["固定観念、ステレオタイプ", "個性", "事実", "理論"], "correct": 0, "explanation": "人や集団に対する単純化された「固定観念」を意味する。break the stereotype（固定観念を打ち破る）。", "type": "choice"},
+        {"scenario": "「prejudice」の意味として最も適切なものは？", "choices": ["偏見", "寛容", "公正", "中立"], "correct": 0, "explanation": "根拠のない否定的な「偏見」を意味する。racial prejudice（人種的偏見）。", "type": "choice"},
+        {"scenario": "「discrimination」の意味として最も適切なものは？", "choices": ["差別", "平等", "統合", "協力"], "correct": 0, "explanation": "不当な扱いをする「差別」を意味する。discrimination against ~（~に対する差別）。", "type": "choice"},
+        {"scenario": "「inequality」の意味として最も適切なものは？", "choices": ["不平等", "平等", "公平", "均衡"], "correct": 0, "explanation": "「不平等」を意味する。income inequality（所得の不平等）。", "type": "choice"}
+      ]
+    }
+  ]
+}

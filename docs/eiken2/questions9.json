@@ -1,0 +1,798 @@
+{
+  "id": "eiken2",
+  "level": 9,
+  "label": "🧩 副詞・前置詞編",
+  "description": "副詞・前置詞・接続詞",
+  "tests": [
+    {
+      "id": 1,
+      "title": "副詞・前置詞編-1",
+      "type": "Adverbs of Degree & Manner",
+      "emoji": "🎯",
+      "subtitle": "程度・様態を表す副詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「thoroughly」の意味として最も適切なものは？",
+          "choices": ["徹底的に", "たまに", "うっすらと", "急に"],
+          "correct": 0,
+          "explanation": "thoroughlyは「徹底的に、完全に」という意味の副詞。例：She thoroughly cleaned the house.（彼女は家を徹底的に掃除した）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gradually」の意味として最も適切なものは？",
+          "choices": ["徐々に", "突然", "一時的に", "同時に"],
+          "correct": 0,
+          "explanation": "graduallyは「徐々に、段階的に」という意味。graduate（段階）と語源が近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deliberately」の意味として最も適切なものは？",
+          "choices": ["故意に", "偶然に", "急いで", "控えめに"],
+          "correct": 0,
+          "explanation": "deliberatelyは「故意に、わざと」という意味。on purposeとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reluctantly」の意味として最も適切なものは？",
+          "choices": ["嫌々ながら", "喜んで", "堂々と", "冷静に"],
+          "correct": 0,
+          "explanation": "reluctantlyは「嫌々ながら、気が進まずに」という意味。形容詞reluctant（気が進まない）の副詞形。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「unexpectedly」の意味として最も適切なものは？",
+          "choices": ["予期せず", "予定通りに", "頻繁に", "遠慮がちに"],
+          "correct": 0,
+          "explanation": "unexpectedlyは「予期せず、思いがけなく」という意味。expect（予期する）の否定形+副詞語尾。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vaguely」の意味として最も適切なものは？",
+          "choices": ["漠然と", "明確に", "強く", "速やかに"],
+          "correct": 0,
+          "explanation": "vaguelyは「漠然と、あいまいに」という意味。I vaguely remember his name.（彼の名前をぼんやり覚えている）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「remarkably」の意味として最も適切なものは？",
+          "choices": ["著しく、驚くほど", "わずかに", "静かに", "簡単に"],
+          "correct": 0,
+          "explanation": "remarkablyは「著しく、驚くほど」という意味。remark（注目すべき点）に由来。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「considerably」の意味として最も適切なものは？",
+          "choices": ["かなり、相当に", "ほとんど〜ない", "同様に", "たまたま"],
+          "correct": 0,
+          "explanation": "considerablyは「かなり、相当に」という意味。程度が大きいことを強調する副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drastically」の意味として最も適切なものは？",
+          "choices": ["劇的に、大幅に", "わずかに", "慎重に", "静かに"],
+          "correct": 0,
+          "explanation": "drasticallyは「劇的に、大幅に」という意味。Prices dropped drastically.（価格が大幅に下がった）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tentatively」の意味として最も適切なものは？",
+          "choices": ["仮に、試験的に", "永久に", "強引に", "同時に"],
+          "correct": 0,
+          "explanation": "tentativelyは「仮に、試験的に」という意味。The meeting is tentatively set for Friday.（会議は仮に金曜に設定されている）",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "副詞・前置詞編-2",
+      "type": "Adverbs of Time & Frequency",
+      "emoji": "⏰",
+      "subtitle": "時・頻度を表す副詞を押さえよう！",
+      "questions": [
+        {
+          "scenario": "「occasionally」の意味として最も適切なものは？",
+          "choices": ["時々", "常に", "決して〜ない", "すぐに"],
+          "correct": 0,
+          "explanation": "occasionallyは「時々、たまに」という意味。sometimesと近いがやや頻度が低いニュアンス。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eventually」の意味として最も適切なものは？",
+          "choices": ["結局は、最終的に", "最初に", "たびたび", "偶然"],
+          "correct": 0,
+          "explanation": "eventuallyは「結局は、最終的に」という意味。in the endに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「simultaneously」の意味として最も適切なものは？",
+          "choices": ["同時に", "順番に", "後で", "以前に"],
+          "correct": 0,
+          "explanation": "simultaneouslyは「同時に」という意味。simultaneous（同時の）の副詞形。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「previously」の意味として最も適切なものは？",
+          "choices": ["以前に", "その後", "現在", "永遠に"],
+          "correct": 0,
+          "explanation": "previouslyは「以前に、それより前に」という意味。beforeよりやや形式的。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「subsequently」の意味として最も適切なものは？",
+          "choices": ["その後、続いて", "その前に", "同時に", "まれに"],
+          "correct": 0,
+          "explanation": "subsequentlyは「その後、続いて」という意味。laterよりフォーマルな表現。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「promptly」の意味として最も適切なものは？",
+          "choices": ["時間通りに、即座に", "遅れて", "だらだらと", "静かに"],
+          "correct": 0,
+          "explanation": "promptlyは「時間通りに、即座に」という意味。The meeting started promptly at 9.（会議は9時ぴったりに始まった）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「immediately」の意味として最も適切なものは？",
+          "choices": ["直ちに", "後ほど", "たまに", "長期的に"],
+          "correct": 0,
+          "explanation": "immediatelyは「直ちに、すぐに」という意味。at onceとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「temporarily」の意味として最も適切なものは？",
+          "choices": ["一時的に", "永久に", "定期的に", "頻繁に"],
+          "correct": 0,
+          "explanation": "temporarilyは「一時的に」という意味。反意語はpermanently（永久に）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「periodically」の意味として最も適切なものは？",
+          "choices": ["定期的に", "不規則に", "一度だけ", "急に"],
+          "correct": 0,
+          "explanation": "periodicallyは「定期的に、周期的に」という意味。periodには「期間、周期」の意味がある。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「momentarily」の意味として最も適切なものは？",
+          "choices": ["ほんの一瞬、間もなく", "永遠に", "頻繁に", "以前から"],
+          "correct": 0,
+          "explanation": "momentarilyは「ほんの一瞬、（米）間もなく」という意味。moment（瞬間）に由来。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "副詞・前置詞編-3",
+      "type": "Prepositions of Place & Direction",
+      "emoji": "🧭",
+      "subtitle": "場所・方向を表す前置詞をチェック！",
+      "questions": [
+        {
+          "scenario": "「throughout」の意味として最も適切なものは？",
+          "choices": ["〜の至る所に、〜の間ずっと", "〜を除いて", "〜にもかかわらず", "〜の代わりに"],
+          "correct": 0,
+          "explanation": "throughoutは「〜の至る所に」「〜の間ずっと」という意味の前置詞。throughout the countryなど。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beyond」の意味として最も適切なものは？",
+          "choices": ["〜の向こうに、〜を超えて", "〜の内側に", "〜に沿って", "〜の下に"],
+          "correct": 0,
+          "explanation": "beyondは「〜の向こうに、〜を超えて」という意味。beyond my expectationsなど比喩的にも使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amid」の意味として最も適切なものは？",
+          "choices": ["〜の真っただ中に", "〜の外側に", "〜より前に", "〜と比べて"],
+          "correct": 0,
+          "explanation": "amidは「〜の真っただ中に、〜に囲まれて」という意味。amid the crisis（危機の真っただ中で）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alongside」の意味として最も適切なものは？",
+          "choices": ["〜と並んで、〜のそばに", "〜を越えて", "〜がなければ", "〜に反対して"],
+          "correct": 0,
+          "explanation": "alongsideは「〜と並んで、〜のそばに」という意味。alongside the riverなど。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「underneath」の意味として最も適切なものは？",
+          "choices": ["〜の真下に", "〜の上方に", "〜の周りに", "〜を通り抜けて"],
+          "correct": 0,
+          "explanation": "underneathは「〜の真下に」という意味。underよりも「覆われて隠れている」ニュアンスが強い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「opposite」の意味として最も適切なものは？",
+          "choices": ["〜の向かい側に", "〜の内部に", "〜に沿って", "〜の間に"],
+          "correct": 0,
+          "explanation": "oppositeは前置詞として「〜の向かい側に」という意味。The bank is opposite the station.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「via」の意味として最も適切なものは？",
+          "choices": ["〜を経由して", "〜にもかかわらず", "〜のために", "〜を除いて"],
+          "correct": 0,
+          "explanation": "viaは「〜を経由して」という意味。We flew to Paris via London.（ロンドン経由でパリへ飛んだ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「toward」の意味として最も適切なものは？",
+          "choices": ["〜の方へ", "〜から離れて", "〜の中で", "〜と一緒に"],
+          "correct": 0,
+          "explanation": "towardは「〜の方へ、〜に向かって」という意味。方向を示す前置詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beneath」の意味として最も適切なものは？",
+          "choices": ["〜の下に", "〜の上に", "〜の前に", "〜の後ろに"],
+          "correct": 0,
+          "explanation": "beneathは「〜の下に」という意味でunderのやや文語的な同義語。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「among」の意味として最も適切なものは？",
+          "choices": ["（3つ以上）の間に", "（2つ）の間に", "〜を通して", "〜に対して"],
+          "correct": 0,
+          "explanation": "amongは3つ以上のものの「間に」という意味。2者の間はbetweenを使う。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "副詞・前置詞編-4",
+      "type": "Prepositions of Manner & Cause",
+      "emoji": "🔗",
+      "subtitle": "様態・理由を表す前置詞句を攻略！",
+      "questions": [
+        {
+          "scenario": "「despite」の意味として最も適切なものは？",
+          "choices": ["〜にもかかわらず", "〜のおかげで", "〜に関して", "〜の代わりに"],
+          "correct": 0,
+          "explanation": "despiteは「〜にもかかわらず」という意味の前置詞。despite the rain（雨にもかかわらず）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「regarding」の意味として最も適切なものは？",
+          "choices": ["〜に関して", "〜にもかかわらず", "〜を除いて", "〜のために"],
+          "correct": 0,
+          "explanation": "regardingは「〜に関して」という意味。concerningとほぼ同義でビジネス文書でよく使われる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concerning」の意味として最も適切なものは？",
+          "choices": ["〜に関する", "〜がなければ", "〜より前に", "〜を通じて"],
+          "correct": 0,
+          "explanation": "concerningは前置詞として「〜に関する、〜について」という意味。文書で用件を述べる際によく使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「given」の意味として最も適切なものは？",
+          "choices": ["〜を考慮すると", "〜にもかかわらず", "〜の代わりに", "〜を除いて"],
+          "correct": 0,
+          "explanation": "givenは前置詞的に「〜を考慮すると、〜を踏まえると」という意味。Given the circumstances,（状況を考えると）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「due to」の意味として最も適切なものは？",
+          "choices": ["〜が原因で", "〜にもかかわらず", "〜に加えて", "〜を除いて"],
+          "correct": 0,
+          "explanation": "due toは「〜が原因で、〜のせいで」という意味。because ofとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「owing to」の意味として最も適切なものは？",
+          "choices": ["〜のために、〜が原因で", "〜と引き換えに", "〜を除いては", "〜に反して"],
+          "correct": 0,
+          "explanation": "owing toは「〜のために、〜が原因で」という意味。due toとほぼ同義のやや硬い表現。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in line with」の意味として最も適切なものは？",
+          "choices": ["〜に一致して、〜に沿って", "〜の理由で", "〜に応じて", "〜と比べて"],
+          "correct": 0,
+          "explanation": "in line withは「〜に一致して、〜に沿って」という意味。in line with expectationsで「予想通りに」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「according to」の意味として最も適切なものは？",
+          "choices": ["〜によれば", "〜にもかかわらず", "〜の代わりに", "〜と違って"],
+          "correct": 0,
+          "explanation": "according toは「〜によれば」という意味。情報の出典を示す際に使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at odds with」の意味として最も適切なものは？",
+          "choices": ["〜と対立して、〜と食い違って", "〜に反対して", "〜と一緒に", "〜を超えて"],
+          "correct": 0,
+          "explanation": "at odds withは「〜と対立して、〜と食い違って」という意味。be at odds with a colleagueで「同僚と対立している」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in light of」の意味として最も適切なものは？",
+          "choices": ["〜を考慮すると", "〜にもかかわらず", "〜を除いて", "〜より先に"],
+          "correct": 0,
+          "explanation": "in light ofは「〜を考慮すると、〜を踏まえて」という意味。特定の情報を踏まえて判断・行動する際に使う表現。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "副詞・前置詞編-5",
+      "type": "Subordinating Conjunctions",
+      "emoji": "🪢",
+      "subtitle": "節をつなぐ接続詞をマスター！",
+      "questions": [
+        {
+          "scenario": "「although」の意味として最も適切なものは？",
+          "choices": ["〜だけれども", "〜なので", "〜する限り", "〜する前に"],
+          "correct": 0,
+          "explanation": "althoughは「〜だけれども」という譲歩を表す接続詞。thoughとほぼ同義でやや形式的。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「whereas」の意味として最も適切なものは？",
+          "choices": ["一方で（対比）", "〜なので", "〜するために", "〜と同時に"],
+          "correct": 0,
+          "explanation": "whereasは「一方で」という対比を表す接続詞。二つの事柄の違いを述べる際に使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「unless」の意味として最も適切なものは？",
+          "choices": ["〜しない限り", "〜する限り", "〜する間", "〜する前に"],
+          "correct": 0,
+          "explanation": "unlessは「〜しない限り」という意味。if...notに近い条件を表す接続詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「provided that」の意味として最も適切なものは？",
+          "choices": ["〜という条件で", "〜にもかかわらず", "〜であるかのように", "〜する代わりに"],
+          "correct": 0,
+          "explanation": "provided thatは「〜という条件で、もし〜ならば」という意味。ifとほぼ同義の条件節を導く。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「even though」の意味として最も適切なものは？",
+          "choices": ["たとえ〜でも", "〜なので", "〜する時", "〜する前に"],
+          "correct": 0,
+          "explanation": "even thoughは「たとえ〜でも」という強い譲歩を表す接続詞。althoughより口語的で強調される。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in case」の意味として最も適切なものは？",
+          "choices": ["〜する場合に備えて", "〜する限り", "〜であろうとも", "〜した後で"],
+          "correct": 0,
+          "explanation": "in caseは「〜する場合に備えて」という意味。Take an umbrella in case it rains.（雨が降る場合に備えて傘を持って行きなさい）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as long as」の意味として最も適切なものは？",
+          "choices": ["〜する限りは", "〜にもかかわらず", "〜する前に", "〜であるかのように"],
+          "correct": 0,
+          "explanation": "as long asは「〜する限りは」という条件を表す接続詞。providedと似た用法。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「so that」の意味として最も適切なものは？",
+          "choices": ["〜するために（目的）", "〜だけれども", "〜する代わりに", "〜する前に"],
+          "correct": 0,
+          "explanation": "so thatは「〜するために」という目的を表す接続詞。She studied hard so that she could pass.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「now that」の意味として最も適切なものは？",
+          "choices": ["今や〜なので", "〜する前に", "〜であるにもかかわらず", "〜する限り"],
+          "correct": 0,
+          "explanation": "now thatは「今や〜なので」という理由を表す接続詞。Now that you're here, let's start.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「once」の接続詞としての意味に最も適切なものは？",
+          "choices": ["いったん〜すると", "〜にもかかわらず", "〜する代わりに", "〜と比べて"],
+          "correct": 0,
+          "explanation": "onceは接続詞として「いったん〜すると」という意味。Once you start, you can't stop.",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "副詞・前置詞編-6",
+      "type": "Connective Adverbs (Transition Words)",
+      "emoji": "🌉",
+      "subtitle": "文をつなぐ接続副詞を覚えよう！",
+      "questions": [
+        {
+          "scenario": "「however」の意味として最も適切なものは？",
+          "choices": ["しかしながら", "その結果", "さらに", "同様に"],
+          "correct": 0,
+          "explanation": "howeverは「しかしながら」という逆接を表す接続副詞。butより文語的で文頭・文中に置ける。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「moreover」の意味として最も適切なものは？",
+          "choices": ["その上、さらに", "それにもかかわらず", "その代わりに", "したがって"],
+          "correct": 0,
+          "explanation": "moreoverは「その上、さらに」という追加の情報を導く接続副詞。furthermoreと近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nevertheless」の意味として最も適切なものは？",
+          "choices": ["それにもかかわらず", "その結果として", "同様に", "その代わりに"],
+          "correct": 0,
+          "explanation": "neverthelessは「それにもかかわらず」という逆接を表す。neverthelessはhoweverよりやや硬い表現。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「furthermore」の意味として最も適切なものは？",
+          "choices": ["さらに、その上", "しかしながら", "その代わりに", "要するに"],
+          "correct": 0,
+          "explanation": "furthermoreは「さらに、その上」という追加を表す接続副詞。moreoverと同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「therefore」の意味として最も適切なものは？",
+          "choices": ["それゆえに、したがって", "それにもかかわらず", "その代わりに", "同様に"],
+          "correct": 0,
+          "explanation": "thereforeは「それゆえに、したがって」という結果・結論を表す接続副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consequently」の意味として最も適切なものは？",
+          "choices": ["その結果として", "その反面", "それにもかかわらず", "要するに"],
+          "correct": 0,
+          "explanation": "consequentlyは「その結果として」という意味。asa resultとほぼ同義の接続副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「otherwise」の意味として最も適切なものは？",
+          "choices": ["さもなければ", "その上", "同様に", "したがって"],
+          "correct": 0,
+          "explanation": "otherwiseは「さもなければ」という意味。Hurry up, otherwise you'll be late.（急ぎなさい、さもないと遅れるよ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meanwhile」の意味として最も適切なものは？",
+          "choices": ["その間に、一方で", "その結果として", "それにもかかわらず", "要するに"],
+          "correct": 0,
+          "explanation": "meanwhileは「その間に、一方で」という意味。同時進行の出来事を対比する時に使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「likewise」の意味として最も適切なものは？",
+          "choices": ["同様に", "それにもかかわらず", "その代わりに", "結局のところ"],
+          "correct": 0,
+          "explanation": "likewiseは「同様に、同じように」という意味。similarlyとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「instead」の意味として最も適切なものは？",
+          "choices": ["その代わりに", "その上に", "それにもかかわらず", "したがって"],
+          "correct": 0,
+          "explanation": "insteadは「その代わりに」という意味の副詞。instead ofは前置詞句として使う。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "副詞・前置詞編-7",
+      "type": "Sentence Adverbs (Opinion & Certainty)",
+      "emoji": "💭",
+      "subtitle": "話し手の判断を表す副詞をマスター！",
+      "questions": [
+        {
+          "scenario": "「apparently」の意味として最も適切なものは？",
+          "choices": ["どうやら〜らしい", "明らかに間違って", "決して〜ない", "同時に"],
+          "correct": 0,
+          "explanation": "apparentlyは「どうやら〜らしい」という伝聞・推測を表す副詞。Apparently, she moved abroad.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「presumably」の意味として最も適切なものは？",
+          "choices": ["おそらく、たぶん", "確実に", "決して〜ない", "皮肉にも"],
+          "correct": 0,
+          "explanation": "presumablyは「おそらく、たぶん」という推測を表す副詞。presume（推定する）に由来。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「undoubtedly」の意味として最も適切なものは？",
+          "choices": ["疑いなく、確実に", "おそらく", "まれに", "偶然にも"],
+          "correct": 0,
+          "explanation": "undoubtedlyは「疑いなく、確実に」という意味。doubt（疑い）の否定形+副詞語尾。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arguably」の意味として最も適切なものは？",
+          "choices": ["ほぼ間違いなく、議論の余地はあるが", "明らかに誤って", "偶然", "一時的に"],
+          "correct": 0,
+          "explanation": "arguablyは「ほぼ間違いなく（〜と主張できる）」という意味。断定を和らげつつ強調する副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ideally」の意味として最も適切なものは？",
+          "choices": ["理想を言えば", "実際には", "残念ながら", "とりわけ"],
+          "correct": 0,
+          "explanation": "ideallyは「理想を言えば、理想的には」という意味。Ideally, we would finish by Friday.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frankly」の意味として最も適切なものは？",
+          "choices": ["率直に言って", "遠回しに言うと", "おそらく", "驚いたことに"],
+          "correct": 0,
+          "explanation": "franklyは「率直に言って」という意味。Frankly, I don't agree.のように前置きで使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「honestly」の意味として最も適切なものは？",
+          "choices": ["正直に言うと", "厳密に言えば", "皮肉にも", "驚くべきことに"],
+          "correct": 0,
+          "explanation": "honestlyは「正直に言うと」という意味。会話の前置きとして本音を述べる時に使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「surprisingly」の意味として最も適切なものは？",
+          "choices": ["驚いたことに", "予想通りに", "残念ながら", "おおむね"],
+          "correct": 0,
+          "explanation": "surprisinglyは「驚いたことに」という意味。予想外の結果を述べる際に文頭で使うことが多い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「admittedly」の意味として最も適切なものは？",
+          "choices": ["認めるところによれば、確かに", "驚くべきことに", "幸運にも", "厳密には"],
+          "correct": 0,
+          "explanation": "admittedlyは「確かに（認めざるを得ないが）」という意味。譲歩しつつ話を進める副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「essentially」の意味として最も適切なものは？",
+          "choices": ["本質的には、要するに", "偶然にも", "皮肉にも", "一時的に"],
+          "correct": 0,
+          "explanation": "essentiallyは「本質的には、要するに」という意味。essence（本質）に由来する副詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "副詞・前置詞編-8",
+      "type": "Prepositional Idioms",
+      "emoji": "🧩",
+      "subtitle": "前置詞を含む熟語表現をチェック！",
+      "questions": [
+        {
+          "scenario": "「except for」の意味として最も適切なものは？",
+          "choices": ["〜を除いては", "〜に加えて", "〜に応じて", "〜と引き換えに"],
+          "correct": 0,
+          "explanation": "except forは「〜を除いては」という意味。Except for John, everyone attended.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「other than」の意味として最も適切なものは？",
+          "choices": ["〜を除いて、〜以外に", "〜に加えて", "〜と比べて", "〜のおかげで"],
+          "correct": 0,
+          "explanation": "other thanは「〜を除いて、〜以外に」という意味。exceptとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as for」の意味として最も適切なものは？",
+          "choices": ["〜については、〜に関する限り", "〜のために", "〜にもかかわらず", "〜と引き換えに"],
+          "correct": 0,
+          "explanation": "as forは「〜については」という意味。話題を転換して個別の話をする時に使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as to」の意味として最も適切なものは？",
+          "choices": ["〜に関して", "〜にもかかわらず", "〜の代わりに", "〜と一緒に"],
+          "correct": 0,
+          "explanation": "as toは「〜に関して」という意味。regardingやconcerningに近いフォーマルな表現。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on the brink of」の意味として最も適切なものは？",
+          "choices": ["〜の瀬戸際に", "〜に反して", "〜を除いて", "〜に加えて"],
+          "correct": 0,
+          "explanation": "on the brink ofは「〜の瀬戸際に」という意味。on the brink of warで「戦争の瀬戸際で」のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in relation to」の意味として最も適切なものは？",
+          "choices": ["〜に関連して", "〜にもかかわらず", "〜を除いて", "〜と引き換えに"],
+          "correct": 0,
+          "explanation": "in relation toは「〜に関連して、〜と比べて」という意味。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on the verge of」の意味として最も適切なものは？",
+          "choices": ["〜の瀬戸際で、今にも〜しそうで", "〜にもかかわらず", "〜の代わりに", "〜のために"],
+          "correct": 0,
+          "explanation": "on the verge ofは「〜の瀬戸際で、今にも〜しそうで」という意味。on the verge of tearsで「今にも泣き出しそうで」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for lack of」の意味として最も適切なものは？",
+          "choices": ["〜が不足しているために", "〜にもかかわらず", "〜を除いて", "〜と比べて"],
+          "correct": 0,
+          "explanation": "for lack ofは「〜が不足しているために」という意味。for lack of evidenceで「証拠不足のために」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in return for」の意味として最も適切なものは？",
+          "choices": ["〜の見返りとして", "〜のおかげで", "〜に加えて", "〜と一緒に"],
+          "correct": 0,
+          "explanation": "in return forは「〜の見返りとして」という意味。in return for his helpで「彼の助けの見返りとして」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at the hands of」の意味として最も適切なものは？",
+          "choices": ["（人）の手によって、〜のせいで", "〜のおかげで", "〜を除いて", "〜と引き換えに"],
+          "correct": 0,
+          "explanation": "at the hands ofは「（人）の手によって」という意味。suffer at the hands of ~で「~によって苦しめられる」。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "副詞・前置詞編-9",
+      "type": "Formal Connectors & Conjunctions",
+      "emoji": "📜",
+      "subtitle": "フォーマルな接続表現に挑戦！",
+      "questions": [
+        {
+          "scenario": "「nonetheless」の意味として最も適切なものは？",
+          "choices": ["それにもかかわらず", "その結果", "同様に", "その代わりに"],
+          "correct": 0,
+          "explanation": "nonethelessは「それにもかかわらず」という意味。neverthelessとほぼ同義。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「notwithstanding」の意味として最も適切なものは？",
+          "choices": ["〜にもかかわらず", "〜のおかげで", "〜を除いて", "〜と一緒に"],
+          "correct": 0,
+          "explanation": "notwithstandingは「〜にもかかわらず」という意味の前置詞・副詞。despiteの硬い同義語。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hence」の意味として最も適切なものは？",
+          "choices": ["それゆえに", "それにもかかわらず", "その代わりに", "同時に"],
+          "correct": 0,
+          "explanation": "henceは「それゆえに、したがって」という意味。thereforeと似た結論を表す副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thus」の意味として最も適切なものは？",
+          "choices": ["このように、それゆえ", "その反面", "さらに", "それにもかかわらず"],
+          "correct": 0,
+          "explanation": "thusは「このように、それゆえ」という意味。結果や方法を示す接続副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accordingly」の意味として最も適切なものは？",
+          "choices": ["それに応じて、したがって", "それにもかかわらず", "その代わりに", "同様に"],
+          "correct": 0,
+          "explanation": "accordinglyは「それに応じて、したがって」という意味。前述の状況に合わせて行動する際に使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「whereby」の意味として最も適切なものは？",
+          "choices": ["それによって（〜する）", "それにもかかわらず", "その代わりに", "同時に"],
+          "correct": 0,
+          "explanation": "wherebyは「それによって（〜する）」という意味の関係副詞的表現。契約書などの硬い文書でよく使われる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「insofar as」の意味として最も適切なものは？",
+          "choices": ["〜する限りにおいて", "〜にもかかわらず", "〜する代わりに", "〜する前に"],
+          "correct": 0,
+          "explanation": "insofar asは「〜する限りにおいて」という意味。to the extent thatに近い硬い接続表現。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inasmuch as」の意味として最も適切なものは？",
+          "choices": ["〜という点において、〜なので", "〜にもかかわらず", "〜する代わりに", "〜する前に"],
+          "correct": 0,
+          "explanation": "inasmuch asは「〜という点において、〜なので」という意味の硬い接続詞。sinceに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lest」の意味として最も適切なものは？",
+          "choices": ["〜しないように", "〜する限り", "〜にもかかわらず", "〜する代わりに"],
+          "correct": 0,
+          "explanation": "lestは「〜しないように」という意味の古風・文語的な接続詞。so that...notに近い。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「whereupon」の意味として最も適切なものは？",
+          "choices": ["すると、その結果", "それにもかかわらず", "その代わりに", "〜する限り"],
+          "correct": 0,
+          "explanation": "whereuponは「すると、その結果として」という意味。前の出来事に続いて何かが起こる様子を表す文語的表現。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "副詞・前置詞編-10",
+      "type": "Adverbs of Extent & Emphasis",
+      "emoji": "⚡",
+      "subtitle": "程度・強調の副詞で総仕上げ！",
+      "questions": [
+        {
+          "scenario": "「barely」の意味として最も適切なものは？",
+          "choices": ["かろうじて、ほとんど〜ない", "十分に", "頻繁に", "確実に"],
+          "correct": 0,
+          "explanation": "barelyは「かろうじて、ほとんど〜ない」という意味。He barely passed the exam.（かろうじて試験に受かった）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hardly」の意味として最も適切なものは？",
+          "choices": ["ほとんど〜ない", "非常に、とても", "確実に", "頻繁に"],
+          "correct": 0,
+          "explanation": "hardlyは「ほとんど〜ない」という否定に近い意味を持つ副詞。hard（一生懸命に）と混同しないよう注意。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scarcely」の意味として最も適切なものは？",
+          "choices": ["ほとんど〜ない、かろうじて", "十分すぎるほど", "しばしば", "はっきりと"],
+          "correct": 0,
+          "explanation": "scarcelyは「ほとんど〜ない、かろうじて」という意味。scarce（乏しい）に由来する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「seemingly」の意味として最も適切なものは？",
+          "choices": ["見たところ〜のようだ", "確実に", "決して〜ない", "頻繁に"],
+          "correct": 0,
+          "explanation": "seeminglyは「見たところ〜のようだ」という意味。外見上の印象を述べる副詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「virtually」の意味として最も適切なものは？",
+          "choices": ["事実上、ほとんど", "決して〜ない", "偶然に", "一時的に"],
+          "correct": 0,
+          "explanation": "virtuallyは「事実上、ほとんど」という意味。almostに近いニュアンスで用いられる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「literally」の意味として最も適切なものは？",
+          "choices": ["文字通りに", "比喩的に", "おおよそ", "皮肉にも"],
+          "correct": 0,
+          "explanation": "literallyは「文字通りに」という意味。比喩ではなく実際にそうであることを強調する。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「strictly」の意味として最も適切なものは？",
+          "choices": ["厳密に、厳格に", "おおまかに", "偶然に", "頻繁に"],
+          "correct": 0,
+          "explanation": "strictlyは「厳密に、厳格に」という意味。strictly speaking（厳密に言えば）はよく使われる表現。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ultimately」の意味として最も適切なものは？",
+          "choices": ["最終的には", "最初は", "一時的に", "頻繁に"],
+          "correct": 0,
+          "explanation": "ultimatelyは「最終的には」という意味。eventuallyに近いが、最終結論を強調するニュアンスがある。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inevitably」の意味として最も適切なものは？",
+          "choices": ["必然的に、避けられずに", "偶然に", "まれに", "一時的に"],
+          "correct": 0,
+          "explanation": "inevitablyは「必然的に、避けられずに」という意味。inevitable（避けられない）の副詞形。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「invariably」の意味として最も適切なものは？",
+          "choices": ["常に、例外なく", "まれに", "偶然に", "一時的に"],
+          "correct": 0,
+          "explanation": "invariablyは「常に、例外なく」という意味。alwaysのフォーマルな言い換えとして使われる。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

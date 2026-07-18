@@ -1,0 +1,798 @@
+{
+  "id": "eiken2",
+  "level": 3,
+  "label": "📝 形容詞編1",
+  "description": "基本形容詞（頻出語・対義語含む）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "形容詞編1-1",
+      "type": "Personality Adjectives A",
+      "emoji": "🙂",
+      "subtitle": "性格を表す形容詞をマスターしよう！",
+      "questions": [
+        {
+          "scenario": "「generous」の意味として最も適切なものは？",
+          "choices": ["気前の良い", "けちな", "臆病な", "無関心な"],
+          "correct": 0,
+          "explanation": "generousは「気前の良い、寛大な」という意味。He is generous with his money.（彼はお金に関して気前が良い）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cautious」の意味として最も適切なものは？",
+          "choices": ["慎重な", "無謀な", "積極的な", "怠惰な"],
+          "correct": 0,
+          "explanation": "cautiousは「慎重な、用心深い」という意味。be cautious about ~で「~に慎重である」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reluctant」の意味として最も適切なものは？",
+          "choices": ["気が進まない", "熱心な", "満足した", "確信した"],
+          "correct": 0,
+          "explanation": "reluctantは「気が進まない、しぶしぶの」という意味。be reluctant to doで「~するのに気が進まない」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confident」の意味として最も適切なものは？",
+          "choices": ["自信がある", "不安な", "無知な", "内気な"],
+          "correct": 0,
+          "explanation": "confidentは「自信がある、確信している」という意味。be confident in oneselfで「自分に自信がある」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「modest」の意味として最も適切なものは？",
+          "choices": ["謙虚な", "傲慢な", "派手な", "無礼な"],
+          "correct": 0,
+          "explanation": "modestは「謙虚な、控えめな」という意味。She is modest about her achievements.（彼女は自分の功績について謙虚だ）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arrogant」の意味として最も適切なものは？",
+          "choices": ["傲慢な", "謙虚な", "親切な", "臆病な"],
+          "correct": 0,
+          "explanation": "arrogantは「傲慢な、横柄な」という意味。modestの対義語として覚えるとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stubborn」の意味として最も適切なものは？",
+          "choices": ["頑固な", "柔軟な", "従順な", "優柔不断な"],
+          "correct": 0,
+          "explanation": "stubbornは「頑固な」という意味。He is too stubborn to change his mind.（彼は頑固すぎて考えを変えない）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curious」の意味として最も適切なものは？",
+          "choices": ["好奇心旺盛な", "退屈な", "無関心な", "臆病な"],
+          "correct": 0,
+          "explanation": "curiousは「好奇心旺盛な、知りたがりの」という意味。be curious about ~で「~に興味がある」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambitious」の意味として最も適切なものは？",
+          "choices": ["野心的な", "怠惰な", "謙虚な", "消極的な"],
+          "correct": 0,
+          "explanation": "ambitiousは「野心的な、大望を抱いた」という意味。an ambitious plan（野心的な計画）のようにも使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sensitive」の意味として最も適切なものは？",
+          "choices": ["敏感な", "鈍感な", "冷淡な", "頑丈な"],
+          "correct": 0,
+          "explanation": "sensitiveは「敏感な、繊細な」という意味。be sensitive to criticism（批判に敏感である）のように使う。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "形容詞編1-2",
+      "type": "Personality Adjectives B",
+      "emoji": "😊",
+      "subtitle": "人柄を表す形容詞を続けて学ぼう！",
+      "questions": [
+        {
+          "scenario": "「rude」の意味として最も適切なものは？",
+          "choices": ["失礼な", "礼儀正しい", "親切な", "寛大な"],
+          "correct": 0,
+          "explanation": "rudeは「失礼な、無礼な」という意味。It's rude to interrupt.（人の話を遮るのは失礼だ）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「polite」の意味として最も適切なものは？",
+          "choices": ["礼儀正しい", "失礼な", "頑固な", "傲慢な"],
+          "correct": 0,
+          "explanation": "politeは「礼儀正しい、丁寧な」という意味。rudeの対義語として覚えておくとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「honest」の意味として最も適切なものは？",
+          "choices": ["正直な", "うそつきの", "臆病な", "怠惰な"],
+          "correct": 0,
+          "explanation": "honestは「正直な」という意味。to be honest（正直に言うと）はよく使われる表現。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「selfish」の意味として最も適切なものは？",
+          "choices": ["利己的な", "寛大な", "思いやりのある", "従順な"],
+          "correct": 0,
+          "explanation": "selfishは「利己的な、わがままな」という意味。It's selfish of him to think only of himself.のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cheerful」の意味として最も適切なものは？",
+          "choices": ["陽気な", "陰気な", "不機嫌な", "冷淡な"],
+          "correct": 0,
+          "explanation": "cheerfulは「陽気な、快活な」という意味。a cheerful smile（明るい笑顔）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「humble」の意味として最も適切なものは？",
+          "choices": ["謙虚な", "尊大な", "無礼な", "積極的な"],
+          "correct": 0,
+          "explanation": "humbleは「謙虚な、質素な」という意味。a humble attitude（謙虚な態度）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aggressive」の意味として最も適切なものは？",
+          "choices": ["攻撃的な", "従順な", "臆病な", "穏やかな"],
+          "correct": 0,
+          "explanation": "aggressiveは「攻撃的な、積極的な」という意味。文脈により「積極的な」というポジティブな意味にもなる。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「timid」の意味として最も適切なものは？",
+          "choices": ["臆病な", "大胆な", "傲慢な", "陽気な"],
+          "correct": 0,
+          "explanation": "timidは「臆病な、内気な」という意味。a timid child（内気な子ども）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sincere」の意味として最も適切なものは？",
+          "choices": ["誠実な", "不誠実な", "無関心な", "冷淡な"],
+          "correct": 0,
+          "explanation": "sincereは「誠実な、心からの」という意味。a sincere apology（誠実な謝罪）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「considerate」の意味として最も適切なものは？",
+          "choices": ["思いやりのある", "利己的な", "無礼な", "頑固な"],
+          "correct": 0,
+          "explanation": "considerateは「思いやりのある」という意味。be considerate of others' feelings（他人の気持ちを思いやる）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "形容詞編1-3",
+      "type": "Emotional States",
+      "emoji": "😰",
+      "subtitle": "感情・状態を表す形容詞を覚えよう！",
+      "questions": [
+        {
+          "scenario": "「anxious」の意味として最も適切なものは？",
+          "choices": ["不安な", "安心した", "満足した", "自信がある"],
+          "correct": 0,
+          "explanation": "anxiousは「不安な、心配な」という意味。be anxious about the exam（試験について不安である）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eager」の意味として最も適切なものは？",
+          "choices": ["熱心な", "無関心な", "気が進まない", "疲れた"],
+          "correct": 0,
+          "explanation": "eagerは「熱心な、切望している」という意味。be eager to learn（学びたいと熱心である）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nervous」の意味として最も適切なものは？",
+          "choices": ["緊張した", "落ち着いた", "退屈な", "自信満々の"],
+          "correct": 0,
+          "explanation": "nervousは「緊張した、神経質な」という意味。feel nervous before a speech（スピーチの前に緊張する）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exhausted」の意味として最も適切なものは？",
+          "choices": ["疲れ果てた", "元気いっぱいの", "退屈した", "興奮した"],
+          "correct": 0,
+          "explanation": "exhaustedは「疲れ果てた」という意味。I was exhausted after the long trip.（長旅の後で疲れ果てた）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embarrassed」の意味として最も適切なものは？",
+          "choices": ["恥ずかしい", "誇らしい", "満足な", "怒った"],
+          "correct": 0,
+          "explanation": "embarrassedは「（きまり悪くて）恥ずかしい」という意味。feel embarrassed about a mistake（失敗について恥ずかしく思う）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ashamed」の意味として最も適切なものは？",
+          "choices": ["恥じている", "誇りに思う", "無関心な", "喜んでいる"],
+          "correct": 0,
+          "explanation": "ashamedは「（道徳的に）恥じている」という意味。be ashamed of oneself（自分を恥じる）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delighted」の意味として最も適切なものは？",
+          "choices": ["大喜びの", "落胆した", "怒っている", "退屈な"],
+          "correct": 0,
+          "explanation": "delightedは「大喜びの、うれしい」という意味。be delighted to meet you（お会いできてうれしい）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frustrated」の意味として最も適切なものは？",
+          "choices": ["いらだった", "満足した", "興奮した", "安心した"],
+          "correct": 0,
+          "explanation": "frustratedは「いらだった、欲求不満の」という意味。feel frustrated with the delay（遅れにいらだつ）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「relieved」の意味として最も適切なものは？",
+          "choices": ["安心した", "不安な", "怒った", "疲れた"],
+          "correct": 0,
+          "explanation": "relievedは「安心した、ほっとした」という意味。feel relieved to hear the good news（良い知らせを聞いて安心する）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「jealous」の意味として最も適切なものは？",
+          "choices": ["嫉妬した", "満足した", "寛大な", "冷静な"],
+          "correct": 0,
+          "explanation": "jealousは「嫉妬した、ねたんだ」という意味。be jealous of one's success（人の成功をねたむ）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "形容詞編1-4",
+      "type": "Importance & Degree",
+      "emoji": "⭐",
+      "subtitle": "重要性・程度を表す形容詞を攻略しよう！",
+      "questions": [
+        {
+          "scenario": "「essential」の意味として最も適切なものは？",
+          "choices": ["不可欠な", "不要な", "些細な", "任意の"],
+          "correct": 0,
+          "explanation": "essentialは「不可欠な、必須の」という意味。Water is essential for life.（水は生命にとって不可欠だ）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crucial」の意味として最も適切なものは？",
+          "choices": ["極めて重要な", "取るに足らない", "曖昧な", "任意の"],
+          "correct": 0,
+          "explanation": "crucialは「極めて重要な、決定的な」という意味。a crucial decision（極めて重要な決断）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「significant」の意味として最も適切なものは？",
+          "choices": ["重要な", "取るに足らない", "無関係な", "一時的な"],
+          "correct": 0,
+          "explanation": "significantは「重要な、意義深い」という意味。a significant improvement（著しい改善）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「considerable」の意味として最も適切なものは？",
+          "choices": ["かなりの", "わずかな", "無視できる", "均等な"],
+          "correct": 0,
+          "explanation": "considerableは「かなりの、相当な」という意味。a considerable amount of money（かなりの金額）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sufficient」の意味として最も適切なものは？",
+          "choices": ["十分な", "不十分な", "過剰な", "不必要な"],
+          "correct": 0,
+          "explanation": "sufficientは「十分な」という意味。sufficient evidence（十分な証拠）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adequate」の意味として最も適切なものは？",
+          "choices": ["適切な、十分な", "不適切な", "過度な", "無関係な"],
+          "correct": 0,
+          "explanation": "adequateは「（必要を満たすのに）適切な、十分な」という意味。an adequate supply of food（十分な食料供給）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「trivial」の意味として最も適切なものは？",
+          "choices": ["些細な", "重大な", "緊急の", "深刻な"],
+          "correct": 0,
+          "explanation": "trivialは「些細な、取るに足らない」という意味。a trivial matter（些細な問題）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minor」の意味として最も適切なものは？",
+          "choices": ["小さな、軽微な", "重大な", "決定的な", "膨大な"],
+          "correct": 0,
+          "explanation": "minorは「小さな、軽微な」という意味。majorの対義語。a minor problem（軽微な問題）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vital」の意味として最も適切なものは？",
+          "choices": ["極めて重要な", "つまらない", "不要な", "一時的な"],
+          "correct": 0,
+          "explanation": "vitalは「極めて重要な、生命に関わる」という意味。play a vital role（重要な役割を果たす）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「obvious」の意味として最も適切なものは？",
+          "choices": ["明白な", "曖昧な", "不明な", "疑わしい"],
+          "correct": 0,
+          "explanation": "obviousは「明白な、明らかな」という意味。It's obvious that he was lying.（彼がうそをついていたのは明白だ）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞編1-5",
+      "type": "Size & Amount",
+      "emoji": "📏",
+      "subtitle": "大きさ・量を表す形容詞を身につけよう！",
+      "questions": [
+        {
+          "scenario": "「enormous」の意味として最も適切なものは？",
+          "choices": ["巨大な", "微小な", "平凡な", "均等な"],
+          "correct": 0,
+          "explanation": "enormousは「巨大な、莫大な」という意味。an enormous amount of work（莫大な量の仕事）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tiny」の意味として最も適切なものは？",
+          "choices": ["とても小さい", "とても大きい", "十分な", "重い"],
+          "correct": 0,
+          "explanation": "tinyは「とても小さい、ちっぽけな」という意味。a tiny insect（ごく小さな虫）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vast」の意味として最も適切なものは？",
+          "choices": ["広大な", "狭い", "浅い", "短い"],
+          "correct": 0,
+          "explanation": "vastは「広大な、膨大な」という意味。a vast area of land（広大な土地）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「numerous」の意味として最も適切なものは？",
+          "choices": ["非常に多くの", "わずかな", "唯一の", "均一な"],
+          "correct": 0,
+          "explanation": "numerousは「非常に多くの」という意味。numerous times（何度も）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scarce」の意味として最も適切なものは？",
+          "choices": ["不足している", "豊富な", "十分な", "余分な"],
+          "correct": 0,
+          "explanation": "scarceは「不足している、乏しい」という意味。Water is scarce in the desert.（砂漠では水が乏しい）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abundant」の意味として最も適切なものは？",
+          "choices": ["豊富な", "乏しい", "限られた", "希少な"],
+          "correct": 0,
+          "explanation": "abundantは「豊富な」という意味。scarceの対義語として覚えるとよい。abundant resources（豊富な資源）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「moderate」の意味として最も適切なものは？",
+          "choices": ["適度な", "極端な", "過剰な", "不足した"],
+          "correct": 0,
+          "explanation": "moderateは「適度な、穏やかな」という意味。moderate exercise（適度な運動）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extreme」の意味として最も適切なものは？",
+          "choices": ["極端な", "適度な", "平均的な", "中立の"],
+          "correct": 0,
+          "explanation": "extremeは「極端な」という意味。moderateの対義語として覚えるとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「massive」の意味として最も適切なものは？",
+          "choices": ["巨大な、大規模な", "微細な", "希少な", "軽量な"],
+          "correct": 0,
+          "explanation": "massiveは「巨大な、大規模な」という意味。a massive earthquake（大規模な地震）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minute」の意味として最も適切なものは？（「分」ではなく形容詞）",
+          "choices": ["極めて小さい", "極めて大きい", "適度な", "無限の"],
+          "correct": 0,
+          "explanation": "形容詞のminute（発音注意：マイニュート）は「極めて小さい、微細な」という意味。a minute difference（微細な違い）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞編1-6",
+      "type": "Antonym Pairs A",
+      "emoji": "⚖️",
+      "subtitle": "対義語ペアで効率よく覚えよう！",
+      "questions": [
+        {
+          "scenario": "「ancient」の意味として最も適切なものは？",
+          "choices": ["古代の", "現代の", "未来の", "一時的な"],
+          "correct": 0,
+          "explanation": "ancientは「古代の」という意味。ancient civilizations（古代文明）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「modern」の意味として最も適切なものは？",
+          "choices": ["現代の、近代的な", "古代の", "永久の", "一時的な"],
+          "correct": 0,
+          "explanation": "modernは「現代の、近代的な」という意味。ancientの対義語として覚えるとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「permanent」の意味として最も適切なものは？",
+          "choices": ["永久の", "一時的な", "不確実な", "部分的な"],
+          "correct": 0,
+          "explanation": "permanentは「永久の、恒久的な」という意味。a permanent job（正規の仕事）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「temporary」の意味として最も適切なものは？",
+          "choices": ["一時的な", "永久の", "決定的な", "厳格な"],
+          "correct": 0,
+          "explanation": "temporaryは「一時的な」という意味。permanentの対義語。a temporary solution（一時的な解決策）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「superior」の意味として最も適切なものは？",
+          "choices": ["優れた", "劣った", "平等な", "普通の"],
+          "correct": 0,
+          "explanation": "superiorは「（他より）優れた」という意味。be superior to ~で「~より優れている」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inferior」の意味として最も適切なものは？",
+          "choices": ["劣った", "優れた", "同等の", "独特な"],
+          "correct": 0,
+          "explanation": "inferiorは「（他より）劣った」という意味。superiorの対義語。be inferior to ~で「~より劣る」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「artificial」の意味として最も適切なものは？",
+          "choices": ["人工の", "天然の", "伝統的な", "独創的な"],
+          "correct": 0,
+          "explanation": "artificialは「人工の」という意味。artificial intelligence（人工知能）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「natural」の意味として最も適切なものは？",
+          "choices": ["天然の、自然な", "人工の", "不自然な", "人為的な"],
+          "correct": 0,
+          "explanation": "naturalは「天然の、自然な」という意味。artificialの対義語として覚えるとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complex」の意味として最も適切なものは？",
+          "choices": ["複雑な", "単純な", "明快な", "簡潔な"],
+          "correct": 0,
+          "explanation": "complexは「複雑な」という意味。a complex problem（複雑な問題）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「simple」の意味として最も適切なものは？",
+          "choices": ["単純な", "複雑な", "困難な", "曖昧な"],
+          "correct": 0,
+          "explanation": "simpleは「単純な、簡単な」という意味。complexの対義語として覚えるとよい。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "形容詞編1-7",
+      "type": "Antonym Pairs B",
+      "emoji": "🔀",
+      "subtitle": "さらに対義語ペアを増やそう！",
+      "questions": [
+        {
+          "scenario": "「rigid」の意味として最も適切なものは？",
+          "choices": ["厳格な、硬直した", "柔軟な", "穏やかな", "曖昧な"],
+          "correct": 0,
+          "explanation": "rigidは「厳格な、（規則などが）硬直した」という意味。rigid rules（厳格な規則）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gentle」の意味として最も適切なものは？",
+          "choices": ["穏やかな、優しい", "乱暴な", "厳格な", "冷淡な"],
+          "correct": 0,
+          "explanation": "gentleは「穏やかな、優しい」という意味。a gentle breeze（穏やかな風）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「harsh」の意味として最も適切なものは？",
+          "choices": ["厳しい、過酷な", "穏やかな", "寛大な", "快適な"],
+          "correct": 0,
+          "explanation": "harshは「厳しい、過酷な」という意味。harsh criticism（厳しい批判）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「strict」の意味として最も適切なものは？",
+          "choices": ["厳格な", "寛大な", "自由な", "曖昧な"],
+          "correct": 0,
+          "explanation": "strictは「厳格な、厳しい」という意味。a strict teacher（厳しい先生）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lenient」の意味として最も適切なものは？",
+          "choices": ["寛大な", "厳格な", "冷酷な", "無関心な"],
+          "correct": 0,
+          "explanation": "lenientは「寛大な、甘い」という意味。strictの対義語として覚えるとよい。a lenient punishment（寛大な処罰）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mild」の意味として最も適切なものは？",
+          "choices": ["穏やかな、軽度の", "激しい、重度の", "厳格な", "急激な"],
+          "correct": 0,
+          "explanation": "mildは「穏やかな、（症状などが）軽度の」という意味。mild weather（穏やかな天候）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「severe」の意味として最も適切なものは？",
+          "choices": ["深刻な、激しい", "軽度の", "穏やかな", "些細な"],
+          "correct": 0,
+          "explanation": "severeは「深刻な、激しい」という意味。mildの対義語。a severe storm（激しい嵐）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vague」の意味として最も適切なものは？",
+          "choices": ["曖昧な", "明確な", "正確な", "詳細な"],
+          "correct": 0,
+          "explanation": "vagueは「曖昧な、漠然とした」という意味。a vague answer（曖昧な答え）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「precise」の意味として最も適切なものは？",
+          "choices": ["正確な", "曖昧な", "大雑把な", "不確実な"],
+          "correct": 0,
+          "explanation": "preciseは「正確な、精密な」という意味。vagueの対義語として覚えるとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「obscure」の意味として最も適切なものは？",
+          "choices": ["不明瞭な、無名の", "明白な", "有名な", "単純な"],
+          "correct": 0,
+          "explanation": "obscureは「不明瞭な」または「無名の」という意味。an obscure explanation（不明瞭な説明）のように使う。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "形容詞編1-8",
+      "type": "Abstract Adjectives A",
+      "emoji": "💭",
+      "subtitle": "抽象的な形容詞にチャレンジ！",
+      "questions": [
+        {
+          "scenario": "「reasonable」の意味として最も適切なものは？",
+          "choices": ["理にかなった、手ごろな", "不合理な", "法外な", "曖昧な"],
+          "correct": 0,
+          "explanation": "reasonableは「理にかなった」または「（価格が）手ごろな」という意味。a reasonable price（手ごろな価格）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「plausible」の意味として最も適切なものは？",
+          "choices": ["もっともらしい", "あり得ない", "明白な", "無意味な"],
+          "correct": 0,
+          "explanation": "plausibleは「もっともらしい、真実味のある」という意味。a plausible excuse（もっともらしい言い訳）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apparent」の意味として最も適切なものは？",
+          "choices": ["明らかな、見かけ上の", "不明な", "隠された", "疑わしい"],
+          "correct": 0,
+          "explanation": "apparentは「明らかな」または「見かけ上の」という意味。an apparent contradiction（見かけ上の矛盾）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「evident」の意味として最も適切なものは？",
+          "choices": ["明白な", "不明瞭な", "疑わしい", "隠された"],
+          "correct": 0,
+          "explanation": "evidentは「明白な」という意味。It is evident that ~（~ということは明白だ）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inevitable」の意味として最も適切なものは？",
+          "choices": ["避けられない", "回避できる", "任意の", "望ましい"],
+          "correct": 0,
+          "explanation": "inevitableは「避けられない、必然の」という意味。an inevitable result（避けられない結果）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genuine」の意味として最も適切なものは？",
+          "choices": ["本物の、心からの", "偽物の", "疑わしい", "人工の"],
+          "correct": 0,
+          "explanation": "genuineは「本物の」または「心からの」という意味。a genuine smile（心からの笑顔）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「authentic」の意味として最も適切なものは？",
+          "choices": ["本物の、正真正銘の", "偽の", "一時的な", "曖昧な"],
+          "correct": 0,
+          "explanation": "authenticは「本物の、正真正銘の」という意味。authentic Italian food（本場のイタリア料理）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distinct」の意味として最も適切なものは？",
+          "choices": ["明確に異なる", "似ている", "同一の", "曖昧な"],
+          "correct": 0,
+          "explanation": "distinctは「明確に異なる、はっきりした」という意味。two distinct types（明確に異なる2種類）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「subtle」の意味として最も適切なものは？",
+          "choices": ["微妙な", "明白な", "激しい", "単純な"],
+          "correct": 0,
+          "explanation": "subtleは「微妙な、繊細な」という意味。a subtle difference（微妙な違い）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambiguous」の意味として最も適切なものは？",
+          "choices": ["あいまいな", "明確な", "正確な", "確実な"],
+          "correct": 0,
+          "explanation": "ambiguousは「あいまいな、二通りに解釈できる」という意味。an ambiguous statement（あいまいな発言）。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "形容詞編1-9",
+      "type": "Abstract Adjectives B",
+      "emoji": "🧩",
+      "subtitle": "もう一歩踏み込んだ形容詞を学ぼう！",
+      "questions": [
+        {
+          "scenario": "「profound」の意味として最も適切なものは？",
+          "choices": ["深遠な、重大な", "浅はかな", "些細な", "表面的な"],
+          "correct": 0,
+          "explanation": "profoundは「深遠な、（影響などが）重大な」という意味。a profound impact（重大な影響）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「superficial」の意味として最も適切なものは？",
+          "choices": ["表面的な", "深遠な", "本質的な", "徹底的な"],
+          "correct": 0,
+          "explanation": "superficialは「表面的な、うわべだけの」という意味。profoundの対義語として覚えるとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thorough」の意味として最も適切なものは？",
+          "choices": ["徹底的な、完全な", "不完全な", "表面的な", "適当な"],
+          "correct": 0,
+          "explanation": "thoroughは「徹底的な、綿密な」という意味。a thorough investigation（徹底的な調査）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comprehensive」の意味として最も適切なものは？",
+          "choices": ["包括的な", "限定的な", "部分的な", "簡略な"],
+          "correct": 0,
+          "explanation": "comprehensiveは「包括的な、総合的な」という意味。a comprehensive report（包括的な報告書）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elaborate」の意味として最も適切なものは？",
+          "choices": ["精巧な、入念な", "粗雑な", "単純な", "簡素な"],
+          "correct": 0,
+          "explanation": "elaborateは「精巧な、入念に作られた」という意味。an elaborate design（精巧なデザイン）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sophisticated」の意味として最も適切なものは？",
+          "choices": ["洗練された、高度な", "未熟な", "素朴な", "単純な"],
+          "correct": 0,
+          "explanation": "sophisticatedは「洗練された」または「（技術などが）高度な」という意味。sophisticated technology（高度な技術）。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「primitive」の意味として最も適切なものは？",
+          "choices": ["原始的な", "現代的な", "洗練された", "高度な"],
+          "correct": 0,
+          "explanation": "primitiveは「原始的な、未発達な」という意味。sophisticatedの対義語として覚えるとよい。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contemporary」の意味として最も適切なものは？",
+          "choices": ["現代の、同時代の", "古代の", "未来の", "永久の"],
+          "correct": 0,
+          "explanation": "contemporaryは「現代の」または「同時代の」という意味。contemporary art（現代美術）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mutual」の意味として最も適切なものは？",
+          "choices": ["相互の", "一方的な", "個人的な", "独立した"],
+          "correct": 0,
+          "explanation": "mutualは「相互の、共通の」という意味。mutual respect（相互の尊重）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「universal」の意味として最も適切なものは？",
+          "choices": ["普遍的な、万国共通の", "限定的な", "特殊な", "一時的な"],
+          "correct": 0,
+          "explanation": "universalは「普遍的な、万国共通の」という意味。a universal truth（普遍的な真理）のように使う。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "形容詞編1-10",
+      "type": "High-Frequency Adjectives",
+      "emoji": "🔑",
+      "subtitle": "総仕上げ！頻出形容詞をまとめて確認！",
+      "questions": [
+        {
+          "scenario": "「available」の意味として最も適切なものは？",
+          "choices": ["利用可能な、入手できる", "利用できない", "禁止された", "不明な"],
+          "correct": 0,
+          "explanation": "availableは「利用可能な、入手できる」という意味。Is this seat available?（この席は空いていますか）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convenient」の意味として最も適切なものは？",
+          "choices": ["便利な", "不便な", "危険な", "複雑な"],
+          "correct": 0,
+          "explanation": "convenientは「便利な、都合の良い」という意味。at a convenient time（都合の良い時間に）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「efficient」の意味として最も適切なものは？",
+          "choices": ["効率的な", "非効率な", "無駄な", "遅い"],
+          "correct": 0,
+          "explanation": "efficientは「効率的な」という意味。an efficient method（効率的な方法）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effective」の意味として最も適切なものは？",
+          "choices": ["効果的な", "無効な", "無意味な", "有害な"],
+          "correct": 0,
+          "explanation": "effectiveは「効果的な、有効な」という意味。an effective solution（効果的な解決策）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「practical」の意味として最も適切なものは？",
+          "choices": ["実用的な", "非現実的な", "理論的な", "無駄な"],
+          "correct": 0,
+          "explanation": "practicalは「実用的な、現実的な」という意味。a practical solution（実用的な解決策）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「feasible」の意味として最も適切なものは？",
+          "choices": ["実現可能な", "不可能な", "理想的な", "非現実的な"],
+          "correct": 0,
+          "explanation": "feasibleは「実現可能な」という意味。a feasible plan（実現可能な計画）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appropriate」の意味として最も適切なものは？",
+          "choices": ["適切な", "不適切な", "過剰な", "無関係な"],
+          "correct": 0,
+          "explanation": "appropriateは「適切な、ふさわしい」という意味。appropriate behavior（適切な行動）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「suitable」の意味として最も適切なものは？",
+          "choices": ["適した", "不適切な", "無関係な", "不必要な"],
+          "correct": 0,
+          "explanation": "suitableは「適した、ふさわしい」という意味。suitable for children（子どもに適した）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「relevant」の意味として最も適切なものは？",
+          "choices": ["関連性のある", "無関係な", "重要でない", "無意味な"],
+          "correct": 0,
+          "explanation": "relevantは「関連性のある」という意味。relevant information（関連情報）のように使う。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「valid」の意味として最も適切なものは？",
+          "choices": ["有効な、妥当な", "無効な", "誤った", "曖昧な"],
+          "correct": 0,
+          "explanation": "validは「（法的・論理的に）有効な、妥当な」という意味。a valid passport（有効なパスポート）のように使う。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

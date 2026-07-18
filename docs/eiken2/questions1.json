@@ -1,481 +1,197 @@
 {
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "英検2級 単語・熟語",
   "id": "eiken2",
+  "level": 1,
+  "label": "🔤 動詞編1",
+  "description": "基本動詞（頻出動詞・語法）",
   "tests": [
     {
       "id": 1,
-      "title": "🔤 動詞1",
-      "type": "Verbs 1",
-      "emoji": "🔤",
-      "subtitle": "英検2級レベルの動詞クイズ！",
+      "title": "動詞編1-1",
+      "type": "Basic Verbs",
+      "emoji": "🎯",
+      "subtitle": "英検2級レベルの語彙クイズ！基本動詞をマスターしよう",
       "questions": [
-        {
-          "scenario": "「accomplish」の意味として最も適切なものは？",
-          "choices": ["成し遂げる", "拒否する", "忘れる", "疑う"],
-          "correct": 0,
-          "explanation": "accomplish＝成し遂げる、達成する。例：accomplish a goal（目標を達成する）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「emphasize」の意味として最も適切なものは？",
-          "choices": ["強調する", "縮小する", "無視する", "分割する"],
-          "correct": 0,
-          "explanation": "emphasize＝強調する。名詞形はemphasis（強調）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「distinguish」の意味として最も適切なものは？",
-          "choices": ["区別する", "混同する", "破壊する", "承認する"],
-          "correct": 0,
-          "explanation": "distinguish＝区別する。distinguish A from B（AをBと区別する）の形でよく使う。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「accompany」の意味として最も適切なものは？",
-          "choices": ["同行する", "反対する", "逃げる", "遅らせる"],
-          "correct": 0,
-          "explanation": "accompany＝同行する、伴う。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「exaggerate」の意味として最も適切なものは？",
-          "choices": ["誇張する", "縮小して言う", "正確に言う", "黙る"],
-          "correct": 0,
-          "explanation": "exaggerate＝誇張する、大げさに言う。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「estimate」の意味として最も適切なものは？",
-          "choices": ["見積もる", "保証する", "削除する", "禁止する"],
-          "correct": 0,
-          "explanation": "estimate＝見積もる、推定する。名詞としても「見積もり」の意味で使う。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「eliminate」の意味として最も適切なものは？",
-          "choices": ["排除する", "追加する", "保存する", "発見する"],
-          "correct": 0,
-          "explanation": "eliminate＝排除する、取り除く。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「anticipate」の意味として最も適切なものは？",
-          "choices": ["予期する", "後悔する", "拒絶する", "記録する"],
-          "correct": 0,
-          "explanation": "anticipate＝予期する、予想する。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「sustain」の意味として最も適切なものは？",
-          "choices": ["持続させる", "破壊する", "中断する", "縮小する"],
-          "correct": 0,
-          "explanation": "sustain＝持続させる、維持する。sustainable（持続可能な）の語源。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「hesitate」の意味として最も適切なものは？",
-          "choices": ["ためらう", "急ぐ", "決断する", "命令する"],
-          "correct": 0,
-          "explanation": "hesitate＝ためらう。without hesitation（ためらわずに）の形もよく出る。",
-          "type": "choice"
-        }
+        {"scenario": "「achieve」の意味として最も適切なものは？", "choices": ["達成する", "放棄する", "延期する", "妨害する"], "correct": 0, "explanation": "目標や結果を努力の末に成し遂げること。", "type": "choice"},
+        {"scenario": "「acquire」の意味として最も適切なものは？", "choices": ["習得する、獲得する", "失う", "無視する", "破壊する"], "correct": 0, "explanation": "知識や技能、財産などを徐々に身につけること。", "type": "choice"},
+        {"scenario": "「adopt」の意味として最も適切なものは？", "choices": ["採用する", "拒否する", "批判する", "延期する"], "correct": 0, "explanation": "意見・方法・子供などを自分のものとして受け入れること。", "type": "choice"},
+        {"scenario": "「advise」の意味として最も適切なものは？", "choices": ["助言する", "命令する", "禁止する", "無視する"], "correct": 0, "explanation": "相手にとって良いと思うことを勧めること。", "type": "choice"},
+        {"scenario": "「afford」の意味として最も適切なものは？", "choices": ["〜する余裕がある", "〜を拒む", "〜を延期する", "〜を疑う"], "correct": 0, "explanation": "主に can/could とともに用い、金銭的・時間的余裕を表す。", "type": "choice"},
+        {"scenario": "「alert」の意味として最も適切なものは？", "choices": ["警告する", "賞賛する", "説得する", "慰める"], "correct": 0, "explanation": "危険などを知らせて注意を促すこと。", "type": "choice"},
+        {"scenario": "「alter」の意味として最も適切なものは？", "choices": ["変える", "維持する", "修理する", "複製する"], "correct": 0, "explanation": "形や性質などを部分的に変化させること。changeよりやや形式的。", "type": "choice"},
+        {"scenario": "「appeal」の意味として最も適切なものは？", "choices": ["訴える、懇願する", "反論する", "無視する", "禁止する"], "correct": 0, "explanation": "人の心に訴えかけたり、強く求めたりすること。", "type": "choice"},
+        {"scenario": "「applaud」の意味として最も適切なものは？", "choices": ["拍手する、称賛する", "非難する", "妨害する", "脅す"], "correct": 0, "explanation": "良い行いやパフォーマンスを称えて拍手すること。", "type": "choice"},
+        {"scenario": "「appoint」の意味として最も適切なものは？", "choices": ["任命する", "解雇する", "昇進を拒む", "罰する"], "correct": 0, "explanation": "特定の役職や地位に人を選び指名すること。", "type": "choice"}
       ]
     },
     {
       "id": 2,
-      "title": "🔤 動詞2",
-      "type": "Verbs 2",
-      "emoji": "🔤",
-      "subtitle": "英検2級レベルの動詞クイズ！パート2",
+      "title": "動詞編1-2",
+      "type": "Basic Verbs",
+      "emoji": "🛠️",
+      "subtitle": "英検2級レベルの語彙クイズ！手配・依頼系の動詞に注目",
       "questions": [
-        {
-          "scenario": "「contribute」の意味として最も適切なものは？",
-          "choices": ["貢献する", "妨害する", "無視する", "拒否する"],
-          "correct": 0,
-          "explanation": "contribute＝貢献する、寄付する。contribute to〜（〜に貢献する）の形が頻出。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「compensate」の意味として最も適切なものは？",
-          "choices": ["埋め合わせる", "無効にする", "混乱させる", "悪化させる"],
-          "correct": 0,
-          "explanation": "compensate＝埋め合わせる、補償する。compensate for〜（〜を埋め合わせる）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「resemble」の意味として最も適切なものは？",
-          "choices": ["似ている", "異なる", "対立する", "反発する"],
-          "correct": 0,
-          "explanation": "resemble＝似ている。resemble自体が他動詞で、前置詞不要（resemble to とはしない）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「reveal」の意味として最も適切なものは？",
-          "choices": ["明らかにする", "隠す", "忘れる", "拒む"],
-          "correct": 0,
-          "explanation": "reveal＝明らかにする、暴露する。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「undermine」の意味として最も適切なものは？",
-          "choices": ["弱体化させる", "強化する", "修理する", "称賛する"],
-          "correct": 0,
-          "explanation": "undermine＝弱体化させる、損なう。undermine confidence（自信を損なう）など。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「accumulate」の意味として最も適切なものは？",
-          "choices": ["蓄積する", "消費する", "分配する", "放棄する"],
-          "correct": 0,
-          "explanation": "accumulate＝蓄積する、積み重なる。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「tolerate」の意味として最も適切なものは？",
-          "choices": ["我慢する", "拒否する", "攻撃する", "賞賛する"],
-          "correct": 0,
-          "explanation": "tolerate＝我慢する、容認する。名詞形はtolerance（寛容）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「exceed」の意味として最も適切なものは？",
-          "choices": ["超える", "下回る", "一致する", "均衡する"],
-          "correct": 0,
-          "explanation": "exceed＝超える、上回る。exceed expectations（期待を超える）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「postpone」の意味として最も適切なものは？",
-          "choices": ["延期する", "早める", "中止する", "決定する"],
-          "correct": 0,
-          "explanation": "postpone＝延期する。postpone A until B（AをBまで延期する）の形もよく出る。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「cooperate」の意味として最も適切なものは？",
-          "choices": ["協力する", "妨害する", "競争する", "孤立する"],
-          "correct": 0,
-          "explanation": "cooperate＝協力する。名詞形cooperation（協力）もあわせて覚える。",
-          "type": "choice"
-        }
+        {"scenario": "「approve」の意味として最も適切なものは？", "choices": ["承認する", "拒否する", "延期する", "無視する"], "correct": 0, "explanation": "提案や計画などを正式に認めること。", "type": "choice"},
+        {"scenario": "「arrange」の意味として最も適切なものは？", "choices": ["手配する、整える", "中止する", "破壊する", "隠す"], "correct": 0, "explanation": "物事の準備を整えたり、順序よく並べたりすること。", "type": "choice"},
+        {"scenario": "「assemble」の意味として最も適切なものは？", "choices": ["組み立てる、集める", "分解する", "破棄する", "隠す"], "correct": 0, "explanation": "部品を組み合わせて何かを作る、または人を集めること。", "type": "choice"},
+        {"scenario": "「assign」の意味として最も適切なものは？", "choices": ["割り当てる", "取り消す", "拒否する", "隠す"], "correct": 0, "explanation": "仕事や役割を特定の人に振り分けること。", "type": "choice"},
+        {"scenario": "「assist」の意味として最も適切なものは？", "choices": ["手伝う", "妨げる", "無視する", "拒む"], "correct": 0, "explanation": "helpよりやや形式的に、人の手助けをすること。", "type": "choice"},
+        {"scenario": "「assure」の意味として最も適切なものは？", "choices": ["保証する、確信させる", "疑わせる", "脅す", "誤解させる"], "correct": 0, "explanation": "相手を安心させるために断言すること。", "type": "choice"},
+        {"scenario": "「attach」の意味として最も適切なものは？", "choices": ["取り付ける、添付する", "取り外す", "破壊する", "隠す"], "correct": 0, "explanation": "物を他の物に結び付けたり付属させたりすること。", "type": "choice"},
+        {"scenario": "「attain」の意味として最も適切なものは？", "choices": ["達成する、獲得する", "放棄する", "妨げる", "失う"], "correct": 0, "explanation": "努力して目標や地位を手に入れること。achieveと似た意味を持つ。", "type": "choice"},
+        {"scenario": "「attempt」の意味として最も適切なものは？", "choices": ["試みる", "成功する", "諦める", "拒否する"], "correct": 0, "explanation": "何かを成し遂げようと努力すること。名詞としても使われる。", "type": "choice"},
+        {"scenario": "「attend」の意味として最も適切なものは？", "choices": ["出席する", "欠席する", "中止する", "延期する"], "correct": 0, "explanation": "会議や授業などに参加すること。", "type": "choice"}
       ]
     },
     {
       "id": 3,
-      "title": "📝 形容詞1",
-      "type": "Adjectives 1",
-      "emoji": "📝",
-      "subtitle": "英検2級レベルの形容詞クイズ！",
+      "title": "動詞編1-3",
+      "type": "Basic Verbs",
+      "emoji": "📦",
+      "subtitle": "英検2級レベルの語彙クイズ！日常でよく使う動詞編",
       "questions": [
-        {
-          "scenario": "「essential」の意味として最も適切なものは？",
-          "choices": ["不可欠な", "些細な", "過剰な", "一時的な"],
-          "correct": 0,
-          "explanation": "essential＝不可欠な、必要不可欠の。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「sufficient」の意味として最も適切なものは？",
-          "choices": ["十分な", "不足した", "過剰な", "無関係な"],
-          "correct": 0,
-          "explanation": "sufficient＝十分な。反対語はinsufficient（不十分な）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「controversial」の意味として最も適切なものは？",
-          "choices": ["物議を醸す", "明白な", "平凡な", "単純な"],
-          "correct": 0,
-          "explanation": "controversial＝物議を醸す、論争の的となる。名詞形controversy（論争）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「inevitable」の意味として最も適切なものは？",
-          "choices": ["避けられない", "回避可能な", "偶然の", "珍しい"],
-          "correct": 0,
-          "explanation": "inevitable＝避けられない、必然の。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「reluctant」の意味として最も適切なものは？",
-          "choices": ["気が進まない", "熱心な", "積極的な", "素直な"],
-          "correct": 0,
-          "explanation": "reluctant＝気が進まない、渋っている。be reluctant to do（〜するのに気が進まない）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「remarkable」の意味として最も適切なものは？",
-          "choices": ["注目すべき", "ありふれた", "取るに足らない", "曖昧な"],
-          "correct": 0,
-          "explanation": "remarkable＝顕著な、注目すべき。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「considerable」の意味として最も適切なものは？",
-          "choices": ["かなりの", "わずかな", "皆無の", "一定の"],
-          "correct": 0,
-          "explanation": "considerable＝かなりの、相当な。considerate（思いやりのある）と混同注意。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「skeptical」の意味として最も適切なものは？",
-          "choices": ["懐疑的な", "楽観的な", "無関心な", "確信している"],
-          "correct": 0,
-          "explanation": "skeptical＝懐疑的な。be skeptical about〜（〜に懐疑的である）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「genuine」の意味として最も適切なものは？",
-          "choices": ["本物の", "偽の", "一時的な", "疑わしい"],
-          "correct": 0,
-          "explanation": "genuine＝本物の、心からの。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「vulnerable」の意味として最も適切なものは？",
-          "choices": ["脆弱な", "頑丈な", "無敵の", "冷淡な"],
-          "correct": 0,
-          "explanation": "vulnerable＝傷つきやすい、脆弱な。be vulnerable to〜（〜に対して脆弱である）。",
-          "type": "choice"
-        }
+        {"scenario": "「avoid」の意味として最も適切なものは？", "choices": ["避ける", "求める", "招く", "促進する"], "correct": 0, "explanation": "危険や不快なことを意図的に回避すること。", "type": "choice"},
+        {"scenario": "「blame」の意味として最も適切なものは？", "choices": ["非難する、〜のせいにする", "称賛する", "許す", "励ます"], "correct": 0, "explanation": "悪い結果の責任を人や物に負わせること。", "type": "choice"},
+        {"scenario": "「blend」の意味として最も適切なものは？", "choices": ["混ぜ合わせる", "分離する", "破壊する", "冷やす"], "correct": 0, "explanation": "複数のものを均一に混合すること。", "type": "choice"},
+        {"scenario": "「boost」の意味として最も適切なものは？", "choices": ["高める、押し上げる", "下げる", "止める", "無視する"], "correct": 0, "explanation": "数値や士気などを増加させること。", "type": "choice"},
+        {"scenario": "「borrow」の意味として最も適切なものは？", "choices": ["借りる", "貸す", "返す", "盗む"], "correct": 0, "explanation": "他人から一時的に物やお金を借り受けること。", "type": "choice"},
+        {"scenario": "「breed」の意味として最も適切なものは？", "choices": ["繁殖させる、育てる", "駆除する", "捕らえる", "放す"], "correct": 0, "explanation": "動物を育てて子孫を増やすこと。状況を生み出す意味でも使う。", "type": "choice"},
+        {"scenario": "「browse」の意味として最も適切なものは？", "choices": ["ざっと見る、閲覧する", "詳細に分析する", "購入する", "削除する"], "correct": 0, "explanation": "商品やウェブサイトなどを気軽に見て回ること。", "type": "choice"},
+        {"scenario": "「calculate」の意味として最も適切なものは？", "choices": ["計算する", "推測する", "無視する", "忘れる"], "correct": 0, "explanation": "数値を用いて答えを導き出すこと。", "type": "choice"},
+        {"scenario": "「cancel」の意味として最も適切なものは？", "choices": ["中止する、取り消す", "開始する", "延長する", "承認する"], "correct": 0, "explanation": "予定されていたことを行わないと決定すること。", "type": "choice"},
+        {"scenario": "「capture」の意味として最も適切なものは？", "choices": ["捕らえる", "逃がす", "隠す", "破壊する"], "correct": 0, "explanation": "人や動物を捕まえること。注意や興味を引く意味でも使う。", "type": "choice"}
       ]
     },
     {
       "id": 4,
-      "title": "📝 形容詞2",
-      "type": "Adjectives 2",
-      "emoji": "📝",
-      "subtitle": "英検2級レベルの形容詞クイズ！パート2",
+      "title": "動詞編1-4",
+      "type": "Basic Verbs",
+      "emoji": "🎉",
+      "subtitle": "英検2級レベルの語彙クイズ！感情・行動を表す動詞編",
       "questions": [
-        {
-          "scenario": "「flexible」の意味として最も適切なものは？",
-          "choices": ["柔軟な", "頑固な", "厳格な", "単調な"],
-          "correct": 0,
-          "explanation": "flexible＝柔軟な。flexible schedule（融通の利くスケジュール）など。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「reliable」の意味として最も適切なものは？",
-          "choices": ["信頼できる", "疑わしい", "不安定な", "一時的な"],
-          "correct": 0,
-          "explanation": "reliable＝信頼できる。名詞形reliability（信頼性）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「beneficial」の意味として最も適切なものは？",
-          "choices": ["有益な", "有害な", "無関係な", "中立の"],
-          "correct": 0,
-          "explanation": "beneficial＝有益な。反対語はharmful（有害な）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「adequate」の意味として最も適切なものは？",
-          "choices": ["適切な", "不十分な", "過度な", "不適切な"],
-          "correct": 0,
-          "explanation": "adequate＝適切な、十分な。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「diverse」の意味として最も適切なものは？",
-          "choices": ["多様な", "均一な", "単純な", "一様の"],
-          "correct": 0,
-          "explanation": "diverse＝多様な。名詞形diversity（多様性）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「subsequent」の意味として最も適切なものは？",
-          "choices": ["その後の", "以前の", "同時の", "永久の"],
-          "correct": 0,
-          "explanation": "subsequent＝その後の、続く。subsequent to〜（〜の後に）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「gradual」の意味として最も適切なものは？",
-          "choices": ["徐々の", "急激な", "突然の", "瞬間的な"],
-          "correct": 0,
-          "explanation": "gradual＝徐々の。副詞形gradually（徐々に）も頻出。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「superficial」の意味として最も適切なものは？",
-          "choices": ["表面的な", "徹底的な", "本質的な", "深刻な"],
-          "correct": 0,
-          "explanation": "superficial＝表面的な。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「legitimate」の意味として最も適切なものは？",
-          "choices": ["合法の", "違法の", "疑わしい", "曖昧な"],
-          "correct": 0,
-          "explanation": "legitimate＝合法の、正当な。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「ambiguous」の意味として最も適切なものは？",
-          "choices": ["曖昧な", "明確な", "単純な", "具体的な"],
-          "correct": 0,
-          "explanation": "ambiguous＝曖昧な。名詞形ambiguity（曖昧さ）。",
-          "type": "choice"
-        }
+        {"scenario": "「celebrate」の意味として最も適切なものは？", "choices": ["祝う", "悲しむ", "中止する", "無視する"], "correct": 0, "explanation": "特別な出来事を祝って喜ぶこと。", "type": "choice"},
+        {"scenario": "「challenge」の意味として最も適切なものは？", "choices": ["異議を唱える、挑む", "同意する", "無視する", "降参する"], "correct": 0, "explanation": "相手の意見に疑問を投げかけたり、困難な課題に挑むこと。", "type": "choice"},
+        {"scenario": "「chase」の意味として最も適切なものは？", "choices": ["追いかける", "避ける", "隠れる", "止まる"], "correct": 0, "explanation": "人や物を捕まえようと追跡すること。", "type": "choice"},
+        {"scenario": "「cheat」の意味として最も適切なものは？", "choices": ["不正をする、だます", "正直に話す", "助ける", "許す"], "correct": 0, "explanation": "規則を破ったり人を欺いたりすること。", "type": "choice"},
+        {"scenario": "「clarify」の意味として最も適切なものは？", "choices": ["明確にする", "曖昧にする", "隠す", "無視する"], "correct": 0, "explanation": "分かりにくい点をはっきりさせること。", "type": "choice"},
+        {"scenario": "「classify」の意味として最も適切なものは？", "choices": ["分類する", "混同する", "破棄する", "無視する"], "correct": 0, "explanation": "物事を種類ごとに分けて整理すること。", "type": "choice"},
+        {"scenario": "「collapse」の意味として最も適切なものは？", "choices": ["崩壊する、倒れる", "建設する", "強化する", "修理する"], "correct": 0, "explanation": "建物や体制などが突然壊れる、または人が倒れること。", "type": "choice"},
+        {"scenario": "「collide」の意味として最も適切なものは？", "choices": ["衝突する", "避ける", "停止する", "加速する"], "correct": 0, "explanation": "物や乗り物などが激しくぶつかること。", "type": "choice"},
+        {"scenario": "「combine」の意味として最も適切なものは？", "choices": ["組み合わせる", "分ける", "除去する", "隠す"], "correct": 0, "explanation": "二つ以上のものを一つにまとめること。", "type": "choice"},
+        {"scenario": "「compare」の意味として最も適切なものは？", "choices": ["比較する", "無視する", "混同する", "隠す"], "correct": 0, "explanation": "二つ以上の物事の類似点や相違点を調べること。", "type": "choice"}
       ]
     },
     {
       "id": 5,
-      "title": "📖 名詞",
-      "type": "Nouns",
-      "emoji": "📖",
-      "subtitle": "英検2級レベルの名詞クイズ！",
+      "title": "動詞編1-5",
+      "type": "Basic Verbs",
+      "emoji": "🗣️",
+      "subtitle": "英検2級レベルの語彙クイズ！議論・思考系の動詞編",
       "questions": [
-        {
-          "scenario": "「phenomenon」の意味として最も適切なものは？",
-          "choices": ["現象", "原因", "結果", "法則"],
-          "correct": 0,
-          "explanation": "phenomenon＝現象。複数形はphenomena。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「controversy」の意味として最も適切なものは？",
-          "choices": ["論争", "合意", "沈黙", "協力"],
-          "correct": 0,
-          "explanation": "controversy＝論争。形容詞形controversial（物議を醸す）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「consequence」の意味として最も適切なものは？",
-          "choices": ["結果", "原因", "過程", "目的"],
-          "correct": 0,
-          "explanation": "consequence＝結果、影響。as a consequence of〜（〜の結果として）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「atmosphere」の意味として最も適切なものは？",
-          "choices": ["雰囲気", "建物", "制度", "組織"],
-          "correct": 0,
-          "explanation": "atmosphere＝雰囲気、大気。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「characteristic」の意味として最も適切なものは？",
-          "choices": ["特徴", "欠陥", "例外", "規則"],
-          "correct": 0,
-          "explanation": "characteristic＝特徴。形容詞としても「特徴的な」の意味で使う。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「perspective」の意味として最も適切なものは？",
-          "choices": ["観点", "結論", "証拠", "手段"],
-          "correct": 0,
-          "explanation": "perspective＝観点、視点。from a different perspective（違う観点から）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「tendency」の意味として最も適切なものは？",
-          "choices": ["傾向", "例外", "原則", "結果"],
-          "correct": 0,
-          "explanation": "tendency＝傾向。have a tendency to do（〜する傾向がある）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「dilemma」の意味として最も適切なものは？",
-          "choices": ["ジレンマ", "解決策", "結論", "合意"],
-          "correct": 0,
-          "explanation": "dilemma＝ジレンマ、板挟みの状態。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「obstacle」の意味として最も適切なものは？",
-          "choices": ["障害", "支援", "目標", "結果"],
-          "correct": 0,
-          "explanation": "obstacle＝障害。overcome an obstacle（障害を乗り越える）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「outcome」の意味として最も適切なものは？",
-          "choices": ["結果", "原因", "過程", "目的"],
-          "correct": 0,
-          "explanation": "outcome＝結果、成果。consequenceと似ているが、outcomeは「最終的な成果」のニュアンスが強い。",
-          "type": "choice"
-        }
+        {"scenario": "「compete」の意味として最も適切なものは？", "choices": ["競争する", "協力する", "降参する", "無視する"], "correct": 0, "explanation": "勝利や賞などを目指して他者と争うこと。", "type": "choice"},
+        {"scenario": "「complain」の意味として最も適切なものは？", "choices": ["不満を言う", "感謝する", "称賛する", "我慢する"], "correct": 0, "explanation": "不満や苦情を口に出して伝えること。", "type": "choice"},
+        {"scenario": "「complete」の意味として最も適切なものは？", "choices": ["完成させる", "開始する", "中断する", "破壊する"], "correct": 0, "explanation": "仕事や作業を最後まで終わらせること。", "type": "choice"},
+        {"scenario": "「conceal」の意味として最も適切なものは？", "choices": ["隠す", "明かす", "発見する", "説明する"], "correct": 0, "explanation": "秘密や物などを見えないようにすること。hideよりやや堅い語。", "type": "choice"},
+        {"scenario": "「concentrate」の意味として最も適切なものは？", "choices": ["集中する", "分散する", "怠ける", "忘れる"], "correct": 0, "explanation": "一つのことに注意や努力を集めること。", "type": "choice"},
+        {"scenario": "「confirm」の意味として最も適切なものは？", "choices": ["確認する", "疑う", "否定する", "忘れる"], "correct": 0, "explanation": "事実や予定が正しいことを確かめること。", "type": "choice"},
+        {"scenario": "「confront」の意味として最も適切なものは？", "choices": ["立ち向かう、直面する", "逃げる", "無視する", "避ける"], "correct": 0, "explanation": "困難や相手に正面から向き合うこと。", "type": "choice"},
+        {"scenario": "「confuse」の意味として最も適切なものは？", "choices": ["混乱させる", "納得させる", "安心させる", "説得する"], "correct": 0, "explanation": "人を分からなくさせたり、物事を取り違えさせたりすること。", "type": "choice"},
+        {"scenario": "「connect」の意味として最も適切なものは？", "choices": ["つなぐ", "切り離す", "隠す", "壊す"], "correct": 0, "explanation": "二つ以上のものを結び付けること。", "type": "choice"},
+        {"scenario": "「consider」の意味として最も適切なものは？", "choices": ["よく考える", "無視する", "忘れる", "拒否する"], "correct": 0, "explanation": "決定の前に物事をじっくり検討すること。", "type": "choice"}
       ]
     },
     {
       "id": 6,
-      "title": "🔗 熟語・イディオム",
-      "type": "Idioms",
-      "emoji": "🔗",
-      "subtitle": "英検2級レベルの熟語・イディオムクイズ！",
+      "title": "動詞編1-6",
+      "type": "Basic Verbs",
+      "emoji": "🏗️",
+      "subtitle": "英検2級レベルの語彙クイズ！対処・解決系の動詞編",
       "questions": [
-        {
-          "scenario": "「in terms of」の意味として最も適切なものは？",
-          "choices": ["〜の点で", "〜にもかかわらず", "〜の代わりに", "〜のために"],
-          "correct": 0,
-          "explanation": "in terms of＝〜の点で、〜に関して。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「on behalf of」の意味として最も適切なものは？",
-          "choices": ["〜を代表して", "〜に反対して", "〜と比べて", "〜のせいで"],
-          "correct": 0,
-          "explanation": "on behalf of＝〜を代表して、〜の代わりに。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「take advantage of」の意味として最も適切なものは？",
-          "choices": ["〜を利用する", "〜を無視する", "〜を拒否する", "〜を疑う"],
-          "correct": 0,
-          "explanation": "take advantage of＝〜を利用する。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「come up with」の意味として最も適切なものは？",
-          "choices": ["思いつく", "諦める", "忘れる", "拒絶する"],
-          "correct": 0,
-          "explanation": "come up with＝（アイデアなどを）思いつく。come up with a solution（解決策を思いつく）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「put up with」の意味として最も適切なものは？",
-          "choices": ["我慢する", "楽しむ", "期待する", "提案する"],
-          "correct": 0,
-          "explanation": "put up with＝我慢する。tolerateとほぼ同じ意味。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「get rid of」の意味として最も適切なものは？",
-          "choices": ["取り除く", "手に入れる", "保存する", "修理する"],
-          "correct": 0,
-          "explanation": "get rid of＝取り除く、処分する。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「make up for」の意味として最も適切なものは？",
-          "choices": ["埋め合わせる", "悪化させる", "無視する", "妨害する"],
-          "correct": 0,
-          "explanation": "make up for＝埋め合わせる、補う。compensate forとほぼ同じ意味。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「as a result of」の意味として最も適切なものは？",
-          "choices": ["〜の結果として", "〜にもかかわらず", "〜の代わりに", "〜以前に"],
-          "correct": 0,
-          "explanation": "as a result of＝〜の結果として。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「in spite of」の意味として最も適切なものは？",
-          "choices": ["〜にもかかわらず", "〜のおかげで", "〜のために", "〜と同時に"],
-          "correct": 0,
-          "explanation": "in spite of＝〜にもかかわらず。despiteとほぼ同じ意味（despiteは前置詞1語）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「keep track of」の意味として最も適切なものは？",
-          "choices": ["〜を把握する", "〜を無視する", "〜を破棄する", "〜を疑う"],
-          "correct": 0,
-          "explanation": "keep track of＝〜を把握する、記録し続ける。",
-          "type": "choice"
-        }
+        {"scenario": "「construct」の意味として最も適切なものは？", "choices": ["建設する、構築する", "破壊する", "撤去する", "無視する"], "correct": 0, "explanation": "建物や理論などを組み立てて作ること。", "type": "choice"},
+        {"scenario": "「consult」の意味として最も適切なものは？", "choices": ["相談する", "無視する", "反対する", "命令する"], "correct": 0, "explanation": "専門家や資料などに意見や情報を求めること。", "type": "choice"},
+        {"scenario": "「contain」の意味として最も適切なものは？", "choices": ["含む", "除外する", "放出する", "破壊する"], "correct": 0, "explanation": "中に何かを入れている、成分として持っていること。", "type": "choice"},
+        {"scenario": "「convince」の意味として最も適切なものは？", "choices": ["納得させる", "混乱させる", "裏切る", "脅す"], "correct": 0, "explanation": "説明や証拠によって相手に信じさせること。", "type": "choice"},
+        {"scenario": "「cope」の意味として最も適切なものは？", "choices": ["対処する", "無視する", "逃げる", "諦める"], "correct": 0, "explanation": "通例 cope with の形で困難な状況にうまく対応することを表す。", "type": "choice"},
+        {"scenario": "「correct」を動詞として使うときの意味として最も適切なものは？", "choices": ["訂正する", "間違える", "無視する", "隠す"], "correct": 0, "explanation": "誤りを正しく直すこと。", "type": "choice"},
+        {"scenario": "「confess」の意味として最も適切なものは？", "choices": ["告白する、白状する", "否定する", "隠す", "忘れる"], "correct": 0, "explanation": "隠していた事実や罪を正直に打ち明けること。", "type": "choice"},
+        {"scenario": "「crawl」の意味として最も適切なものは？", "choices": ["はう、はって進む", "飛ぶ", "走る", "泳ぐ"], "correct": 0, "explanation": "手足を地面につけてゆっくり進むこと。", "type": "choice"},
+        {"scenario": "「create」の意味として最も適切なものは？", "choices": ["創造する", "破壊する", "模倣する", "削除する"], "correct": 0, "explanation": "新しいものを作り出すこと。", "type": "choice"},
+        {"scenario": "「cure」の意味として最も適切なものは？", "choices": ["治す", "悪化させる", "感染させる", "無視する"], "correct": 0, "explanation": "病気やけがを治療して治すこと。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "動詞編1-7",
+      "type": "Basic Verbs",
+      "emoji": "🛡️",
+      "subtitle": "英検2級レベルの語彙クイズ！要求・主張系の動詞編",
+      "questions": [
+        {"scenario": "「damage」の意味として最も適切なものは？", "choices": ["損害を与える", "修理する", "保護する", "改善する"], "correct": 0, "explanation": "物や体などに害や傷を与えること。", "type": "choice"},
+        {"scenario": "「decline」の意味として最も適切なものは？", "choices": ["断る、衰える", "承諾する", "増加する", "改善する"], "correct": 0, "explanation": "申し出を丁寧に断る、または徐々に悪化することを表す。", "type": "choice"},
+        {"scenario": "「decorate」の意味として最も適切なものは？", "choices": ["飾る", "汚す", "壊す", "隠す"], "correct": 0, "explanation": "見た目を美しくするために装飾すること。", "type": "choice"},
+        {"scenario": "「defend」の意味として最も適切なものは？", "choices": ["守る", "攻撃する", "放棄する", "無視する"], "correct": 0, "explanation": "危険や攻撃から人や物を保護すること。", "type": "choice"},
+        {"scenario": "「define」の意味として最も適切なものは？", "choices": ["定義する", "曖昧にする", "無視する", "否定する"], "correct": 0, "explanation": "言葉や概念の意味をはっきりさせること。", "type": "choice"},
+        {"scenario": "「delay」の意味として最も適切なものは？", "choices": ["遅らせる", "早める", "中止する", "完了する"], "correct": 0, "explanation": "予定より遅く行う、または遅れること。", "type": "choice"},
+        {"scenario": "「deliver」の意味として最も適切なものは？", "choices": ["配達する", "回収する", "保管する", "破棄する"], "correct": 0, "explanation": "物やメッセージを届けること。演説を行う意味でも使う。", "type": "choice"},
+        {"scenario": "「demand」の意味として最も適切なものは？", "choices": ["要求する", "拒否する", "提供する", "放棄する"], "correct": 0, "explanation": "強く必要なものを求めること。", "type": "choice"},
+        {"scenario": "「demonstrate」の意味として最も適切なものは？", "choices": ["実演する、示す", "隠す", "否定する", "無視する"], "correct": 0, "explanation": "実際にやってみせて説明すること。証明する意味でも使う。", "type": "choice"},
+        {"scenario": "「deny」の意味として最も適切なものは？", "choices": ["否定する", "認める", "説明する", "証明する"], "correct": 0, "explanation": "事実ではないと言うこと。要求を拒む意味でも使う。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "動詞編1-8",
+      "type": "Basic Verbs",
+      "emoji": "🔍",
+      "subtitle": "英検2級レベルの語彙クイズ！説明・判断系の動詞編",
+      "questions": [
+        {"scenario": "「depend」の意味として最も適切なものは？", "choices": ["頼る、〜次第である", "無視する", "支配する", "拒否する"], "correct": 0, "explanation": "depend on の形で人に頼る、状況に左右されることを表す。", "type": "choice"},
+        {"scenario": "「describe」の意味として最も適切なものは？", "choices": ["描写する", "隠す", "無視する", "誤解する"], "correct": 0, "explanation": "物事の様子を言葉で詳しく説明すること。", "type": "choice"},
+        {"scenario": "「deserve」の意味として最も適切なものは？", "choices": ["〜に値する", "〜を否定する", "〜を拒む", "〜を疑う"], "correct": 0, "explanation": "良い、または悪い結果を受けるにふさわしいことを表す。", "type": "choice"},
+        {"scenario": "「detect」の意味として最も適切なものは？", "choices": ["検知する、見つける", "隠す", "無視する", "破壊する"], "correct": 0, "explanation": "目に見えにくいものを注意深く発見すること。", "type": "choice"},
+        {"scenario": "「determine」の意味として最も適切なものは？", "choices": ["決定する", "迷う", "無視する", "放棄する"], "correct": 0, "explanation": "調査や検討の末に何かをはっきり決めること。", "type": "choice"},
+        {"scenario": "「develop」の意味として最も適切なものは？", "choices": ["発展させる", "衰退させる", "無視する", "破壊する"], "correct": 0, "explanation": "物事を成長させたり、新しく開発したりすること。", "type": "choice"},
+        {"scenario": "「devote」の意味として最も適切なものは？", "choices": ["捧げる", "奪う", "無視する", "拒む"], "correct": 0, "explanation": "時間や労力を特定の目的のために使うこと。", "type": "choice"},
+        {"scenario": "「differ」の意味として最も適切なものは？", "choices": ["異なる", "一致する", "似る", "混同する"], "correct": 0, "explanation": "二つ以上のものが違いを持つこと。", "type": "choice"},
+        {"scenario": "「digest」を動詞として使うときの意味として最も適切なものは？", "choices": ["消化する、理解する", "拒絶する", "無視する", "忘れる"], "correct": 0, "explanation": "食べ物を体内で分解すること。情報を十分理解する意味でも使う。", "type": "choice"},
+        {"scenario": "「direct」を動詞として使うときの意味として最も適切なものは？", "choices": ["指揮する、向ける", "従う", "無視する", "隠す"], "correct": 0, "explanation": "人に指示を出したり、注意などを向けたりすること。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "動詞編1-9",
+      "type": "Basic Verbs",
+      "emoji": "🕵️",
+      "subtitle": "英検2級レベルの語彙クイズ！変化・発見系の動詞編",
+      "questions": [
+        {"scenario": "「disappear」の意味として最も適切なものは？", "choices": ["姿を消す", "現れる", "増える", "広がる"], "correct": 0, "explanation": "見えなくなる、存在しなくなること。", "type": "choice"},
+        {"scenario": "「discover」の意味として最も適切なものは？", "choices": ["発見する", "隠す", "失う", "破壊する"], "correct": 0, "explanation": "今まで知られていなかったものを見つけ出すこと。", "type": "choice"},
+        {"scenario": "「discuss」の意味として最も適切なものは？", "choices": ["話し合う", "無視する", "隠す", "否定する"], "correct": 0, "explanation": "ある話題について意見を交わすこと。", "type": "choice"},
+        {"scenario": "「dismiss」の意味として最も適切なものは？", "choices": ["解雇する、退ける", "雇う", "昇進させる", "称賛する"], "correct": 0, "explanation": "人を職から外すこと。考えを取り合わない意味でも使う。", "type": "choice"},
+        {"scenario": "「dispose」の意味として最も適切なものは？", "choices": ["処分する", "保管する", "修理する", "製造する"], "correct": 0, "explanation": "通例 dispose of の形で不要なものを捨てることを表す。", "type": "choice"},
+        {"scenario": "「disturb」の意味として最も適切なものは？", "choices": ["邪魔する", "助ける", "安心させる", "励ます"], "correct": 0, "explanation": "人の集中や平穏を妨げること。", "type": "choice"},
+        {"scenario": "「divide」の意味として最も適切なものは？", "choices": ["分ける", "まとめる", "結合する", "隠す"], "correct": 0, "explanation": "一つのものをいくつかの部分に分割すること。", "type": "choice"},
+        {"scenario": "「dominate」の意味として最も適切なものは？", "choices": ["支配する", "従う", "譲る", "無視する"], "correct": 0, "explanation": "他を圧倒するほどの力や影響力を持つこと。", "type": "choice"},
+        {"scenario": "「doubt」の意味として最も適切なものは？", "choices": ["疑う", "信じる", "保証する", "確認する"], "correct": 0, "explanation": "物事の真実性や確実性に疑いを持つこと。", "type": "choice"},
+        {"scenario": "「drag」の意味として最も適切なものは？", "choices": ["引きずる", "持ち上げる", "押す", "投げる"], "correct": 0, "explanation": "重い物を地面に沿って引っ張ること。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "動詞編1-10",
+      "type": "Basic Verbs",
+      "emoji": "🌊",
+      "subtitle": "英検2級レベルの語彙クイズ！総仕上げ動詞編",
+      "questions": [
+        {"scenario": "「drain」の意味として最も適切なものは？", "choices": ["水を抜く、排出する", "満たす", "保存する", "凍らせる"], "correct": 0, "explanation": "液体を流し出すこと。資源や体力を消耗させる意味でも使う。", "type": "choice"},
+        {"scenario": "「drift」の意味として最も適切なものは？", "choices": ["漂う", "沈む", "固定する", "急ぐ"], "correct": 0, "explanation": "風や水の流れに任せてゆっくり移動すること。", "type": "choice"},
+        {"scenario": "「drown」の意味として最も適切なものは？", "choices": ["溺れる、溺死させる", "浮く", "泳ぐ", "救助する"], "correct": 0, "explanation": "水の中で息ができずに死ぬこと。またそうさせること。", "type": "choice"},
+        {"scenario": "「earn」の意味として最も適切なものは？", "choices": ["稼ぐ", "浪費する", "借りる", "盗む"], "correct": 0, "explanation": "働いてお金や評価などを得ること。", "type": "choice"},
+        {"scenario": "「ease」の意味として最も適切なものは？", "choices": ["和らげる", "悪化させる", "強める", "無視する"], "correct": 0, "explanation": "苦痛や緊張などを軽減すること。", "type": "choice"},
+        {"scenario": "「elect」の意味として最も適切なものは？", "choices": ["選出する", "解任する", "無視する", "拒否する"], "correct": 0, "explanation": "選挙などによって人を役職に選ぶこと。", "type": "choice"},
+        {"scenario": "「embrace」の意味として最も適切なものは？", "choices": ["受け入れる、抱擁する", "拒絶する", "無視する", "批判する"], "correct": 0, "explanation": "考えや変化を積極的に受け入れること。人を抱きしめる意味でも使う。", "type": "choice"},
+        {"scenario": "「emerge」の意味として最も適切なものは？", "choices": ["現れる", "消える", "隠れる", "沈む"], "correct": 0, "explanation": "隠れていたものが表に出てくること。", "type": "choice"},
+        {"scenario": "「employ」の意味として最も適切なものは？", "choices": ["雇う", "解雇する", "無視する", "訓練する"], "correct": 0, "explanation": "人を仕事のために雇い入れること。", "type": "choice"},
+        {"scenario": "「enable」の意味として最も適切なものは？", "choices": ["可能にする", "妨げる", "禁止する", "無視する"], "correct": 0, "explanation": "何かをすることを可能にする、許可を与えること。", "type": "choice"}
       ]
     }
   ]

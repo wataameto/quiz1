@@ -1,0 +1,798 @@
+{
+  "id": "eiken2",
+  "level": 10,
+  "label": "🎯 総合復習編",
+  "description": "各品詞混在の総合復習（模試形式）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "総合復習編-1",
+      "type": "Mixed Review",
+      "emoji": "🧩",
+      "subtitle": "基本動詞と日常表現の総復習！",
+      "questions": [
+        {
+          "scenario": "「absorb」の意味として最も適切なものは？",
+          "choices": ["吸収する", "拒絶する", "放出する", "反射する"],
+          "correct": 0,
+          "explanation": "absorbは液体や情報などを「吸収する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accurate」の意味として最も適切なものは？",
+          "choices": ["正確な", "曖昧な", "大まかな", "不完全な"],
+          "correct": 0,
+          "explanation": "accurateは「正確な、精密な」という意味の形容詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「announce」の意味として最も適切なものは？",
+          "choices": ["発表する", "隠す", "否定する", "延期する"],
+          "correct": 0,
+          "explanation": "announceは情報などを「発表する、知らせる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apologize」の意味として最も適切なものは？",
+          "choices": ["謝罪する", "賞賛する", "反論する", "招待する"],
+          "correct": 0,
+          "explanation": "apologizeは「謝罪する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「postpone」の意味として最も適切なものは？",
+          "choices": ["延期する", "実行する", "完成させる", "開始する"],
+          "correct": 0,
+          "explanation": "postponeは「延期する、先延ばしにする」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「resolve」の意味として最も適切なものは？",
+          "choices": ["解決する、決意する", "悪化させる", "無視する", "中止する"],
+          "correct": 0,
+          "explanation": "resolveは問題などを「解決する」、または「決意する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distinguish」の意味として最も適切なものは？",
+          "choices": ["区別する", "混同する", "結合する", "無視する"],
+          "correct": 0,
+          "explanation": "distinguishは物事を「区別する、見分ける」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accomplish」の意味として最も適切なものは？",
+          "choices": ["成し遂げる", "失敗する", "諦める", "中断する"],
+          "correct": 0,
+          "explanation": "accomplishは目標などを「成し遂げる、達成する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anticipate」の意味として最も適切なものは？",
+          "choices": ["予期する、見越す", "忘れる", "無視する", "疑う"],
+          "correct": 0,
+          "explanation": "anticipateは「予期する、見越す」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reimburse」の意味として最も適切なものは？",
+          "choices": ["（費用を）払い戻す", "請求する", "没収する", "借りる"],
+          "correct": 0,
+          "explanation": "reimburseは立て替えた「費用を払い戻す」という意味の動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "総合復習編-2",
+      "type": "Mixed Review",
+      "emoji": "🔎",
+      "subtitle": "動詞・名詞・形容詞を幅広くチェック！",
+      "questions": [
+        {
+          "scenario": "「attract」の意味として最も適切なものは？",
+          "choices": ["引き付ける", "追い払う", "無視する", "拒絶する"],
+          "correct": 0,
+          "explanation": "attractは人や物事を「引き付ける、魅了する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「average」の意味として最も適切なものは？",
+          "choices": ["平均の", "最大の", "最小の", "特別な"],
+          "correct": 0,
+          "explanation": "averageは「平均の、平均」という意味の形容詞・名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aware」の意味として最も適切なものは？",
+          "choices": ["気づいている", "無知な", "無関心な", "疑っている"],
+          "correct": 0,
+          "explanation": "awareは「（〜に）気づいている、意識している」という意味の形容詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scrutinize」の意味として最も適切なものは？",
+          "choices": ["精査する、詳しく調べる", "見過ごす", "無視する", "隠す"],
+          "correct": 0,
+          "explanation": "scrutinizeは物事を「精査する、詳しく調べる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bond」の意味として最も適切なものは？",
+          "choices": ["絆、結びつき", "対立", "距離", "誤解"],
+          "correct": 0,
+          "explanation": "bondは人と人との「絆、結びつき」という意味の名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「simplify」の意味として最も適切なものは？",
+          "choices": ["簡単にする", "複雑にする", "誇張する", "曖昧にする"],
+          "correct": 0,
+          "explanation": "simplifyは物事を「簡単にする、簡素化する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「verify」の意味として最も適切なものは？",
+          "choices": ["検証する、確認する", "疑う", "偽造する", "否定する"],
+          "correct": 0,
+          "explanation": "verifyは事実などを「検証する、確認する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「modify」の意味として最も適切なものは？",
+          "choices": ["修正する、変更する", "固定する", "破壊する", "無視する"],
+          "correct": 0,
+          "explanation": "modifyは「修正する、変更する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「justify」の意味として最も適切なものは？",
+          "choices": ["正当化する", "非難する", "否定する", "隠す"],
+          "correct": 0,
+          "explanation": "justifyは行為などを「正当化する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「neglect」の意味として最も適切なものは？",
+          "choices": ["怠る、無視する", "大切にする", "実行する", "強調する"],
+          "correct": 0,
+          "explanation": "neglectは義務などを「怠る」、または人を「無視する」という意味の動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "総合復習編-3",
+      "type": "Mixed Review",
+      "emoji": "🌦️",
+      "subtitle": "生活シーンでよく使う語彙を確認！",
+      "questions": [
+        {
+          "scenario": "「reinforce」の意味として最も適切なものは？",
+          "choices": ["強化する", "弱める", "破壊する", "無視する"],
+          "correct": 0,
+          "explanation": "reinforceは構造や主張などを「強化する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charity」の意味として最も適切なものは？",
+          "choices": ["慈善、慈善団体", "競争", "借金", "罰"],
+          "correct": 0,
+          "explanation": "charityは「慈善（活動）、慈善団体」という意味の名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「undermine」の意味として最も適切なものは？",
+          "choices": ["徐々に弱体化させる", "強化する", "支援する", "促進する"],
+          "correct": 0,
+          "explanation": "undermineは信頼や立場などを「徐々に弱体化させる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exaggerate」の意味として最も適切なものは？",
+          "choices": ["誇張する", "控えめに言う", "正確に述べる", "省略する"],
+          "correct": 0,
+          "explanation": "exaggerateは物事を「誇張する、大げさに言う」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「claim」の意味として最も適切なものは？",
+          "choices": ["主張する", "否定する", "忘れる", "隠す"],
+          "correct": 0,
+          "explanation": "claimは「（〜だと）主張する、要求する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sacrifice」の意味として最も適切なものは？",
+          "choices": ["犠牲にする", "獲得する", "節約する", "保護する"],
+          "correct": 0,
+          "explanation": "sacrificeは何かのために別のものを「犠牲にする」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「climate」の意味として最も適切なものは？",
+          "choices": ["気候", "地形", "人口", "文化"],
+          "correct": 0,
+          "explanation": "climateはある地域の「気候」を表す名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「resign」の意味として最も適切なものは？",
+          "choices": ["辞職する", "就任する", "昇進する", "解雇する"],
+          "correct": 0,
+          "explanation": "resignは職などを「辞職する、辞任する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「retrieve」の意味として最も適切なものは？",
+          "choices": ["取り戻す、回収する", "捨てる", "隠す", "破壊する"],
+          "correct": 0,
+          "explanation": "retrieveは失ったものを「取り戻す、回収する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comfort」の意味として最も適切なものは？",
+          "choices": ["慰め、快適さ", "苦痛", "恐怖", "混乱"],
+          "correct": 0,
+          "explanation": "comfortは「慰め、快適さ」という意味の名詞、または「慰める」という動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "総合復習編-4",
+      "type": "Mixed Review",
+      "emoji": "💬",
+      "subtitle": "会話やビジネスで使う頻出語彙！",
+      "questions": [
+        {
+          "scenario": "「commit」の意味として最も適切なものは？",
+          "choices": ["（罪などを）犯す、約束する", "許す", "忘れる", "拒否する"],
+          "correct": 0,
+          "explanation": "commitは「（罪を）犯す」「（〜することを）約束する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「withdraw」の意味として最も適切なものは？",
+          "choices": ["引き下がる、撤回する", "参加する", "提案する", "主張する"],
+          "correct": 0,
+          "explanation": "withdrawは「引き下がる、（発言などを）撤回する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「surrender」の意味として最も適切なものは？",
+          "choices": ["降伏する、明け渡す", "抵抗する", "勝利する", "攻撃する"],
+          "correct": 0,
+          "explanation": "surrenderは「降伏する、明け渡す」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eliminate」の意味として最も適切なものは？",
+          "choices": ["排除する、取り除く", "追加する", "保存する", "強化する"],
+          "correct": 0,
+          "explanation": "eliminateは対象を「排除する、取り除く」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complicated」の意味として最も適切なものは？",
+          "choices": ["複雑な", "単純な", "明確な", "簡単な"],
+          "correct": 0,
+          "explanation": "complicatedは「複雑な、込み入った」という意味の形容詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compose」の意味として最も適切なものは？",
+          "choices": ["作曲する、構成する", "破壊する", "演奏を止める", "削除する"],
+          "correct": 0,
+          "explanation": "composeは「作曲する」、また部分から「構成する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「illustrate」の意味として最も適切なものは？",
+          "choices": ["説明する、例示する", "隠す", "混乱させる", "否定する"],
+          "correct": 0,
+          "explanation": "illustrateは具体例を挙げて「説明する、例示する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「interpret」の意味として最も適切なものは？",
+          "choices": ["解釈する、通訳する", "誤解させる", "無視する", "隠す"],
+          "correct": 0,
+          "explanation": "interpretは物事を「解釈する」、または「通訳する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manipulate」の意味として最も適切なものは？",
+          "choices": ["操作する、巧みに扱う", "放置する", "尊重する", "公開する"],
+          "correct": 0,
+          "explanation": "manipulateは人や物事を「操作する、巧みに扱う」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mediate」の意味として最も適切なものは？",
+          "choices": ["仲裁する、調停する", "対立をあおる", "無視する", "拒否する"],
+          "correct": 0,
+          "explanation": "mediateは対立する両者の間を「仲裁する、調停する」という意味の動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "総合復習編-5",
+      "type": "Mixed Review",
+      "emoji": "🤝",
+      "subtitle": "人間関係やコミュニケーションの語彙！",
+      "questions": [
+        {
+          "scenario": "「congratulate」の意味として最も適切なものは？",
+          "choices": ["祝う、お祝いを言う", "慰める", "非難する", "謝罪する"],
+          "correct": 0,
+          "explanation": "congratulateは人の成功などを「祝う」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「overcome」の意味として最も適切なものは？",
+          "choices": ["克服する", "屈する", "諦める", "悪化させる"],
+          "correct": 0,
+          "explanation": "overcomeは困難などを「克服する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consist」の意味として最も適切なものは？",
+          "choices": ["（consist ofで）構成される", "分解する", "消滅する", "拒否する"],
+          "correct": 0,
+          "explanation": "consist of ~で「〜から構成される」という意味になる動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「persuade」の意味として最も適切なものは？",
+          "choices": ["説得する", "混乱させる", "拒絶させる", "疑わせる"],
+          "correct": 0,
+          "explanation": "persuadeは人を「説得する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「predict」の意味として最も適切なものは？",
+          "choices": ["予測する", "忘れる", "無視する", "疑う"],
+          "correct": 0,
+          "explanation": "predictは未来のことを「予測する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contact」の意味として最も適切なものは？",
+          "choices": ["連絡する", "避ける", "忘れる", "拒絶する"],
+          "correct": 0,
+          "explanation": "contactは人に「連絡する」という意味の動詞・名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convert」の意味として最も適切なものは？",
+          "choices": ["変換する、改宗させる", "維持する", "破壊する", "隠す"],
+          "correct": 0,
+          "explanation": "convertは形式などを「変換する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「prevent」の意味として最も適切なものは？",
+          "choices": ["防ぐ、妨げる", "促進する", "許可する", "招く"],
+          "correct": 0,
+          "explanation": "preventは物事を「防ぐ、妨げる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pursue」の意味として最も適切なものは？",
+          "choices": ["追求する", "諦める", "避ける", "拒否する"],
+          "correct": 0,
+          "explanation": "pursueは目標などを「追求する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「correct」の意味として最も適切なものは？",
+          "choices": ["正しい、訂正する", "誤った", "曖昧な", "不完全な"],
+          "correct": 0,
+          "explanation": "correctは「正しい」という形容詞、または「訂正する」という動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "総合復習編-6",
+      "type": "Mixed Review",
+      "emoji": "🏗️",
+      "subtitle": "出来事や状況を表す語彙をまとめて！",
+      "questions": [
+        {
+          "scenario": "「crash」の意味として最も適切なものは？",
+          "choices": ["衝突する", "停止する", "修理する", "出発する"],
+          "correct": 0,
+          "explanation": "crashは車などが「衝突する」という意味の動詞・名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「recall」の意味として最も適切なものは？",
+          "choices": ["思い出す、回収する", "忘れる", "発明する", "破壊する"],
+          "correct": 0,
+          "explanation": "recallは記憶を「思い出す」、または製品を「回収する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「recover」の意味として最も適切なものは？",
+          "choices": ["回復する", "悪化する", "消滅する", "拡大する"],
+          "correct": 0,
+          "explanation": "recoverは病気や状態から「回復する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reduce」の意味として最も適切なものは？",
+          "choices": ["減らす", "増やす", "維持する", "拡張する"],
+          "correct": 0,
+          "explanation": "reduceは量や程度を「減らす」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「refuse」の意味として最も適切なものは？",
+          "choices": ["拒否する", "承諾する", "提案する", "歓迎する"],
+          "correct": 0,
+          "explanation": "refuseは申し出などを「拒否する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「restrain」の意味として最も適切なものは？",
+          "choices": ["抑制する、抑える", "解放する", "助長する", "強化する"],
+          "correct": 0,
+          "explanation": "restrainは感情や行動を「抑制する、抑える」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「resume」の意味として最も適切なものは？",
+          "choices": ["再開する", "中止する", "延期する", "終了する"],
+          "correct": 0,
+          "explanation": "resumeは中断していたことを「再開する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reveal」の意味として最も適切なものは？",
+          "choices": ["明らかにする", "隠す", "否定する", "曖昧にする"],
+          "correct": 0,
+          "explanation": "revealは秘密などを「明らかにする」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「revise」の意味として最も適切なものは？",
+          "choices": ["改訂する、見直す", "破棄する", "無視する", "隠す"],
+          "correct": 0,
+          "explanation": "reviseは文書や計画を「改訂する、見直す」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「secure」の意味として最も適切なものは？",
+          "choices": ["確保する", "手放す", "失う", "破壊する"],
+          "correct": 0,
+          "explanation": "secureは必要なものを「確保する」という意味の動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "総合復習編-7",
+      "type": "Mixed Review",
+      "emoji": "🧭",
+      "subtitle": "移動・観察・判断に関わる語彙！",
+      "questions": [
+        {
+          "scenario": "「depart」の意味として最も適切なものは？",
+          "choices": ["出発する", "到着する", "滞在する", "帰宅する"],
+          "correct": 0,
+          "explanation": "departは「出発する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「seize」の意味として最も適切なものは？",
+          "choices": ["つかむ、奪い取る", "手放す", "拒否する", "見送る"],
+          "correct": 0,
+          "explanation": "seizeは物などを「つかむ、奪い取る」という意味の動詞。seize the opportunityで「機会をつかむ」。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「endorse」の意味として最も適切なものは？",
+          "choices": ["支持する、承認する", "反対する", "無視する", "拒絶する"],
+          "correct": 0,
+          "explanation": "endorseは提案や候補者などを「支持する、承認する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「destroy」の意味として最も適切なものは？",
+          "choices": ["破壊する", "建設する", "修理する", "保護する"],
+          "correct": 0,
+          "explanation": "destroyは物などを「破壊する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「suppress」の意味として最も適切なものは？",
+          "choices": ["抑圧する、鎮圧する", "解放する", "助長する", "公表する"],
+          "correct": 0,
+          "explanation": "suppressは感情や反乱などを「抑圧する、鎮圧する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comprehend」の意味として最も適切なものは？",
+          "choices": ["理解する", "誤解する", "無視する", "疑う"],
+          "correct": 0,
+          "explanation": "comprehendは物事を「理解する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「transform」の意味として最も適切なものは？",
+          "choices": ["変容させる", "維持する", "破壊する", "無視する"],
+          "correct": 0,
+          "explanation": "transformは物事の姿・形を大きく「変容させる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discard」の意味として最も適切なものは？",
+          "choices": ["捨てる", "保管する", "修理する", "使用する"],
+          "correct": 0,
+          "explanation": "discardは不要なものを「捨てる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disgusting」の意味として最も適切なものは？",
+          "choices": ["気持ち悪い", "魅力的な", "快適な", "普通の"],
+          "correct": 0,
+          "explanation": "disgustingは「気持ち悪い、嫌悪感を催す」という意味の形容詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「undertake」の意味として最も適切なものは？",
+          "choices": ["引き受ける、着手する", "拒否する", "放棄する", "先送りする"],
+          "correct": 0,
+          "explanation": "undertakeは任務などを「引き受ける、着手する」という意味の動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "総合復習編-8",
+      "type": "Mixed Review",
+      "emoji": "📦",
+      "subtitle": "分配・感情・状態を表す語彙！",
+      "questions": [
+        {
+          "scenario": "「display」の意味として最も適切なものは？",
+          "choices": ["展示する、表示する", "隠す", "破壊する", "無視する"],
+          "correct": 0,
+          "explanation": "displayは物などを「展示する、表示する」という意味の動詞・名詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distribute」の意味として最も適切なものは？",
+          "choices": ["分配する", "集める", "隠す", "破壊する"],
+          "correct": 0,
+          "explanation": "distributeは物やお金などを「分配する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「unite」の意味として最も適切なものは？",
+          "choices": ["団結させる、結合する", "分裂させる", "対立させる", "孤立させる"],
+          "correct": 0,
+          "explanation": "uniteは人々や物事を「団結させる、結合する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「utilize」の意味として最も適切なものは？",
+          "choices": ["活用する", "浪費する", "無視する", "廃棄する"],
+          "correct": 0,
+          "explanation": "utilizeは資源などを「活用する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dull」の意味として最も適切なものは？",
+          "choices": ["退屈な、鈍い", "面白い", "鋭い", "明るい"],
+          "correct": 0,
+          "explanation": "dullは「退屈な」、または刃物などが「鈍い」という意味の形容詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vanish」の意味として最も適切なものは？",
+          "choices": ["消える、姿を消す", "現れる", "増える", "定着する"],
+          "correct": 0,
+          "explanation": "vanishは「（突然）消える、姿を消す」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「educate」の意味として最も適切なものは？",
+          "choices": ["教育する", "無視する", "罰する", "雇う"],
+          "correct": 0,
+          "explanation": "educateは人を「教育する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「violate」の意味として最も適切なものは？",
+          "choices": ["（法律・規則を）違反する", "遵守する", "制定する", "支持する"],
+          "correct": 0,
+          "explanation": "violateは法律や規則などに「違反する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abandon」の意味として最も適切なものは？",
+          "choices": ["放棄する、見捨てる", "維持する", "完成する", "保護する"],
+          "correct": 0,
+          "explanation": "abandonは計画や人などを「放棄する、見捨てる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「encounter」の意味として最も適切なものは？",
+          "choices": ["出会う、遭遇する", "避ける", "見失う", "忘れる"],
+          "correct": 0,
+          "explanation": "encounterは人や困難などに「出会う、遭遇する」という意味の動詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "総合復習編-9",
+      "type": "Mixed Review",
+      "emoji": "🎓",
+      "subtitle": "励まし・制度・組織に関する語彙！",
+      "questions": [
+        {
+          "scenario": "「encourage」の意味として最も適切なものは？",
+          "choices": ["励ます", "落胆させる", "無視する", "批判する"],
+          "correct": 0,
+          "explanation": "encourageは人を「励ます、勇気づける」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「endure」の意味として最も適切なものは？",
+          "choices": ["耐える", "諦める", "逃げる", "拒否する"],
+          "correct": 0,
+          "explanation": "endureは苦しみなどに「耐える」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enforce」の意味として最も適切なものは？",
+          "choices": ["施行する、強制する", "廃止する", "無視する", "提案する"],
+          "correct": 0,
+          "explanation": "enforceは法律などを「施行する、強制する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「engage」の意味として最も適切なものは？",
+          "choices": ["従事する、関わる", "避ける", "拒否する", "放棄する"],
+          "correct": 0,
+          "explanation": "engageは「（engage inで）〜に従事する、関わる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enroll」の意味として最も適切なものは？",
+          "choices": ["登録する、入学する", "退学する", "卒業する", "拒否する"],
+          "correct": 0,
+          "explanation": "enrollは学校やコースに「登録する、入学する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ensure」の意味として最も適切なものは？",
+          "choices": ["確実にする、保証する", "疑う", "妨げる", "無視する"],
+          "correct": 0,
+          "explanation": "ensureは「（〜を）確実にする、保証する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entertain」の意味として最も適切なものは？",
+          "choices": ["楽しませる", "退屈させる", "怒らせる", "罰する"],
+          "correct": 0,
+          "explanation": "entertainは人を「楽しませる」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「establish」の意味として最も適切なものは？",
+          "choices": ["設立する、確立する", "廃止する", "破壊する", "無視する"],
+          "correct": 0,
+          "explanation": "establishは組織や制度を「設立する、確立する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「examine」の意味として最も適切なものは？",
+          "choices": ["調べる、検査する", "無視する", "隠す", "破壊する"],
+          "correct": 0,
+          "explanation": "examineは物事を注意深く「調べる、検査する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exchange」の意味として最も適切なものは？",
+          "choices": ["交換する", "保持する", "破棄する", "隠す"],
+          "correct": 0,
+          "explanation": "exchangeは物やお金などを「交換する」という意味の動詞・名詞。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "総合復習編-10",
+      "type": "Mixed Review",
+      "emoji": "🌍",
+      "subtitle": "最後の総仕上げ、グローバルな語彙まで！",
+      "questions": [
+        {
+          "scenario": "「exclude」の意味として最も適切なものは？",
+          "choices": ["除外する", "含める", "追加する", "招待する"],
+          "correct": 0,
+          "explanation": "excludeは対象を「除外する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excuse」の意味として最も適切なものは？",
+          "choices": ["言い訳、許す", "罰", "命令", "疑い"],
+          "correct": 0,
+          "explanation": "excuseは「言い訳」という名詞、または「許す」という動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exist」の意味として最も適切なものは？",
+          "choices": ["存在する", "消滅する", "隠れる", "移動する"],
+          "correct": 0,
+          "explanation": "existは「存在する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expand」の意味として最も適切なものは？",
+          "choices": ["拡大する", "縮小する", "停止する", "破壊する"],
+          "correct": 0,
+          "explanation": "expandは規模や範囲を「拡大する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expect」の意味として最も適切なものは？",
+          "choices": ["期待する、予期する", "諦める", "忘れる", "拒否する"],
+          "correct": 0,
+          "explanation": "expectは「期待する、予期する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explain」の意味として最も適切なものは？",
+          "choices": ["説明する", "隠す", "混乱させる", "無視する"],
+          "correct": 0,
+          "explanation": "explainは物事を「説明する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explore」の意味として最も適切なものは？",
+          "choices": ["探検する", "避ける", "無視する", "破壊する"],
+          "correct": 0,
+          "explanation": "exploreは未知の場所などを「探検する、探索する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「export」の意味として最も適切なものは？",
+          "choices": ["輸出する", "輸入する", "廃棄する", "保管する"],
+          "correct": 0,
+          "explanation": "exportは商品などを「輸出する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expose」の意味として最も適切なものは？",
+          "choices": ["さらす、暴露する", "隠す", "保護する", "無視する"],
+          "correct": 0,
+          "explanation": "exposeは物事を「さらす」、秘密などを「暴露する」という意味の動詞。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extend」の意味として最も適切なものは？",
+          "choices": ["延長する、広げる", "短縮する", "中止する", "拒否する"],
+          "correct": 0,
+          "explanation": "extendは期間や範囲を「延長する、広げる」という意味の動詞。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}
