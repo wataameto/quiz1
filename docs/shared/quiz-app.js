@@ -566,10 +566,11 @@ async function showScoreHistory() {
         }
       });
       const decorated = history.map((h, idx) => ({ ...h, idx }));
+      const historyField = historyKey(level, t.id);
       const entriesHtml = decorated.length
         ? [...decorated].reverse().map(h =>
             `<div style="display:flex; align-items:center; gap:8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
-              <input type="checkbox" class="history-check" data-level="${level}" data-test="${t.id}" data-idx="${h.idx}">
+              <input type="checkbox" class="history-check" data-field="${historyField}" data-idx="${h.idx}">
               <span style="flex-shrink:0; color:#a0aec0; font-size:0.76rem; min-width:2.6em;">${h.no ? h.no + '回目' : ''}</span>
               <span style="flex:1; min-width:0;">${escapeHtml(h.date)}</span>
               <span style="font-weight:700; flex-shrink:0;">${Math.round(h.score / 100 * qCount)}/${qCount}問</span>
@@ -590,18 +591,22 @@ async function showScoreHistory() {
   const fullClearHistory = getFullClearHistory();
   if (lapHistory.length > 0 || earliestDate || fullClearHistory.length > 0) {
     const lapEntries = [];
-    if (earliestDate) lapEntries.push({ date: earliestDate.date, ts: earliestDate.ts, label: '🌟 1周目開始' });
-    lapHistory.forEach(h => {
+    if (earliestDate) lapEntries.push({ date: earliestDate.date, ts: earliestDate.ts, label: '🌟 1周目開始', field: null, idx: null });
+    lapHistory.forEach((h, idx) => {
       const ts = parseJstDateString(h.date);
-      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🌟 ${h.lap + 1}周目開始` });
+      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🌟 ${h.lap + 1}周目開始`, field: 'lapHistory', idx });
     });
-    fullClearHistory.forEach(h => {
+    fullClearHistory.forEach((h, idx) => {
       const ts = parseJstDateString(h.date);
-      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🎉 ${h.lap}周目全問正解（${h.attempts}回挑戦）` });
+      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🎉 ${h.lap}周目全問正解（${h.attempts}回挑戦）`, field: 'fullClearHistory', idx });
     });
     lapEntries.sort((a, b) => a.ts - b.ts);
     const lapEntriesHtml = [...lapEntries].reverse().map(e =>
-      `<div style="display:flex; justify-content:space-between; padding:4px 0; font-size:0.85rem; color:#4a5568;"><span>${escapeHtml(e.date)}</span><span style="font-weight:700;">${e.label}</span></div>`
+      `<div style="display:flex; align-items:center; gap:8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
+        ${e.field ? `<input type="checkbox" class="history-check" data-field="${e.field}" data-idx="${e.idx}">` : '<span style="width:16px; flex-shrink:0; display:inline-block;"></span>'}
+        <span style="flex:1; min-width:0;">${escapeHtml(e.date)}</span>
+        <span style="font-weight:700; flex-shrink:0;">${e.label}</span>
+      </div>`
     ).join('');
     partSections.unshift(
       `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c4a00; background:linear-gradient(135deg, #fffbea, #fff3c4); border-radius:8px; padding:8px 12px; margin-bottom:10px;">🌟 周回履歴</div>${lapEntriesHtml}</div>`
@@ -640,12 +645,10 @@ async function deleteSelectedHistory() {
 
   const groups = {};
   checked.forEach(cb => {
-    const level = cb.dataset.level;
-    const testId = cb.dataset.test;
+    const field = cb.dataset.field;
     const idx = parseInt(cb.dataset.idx, 10);
-    const key = historyKey(level, testId);
-    if (!groups[key]) groups[key] = new Set();
-    groups[key].add(idx);
+    if (!groups[field]) groups[field] = new Set();
+    groups[field].add(idx);
   });
 
   const updates = {};
