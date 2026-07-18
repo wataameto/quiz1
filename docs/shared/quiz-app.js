@@ -948,49 +948,42 @@ async function showHome() {
     bannerEl.style.display = bannerHtml ? 'block' : 'none';
   }
 
-  const currentLevelData = quizData[currentLevel];
-  const currentPartLabel = currentLevelData?.description || currentLevelData?.label || `パート ${currentLevel}`;
-  const currentPartCard = document.getElementById('current-part-card');
-
   const unitName = 'セット';
 
-  // レベル別スコアを計算・表示
+  // レベル別スコアを計算・表示（パートが1個だけの教材も同じアコーディオン表示に統一する）
   const partScoresSection = document.getElementById('part-scores-section');
   const partScoresList = document.getElementById('part-scores-list');
 
-  if (maxLevel > 1) {
-    if (currentPartCard) currentPartCard.style.display = 'none';
+  let partScoresHtml = '';
 
-    let partScoresHtml = '';
+  for (let level = 1; level <= maxLevel; level++) {
+    const levelData = quizData[level];
+    if (!levelData || !levelData.tests) continue;
 
-    for (let level = 1; level <= maxLevel; level++) {
-      const levelData = quizData[level];
-      if (!levelData || !levelData.tests) continue;
+    let levelCorrect = 0;
+    let levelExamAttempts = 0;
+    let levelPracticeAttempts = 0;
+    const levelQuestions = levelData.tests.reduce((sum, test) => (
+      sum + (Array.isArray(test.questions) ? test.questions.length : 0)
+    ), 0);
 
-      let levelCorrect = 0;
-      let levelExamAttempts = 0;
-      let levelPracticeAttempts = 0;
-      const levelQuestions = levelData.tests.reduce((sum, test) => (
-        sum + (Array.isArray(test.questions) ? test.questions.length : 0)
-      ), 0);
-
-      for (const t of levelData.tests) {
-        const best = await getBest(t.id, level);
-        if (best >= 0) {
-          const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
-          levelCorrect += Math.round(best / 100 * qCount);
-        }
-        const history = await getHistory(t.id, level);
-        levelExamAttempts += Math.max(getAttemptCount(t.id, level), history.length);
-        levelPracticeAttempts += getPracticeCount(t.id, level);
+    for (const t of levelData.tests) {
+      const best = await getBest(t.id, level);
+      if (best >= 0) {
+        const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
+        levelCorrect += Math.round(best / 100 * qCount);
       }
+      const history = await getHistory(t.id, level);
+      levelExamAttempts += Math.max(getAttemptCount(t.id, level), history.length);
+      levelPracticeAttempts += getPracticeCount(t.id, level);
+    }
 
-      const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
-      const isOpen = level === currentLevel && !homeCollapsed;
-      const blockClass = `part-block${isOpen ? ' open' : ''}${level === currentLevel ? ' active' : ''}`;
-      const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel, unitName);
+    const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
+    const isOpen = level === currentLevel && !homeCollapsed;
+    const blockClass = `part-block${isOpen ? ' open' : ''}${level === currentLevel ? ' active' : ''}`;
+    const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel, unitName);
 
-      partScoresHtml += `<div class="${blockClass}">
+    partScoresHtml += `<div class="${blockClass}">
         <div class="part-score-row" onclick="toggleLevel(${level});">
           <span class="part-name">${levelLabel}</span>
           <span class="part-value">試験 ${levelCorrect}/${levelQuestions}問(${levelExamAttempts}回)・演習/復習(${levelPracticeAttempts}回)</span>
@@ -998,23 +991,11 @@ async function showHome() {
         </div>
         <div class="part-set-list">${setRowsHtml}</div>
       </div>`;
-    }
-
-    partScoresList.innerHTML = partScoresHtml;
-    partScoresSection.style.display = 'block';
-    document.getElementById('test-grid').innerHTML = '';
-  } else {
-    partScoresSection.style.display = 'none';
-
-    if (currentLevelData && currentPartCard) {
-      currentPartCard.innerHTML = `<strong>現在のパート：${currentPartLabel}</strong>`;
-      currentPartCard.style.display = 'block';
-    } else if (currentPartCard) {
-      currentPartCard.style.display = 'none';
-    }
-
-    document.getElementById('test-grid').innerHTML = await buildSetRowsHtml(TESTS, currentLevel, currentPartLabel, unitName);
   }
+
+  partScoresList.innerHTML = partScoresHtml;
+  partScoresSection.style.display = 'block';
+  document.getElementById('test-grid').innerHTML = '';
 }
 
 async function buildSetRowsHtml(tests, level, partLabel, unitName) {
