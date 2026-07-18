@@ -34,7 +34,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### ファイル構成
 - アプリ本体は docs/ 配下の静的HTML/JSONで動く。アプリ名は「🏠満点まで帰れません✨」。
 - メインメニューは docs/index.html（単独ファイル、CSS/JSも内包）。
-- クイズページは docs/{quiz}/index.html（sample, sample2, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2 の15種）。15ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
+- クイズページは docs/{quiz}/index.html（sample, sample2, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, gentsuki の16種）。16ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
 - クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
 - 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。各ファイルは `id`（クイズスラッグ）を持つ必須フィールド。
 - ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。同スクリプトが8クイズページの `?v=` キャッシュバスティングと docs/quiz-meta.json（パート/セット/問題数の集計）も同時に生成する。
@@ -116,7 +116,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 1ファイルは { id, label, description, tests } を持つ。
 - tests[] は { id, title, emoji, type, subtitle, questions } を持つ。
 - questions[] は { id, scenario, choices, correct, type, explanation } を持つ。
-- type === 'choice' の choices は文字列配列。
+- type === 'choice' の choices は文字列配列。要素数は4択が基本だが、gentsuki（原付学科試験）は実際の試験形式に合わせて`["正しい", "誤り"]`の2択にしている（choices/correctの仕組み自体は要素数を問わないため、他の教材も2択で作問できる）。
 - type === 'journal' の choices は { debit: [{ account, amount }], credit: [{ account, amount }] } の配列。
 - correct は choices の0始まりインデックス。
 - 簿記の作問ルールは QUESTION_GUIDE.md を優先する。特に仕訳の勘定科目名として 売上 / 仕入 を使わない。

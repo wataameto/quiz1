@@ -19,7 +19,7 @@
 
 ## 主なファイル
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（15ファイルは同一内容で同期）。
+- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（16ファイルは同一内容で同期）。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
 - docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、全クリア・周回、Firebase連携）。
 - docs/config.json: クイズごとの表示名、色、説明。
