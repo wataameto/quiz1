@@ -502,6 +502,52 @@
       padding: 8px 0;
     }
 
+    .quiz-genre-nav-section {
+      margin-bottom: 14px;
+    }
+
+    .genre-nav-major {
+      margin: 8px 0 2px;
+    }
+
+    .genre-nav-minor-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 0 8px 10px;
+    }
+
+    .genre-nav-link {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .genre-nav-major-link {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #2d3748;
+    }
+
+    .genre-nav-major-link:hover {
+      color: #0066ff;
+    }
+
+    .genre-nav-minor-link {
+      display: inline-block;
+      padding: 3px 10px;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      color: #718096;
+      font-weight: 700;
+      font-size: 0.76rem;
+    }
+
+    .genre-nav-minor-link:hover {
+      border-color: #0066ff;
+      color: #0066ff;
+    }
+
     .quiz-toggle-section {
       margin-bottom: 14px;
     }
@@ -736,6 +782,11 @@
         <span class="score-summary-total">合計：<span id="score-total">0</span>/<span id="score-grand-total">0</span>問正解</span>
       </div>
       <div id="score-summary-rows"></div>
+    </div>
+
+    <div class="quiz-genre-nav-section">
+      <h3 class="quiz-toggle-heading">教材ジャンル</h3>
+      <div id="quiz-genre-nav"></div>
     </div>
 
     <div class="quiz-toggle-section">
@@ -1134,6 +1185,24 @@ function groupByGenre(items) {
   return groups;
 }
 
+function renderGenreNav() {
+  const groups = groupByGenre(lastQuizResults);
+  let html = '';
+  groups.forEach(major => {
+    if (major.children) {
+      html += `<div class="genre-nav-major"><a href="#genre-anchor-${major.id}" class="genre-nav-link genre-nav-major-link">${major.label}</a></div>`;
+      html += `<div class="genre-nav-minor-list">`;
+      major.children.forEach(child => {
+        html += `<a href="#genre-anchor-${child.id}" class="genre-nav-link genre-nav-minor-link">${child.label}（${child.items.length}）</a>`;
+      });
+      html += `</div>`;
+    } else {
+      html += `<div class="genre-nav-major"><a href="#genre-anchor-${major.id}" class="genre-nav-link genre-nav-major-link">${major.label}（${major.items.length}）</a></div>`;
+    }
+  });
+  document.getElementById('quiz-genre-nav').innerHTML = html;
+}
+
 function renderScoreRowHtml(r) {
   const lap = r.score.lap || 0;
   const isFull = r.meta.total > 0 && r.score.correct === r.meta.total;
@@ -1172,6 +1241,7 @@ async function updateScoreDisplay() {
     return { id, path, collection, emoji: cfg.icon || '', name: cfg.heading || id, description: cfg.description || '', genreMajor: cfg.genreMajor || null, genreMinor: cfg.genreMinor || null, meta, score };
   }));
   lastQuizResults = results;
+  renderGenreNav();
 
   let totalCorrect = 0;
   let totalQuestions = 0;
@@ -1251,10 +1321,10 @@ function renderQuizToggleList() {
 
   let toggleHtml = '';
   groupByGenre(filtered).forEach(major => {
-    toggleHtml += `<h4 class="genre-heading-major">${major.label}</h4>`;
+    toggleHtml += `<h4 class="genre-heading-major" id="genre-anchor-${major.id}">${major.label}</h4>`;
     if (major.children) {
       major.children.forEach(child => {
-        toggleHtml += `<h5 class="genre-heading-minor">${child.label}</h5>`;
+        toggleHtml += `<h5 class="genre-heading-minor" id="genre-anchor-${child.id}">${child.label}</h5>`;
         child.items.forEach(r => { toggleHtml += toggleRowHtml(r); });
       });
     } else {
