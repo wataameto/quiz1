@@ -108,5 +108,27 @@
     "topGradient": "linear-gradient(90deg, #396afc, #2948ff, #c471ed, #f7797d)",
     "accentColor": "#2948ff",
     "accentActive": "linear-gradient(135deg, #f0f4ff, #e8ecff)"
+  },
+  "showa": {
+    "title": "🎏 昭和レトロ雑学",
+    "heading": "昭和レトロ雑学",
+    "description": "昭和のくらし・家電、テレビ・娯楽、出来事・世相、音楽・芸能を扱う懐かし雑学クイズ。三種の神器から昭和のスターまで幅広くカバー",
+    "icon": "🎏",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #d76d77, #ffaf7b, #3a1c71, #ffd452)",
+    "accentColor": "#d76d77",
+    "accentActive": "linear-gradient(135deg, #fff5f0, #ffece0)"
+  },
+  "heisei": {
+    "title": "📼 平成レトロ雑学",
+    "heading": "平成レトロ雑学",
+    "description": "平成のIT・ガジェット、テレビ・ゲーム・娯楽、出来事・世相、音楽・芸能を扱う懐かし雑学クイズ。ポケベルからスマホ普及までの時代の変化を振り返る",
+    "icon": "📼",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #00c6ff, #0072ff, #ff6a95, #ffc371)",
+    "accentColor": "#0072ff",
+    "accentActive": "linear-gradient(135deg, #eef7ff, #e0f0ff)"
   }
 }
