@@ -119,6 +119,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 仕訳問題（choicesが { debit: [{ account, amount }], credit: [{ account, amount }] } の配列）かどうかは、`isJournalQuestion(q)`（docs/shared/quiz-app.js）が`choices[0]`が文字列かオブジェクトかで自動判別する。新規に仕訳問題を作るときも`type`フィールドを付ける必要はない。
 - 通常の選択式（choicesが文字列配列）は要素数4択が基本だが、gentsuki（原付学科試験）は実際の試験形式に合わせて`["正しい", "誤り"]`の2択にしている（choices/correctの仕組み自体は要素数を問わないため、他の教材も2択で作問できる）。
 - correct は choices の0始まりインデックス。
+- 記述式（自由入力）問題は `type: "text"` を持ち、choices/correctの代わりに`correctText`（正解の代表表記）と任意の`acceptedAnswers`（表記ゆれの許容リスト）を持つ。`isTextQuestion(q)`（docs/shared/quiz-app.js、questionレベルの`type`フィールドを実際に読む数少ない用途）が判定し、判定ロジックは`isTextAnswerCorrect(q, typed)`（NFKC正規化＋空白除去＋小文字化のみ、かな/漢字のゆらぎ吸収はしない）。`docs/sample3/`が最小構成のサンプル。
 - 簿記の作問ルールは QUESTION_GUIDE.md を優先する。特に仕訳の勘定科目名として 売上 / 仕入 を使わない。
 
 ### テストで守っていること

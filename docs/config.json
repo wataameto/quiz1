@@ -21,6 +21,17 @@
     "accentColor": "#38b48b",
     "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
   },
+  "sample3": {
+    "title": "✏️ サンプル教材3（記述式・最小構成）",
+    "heading": "サンプル教材3（記述式・最小構成）",
+    "description": "動作確認・お試し用の記述式（自由入力）サンプル教材。1パート・1セット・1問という最小構成で収録",
+    "icon": "✏️",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #a8ff78, #78ffd6, #f6d365, #fda085)",
+    "accentColor": "#38b48b",
+    "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
+  },
   "bokinyu": {
     "title": "📚 簿記超入門レベル",
     "heading": "簿記超入門レベル",

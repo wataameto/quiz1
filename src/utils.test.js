@@ -9,6 +9,9 @@ const {
   getScoreMessage,
   isValidQuizData,
   isValidTest,
+  isTextQuestion,
+  normalizeAnswerText,
+  isTextAnswerCorrect,
 } = require('./utils');
 
 // ============================================================
@@ -417,5 +420,72 @@ describe('isValidTest - Validate test structure', () => {
       questions: [{ scenario: 'Q1', choices: [] }],
     };
     expect(isValidTest(test)).toBe(false);
+  });
+});
+
+// ============================================================
+// isTextQuestion / normalizeAnswerText / isTextAnswerCorrect Tests - 記述式判定・照合
+// ============================================================
+describe('isTextQuestion - 記述式問題判定', () => {
+  test('should detect a text-type question', () => {
+    expect(isTextQuestion({ type: 'text', correctText: '東京' })).toBe(true);
+  });
+
+  test('should not detect a normal choice question', () => {
+    expect(isTextQuestion({ choices: ['a', 'b'], correct: 0 })).toBe(false);
+  });
+
+  test('should not detect a journal question', () => {
+    expect(isTextQuestion({ choices: [{ debit: [], credit: [] }], correct: 0 })).toBe(false);
+  });
+});
+
+describe('normalizeAnswerText - 記述式解答の正規化', () => {
+  test('should trim surrounding whitespace including full-width space', () => {
+    expect(normalizeAnswerText('　東京　')).toBe('東京');
+  });
+
+  test('should lowercase alphabetic answers', () => {
+    expect(normalizeAnswerText('Tokyo')).toBe('tokyo');
+  });
+
+  test('should normalize full-width alphanumerics via NFKC', () => {
+    expect(normalizeAnswerText('Ｔｏｋｙｏ')).toBe('tokyo');
+  });
+
+  test('should collapse internal whitespace', () => {
+    expect(normalizeAnswerText('東 京')).toBe('東京');
+  });
+});
+
+describe('isTextAnswerCorrect - 記述式解答の正誤判定', () => {
+  const q = { correctText: '東京', acceptedAnswers: ['とうきょう', 'Tokyo'] };
+
+  test('should accept the exact correctText', () => {
+    expect(isTextAnswerCorrect(q, '東京')).toBe(true);
+  });
+
+  test('should accept an acceptedAnswers entry', () => {
+    expect(isTextAnswerCorrect(q, 'とうきょう')).toBe(true);
+  });
+
+  test('should accept case-insensitive romaji variant', () => {
+    expect(isTextAnswerCorrect(q, 'tokyo')).toBe(true);
+  });
+
+  test('should accept answers with surrounding whitespace', () => {
+    expect(isTextAnswerCorrect(q, '  東京  ')).toBe(true);
+  });
+
+  test('should reject a wrong answer', () => {
+    expect(isTextAnswerCorrect(q, '大阪')).toBe(false);
+  });
+
+  test('should reject an empty answer', () => {
+    expect(isTextAnswerCorrect(q, '')).toBe(false);
+  });
+
+  test('should work with no acceptedAnswers provided', () => {
+    expect(isTextAnswerCorrect({ correctText: '東京' }, '東京')).toBe(true);
   });
 });

@@ -48,6 +48,11 @@ describe.each(quizzes)('Question quality: %s', (quiz) => {
     items.forEach(({ question }, i) => {
       const item = items[i];
       expect(question.scenario).toBeTruthy();
+      if (question.type === 'text') {
+        expect(question.correctText).toBeTruthy();
+        expect(question.explanation).toBeTruthy();
+        return;
+      }
       expect(Array.isArray(question.choices)).toBe(true);
       expect(question.choices.length).toBeGreaterThanOrEqual(2);
       expect(Number.isInteger(question.correct)).toBe(true);
@@ -59,6 +64,7 @@ describe.each(quizzes)('Question quality: %s', (quiz) => {
 
   test('no question has duplicate choices', () => {
     const offenders = items.filter(({ question }) => {
+      if (question.type === 'text') return false;
       const unique = new Set(question.choices.map(choice => JSON.stringify(choice)));
       return unique.size !== question.choices.length;
     });

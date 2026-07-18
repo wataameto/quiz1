@@ -1,0 +1,24 @@
+{
+  "id": "sample3",
+  "level": 1,
+  "label": "🟢 初級",
+  "description": "初級",
+  "tests": [
+    {
+      "id": 1,
+      "title": "✏️ 初級-1",
+      "type": "記述式サンプル",
+      "emoji": "✏️",
+      "subtitle": "1パート・1セット・1問の記述式（自由入力）最小構成テスト用！",
+      "questions": [
+        {
+          "scenario": "日本の首都は？",
+          "type": "text",
+          "correctText": "東京",
+          "acceptedAnswers": ["とうきょう", "Tokyo"],
+          "explanation": "日本の首都は東京都。1868年（明治元年）に江戸から東京に改称され、事実上の首都機能を持つようになった。"
+        }
+      ]
+    }
+  ]
+}

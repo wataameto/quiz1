@@ -67,6 +67,26 @@ function getScoreMessage(ratio) {
   return '😅 もう一度';
 }
 
+// Determine whether a question is a free-text (記述式) question
+function isTextQuestion(q) {
+  return q.type === 'text';
+}
+
+// Normalize free-text answers for comparison (NFKC + whitespace strip + lowercase)
+function normalizeAnswerText(s) {
+  return String(s)
+    .normalize('NFKC')
+    .replace(/[　\s]+/g, '')
+    .toLowerCase();
+}
+
+// Check whether a typed answer matches the correct answer or one of its accepted variants
+function isTextAnswerCorrect(q, typed) {
+  const candidates = [q.correctText, ...(q.acceptedAnswers || [])];
+  const normTyped = normalizeAnswerText(typed);
+  return candidates.some(c => normalizeAnswerText(c) === normTyped);
+}
+
 // Validate quiz data structure
 function isValidQuizData(data) {
   if (!data || typeof data !== 'object') return false;
@@ -98,4 +118,7 @@ module.exports = {
   getScoreMessage,
   isValidQuizData,
   isValidTest,
+  isTextQuestion,
+  normalizeAnswerText,
+  isTextAnswerCorrect,
 };

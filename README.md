@@ -11,15 +11,19 @@
 - itpassjr: ITパスポートJr（やさしい版）
 - sapc02: AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)
 - sample: 動作確認・お試し用のミニ教材
+- sample2: 動作確認用の最小構成サンプル（1パート・1セット・1問）
+- sample3: 記述式（自由入力）問題タイプの最小構成サンプル
 - fp3kyuu: FP技能検定3級
 - takken: 宅地建物取引士（宅建士）
 - shouwa: 昭和レトロ雑学
 - heisei: 平成レトロ雑学
 - capital: 世界の首都クイズ
+- eiken2: 英検2級 単語・熟語
+- gentsuki: 原付学科試験
 
 ## 主なファイル
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（16ファイルは同一内容で同期）。
+- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（17ファイルは同一内容で同期）。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
 - docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、全クリア・周回、Firebase連携）。
 - docs/config.json: クイズごとの表示名、色、説明。

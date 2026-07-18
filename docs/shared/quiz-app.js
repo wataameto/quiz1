@@ -286,12 +286,19 @@ function showAdmin() {
       test.questions.forEach((question, qIndex) => {
         lines.push('');
         lines.push(`Q${qIndex + 1}. ${question.scenario}`);
-        question.choices.forEach((choice, choiceIndex) => {
-          const isCorrect = choiceIndex === question.correct;
-          const label = String.fromCharCode(65 + choiceIndex);
-          const choiceText = isJournalQuestion(question) ? journalText(choice) : choice;
-          lines.push(`${isCorrect ? '*' : ' '} ${label}. ${choiceText}`);
-        });
+        if (isTextQuestion(question)) {
+          lines.push(`* 正解: ${question.correctText}`);
+          if (question.acceptedAnswers && question.acceptedAnswers.length > 0) {
+            lines.push(`  許容: ${question.acceptedAnswers.join(', ')}`);
+          }
+        } else {
+          question.choices.forEach((choice, choiceIndex) => {
+            const isCorrect = choiceIndex === question.correct;
+            const label = String.fromCharCode(65 + choiceIndex);
+            const choiceText = isJournalQuestion(question) ? journalText(choice) : choice;
+            lines.push(`${isCorrect ? '*' : ' '} ${label}. ${choiceText}`);
+          });
+        }
         if (question.explanation) {
           lines.push(`解説: ${question.explanation}`);
         }
@@ -1062,6 +1069,27 @@ function isJournalQuestion(q) {
   return Array.isArray(q.choices) && q.choices.length > 0 && typeof q.choices[0] === 'object';
 }
 
+// ============================================================
+// 記述式（自由入力）問題
+// ============================================================
+
+function isTextQuestion(q) {
+  return q.type === 'text';
+}
+
+function normalizeAnswerText(s) {
+  return String(s)
+    .normalize('NFKC')
+    .replace(/[　\s]+/g, '')
+    .toLowerCase();
+}
+
+function isTextAnswerCorrect(q, typed) {
+  const candidates = [q.correctText, ...(q.acceptedAnswers || [])];
+  const normTyped = normalizeAnswerText(typed);
+  return candidates.some(c => normalizeAnswerText(c) === normTyped);
+}
+
 function fmt(n) { return '¥' + n.toLocaleString(); }
 
 function renderJournal(entry) {
@@ -1218,6 +1246,7 @@ function renderQuestion() {
   const q = currentTest.questions[currentQ];
   const total = currentTest.questions.length;
   const isJ = isJournalQuestion(q); // 仕訳問題判定（choicesの中身の形で自動判別）
+  const isText = isTextQuestion(q); // 記述式問題判定
   const pct = Math.round((currentQ / total) * 100);
 
   document.getElementById('quiz-title').textContent    = currentTest.title;
@@ -1234,6 +1263,18 @@ function renderQuestion() {
 
   const choicesEl = document.getElementById('choices');
   choicesEl.innerHTML = ''; // 前の問題の状態をクリア
+
+  if (isText) {
+    choicesEl.innerHTML = `<div class="text-answer-row">
+      <input type="text" id="text-answer-input" class="text-answer-input" autocomplete="off" placeholder="答えを入力">
+      <button class="text-submit-btn" id="text-submit-btn" onclick="submitTextAnswer()">回答する</button>
+    </div>`;
+    setTimeout(() => {
+      const input = document.getElementById('text-answer-input');
+      if (input) input.focus();
+    }, 500);
+    return;
+  }
 
   const indexed = shuffle(q.choices.map((c, i) => ({ choice: c, origIdx: i })));
   shuffledChoices = indexed;
@@ -1311,6 +1352,51 @@ function answer(idx, correctIdx) {
   document.getElementById('next-btn').style.display = 'none';
 }
 
+function submitTextAnswer() {
+  if (answerInProgress) return; // 複数実行防止
+  const input = document.getElementById('text-answer-input');
+  const typed = input ? input.value : '';
+  answerInProgress = true;
+
+  const q = currentTest.questions[currentQ];
+  const ok = isTextAnswerCorrect(q, typed);
+  answers.push({ correct: ok, typedAnswer: typed });
+
+  if (input) input.disabled = true;
+  const submitBtn = document.getElementById('text-submit-btn');
+  if (submitBtn) submitBtn.disabled = true;
+
+  const isLast = currentQ === currentTest.questions.length - 1;
+  const goNext = () => {
+    soundClick();
+    isLast ? showResults() : nextQuestion();
+  };
+  const nextLabel = isLast ? '➡️ 結果を見る' : '➡️ 次の問題';
+
+  const resultHtml = ok
+    ? `<div class="text-answer-result correct">✅ 正解！「${escapeHtml(typed)}」</div>`
+    : `<div class="text-answer-result wrong">❌ 正解: ${escapeHtml(q.correctText)}（あなたの回答: ${escapeHtml(typed || '(空欄)')}）</div>`;
+  document.getElementById('choices').insertAdjacentHTML('beforeend', `${resultHtml}<button class="choice-btn" id="text-next-btn" disabled>${nextLabel}</button>`);
+  const nextBtn = document.getElementById('text-next-btn');
+  nextBtn.onclick = goNext;
+  // 答え合わせ表示後 0.5秒はクリック受け付けない
+  setTimeout(() => { nextBtn.disabled = false; }, 500);
+
+  const fb = document.getElementById('feedback');
+  fb.className = `feedback ${ok ? 'correct' : 'wrong'}`;
+  fb.textContent = ok ? CORRECT_MSGS[Math.floor(Math.random() * CORRECT_MSGS.length)] : WRONG_MSGS[Math.floor(Math.random() * WRONG_MSGS.length)];
+
+  if (q.explanation) {
+    const exp = document.getElementById('explanation');
+    exp.innerHTML = '💡 ' + escapeHtml(q.explanation) + searchIconHtml(q.explanation);
+    exp.className = 'explanation show';
+  }
+
+  ok ? soundCorrect() : soundWrong();
+
+  document.getElementById('next-btn').style.display = 'none';
+}
+
 function nextQuestion() { currentQ++; renderQuestion(); }
 
 async function showResults() {
@@ -1361,8 +1447,8 @@ async function showResults() {
 
   document.getElementById('answer-list').innerHTML = currentTest.questions.map((q, i) => {
     const ans = answers[i];
-    const correctText = escapeHtml(isJournalQuestion(q) ? journalText(q.choices[q.correct]) : q.choices[q.correct]);
-    const chosenText = escapeHtml(isJournalQuestion(q) ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx]);
+    const correctText = escapeHtml(isTextQuestion(q) ? q.correctText : (isJournalQuestion(q) ? journalText(q.choices[q.correct]) : q.choices[q.correct]));
+    const chosenText = escapeHtml(isTextQuestion(q) ? (ans.typedAnswer || '(空欄)') : (isJournalQuestion(q) ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx]));
     let detail = `<span>${escapeHtml(q.scenario)}</span>${searchIconHtml(q.scenario)}<br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
     if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
     if (q.explanation) detail += `<div class="exp">💡 ${escapeHtml(q.explanation)}${searchIconHtml(q.explanation)}</div>`;
@@ -1386,6 +1472,21 @@ function startReview() {
 document.addEventListener('keydown', (e) => {
   if (document.getElementById('screen-quiz').classList.contains('hidden')) return;
   const key = e.key.toLowerCase();
+  const isText = isTextQuestion(currentTest.questions[currentQ]);
+
+  if (isText) {
+    // 記述式: 未回答時は入力欄でのEnterで送信、回答後はEnterで次へ
+    if (!answerInProgress) {
+      if (key === 'enter' && document.activeElement && document.activeElement.id === 'text-answer-input') {
+        e.preventDefault();
+        submitTextAnswer();
+      }
+    } else if (key === 'enter') {
+      const nextBtn = document.getElementById('text-next-btn');
+      if (nextBtn && !nextBtn.disabled) nextBtn.click();
+    }
+    return;
+  }
 
   if (!answerInProgress) {
     // 回答前: a/b/c/d で選択
