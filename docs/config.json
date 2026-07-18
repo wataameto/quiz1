@@ -220,6 +220,19 @@
     "accentColor": "#60d394",
     "accentActive": "linear-gradient(135deg, #f0fff4, #e6ffe9)"
   },
+  "eiken4": {
+    "title": "📙 英検4級 単語・熟語",
+    "heading": "英検4級 単語・熟語",
+    "genreMajor": "shikaku",
+    "genreMinor": "houritsu_sonota_shikaku",
+    "description": "実用英語技能検定4級レベルの重要単語・熟語クイズ。意思表現の動詞、人間関係、地形、感情の形容詞などの10セット（100語）で合格へ！",
+    "icon": "📙",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #b388ff 0%, #e040fb 100%)",
+    "accentColor": "#d500f9",
+    "accentActive": "linear-gradient(135deg, #fdf0ff, #fae0ff)"
+  },
   "gentsuki": {
     "title": "🛵 原付学科試験",
     "heading": "原付学科試験",
