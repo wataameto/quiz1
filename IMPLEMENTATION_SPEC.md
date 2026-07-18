@@ -34,7 +34,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### ファイル構成
 - アプリ本体は docs/ 配下の静的HTML/JSONで動く。アプリ名は「🏠満点まで帰れません✨」。
 - メインメニューは docs/index.html（単独ファイル、CSS/JSも内包）。
-- クイズページは docs/{quiz}/index.html（boki1, devops, kokyo1, joho1, itpassport, itpassportjr, sap, sample, fp3 の9種）。9ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
+- クイズページは docs/{quiz}/index.html（boki1, devops, kokyo1, joho1, itpassport, itpassportjr, sap, sample, fp3, takken の10種）。10ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
 - クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
 - 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。各ファイルは `id`（クイズスラッグ）を持つ必須フィールド。
 - ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。同スクリプトが8クイズページの `?v=` キャッシュバスティングと docs/quiz-meta.json（パート/セット/問題数の集計）も同時に生成する。
