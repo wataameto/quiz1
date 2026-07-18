@@ -509,21 +509,25 @@
     }
 
     .genre-nav-major-btn {
-      background: none;
-      border: none;
-      padding: 0;
-      font-size: 0.88rem;
-      font-weight: 800;
+      display: inline-block;
+      padding: 3px 12px;
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
       color: #2d3748;
+      font-weight: 800;
+      font-size: 0.86rem;
     }
 
     .genre-nav-major-btn:hover {
+      border-color: #0066ff;
       color: #0066ff;
     }
 
     .genre-nav-major-btn.selected {
-      color: #0066ff;
-      text-decoration: underline;
+      background: #0066ff;
+      border-color: #0066ff;
+      color: #fff;
     }
 
     .genre-nav-minor-btn {
@@ -550,7 +554,7 @@
 
     .genre-nav-reset-btn {
       display: block;
-      margin-top: 6px;
+      margin: 6px 0 0 auto;
       padding: 4px 12px;
       background: none;
       border: 1px solid #cbd5e0;
@@ -1261,7 +1265,7 @@ function renderGenreNav() {
       html += `<div class="genre-nav-major">${genreNavButtonHtml(major.id, major.label, major.items.length, 'genre-nav-major-btn')}</div>`;
     }
   });
-  html += `<button type="button" class="genre-nav-reset-btn" onclick="resetGenreFilter()">🔄 リセット</button>`;
+  html += `<button type="button" class="genre-nav-reset-btn" onclick="resetGenreFilter()">✖️ リセット</button>`;
   document.getElementById('quiz-genre-nav').innerHTML = html;
 }
 
