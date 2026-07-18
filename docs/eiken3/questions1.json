@@ -1,0 +1,198 @@
+{
+  "id": "eiken3",
+  "level": 1,
+  "label": "📚 英検3級 単語・熟語",
+  "description": "実用英語技能検定3級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の10セット（100語）で中学卒業程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編①：基本動作・状態",
+      "type": "Basic Verbs 1",
+      "emoji": "🏃",
+      "subtitle": "3級頻出の基本動詞をマスターしよう",
+      "questions": [
+        {"scenario": "「achieve」の意味として最も適切なものは？", "choices": ["達成する、成し遂げる", "失敗する", "諦める", "始める"], "correct": 0, "explanation": "achieveは「達成する、成し遂げる」という意味の動詞です。例: achieve a goal（目標を達成する）", "type": "choice"},
+        {"scenario": "「behave」の意味として最も適切なものは？", "choices": ["振る舞う、行動する", "壊す", "作る", "止める"], "correct": 0, "explanation": "behaveは「振る舞う、行動する」という意味です。例: behave well（良く振る舞う）", "type": "choice"},
+        {"scenario": "「choose」の意味として最も適切なものは？", "choices": ["選ぶ", "捨てる", "拾う", "隠す"], "correct": 0, "explanation": "chooseは「選ぶ」という意味の動詞です。過去形はchose、過去分詞はchosenです。", "type": "choice"},
+        {"scenario": "「continue」の意味として最も適切なものは？", "choices": ["続ける、継続する", "止める", "始める", "変える"], "correct": 0, "explanation": "continueは「続ける、継続する」という意味です。例: continue studying（勉強を続ける）", "type": "choice"},
+        {"scenario": "「decide」の意味として最も適切なものは？", "choices": ["決める、決心する", "迷う", "忘れる", "変える"], "correct": 0, "explanation": "decideは「決める、決心する」という意味です。例: decide to go（行くと決める）", "type": "choice"},
+        {"scenario": "「develop」の意味として最も適切なものは？", "choices": ["発展させる、開発する", "壊す", "減らす", "隠す"], "correct": 0, "explanation": "developは「発展させる、開発する、成長する」という意味です。例: develop a new product（新製品を開発する）", "type": "choice"},
+        {"scenario": "「explain」の意味として最も適切なものは？", "choices": ["説明する", "質問する", "答える", "聞く"], "correct": 0, "explanation": "explainは「説明する」という意味です。例: explain the reason（理由を説明する）", "type": "choice"},
+        {"scenario": "「improve」の意味として最も適切なものは？", "choices": ["改善する、上達する", "悪化する", "変わらない", "止める"], "correct": 0, "explanation": "improveは「改善する、上達する」という意味です。例: improve your English（英語を上達させる）", "type": "choice"},
+        {"scenario": "「invite」の意味として最も適切なものは？", "choices": ["招待する、誘う", "断る", "去る", "無視する"], "correct": 0, "explanation": "inviteは「招待する、誘う」という意味です。例: invite a friend（友達を誘う）", "type": "choice"},
+        {"scenario": "「prepare」の意味として最も適切なものは？", "choices": ["準備する、用意する", "片付ける", "捨てる", "忘れる"], "correct": 0, "explanation": "prepareは「準備する、用意する」という意味です。例: prepare for the exam（試験の準備をする）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編②：コミュニケーション・思考",
+      "type": "Basic Verbs 2",
+      "emoji": "💭",
+      "subtitle": "伝える・考える・感じるに関わる動詞",
+      "questions": [
+        {"scenario": "「agree」の意味として最も適切なものは？", "choices": ["同意する、賛成する", "反対する", "無視する", "疑う"], "correct": 0, "explanation": "agreeは「同意する、賛成する」という意味です。例: I agree with you.（あなたに同意します。）", "type": "choice"},
+        {"scenario": "「believe」の意味として最も適切なものは？", "choices": ["信じる、思う", "疑う", "知る", "忘れる"], "correct": 0, "explanation": "believeは「信じる、思う」という意味です。例: I believe you.（私はあなたを信じます。）", "type": "choice"},
+        {"scenario": "「discuss」の意味として最も適切なものは？", "choices": ["議論する、話し合う", "決める", "発表する", "聞く"], "correct": 0, "explanation": "discussは「議論する、話し合う」という意味です。議論を表す名詞discussionの動詞形です。", "type": "choice"},
+        {"scenario": "「expect」の意味として最も適切なものは？", "choices": ["期待する、予想する", "驚く", "諦める", "拒否する"], "correct": 0, "explanation": "expectは「期待する、予想する」という意味です。例: expect good results（良い結果を期待する）", "type": "choice"},
+        {"scenario": "「guess」の意味として最も適切なものは？", "choices": ["推測する、当てる", "知る", "証明する", "計算する"], "correct": 0, "explanation": "guessは「推測する、当てる」という意味です。例: Guess what?（何だと思う？）", "type": "choice"},
+        {"scenario": "「promise」の意味として最も適切なものは？", "choices": ["約束する", "嘘をつく", "忘れる", "変更する"], "correct": 0, "explanation": "promiseは「約束する」という意味の動詞・名詞です。例: promise to come（来ると約束する）", "type": "choice"},
+        {"scenario": "「suggest」の意味として最も適切なものは？", "choices": ["提案する、示唆する", "命令する", "拒否する", "質問する"], "correct": 0, "explanation": "suggestは「提案する、示唆する」という意味です。例: suggest a plan（計画を提案する）", "type": "choice"},
+        {"scenario": "「suppose」の意味として最も適切なものは？", "choices": ["推測する、思う", "確信する", "証明する", "否定する"], "correct": 0, "explanation": "supposeは「推測する、〜だと思う」という意味です。例: I suppose so.（そうだと思います。）", "type": "choice"},
+        {"scenario": "「understand」の意味として最も適切なものは？", "choices": ["理解する、分かる", "誤解する", "知らない", "忘れる"], "correct": 0, "explanation": "understandは「理解する、分かる」という意味です。例: I understand.（分かりました。）", "type": "choice"},
+        {"scenario": "「worry」の意味として最も適切なものは？", "choices": ["心配する、悩む", "安心する", "喜ぶ", "怒る"], "correct": 0, "explanation": "worryは「心配する、悩む」という意味の動詞・名詞です。例: Don't worry.（心配しないで。）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編①：学校・勉強・仕事",
+      "type": "Nouns: School & Work",
+      "emoji": "🏫",
+      "subtitle": "学校生活や将来の仕事に関わる重要名詞",
+      "questions": [
+        {"scenario": "「exam」の意味として最も適切なものは？", "choices": ["試験、検査", "授業", "宿題", "教科書"], "correct": 0, "explanation": "examは「試験」という意味の名詞です。examinationの略語です。例: entrance exam（入学試験）", "type": "choice"},
+        {"scenario": "「subject」の意味として最も適切なものは？", "choices": ["教科、科目、主題", "先生", "学生", "教室"], "correct": 0, "explanation": "subjectは「教科、科目」または「主題、テーマ」という意味です。例: favorite subject（好きな教科）", "type": "choice"},
+        {"scenario": "「degree」の意味として最も適切なものは？", "choices": ["学位、程度、度", "点数", "順位", "単位"], "correct": 0, "explanation": "degreeは大学の「学位」、または温度や角度の「度」、程度を表します。例: a master's degree（修士号）", "type": "choice"},
+        {"scenario": "「career」の意味として最も適切なものは？", "choices": ["経歴、職業人生", "趣味", "休暇", "学校"], "correct": 0, "explanation": "careerは「経歴、職業人生、キャリア」という意味です。例: career plan（キャリアプラン）", "type": "choice"},
+        {"scenario": "「salary」の意味として最も適切なものは？", "choices": ["給料、月給", "ボーナス", "手当", "年金"], "correct": 0, "explanation": "salaryは「給料、月給」という意味です。例: monthly salary（月給）", "type": "choice"},
+        {"scenario": "「interview」の意味として最も適切なものは？", "choices": ["面接、インタビュー", "会議", "試験", "説明会"], "correct": 0, "explanation": "interviewは「面接、面談、インタビュー」という意味です。例: job interview（就職面接）", "type": "choice"},
+        {"scenario": "「application」の意味として最も適切なものは？", "choices": ["応募、申請、申込書", "合格", "不合格", "卒業"], "correct": 0, "explanation": "applicationは「応募、申請」または「申込書」という意味です。apply（応募する）の名詞形です。", "type": "choice"},
+        {"scenario": "「qualification」の意味として最も適切なものは？", "choices": ["資格、免許", "学歴", "経験", "能力"], "correct": 0, "explanation": "qualificationは「資格、免許、適格性」という意味です。例: teaching qualification（教員免許）", "type": "choice"},
+        {"scenario": "「training」の意味として最も適切なものは？", "choices": ["訓練、研修、トレーニング", "休憩", "遊び", "旅行"], "correct": 0, "explanation": "trainingは「訓練、研修、トレーニング」という意味です。train（訓練する）の名詞形です。", "type": "choice"},
+        {"scenario": "「deadline」の意味として最も適切なものは？", "choices": ["締め切り、期限", "開始", "延長", "中止"], "correct": 0, "explanation": "deadlineは「締め切り、期限」という意味です。例: meet the deadline（締め切りを守る）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編②：社会・生活・環境",
+      "type": "Nouns: Society & Life",
+      "emoji": "🌏",
+      "subtitle": "ニュースや日常会話で頻出する社会的名詞",
+      "questions": [
+        {"scenario": "「environment」の意味として最も適切なものは？", "choices": ["環境", "経済", "政治", "文化"], "correct": 0, "explanation": "environmentは「環境、周囲の状況」という意味です。例: protect the environment（環境を守る）", "type": "choice"},
+        {"scenario": "「pollution」の意味として最も適切なものは？", "choices": ["汚染、公害", "清掃", "保護", "開発"], "correct": 0, "explanation": "pollutionは「汚染、公害」という意味です。例: air pollution（大気汚染）", "type": "choice"},
+        {"scenario": "「recycle」の意味として最も適切なものは？", "choices": ["リサイクルする、再利用する", "捨てる", "燃やす", "埋める"], "correct": 0, "explanation": "recycleは「リサイクルする、再利用する」という動詞・名詞です。re-（再び）+ cycle（循環）です。", "type": "choice"},
+        {"scenario": "「energy」の意味として最も適切なものは？", "choices": ["エネルギー、活力", "電気", "ガス", "石油"], "correct": 0, "explanation": "energyは「エネルギー、活力、元気」という意味です。例: renewable energy（再生可能エネルギー）", "type": "choice"},
+        {"scenario": "「population」の意味として最も適切なものは？", "choices": ["人口", "面積", "密度", "都市"], "correct": 0, "explanation": "populationは「人口」という意味です。例: world population（世界人口）", "type": "choice"},
+        {"scenario": "「government」の意味として最も適切なものは？", "choices": ["政府、政権", "国会", "裁判所", "警察"], "correct": 0, "explanation": "governmentは「政府、政権、統治」という意味です。例: the Japanese government（日本政府）", "type": "choice"},
+        {"scenario": "「law」の意味として最も適切なものは？", "choices": ["法律、法", "規則", "命令", "判決"], "correct": 0, "explanation": "lawは「法律、法、法則」という意味です。例: traffic law（交通法）", "type": "choice"},
+        {"scenario": "「citizen」の意味として最も適切なものは？", "choices": ["市民、国民", "外国人", "観光客", "政治家"], "correct": 0, "explanation": "citizenは「市民、国民」という意味です。city（都市）から来ています。例: senior citizen（高齢者）", "type": "choice"},
+        {"scenario": "「volunteer」の意味として最も適切なものは？", "choices": ["ボランティア、志願者", "有給労働者", "経営者", "観客"], "correct": 0, "explanation": "volunteerは「ボランティア、志願者」という意味の名詞・動詞です。例: volunteer work（ボランティア活動）", "type": "choice"},
+        {"scenario": "「community」の意味として最も適切なものは？", "choices": ["地域社会、コミュニティ", "家族", "会社", "学校"], "correct": 0, "explanation": "communityは「地域社会、共同体、コミュニティ」という意味です。例: local community（地域コミュニティ）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞編①：性質・状態・評価",
+      "type": "Adjectives 1",
+      "emoji": "🎯",
+      "subtitle": "物事の性質や良し悪しを表す形容詞",
+      "questions": [
+        {"scenario": "「accurate」の意味として最も適切なものは？", "choices": ["正確な、精密な", "不正確な", "大雑把な", "適当な"], "correct": 0, "explanation": "accurateは「正確な、精密な」という意味です。例: accurate information（正確な情報）", "type": "choice"},
+        {"scenario": "「convenient」の意味として最も適切なものは？", "choices": ["便利な、都合の良い", "不便な", "難しい", "高価な"], "correct": 0, "explanation": "convenientは「便利な、都合の良い」という意味です。例: a convenient store（コンビニ）", "type": "choice"},
+        {"scenario": "「delicious」の意味として最も適切なものは？", "choices": ["美味しい", "まずい", "辛い", "甘い"], "correct": 0, "explanation": "deliciousは「美味しい」という意味です。very deliciousとは言わず、absolutely deliciousなどを使います。", "type": "choice"},
+        {"scenario": "「efficient」の意味として最も適切なものは？", "choices": ["効率的な、能率の良い", "非効率な", "遅い", "無駄な"], "correct": 0, "explanation": "efficientは「効率的な、能率の良い」という意味です。例: an efficient method（効率的な方法）", "type": "choice"},
+        {"scenario": "「familiar」の意味として最も適切なものは？", "choices": ["よく知っている、馴染みのある", "未知の", "珍しい", "難しい"], "correct": 0, "explanation": "familiarは「よく知っている、馴染みのある」という意味です。例: be familiar with 〜（〜に精通している）", "type": "choice"},
+        {"scenario": "「generous」の意味として最も適切なものは？", "choices": ["寛大な、気前の良い", "けちな", "厳しい", "冷たい"], "correct": 0, "explanation": "generousは「寛大な、気前の良い、惜しみない」という意味です。例: a generous person（気前の良い人）", "type": "choice"},
+        {"scenario": "「obvious」の意味として最も適切なものは？", "choices": ["明らかな、はっきりした", "不明な", "秘密の", "複雑な"], "correct": 0, "explanation": "obviousは「明らかな、一目で分かる」という意味です。例: It's obvious.（それは明らかだ。）", "type": "choice"},
+        {"scenario": "「patient」の意味として最も適切なものは？", "choices": ["忍耐強い、我慢強い", "短気な", "怠け者の", "せっかちな"], "correct": 0, "explanation": "patientは形容詞で「忍耐強い」、名詞で「患者」という意味があります。例: be patient with children（子供に忍耐強く接する）", "type": "choice"},
+        {"scenario": "「reasonable」の意味として最も適切なものは？", "choices": ["理にかなった、妥当な、手頃な", "高すぎる", "無理な", "バカげた"], "correct": 0, "explanation": "reasonableは「理にかなった、妥当な」または「手頃な（値段が）」という意味です。", "type": "choice"},
+        {"scenario": "「suitable」の意味として最も適切なものは？", "choices": ["適した、ふさわしい", "不適切な", "合わない", "悪い"], "correct": 0, "explanation": "suitableは「適した、ふさわしい」という意味です。例: suitable for beginners（初心者向けの）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞・副詞編②：程度・頻度・態度",
+      "type": "Adjectives & Adverbs 2",
+      "emoji": "📊",
+      "subtitle": "程度や頻度、物事への向き合い方を表す言葉",
+      "questions": [
+        {"scenario": "「actually」の意味として最も適切なものは？", "choices": "実際には、実は", "偶然に", "当然", "おそらく"], "correct": 0, "explanation": "actuallyは「実際には、実は」という意味の副詞です。例: I actually like it.（実はそれが好きなんです。）", "type": "choice"},
+        {"scenario": "「certainly」の意味として最も適切なものは？", "choices": ["確かに、きっと", "たぶん", "決して〜ない", "まれに"], "correct": 0, "explanation": "certainlyは「確かに、きっと、もちろん」という意味の副詞です。例: Certainly.（もちろんです。）", "type": "choice"},
+        {"scenario": "「especially」の意味として最も適切なものは？", "choices": ["特に、とりわけ", "一般的に", "たまたま", "全体的に"], "correct": 0, "explanation": "especiallyは「特に、とりわけ」という意味の副詞です。例: I like fruits, especially apples.（果物が好きです、特にリンゴが。）", "type": "choice"},
+        {"scenario": "「exactly」の意味として最も適切なものは？", "choices": ["正確に、ちょうど", "大まかに", "適当に", "だいたい"], "correct": 0, "explanation": "exactlyは「正確に、ちょうど、まさに」という意味です。例: Exactly right.（まさに正解。）", "type": "choice"},
+        {"scenario": "「fortunately」の意味として最も適切なものは？", "choices": ["幸運にも、幸いなことに", "残念ながら", "当然", "意外にも"], "correct": 0, "explanation": "fortunatelyは「幸運にも、幸いなことに」という意味です。対義語はunfortunatelyです。", "type": "choice"},
+        {"scenario": "「hardly」の意味として最も適切なものは？", "choices": ["ほとんど〜ない", "一生懸命に", "難しく", "簡単に"], "correct": 0, "explanation": "hardlyは「ほとんど〜ない」という意味の副詞です。hard（一生懸命に）とは意味が違うので注意！", "type": "choice"},
+        {"scenario": "「nearly」の意味として最も適切なものは？", "choices": ["ほとんど、もう少しで", "完全に", "全然", "少し"], "correct": 0, "explanation": "nearlyは「ほとんど、もう少しで」という意味です。例: nearly finished（ほぼ完成した）", "type": "choice"},
+        {"scenario": "「probably」の意味として最も適切なものは？", "choices": ["おそらく、多分", "確かに", "決して", "絶対に"], "correct": 0, "explanation": "probablyは「おそらく、多分」という意味の副詞です。確信度は80%程度です。", "type": "choice"},
+        {"scenario": "「seriously」の意味として最も適切なものは？", "choices": ["真剣に、深刻に", "冗談で", "軽く", "適当に"], "correct": 0, "explanation": "seriouslyは「真剣に、深刻に」という意味です。例: take it seriously（それを真剣に受け止める）", "type": "choice"},
+        {"scenario": "「suddenly」の意味として最も適切なものは？", "choices": ["突然、急に", "ゆっくり", "予定通り", "やがて"], "correct": 0, "explanation": "suddenlyは「突然、急に」という意味の副詞です。例: Suddenly, it started to rain.（突然雨が降り出した。）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "重要熟語編①：動詞＋前置詞・副詞",
+      "type": "Phrasal Verbs 1",
+      "emoji": "🔗",
+      "subtitle": "英検3級で必須の基本熟語動詞",
+      "questions": [
+        {"scenario": "「look for」の意味として最も適切なものは？", "choices": ["〜を探す", "〜を見る", "〜を見つける", "〜を見失う"], "correct": 0, "explanation": "look forは「〜を探す」という意味の熟語動詞です。look（見る）とfor（〜のために）の組み合わせです。", "type": "choice"},
+        {"scenario": "「look forward to」の意味として最も適切なものは？", "choices": ["〜を楽しみに待つ", "〜を前向きに見る", "〜を予測する", "〜を先延ばしにする"], "correct": 0, "explanation": "look forward to 〜は「〜を楽しみに待つ」という重要熟語です。toの後は動名詞（〜ing）が来ます。", "type": "choice"},
+        {"scenario": "「give up」の意味として最も適切なものは？", "choices": ["諦める、やめる", "与える", "始める", "続ける"], "correct": 0, "explanation": "give upは「諦める、やめる」という意味です。例: Never give up!（決して諦めるな！）", "type": "choice"},
+        {"scenario": "「take care of」の意味として最も適切なものは？", "choices": ["〜の世話をする、〜を世話する", "〜を取る", "〜を捨てる", "〜を無視する"], "correct": 0, "explanation": "take care ofは「〜の世話をする、〜を世話する」という意味です。例: take care of a baby（赤ちゃんの世話をする）", "type": "choice"},
+        {"scenario": "「get up」の意味として最も適切なものは？", "choices": ["起きる、起床する", "立つ", "上がる", "着る"], "correct": 0, "explanation": "get upは「起きる、起床する」という意味です。例: get up early（早起きする）", "type": "choice"},
+        {"scenario": "「wake up」の意味として最も適切なものは？", "choices": ["目が覚める、起きる", "寝る", "夢を見る", "眠る"], "correct": 0, "explanation": "wake upは「目が覚める、起きる」という意味です。get up（ベッドから出る）とセットで覚えましょう。", "type": "choice"},
+        {"scenario": "「put on」の意味として最も適切なものは？", "choices": ["着る、履く、身につける", "脱ぐ", "置く", "落とす"], "correct": 0, "explanation": "put onは「着る、履く、身につける」という意味です。対義語はtake off（脱ぐ）です。", "type": "choice"},
+        {"scenario": "「take off」の意味として最も適切なものは？", "choices": ["脱ぐ、離陸する", "着る", "乗る", "降りる"], "correct": 0, "explanation": "take offは服を「脱ぐ」または飛行機が「離陸する」という意味です。put onの対義語です。", "type": "choice"},
+        {"scenario": "「turn on」の意味として最も適切なものは？", "choices": ["つける（電気等）、点ける", "消す", "回す", "壊す"], "correct": 0, "explanation": "turn onは電気や機械を「つける、点ける」という意味です。対義語はturn offです。", "type": "choice"},
+        {"scenario": "「turn off」の意味として最も適切なものは？", "choices": ["消す、止める（電気等）", "つける", "つける", "付ける"], "correct": 0, "explanation": "turn offは電気、テレビ、水道などを「消す、止める」という意味です。turn onの対義語です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "重要熟語編②：日常会話・表現",
+      "type": "Phrasal Verbs 2",
+      "emoji": "💬",
+      "subtitle": "会話や長文でよく使われる決まり文句",
+      "questions": [
+        {"scenario": "「as soon as」の意味として最も適切なものは？", "choices": ["〜するとすぐに", "〜する前に", "〜した後で", "〜しながら"], "correct": 0, "explanation": "as soon as 〜は「〜するとすぐに」という意味の接続詞句です。例: As soon as I arrived, it rained.（私が着くとすぐに雨が降った。）", "type": "choice"},
+        {"scenario": "「be interested in」の意味として最も適切なものは？", "choices": ["〜に興味がある", "〜に興味がない", "〜を知っている", "〜を忘れている"], "correct": 0, "explanation": "be interested in 〜は「〜に興味がある」という重要表現です。interest（興味）の形容詞interestedを使います。", "type": "choice"},
+        {"scenario": "「be good at」の意味として最も適切なものは？", "choices": ["〜が得意だ", "〜が苦手だ", "〜が好きだ", "〜が嫌いだ"], "correct": 0, "explanation": "be good at 〜は「〜が得意だ、〜が上手だ」という意味です。対義語はbe bad at 〜（〜が苦手だ）です。", "type": "choice"},
+        {"scenario": "「be afraid of」の意味として最も適切なものは？", "choices": ["〜を恐れている、〜が怖い", "〜を楽しみにしている", "〜を誇りに思っている", "〜に慣れている"], "correct": 0, "explanation": "be afraid of 〜は「〜を恐れている、〜が怖い」という意味です。例: be afraid of dogs（犬が怖い）", "type": "choice"},
+        {"scenario": "「be proud of」の意味として最も適切なものは？", "choices": ["〜を誇りに思う", "〜を恥じる", "〜を忘れる", "〜を諦める"], "correct": 0, "explanation": "be proud of 〜は「〜を誇りに思う」という意味です。例: be proud of my son（息子を誇りに思う）", "type": "choice"},
+        {"scenario": "「be worried about」の意味として最も適切なものは？", "choices": ["〜を心配している", "〜を楽しみにしている", "〜に怒っている", "〜に感謝している"], "correct": 0, "explanation": "be worried about 〜は「〜を心配している」という意味です。worry（心配）の形容詞worriedを使います。", "type": "choice"},
+        {"scenario": "「have to」の意味として最も適切なものは？", "choices": ["〜しなければならない", "〜してもよい", "〜してはいけない", "〜したい"], "correct": 0, "explanation": "have to 〜は「〜しなければならない」という意味で、mustとほぼ同じです。過去形はhad toになります。", "type": "choice"},
+        {"scenario": "「be able to」の意味として最も適切なものは？", "choices": ["〜できる", "〜できない", "〜したい", "〜するつもりだ"], "correct": 0, "explanation": "be able to 〜は「〜できる」という意味でcanとほぼ同じですが、時制を変えやすい利点があります。", "type": "choice"},
+        {"scenario": "「would like to」の意味として最も適切なものは？", "choices": ["〜したい（丁寧）", "〜したくない", "〜しなければならない", "〜できる"], "correct": 0, "explanation": "would like to 〜はwant to 〜の丁寧な表現で「〜したい」という意味です。例: I'd like to go.（行きたいです。）", "type": "choice"},
+        {"scenario": "「used to」の意味として最も適切なものは？", "choices": ["以前は〜していた、かつて〜だった", "〜に慣れている", "〜を使う", "〜を使い果たす"], "correct": 0, "explanation": "used to 〜は「以前は〜していた、かつて〜だった」という過去の習慣・状態を表します。現在とは違うことを示します。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "重要熟語編③：前置詞・接続詞を含む表現",
+      "type": "Expressions with Prepositions",
+      "emoji": "🔤",
+      "subtitle": "前置詞や接続詞を使った頻出イディオム",
+      "questions": [
+        {"scenario": "「because of」の意味として最も適切なものは？", "choices": ["〜のせいで、〜のために", "〜のおかげで", "〜にもかかわらず", "〜によると"], "correct": 0, "explanation": "because of 〜は「〜のせいで、〜のために」という意味です。名詞句の後ろに来ます。because 〜は節（主語＋動詞）が続きます。", "type": "choice"},
+        {"scenario": "「thanks to」の意味として最も適切なものは？", "choices": ["〜のおかげで", "〜のせいで", "〜にもかかわらず", "〜によると"], "correct": 0, "explanation": "thanks to 〜は「〜のおかげで」という良い意味で使う表現です。例: Thanks to you, I passed.（あなたのおかげで合格した。）", "type": "choice"},
+        {"scenario": "「in front of」の意味として最も適切なものは？", "choices": ["〜の前に（場所）", "〜の後ろに", "〜の中に", "〜の横に"], "correct": 0, "explanation": "in front of 〜は「〜の前に（場所的に）」という意味です。対義語はbehind（〜の後ろに）です。", "type": "choice"},
+        {"scenario": "「next to」の意味として最も適切なものは？", "choices": ["〜の隣に", "〜の前に", "〜の後ろに", "〜の近くに"], "correct": 0, "explanation": "next to 〜は「〜の隣に、〜のすぐ横に」という意味です。例: sit next to me（私の隣に座る）", "type": "choice"},
+        {"scenario": "「in order to」の意味として最も適切なものは？", "choices": ["〜するために", "〜するために（順序）", "〜した後で", "〜する代わりに"], "correct": 0, "explanation": "in order to 〜は「〜するために（目的）」という意味です。to 〜だけでも同じ意味ですが、より強調されます。", "type": "choice"},
+        {"scenario": "「instead of」の意味として最も適切なものは？", "choices": ["〜の代わりに", "〜と一緒に", "〜の後で", "〜の前に"], "correct": 0, "explanation": "instead of 〜は「〜の代わりに」という意味です。ofの後は名詞または動名詞が来ます。", "type": "choice"},
+        {"scenario": "「according to」の意味として最も適切なものは？", "choices": ["〜によると、〜に従って", "〜のせいで", "〜にもかかわらず", "〜のために"], "correct": 0, "explanation": "according to 〜は「〜によると、〜に従って」という意味です。例: According to the news, it will rain.（ニュースによると雨が降る。）", "type": "choice"},
+        {"scenario": "「by the way」の意味として最も適切なものは？", "choices": ["ところで、ちなみに", "途中で", "その方法で", "ついでに"], "correct": 0, "explanation": "by the wayは会話で話題を変えるときの「ところで、ちなみに」という定番フレーズです。", "type": "choice"},
+        {"scenario": "「as well as」の意味として最も適切なものは？", "choices": ["〜だけでなく〜も、〜と同様に", "〜よりも", "〜の代わりに", "〜のために"], "correct": 0, "explanation": "as well as 〜は「〜だけでなく〜も」または「〜と同様に」という意味です。例: He speaks English as well as Japanese.（彼は日本語と同様に英語も話す。）", "type": "choice"},
+        {"scenario": "「on the other hand」の意味として最も適切なものは？", "choices": ["一方、另一方面では", "この手で", "反対の手で", "手の上で"], "correct": 0, "explanation": "on the other handは対比を示す「一方、另一方面では」という意味の接続表現です。on the one hand（一方で）と対で使われます。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "会話表現・実用フレーズ編",
+      "type": "Conversational Expressions",
+      "emoji": "🗣️",
+      "subtitle": "実践的な英会話で使える決まり文句",
+      "questions": [
+        {"scenario": "「Could you tell me 〜?」の意味として最も適切なものは？", "choices": ["〜を教えていただけますか？", "〜を話してください", "〜を書いてください", "〜を聞いてください"], "correct": 0, "explanation": "Could you tell me 〜?は「〜を教えていただけますか？」という丁寧な依頼表現です。Can you tell me 〜?より礼儀正しいです。", "type": "choice"},
+        {"scenario": "「I'm looking forward to 〜ing」の意味として最も適切なものは？", "choices": ["〜するのを楽しみにしています", "〜するつもりです", "〜するのが怖いです", "〜するのをやめます"], "correct": 0, "explanation": "I'm looking forward to 〜ingは「〜するのを楽しみにしています」という重要表現です。toの後は必ず動名詞です。", "type": "choice"},
+        {"scenario": "「It takes 〜 to ...」の意味として最も適切なものは？", "choices": ["〜するのに…かかる", "〜するために…必要だ", "〜したら…になる", "〜した後で…する"], "correct": 0, "explanation": "It takes (人) 時間 to 〜は「（人が）〜するのに…時間がかかる」という構文です。例: It takes 10 minutes to walk there.（そこまで歩くのに10分かかる。）", "type": "choice"},
+        {"scenario": "「Why don't you 〜?」の意味として最も適切なものは？", "choices": ["〜したらどうですか？", "なぜ〜しないのですか？", "〜してはいけません", "〜しましょうか？"], "correct": 0, "explanation": "Why don't you 〜?は提案表現で「〜したらどうですか？」「〜しませんか？」という意味です。否定疑問文ですが肯定の意味になります。", "type": "choice"},
+        {"scenario": "「Shall I 〜?」の意味として最も適切なものは？", "choices": ["〜しましょうか？", "〜しなければなりませんか？", "〜できますか？", "〜したいですか？"], "correct": 0, "explanation": "Shall I 〜?は相手の意思を確認して提案する「〜しましょうか？」という意味です。例: Shall I open the window?（窓を開けましょうか？）", "type": "choice"},
+        {"scenario": "「Let's 〜, shall we?」の意味として最も適切なものは？", "choices": ["〜しましょうよ、ね？", "〜しないでください", "〜できるでしょうか", "〜したことがありますか"], "correct": 0, "explanation": "Let's 〜, shall we?は「〜しましょうよ、ね？」という誘い掛けの表現です。shall we?を付けて相手の同意を求めます。", "type": "choice"},
+        {"scenario": "「I'd rather 〜」の意味として最も適切なものは？", "choices": ["〜した方がいい、〜の方がましだ", "〜したくない", "〜しなければならない", "〜できる"], "correct": 0, "explanation": "I'd rather 〜（I would rather 〜）は「〜した方がいい、〜の方がましだ」という意味で、選好を表します。", "type": "choice"},
+        {"scenario": "「It's no use 〜ing」の意味として最も適切なものは？", "choices": ["〜しても無駄だ、〜しても仕方がない", "〜するのは簡単だ", "〜するのは大切だ", "〜してはいけない"], "correct": 0, "explanation": "It's no use 〜ingは「〜しても無駄だ、〜しても仕方がない」という意味の重要構文です。例: It's no use crying.（泣いても無駄だ。）", "type": "choice"},
+        {"scenario": "「There is no 〜ing」の意味として最も適切なものは？", "choices": ["〜することはできない、〜することは不可能だ", "〜する必要がない", "〜してはいけない", "〜したくない"], "correct": 0, "explanation": "There is no 〜ingは「〜することはできない、〜することは不可能だ」という意味です。例: There is no knowing the future.（未来を知ることはできない。）", "type": "choice"},
+        {"scenario": "「What if 〜?」の意味として最も適切なものは？", "choices": ["もし〜したらどうなる？、〜したらどうする？", "何のために〜するの？", "いつ〜するの？", "どこで〜するの？"], "correct": 0, "explanation": "What if 〜?は「もし〜したらどうなる？」「〜したらどうする？」という仮定の質問や提案表現です。例: What if it rains?（もし雨が降ったらどうする？）", "type": "choice"}
+      ]
+    }
+  ]
+}

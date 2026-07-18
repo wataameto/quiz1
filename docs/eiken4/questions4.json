@@ -1,0 +1,103 @@
+{
+  "id": "eiken4",
+  "level": 4,
+  "label": "🔤 基礎単語編④",
+  "description": "英検4級レベルの基本英単語④（新しい動詞・名詞・形容詞・副詞・熟語）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編⑦：仕事・活動",
+      "type": "Basic Verbs 7",
+      "emoji": "💼",
+      "subtitle": "仕事や活動に関する動詞",
+      "questions": [
+        {"scenario": "「assemble」の意味として最も適切なものは？", "choices": ["組み立てる、集める", "分解する", "破壊する", "隠す"], "correct": 0, "explanation": "assembleは「組み立てる、集める」という意味の動詞です。例: assemble the parts（部品を組み立てる）", "type": "choice"},
+        {"scenario": "「budget」の意味として最も適切なものは？", "choices": ["予算を組む、予算", "支出、浪費", "利益、収益", "税金"], "correct": 0, "explanation": "budgetは「予算を組む、予算」として使われます。例: set a budget（予算を設定する）", "type": "choice"},
+        {"scenario": "「climate」の意味として最も適切なものは？", "choices": ["気候、環境", "天気、気温", "季節、時期", "風景"], "correct": 0, "explanation": "climateは「気候、環境」という意味の名詞です。例: the climate of Japan（日本の気候）", "type": "choice"},
+        {"scenario": "「deliver」の意味として最も適切なものは？", "choices": ["配達する、届ける", "受け取る", "発送する", "保存する"], "correct": 0, "explanation": "deliverは「配達する、届ける」という意味の動詞です。例: deliver a package（荷物を配達する）", "type": "choice"},
+        {"scenario": "「evaluate」の意味として最も適切なものは？", "choices": ["評価する、見積もる", "無視する", "削除する", "改善する"], "correct": 0, "explanation": "evaluateは「評価する、見積もる」という意味の動詞です。例: evaluate the result（結果を評価する）", "type": "choice"},
+        {"scenario": "「finance」の意味として最も適切なものは？", "choices": ["資金を提供する、財務", "借金する", "投資する", "税金を払う"], "correct": 0, "explanation": "financeは「資金を提供する、財務」として使われます。例: finance a project（プロジェクトに資金を提供する）", "type": "choice"},
+        {"scenario": "「gather」の意味として最も適切なものは？", "choices": ["集める、集まる", "分散する", "隠す", "破壊する"], "correct": 0, "explanation": "gatherは「集める、集まる」という意味の動詞です。例: gather information（情報を集める）", "type": "choice"},
+        {"scenario": "「hire」の意味として最も適切なものは？", "choices": ["雇う、採用する", "解雇する", "辞めさせる", "昇進させる"], "correct": 0, "explanation": "hireは「雇う、採用する」という意味の動詞です。例: hire a new employee（新しい従業員を雇う）", "type": "choice"},
+        {"scenario": "「invest」の意味として最も適切なものは？", "choices": ["投資する、投入する", "貯金する", "浪費する", "借りる"], "correct": 0, "explanation": "investは「投資する、投入する」という意味の動詞です。例: invest money in stocks（株にお金を投資する）", "type": "choice"},
+        {"scenario": "「join」の意味として最も適切なものは？", "choices": ["加わる、参加する", "退出する", "分割する", "削除する"], "correct": 0, "explanation": "joinは「加わる、参加する」という意味の動詞です。例: join the club（クラブに入る）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編⑪：建物・場所",
+      "type": "Nouns: Buildings & Places",
+      "emoji": "🏢",
+      "subtitle": "建物や場所に関する名詞",
+      "questions": [
+        {"scenario": "「elevator」の意味として最も適切なものは？", "choices": ["エレベーター、昇降機", "階段", "エスカレーター", "ドア"], "correct": 0, "explanation": "elevatorは建物の上下に人を運ぶ装置です。", "type": "choice"},
+        {"scenario": "「gallery」の意味として最も適切なものは？", "choices": ["美術館、画廊", "劇場", "図書館", "カフェ"], "correct": 0, "explanation": "galleryは絵画や展示品を見せる場所です。", "type": "choice"},
+        {"scenario": "「habitat」の意味として最も適切なものは？", "choices": ["生息地、住環境", "住宅、家", "公園、庭", "市場"], "correct": 0, "explanation": "habitatは動植物が自然に住む環境です。", "type": "choice"},
+        {"scenario": "「kitchen」の意味として最も適切なものは？", "choices": ["台所、厨房", "リビング", "ベッドルーム", "バスルーム"], "correct": 0, "explanation": "kitchenは料理をする部屋です。", "type": "choice"},
+        {"scenario": "「library」の意味として最も適切なものは？", "choices": ["図書館", "本屋", "カフェ", "学校"], "correct": 0, "explanation": "libraryは本や資料を借りられる施設です。", "type": "choice"},
+        {"scenario": "「museum」の意味として最も適切なものは？", "choices": ["博物館、美術館", "映画館", "劇場", "体育館"], "correct": 0, "explanation": "museumは展示物や芸術品を収蔵・展示する場所です。", "type": "choice"},
+        {"scenario": "「park」の意味として最も適切なものは？", "choices": ["公園、緑地", "道路", "建物", "工事現場"], "correct": 0, "explanation": "parkは緑が多く、遊んだり散歩したりできる場所です。", "type": "choice"},
+        {"scenario": "「stadium」の意味として最も適切なものは？", "choices": ["競技場、スタジアム", "屋内プール", "劇場", "図書館"], "correct": 0, "explanation": "stadiumはスポーツやコンサートが行われる大きな屋外施設です。", "type": "choice"},
+        {"scenario": "「theater」の意味として最も適切なものは？", "choices": ["劇場、演劇場", "映画館", "体育館", "学校"], "correct": 0, "explanation": "theaterは演劇やライブパフォーマンスが行われる場所です。", "type": "choice"},
+        {"scenario": "「zoo」の意味として最も適切なものは？", "choices": ["動物園", "水族館", "サファリパーク", "公園"], "correct": 0, "explanation": "zooは様々な動物を展示する施設です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "形容詞編⑦：感情・評価",
+      "type": "Adjectives 7",
+      "emoji": "😊",
+      "subtitle": "感情や評価を表す形容詞",
+      "questions": [
+        {"scenario": "「joyful」の意味として最も適切なものは？", "choices": ["楽しい、喜びに満ちた", "悲しい", "怖い", "退屈な"], "correct": 0, "explanation": "joyfulは「楽しく、喜びに満ちた」形容詞です。", "type": "choice"},
+        {"scenario": "「relaxed」の意味として最も適切なものは？", "choices": ["リラックスした、くつろいだ", "緊張した", "疲れた", "怒った"], "correct": 0, "explanation": "relaxedは「くつろいだ、緊張していない」形容詞です。", "type": "choice"},
+        {"scenario": "「confident」の意味として最も適切なものは？", "choices": ["自信のある、確信した", "不安な", "無関心な", "怒りっぽい"], "correct": 0, "explanation": "confidentは「自信がある」形容詞です。", "type": "choice"},
+        {"scenario": "「critical」の意味として最も適切なものは？", "choices": ["批判的な、重要な", "賞賛する", "無視する", "柔らかい"], "correct": 0, "explanation": "criticalは「批判的」「重要な」両方の意味があります。", "type": "choice"},
+        {"scenario": "「generous」の意味として最も適切なものは？", "choices": ["寛大な、気前がいい", "けちな", "弱い", "頑固な"], "correct": 0, "explanation": "generousは「寛大な、気前がいい」形容詞です。", "type": "choice"},
+        {"scenario": "「hostile」 の意味として最も適切なものは？", "choices": ["敵対的な、敵意のある", "友好的な", "中立的な", "無関心な"], "correct": 0, "explanation": "hostileは「敵対的」「敵意がある」形容詞です。", "type": "choice"},
+        {"scenario": "「patient」の意味として最も適切なものは？", "choices": ["忍耐強い、辛抱強い", "焦る", "短気な", "怠慢な"], "correct": 0, "explanation": "patientは「忍耐強い」「我慢できる」形容詞です。", "type": "choice"},
+        {"scenario": "「sincere」の意味として最も適切なものは？", "choices": ["誠実な、本心からの", "嘘つきの", "無関心な", "軽薄な"], "correct": 0, "explanation": "sincereは「誠実な、真心のこもった」形容詞です。", "type": "choice"},
+        {"scenario": "「thoughtful」の意味として最も適切なものは？", "choices": ["思いやりのある、配慮した", "軽率な", "無神経な", "怠惰な"], "correct": 0, "explanation": "thoughtfulは「思いやりのある、考慮した」形容詞です。", "type": "choice"},
+        {"scenario": "「victorious」の意味として最も適切なものは？", "choices": ["勝利した、成功した", "敗北した", "不安定な", "未確定の"], "correct": 0, "explanation": "victoriousは「勝利した、成功した」形容詞です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "副詞・前置詞編④",
+      "type": "Adverbs & Prepositions 4",
+      "emoji": "⏱️",
+      "subtitle": "時間・頻度・程度を示す副詞／前置詞",
+      "questions": [
+        {"scenario": "「occasionally」の意味として最も適切なものは？", "choices": ["時々、たまに", "毎日", "常に", "決して"], "correct": 0, "explanation": "occasionallyは「時々、たまに」副詞です。", "type": "choice"},
+        {"scenario": "「frequently」の意味として最も適切なものは？", "choices": ["頻繁に、しばしば", "まれに", "一度だけ", "決して"], "correct": 0, "explanation": "frequentlyは「頻繁に、しばしば」副詞です。", "type": "choice"},
+        {"scenario": "「barely」の意味として最も適切なものは？", "choices": ["ほとんど…ない、ややだけ", "十分に", "完全に", "完全に否定して"], "correct": 0, "explanation": "barelyは「ほとんど…ない、ぎりぎり」副詞です。", "type": "choice"},
+        {"scenario": "「throughout」の意味として最も適切なものは？", "choices": ["…の間ずっと、全体にわたって", "…の一部だけ", "…の外側に", "…の前に"], "correct": 0, "explanation": "throughoutは「…の間ずっと、全体にわたって」前置詞・副詞です。", "type": "choice"},
+        {"scenario": "「beyond」の意味として最も適切なものは？", "choices": ["…を超えて、向こう側に", "…の中に", "…の近くに", "…の下に"], "correct": 0, "explanation": "beyondは「…を超えて、向こう側に」前置詞です。", "type": "choice"},
+        {"scenario": "「despite」の意味として最も適切なものは？", "choices": ["…にもかかわらず", "…のために", "…の前に", "…の後で"], "correct": 0, "explanation": "despiteは「…にもかかわらず」前置詞です。", "type": "choice"},
+        {"scenario": "「unless」の意味として最も適切なものは？", "choices": ["…でない限り、もし…でなければ", "…の時に", "…の後で", "…の前に"], "correct": 0, "explanation": "unlessは「…でない限り、もし…でなければ」接続詞です。", "type": "choice"},
+        {"scenario": "「therefore」の意味として最も適切なものは？", "choices": ["したがって、それゆえに", "しかしながら", "それでも", "たとえば"], "correct": 0, "explanation": "thereforeは「したがって、だから」副詞です。", "type": "choice"},
+        {"scenario": "「perhaps」の意味として最も適切なものは？", "choices": ["もしかしたら、おそらく", "確実に", "絶対に", "もちろん"], "correct": 0, "explanation": "perhapsは「もしかしたら、おそらく」副詞です。", "type": "choice"},
+        {"scenario": "「nevertheless」の意味として最も適切なものは？", "choices": ["それでも、にもかかわらず", "だから", "しかし", "それに"], "correct": 0, "explanation": "neverthelessは「それでも、にもかかわらず」副詞です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "会話表現・重要熟語編④",
+      "type": "Everyday Phrases 4",
+      "emoji": "🗣️",
+      "subtitle": "日常で頻繁に使う熟語・フレーズ",
+      "questions": [
+        {"scenario": "「look after」の意味として最も適切なものは？", "choices": ["世話をする、面倒を見る", "見つめる", "無視する", "探す"], "correct": 0, "explanation": "look afterは「世話をする、面倒を見る」熟語です。", "type": "choice"},
+        {"scenario": "「set up」の意味として最も適切なものは？", "choices": ["設置する、準備する", "壊す", "閉じる", "削除する"], "correct": 0, "explanation": "set upは「設置する、準備する」熟語です。", "type": "choice"},
+        {"scenario": "「take off」の意味として最も適切なものは？", "choices": ["離陸する、脱ぐ", "乗る", "開始する", "戻す"], "correct": 0, "explanation": "take offは「離陸する」や「服を脱ぐ」熟語です。", "type": "choice"},
+        {"scenario": "「give up」の意味として最も適切なものは？", "choices": ["諦める、やめる", "始める", "続ける", "要求する"], "correct": 0, "explanation": "give upは「諦める、やめる」熟語です。", "type": "choice"},
+        {"scenario": "「run into」の意味として最も適切なものは？", "choices": ["偶然出会う、ぶつかる", "走り抜ける", "逃げる", "追いかける"], "correct": 0, "explanation": "run intoは「偶然出会う、衝突する」熟語です。", "type": "choice"},
+        {"scenario": "「put off」の意味として最も適切なものは？", "choices": ["延期する、先延ばしにする", "除去する", "開始する", "引き起こす"], "correct": 0, "explanation": "put offは「延期する」熟語です。", "type": "choice"},
+        {"scenario": "「break up」の意味として最も適切なものは？", "choices": ["別れる、解散する", "作る", "集合する", "続く"], "correct": 0, "explanation": "break upは「別れる、解散する」熟語です。", "type": "choice"},
+        {"scenario": "「carry out」の意味として最も適切なものは？", "choices": ["実行する、遂行する", "運ぶ", "持ち帰る", "放棄する"], "correct": 0, "explanation": "carry outは「実行する、遂行する」熟語です。", "type": "choice"},
+        {"scenario": "「check out」の意味として最も適切なものは？", "choices": ["チェックアウトする、確認する", "チェックインする", "予約する", "購入する"], "correct": 0, "explanation": "check outはホテルのチェックアウトや、物事を確認する意味で使われます。", "type": "choice"},
+        {"scenario": "「fill out」の意味として最も適切なものは？", "choices": ["記入する、書き入れる", "埋め尽くす", "削除する", "コピーする"], "correct": 0, "explanation": "fill outは書類などを記入する意味です。", "type": "choice"}
+      ]
+    }
+  ]
+}
