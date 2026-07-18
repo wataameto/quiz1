@@ -45,6 +45,7 @@
 - 教材を全パート・全セットとも100点（best）にすると、教材トップに「🎉全問正解達成！」バナーと「🏁次の周へ進む」ボタンが出る。ボタンは押す前に確認モーダル（advance-lap-modal）を挟む。押すと各セットの最高点・誤答記録だけがリセットされ（挑戦履歴・周回数・達成記録は消えない）、周回数（`lap`フィールド）が+1、その周回の試験挑戦回数（`lapAttemptCount`）が0にリセットされる。ボタンは全問正解している限り何度でも押せる（何周でも積み上げられる）。メインメニューの成績行にも、周回数がある場合は `⭐×N`、全問正解済みでまだ次の周へ進んでいない場合は `+⭐` を追記表示する。全問正解を初めて達成した日時と、その周回での試験挑戦回数は `fullClearHistory` に記録され、成績履歴モーダルの周回履歴セクションに「N周目全問正解（M回挑戦）」として表示される。
 - ログアウトは `confirm()`/`alert()` を使わず、既存の `logout-modal` と同じ自前モーダルパターンを使う。iOS Safari（Chrome for iOSも含む）は繰り返しダイアログを出すページで「今後表示しない」を選べてしまい、選ばれると以降の `confirm()`/`alert()` が無言で失敗するため。
 - クイズ画面の問題文・選択肢・解説（結果画面の解答一覧も含む）には🔍アイコンが付いており、クリックすると `search-modal` が開いてその全文が選択可能なテキストとして表示される。テキストの一部をドラッグ選択してから「Googleで検索」を押すとその選択範囲だけを、何も選択しなければ全文をGoogle検索する（`searchIconHtml()` / `openSearchModal()` / `runTermSearch()` in quiz-app.js）。日本語の自動キーワード抽出は精度が低いため意図的に採用していない。選択肢の中の🔍は`<button>`の入れ子を避けるため`<span role="button">`で実装している。
+- メインメニューにはPWAインストールの案内が2種類ある（`renderPwaInstallUI()` in docs/index.html）。上のバナー（`#pwa-install-banner`）は×で閉じると`localStorage`の`pwaInstallBannerDismissed`フラグで二度と出なくなる。教材一覧の最下部の常設ヒント（`#pwa-install-footer-hint`）は×の対象外で常に表示される（iOSはSafariの共有ボタン経由の案内文、それ以外はブラウザのインストールボタンの案内文）。`isRunningStandalone()`がtrue（すでにホーム画面から起動済み）のときは両方とも表示しない。
 
 ## 問題データ
 - 各クイズの問題は docs/{quiz}/questions*.json に置く（例: docs/bokinyu/questions1.json, docs/devops/questions1.json）。

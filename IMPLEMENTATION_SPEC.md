@@ -53,6 +53,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - toggleQuizVisibility(id) は未ログイン時、保存せずに「教材を選択するにはログインしてください」とアラートを出して終了する。
 - forceReload()（最新に更新ボタン）は、直前のトグル保存（pendingPrefsSave）を待ってから location.href でリロードする。
 - コンテナ幅は1500pxだが、score-summary ボックスだけ600px固定で中央寄せ。
+- PWAインストール導線は`renderPwaInstallUI()`が担う。`isRunningStandalone()`（`display-mode: standalone`または`navigator.standalone`）がtrueなら何も表示しない。上のバナー（`#pwa-install-banner`）は`beforeinstallprompt`を捕捉できた場合のみ「インストール」ボタンを出し、×で閉じると`localStorage`の`pwaInstallBannerDismissed`が`'1'`になって二度と出ない。教材一覧最下部の常設ヒント（`#pwa-install-footer-hint`）は×の対象外で、iOSは`isIosDevice()`判定でSafari共有ボタン経由の案内文、それ以外はブラウザのインストールボタンの案内文を出し分ける。
 
 ### クイズ画面 docs/{quiz}/index.html（共通: docs/shared/quiz-app.js）
 - 全クイズページで共通のJSを使う。差分を作る場合は本当に必要か確認する。
