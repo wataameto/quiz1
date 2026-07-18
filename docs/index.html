@@ -996,7 +996,7 @@ async function updateScoreDisplay() {
     const collection = `quiz_${id}`;
     const meta = await calculateQuizMeta(id, path);
     const score = await getQuizScore(collection, id, path);
-    return { id, path, collection, emoji: cfg.icon || '', name: cfg.heading || id, description: cfg.description || '', meta, score };
+    return { id, path, collection, emoji: cfg.icon || '', name: cfg.heading || id, description: cfg.description || '', accentColor: cfg.accentColor || '#cbd5e0', meta, score };
   }));
   lastQuizResults = results;
 
@@ -1012,7 +1012,7 @@ async function updateScoreDisplay() {
     let markText = lap > 0 ? `⭐×${lap}` : '';
     if (isFull) markText += '+⭐';
     const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
-    rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
+    rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank" style="border-left: 3px solid ${r.accentColor};">
       <span class="score-row-top-line">
         <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}</span>
         <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
