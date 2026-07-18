@@ -8,7 +8,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260718094949">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260718095113">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -122,13 +122,15 @@
   </div>
 
   <!-- 履歴削除確認ダイアログ -->
-  <div id="delete-history-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10001;">
-    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:400px; width:90%; text-align:center;">
-      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">選択した履歴を削除しますか？</h2>
-      <p style="color:#718096; margin-bottom:24px; font-size:0.95rem;">この操作は取り消せません。</p>
+  <div id="delete-history-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; z-index:10001;">
+    <div style="background:#fff; border-radius:16px; padding:20px; box-shadow:0 20px 60px rgba(0,0,0,0.45); max-width:400px; width:90%; text-align:center; border:3px solid #e53e3e;">
+      <div style="font-size:2.6rem; margin-bottom:6px; line-height:1;">💣</div>
+      <h2 style="font-size:1.15rem; color:#c53030; margin-bottom:10px; font-weight:800; letter-spacing:0.05em;">⚠️ 危険操作 ⚠️</h2>
+      <p style="color:#4a5568; margin-bottom:8px; font-size:0.9rem; font-weight:700; line-height:1.5;">選択した履歴を削除します。</p>
+      <p style="color:#e53e3e; margin-bottom:20px; font-size:0.85rem; font-weight:800;">この操作は取り消せません。本当によろしいですか？</p>
       <div style="display:flex; gap:12px; justify-content:center;">
         <button onclick="closeDeleteHistoryModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
-        <button onclick="deleteSelectedHistory()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit;">削除する</button>
+        <button onclick="deleteSelectedHistory()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:800; color:#fff; font-family:inherit;">💣 削除する</button>
       </div>
     </div>
   </div>
@@ -203,6 +205,6 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260718094949"></script>
+<script src="../shared/quiz-app.js?v=20260718095113"></script>
 </body>
 </html>
