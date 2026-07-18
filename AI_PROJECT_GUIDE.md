@@ -11,7 +11,7 @@
 
 主な入口:
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ（sample, sample2, sample3, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, gentsuki の17種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。sample3は記述式（自由入力）問題タイプの最小構成サンプル。
+- docs/{quiz}/index.html: 各クイズページ（sample, sample2, sample3, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, eiken5, gentsuki の18種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。sample3は記述式（自由入力）問題タイプの最小構成サンプル。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
 - docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携など）。
 - docs/config.json: 各クイズの表示メタデータ。
@@ -35,9 +35,11 @@
 
 ## HTML と config のルール
 - 各クイズページの見た目・挙動ロジックは docs/shared/quiz-app.css と docs/shared/quiz-app.js に一本化している。クイズ固有の index.html はHTML骨格（画面のdiv構造）だけを持ち、内容はすべて同一（`?v=` のキャッシュバスティング用クエリだけがビルドのたびに変わる）。
-- クイズを追加・修正するときは docs/shared/ の共通ファイルを編集する。docs/{quiz}/index.html 自体を個別に書き換える必要は基本的にない（HTML骨格自体を変えるときだけ、16ファイル全部に同じ内容をコピーする。1ファイルを正として編集し、残り15ファイルへバイト単位でコピーするのが確実）。
+- クイズを追加・修正するときは docs/shared/ の共通ファイルを編集する。docs/{quiz}/index.html 自体を個別に書き換える必要は基本的にない（HTML骨格自体を変えるときだけ、全クイズページに同じ内容をコピーする。1ファイルを正として編集し、残り全部へバイト単位でコピーするのが確実）。
 - クイズごとのラベル、見出し、色、説明文は docs/config.json に置く。共通JSが起動時に config.json を読んで適用する。メインメニューの教材一覧・検索でも同じ config.json の description を使うので、内容を充実させると両方に反映される。
 - 各クイズは docs/config.json に `genreMajor`（大分類: sample/shikaku/gakkou/zatsugaku）と `genreMinor`（小分類、shikaku配下のみ it_shikaku/kaikei_kinyu_shikaku/houritsu_sonota_shikaku のいずれか、それ以外はnull）を持つ。メインメニューはこの階層でジャンル別グループ表示になる（📌ピン留め教材は別枠で先頭）。ジャンルのラベル・並び順はdocs/index.htmlの`GENRE_ORDER`定数で管理し、config.json自体はジャンルidのみ持つ（表示上の関心事とデータを分離するため）。新しい教材を追加するときはgenreMajor/genreMinorを書き忘れないこと（src/menu.test.jsで検証）。
+- メインメニューの「教材ジャンル」欄は大分類・小分類とも選択式のフィルターボタンになっている（`toggleGenreFilter()`/`groupByGenre()`）。選んだジャンルの教材だけ下の「教材一覧」に絞り込まれ、何も選んでいなければ全件表示、「✖️ リセット」ボタンで選択をクリアできる。ボタン全体は枠線で囲ったボックス（`#quiz-genre-nav`）にまとめてある。
+- 「あなたの選択教材」の各行は、教材名の直後にスペース1つ空けて「Xパート・Yセット」を続け、行末の「✅ X/Y問正解」の右隣に「入る」ボタンを置く（旧デザインの「›」矢印は廃止）。
 - 新しいクイズを追加するときは、`docs/{quiz}/questions*.json` の各ファイルに必ず `"id": "<quizId>"` フィールドを含める。共通JSがこの `id` を最初に読み込んだ questions1.json から拾って Firestore コレクション名（`quiz_<quizId>`）を決めるため、これが無いと成績が `quiz_undefined` という誤ったコレクションに保存されてしまう（実際に起きた事故）。
 - 各クイズページでは ?admin=1 で問題レビュー画面を表示できる。
 - 各クイズの「教材トップ」画面（旧クイズトップ）は、パートの行をクリックするとその場でセット一覧がアコーディオン展開する。初期表示ではどのパートも閉じた状態で表示する（現在パートも含めて自動的には開かない）。パート行の集計表示は「試験 X/Y問(N回)・演習/復習(M回)」の形式で表示する。セットは横長のリスト行（Finder風）で、行クリックではなく「試験」ボタンと「演習」または「誤答復習」（どちらも記録なし）ボタンの2択で開始する。3つのボタンとも最低幅（min-width）を揃えてあるので、文言が短いボタンだけ狭く見えることはない。各セット行のサブテキストにはそのセットの `subtitle` フィールドと問題数を表示する（パート名は1つ上のアコーディオン見出しに既に出ているため重複させない）。

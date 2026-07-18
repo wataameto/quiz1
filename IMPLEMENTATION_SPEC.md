@@ -8,7 +8,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 
 - このファイル内で記述が衝突した場合は、「重要仕様」と「現在の実装スナップショット」を優先する。
 - AI_PROJECT_GUIDE.md の作業ルールと QUESTION_GUIDE.md の作問ルールは、この詳細仕様より優先する。
-- 各クイズページ（docs/{quiz}/index.html）のCSS/JSは docs/shared/quiz-app.css・quiz-app.js に一本化されている。個別の index.html はHTML骨格だけを持ち、6ファイルとも内容は同一。骨格自体を変えるときだけ6ファイルへコピーする。
+- 各クイズページ（docs/{quiz}/index.html）のCSS/JSは docs/shared/quiz-app.css・quiz-app.js に一本化されている。個別の index.html はHTML骨格だけを持ち、全ファイルとも内容は同一。骨格自体を変えるときだけ全ファイルへコピーする。
 - クイズ固有のタイトル、見出し、説明、色は docs/config.json に置く。HTMLへ個別に戻さない。メインメニューの教材一覧・検索も同じ description を参照する。
 - メインメニューは認証状態に関わらず常にホーム画面（教材一覧・検索・成績枠）を表示する。専用ログイン画面はない。ログインが必要な操作（教材トグルなど）だけ、その場でログインを促す。
 - 問題数とパート数は questions*.json から動的に計算する。固定の「3パート」「180問」のような表示に戻さない。
@@ -34,7 +34,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### ファイル構成
 - アプリ本体は docs/ 配下の静的HTML/JSONで動く。アプリ名は「🏠満点まで帰れません✨」。
 - メインメニューは docs/index.html（単独ファイル、CSS/JSも内包）。
-- クイズページは docs/{quiz}/index.html（sample, sample2, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, gentsuki の16種）。16ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
+- クイズページは docs/{quiz}/index.html（sample, sample2, sample3, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, eiken5, gentsuki の18種）。18ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
 - クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
 - 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。各ファイルは `id`（クイズスラッグ）を持つ必須フィールド。
 - ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。同スクリプトが8クイズページの `?v=` キャッシュバスティングと docs/quiz-meta.json（パート/セット/問題数の集計）も同時に生成する。
@@ -843,9 +843,11 @@ quiz_boki1/{userId}
 **config.json の構造:**
 ```json
 {
-  "boki1": {
+  "bokinyu": {
     "title": "📚 簿記超入門レベル",
     "heading": "簿記超入門レベル",
+    "genreMajor": "shikaku",
+    "genreMinor": "kaikei_kinyu_shikaku",
     "description": "簿記（会計）の基礎知識",
     "icon": "📚",
     "bgColor": "#0f2027",
@@ -857,6 +859,8 @@ quiz_boki1/{userId}
   "devops": {
     "title": "☁️ AWS認定DevOpsエンジニア(DOP-C02)",
     "heading": "AWS認定DevOpsエンジニア(DOP-C02)",
+    "genreMajor": "shikaku",
+    "genreMinor": "it_shikaku",
     "description": "AWS DevOps Engineer Professional",
     "icon": "☁️",
     "bgColor": "#0f2027",
@@ -867,6 +871,13 @@ quiz_boki1/{userId}
   }
 }
 ```
+
+**genreMajor / genreMinor（メインメニューのジャンル別グループ表示用）:**
+- `genreMajor`: `sample` | `shikaku` | `gakkou` | `zatsugaku`。`genreMinor`: `shikaku` の教材のみ `it_shikaku` | `kaikei_kinyu_shikaku` | `houritsu_sonota_shikaku` のいずれか、それ以外は `null`。
+- ジャンルの表示ラベル・階層・並び順は `docs/index.html` の `GENRE_ORDER` 定数で管理する（config.json 側は id のみ持つ。表示上の関心事とデータを分離するため）。
+- メインメニューは `groupByGenre()`（docs/index.html）でこの2フィールドから大分類→小分類の階層にグループ化し、「あなたの選択教材」欄と「教材一覧」欄の両方をジャンル見出し付きで表示する。📌ピン留め教材はジャンルとは別枠で先頭に表示される。
+- メインメニューの「教材ジャンル」セクションは、大分類・小分類ともに選択式のフィルターボタン（`toggleGenreFilter()`）になっており、選んだジャンルの教材だけが下の「教材一覧」に絞り込まれる（何も選んでいなければ全件表示）。「✖️ リセット」ボタンで選択をクリアする。
+- 新しい教材を追加するときは `genreMajor`/`genreMinor` を書き忘れないこと（`src/menu.test.js` の `every config.json entry has a valid genreMajor/genreMinor` テストで検証される）。
 
 **HTML での動的適用例:**
 ```javascript
