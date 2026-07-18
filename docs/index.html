@@ -471,7 +471,7 @@
       cursor: pointer;
       transition: all 0.2s;
       border-radius: 8px;
-      padding: 8px;
+      padding: 4px 8px;
       margin: 0 -8px;
     }
 
@@ -491,8 +491,18 @@
       margin-bottom: 14px;
     }
 
+    #quiz-genre-nav {
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
     .genre-nav-major {
       margin: 8px 0 2px;
+    }
+
+    .genre-nav-major:first-child {
+      margin-top: 0;
     }
 
     .genre-nav-minor-list {
@@ -660,8 +670,8 @@
     }
 
     #score-summary-rows .genre-heading-major {
-      background: rgba(124,74,0,0.14);
-      color: #7c4a00;
+      background: rgba(23,92,211,0.16);
+      color: #1a4fa0;
       border-top: none;
       border-radius: 6px;
       padding: 3px 8px;
@@ -672,8 +682,8 @@
     }
 
     #score-summary-rows .genre-heading-minor {
-      background: rgba(124,74,0,0.07);
-      color: #a0733a;
+      background: rgba(23,92,211,0.08);
+      color: #3a6bc4;
       border-radius: 6px;
       padding: 2px 8px;
     }
@@ -807,7 +817,7 @@
       <button class="btn-reload-inline" onclick="forceReload()" title="最新の状態に更新" style="position: absolute; top: 0; right: 0;">
         <span class="reload-icon">🔄</span> 最新に更新
       </button>
-      <div style="height: 32px;"></div>
+      <div style="height: 48px;"></div>
       <div class="header">
         <h1>🏠満点まで帰れません✨</h1>
         <p class="app-subtitle">（反復学習システム）</p>
