@@ -221,9 +221,54 @@
     }
 
     .auth-status { position: absolute; top: 0; left: 0; font-size: 0.78rem; }
-    .auth-status .user-chip { display: flex; align-items: center; gap: 6px; color: #718096; }
-    .auth-status .user-chip .user-name { font-weight: 700; color: #2d3748; }
-    .auth-status .user-chip .btn-logout-inline { background: none; border: none; color: #a0aec0; font-size: 0.72rem; text-decoration: underline; cursor: pointer; font-family: inherit; padding: 0; }
+    .auth-status .user-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 5px 10px 5px 6px;
+    }
+    .auth-status .user-chip .user-avatar {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .auth-status .user-chip .user-name {
+      font-weight: 700;
+      color: #2d3748;
+      max-width: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .auth-status .user-chip .btn-logout-inline {
+      background: transparent;
+      border: 1px solid #fca5a5;
+      color: #e53e3e;
+      font-size: 0.68rem;
+      font-weight: 700;
+      border-radius: 6px;
+      padding: 3px 8px;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+    .auth-status .user-chip .btn-logout-inline:hover {
+      background: #fef2f2;
+      transform: translateY(-1px);
+    }
     .btn-login-inline { background: transparent; color: #667eea; border: 2px solid #667eea; border-radius: 10px; padding: 6px 12px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; }
     .btn-login-inline:hover { background: #f5f7ff; transform: translateY(-1px); }
 
@@ -915,8 +960,11 @@ function renderAuthStatus() {
   const el = document.getElementById('auth-status');
   if (!el) return;
   if (currentUser) {
-    el.innerHTML = `<span class="user-chip">👤 <span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
-    document.getElementById('auth-status-name').textContent = currentUser.displayName || 'ユーザー';
+    const name = currentUser.displayName || 'ユーザー';
+    const initial = name.trim().charAt(0).toUpperCase();
+    el.innerHTML = `<span class="user-chip"><span class="user-avatar" id="auth-status-avatar"></span><span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
+    document.getElementById('auth-status-avatar').textContent = initial;
+    document.getElementById('auth-status-name').textContent = name;
   } else {
     el.innerHTML = `<button class="btn-login-inline" onclick="loginWithGoogle()">🔐 ログイン</button>`;
   }
