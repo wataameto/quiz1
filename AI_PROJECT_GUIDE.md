@@ -11,7 +11,7 @@
 
 主な入口:
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ（boki1, devops, kokyo1, joho1, itpassport, itpassportjr, sap, sample, fp3, takken, showa, heisei, capitals の13種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。
+- docs/{quiz}/index.html: 各クイズページ（bokinyu, devops, koukyou1, jouhou1, itpass, itpassjr, sapc02, sample, fp3kyuu, takken, shouwa, heisei, capital の13種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
 - docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携など）。
 - docs/config.json: 各クイズの表示メタデータ。
@@ -46,7 +46,7 @@
 - クイズ画面の問題文・選択肢・解説（結果画面の解答一覧も含む）には🔍アイコンが付いており、クリックすると `search-modal` が開いてその全文が選択可能なテキストとして表示される。テキストの一部をドラッグ選択してから「Googleで検索」を押すとその選択範囲だけを、何も選択しなければ全文をGoogle検索する（`searchIconHtml()` / `openSearchModal()` / `runTermSearch()` in quiz-app.js）。日本語の自動キーワード抽出は精度が低いため意図的に採用していない。選択肢の中の🔍は`<button>`の入れ子を避けるため`<span role="button">`で実装している。
 
 ## 問題データ
-- 各クイズの問題は docs/{quiz}/questions*.json に置く（例: docs/boki1/questions1.json, docs/devops/questions1.json）。
+- 各クイズの問題は docs/{quiz}/questions*.json に置く（例: docs/bokinyu/questions1.json, docs/devops/questions1.json）。
 - 問題数は動的に表示できるため、テストやルールで明示しない限り、将来も必ず10問とは仮定しない。
 - 簿記の作問ルールは QUESTION_GUIDE.md に書く。他クイズの作問時も、同ファイルの共通ルール（正答1つ、選択肢重複なし、解説必須）を守る。
 

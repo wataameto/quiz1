@@ -10,7 +10,7 @@
     "accentColor": "#38b48b",
     "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
   },
-  "boki1": {
+  "bokinyu": {
     "title": "📚 簿記超入門レベル",
     "heading": "簿記超入門レベル",
     "description": "簿記（会計）の基礎知識。分記法（商品売買益）レベルの仕訳を扱う",
@@ -32,7 +32,7 @@
     "accentColor": "#f7971e",
     "accentActive": "linear-gradient(135deg, #fff9ed, #fffbea)"
   },
-  "sap": {
+  "sapc02": {
     "title": "🏛️ AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
     "heading": "AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
     "description": "AWS Solutions Architect Professional（SAP-C02）試験対策。組織の複雑性に対応する設計、新規ソリューション設計、既存ソリューションの継続的改善、ワークロード移行・モダナイゼーションを基礎から模擬試験まで段階的に学べる",
@@ -43,7 +43,7 @@
     "accentColor": "#ff6a88",
     "accentActive": "linear-gradient(135deg, #fff5f2, #ffeef0)"
   },
-  "kokyo1": {
+  "koukyou1": {
     "title": "⚖️ 公共1 高校１年１学期末考査対策",
     "heading": "公共1 高校１年１学期末考査対策",
     "description": "高校「公共」1学期期末考査のテスト対策プリント。民主政治と人権保障、法の支配と三権分立、自由・権利と責任・義務、日本国憲法の基本原理などを扱う",
@@ -54,7 +54,7 @@
     "accentColor": "#11998e",
     "accentActive": "linear-gradient(135deg, #f0fdf4, #dcfce7)"
   },
-  "joho1": {
+  "jouhou1": {
     "title": "💻 情報処理1 練習問題",
     "heading": "情報処理1 練習問題",
     "description": "高校「情報Ⅰ」の基礎。情報システム、IoT・AI・クラウド、情報デザインとUI、情報モラル・セキュリティ、著作権・個人情報保護、コンピュータの仕組み（CPU・メモリ・記憶装置）まで幅広くカバー",
@@ -65,7 +65,7 @@
     "accentColor": "#00b4db",
     "accentActive": "linear-gradient(135deg, #f0f9ff, #e0f2fe)"
   },
-  "itpassport": {
+  "itpass": {
     "title": "🧭 （IPA）ITパスポート試験",
     "heading": "（IPA）ITパスポート試験",
     "description": "ITパスポート試験対策。ストラテジ系（経営戦略・法務・会計財務）、マネジメント系（開発技術・プロジェクト・サービスマネジメント）、テクノロジ系（基礎理論・ネットワーク・セキュリティ・DB）の3分野をカバー",
@@ -76,7 +76,7 @@
     "accentColor": "#6a11cb",
     "accentActive": "linear-gradient(135deg, #f5f3ff, #ede9fe)"
   },
-  "itpassportjr": {
+  "itpassjr": {
     "title": "🌱 ITパスポートJr（やさしい版）",
     "heading": "ITパスポートJr（やさしい版）",
     "description": "中高生向けのやさしいITパスポート入門。経営戦略・法務、開発・品質管理、コンピュータ・ネットワーク・セキュリティの基本を、専門用語をかみ砕いた言葉で学ぶ",
@@ -87,7 +87,7 @@
     "accentColor": "#43cea2",
     "accentActive": "linear-gradient(135deg, #f0fdf4, #d1fae5)"
   },
-  "fp3": {
+  "fp3kyuu": {
     "title": "💰 FP技能検定3級",
     "heading": "FP技能検定3級",
     "description": "ファイナンシャル・プランニング技能検定3級の基礎知識。ライフプランニングと資金計画、リスク管理（保険）、金融資産運用、タックスプランニング（税金）、不動産、相続・事業承継の6分野を扱う",
@@ -109,7 +109,7 @@
     "accentColor": "#2948ff",
     "accentActive": "linear-gradient(135deg, #f0f4ff, #e8ecff)"
   },
-  "showa": {
+  "shouwa": {
     "title": "🎏 昭和レトロ雑学",
     "heading": "昭和レトロ雑学",
     "description": "昭和のくらし・家電、テレビ・娯楽、出来事・世相、音楽・芸能を扱う懐かし雑学クイズ。三種の神器から昭和のスターまで幅広くカバー",
@@ -131,7 +131,7 @@
     "accentColor": "#0072ff",
     "accentActive": "linear-gradient(135deg, #eef7ff, #e0f0ff)"
   },
-  "capitals": {
+  "capital": {
     "title": "🌍 世界首都網羅クイズ",
     "heading": "世界首都網羅クイズ",
     "description": "アジア・ヨーロッパ・南北アメリカ・アフリカ/オセアニアの国々の首都を問う雑学クイズ。定番から意外と間違えやすい首都まで幅広く出題",

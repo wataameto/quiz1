@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const questionsDir = path.join(__dirname, '..', 'docs', 'boki1');
+const questionsDir = path.join(__dirname, '..', 'docs', 'bokinyu');
 const questionFiles = fs.readdirSync(questionsDir)
   .filter(file => /^questions\d+\.json$/.test(file))
   .sort();

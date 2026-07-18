@@ -4,7 +4,7 @@ const path = require('path');
 describe('Main menu HTML', () => {
   const docsDir = path.join(__dirname, '..', 'docs');
   const indexHtml = fs.readFileSync(path.join(docsDir, 'index.html'), 'utf8');
-  const bokiHtml = fs.readFileSync(path.join(docsDir, 'boki1', 'index.html'), 'utf8');
+  const bokiHtml = fs.readFileSync(path.join(docsDir, 'bokinyu', 'index.html'), 'utf8');
   const devopsHtml = fs.readFileSync(path.join(docsDir, 'devops', 'index.html'), 'utf8');
   const quizAppJs = fs.readFileSync(path.join(docsDir, 'shared', 'quiz-app.js'), 'utf8');
   const config = JSON.parse(fs.readFileSync(path.join(docsDir, 'config.json'), 'utf8'));
@@ -21,7 +21,7 @@ describe('Main menu HTML', () => {
   });
 
   test('should use configured quiz names in menu labels', () => {
-    expect(indexHtml).toContain(config.boki1.heading);
+    expect(indexHtml).toContain(config.bokinyu.heading);
     expect(indexHtml).toContain(config.devops.heading);
   });
 

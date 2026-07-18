@@ -1,5 +1,5 @@
 {
-  "boki1": {
+  "bokinyu": {
     "parts": 3,
     "sets": 9,
     "total": 90,
@@ -21,7 +21,7 @@
       }
     }
   },
-  "capitals": {
+  "capital": {
     "parts": 1,
     "sets": 12,
     "total": 120,
@@ -94,7 +94,7 @@
       }
     }
   },
-  "fp3": {
+  "fp3kyuu": {
     "parts": 6,
     "sets": 6,
     "total": 60,
@@ -132,7 +132,7 @@
       }
     }
   },
-  "itpassport": {
+  "itpass": {
     "parts": 3,
     "sets": 9,
     "total": 90,
@@ -154,7 +154,7 @@
       }
     }
   },
-  "itpassportjr": {
+  "itpassjr": {
     "parts": 3,
     "sets": 9,
     "total": 90,
@@ -176,7 +176,7 @@
       }
     }
   },
-  "joho1": {
+  "jouhou1": {
     "parts": 1,
     "sets": 11,
     "total": 86,
@@ -196,7 +196,7 @@
       }
     }
   },
-  "kokyo1": {
+  "koukyou1": {
     "parts": 1,
     "sets": 5,
     "total": 55,
@@ -225,7 +225,7 @@
       }
     }
   },
-  "sap": {
+  "sapc02": {
     "parts": 6,
     "sets": 33,
     "total": 330,
@@ -277,7 +277,7 @@
       }
     }
   },
-  "showa": {
+  "shouwa": {
     "parts": 1,
     "sets": 4,
     "total": 40,

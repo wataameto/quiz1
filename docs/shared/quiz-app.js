@@ -912,7 +912,7 @@ async function showHome() {
   const currentPartLabel = currentLevelData?.description || currentLevelData?.label || `パート ${currentLevel}`;
   const currentPartCard = document.getElementById('current-part-card');
 
-  const unitName = quizId === 'kokyo1' ? 'プリント' : 'セット';
+  const unitName = quizId === 'koukyou1' ? 'プリント' : 'セット';
 
   // レベル別スコアを計算・表示
   const partScoresSection = document.getElementById('part-scores-section');

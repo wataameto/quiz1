@@ -445,6 +445,21 @@
       overflow-wrap: break-word;
     }
 
+    .quiz-code-badge {
+      display: inline-block;
+      font-family: 'SFMono-Regular', Consolas, monospace;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #4a5568;
+      background: #edf2f7;
+      border: 1px solid #cbd5e0;
+      border-radius: 5px;
+      padding: 1px 5px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
     .quiz-toggle-desc {
       display: block;
       width: 100%;
@@ -586,18 +601,18 @@ let pendingPrefsSave = null; // in-flight Firestore write, if any
 
 const QUIZZES = [
   { id: 'sample', emoji: '🎲', name: 'サンプル教材', path: './sample/', collection: 'quiz_sample' },
-  { id: 'boki1', emoji: '📚', name: '簿記超入門レベル', path: './boki1/', collection: 'quiz_boki1' },
+  { id: 'bokinyu', emoji: '📚', name: '簿記超入門レベル', path: './bokinyu/', collection: 'quiz_bokinyu' },
   { id: 'devops', emoji: '☁️', name: 'AWS認定DevOpsエンジニア(DOP-C02)', path: './devops/', collection: 'quiz_devops' },
-  { id: 'sap', emoji: '🏛️', name: 'AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)', path: './sap/', collection: 'quiz_sap' },
-  { id: 'kokyo1', emoji: '⚖️', name: '公共1 高校１年１学期末考査対策', path: './kokyo1/', collection: 'quiz_kokyo1' },
-  { id: 'joho1', emoji: '💻', name: '情報処理1 練習問題', path: './joho1/', collection: 'quiz_joho1' },
-  { id: 'itpassport', emoji: '🧭', name: '（IPA）ITパスポート試験', path: './itpassport/', collection: 'quiz_itpassport' },
-  { id: 'itpassportjr', emoji: '🌱', name: 'ITパスポートJr（やさしい版）', path: './itpassportjr/', collection: 'quiz_itpassportjr' },
-  { id: 'fp3', emoji: '💰', name: 'FP技能検定3級', path: './fp3/', collection: 'quiz_fp3' },
+  { id: 'sapc02', emoji: '🏛️', name: 'AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)', path: './sapc02/', collection: 'quiz_sapc02' },
+  { id: 'koukyou1', emoji: '⚖️', name: '公共1 高校１年１学期末考査対策', path: './koukyou1/', collection: 'quiz_koukyou1' },
+  { id: 'jouhou1', emoji: '💻', name: '情報処理1 練習問題', path: './jouhou1/', collection: 'quiz_jouhou1' },
+  { id: 'itpass', emoji: '🧭', name: '（IPA）ITパスポート試験', path: './itpass/', collection: 'quiz_itpass' },
+  { id: 'itpassjr', emoji: '🌱', name: 'ITパスポートJr（やさしい版）', path: './itpassjr/', collection: 'quiz_itpassjr' },
+  { id: 'fp3kyuu', emoji: '💰', name: 'FP技能検定3級', path: './fp3kyuu/', collection: 'quiz_fp3kyuu' },
   { id: 'takken', emoji: '🏘️', name: '宅地建物取引士（宅建士）', path: './takken/', collection: 'quiz_takken' },
-  { id: 'showa', emoji: '🎏', name: '昭和レトロ雑学', path: './showa/', collection: 'quiz_showa' },
+  { id: 'shouwa', emoji: '🎏', name: '昭和レトロ雑学', path: './shouwa/', collection: 'quiz_shouwa' },
   { id: 'heisei', emoji: '📼', name: '平成レトロ雑学', path: './heisei/', collection: 'quiz_heisei' },
-  { id: 'capitals', emoji: '🌍', name: '世界首都網羅クイズ', path: './capitals/', collection: 'quiz_capitals' },
+  { id: 'capital', emoji: '🌍', name: '世界首都網羅クイズ', path: './capital/', collection: 'quiz_capital' },
 ];
 
 // Firebase の signInWithPopup/signInWithRedirect は iPhone Chrome (CriOS)
@@ -868,7 +883,9 @@ function renderQuizToggleList() {
 
   const filtered = lastQuizResults.filter(r => {
     if (!query) return true;
-    return r.name.toLowerCase().includes(query) || r.description.toLowerCase().includes(query);
+    return r.name.toLowerCase().includes(query)
+      || r.description.toLowerCase().includes(query)
+      || (r.id || '').toLowerCase().includes(query);
   });
 
   let toggleHtml = '';
@@ -877,7 +894,7 @@ function renderQuizToggleList() {
     toggleHtml += `<div class="quiz-toggle-row">
       <div class="quiz-toggle-top">
         <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
-        <span class="quiz-toggle-label">${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
+        <span class="quiz-toggle-label"><span class="quiz-code-badge">${r.id.toUpperCase()}</span>${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
       </div>
       <span class="quiz-toggle-desc">${r.description}</span>
     </div>`;

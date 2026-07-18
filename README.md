@@ -3,18 +3,19 @@
 反復学習クイズアプリ「🏠満点まで帰れません✨（反復学習システム）」。間違えた問題を何度も復習して満点を目指す、静的サイトです。docs/ から配信します。
 
 ## クイズ一覧
-- boki1: 簿記超入門レベル
+- bokinyu: 簿記超入門レベル
 - devops: AWS認定DevOpsエンジニア(DOP-C02)
-- kokyo1: 公共1（高校向け）
-- joho1: 情報処理1 練習問題
-- itpassport: （IPA）ITパスポート試験
-- itpassportjr: ITパスポートJr（やさしい版）
-- sap: AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)
+- koukyou1: 公共1（高校向け）
+- jouhou1: 情報処理1 練習問題
+- itpass: （IPA）ITパスポート試験
+- itpassjr: ITパスポートJr（やさしい版）
+- sapc02: AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)
 - sample: 動作確認・お試し用のミニ教材
-- fp3: FP技能検定3級
+- fp3kyuu: FP技能検定3級
 - takken: 宅地建物取引士（宅建士）
-- showa: 昭和レトロ雑学
+- shouwa: 昭和レトロ雑学
 - heisei: 平成レトロ雑学
+- capital: 世界首都網羅クイズ
 
 ## 主なファイル
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
@@ -47,4 +48,4 @@ python3 -m http.server 8000
 ```
 
 - http://localhost:8000/
-- 各クイズは `?admin=1` で問題レビュー画面を表示できます（例: http://localhost:8000/boki1/?admin=1 ）。
+- 各クイズは `?admin=1` で問題レビュー画面を表示できます（例: http://localhost:8000/bokinyu/?admin=1 ）。

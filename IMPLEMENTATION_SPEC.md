@@ -34,7 +34,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### ファイル構成
 - アプリ本体は docs/ 配下の静的HTML/JSONで動く。アプリ名は「🏠満点まで帰れません✨」。
 - メインメニューは docs/index.html（単独ファイル、CSS/JSも内包）。
-- クイズページは docs/{quiz}/index.html（boki1, devops, kokyo1, joho1, itpassport, itpassportjr, sap, sample, fp3, takken, showa, heisei, capitals の13種）。13ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
+- クイズページは docs/{quiz}/index.html（bokinyu, devops, koukyou1, jouhou1, itpass, itpassjr, sapc02, sample, fp3kyuu, takken, shouwa, heisei, capital の13種）。13ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
 - クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
 - 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。各ファイルは `id`（クイズスラッグ）を持つ必須フィールド。
 - ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。同スクリプトが8クイズページの `?v=` キャッシュバスティングと docs/quiz-meta.json（パート/セット/問題数の集計）も同時に生成する。
@@ -48,7 +48,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - loadQuizMetaAll() は docs/quiz-meta.json を1回だけfetchする（Promiseをキャッシュして並列呼び出しでも1リクエストに集約）。calculateQuizMeta(quizId, questionsPath) はこのメタを優先して使い、載っていないクイズだけ questions*.json を直接fetchするフォールバックに落ちる。
 - getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の best_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
 - 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。各行には正答数表示の直前に `⭐×N`（lap>0のとき）を出し、さらに全問正解済みだが「次の周へ進む」をまだ押していない状態（correct===totalかつ）なら `+⭐` を追記する（メインメニューはFirestoreを都度読み直さない設計のため、この判定だけは既存のcorrect/totalから導出する）。
-- 「教材一覧」（quiz-toggle-section）は全クイズをトグルスイッチ（左側）付きで一覧表示し、上に検索ボックス（quiz-search-input）でタイトル・説明を絞り込める。
+- 「教材一覧」（quiz-toggle-section）は全クイズをトグルスイッチ（左側）付きで一覧表示し、上に検索ボックス（quiz-search-input）でタイトル・説明・idコード（`bokinyu`, `sapc02`等）を絞り込める。各行の名前の前には`id`を大文字化した短いコードバッジ（`.quiz-code-badge`）を表示する。
 - 教材ごとのON/OFFは visiblePrefs（{quizId: boolean}）で管理し、Firestoreの `quiz_menu_prefs/{uid}` ドキュメントに保存する。初回（ドキュメント未作成）はデフォルト全部OFF。
 - toggleQuizVisibility(id) は未ログイン時、保存せずに「教材を選択するにはログインしてください」とアラートを出して終了する。
 - forceReload()（最新に更新ボタン）は、直前のトグル保存（pendingPrefsSave）を待ってから location.href でリロードする。
@@ -88,7 +88,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 管理者専用認証はない。URLを知っていれば表示できる軽量レビュー画面として扱う。
 
 ### Firestore スキーマ
-- スコア用collection名は quiz_<quizId>。例: quiz_boki1, quiz_devops, quiz_kokyo1, quiz_joho1, quiz_itpassport, quiz_itpassportjr, quiz_sap, quiz_sample。quizId は questions1.json の `id` フィールドから取得するため、新規クイズでは必ずこれを設定すること（無いと quiz_undefined に保存される）。
+- スコア用collection名は quiz_<quizId>。例: quiz_bokinyu, quiz_devops, quiz_koukyou1, quiz_jouhou1, quiz_itpass, quiz_itpassjr, quiz_sapc02, quiz_sample。quizId は questions1.json の `id` フィールドから取得するため、新規クイズでは必ずこれを設定すること（無いと quiz_undefined に保存される）。
 - メインメニューの教材トグル設定は quiz_menu_prefs（document id は uid、フィールド visible が {quizId: boolean}）。
 - セキュリティルールは `request.auth.uid == userId && (collection == 'scores' || collection.matches('^quiz_.*'))` の形。新規コレクションは `quiz_` プレフィックス必須（`scores` は現状未使用）。
 - document id は currentUser.uid。
