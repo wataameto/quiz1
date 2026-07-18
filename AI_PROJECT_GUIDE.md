@@ -11,7 +11,7 @@
 
 主な入口:
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ（bokinyu, devops, koukyou1, jouhou1, itpass, itpassjr, sapc02, sample, fp3kyuu, takken, shouwa, heisei, capital の13種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。
+- docs/{quiz}/index.html: 各クイズページ（sample, sample2, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital の14種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
 - docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携など）。
 - docs/config.json: 各クイズの表示メタデータ。
@@ -34,7 +34,7 @@
 
 ## HTML と config のルール
 - 各クイズページの見た目・挙動ロジックは docs/shared/quiz-app.css と docs/shared/quiz-app.js に一本化している。クイズ固有の index.html はHTML骨格（画面のdiv構造）だけを持ち、内容はすべて同一（`?v=` のキャッシュバスティング用クエリだけがビルドのたびに変わる）。
-- クイズを追加・修正するときは docs/shared/ の共通ファイルを編集する。docs/{quiz}/index.html 自体を個別に書き換える必要は基本的にない（HTML骨格自体を変えるときだけ、13ファイル全部に同じ内容をコピーする。1ファイルを正として編集し、残り12ファイルへバイト単位でコピーするのが確実）。
+- クイズを追加・修正するときは docs/shared/ の共通ファイルを編集する。docs/{quiz}/index.html 自体を個別に書き換える必要は基本的にない（HTML骨格自体を変えるときだけ、14ファイル全部に同じ内容をコピーする。1ファイルを正として編集し、残り13ファイルへバイト単位でコピーするのが確実）。
 - クイズごとのラベル、見出し、色、説明文は docs/config.json に置く。共通JSが起動時に config.json を読んで適用する。メインメニューの教材一覧・検索でも同じ config.json の description を使うので、内容を充実させると両方に反映される。
 - 新しいクイズを追加するときは、`docs/{quiz}/questions*.json` の各ファイルに必ず `"id": "<quizId>"` フィールドを含める。共通JSがこの `id` を最初に読み込んだ questions1.json から拾って Firestore コレクション名（`quiz_<quizId>`）を決めるため、これが無いと成績が `quiz_undefined` という誤ったコレクションに保存されてしまう（実際に起きた事故）。
 - 各クイズページでは ?admin=1 で問題レビュー画面を表示できる。

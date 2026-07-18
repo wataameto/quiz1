@@ -34,7 +34,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### ファイル構成
 - アプリ本体は docs/ 配下の静的HTML/JSONで動く。アプリ名は「🏠満点まで帰れません✨」。
 - メインメニューは docs/index.html（単独ファイル、CSS/JSも内包）。
-- クイズページは docs/{quiz}/index.html（bokinyu, devops, koukyou1, jouhou1, itpass, itpassjr, sapc02, sample, fp3kyuu, takken, shouwa, heisei, capital の13種）。13ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
+- クイズページは docs/{quiz}/index.html（sample, sample2, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital の14種）。14ファイルとも内容が同一（`?v=`キャッシュバスティング用クエリだけ違う）で、共通CSS/JSは docs/shared/quiz-app.css・quiz-app.js を読み込む。
 - クイズごとのタイトル、見出し、説明、色は docs/config.json に置く。
 - 問題データは docs/{quiz}/questions*.json（レベル＝パートごとに1ファイル）。各ファイルは `id`（クイズスラッグ）を持つ必須フィールド。
 - ビルド日時は docs/build-info.json。scripts/update-build-time.js と hooks/pre-commit が更新する。同スクリプトが8クイズページの `?v=` キャッシュバスティングと docs/quiz-meta.json（パート/セット/問題数の集計）も同時に生成する。
@@ -44,7 +44,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 初期表示は screen-loading。auth.onAuthStateChanged(user => ...) が currentUser を設定したら、ログイン状態に関わらず常に showHomeScreen() を呼ぶ（専用ログイン画面はない）。
 - loginWithGoogle() は Google Identity Services (GIS) のトークンクライアントを同期的に呼び出す方式（signInWithPopup/signInWithRedirectは使わない。詳細はAI_PROJECT_GUIDE.mdのログイン方式の節）。ログアウトは confirm() ではなく logout-modal（自前モーダル）を経由する confirmLogout()。
 - 左上の auth-status に、未ログイン時は「🔐 ログイン」ボタン、ログイン時は「👤 ユーザー名 ログアウト」を表示する（renderAuthStatus）。
-- QUIZZES 配列（id, emoji, name, path, collection）が8クイズのメタ定義。クイズを追加するときはここに1行足す。
+- 教材一覧はdocs/config.jsonのキーから動的に組み立てる（updateScoreDisplay()がObject.keys(menuConfig)を使う）。path(`./<id>/`)とcollection(`quiz_<id>`)は命名規則で導出するため、docs/index.html側に別途登録する静的配列は持たない。クイズを追加するときはconfig.jsonにエントリを1つ足すだけでよい。
 - loadQuizMetaAll() は docs/quiz-meta.json を1回だけfetchする（Promiseをキャッシュして並列呼び出しでも1リクエストに集約）。calculateQuizMeta(quizId, questionsPath) はこのメタを優先して使い、載っていないクイズだけ questions*.json を直接fetchするフォールバックに落ちる。
 - getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の best_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
 - 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。各行には正答数表示の直前に `⭐×N`（lap>0のとき）を出し、さらに全問正解済みだが「次の周へ進む」をまだ押していない状態（correct===totalかつ）なら `+⭐` を追記する（メインメニューはFirestoreを都度読み直さない設計のため、この判定だけは既存のcorrect/totalから導出する）。
