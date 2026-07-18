@@ -403,13 +403,6 @@
       background: rgba(124,74,0,0.06);
     }
 
-    .score-row-top-line {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
     .score-row-name {
       overflow-wrap: break-word;
     }
@@ -419,36 +412,6 @@
       font-size: 0.78rem;
       font-weight: 800;
       vertical-align: middle;
-    }
-
-    .score-row-chevron {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      flex-shrink: 0;
-      opacity: 0.9;
-      transition: transform 0.2s;
-    }
-
-    .chevron-label {
-      background: rgba(124,74,0,0.12);
-      border: 1px solid rgba(124,74,0,0.35);
-      border-radius: 999px;
-      padding: 3px 11px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .chevron-arrow {
-      font-size: 1.35rem;
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .score-link:hover .score-row-chevron {
-      transform: translateX(3px);
-      opacity: 1;
     }
 
     .score-row-meta {
@@ -465,11 +428,32 @@
       overflow-wrap: break-word;
     }
 
-    .score-row-correct {
+    .score-row-result {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       flex-shrink: 0;
+    }
+
+    .score-row-correct {
       white-space: nowrap;
       font-weight: 700;
       color: #7c4a00;
+    }
+
+    .score-row-enter {
+      background: rgba(124,74,0,0.12);
+      border: 1px solid rgba(124,74,0,0.35);
+      border-radius: 999px;
+      padding: 3px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: transform 0.2s;
+    }
+
+    .score-link:hover .score-row-enter {
+      transform: translateX(3px);
     }
 
     .score-row.total {
@@ -1210,13 +1194,13 @@ function renderScoreRowHtml(r) {
   if (isFull) markText += '+⭐';
   const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
   return `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
-      <span class="score-row-top-line">
-        <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}</span>
-        <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
-      </span>
+      <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}</span>
       <span class="score-row-meta">
         <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット</span>
-        <span class="score-row-correct">${clearMark}✅ ${r.score.correct}/${r.meta.total}問正解</span>
+        <span class="score-row-result">
+          <span class="score-row-correct">${clearMark}✅ ${r.score.correct}/${r.meta.total}問正解</span>
+          <span class="score-row-enter">入る</span>
+        </span>
       </span>
     </a>`;
 }
