@@ -513,6 +513,29 @@
       margin-bottom: 2px;
     }
 
+    .quiz-toggle-heading-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .compact-list-label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #718096;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .compact-list-label input {
+      cursor: pointer;
+    }
+
     .quiz-toggle-hint {
       font-size: 0.76rem;
       color: #a0aec0;
@@ -625,6 +648,34 @@
       transform: translateX(18px);
     }
 
+    .pin-toggle-btn {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      border: 1.5px solid #e2e8f0;
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.45;
+      filter: grayscale(1);
+      transition: all 0.15s;
+    }
+
+    .pin-toggle-btn:hover {
+      opacity: 0.75;
+    }
+
+    .pin-toggle-btn.pinned {
+      opacity: 1;
+      filter: none;
+      background: #fffbea;
+      border-color: #f6d365;
+    }
+
     .hidden {
       display: none !important;
     }
@@ -666,7 +717,13 @@
     </div>
 
     <div class="quiz-toggle-section">
-      <h3 class="quiz-toggle-heading">教材一覧</h3>
+      <div class="quiz-toggle-heading-row">
+        <h3 class="quiz-toggle-heading">教材一覧</h3>
+        <label class="compact-list-label">
+          <input type="checkbox" id="compact-list-toggle" onchange="onCompactListToggleChange()">
+          タイトルのみ表示
+        </label>
+      </div>
       <p class="quiz-toggle-hint">ONにした教材だけ、上の成績一覧に表示されます</p>
       <input
         type="text"
@@ -731,6 +788,8 @@ let currentUser = null;
 const quizMetaCache = {};
 let visiblePrefs = null; // null = not loaded from Firestore yet
 let pendingPrefsSave = null; // in-flight Firestore write, if any
+let pinnedPrefs = null; // null = not loaded from Firestore yet
+let pendingPinnedSave = null; // in-flight Firestore write, if any
 
 // Firebase の signInWithPopup/signInWithRedirect は iPhone Chrome (CriOS)
 // で機能しない（redirect は firebaseapp.com への別ドメインiframeに依存
@@ -900,6 +959,11 @@ function isQuizVisible(id) {
   return visiblePrefs[id] === true;
 }
 
+function isQuizPinned(id) {
+  if (!pinnedPrefs) return false;
+  return pinnedPrefs[id] === true;
+}
+
 let menuConfigCache = null;
 async function loadMenuConfig() {
   if (menuConfigCache) return menuConfigCache;
@@ -980,6 +1044,38 @@ async function toggleQuizVisibility(id) {
   await updateScoreDisplay();
 }
 
+async function loadPinnedPrefs() {
+  if (!currentUser) return null;
+  try {
+    const doc = await db.collection('quiz_menu_prefs').doc(currentUser.uid).get();
+    if (doc.exists && doc.data().pinned) {
+      return doc.data().pinned;
+    }
+  } catch (e) { console.error('Failed to load pinned prefs:', e); }
+  return null;
+}
+
+async function savePinnedPrefs() {
+  if (!currentUser || !pinnedPrefs) return;
+  try {
+    await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ pinned: pinnedPrefs }, { merge: true });
+  } catch (e) { console.error('Failed to save pinned prefs:', e); }
+}
+
+async function toggleQuizPin(id) {
+  if (!currentUser) {
+    showLoginPromptModal();
+    return;
+  }
+  if (!pinnedPrefs) {
+    pinnedPrefs = {};
+  }
+  pinnedPrefs[id] = !isQuizPinned(id);
+  pendingPinnedSave = savePinnedPrefs();
+  await pendingPinnedSave;
+  await updateScoreDisplay();
+}
+
 let lastQuizResults = [];
 
 function quizCodeBadgeHtml(id) {
@@ -989,6 +1085,9 @@ function quizCodeBadgeHtml(id) {
 async function updateScoreDisplay() {
   if (visiblePrefs === null) {
     visiblePrefs = await loadVisiblePrefs();
+  }
+  if (pinnedPrefs === null) {
+    pinnedPrefs = await loadPinnedPrefs();
   }
   const menuConfig = await loadMenuConfig();
 
@@ -1007,7 +1106,9 @@ async function updateScoreDisplay() {
   let totalCorrect = 0;
   let totalQuestions = 0;
   let rowsHtml = '';
-  results.forEach(r => {
+  // 📌固定した教材を先頭にまとめる（固定同士・非固定同士の相対順序はそのまま保つ安定ソート）
+  const sortedResults = [...results].sort((a, b) => (isQuizPinned(b.id) ? 1 : 0) - (isQuizPinned(a.id) ? 1 : 0));
+  sortedResults.forEach(r => {
     if (!isQuizVisible(r.id)) return;
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
@@ -1037,9 +1138,22 @@ async function updateScoreDisplay() {
   renderQuizToggleList();
 }
 
+const COMPACT_LIST_KEY = 'quizListCompactMode';
+
+function isCompactListMode() {
+  return localStorage.getItem(COMPACT_LIST_KEY) === '1';
+}
+
+function onCompactListToggleChange() {
+  const checked = document.getElementById('compact-list-toggle')?.checked;
+  localStorage.setItem(COMPACT_LIST_KEY, checked ? '1' : '0');
+  renderQuizToggleList();
+}
+
 function renderQuizToggleList() {
   const searchInput = document.getElementById('quiz-search-input');
   const query = (searchInput?.value || '').trim().toLowerCase();
+  const compact = isCompactListMode();
 
   const filtered = lastQuizResults.filter(r => {
     if (!query) return true;
@@ -1051,12 +1165,16 @@ function renderQuizToggleList() {
   let toggleHtml = '';
   filtered.forEach(r => {
     const on = isQuizVisible(r.id);
+    const pinned = isQuizPinned(r.id);
+    const metaText = compact ? '' : `　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問`;
+    const descHtml = compact ? '' : `<span class="quiz-toggle-desc">${r.description}</span>`;
     toggleHtml += `<div class="quiz-toggle-row">
       <div class="quiz-toggle-top">
         <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
-        <span class="quiz-toggle-label">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
+        <button class="pin-toggle-btn${pinned ? ' pinned' : ''}" onclick="toggleQuizPin('${r.id}')" aria-pressed="${pinned}" title="あなたの選択教材の上に固定">📌</button>
+        <span class="quiz-toggle-label">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}${metaText}</span>
       </div>
-      <span class="quiz-toggle-desc">${r.description}</span>
+      ${descHtml}
     </div>`;
   });
   document.getElementById('quiz-toggle-list').innerHTML = toggleHtml;
@@ -1066,6 +1184,8 @@ function renderQuizToggleList() {
 function showHomeScreen() {
   document.getElementById('screen-loading').classList.add('hidden');
   document.getElementById('screen-home').classList.remove('hidden');
+  const compactToggle = document.getElementById('compact-list-toggle');
+  if (compactToggle) compactToggle.checked = isCompactListMode();
   renderAuthStatus();
   updateScoreDisplay();
   renderPwaInstallUI();
@@ -1160,6 +1280,7 @@ function renderAuthStatus() {
 auth.onAuthStateChanged(user => {
   currentUser = user;
   visiblePrefs = null;
+  pinnedPrefs = null;
   showHomeScreen();
 });
 
