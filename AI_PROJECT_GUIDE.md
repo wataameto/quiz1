@@ -17,6 +17,7 @@
 - docs/config.json: 各クイズの表示メタデータ。
 - docs/build-info.json: 自動生成されるビルド日時。
 - docs/quiz-meta.json: 自動生成される全クイズのパート数・セット数・問題数（メインメニューが questions*.json を全部読まずに済むように使う）。
+- docs/manifest.json・docs/sw.js・docs/icon-*.svg: PWA化用のファイル。メインメニューと各教材ページの両方から参照される（`<link rel="manifest">`・Service Worker登録）。
 
 ## コマンド
 - npm install
