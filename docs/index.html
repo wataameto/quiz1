@@ -876,6 +876,10 @@ async function toggleQuizVisibility(id) {
 
 let lastQuizResults = [];
 
+function quizCodeBadgeHtml(id) {
+  return `<span class="quiz-code-badge">${(id || '').toUpperCase()}</span>`;
+}
+
 async function updateScoreDisplay() {
   if (visiblePrefs === null) {
     visiblePrefs = await loadVisiblePrefs();
@@ -904,7 +908,7 @@ async function updateScoreDisplay() {
     const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
     rowsHtml += `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
       <span class="score-row-top-line">
-        <span class="score-row-name"><span class="quiz-code-badge">${r.id.toUpperCase()}</span>${r.emoji} ${r.name}</span>
+        <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}</span>
         <span class="score-row-chevron"><span class="chevron-label">入る</span><span class="chevron-arrow">›</span></span>
       </span>
       <span class="score-row-meta">
@@ -940,7 +944,7 @@ function renderQuizToggleList() {
     toggleHtml += `<div class="quiz-toggle-row">
       <div class="quiz-toggle-top">
         <button class="toggle-switch${on ? ' on' : ''}" onclick="toggleQuizVisibility('${r.id}')" aria-pressed="${on}"></button>
-        <span class="quiz-toggle-label"><span class="quiz-code-badge">${r.id.toUpperCase()}</span>${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
+        <span class="quiz-toggle-label">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name}　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問</span>
       </div>
       <span class="quiz-toggle-desc">${r.description}</span>
     </div>`;

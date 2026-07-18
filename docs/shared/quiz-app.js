@@ -513,8 +513,9 @@ async function recordTestResult(id, s) {
     await docRef.set(updates, { merge: true });
     Object.assign(bestScores, updates);
 
-    // このテストの結果で「初めて」全問正解の状態になったときだけ、達成日時を記録する
-    const nowFullyCleared = await isFullyCleared();
+    // このテストの結果で「初めて」全問正解の状態になったときだけ、達成日時を記録する。
+    // すでに全問正解済みならbest_は上がることはあっても下がらないので、再スキャンせず true とみなせる。
+    const nowFullyCleared = wasFullyCleared ? true : await isFullyCleared();
     if (!wasFullyCleared && nowFullyCleared) {
       const entry = { lap: getLap() + 1, date: nowJstString(), attempts: newLapAttemptCount };
       const newFullClearHistory = [...getFullClearHistory(), entry];
@@ -589,7 +590,8 @@ async function showScoreHistory() {
 
   const lapHistory = getLapHistory();
   const fullClearHistory = getFullClearHistory();
-  if (lapHistory.length > 0 || earliestDate || fullClearHistory.length > 0) {
+  const partialResetHistory = getPartialResetHistory();
+  if (lapHistory.length > 0 || earliestDate || fullClearHistory.length > 0 || partialResetHistory.length > 0) {
     const lapEntries = [];
     if (earliestDate) lapEntries.push({ date: earliestDate.date, ts: earliestDate.ts, label: '🌟 1周目開始', field: null, idx: null });
     lapHistory.forEach((h, idx) => {
@@ -599,6 +601,10 @@ async function showScoreHistory() {
     fullClearHistory.forEach((h, idx) => {
       const ts = parseJstDateString(h.date);
       lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🎉 ${h.lap}周目全問正解（${h.attempts}回挑戦）`, field: 'fullClearHistory', idx });
+    });
+    partialResetHistory.forEach((h, idx) => {
+      const ts = parseJstDateString(h.date);
+      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🔧 ${h.lap}周目 一部リセット`, field: 'partialResetHistory', idx });
     });
     lapEntries.sort((a, b) => a.ts - b.ts);
     const lapEntriesHtml = [...lapEntries].reverse().map(e =>
@@ -677,11 +683,13 @@ function closeResetModal() {
   if (modal) modal.style.display = 'none';
 }
 
-// リセットは危険操作なので、実行前にもう1段階「本当に消しますか」の確認を挟む
-let pendingResetType = null;
+// リセットは危険操作なので、実行前にもう1段階「本当に消しますか」の確認を挟む。
+// どちらのリセットかは、確認ボタン自身のdata属性に持たせて引数として渡す
+// （モジュール変数を介さない）。
 
 function confirmResetCurrentLevel() {
-  pendingResetType = 'current';
+  const btn = document.getElementById('reset-danger-execute-btn');
+  if (btn) btn.dataset.resetType = 'current';
   const msgEl = document.getElementById('reset-danger-message');
   if (msgEl) msgEl.textContent = '現在のパートの最高点・誤答記録・挑戦履歴・通し回数を削除します。';
   const modal = document.getElementById('reset-danger-modal');
@@ -689,7 +697,8 @@ function confirmResetCurrentLevel() {
 }
 
 function confirmResetAllLevels() {
-  pendingResetType = 'all';
+  const btn = document.getElementById('reset-danger-execute-btn');
+  if (btn) btn.dataset.resetType = 'all';
   const msgEl = document.getElementById('reset-danger-message');
   if (msgEl) msgEl.textContent = 'この教材の成績データを全部（周回数・周回履歴・全問正解達成記録も含む）削除します。';
   const modal = document.getElementById('reset-danger-modal');
@@ -697,13 +706,12 @@ function confirmResetAllLevels() {
 }
 
 function closeResetDangerModal() {
-  pendingResetType = null;
   const modal = document.getElementById('reset-danger-modal');
   if (modal) modal.style.display = 'none';
 }
 
-async function executeResetDanger() {
-  const type = pendingResetType;
+async function executeResetDanger(btn) {
+  const type = btn && btn.dataset ? btn.dataset.resetType : null;
   closeResetDangerModal();
   if (type === 'current') await resetCurrentLevel();
   else if (type === 'all') await resetAllLevels();
@@ -716,8 +724,17 @@ async function resetCurrentLevel() {
     const collection = getCollectionName();
     const doc = db.collection(collection).doc(currentUser.uid);
     const snapshot = await doc.get();
-    const fieldsToDelete = {};
     if (!quizData[currentLevel] || !quizData[currentLevel].tests) return;
+
+    // 全問正解の状態からこのパートをリセットする場合、記録を残しておく。
+    // これにより、次にまた全問正解を達成したときのfullClearHistoryの新しいエントリが
+    // 「バグで重複した」のではなく「リセットして取り直した」ことだと履歴から分かる。
+    const wasFullyCleared = await isFullyCleared();
+    const fieldsToDelete = {};
+    if (wasFullyCleared) {
+      const resetEntry = { lap: getLap() + 1, date: nowJstString() };
+      fieldsToDelete.partialResetHistory = [...getPartialResetHistory(), resetEntry];
+    }
     for (const t of quizData[currentLevel].tests) {
       fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
@@ -735,6 +752,9 @@ async function resetCurrentLevel() {
       delete bestScores[historyKey(currentLevel, t.id)];
       delete bestScores[attemptCountKey(currentLevel, t.id)];
       delete bestScores[practiceCountKey(currentLevel, t.id)];
+    }
+    if (wasFullyCleared) {
+      bestScores.partialResetHistory = fieldsToDelete.partialResetHistory;
     }
     soundClick(); showHome();
   } catch (e) { console.error(e); }
@@ -829,6 +849,14 @@ function getFullClearHistory() {
   return Array.isArray(h) ? h : [];
 }
 
+// 全問正解の状態から「現在のパートのみ」リセットした記録。
+// これにより、その後もう一度全問正解になったときのfullClearHistoryの新しいエントリが
+// 「重複」ではなく「リセット後の再達成」だと周回履歴の時系列から分かるようにする。
+function getPartialResetHistory() {
+  const h = bestScores['partialResetHistory'];
+  return Array.isArray(h) ? h : [];
+}
+
 function confirmAdvanceLap() {
   const modal = document.getElementById('advance-lap-modal');
   if (modal) modal.style.display = 'flex';
@@ -912,7 +940,7 @@ async function showHome() {
   const currentPartLabel = currentLevelData?.description || currentLevelData?.label || `パート ${currentLevel}`;
   const currentPartCard = document.getElementById('current-part-card');
 
-  const unitName = quizId === 'koukyou1' ? 'プリント' : 'セット';
+  const unitName = 'セット';
 
   // レベル別スコアを計算・表示
   const partScoresSection = document.getElementById('part-scores-section');

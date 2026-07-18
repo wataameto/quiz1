@@ -8,7 +8,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260718113846">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260718122419">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -175,7 +175,7 @@
       <p style="color:#e53e3e; margin-bottom:20px; font-size:0.85rem; font-weight:800;">この操作は取り消せません。本当によろしいですか？</p>
       <div style="display:flex; gap:12px; justify-content:center;">
         <button onclick="closeResetDangerModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
-        <button onclick="executeResetDanger()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:800; color:#fff; font-family:inherit;">💣 実行する</button>
+        <button id="reset-danger-execute-btn" onclick="executeResetDanger(this)" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:800; color:#fff; font-family:inherit;">💣 実行する</button>
       </div>
     </div>
   </div>
@@ -205,6 +205,6 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260718113846"></script>
+<script src="../shared/quiz-app.js?v=20260718122419"></script>
 </body>
 </html>
