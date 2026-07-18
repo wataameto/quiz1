@@ -86,5 +86,16 @@
     "topGradient": "linear-gradient(90deg, #56ab2f, #a8e063, #43cea2, #185a9d)",
     "accentColor": "#43cea2",
     "accentActive": "linear-gradient(135deg, #f0fdf4, #d1fae5)"
+  },
+  "fp3": {
+    "title": "💰 FP技能検定3級",
+    "heading": "FP技能検定3級",
+    "description": "ファイナンシャル・プランニング技能検定3級の基礎知識。ライフプランニングと資金計画、リスク管理（保険）、金融資産運用、タックスプランニング（税金）、不動産、相続・事業承継の6分野を扱う",
+    "icon": "💰",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #f7b733, #fc4a1a, #16a085, #2c3e50)",
+    "accentColor": "#f7b733",
+    "accentActive": "linear-gradient(135deg, #fffaf0, #fff3e0)"
   }
 }
