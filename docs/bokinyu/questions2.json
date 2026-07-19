@@ -1,6 +1,6 @@
 {
   "level": 2,
-  "label": "📖 パート 2",
+  "label": "📖 Part2",
   "tests": [
     {
       "id": 1,
@@ -923,5 +923,5 @@
     }
   ],
   "id": "bokinyu",
-  "description": "パート2 - 分記法（商品売買益）レベル"
+  "description": "Part2 - 分記法（商品売買益）レベル"
 }

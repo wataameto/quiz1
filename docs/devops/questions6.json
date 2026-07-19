@@ -1,6 +1,6 @@
 {
   "level": 6,
-  "label": "🟣 模擬試験3",
+  "label": "🟣 Part6 模擬試験3",
   "tests": [
     {
       "id": 1,
@@ -391,5 +391,5 @@
     }
   ],
   "id": "devops",
-  "description": "AWS DOP-C02 模擬試験3 (本格版)"
+  "description": "Part6 AWS DOP-C02 模擬試験3 (本格版)"
 }

@@ -1,8 +1,8 @@
 {
   "level": 1,
-  "label": "🧭 パート 1",
+  "label": "🧭 Part1",
   "id": "itpass",
-  "description": "パート1 - ストラテジ系（経営戦略・法務・会計財務）",
+  "description": "Part1 - ストラテジ系（経営戦略・法務・会計財務）",
   "tests": [
     {
       "id": 1,

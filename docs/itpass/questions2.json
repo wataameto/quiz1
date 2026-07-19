@@ -1,8 +1,8 @@
 {
   "level": 2,
-  "label": "🧭 パート 2",
+  "label": "🧭 Part2",
   "id": "itpass",
-  "description": "パート2 - マネジメント系（開発技術・プロジェクト・サービスマネジメント）",
+  "description": "Part2 - マネジメント系（開発技術・プロジェクト・サービスマネジメント）",
   "tests": [
     {
       "id": 1,

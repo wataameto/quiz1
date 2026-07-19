@@ -1,8 +1,8 @@
 {
   "level": 2,
-  "label": "🌱 パート 2",
+  "label": "🌱 Part2",
   "id": "itpassjr",
-  "description": "パート2 - マネジメント系（やさしい）開発・準備・品質管理の基本",
+  "description": "Part2 - マネジメント系（やさしい）開発・準備・品質管理の基本",
   "tests": [
     {
       "id": 1,

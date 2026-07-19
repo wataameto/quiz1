@@ -1,8 +1,8 @@
 {
   "id": "eiken3",
   "level": 8,
-  "label": "パート 8",
-  "description": "重要単語・表現のクイズ",
+  "label": "Part8",
+  "description": "Part8 重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,

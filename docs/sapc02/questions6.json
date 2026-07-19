@@ -1,8 +1,8 @@
 {
   "id": "sapc02",
   "level": 6,
-  "label": "🟣 模擬試験3",
-  "description": "AWS SAP-C02 模擬試験3 (本格版)",
+  "label": "🟣 Part6 模擬試験3",
+  "description": "Part6 AWS SAP-C02 模擬試験3 (本格版)",
   "tests": [
     {
       "id": 1,

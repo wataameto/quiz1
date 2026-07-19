@@ -1,8 +1,8 @@
 {
   "id": "sample",
   "level": 2,
-  "label": "🔴 上級",
-  "description": "上級",
+  "label": "🔴 Part2 上級",
+  "description": "Part2 上級",
   "tests": [
     {
       "id": 1,

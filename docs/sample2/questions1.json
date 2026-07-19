@@ -1,8 +1,8 @@
 {
   "id": "sample2",
   "level": 1,
-  "label": "🟢 初級",
-  "description": "初級",
+  "label": "🟢 Part1 初級",
+  "description": "Part1 初級",
   "tests": [
     {
       "id": 1,

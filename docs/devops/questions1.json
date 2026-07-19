@@ -1,6 +1,6 @@
 {
   "level": 1,
-  "label": "🟢 基礎初級",
+  "label": "🟢 Part1 基礎初級",
   "tests": [
     {
       "id": 1,
@@ -778,5 +778,5 @@
     }
   ],
   "id": "devops",
-  "description": "基礎初級"
+  "description": "Part1 基礎初級"
 }

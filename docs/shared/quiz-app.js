@@ -262,8 +262,7 @@ async function loadQuestions(level = 1) {
 }
 
 function getPartLabel(levelData, level) {
-  const base = levelData.description || levelData.label;
-  return base ? `Part${level} ${base}` : `Part${level}`;
+  return levelData.description || levelData.label || `Part${level}`;
 }
 
 function showAdmin() {
