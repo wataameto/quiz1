@@ -6,7 +6,7 @@
 
 現在の実行結果:
 - テストスイート: 6 passed / 6 total
-- テストケース: 140 passed / 140 total
+- テストケース: 215 passed / 215 total
 - 実行コマンド: npm test -- --runInBand
 
 ## テストファイル
@@ -36,18 +36,18 @@
 - パート数と問題数を question metadata から動的に扱うこと。
 - メニューのスコア集計が現在の question files だけを対象にすること。
 - reset 時に Firestore document の存在確認を行うこと。
-- boki1/devops の quiz page に admin question review mode があること。
+- bokinyu/devops の quiz page に admin question review mode があること。
 
 ### src/questionQuality.test.js
-- docs/ 配下の全クイズ（boki1, devops, kokyo1, joho1, itpassport, itpassportjr）を横断して問題データ品質を検証する共通テスト。
-- 各問題に scenario, choices（2件以上）, correct（範囲内の整数）, explanation があること。
+- docs/ 配下の全クイズ（config.json に登録された全ID）を横断して問題データ品質を検証する共通テスト。
+- 各問題に scenario, choices（2件以上）, correct（範囲内の整数）, explanation があること。記述式（`type: "text"`）は choices/correct の代わりに `correctText` を検証し、選択肢重複チェック対象外とする。
 - 1問の中で選択肢が重複しないこと。
 - 同じクイズ内でシナリオ文が完全一致する問題が存在しないこと（コピペ重複の検出）。
 - 仕訳問題（type: journal）がある場合、全選択肢で借方合計と貸方合計が一致すること。
 - 「選択肢セット・正解が同じでシナリオだけ言い回しを変えた」近似重複は誤検知が多いため対象外（分類問題など、同じ選択肢プールを正当に使い回すパターンがあるため）。まれに見つかった場合は手動監査で対応する。
 
 ### src/bokiQuestions.test.js
-- docs/boki1/questions*.json 固有のルール検証（構造・重複・仕訳バランスは questionQuality.test.js に統合済み）。
+- docs/bokinyu/questions*.json 固有のルール検証（構造・重複・仕訳バランスは questionQuality.test.js に統合済み）。
 - 仕訳の勘定科目名に 売上 / 仕入 を使っていないこと。
 
 ## 実行方法
