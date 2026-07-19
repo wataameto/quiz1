@@ -674,7 +674,7 @@ async function showScoreHistory() {
     });
     fullClearHistory.forEach((h, idx) => {
       const ts = parseJstDateString(h.date);
-      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🎉 ${h.lap}周目全問正解（${h.attempts}回挑戦）`, field: 'fullClearHistory', idx });
+      lapEntries.push({ date: h.date, ts: ts === null ? 0 : ts, label: `🎉 全クリア(試験回数${h.attempts}回)`, field: 'fullClearHistory', idx });
     });
     partialResetHistory.forEach((h, idx) => {
       const ts = parseJstDateString(h.date);
@@ -682,10 +682,10 @@ async function showScoreHistory() {
     });
     lapEntries.sort((a, b) => a.ts - b.ts);
     const lapEntriesHtml = [...lapEntries].reverse().map(e =>
-      `<div style="display:flex; align-items:center; gap:8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
+      `<div style="display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
         ${e.field ? `<input type="checkbox" class="history-check" data-field="${e.field}" data-idx="${e.idx}">` : '<span style="width:16px; flex-shrink:0; display:inline-block;"></span>'}
-        <span style="flex:1; min-width:0;">${escapeHtml(e.date)}</span>
-        <span style="font-weight:700; flex-shrink:0;">${e.label}</span>
+        <span style="white-space:nowrap;">${escapeHtml(e.date)}</span>
+        <span style="font-weight:700; margin-left:auto; white-space:nowrap;">${e.label}</span>
       </div>`
     ).join('');
     partSections.unshift(
