@@ -88,7 +88,7 @@
       "subtitle": "物事の性質や良し悪しを表す形容詞",
       "questions": [
         {"scenario": "「accurate」の意味として最も適切なものは？", "choices": ["正確な、精密な", "不正確な", "大雑把な", "適当な"], "correct": 0, "explanation": "accurateは「正確な、精密な」という意味です。例: accurate information（正確な情報）", "type": "choice"},
-        {"scenario": "「convenient」の意味として最も適切なものは？", "choices": ["便利な、都合の良い", "不便な", "難しい", "高価な"], "correct": 0, "explanation": "convenientは「便利な、都合の良い」という意味です。例: a convenient store（コンビニ）", "type": "choice"},
+        {"scenario": "「convenient」の意味として最も適切なものは？", "choices": ["便利な、都合の良い", "不便な", "難しい", "高価な"], "correct": 0, "explanation": "convenientは「便利な、都合の良い」という意味です。「コンビニ」は convenience store（convenienceは名詞）です。例: a convenient location（便利な場所）", "type": "choice"},
         {"scenario": "「delicious」の意味として最も適切なものは？", "choices": ["美味しい", "まずい", "辛い", "甘い"], "correct": 0, "explanation": "deliciousは「美味しい」という意味です。very deliciousとは言わず、absolutely deliciousなどを使います。", "type": "choice"},
         {"scenario": "「efficient」の意味として最も適切なものは？", "choices": ["効率的な、能率の良い", "非効率な", "遅い", "無駄な"], "correct": 0, "explanation": "efficientは「効率的な、能率の良い」という意味です。例: an efficient method（効率的な方法）", "type": "choice"},
         {"scenario": "「familiar」の意味として最も適切なものは？", "choices": ["よく知っている、馴染みのある", "未知の", "珍しい", "難しい"], "correct": 0, "explanation": "familiarは「よく知っている、馴染みのある」という意味です。例: be familiar with 〜（〜に精通している）", "type": "choice"},
@@ -106,7 +106,7 @@
       "emoji": "📊",
       "subtitle": "程度や頻度、物事への向き合い方を表す言葉",
       "questions": [
-        {"scenario": "「actually」の意味として最も適切なものは？", "choices": "実際には、実は", "偶然に", "当然", "おそらく"], "correct": 0, "explanation": "actuallyは「実際には、実は」という意味の副詞です。例: I actually like it.（実はそれが好きなんです。）", "type": "choice"},
+        {"scenario": "「actually」の意味として最も適切なものは？", "choices": ["実際には、実は", "偶然に", "当然", "おそらく"], "correct": 0, "explanation": "actuallyは「実際には、実は」という意味の副詞です。例: I actually like it.（実はそれが好きなんです。）", "type": "choice"},
         {"scenario": "「certainly」の意味として最も適切なものは？", "choices": ["確かに、きっと", "たぶん", "決して〜ない", "まれに"], "correct": 0, "explanation": "certainlyは「確かに、きっと、もちろん」という意味の副詞です。例: Certainly.（もちろんです。）", "type": "choice"},
         {"scenario": "「especially」の意味として最も適切なものは？", "choices": ["特に、とりわけ", "一般的に", "たまたま", "全体的に"], "correct": 0, "explanation": "especiallyは「特に、とりわけ」という意味の副詞です。例: I like fruits, especially apples.（果物が好きです、特にリンゴが。）", "type": "choice"},
         {"scenario": "「exactly」の意味として最も適切なものは？", "choices": ["正確に、ちょうど", "大まかに", "適当に", "だいたい"], "correct": 0, "explanation": "exactlyは「正確に、ちょうど、まさに」という意味です。例: Exactly right.（まさに正解。）", "type": "choice"},
@@ -134,7 +134,7 @@
         {"scenario": "「put on」の意味として最も適切なものは？", "choices": ["着る、履く、身につける", "脱ぐ", "置く", "落とす"], "correct": 0, "explanation": "put onは「着る、履く、身につける」という意味です。対義語はtake off（脱ぐ）です。", "type": "choice"},
         {"scenario": "「take off」の意味として最も適切なものは？", "choices": ["脱ぐ、離陸する", "着る", "乗る", "降りる"], "correct": 0, "explanation": "take offは服を「脱ぐ」または飛行機が「離陸する」という意味です。put onの対義語です。", "type": "choice"},
         {"scenario": "「turn on」の意味として最も適切なものは？", "choices": ["つける（電気等）、点ける", "消す", "回す", "壊す"], "correct": 0, "explanation": "turn onは電気や機械を「つける、点ける」という意味です。対義語はturn offです。", "type": "choice"},
-        {"scenario": "「turn off」の意味として最も適切なものは？", "choices": ["消す、止める（電気等）", "つける", "つける", "付ける"], "correct": 0, "explanation": "turn offは電気、テレビ、水道などを「消す、止める」という意味です。turn onの対義語です。", "type": "choice"}
+        {"scenario": "「turn off」の意味として最も適切なものは？", "choices": ["消す、止める（電気等）", "つける", "上げる", "入れる"], "correct": 0, "explanation": "turn offは電気、テレビ、水道などを「消す、止める」という意味です。turn onの対義語です。", "type": "choice"}
       ]
     },
     {
@@ -167,12 +167,12 @@
         {"scenario": "「thanks to」の意味として最も適切なものは？", "choices": ["〜のおかげで", "〜のせいで", "〜にもかかわらず", "〜によると"], "correct": 0, "explanation": "thanks to 〜は「〜のおかげで」という良い意味で使う表現です。例: Thanks to you, I passed.（あなたのおかげで合格した。）", "type": "choice"},
         {"scenario": "「in front of」の意味として最も適切なものは？", "choices": ["〜の前に（場所）", "〜の後ろに", "〜の中に", "〜の横に"], "correct": 0, "explanation": "in front of 〜は「〜の前に（場所的に）」という意味です。対義語はbehind（〜の後ろに）です。", "type": "choice"},
         {"scenario": "「next to」の意味として最も適切なものは？", "choices": ["〜の隣に", "〜の前に", "〜の後ろに", "〜の近くに"], "correct": 0, "explanation": "next to 〜は「〜の隣に、〜のすぐ横に」という意味です。例: sit next to me（私の隣に座る）", "type": "choice"},
-        {"scenario": "「in order to」の意味として最も適切なものは？", "choices": ["〜するために", "〜するために（順序）", "〜した後で", "〜する代わりに"], "correct": 0, "explanation": "in order to 〜は「〜するために（目的）」という意味です。to 〜だけでも同じ意味ですが、より強調されます。", "type": "choice"},
+        {"scenario": "「in order to」の意味として最も適切なものは？", "choices": ["〜するために（目的）", "〜した後で", "〜する代わりに", "〜にもかかわらず"], "correct": 0, "explanation": "in order to 〜は「〜するために（目的）」という意味です。to 〜だけでも同じ意味ですが、in order toの方が目的であることをより明確に示せます。", "type": "choice"},
         {"scenario": "「instead of」の意味として最も適切なものは？", "choices": ["〜の代わりに", "〜と一緒に", "〜の後で", "〜の前に"], "correct": 0, "explanation": "instead of 〜は「〜の代わりに」という意味です。ofの後は名詞または動名詞が来ます。", "type": "choice"},
         {"scenario": "「according to」の意味として最も適切なものは？", "choices": ["〜によると、〜に従って", "〜のせいで", "〜にもかかわらず", "〜のために"], "correct": 0, "explanation": "according to 〜は「〜によると、〜に従って」という意味です。例: According to the news, it will rain.（ニュースによると雨が降る。）", "type": "choice"},
         {"scenario": "「by the way」の意味として最も適切なものは？", "choices": ["ところで、ちなみに", "途中で", "その方法で", "ついでに"], "correct": 0, "explanation": "by the wayは会話で話題を変えるときの「ところで、ちなみに」という定番フレーズです。", "type": "choice"},
         {"scenario": "「as well as」の意味として最も適切なものは？", "choices": ["〜だけでなく〜も、〜と同様に", "〜よりも", "〜の代わりに", "〜のために"], "correct": 0, "explanation": "as well as 〜は「〜だけでなく〜も」または「〜と同様に」という意味です。例: He speaks English as well as Japanese.（彼は日本語と同様に英語も話す。）", "type": "choice"},
-        {"scenario": "「on the other hand」の意味として最も適切なものは？", "choices": ["一方、另一方面では", "この手で", "反対の手で", "手の上で"], "correct": 0, "explanation": "on the other handは対比を示す「一方、另一方面では」という意味の接続表現です。on the one hand（一方で）と対で使われます。", "type": "choice"}
+        {"scenario": "「on the other hand」の意味として最も適切なものは？", "choices": ["一方、他方では", "この手で", "反対の手で", "手の上で"], "correct": 0, "explanation": "on the other handは対比を示す「一方、他方では」という意味の接続表現です。on the one hand（一方で）と対で使われます。", "type": "choice"}
       ]
     },
     {

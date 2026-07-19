@@ -1,0 +1,198 @@
+{
+  "id": "eiken3",
+  "level": 10,
+  "label": "📚 応用総仕上げ・対話表現編",
+  "description": "英検3級レベルの応用英単語⑨（動詞・名詞・形容詞・副詞・熟語・会話表現）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編⑰：関係・維持・要求",
+      "type": "Basic Verbs 17",
+      "emoji": "🔄",
+      "subtitle": "関連づける、残り、要求するなどの動詞",
+      "questions": [
+        {"scenario": "「relate」の意味として最も適切なものは？", "choices": ["関連づける、関連する、話す", "切断する", "分離する", "無視する"], "correct": 0, "explanation": "relateは relate A to B の形で「AをBに関連づける」または be related to 〜 で「〜と関連がある」という意味の動詞です。名詞形はrelationです。", "type": "choice"},
+        {"scenario": "「relax」の意味として最も適切なものは？", "choices": ["リラックスする、くつろぐ、緩める", "緊張する", "働く", "怒る"], "correct": 0, "explanation": "relaxは心身が「リラックスする、くつろぐ」または規則などを「緩める」という意味の動詞です。名詞形はrelaxationです。", "type": "choice"},
+        {"scenario": "「release」の意味として最も適切なものは？", "choices": ["解放する、放出する、発売（発表）する、解放、発売", "捕らえる", "隠す", "購入する"], "correct": 0, "explanation": "releaseは人や動物を「解放する」、ガスなどを「放出する」、映画やCDを「発売・発表する」という動詞・名詞です。", "type": "choice"},
+        {"scenario": "「rely」の意味として最も適切なものは？", "choices": ["頼る、信頼する", "疑う", "避ける", "管理する"], "correct": 0, "explanation": "relyは rely on 〜 の形で「（人や能力などを）頼る、信頼する」という意味の動詞です。depend on に似ています。形容詞は reliable です。", "type": "choice"},
+        {"scenario": "「remain」の意味として最も適切なものは？", "choices": ["（特定の状態のまま）留まる、残る、残り、遺跡", "去る", "出発する", "変化する"], "correct": 0, "explanation": "remainは「（状態や場所から移動せずに）残る、留まる」という意味の動詞、また複数形の remains は「残り、遺跡、遺体」という意味の名詞になります。", "type": "choice"},
+        {"scenario": "「remark」の意味として最も適切なものは？", "choices": ["（意見などを）述べる、気づく、意見、発言", "沈黙する", "無視する", "否定する"], "correct": 0, "explanation": "remarkは「（意見や感想を）述べる、発言する」という動詞、また「発言、所見」という名詞の意味もあります。形容詞は remarkable です。", "type": "choice"},
+        {"scenario": "「remind」の意味として最も適切なものは？", "choices": ["思い出させる、気づかせる", "思い出す", "忘れる", "無視する"], "correct": 0, "explanation": "remindは remind A of B で「AにBを思い出させる、気づかせる」という意味の重要動詞です。例: This photo reminds me of my childhood.（この写真は私に子供時代を思い出させる。）", "type": "choice"},
+        {"scenario": "「remove」の意味として最も適切なものは？", "choices": ["取り除く、片付ける、脱ぐ、移動させる", "置く", "加える", "保管する"], "correct": 0, "explanation": "removeは邪魔なものなどを「取り除く、除去する」という意味の動詞です。名詞形はremovalです。例: remove the stain（シミを取り除く）", "type": "choice"},
+        {"scenario": "「rent」の意味として最も適切なものは？", "choices": ["（家賃などを払って）借りる、貸す、家賃、使用料", "購入する", "売却する", "あきらめる"], "correct": 0, "explanation": "rentは家や車を「（有料で一時的に）借りる、貸す」という動詞、また「家賃、レンタル料」という名詞でもあります。無料で借りる場合は borrow を使います。", "type": "choice"},
+        {"scenario": "「replace」の意味として最も適切なものは？", "choices": ["取って代わる、取り替える、元の場所に戻す", "維持する", "壊す", "紛失する"], "correct": 0, "explanation": "replaceは replace A with B で「AをBに取り替える」または「〜に取って代わる」という意味の動詞です。名詞形はreplacementです。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編⑱：報告・代表・救助の動詞",
+      "type": "Basic Verbs 18",
+      "emoji": "🔄",
+      "subtitle": "報告する、代表する、救助するなどの動詞",
+      "questions": [
+        {"scenario": "「report」の意味として最も適切なものは？", "choices": ["報告する、報道する、報告書、レポート", "隠す", "沈黙する", "嘘をつく"], "correct": 0, "explanation": "reportは事実を「報告する、報道する」という動詞、また「報告書、レポート」という名詞でもあります。報道記者は reporter です。", "type": "choice"},
+        {"scenario": "「represent」の意味として最も適切なものは？", "choices": ["代表する、表す、象徴する", "個人的に参加する", "反対する", "隠す"], "correct": 0, "explanation": "representは国やグループを「代表する」、または記号などが「表す、象徴する」という意味の動詞です。名詞形はrepresentative（代表者）です。", "type": "choice"},
+        {"scenario": "「require」の意味として最も適切なものは？", "choices": ["必要とする、要求する", "不要とする", "提供する", "避ける"], "correct": 0, "explanation": "requireは「（規則や必要性により）必要とする、要求する」という意味の動詞です。needよりフォーマルです。名詞形はrequirement（要件）です。", "type": "choice"},
+        {"scenario": "「rescue」の意味として最も適切なものは？", "choices": ["救助する、救う、救助、救出", "攻撃する", "見捨てる", "捕らえる"], "correct": 0, "explanation": "rescueは危険や災害から人などを「救助する、救い出す」という動詞・名詞です。saveに似ています。例: rescue team（救助隊）", "type": "choice"},
+        {"scenario": "「resemble」の意味として最も適切なものは？", "choices": ["〜に似ている", "〜と異なっている", "〜を追いかける", "〜を尊敬する"], "correct": 0, "explanation": "resembleは容姿や性質が「〜に似ている」という意味の他動詞です。進行形や受動態にできない点に注意しましょう。take after に似ています。", "type": "choice"},
+        {"scenario": "「reserve」の意味として最も適切なものは？", "choices": ["（席や部屋などを）予約する、取っておく、蓄え、保護区", "キャンセルする", "購入する", "使用する"], "correct": 0, "explanation": "reserveは将来のために「予約する、取っておく」という動詞、また「蓄え」「自然保護区」という名詞の意味もあります。名詞形はreservationです。", "type": "choice"},
+        {"scenario": "「resign」の意味として最も適切なものは？", "choices": ["辞職する、退職する、あきらめる", "就職する", "昇進する", "継続する"], "correct": 0, "explanation": "resignは職務や地位を「辞職する、退任する」という意味の動詞です。名詞形はresignationです。retire（定年退職する）とは異なります。", "type": "choice"},
+        {"scenario": "「resist」の意味として最も適切なものは？", "choices": ["抵抗する、反発する、（誘惑などに）耐える", "従う", "降伏する", "賛成する"], "correct": 0, "explanation": "resistは攻撃や変化に「抵抗する」、または誘惑や衝動に「耐える」という意味の動詞です。名詞形はresistance（抵抗）です。", "type": "choice"},
+        {"scenario": "「resolve」の意味として最も適切なものは？", "choices": ["（問題などを）解決する、決意する", "悪化させる", "放置する", "迷う"], "correct": 0, "explanation": "resolveは対立や疑問などを「解決する（solveより困難な問題）」、または「決意する」という意味の動詞です。名詞形はresolutionです。", "type": "choice"},
+        {"scenario": "「restore」の意味として最も適切なものは？", "choices": ["修復する、復元する、回復させる", "破壊する", "変更する", "売却する"], "correct": 0, "explanation": "restoreは古い建物や健康状態を元の良好な状態に「修復する、復元する、回復させる」という意味の動詞です。名詞形はrestorationです。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編⑰：行事・個人・社会的属性",
+      "type": "Nouns: Ceremony & Traits",
+      "emoji": "🎉",
+      "subtitle": "式典、挑戦、慈善活動、シェフなどの名詞",
+      "questions": [
+        {"scenario": "「celebration」の意味として最も適切なものは？", "choices": ["祝賀、お祝い、祝賀会", "葬儀", "会議", "競争"], "correct": 0, "explanation": "celebrationは成功などを祝う「お祝い、祝賀会」を表する名詞です。動詞は celebrate（祝う）です。例: birthday celebration（誕生日祝い）", "type": "choice"},
+        {"scenario": "「cell」の意味として最も適切なものは？", "choices": ["細胞、小部屋、電池", "器官", "筋肉", "骨"], "correct": 0, "explanation": "cellは生物の「細胞」や、刑務所・修道院の「小部屋（独房）」、また「電池（fuel cellなど）」を表す名詞です。例: cell phone（携帯電話）", "type": "choice"},
+        {"scenario": "「century」の意味として最も適切なものは？", "choices": ["1世紀、100年間", "10年間", "1年間", "千年紀"], "correct": 0, "explanation": "centuryは「1世紀、100年間」を表す名詞です。複数形は centuries です。例: the 21st century（21世紀）", "type": "choice"},
+        {"scenario": "「ceremony」の意味として最も適切なものは？", "choices": ["儀式、式典", "パーティー", "展示会", "会議"], "correct": 0, "explanation": "ceremonyは結婚式や卒業式などの「儀式、式典」を表す名詞です。形容詞は ceremonial です。例: opening ceremony（開会式）", "type": "choice"},
+        {"scenario": "「chain」の意味として最も適切なものは？", "choices": ["鎖、チェーン、チェーン店、つなぐ", "紐", "ロープ", "ベルト"], "correct": 0, "explanation": "chainは金属の「鎖、チェーン」や、系列店「チェーン店」を表す名詞、または「つなぐ」という動詞の意味もあります。例: fast-food chain（ファストフード店）", "type": "choice"},
+        {"scenario": "「challenge」の意味として最も適切なものは？", "choices": ["挑戦、課題、挑戦する、異議を唱える", "成功", "あきらめ", "妥協"], "correct": 0, "explanation": "challengeは「挑戦、やりがいのある課題」という名詞、また「挑戦する、挑む」という動詞の意味もあります。形容詞は challenging です。", "type": "choice"},
+        {"scenario": "「champion」の意味として最も適切なものは？", "choices": ["選手権保持者、チャンピオン、擁護者", "敗者", "審判", "監督"], "correct": 0, "explanation": "championはスポーツなどの「優勝者、チャンピオン」のほか、思想などの「擁護者、支持者」を表す名詞です。", "type": "choice"},
+        {"scenario": "「championship」の意味として最も適切なものは？", "choices": ["選手権大会、王座、優勝", "練習試合", "準優勝", "表彰式"], "correct": 0, "explanation": "championshipは「選手権大会」や「王座、優勝（者の地位）」を表す名詞です。例: world championship（世界選手権）", "type": "choice"},
+        {"scenario": "「chance」の意味として最も適切なものは？", "choices": ["機会、チャンス、見込み、偶然、偶然の", "必然", "計画", "障害"], "correct": 0, "explanation": "chanceは好ましい「機会（opportunity）」、または確率「見込み、可能性」を表す名詞です。例: by chance（偶然に）", "type": "choice"},
+        {"scenario": "「channel」の意味として最も適切なものは？", "choices": ["（テレビなどの）チャンネル、経路、海峡", "放送局", "プログラム", "アンテナ"], "correct": 0, "explanation": "channelはテレビの「チャンネル」や、情報・物資の「伝達経路、ルート」、または「海峡」を表す名詞です。例: distribution channels（流通経路）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編⑱：生活・人物・科学用語",
+      "type": "Nouns: Life & Sciences",
+      "emoji": "🎉",
+      "subtitle": "章、キャラクター、慈善団体、料理長などの名詞",
+      "questions": [
+        {"scenario": "「chapter」の意味として最も適切なものは？", "choices": ["（書籍の）章、支部、時代", "ページ", "目次", "索引"], "correct": 0, "explanation": "chapterは小説や教科書などの「章（第1章など）」、または団体の「支部」を表す名詞です。例: Chapter 1（第1章）", "type": "choice"},
+        {"scenario": "「character」の意味として最も適切なものは？", "choices": ["性格、個性、特徴、登場人物、文字", "外見", "名前", "セリフ"], "correct": 0, "explanation": "characterは人の「性格、個性」、小説などの「登場人物」、または漢字などの「文字（Chinese characters）」を表す名詞です。", "type": "choice"},
+        {"scenario": "「charity」の意味として最も適切なものは？", "choices": ["慈善、慈悲、慈善団体（活動）", "営利企業", "学校", "病院"], "correct": 0, "explanation": "charityは困っている人を助ける「慈善、慈悲」、または寄付金で運営される「慈善団体」を表す名詞です。例: charity event（チャリティーイベント）", "type": "choice"},
+        {"scenario": "「chart」の意味として最も適切なものは？", "choices": ["図表、グラフ、海図、図表にする", "ノート", "写真", "看板"], "correct": 0, "explanation": "chartは情報を整理した「図表、グラフ、カルテ」や「海図」を表す名詞、または「図表にする」という動詞の意味もあります。例: pie chart（円グラフ）", "type": "choice"},
+        {"scenario": "「chef」の意味として最も適切なものは？", "choices": ["（レストランなどの）料理長、シェフ", "店員", "オーナー", "客"], "correct": 0, "explanation": "chefはレストランなどの「料理長、コック長」を表す名詞です。一般的な料理人 cook よりも立場が上の人を指すことが多いです。", "type": "choice"},
+        {"scenario": "「chemical」の意味として最も適切なものは？", "choices": ["化学物質、化学薬品、化学の", "物理の", "生物の", "天然の"], "correct": 0, "explanation": "chemicalは「化学物質、化学薬品」という名詞、また「化学の、化学的な」という形容詞の意味もあります。例: chemical reaction（化学反応）", "type": "choice"},
+        {"scenario": "「chemist」の意味として最も適切なものは？", "choices": ["化学者、薬剤師、薬局", "科学者", "医師", "物理学者"], "correct": 0, "explanation": "chemistは「化学者」という意味のほか、イギリス英語で「薬剤師、薬局（drugstore）」を指す名詞です。chemistryの関連語です。", "type": "choice"},
+        {"scenario": "「chemistry」の意味として最も適切なものは？", "choices": ["化学、化学的性質、（人と人の）相性", "物理学", "生物学", "地学"], "correct": 0, "explanation": "chemistryは学問の「化学」のほか、人と人の「相性、化学反応」を表す名詞です。例: organic chemistry（有機化学）", "type": "choice"},
+        {"scenario": "「chest」の意味として最も適切なものは？", "choices": ["胸、胸部、大箱、たんす", "お腹", "背中", "肩"], "correct": 0, "explanation": "chestは人間の「胸、胸部」、または蓋付きの「大箱、衣類整理ダンス」を表す名詞です。胸の骨格は chest と言います。", "type": "choice"},
+        {"scenario": "「chief」の意味として最も適切なものは？", "choices": ["長、ボス、チーフ、主要な、最高位の", "部下", "補佐", "一般社員"], "correct": 0, "explanation": "chiefは組織の「長、かしら、チーフ」という名詞、また「主要な、最高位の」という形容詞の意味もあります。例: chief executive officer（CEO）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞編⑰：状態・評価の形容詞",
+      "type": "Adjectives 17",
+      "emoji": "🌟",
+      "subtitle": "静かな、同様の、社会的ななどの形容詞",
+      "questions": [
+        {"scenario": "「silent」の意味として最も適切なものは？", "choices": ["静かな、無言の、沈黙した", "騒がしい", "音楽の", "話し好きな"], "correct": 0, "explanation": "silentは音がない「静かな」または言葉を発しない「無言の、沈黙した」という意味の形容詞です。名詞形は silence です。", "type": "choice"},
+        {"scenario": "「similar」の意味として最も適切なものは？", "choices": ["似ている、同様の、類似した", "異なっている", "同じである", "関係のない"], "correct": 0, "explanation": "similarは be similar to 〜 の形で「〜に似ている、同様の」という意味の形容詞です。名詞形はsimilarityです。対義語は different です。", "type": "choice"},
+        {"scenario": "「skillful」の意味として最も適切なものは？", "choices": ["熟練した、上手な、巧みな", "下手な", "未熟な", "簡単な"], "correct": 0, "explanation": "skillfulは技術があって「熟練した、上手な、巧みな」という意味の形容詞です。skill（技術）から来ています。対義語は unskillful です。", "type": "choice"},
+        {"scenario": "「slight」の意味として最も適切なものは？", "choices": ["わずかな、少しの、取るに足らない", "多額の", "重大な", "重い"], "correct": 0, "explanation": "slightは数量や程度が「わずかな、少しの、取るに足らない」という意味の形容詞です。副詞形は slightly（少し、わずかに）です。", "type": "choice"},
+        {"scenario": "「slim」の意味として最も適切なものは？", "choices": ["ほっそりした、スリムな、（可能性が）わずかな", "太った", "豊かな", "確実な"], "correct": 0, "explanation": "slimは体型が「ほっそりした、スリムな（褒め言葉）」、または可能性が「わずかな」という意味の形容詞です。対義語は stout や fat です。", "type": "choice"},
+        {"scenario": "「social」の意味として最も適切なものは？", "choices": ["社会の、社会的な、社交的な", "個人の", "私的な", "家庭の"], "correct": 0, "explanation": "socialは「社会の、社会的な」または「社交的な」という意味の形容詞です。名詞形はsociety（社会）です。例: social network（SNS）", "type": "choice"},
+        {"scenario": "「solar」の意味として最も適切なものは？", "choices": ["太陽の、太陽光を用いる", "月の", "地球の", "宇宙の"], "correct": 0, "explanation": "solarは「太陽の、太陽光による」という意味の形容詞です。月は lunar です。例: solar system（太陽系）、solar panel（ソーラーパネル）", "type": "choice"},
+        {"scenario": "「sole」の意味として最も適切なものは？", "choices": ["唯一の、単独の、足の裏、靴底", "共通の", "多数の", "共同の"], "correct": 0, "explanation": "soleは「唯一の、ただ一つの、単独の」という形容詞、また「足の裏、靴底」という名詞の意味もあります。副詞形は solely です。", "type": "choice"},
+        {"scenario": "「solid」の意味として最も適切なものは？", "choices": ["固体の、堅い、しっかりした、固体", "液体の", "気体の", "柔らかい"], "correct": 0, "explanation": "solidは「固体の、堅い」または内容が「しっかりした」という形容詞、また「固体」という名詞の意味もあります。対義語は liquid（液体）です。", "type": "choice"},
+        {"scenario": "「sour」の意味として最も適切なものは？", "choices": ["酸っぱい、酸味のある、（態度が）不機嫌な", "甘い", "塩辛い", "苦い"], "correct": 0, "explanation": "sourはレモンなどのように「酸っぱい、酸味がある」または態度が「不機嫌な、気難しい」という意味の形容詞です。対義語は sweet です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞編⑲：空間・状態の形容詞",
+      "type": "Adjectives 19",
+      "emoji": "🌟",
+      "subtitle": "南の、予備の、特定のなどの形容詞",
+      "questions": [
+        {"scenario": "「southern」の意味として最も適切なものは？", "choices": ["南の、南部の、南向きの", "北の", "東の", "西の"], "correct": 0, "explanation": "southernは「南の、南向きの、南部の」という意味の形容詞です。south（南）から来ています。北は northern、東は eastern、西は western です。", "type": "choice"},
+        {"scenario": "「spare」の意味として最も適切なものは？", "choices": ["予備の、余分の、割く、省く、スペア", "必要な", "主要な", "不足している"], "correct": 0, "explanation": "spareは「予備の、余分な（普段使わない）」という形容詞、時間を「割く」という動詞、また「スペア（タイヤなど）」という名詞の意味もあります。", "type": "choice"},
+        {"scenario": "「special」の意味として最も適切なものは？", "choices": ["特別な、独特の、専門の", "普通の", "一般的な", "余計な"], "correct": 0, "explanation": "specialは「特別な、特有の」という意味の形容詞です。名詞形は specialty です。対義語は general や common です。", "type": "choice"},
+        {"scenario": "「specific」の意味として最も適切なものは？", "choices": ["具体的な、特定の、明確な", "曖昧な", "一般的な", "適当な"], "correct": 0, "explanation": "specificは「具体的な、明確な」または「特定の」という意味の形容詞です。対義語は vague（曖昧な）や general です。副詞形は specifically です。", "type": "choice"},
+        {"scenario": "「spiritual」の意味として最も適切なものは？", "choices": ["精神的な、霊的な、宗教的な", "物質的な", "肉体的な", "科学的な"], "correct": 0, "explanation": "spiritualは物質（material）に対して「精神的な、霊的な、宗教的な」という意味の形容詞です。名詞は spirit（精神、魂）です。", "type": "choice"},
+        {"scenario": "「splendid」の意味として最も適切なものは？", "choices": ["輝かしい、実に見事な、豪華な", "みすぼらしい", "普通の", "暗い"], "correct": 0, "explanation": "splendidは景色や衣服、アイデアなどが「実に見事な、輝かしい、素晴らしい」という意味の形容詞です。magnificentに似ています。", "type": "choice"},
+        {"scenario": "「comfortable (再認)」の意味として最も適切なものは？", "choices": ["快適な、心地よい、気楽な", "不快な", "狭い", "高価な"], "correct": 0, "explanation": "comfortableは「快適な、心地よい」という意味の形容詞です。対義語はuncomfortableです。おさらい問題です。", "type": "choice"},
+        {"scenario": "「convenient (再認)」の意味として最も適切なものは？", "choices": ["便利な、都合の良い", "不便な", "難しい", "遠い"], "correct": 0, "explanation": "convenientは時間や場所が「便利な、都合が良い」という意味の形容詞です。おさらい問題です。", "type": "choice"},
+        {"scenario": "「necessary (再認)」の意味として最も適切なものは？", "choices": ["必要な、不可欠な", "不要な", "便利な", "無駄な"], "correct": 0, "explanation": "necessaryは「（目的のために）必要な、欠かせない」という意味の形容詞です。おさらい問題です。", "type": "choice"},
+        {"scenario": "「excellent (再認)」の意味として最も適切なものは？", "choices": ["極めて優れた、優秀な", "普通の", "下手な", "古い"], "correct": 0, "explanation": "excellentは「優秀な、極めて優れた」と高く評価する形容詞です。おさらい問題です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "副詞編⑨：時や場所・関係を表する副詞",
+      "type": "Adverbs 9",
+      "emoji": "📍",
+      "subtitle": "内側へ、主に、最近などの副詞",
+      "questions": [
+        {"scenario": "「inwardly」の意味として最も適切なものは？", "choices": ["心の中で、内側に、内面的に", "外側に", "公然と", "騒がしく"], "correct": 0, "explanation": "inwardlyは「心の中で、内面的に（外には出さずに）」または「内側へ」という意味の副詞です。対義語は outwardly です。形容詞はinwardです。", "type": "choice"},
+        {"scenario": "「justly」の意味として最も適切なものは？", "choices": ["公正に、正当に、当然ながら", "不当に", "大雑把に", "偶然に"], "correct": 0, "explanation": "justlyは「公正に、正当に（正義に基づいて）」または「当然ながら（もっともな理由で）」という意味の副詞です。形容詞はjust（公正な、ただの）です。", "type": "choice"},
+        {"scenario": "「keenly」の意味として最も適切なものは？", "choices": ["痛切に、熱心に、鋭く", "鈍く", "ぼんやりと", "嫌そうに"], "correct": 0, "explanation": "keenlyは痛みや寒さを「痛切に、身にしみて」感じる様子、または「熱心に、鋭く」観察する様子を表す副詞です。形容詞はkeenです。", "type": "choice"},
+        {"scenario": "「largely」の意味として最も適切なものは？", "choices": ["大部分は、主に、大いに", "少しだけ", "完全に", "別々に"], "correct": 0, "explanation": "largelyは「大部分は、主に（mostlyやmainlyとほぼ同じ）」という意味の副詞です。形容詞はlargeです。例: largely due to 〜（大部分は〜のせいで）", "type": "choice"},
+        {"scenario": "「lately」の意味として最も適切なものは？", "choices": ["最近、近頃", "遅れて", "将来", "以前は"], "correct": 0, "explanation": "latelyは現在完了形などと一緒に使われ「最近、近頃（recentlyとほぼ同じ）」という意味の副詞です。late（遅い）の派生語ですが、意味が異なります。", "type": "choice"},
+        {"scenario": "「lightly」の意味として最も適切なものは？", "choices": ["軽く、軽快に、気楽に、軽視して", "重く", "激しく", "慎重に"], "correct": 0, "explanation": "lightlyは「軽く、軽快に」または物事を「気楽に考える、軽視する」という意味の副詞です。形容詞はlightです。対義語はheavilyです。", "type": "choice"},
+        {"scenario": "「locally」の意味として最も適切なものは？", "choices": ["地元で、局所的に、地方で", "世界的に", "全国的に", "中心部で"], "correct": 0, "explanation": "locallyは「地元で、その地域で」または医療などで「局所的に」という意味の副詞です。形容詞はlocalです。例: locally grown vegetables（地元産の野菜）", "type": "choice"},
+        {"scenario": "「loudly」の意味として最も適切なものは？", "choices": ["大声で、騒々しく", "静かに", "ゆっくりと", "直接に"], "correct": 0, "explanation": "loudlyは「大声で、騒々しく（大音量で）」という意味の副詞です。形容詞はloudです。対義語はquietlyやsoftlyです。例: speak loudly（大声で話す）", "type": "choice"},
+        {"scenario": "「mainly」の意味として最も適切なものは？", "choices": ["主に、大部分は、たいてい", "少しだけ", "別々に", "完全に"], "correct": 0, "explanation": "mainlyは「主に、大部分は（mostlyやlargelyとほぼ同じ）」という意味の副詞です。形容詞はmain（主要な）です。例: mainly students（主に学生）", "type": "choice"},
+        {"scenario": "「maybe」の意味として最も適切なものは？", "choices": ["もしかすると、たぶん、おそらく", "確実に", "絶対に〜ない", "偶然に"], "correct": 0, "explanation": "maybeは「もしかすると、たぶん（50%程度の可能性）」を表す副詞です。perhapsとほぼ同じで、probablyより確信度は低いです。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "重要熟語編⑰：希望や義務、判断の熟語",
+      "type": "Phrasal Verbs 17",
+      "emoji": "🔗",
+      "subtitle": "〜したい、〜したほうがいい、〜するようになるなどの熟語",
+      "questions": [
+        {"scenario": "「would rather」の意味として最も適切なものは？", "choices": ["むしろ（どちらかと言えば）〜したい", "〜するべきだ", "〜したほうがいい", "〜するつもりだ"], "correct": 0, "explanation": "would rather (動詞の原形) は「（比較して）むしろ〜したい、どちらかと言えば〜するほうがよい」という意味の重要助動詞熟語表現です。", "type": "choice"},
+        {"scenario": "「had better」の意味として最も適切なものは？", "choices": ["〜したほうがいい、〜しなさい（強い忠告）", "〜するのがより得意だ", "〜するべきではない", "〜したことがある"], "correct": 0, "explanation": "had better (動詞 of 原形) は「〜しなさい、〜したほうがいい（従わないと悪い結果になる強いニュアンス）」という意味の重要助動詞熟語表現です。", "type": "choice"},
+        {"scenario": "「happen to」の意味として最も適切なものは？", "choices": ["偶然〜する、たまたま〜する、〜に起こる", "〜を企んでいる", "〜することになっている", "〜しがちである"], "correct": 0, "explanation": "happen to (動詞の原形) は「たまたま〜する、偶然〜する」という意味、また happen to (人/物) で「〜に（出来事が）起こる」という意味の熟語です。", "type": "choice"},
+        {"scenario": "「manage to」の意味として最も適切なものは？", "choices": ["なんとか〜する、どうにかやり遂げる、経営する", "〜を管理しそこねる", "〜をあきらめる", "〜を計画する"], "correct": 0, "explanation": "manage to (動詞の原形) は困難を伴いながらも「どうにかこうにか〜する、なんとかやり遂げる」という意味の重要動詞熟語です。", "type": "choice"},
+        {"scenario": "「fail to」の意味として最も適切なものは？", "choices": ["〜しそこねる、〜できない、怠る", "〜することに成功する", "〜するのをやめる", "〜するつもりだ"], "correct": 0, "explanation": "fail to (動詞の原形) は「〜し損ねる、〜できない」という意味の重要動詞熟語です。never fail to do で「必ず〜する」になります。", "type": "choice"},
+        {"scenario": "「turn out」の意味として最も適切なものは？", "choices": ["〜だと判明する、結果として〜になる、消す", "〜を提出する", "〜を開始する", "〜に変わる"], "correct": 0, "explanation": "turn out は「（結果として）〜だと分かる、判明する（turn out to be）」という意味や、電気を「消す（turn off）」という意味の重要熟語です。", "type": "choice"},
+        {"scenario": "「run short of」の意味として最も適切なものは？", "choices": ["〜が不足する、足りなくなる", "〜から逃げる", "〜を使い果たす", "〜を追いかける"], "correct": 0, "explanation": "run short of 〜は水やお金などの物資が「不足する、足りなくなる」という意味の重要熟語です。run out of は完全にゼロになるのを指します。", "type": "choice"},
+        {"scenario": "「catch sight of」の意味として最も適切なものは？", "choices": ["〜を見つける、〜がふと目に入る", "〜を見失う", "〜を捕まえる", "〜を凝視する"], "correct": 0, "explanation": "catch sight of 〜は動いているものなどを「見つける、〜がふと目に入る」という意味の熟語です。対義語は lose sight of 〜 です。", "type": "choice"},
+        {"scenario": "「lose sight of」の意味として最も適切なものは？", "choices": ["〜を見失う、忘れる", "〜を見つける", "〜を隠す", "〜をあきらめる"], "correct": 0, "explanation": "lose sight of 〜は「〜を見失う」または目標などを「（途中で）見失う、忘れる」という意味の重要熟語です。対義語は catch sight of 〜 です。", "type": "choice"},
+        {"scenario": "「keep an eye on」の意味として最も適切なものは？", "choices": ["〜から目を離さない、〜を監視（世話）する", "〜を疑う", "〜を軽蔑する", "〜を避ける"], "correct": 0, "explanation": "keep an eye on 〜は子供や荷物などから「目を離さない、注意して見ておく、見守る」という意味の重要熟語表現です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "重要熟語編⑱：認知・社会・行動の熟語",
+      "type": "Phrasal Verbs 18",
+      "emoji": "🔗",
+      "subtitle": "参加する、からかう、引き起こすなどの熟語",
+      "questions": [
+        {"scenario": "「take part in」の意味として最も適切なものは？", "choices": ["〜に参加する、加わる", "〜の一部を取る", "〜を分ける", "〜に反対する"], "correct": 0, "explanation": "take part in 〜はイベントや活動に「参加する、加わる」という意味の超重要熟語です。participate in や join とほぼ同じです。", "type": "choice"},
+        {"scenario": "「make fun of」の意味として最も適切なものは？", "choices": ["〜をからかう、笑いものにする", "〜を楽しむ", "〜を親切にする", "〜を尊敬する"], "correct": 0, "explanation": "make fun of 〜は「〜をからかう、バカにする、笑いものにする」という意味の重要熟語です。tease や laugh at と似ています。", "type": "choice"},
+        {"scenario": "「pay off」の意味として最も適切なものは？", "choices": ["（努力が）実を結ぶ、報われる、借金を完済する", "お金を支払う", "〜を解雇する", "〜をあきらめる"], "correct": 0, "explanation": "pay off は努力や投資が「実を結ぶ、報われる（自動詞）」という意味、または借金を「完済する」という意味の重要熟語です。", "type": "choice"},
+        {"scenario": "「give rise to」の意味として最も適切なものは？", "choices": ["〜を引き起こす、〜の原因となる", "〜を育てる", "〜をあきらめる", "〜を向上させる"], "correct": 0, "explanation": "give rise to 〜は問題や混乱などを「引き起こす、〜を生じさせる（causeやbring aboutに近い）」という意味の熟語表現です。", "type": "choice"},
+        {"scenario": "「bring to light」の意味として最も適切なものは？", "choices": ["（事実などを）明るみに出す、暴露する", "〜を照らす", "〜を持ってくる", "〜を開始する"], "correct": 0, "explanation": "bring to light 〜は秘密や事実を「明るみに出す、公にする、暴露する」という意味の重要熟語です。revealとほぼ同じです。", "type": "choice"},
+        {"scenario": "「take it for granted」の意味として最も適切なものは？", "choices": ["〜を当然のことと思う、思い込む", "〜を認める", "〜に感謝する", "〜を疑う"], "correct": 0, "explanation": "take it for granted that 〜 は「〜を当然のことと思う（ありがたみを忘れる）」という意味の重要熟語です。grant は「与える」です。", "type": "choice"},
+        {"scenario": "「come to an end」の意味として最も適切なものは？", "choices": ["終わる、終結する", "始まる", "目的地に着く", "失敗する"], "correct": 0, "explanation": "come to an end はイベントや時代が「終わる、終結する（endの丁寧な表現）」という意味の重要熟語です。対義語は start です。", "type": "choice"},
+        {"scenario": "「make a point of」の意味として最も適切なものは？", "choices": ["必ず〜することにしている、〜を重視する", "指摘する", "意味を理解する", "目標を立てる"], "correct": 0, "explanation": "make a point of -ing（または make it a point to do）は習慣として「必ず〜することにしている、〜をモットーにしている」という意味の熟語です。", "type": "choice"},
+        {"scenario": "「make ends meet」の意味として最も適切なものは？", "choices": ["家計をやりくりする、収入内で生活する", "約束を果たす", "会議を終える", "友達を増やす"], "correct": 0, "explanation": "make ends meet は「（収入の範囲内で）家計をやりくりする、やりくりをつける」という意味の重要イディオム熟語です。", "type": "choice"},
+        {"scenario": "「be used to -ing」の意味として最も適切なものは？", "choices": ["〜することに慣れている", "〜するために使われる", "かつて〜したものだ", "〜する予定だ"], "correct": 0, "explanation": "be used to (動名詞 -ing / 名詞) は「〜することに慣れている」という意味の超重要熟語です。助動詞 used to（かつて〜した）と混同しないよう注意しましょう。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "会話表現・定型フレーズ⑩：日常対話と感情のリアクション",
+      "type": "Conversational Phrases 10",
+      "emoji": "🗣️",
+      "subtitle": "助け合い、謝罪、驚きを示す定番会話表現",
+      "questions": [
+        {"scenario": "「Could you help me?」の意味として最も適切なものは？", "choices": ["手伝っていただけますか？、助けていただけますか？", "手伝いましょうか？", "お大事に", "どういたしまして"], "correct": 0, "explanation": "Could you help me? は、自分が困っているときに周囲に「手伝っていただけますか？」と丁寧に依頼する超定番フレーズです。", "type": "choice"},
+        {"scenario": "「I'd love to.」の意味として最も適切なものは？", "choices": ["喜んで！（誘いに対する快諾の返答）", "〜したい気がします", "私を愛してください", "どういたしまして"], "correct": 0, "explanation": "I'd love to. は、Would you like to join us?（一緒にどう？）などの誘いに対して、「喜んで！」と快諾する定番のフレーズです。", "type": "choice"},
+        {"scenario": "「No problem at all.」の意味として最も適切なものは？", "choices": ["全然構いませんよ、全く問題ありません", "問題は全くありません（困難な）", "違います", "ありがとうございました"], "correct": 0, "explanation": "No problem at all. は No problem. をさらに強めて、「全然問題ないよ！」「まったく大丈夫だよ」と優しく返答する定番フレーズです。", "type": "choice"},
+        {"scenario": "「What a surprise!」の意味として最も適切なものは？", "choices": ["なんて驚きだ！、本当にびっくりした！", "何が起きたのですか？", "恐ろしいですね", "どういたしまして"], "correct": 0, "explanation": "What a surprise! は、予期せぬ出来事や再会に対して、「なんて驚きだ！」「本当にびっくりした！」と感情を表す感嘆文定番フレーズです。", "type": "choice"},
+        {"scenario": "「That's great!」の意味として最も適切なものは？", "choices": ["それは素晴らしいですね！、すごい！", "それは大変ですね", "それは大きいですね", "どういたしまして"], "correct": 0, "explanation": "That's great!（または That's wonderful!）は、相手の嬉しいニュースに対して「それはすごいね！」「良かったね！」と称賛・共感する定番フレーズです。", "type": "choice"},
+        {"scenario": "「I'm so sorry.」の意味として最も適切なものは？", "choices": ["本当にごめんなさい、深くお詫びします", "残念ながら〜", "そうは思いません", "どういたしまして"], "correct": 0, "explanation": "I'm so sorry. は、深く謝罪する時の「本当にごめんなさい」、または相手の不幸に対して「本当に同情します、お気の毒に」と伝える定番表現です。", "type": "choice"},
+        {"scenario": "「It's not my fault.」の意味として最も適切なものは？", "choices": ["私のせいではありません、私の過失ではありません", "私の仕事ではありません", "問題ありません", "どういたしまして"], "correct": 0, "explanation": "It's not my fault. は、トラブルが起きた際に「私のせいじゃないよ」「私に責任はありません」と自分の無実を伝えるフレーズです。fault は「過失」です。", "type": "choice"},
+        {"scenario": "「Don't worry about it.」の意味として最も適切なものは？", "choices": ["気にしないで、心配しなくていいよ", "心配してください", "忘れてください", "どういたしまして"], "correct": 0, "explanation": "Don't worry about it. は、相手の謝罪や不安に対して「そんなの気にしなくていいよ」「心配無用だよ」と安心させてあげる超定番フレーズです。", "type": "choice"},
+        {"scenario": "「You must be joking.」の意味として最も適切なものは？", "choices": ["冗談でしょう！、嘘でしょ！", "あなたは冗談を言うべきです", "面白いですね", "どういたしまして"], "correct": 0, "explanation": "You must be joking.（または You must be kidding.）は、相手の信じられない発言に対して「冗談でしょ！」「嘘言っちゃいけないよ」と返す定番フレーズです。", "type": "choice"},
+        {"scenario": "「See you later.」の意味として最も適切なものは？", "choices": ["また後でね！、じゃあね！", "後で会いましょう（約束）", "はじめまして", "どういたしまして"], "correct": 0, "explanation": "See you later. は別れ際の挨拶として「またね！」「じゃあ後で！」と親しい相手に言う超定番のカジュアルフレーズです。", "type": "choice"}
+      ]
+    }
+  ]
+}

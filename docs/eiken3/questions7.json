@@ -1,0 +1,198 @@
+{
+  "id": "eiken3",
+  "level": 7,
+  "label": "📚 発展表現・生活応用編",
+  "description": "英検3級レベルの応用英単語⑥（動詞・名詞・形容詞・副詞・熟語・会話表現）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編⑪：日常動作・製造・調整",
+      "type": "Basic Verbs 11",
+      "emoji": "🛠️",
+      "subtitle": "編み物をする、製造する、測定するなどの動詞",
+      "questions": [
+        {"scenario": "「knit」の意味として最も適切なものは？", "choices": ["（毛糸などを）編む、編み物をする", "縫う", "織る", "切る"], "correct": 0, "explanation": "knitは毛糸などでセーターなどを「編む、編み物をする」という意味の動詞です。例: knit a sweater（セーターを編む）", "type": "choice"},
+        {"scenario": "「lack」の意味として最も適切なものは？", "choices": ["〜が不足している、欠いている、不足、欠乏", "十分にある", "必要とする", "余っている"], "correct": 0, "explanation": "lackは必要なものが「不足している、欠いている」という動詞、また「不足、欠乏」という名詞の意味もあります。例: lack of sleep（睡眠不足）", "type": "choice"},
+        {"scenario": "「last (動詞)」の意味として最も適切なものは？", "choices": ["（特定の時間）続く、持ちこたえる", "終わる", "始まる", "遅れる"], "correct": 0, "explanation": "lastは形容詞「最後の」のほかに、動詞として状態や命が「（一定期間）続く、長持ちする」という意味を持ちます。例: The meeting lasted for two hours.（会議は2時間続いた。）", "type": "choice"},
+        {"scenario": "「launch」の意味として最も適切なものは？", "choices": ["（新事業を）立ち上げる、（ロケットを）打ち上げる、開始", "終了する", "着陸する", "破壊する"], "correct": 0, "explanation": "launchは宇宙船を「打ち上げる」、新しい事業やウェブサイトを「立ち上げる、開始する」という動詞・名詞です。", "type": "choice"},
+        {"scenario": "「lay」の意味として最も適切なものは？", "choices": ["横たえる、置く、（卵を）産む", "横たわる", "立ち上がる", "飛ぶ"], "correct": 0, "explanation": "layは「〜を横たえる、置く」または鳥や魚が「卵を産む」という他動詞です。自動詞 lie（横たわる）の過去形 lay と混同しやすいので注意しましょう。過去・過去分詞は laid です。", "type": "choice"},
+        {"scenario": "「leap」の意味として最も適切なものは？", "choices": ["（大きく）跳ぶ、跳躍する、跳躍", "走る", "歩く", "這う"], "correct": 0, "explanation": "leapは「（大きく）跳ぶ、跳躍する」という動詞・名詞です。jumpよりもダイナミックな跳躍を指すことが多いです。例: leap year（うるう年）", "type": "choice"},
+        {"scenario": "「limit」の意味として最も適切なものは？", "choices": ["制限する、限定する、制限、極限", "拡大する", "解放する", "超える"], "correct": 0, "explanation": "limitは数量や範囲を「制限する、限定する」という動詞、また「制限、限界、極限」という名詞の意味もあります。例: speed limit（速度制限）", "type": "choice"},
+        {"scenario": "「lock」の意味として最も適切なものは？", "choices": ["鍵をかける、錠、ロック", "鍵を開ける", "壊す", "閉める"], "correct": 0, "explanation": "lockはドアなどに「鍵をかける」という動詞、また「錠、ロック」という名詞の意味もあります。対義語は unlock です。", "type": "choice"},
+        {"scenario": "「maintain」の意味として最も適切なものは？", "choices": ["維持する、整備する、主張する", "変更する", "あきらめる", "破壊する"], "correct": 0, "explanation": "maintainは良好な状態や関係を「維持する、保つ」または機械を「整備する」という意味の動詞です。名詞形はmaintenanceです。", "type": "choice"},
+        {"scenario": "「manufacture」の意味として最も適切なものは？", "choices": ["（工場で大規模に）製造する、生産する、製造、製品", "購入する", "設計する", "破壊する"], "correct": 0, "explanation": "manufactureは工場などで「（大規模に）製造する、生産する」という動詞・名詞です。製造業者は manufacturer です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編⑫：一致・計算・変化の動詞",
+      "type": "Basic Verbs 12",
+      "emoji": "🛠️",
+      "subtitle": "調和する、測定する、混ぜるなどの動詞",
+      "questions": [
+        {"scenario": "「match」の意味として最も適切なものは？", "choices": ["調和する、一致する、匹敵する、試合、マッチ", "異なる", "対立する", "分ける"], "correct": 0, "explanation": "matchは「調和する、一致する、似合う」という動詞、また「試合（game）」や「マッチ棒」という名詞の意味もあります。", "type": "choice"},
+        {"scenario": "「measure」の意味として最も適切なものは？", "choices": ["測定する、測る、寸法、対策", "見積もる", "計算する", "推測する"], "correct": 0, "explanation": "measureは長さや重さを「測定する、測る」という動詞、また「寸法」や「対策（measures）」という名詞の意味もあります。名詞形はmeasurementです。", "type": "choice"},
+        {"scenario": "「melt」の意味として最も適切なものは？", "choices": ["（熱で）溶ける、和らぐ、溶かす", "凍る", "固まる", "蒸発する"], "correct": 0, "explanation": "meltは氷や金属などが熱で「溶ける、溶かす」という意味の動詞です。対義語は freeze（凍る、凍らせる）です。", "type": "choice"},
+        {"scenario": "「mind」の意味として最も適切なものは？", "choices": ["（否定・疑問文で）気にする、嫌がる、心、精神", "好む", "無視する", "忘れる"], "correct": 0, "explanation": "mindは「（嫌がって）気にする、嫌だと思う」という動詞、また「心、精神」という名詞の意味もあります。例: Do you mind if I open the window?（窓を開けてもいいですか？）", "type": "choice"},
+        {"scenario": "「mislead」の意味として最も適切なものは？", "choices": ["誤解させる、見当違いな方向へ導く", "正しく導く", "説明する", "説得する"], "correct": 0, "explanation": "misleadは誤った情報で人を「誤解させる、欺く」という意味の動詞です。lead に誤りを表す mis- がついた形です。形容詞は misleading（誤解を招くような）です。", "type": "choice"},
+        {"scenario": "「mix」の意味として最も適切なものは？", "choices": ["混ぜる、混ざる、混合物", "分ける", "集める", "選別する"], "correct": 0, "explanation": "mixは「混ぜる、混ざる」という動詞、また「混合（ミキサーなど）」という名詞の意味もあります。例: mix oil and water（油と水を混ぜる）", "type": "choice"},
+        {"scenario": "「modify」の意味として最も適切なものは？", "choices": ["（部分的に）修正する、変更する、修飾する", "完全に変える", "破壊する", "維持する"], "correct": 0, "explanation": "modifyは計画やデザインをより良くするために「（部分的に）修正する、変更する」という意味の動詞です。文法で「修飾する」の意味もあります。", "type": "choice"},
+        {"scenario": "「mount」の意味として最も適切なものは？", "choices": ["（山などに）登る、載せる、台座", "下りる", "歩く", "滑り落ちる"], "correct": 0, "explanation": "mountは「（山や馬などに）登る」またはカメラなどを「（台座に）載せる、固定する」という意味の動詞です。名詞では「山（Mount Fujiなど）」を指します。", "type": "choice"},
+        {"scenario": "「multiply」の意味として最も適切なものは？", "choices": ["掛ける、増やす、繁殖する", "割る", "引く", "減らす"], "correct": 0, "explanation": "multiplyは数学で「（数に）掛け算をする（A multiply by B）」または「数を増やす、繁殖する」という意味の動詞です。対義語は divide（割る）です。", "type": "choice"},
+        {"scenario": "「nod」の意味として最も適切なものは？", "choices": ["うなずく、うたた寝する、うなずき", "首を横に振る", "怒る", "叫ぶ"], "correct": 0, "explanation": "nodは同意や理解を示して「うなずく」という動詞・名詞です。うたた寝をする（nod off）という意味もあります。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編⑪：生活のトラブル・人間関係",
+      "type": "Nouns: Life Events & Relations",
+      "emoji": "📋",
+      "subtitle": "事故、アドバイス、合意、面会などの名詞",
+      "questions": [
+        {"scenario": "「accident」の意味として最も適切なものは？", "choices": ["事故、偶然の出来事", "計画", "安全", "お祭り"], "correct": 0, "explanation": "accidentは自動車事故などの「事故」や「偶然の出来事」を表す名詞です。例: car accident（自動車事故）、by accident（偶然に）", "type": "choice"},
+        {"scenario": "「activity」の意味として最も適切なものは？", "choices": ["活動、行事、活気", "休息", "勉強", "睡眠"], "correct": 0, "explanation": "activityは学校や仕事の「活動、行事」を表す名詞です。active（活発な）の名詞形です。例: club activities（部活動）", "type": "choice"},
+        {"scenario": "「address」の意味として最も適切なものは？", "choices": ["住所、宛先、演説、話しかける", "名前", "電話番号", "電子メール"], "correct": 0, "explanation": "addressは「住所、宛先」や「演説」を表す名詞、また「話しかける」という動詞の意味もあります。例: email address（メールアドレス）", "type": "choice"},
+        {"scenario": "「advice」の意味として最も適切なものは？", "choices": ["忠告、アドバイス、助言", "命令", "文句", "質問"], "correct": 0, "explanation": "adviceは「忠告、アドバイス、助言」を表す不可算名詞です。数える時は a piece of advice と言います。動詞形は advise です。", "type": "choice"},
+        {"scenario": "「agreement」の意味として最も適切なものは？", "choices": ["合意、一致、契約、協定", "反対", "対立", "口論"], "correct": 0, "explanation": "agreementは「合意、一致」や「契約、協定」を表す名詞です。agree（同意する）の名詞形です。対義語は disagreement です。", "type": "choice"},
+        {"scenario": "「amount」の意味として最も適切なものは？", "choices": ["（金や物の）総額、量、総計〜になる", "価格", "費用", "価値"], "correct": 0, "explanation": "amountは「（あるまとまった金や物質の）総額、量」を表す名詞、または「総計〜になる（amount to 〜）」という動詞の意味もあります。", "type": "choice"},
+        {"scenario": "「angle」の意味として最も適切なものは？", "choices": ["角、角度、観点", "直線", "曲線", "三角形"], "correct": 0, "explanation": "angleは図形の「角、角度」や、物事を見る「観点、アングル」を表す名詞です。例: right angle（直角）", "type": "choice"},
+        {"scenario": "「anniversary」の意味として最も適切なものは？", "choices": ["記念日、〜周年記念", "誕生日", "祝日", "休日"], "correct": 0, "explanation": "anniversaryは創立や結婚などの「記念日、〜周年」を表す名詞です。毎年巡ってくる記念日を指します。例: wedding anniversary（結婚記念日）", "type": "choice"},
+        {"scenario": "「answer」の意味として最も適切なものは？", "choices": ["答え、回答、答える、応答する", "問い", "問題", "質問"], "correct": 0, "explanation": "answerは「答え、回答」という名詞、また「答える」という基本動詞の意味もあります。対義語は question です。", "type": "choice"},
+        {"scenario": "「anxiety」の意味として最も適切なものは？", "choices": ["心配、不安、切望", "安心", "喜び", "満足"], "correct": 0, "explanation": "anxietyは将来への「心配、不安、懸念」を表す名詞です。形容詞は anxious（心配して）です。例: anxiety about the exam（試験への不安）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編⑫：社会制度と日常生活",
+      "type": "Nouns: Society & Daily Life",
+      "emoji": "📋",
+      "subtitle": "アパート、約束、議論、記事などの名詞",
+      "questions": [
+        {"scenario": "「apartment」の意味として最も適切なものは？", "choices": ["アパート、マンションの1室", "一戸建て", "庭", "別荘"], "correct": 0, "explanation": "apartmentは共同住宅の「アパート、マンションの1室」を表す名詞です。日本のマンションは英語で apartment や condominium と呼びます。", "type": "choice"},
+        {"scenario": "「apology」の意味として最も適切なものは？", "choices": ["謝罪、お詫び", "許し", "感謝", "弁解"], "correct": 0, "explanation": "apologyは「謝罪、お詫び」を表す名詞です。動詞形は apologize（謝る）です。例: accept his apology（彼の謝罪を受け入れる）", "type": "choice"},
+        {"scenario": "「appearance」の意味として最も適切なものは？", "choices": ["外見、様子、出現", "中身", "性格", "性質"], "correct": 0, "explanation": "appearanceは人の「外見、容姿」や、表舞台への「出現」を表す名詞です。appear（現れる）から来ています。", "type": "choice"},
+        {"scenario": "「applause」の意味として最も適切なものは？", "choices": ["拍手、喝采", "歓声", "ブーイング", "沈黙"], "correct": 0, "explanation": "applauseは劇やスピーチの後などに送られる「拍手、喝采（不可算名詞）」を表す名詞です。動詞形は applaud です。", "type": "choice"},
+        {"scenario": "「appointment」の意味として最も適切なものは？", "choices": ["（面会の）約束、予約、任命", "約束（一般的な）", "切符の予約", "会議の予定"], "correct": 0, "explanation": "appointmentは医者やビジネス相手など「人と会う約束、面会の予約」を表す名詞です。飲食店の予約は reservation を使うことが多いです。", "type": "choice"},
+        {"scenario": "「area」の意味として最も適切なものは？", "choices": ["地域、面積、エリア、分野", "国", "都市", "境界"], "correct": 0, "explanation": "areaは特定の「地域、地方、エリア」や、数学の「面積」を表す名詞です。例: urban area（都市部）、rural area（地方）", "type": "choice"},
+        {"scenario": "「argument」の意味として最も適切なものは？", "choices": ["議論、口論、主張", "同意", "妥協", "解決"], "correct": 0, "explanation": "argumentは意見の対立を伴う「議論、口論」や、論理的な「主張」を表す名詞です。動詞形は argue です。", "type": "choice"},
+        {"scenario": "「army」の意味として最も適切なものは？", "choices": ["陸軍、軍隊", "海軍", "空軍", "警察"], "correct": 0, "explanation": "armyは「陸軍」や、一般的な「軍隊」を表す名詞です。海軍は navy、空軍は air force です。例: join the army（軍隊に入る）", "type": "choice"},
+        {"scenario": "「article」の意味として最も適切なものは？", "choices": ["記事、論説、品物、冠詞", "本", "辞書", "新聞"], "correct": 0, "explanation": "articleは新聞や雑誌の「記事」のほか、店にある「品物」、文法の「冠詞（a/the）」という意味も持つ名詞です。例: newspaper article（新聞記事）", "type": "choice"},
+        {"scenario": "「aspect」の意味として最も適切なものは？", "choices": ["側面、様相、見地", "全体", "背景", "表面"], "correct": 0, "explanation": "aspectは物事の特定の「側面、局面」を表す名詞です。例: aspect of culture（文化の側面）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞編⑪：評価・属性の形容詞",
+      "type": "Adjectives 11",
+      "emoji": "🌟",
+      "subtitle": "痛みを伴う、特定の、永続的ななどの形容詞",
+      "questions": [
+        {"scenario": "「painful」の意味として最も適切なものは？", "choices": ["痛い、痛みを伴う、つらい", "心地よい", "楽しい", "簡単な"], "correct": 0, "explanation": "painfulは「（体の一部が）痛い、痛みを伴う」または精神的に「つらい」という意味の形容詞です。pain（痛み）+ ful（に満ちた）です。対義語は painless です。", "type": "choice"},
+        {"scenario": "「partial」の意味として最も適切なものは？", "choices": ["部分的な、不公平な、偏愛する", "全体の", "公平な", "一時的な"], "correct": 0, "explanation": "partialは「部分的な、一部の（全体ではない）」、または一方に偏った「不公平な、ひいきする」という意味の形容詞です。対義語は total や impartial です。", "type": "choice"},
+        {"scenario": "「particular」の意味として最も適切なものは？", "choices": ["特定の、特別な、好みがうるさい", "一般的な", "普通の", "大雑把な"], "correct": 0, "explanation": "particularは「特定の、特別の（特定のモノを指し示す）」という意味の形容詞です。副詞形は particularly です。例: for no particular reason（特にこれといった理由もなく）", "type": "choice"},
+        {"scenario": "「passive」の意味として最も適切なものは？", "choices": ["受動的な、消極的な、受け身の", "能動的な", "積極的な", "否定的な"], "correct": 0, "explanation": "passiveは「受動的な、消極的な（自分から動かない）」という意味の形容詞です。文法で「受動態（受け身）」を指します。対義語は active です。", "type": "choice"},
+        {"scenario": "「patient (形容詞)」の意味として最も適切なものは？", "choices": ["忍耐強い、我慢強い", "怒りっぽい", "親切な", "怠慢な"], "correct": 0, "explanation": "patientは名詞「患者」のほかに、形容詞として「忍耐強い、我慢強い」という意味を持ちます。名詞形は patience（忍耐）です。対義語は impatient です。", "type": "choice"},
+        {"scenario": "「peaceful」の意味として最も適切なものは？", "choices": ["平和な、穏やかな、静かな", "暴力的な", "騒がしい", "危険な"], "correct": 0, "explanation": "peacefulは「平和な、穏やかな、静かな」という意味の形容詞です。peace（平和）+ ful（に満ちた）です。対義語は violent です。", "type": "choice"},
+        {"scenario": "「peculiar」の意味として最も適切なものは？", "choices": ["特有の、固有の、奇妙な", "共通の", "一般的な", "普通の"], "correct": 0, "explanation": "peculiarは be peculiar to 〜 の形で「〜に特有の、固有の」という意味、または「奇妙な、変な」という意味の形容詞です。", "type": "choice"},
+        {"scenario": "「permanent」の意味として最も適切なものは？", "choices": ["永久的な、終身の、常勤の", "一時的な", "現代の", "短い"], "correct": 0, "explanation": "permanentは「永久的な、終身の、常設の（変化しない）」という意味の形容詞です。対義語は temporary（一時的な）です。パーマ（permanent wave）の語源です。", "type": "choice"},
+        {"scenario": "「personal」の意味として最も適切なものは？", "choices": ["個人の、私的な、パーソナルな", "公共の", "社会的な", "共通の"], "correct": 0, "explanation": "personalは「個人の、私的な（全体・公のものではない）」という意味の形容詞です。person（人）の形容詞形です。例: personal computer（パソコン）", "type": "choice"},
+        {"scenario": "「physical」の意味として最も適切なものは？", "choices": ["身体の、肉体的な、物質的な、物理的な", "精神的な", "理論上の", "架空の"], "correct": 0, "explanation": "physicalは精神（mental）に対して「肉体的な、身体の」、また「物質的な、物理学の」という意味の形容詞です。例: physical education（体育）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞編⑫：感情と価値の形容詞",
+      "type": "Adjectives 12",
+      "emoji": "🌟",
+      "subtitle": "楽しい、人気のある、実用的ななどの形容詞",
+      "questions": [
+        {"scenario": "「pleasant」の意味として最も適切なものは？", "choices": ["楽しい、心地よい、感じの良い", "不快な", "退屈な", "難しい"], "correct": 0, "explanation": "pleasantは物や天気が「楽しい、心地よい」、または人の態度が「感じが良い」という意味の形容詞です。対義語は unpleasant です。", "type": "choice"},
+        {"scenario": "「plentiful」の意味として最も適切なものは？", "choices": ["豊富な、たくさんの", "不足している", "貴重な", "無駄な"], "correct": 0, "explanation": "plentifulは食料や資源などが「豊富な、たっぷりの」という意味の形容詞です。plenty（豊富さ）から派生しています。abundantに似ています。", "type": "choice"},
+        {"scenario": "「popular」の意味として最も適切なものは？", "choices": ["人気のある、大衆的な、一般的な", "嫌われている", "珍しい", "高価な"], "correct": 0, "explanation": "popularは多くの人に「人気がある」または「大衆的な、一般的な」という意味の形容詞です。名詞形はpopularity（人気）です。", "type": "choice"},
+        {"scenario": "「positive」の意味として最も適切なものは？", "choices": ["肯定的な、積極的な、確信している、陽性の", "否定的な", "消極的な", "陰性の"], "correct": 0, "explanation": "positiveは「肯定的な、積極的な、前向きな」または「（医療で）陽性の」という意味の形容詞です。対義語は negative です。", "type": "choice"},
+        {"scenario": "「possible」の意味として最も適切なものは？", "choices": ["可能な、あり得る、実行できる", "不可能な", "困難な", "正しい"], "correct": 0, "explanation": "possibleは「可能な、あり得る」という意味の形容詞です。対義語は impossible です。名詞形はpossibilityです。例: if possible（可能ならば）", "type": "choice"},
+        {"scenario": "「potential」の意味として最も適切なものは？", "choices": ["潜在的な、可能性を秘めた、潜在能力、可能性", "現在の", "明らかな", "不可能な"], "correct": 0, "explanation": "potentialは表面化していないが「潜在的な、可能性のある」という形容詞、また「潜在能力、ポテンシャル」という名詞の意味もあります。", "type": "choice"},
+        {"scenario": "「practical」の意味として最も適切なものは？", "choices": ["実用的な、現実的な、実地の", "理論的な", "非現実的な", "学術的な"], "correct": 0, "explanation": "practicalは理論（theoretical）に対して「実用的な、現実的な」という意味の形容詞です。例: practical English（実用英語）", "type": "choice"},
+        {"scenario": "「precise」の意味として最も適切なものは？", "choices": ["正確な、精密な、まさにその", "大雑把な", "曖昧な", "間違った"], "correct": 0, "explanation": "preciseは数値や測定値、説明などが寸分の狂いもなく「正確な、精密な」という意味の形容詞です。exactに似ています。副詞形は precisely です。", "type": "choice"},
+        {"scenario": "「primary」の意味として最も適切なものは？", "choices": ["主要な、第一の、初等の", "二次的な", "最後の", "高等な"], "correct": 0, "explanation": "primaryは「主要な、第一の」または「初期の、初等の」という意味の形容詞です。例: primary school（小学校）", "type": "choice"},
+        {"scenario": "「private」の意味として最も適切なものは？", "choices": ["個人の、私的な、民間の、私有の", "公共の", "公式の", "社会的な"], "correct": 0, "explanation": "privateは公（public）に対して「個人の、私的な、民間の、非公式の」という意味の形容詞です。対義語は public です。例: private life（私生活）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "副詞編⑥：程度の強調と丁寧さ",
+      "type": "Adverbs 6",
+      "emoji": "📍",
+      "subtitle": "深く、絶対に、効率的になどの副詞",
+      "questions": [
+        {"scenario": "「deeply」の意味として最も適切なものは？", "choices": ["深く、痛切に、非常に", "浅く", "静かに", "表面上"], "correct": 0, "explanation": "deeplyは物理的に「深く」または感情が「深く、痛切に、大いに」という意味の副詞です。形容詞はdeepです。例: deeply moved（深く感動した）", "type": "choice"},
+        {"scenario": "「definitely」の意味として最も適切なものは？", "choices": ["絶対に、明確に、確かに、その通り", "おそらく", "絶対に〜ない", "一般的に"], "correct": 0, "explanation": "definitelyは疑う余地なく「絶対に、明確に」という副詞、また強い返答として「その通り！」としても使われます。例: Definitely yes.（絶対そうです。）", "type": "choice"},
+        {"scenario": "「delightfully」の意味として最も適切なものは？", "choices": ["快く、楽しく、うれしいことに", "不快に", "怒って", "悲しそうに"], "correct": 0, "explanation": "delightfullyは「快く、愉快に、喜ばしいことに」という意味の副詞です。名詞・動詞 delight（大喜び、喜ばせる）から来ています。", "type": "choice"},
+        {"scenario": "「directly」の意味として最も適切なものは？", "choices": ["直接に、直行で、すぐに", "間接的に", "遠回りで", "遅れて"], "correct": 0, "explanation": "directlyは「直接に（間を置かずに）」または時間的に「すぐに、直ちに」という意味の副詞です。形容詞はdirectです。対義語はindirectlyです。", "type": "choice"},
+        {"scenario": "「doubtless」の意味として最も適切なものは？", "choices": ["疑いなく、ほぼ確実に、間違いなく", "おそらく", "疑わしいが", "決して〜ない"], "correct": 0, "explanation": "doubtlessは doubt（疑い）に less（ない）がついた副詞で、「疑いなく、間違いなく、ほぼ確実に」という意味です。probablyより確実性が高いです。", "type": "choice"},
+        {"scenario": "「eagerly」の意味として最も適切なものは？", "choices": ["熱望して、熱心に、しきりに", "嫌そうに", "冷淡に", "のんびりと"], "correct": 0, "explanation": "eagerlyは「熱望して、熱心に、しきりに〜したがる」という意味の副詞です。形容詞はeager（熱望して）です。例: wait eagerly（首を長くして待つ）", "type": "choice"},
+        {"scenario": "「easily」の意味として最も適切なものは？", "choices": ["簡単に、たやすく、おそらく確実に", "難しく", "苦労して", "絶対に〜ない"], "correct": 0, "explanation": "easilyは「簡単に、たやすく（without difficulty）」という意味の基本副詞です。形容詞はeasyです。対義語はwith difficulty（苦労して）です。", "type": "choice"},
+        {"scenario": "「efficiently」の意味として最も適切なものは？", "choices": ["効率的に、能率的に", "非効率的に", "無駄に", "急いで"], "correct": 0, "explanation": "efficientlyは時間やお金を無駄にせず「効率的に、能率的に」物事を行う様子を表す副詞です。形容詞はefficientです。", "type": "choice"},
+        {"scenario": "「entirely」の意味として最も適切なものは？", "choices": ["完全に、まったく、全体的に", "部分的に", "ほとんど〜ない", "少しだけ"], "correct": 0, "explanation": "entirelyは「完全に、まったく、すっかり（completelyやtotallyとほぼ同じ）」という意味の副詞です。形容詞はentire（全体の）です。", "type": "choice"},
+        {"scenario": "「equally」の意味として最も適切なものは？", "choices": ["等しく、平等に、均等に", "不平等に", "別々に", "一方的に"], "correct": 0, "explanation": "equallyは「等しく、平等に、均等に」という意味の副詞です。形容詞はequal（等しい）です。例: share equally（均等に分ける）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "重要熟語編⑪：提出と開始・類似の動作",
+      "type": "Phrasal Verbs 11",
+      "emoji": "🔗",
+      "subtitle": "育てる、提出する、似ているなどの動詞熟語",
+      "questions": [
+        {"scenario": "「bring up」の意味として最も適切なものは？", "choices": ["（子供を）育てる、（話題を）持ち出す、吐く", "子供が生まれる", "捨てる", "中止する"], "correct": 0, "explanation": "bring up 〜は「（子供を）育てる（raise/grow upより他動詞的）」または会議などで「（問題を）持ち出す」という意味の重要熟語です。過去形は brought up です。", "type": "choice"},
+        {"scenario": "「carry on」の意味として最も適切なものは？", "choices": ["〜を続ける、進める、持ち運ぶ", "〜を中断する", "〜をあきらめる", "〜を始める"], "correct": 0, "explanation": "carry on (doing) は「（困難などがあっても）〜を続ける、進める」という意味の熟語です。continue に似ています。例: Carry on working.（仕事を続けなさい。）", "type": "choice"},
+        {"scenario": "「come down with」の意味として最も適切なものは？", "choices": ["（風邪などの病気に）かかる、罹る", "病気が治る", "〜を持って降りる", "〜をあきらめる"], "correct": 0, "explanation": "come down with (病気) は「（風邪やインフルエンザなどの軽い病気に）かかる、倒れる」という意味の定番3語熟語です。get/catch と似ています。", "type": "choice"},
+        {"scenario": "「cut down on」の意味として最も適切なものは？", "choices": ["（出費や量を）切り詰める、減らす", "〜を切り倒す", "〜をあきらめる", "〜を増やす"], "correct": 0, "explanation": "cut down on 〜は健康や節約のために「（食べ物や出費などの量を）減らす、切り詰める」という意味の重要3語熟語です。reduceとほぼ同じです。", "type": "choice"},
+        {"scenario": "「drop out」の意味として最も適切なものは？", "choices": ["（学校や競技から）退学する、脱落する、中退する", "入学する", "落ちる", "卒業する"], "correct": 0, "explanation": "drop out (of 〜) は「（学校を）中退する」または競争やグループから「脱落する、身を引く」という意味の熟語です。中退者は dropout と呼ばれます。", "type": "choice"},
+        {"scenario": "「fall behind」の意味として最も適切なものは？", "choices": ["遅れをとる、遅れる、（支払いが）滞る", "追いつく", "落ちる", "転ぶ"], "correct": 0, "explanation": "fall behind (人/予定など) は「（進路や競争で）〜に遅れをとる」という意味の熟語です。対義語は keep up with（ついていく）です。", "type": "choice"},
+        {"scenario": "「get through」の意味として最も適切なものは？", "choices": ["（仕事などを）終える、切り抜ける、（電話が）通じる", "〜をあきらめる", "〜を始める", "〜を調べる"], "correct": 0, "explanation": "get through 〜は「（困難や仕事を）やり遂げる、切り抜ける」または電話が「通じる」という意味の熟語です。finishと似ています。", "type": "choice"},
+        {"scenario": "「give away」の意味として最も適切なものは？", "choices": ["（タダで）やる、配る、秘密を漏らす", "捨てる", "持ち帰る", "販売する"], "correct": 0, "explanation": "give away 〜は不要なものなどを「タダで人に譲る、配る」または秘密などを「うっかり漏らす」という意味の熟語です。無料進呈品は giveaway と呼ばれます。", "type": "choice"},
+        {"scenario": "「go ahead」の意味として最も適切なものは？", "choices": ["（許可を示して）どうぞ進んでください、どうぞやってください", "後ろへ下がる", "中止する", "開始する"], "correct": 0, "explanation": "go ahead は「どうぞ前に進んでください」または会話で許可を求められた際に「どうぞ（そうしてください）」と促す時の定番フレーズです。", "type": "choice"},
+        {"scenario": "「hand in」の意味として最も適切なものは？", "choices": ["（宿題などを）提出する、手渡す", "受け取る", "隠す", "持ち帰る"], "correct": 0, "explanation": "hand in 〜は宿題や書類を「（先生や担当者に）提出する、手渡す」という意味の熟語です。submit や give in とほぼ同じです。対義語は hand out（配る）です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "重要熟語編⑫：変化と開始・移動の動作",
+      "type": "Phrasal Verbs 12",
+      "emoji": "🔗",
+      "subtitle": "持ちこたえる、死ぬ、出発するなどの動詞熟語",
+      "questions": [
+        {"scenario": "「hold on」の意味として最も適切なものは？", "choices": ["（電話を切らずに）お待ちください、つかまる、持ちこたえる", "電話を切る", "電話をかける", "去る"], "correct": 0, "explanation": "hold on は電話で「（切らずにそのまま）待つ」という意味、または「しっかりつかまる」「持ちこたえる」という意味の重要熟語です。", "type": "choice"},
+        {"scenario": "「keep up」の意味として最も適切なものは？", "choices": ["〜を維持する、続ける、寝ないで起きている", "〜をあきらめる", "〜を下げる", "〜を開始する"], "correct": 0, "explanation": "keep up 〜は良好な天候や活動を「維持する、続ける」という意味の熟語です。例: Keep up the good work!（その調子で頑張って！）", "type": "choice"},
+        {"scenario": "「look back on」の意味として最も適切なものは？", "choices": ["〜を回想する、振り返る、見返る", "〜を忘れる", "〜を心配する", "〜を調査する"], "correct": 0, "explanation": "look back on 〜は過去の出来事を「振り返る、回想する」という意味の重要熟語です。rememberに近いニュアンスです。例: look back on high school days（高校時代を振り返る）", "type": "choice"},
+        {"scenario": "「make room for」の意味として最も適切なものは？", "choices": ["〜のために場所（スペース）を空ける、譲る", "〜のために部屋を作る", "〜を片付ける", "〜を歓迎する"], "correct": 0, "explanation": "make room for 〜は「〜のために場所を空ける、スペースを譲る」という意味の熟語です。ここでの room は「空間、余地（不可算名詞）」を指します。", "type": "choice"},
+        {"scenario": "「pass away」の意味として最も適切なものは？", "choices": ["亡くなる、世を去る、消え去る", "死ぬ（野良犬などが）", "合格する", "通り過ぎる"], "correct": 0, "explanation": "pass away は die の丁寧な婉曲表現で、人が「亡くなる、世を去る」という意味の重要熟語です。手紙や葬儀などで多用されます。", "type": "choice"},
+        {"scenario": "「put forward」の意味として最も適切なものは？", "choices": ["（意見や案などを）提出する、提案する、時計を進める", "〜を拒否する", "〜を隠す", "〜を延期する"], "correct": 0, "explanation": "put forward 〜は「（計画やアイデアなどを）提出する、提案する（propose/suggest）」または時計の針を「進める」という意味の熟語です。", "type": "choice"},
+        {"scenario": "「run into」の意味として最も適切なものは？", "choices": ["〜に偶然出会う、衝突する、駆け込む", "〜を避ける", "〜を追いかける", "〜へ走って入る"], "correct": 0, "explanation": "run into (人) は「〜に偶然出会う（meet by chance / come across）」または「（車などが〜に）衝突する」という意味の重要熟語です。", "type": "choice"},
+        {"scenario": "「set off」の意味として最も適切なものは？", "choices": ["（旅行などに）出発する、引き起こす、爆発させる", "到着する", "中止する", "遅れる"], "correct": 0, "explanation": "set off (for 場所) は旅行などに「出発する（set out/depart）」という意味や、警報などを「作動させる、爆発させる」という意味の熟語です。", "type": "choice"},
+        {"scenario": "「stand out」の意味として最も適切なものは？", "choices": ["目立つ、際立つ、主張し続ける", "隠れる", "立ち上がる", "外に立つ"], "correct": 0, "explanation": "stand out は人や物が「目立つ、際立つ」という意味の自動詞熟語です。形容詞は outstanding（傑出した）です。例: stand out in the crowd（群衆の中で目立つ）", "type": "choice"},
+        {"scenario": "「take after」の意味として最も適切なものは？", "choices": ["（親などに親族として）似ている", "〜を追いかける", "〜の世話をする", "〜を引き継ぐ"], "correct": 0, "explanation": "take after (親など) は親族に容姿や性格が「似ている（resemble）」という意味の重要熟語です。look like より血縁関係で似ている場合に使われます。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "会話表現・定型フレーズ⑥：安否確認と判断の返答",
+      "type": "Conversational Phrases 6",
+      "emoji": "🗣️",
+      "subtitle": "近況確認、同意、判断の譲渡などの定番表現",
+      "questions": [
+        {"scenario": "「How have you been?」の意味として最も適切なものは？", "choices": ["（しばらく会っていなかった人に）元気にしていた？、どうしてた？", "どこへ行っていたの？", "何歳になりましたか？", "どういたしまして"], "correct": 0, "explanation": "How have you been? は、数週間や数ヶ月ぶりに会った相手に対して「（最後に会ってから今まで）元気にしていた？」と近況を尋ねる定番フレーズです。", "type": "choice"},
+        {"scenario": "「I suppose so.」の意味として最も適切なものは？", "choices": ["（確信はないが）そうだと思います、たぶんそうです", "そうは思いません", "絶対にそうです", "どういたしまして"], "correct": 0, "explanation": "I suppose so. は、消極的または完全な確信がない中で「まあそうだと思います」「たぶんそうでしょう」と同意・推測する返答フレーズです。I think so. より確信度がやや低いです。", "type": "choice"},
+        {"scenario": "「I have a favor to ask.」の意味として最も適切なものは？", "choices": ["お願いがあるのですが、頼み事があります", "お気に入りがあります", "質問があります", "どういたしまして"], "correct": 0, "explanation": "I have a favor to ask you. は、相手に頼み事をしたい時に「ちょっとお願いがあるのですが」と切り出す定番のフレーズです。", "type": "choice"},
+        {"scenario": "「Never mind.」の意味として最も適切なものは？", "choices": ["気にしないで、心配いりません、なんでもありません", "注意しなさい", "絶対にダメです", "どういたしまして"], "correct": 0, "explanation": "Never mind. は、相手の謝罪や心配に対して「気にしないで！」と言ったり、自分の言ったことを「何でもない、忘れて」と取り消す時に使われる定番フレーズです。", "type": "choice"},
+        {"scenario": "「Take it easy.」の意味として最も適切なものは？", "choices": ["無理しないで、のんびりね、気楽にいこう、じゃあね", "簡単にとらえなさい", "それを持って行きなさい", "どういたしまして"], "correct": 0, "explanation": "Take it easy. は、緊張している人に「気楽にいこう」と声をかける時や、別れ際に「無理しないでね」「じゃあね」と声をかける万能フレーズです。", "type": "choice"},
+        {"scenario": "「It's up to you.」の意味として最も適切なものは？", "choices": ["あなた次第です、あなたに任せます", "それはあなたの上にあります", "あなたには関係ありません", "どういたしまして"], "correct": 0, "explanation": "It's up to you. は、決定権を相手に譲って「それはあなた次第だよ」「あなたに任せるよ」と伝える超重要・超定番フレーズです。", "type": "choice"},
+        {"scenario": "「No problem.」の意味として最も適切なものは？", "choices": ["どういたしまして、問題ありません、大丈夫ですよ", "問題はありません（深刻な）", "違います", "ありがとうございました"], "correct": 0, "explanation": "No problem. は、感謝された時の「どういたしまして」や、謝罪された時の「気にしないで」「問題ないよ」として使われる非常にカジュアルな定番表現です。", "type": "choice"},
+        {"scenario": "「You're welcome.」の意味として最も適切なものは？", "choices": ["どういたしまして、歓迎します", "ようこそ", "あなたは親切です", "ありがとうございました"], "correct": 0, "explanation": "You're welcome. は「Thank you」に対する最も標準的で丁寧な「どういたしまして」の定番フレーズです。It's my pleasure. なども同様に使われます。", "type": "choice"},
+        {"scenario": "「Sounds good.」の意味として最も適切なものは？", "choices": ["（提案に対して）良さそうですね！、いいですね！", "大きな音がします", "聞こえが良いです", "どういたしまして"], "correct": 0, "explanation": "Sounds good.（または That sounds good.）は、相手の提案やアイデアに対して「いいね！」「面白そうだね！」と賛同する際の定番フレーズです。", "type": "choice"},
+        {"scenario": "「That's too bad.」の意味として最も適切なものは？", "choices": ["それは気の毒に、残念ですね", "それは最悪です", "それは悪すぎます", "どういたしまして"], "correct": 0, "explanation": "That's too bad. は相手の不運や残念な話を聞いた時に、「それは残念だったね」「気の毒に」と共感を示す定番表現です。What a pity! と似ています。", "type": "choice"}
+      ]
+    }
+  ]
+}

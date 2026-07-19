@@ -19,13 +19,15 @@
 - heisei: 平成レトロ雑学
 - capital: 世界の首都クイズ
 - eiken2: 英検2級 単語・熟語
+- eiken3: 英検3級 単語・熟語
+- eiken2pre: 英検準2級 単語・熟語
 - eiken4: 英検4級 単語・熟語
 - eiken5: 英検5級 単語・熟語
 - gentsuki: 原付学科試験
 
 ## 主なファイル
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（19ファイルは同一内容で同期）。
+- docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（21ファイルは同一内容で同期）。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
 - docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、全クリア・周回、Firebase連携）。
 - docs/config.json: クイズごとの表示名、色、説明。

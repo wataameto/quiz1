@@ -11,7 +11,7 @@
 
 主な入口:
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
-- docs/{quiz}/index.html: 各クイズページ（sample, sample2, sample3, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, eiken4, eiken5, gentsuki の19種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。sample3は記述式（自由入力）問題タイプの最小構成サンプル。
+- docs/{quiz}/index.html: 各クイズページ（sample, sample2, sample3, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, eiken3, eiken2pre, eiken4, eiken5, gentsuki の21種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。sample3は記述式（自由入力）問題タイプの最小構成サンプル。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
 - docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携など）。
 - docs/config.json: 各クイズの表示メタデータ。
@@ -78,5 +78,5 @@
 - docs/build-info.json は自動生成される。pre-commit hook で変更されたらコミットに含める。
 - タイムスタンプは JST。
 - ビルドスクリプトや hook が失敗して、ユーザーから手動修正を頼まれた場合以外は、docs/build-info.json を手で編集しない。
-- scripts/update-build-time.js は同時に、18クイズページ全部の `<link>`/`<script>` タグの `?v=` を最新タイムスタンプへ書き換え、docs/quiz-meta.json も再生成する。これは pre-commit hook（hooks/pre-commit）が `git add` するので、手動での追加コミットは不要。
+- scripts/update-build-time.js は同時に、21クイズページ全部の `<link>`/`<script>` タグの `?v=` を最新タイムスタンプへ書き換え、docs/quiz-meta.json も再生成する。これは pre-commit hook（hooks/pre-commit）が `git add` するので、手動での追加コミットは不要。
 - questions*.json や config.json への fetch は毎回 `?t=Date.now()` を付けて常にキャッシュを回避しているが、docs/shared/quiz-app.js・quiz-app.css 自体はブラウザ・CDNにキャッシュされるため、上記の `?v=` バージョン管理で対応している。

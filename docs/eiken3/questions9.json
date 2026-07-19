@@ -1,0 +1,198 @@
+{
+  "id": "eiken3",
+  "level": 9,
+  "label": "📚 発展応用・論理対話編",
+  "description": "英検3級レベルの応用英単語⑧（動詞・名詞・形容詞・副詞・熟語・会話表現）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編⑮：促進・提案・感情の動詞",
+      "type": "Basic Verbs 15",
+      "emoji": "📈",
+      "subtitle": "促進する、提案する、処罰するなどの動詞",
+      "questions": [
+        {"scenario": "「promote」の意味として最も適切なものは？", "choices": ["促進する、昇進させる、宣伝する", "妨げる", "解雇する", "隠す"], "correct": 0, "explanation": "promoteは販売や活動を「促進する」または人を「昇進させる（be promoted）」という意味の動詞です。名詞形はpromotionです。", "type": "choice"},
+        {"scenario": "「propose」の意味として最も適切なものは？", "choices": ["提案する、申し出る、プロポーズする", "受け入れる", "拒絶する", "非難する"], "correct": 0, "explanation": "proposeは計画や考えを「提案する、申し出る」または結婚を「プロポーズする（propose to 〜）」という意味の動詞です。名詞形はproposalです。", "type": "choice"},
+        {"scenario": "「punish」の意味として最も適切なものは？", "choices": ["罰する、懲らしめる", "褒める", "許す", "保護する"], "correct": 0, "explanation": "punishは過失や罪について「（人を）罰する、懲らしめる（punish A for B）」という意味の動詞です。名詞形はpunishment（罰）です。", "type": "choice"},
+        {"scenario": "「purchase」の意味として最も適切なものは？", "choices": ["購入する、手に入れる、購入、購入品", "売却する", "レンタルする", "生産する"], "correct": 0, "explanation": "purchaseは「（高価なものやビジネスで）購入する、買い入れる」という動詞・名詞です。buyよりもフォーマルな表現です。", "type": "choice"},
+        {"scenario": "「pursue」の意味として最も適切なものは？", "choices": ["追跡する、追求する、（研究などを）進める", "避ける", "あきらめる", "待つ"], "correct": 0, "explanation": "pursueは夢や目標を「追求する」、または犯人を「追跡する」という意味の動詞です。名詞形はpursuit（追求）です。", "type": "choice"},
+        {"scenario": "「raise」の意味として最も適切なものは？", "choices": ["上げる、育てる、（お金を）集める、賃上げ", "下げる", "横たわる", "増える"], "correct": 0, "explanation": "raiseは「〜を上げる」という他動詞、また子供を「育てる（bring up）」、資金を「集める」という意味もあります。対義語は lower です。自動詞 rise（上がる）と区別しましょう。", "type": "choice"},
+        {"scenario": "「reach」の意味として最も適切なものは？", "choices": ["（目的地に）到着する、届く、手を伸ばす、範囲", "出発する", "離れる", "投げる"], "correct": 0, "explanation": "reachは「（目的地に）到着する、届く（arrive at/inやget toとほぼ同じですが他動詞です）」という意味の動詞・名詞です。例: reach the goal（ゴールに着く）", "type": "choice"},
+        {"scenario": "「react」の意味として最も適切なものは？", "choices": ["反応する、反発する", "無視する", "行動する", "同意する"], "correct": 0, "explanation": "reactは react to 〜 の形で「（刺激や意見に）反応する、反発する」という意味の動詞です。名詞形はreaction（リアクション）です。", "type": "choice"},
+        {"scenario": "「realize」の意味として最も適切なものは？", "choices": ["（頭で）はっきりと理解する、気づく、実現する", "誤解する", "忘れる", "計画する"], "correct": 0, "explanation": "realizeは事実などを「はっきりと理解する、悟る」または夢を「実現する」という意味の動詞です。名詞形はrealizationです。", "type": "choice"},
+        {"scenario": "「recognize」の意味として最も適切なものは？", "choices": ["（見たり聞いたりして）認識する、本人だと識別する、認める", "見落とす", "忘れる", "疑う"], "correct": 0, "explanation": "recognizeは過去の記憶から「（本人や物をそれと）認識する、見分ける」または功績を「認める」という意味の動詞です。名詞形はrecognitionです。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編⑯：回復・削減・拒絶の動詞",
+      "type": "Basic Verbs 16",
+      "emoji": "📈",
+      "subtitle": "回復する、削減する、拒絶するなどの動詞",
+      "questions": [
+        {"scenario": "「recover」の意味として最も適切なものは？", "choices": ["回復する、取り戻す", "悪化する", "失う", "忘れる"], "correct": 0, "explanation": "recoverは病気などから「回復する（recover from 〜）」または失ったものを「取り戻す」という意味の動詞です。名詞形はrecoveryです。", "type": "choice"},
+        {"scenario": "「reduce」の意味として最も適切なものは？", "choices": ["減らす、削減する、縮小する", "増やす", "拡大する", "維持する"], "correct": 0, "explanation": "reduceは数量や費用を「減らす、削減する」という意味の動詞です。対義語は increase です。名詞形はreductionです。例: reduce weight（体重を減らす）", "type": "choice"},
+        {"scenario": "「refer」の意味として最も適切なものは？", "choices": ["言及する、参照する、指示する", "無視する", "隠す", "決定する"], "correct": 0, "explanation": "referは refer to 〜 の形で「〜に言及する、触れる」または「〜を参照する」という意味の動詞です。名詞形はreferenceです。", "type": "choice"},
+        {"scenario": "「reflect」の意味として最も適切なものは？", "choices": ["反射する、反映する、熟考する", "吸収する", "無視する", "遮る"], "correct": 0, "explanation": "reflectは鏡や水が光を「反射する」、意見を「反映する」、または reflect on 〜 で「〜を熟考する」という意味の動詞です。名詞形はreflectionです。", "type": "choice"},
+        {"scenario": "「reform」の意味として最も適切なものは？", "choices": ["改革する、改善する、改正、改革", "破壊する", "維持する", "模倣する"], "correct": 0, "explanation": "reformは制度や組織の欠点を「改革する、改善する」という動詞・名詞です。例: political reform（政治改革）", "type": "choice"},
+        {"scenario": "「regret」の意味として最も適切なものは？", "choices": ["後悔する、残念に思う、後悔、遺憾", "喜ぶ", "満足する", "忘れる"], "correct": 0, "explanation": "regretは過去の行動を「後悔する」または「残念に思う」という動詞・名詞です。例: regret saying that（あんなことを言ったのを後悔する）", "type": "choice"},
+        {"scenario": "「reject」の意味として最も適切なものは？", "choices": ["拒絶する、却下する、拒否する", "受け入れる", "提案する", "歓迎する"], "correct": 0, "explanation": "rejectは提案やオファーをきっぱりと「拒絶する、却下する」という意味の動詞です。refuseに似ています。対義語は accept です。名詞形はrejectionです。", "type": "choice"},
+        {"scenario": "「produce」の意味として最も適切なものは？", "choices": ["生産する、製造する、農産物", "消費する", "購入する", "破壊する"], "correct": 0, "explanation": "produceは「生産する、製造する」という動詞、またアクセントが前に来ると「農産物（野菜・果物など、不可算名詞）」という名詞の意味もあります。", "type": "choice"},
+        {"scenario": "「protect」の意味として最も適切なものは？", "choices": ["保護する、守る、防ぐ", "攻撃する", "破壊する", "無視する"], "correct": 0, "explanation": "protectは危険や害から「保護する、守る（protect A from B）」という意味の動詞です。名詞形はprotection、形容詞はprotectiveです。", "type": "choice"},
+        {"scenario": "「provide」の意味として最も適切なものは？", "choices": ["提供する、供給する、備える", "奪う", "購入する", "必要とする"], "correct": 0, "explanation": "provideは provide A with B / provide B for A の形で「（必要なものを）提供する、供給する」という意味の動詞です。名詞形はprovisionです。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編⑮：自然物・学術施設",
+      "type": "Nouns: Campus & Concepts",
+      "emoji": "🏫",
+      "subtitle": "脳、風、キャンパス、首都などの名詞",
+      "questions": [
+        {"scenario": "「brain」の意味として最も適切なものは？", "choices": ["脳、頭脳、知性", "心臓", "肺", "骨"], "correct": 0, "explanation": "brainは「脳、頭脳」を表す名詞です。複数形の brains は「知性、優秀な人材」を指すことがあります。例: brain drain（優秀な人材の流出）", "type": "choice"},
+        {"scenario": "「branch」の意味として最も適切なものは？", "choices": ["枝、支店、支局、部門", "根", "幹", "葉"], "correct": 0, "explanation": "branchは木の「枝」のほかに、会社や銀行の「支店、支局」、また学問などの「部門、分野」を表す名詞です。例: bank branch（銀行の支店）", "type": "choice"},
+        {"scenario": "「brand」の意味として最も適切なものは？", "choices": ["ブランド、商標、銘柄", "製品", "偽物", "広告"], "correct": 0, "explanation": "brandは商品の「ブランド、商標、銘柄」を表す名詞です。例: brand-new（新品の、真新しい）", "type": "choice"},
+        {"scenario": "「breath」の意味として最も適切なものは？", "choices": ["息、呼吸", "声", "喉", "風"], "correct": 0, "explanation": "breathは「息、呼吸」を表す名詞です。動詞は breathe（呼吸する）です。例: take a deep breath（深呼吸する）、out of breath（息が切れて）", "type": "choice"},
+        {"scenario": "「breeze」の意味として最も適切なものは？", "choices": ["そよ風、微風、たやすいこと", "強風", "嵐", "霧"], "correct": 0, "explanation": "breezeは「そよ風、微風」を表す名詞です。口語で「たやすいこと、朝飯前」という意味もあります。例: ocean breeze（海風）", "type": "choice"},
+        {"scenario": "「bridge」の意味として最も適切なものは？", "choices": ["橋、架け橋、橋を架ける", "道", "川", "トンネル"], "correct": 0, "explanation": "bridgeは「橋」を表す名詞、また「橋を架ける、つなぐ」という動詞の意味もあります。例: build a bridge（橋を架ける）", "type": "choice"},
+        {"scenario": "「broadcast」の意味として最も適切なものは？", "choices": ["放送、番組、放送する、放映する", "印刷", "新聞", "録音"], "correct": 0, "explanation": "broadcastはテレビやラジオの「放送、放映」という名詞、また「放送する」という動詞の意味もあります。活用は broadcast-broadcast-broadcast です。", "type": "choice"},
+        {"scenario": "「brotherhood」の意味として最も適切なものは？", "choices": ["兄弟愛、同胞愛、結社", "親子", "友情", "親戚"], "correct": 0, "explanation": "brotherhoodは「兄弟愛、同胞愛（人類みな兄弟の精神）」や、同じ目的を持つ「団体、結社」を表す名詞です。brotherから派生しています。", "type": "choice"},
+        {"scenario": "「brush」の意味として最も適切なものは？", "choices": ["ブラシ、筆、ブラシをかける、磨く", "クシ", "雑草", "絵の具"], "correct": 0, "explanation": "brushは「ブラシ、筆」を表す名詞、または髪や歯に「ブラシをかける、磨く」という動詞でもあります。例: toothbrush（歯ブラシ）", "type": "choice"},
+        {"scenario": "「bubble」の意味として最も適切なものは？", "choices": ["泡、あぶく、バブル、泡立つ", "水滴", "波", "湯気"], "correct": 0, "explanation": "bubbleは水や石鹸の「泡、あぶく」を表す名詞、また「泡立つ」という動詞の意味もあります。経済の「バブル」も指します。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編⑯：大学生活と都市・資本",
+      "type": "Nouns: Campus & Capital",
+      "emoji": "🏫",
+      "subtitle": "キャンパス、買い手、候補者、首都などの名詞",
+      "questions": [
+        {"scenario": "「buyer」の意味として最も適切なものは？", "choices": ["買い手、バイヤー、仕入れ担当者", "売り手", "製造者", "仲介者"], "correct": 0, "explanation": "buyerは商品の「買い手、購入者」や、デパートなどの「仕入れ担当者」を表する名詞です。buy（買う）から派生しています。", "type": "choice"},
+        {"scenario": "「cabin」の意味として最も適切なものは？", "choices": ["小屋、客室、キャビン", "大邸宅", "アパート", "ホテル"], "correct": 0, "explanation": "cabinは森の中などの「丸太小屋」や、船・飛行機の「客室、キャビン」を表す名詞です。例: cabin crew（客室乗務員）", "type": "choice"},
+        {"scenario": "「cabinet」の意味として最も適切なものは？", "choices": ["キャビネット、飾り棚、内閣", "会議室", "机", "金庫"], "correct": 0, "explanation": "cabinetは書類や食器を収納する「キャビネット、戸棚」や、国の「内閣、閣僚」を表す名詞です。例: cabinet minister（閣僚）", "type": "choice"},
+        {"scenario": "「cafe」の意味として最も適切なものは？", "choices": ["カフェ、喫茶店、軽食堂", "レストラン", "バー", "ホテル"], "correct": 0, "explanation": "cafeはコーヒーや軽食を提供する「カフェ、喫茶店」を表す名詞です。フランス語のカフェから来ています。", "type": "choice"},
+        {"scenario": "「campaign」の意味として最も適切なものは？", "choices": ["（政治・宣伝などの）組織的運動、キャンペーン", "選挙", "会議", "広告"], "correct": 0, "explanation": "campaignは特定の社会的・政治的・商業的目標のための「組織的運動、キャンペーン」を表す名詞、または「運動を行う」という動詞の意味もあります。", "type": "choice"},
+        {"scenario": "「campus」の意味として最も適切なものは？", "choices": ["（大学などの）キャンパス、構内", "教室", "運動場", "学校"], "correct": 0, "explanation": "campusは大学や研究所などの「キャンパス、構内、敷地」を表す名詞です。例: on campus（学内で）", "type": "choice"},
+        {"scenario": "「canal」の意味として最も適切なものは？", "choices": ["運河、水路", "川", "海", "トンネル"], "correct": 0, "explanation": "canalは人工的に作られた「運河、水路」を表す名詞です。例: the Panama Canal（パナマ運河）", "type": "choice"},
+        {"scenario": "「candidate」の意味として最も適切なものは？", "choices": ["候補者、志望者", "当選者", "有権者", "面接官"], "correct": 0, "explanation": "candidateは選挙の「候補者」や、試験・就職の「志望者、受験者」を表す名詞です。例: presidential candidate（大統領候補）", "type": "choice"},
+        {"scenario": "「capacity」の意味として最も適切なものは？", "choices": ["収容能力、定員、容量、能力", "限界", "体積", "重量"], "correct": 0, "explanation": "capacityは容器や部屋の「収容能力、定員、容量」、または人の「理解力、能力」を表す名詞です。例: seating capacity（収容人数）", "type": "choice"},
+        {"scenario": "「capital」の意味として最も適切なものは？", "choices": ["首都、資本、大文字、主要な、死刑の", "地方", "労働", "小文字"], "correct": 0, "explanation": "capitalは国の「首都」、経済の「資本」、アルファベットの「大文字」を表す名詞です。形容詞では「主要な」「死刑の（capital punishment）」もあります。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞編⑮：客観的状態と感情・感性",
+      "type": "Adjectives 15",
+      "emoji": "🌟",
+      "subtitle": "遠く離れた、無礼な、上品ななどの形容詞",
+      "questions": [
+        {"scenario": "「remote」の意味として最も適切なものは？", "choices": ["遠く離れた、人里離れた、リモコン", "近い", "混雑した", "便利な"], "correct": 0, "explanation": "remoteは場所や時間が「遠く離れた、僻地の」という意味の形容詞です。テレビの「リモコン（remote control）」の語源です。", "type": "choice"},
+        {"scenario": "「reluctant」の意味として最も適切なものは？", "choices": ["気が進まない、しぶしぶの", "積極的な", "喜んでの", "自発的な"], "correct": 0, "explanation": "reluctantは「気が進まない、したくない」という意味の形容詞です。be reluctant to do で「〜したがらない」と使います。副詞形は reluctantly です。", "type": "choice"},
+        {"scenario": "「rich」の意味として最も適切なものは？", "choices": ["裕福な、豊かな、濃厚な", "貧しい", "薄い", "軽い"], "correct": 0, "explanation": "richは「金持ちの、裕福な」または資源・味・色彩などが「豊かな、濃厚な」という意味の形容詞です。対義語は poor です。", "type": "choice"},
+        {"scenario": "「ridiculous」の意味として最も適切なものは？", "choices": ["ばかばかしい、とんでもない", "賢い", "真面目な", "高価な"], "correct": 0, "explanation": "ridiculousは話や行動が「ばかばかしい、話にならない、とんでもない」という意味の形容詞です。sillyやfoolishに似ています。", "type": "choice"},
+        {"scenario": "「royal」の意味として最も適切なものは？", "choices": ["王室の、高貴な、王の", "庶民の", "民間の", "大衆的な"], "correct": 0, "explanation": "royalは王や女王、王室に関する「王室の、国王の」という意味の形容詞です。例: royal family（王室、皇室）", "type": "choice"},
+        {"scenario": "「rude」の意味として最も適切なものは？", "choices": ["無礼な、失礼な、粗雑な", "礼儀正しい", "親切な", "優しい"], "correct": 0, "explanation": "rudeは態度が「無礼な、失礼な、マナーの悪い」という意味の形容詞です。polite（礼儀正しい）の対義語です。名詞形はrudenessです。", "type": "choice"},
+        {"scenario": "「sad」の意味として最も適切なものは？", "choices": ["悲しい、気の毒な", "嬉しい", "怒っている", "楽しい"], "correct": 0, "explanation": "sadは「悲しい、気の毒な」という意味の基本形容詞です。名詞形はsadnessです。対義語は happy です。例: sad news（悲しいお知らせ）", "type": "choice"},
+        {"scenario": "「sacred」の意味として最も適切なものは？", "choices": ["神聖な、宗教的な、不可侵の", "世俗的な", "汚れた", "普通の"], "correct": 0, "explanation": "sacredは神や宗教に関する「神聖な、聖なる、非常に重要な」という意味の形容詞です。holyと似ています。対義語は secular です。", "type": "choice"},
+        {"scenario": "「savage」の意味として最も適切なものは？", "choices": ["野生の、どう猛な、残酷な、未開の、野蛮人", "穏やかな", "飼い慣らされた", "親切な"], "correct": 0, "explanation": "savageは「どう猛な、野生の」または「残酷な」という形容詞、また「野蛮人」という名詞の意味もあります。wildやbrutalに似ています。", "type": "choice"},
+        {"scenario": "「scarce」の意味として最も適切なものは？", "choices": ["（一時的に）不足している、珍しい", "豊富な", "十分な", "安価な"], "correct": 0, "explanation": "scarceは食料や物資などが「（一時的に）不足している、不十分な」という意味の形容詞です。名詞形はscarcityです。対義語は plentiful です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞編⑯：知的・感覚的な形容詞",
+      "type": "Adjectives 16",
+      "emoji": "🌟",
+      "subtitle": "科学的な、敏感な、厳しいなどの形容詞",
+      "questions": [
+        {"scenario": "「scenic」の意味として最も適切なものは？", "choices": ["景色の良い、風景の", "汚い", "都会の", "産業の"], "correct": 0, "explanation": "scenicは「景色の良い、風景の美しい」という意味の形容詞です。scene（景色）から派生しています。例: scenic route（景色の良いルート）", "type": "choice"},
+        {"scenario": "「scientific」の意味として最も適切なものは？", "choices": ["科学的な、理科の", "芸術的な", "伝統的な", "宗教的な"], "correct": 0, "explanation": "scientificは「科学的な、科学に関する」という意味の形容詞です。science（科学）の形容詞形です。副詞形は scientifically です。", "type": "choice"},
+        {"scenario": "「secondary」の意味として最も適切なものは？", "choices": ["第二の、二次的な、中等教育の", "第一の", "主要な", "高等な"], "correct": 0, "explanation": "secondaryは「第二の、二次的な（第一のprimaryに次ぐ）」という意味の形容詞です。例: secondary school（中等学校、中学校・高校）", "type": "choice"},
+        {"scenario": "「secret」の意味として最も適切なものは？", "choices": ["秘密の、隠された、秘密、秘訣", "公表された", "明らかな", "一般的な"], "correct": 0, "explanation": "secretは「秘密の、隠された」という形容詞、また「秘密、秘訣（キー）」という名詞の意味もあります。副詞形は secretly です。", "type": "choice"},
+        {"scenario": "「secure」の意味として最も適切なものは？", "choices": ["安全な、確かな、確保する、守る", "危険な", "不安な", "不確実な"], "correct": 0, "explanation": "secureは危険がなく「安全な、しっかり固定された」という形容詞、また「確保する、守る」という動詞の意味もあります。名詞形はsecurityです。", "type": "choice"},
+        {"scenario": "「sensitive」の意味として最も適切なものは？", "choices": ["敏感な、感性豊かな、取扱注意の", "鈍感な", "無関心な", "強い"], "correct": 0, "explanation": "sensitiveは刺激や他人の感情に「敏感な、感性豊かな」または「取扱注意の（機密の）」という意味の形容詞です。対義語は insensitive です。", "type": "choice"},
+        {"scenario": "「severe」の意味として最も適切なものは？", "choices": ["（気候や病気が）厳しい、深刻な、過酷な、厳格な", "穏やかな", "軽い", "優しい"], "correct": 0, "explanation": "severeは風雨や痛みが「厳しい、激しい、深刻な」、または態度が「厳格な」という意味の形容詞です。対義語は mild や gentle です。", "type": "choice"},
+        {"scenario": "「shameful」の意味として最も適切なものは？", "choices": ["恥ずべき、みっともない", "誇らしい", "名誉な", "楽しい"], "correct": 0, "explanation": "shamefulは「恥ずべき、みっともない、不名誉な」という意味の形容詞です。shame（恥）から来ています。対義語は proud や honorable です。", "type": "choice"},
+        {"scenario": "「sheer」の意味として最も適切なものは？", "choices": ["まったくの、純然たる、（崖などが）切り立った", "一部の", "平らな", "濁った"], "correct": 0, "explanation": "sheerは強調語として「まったくの、純然たる」、または布が「ごく薄い」、崖が「ほぼ垂直の、切り立った」という意味の形容詞です。", "type": "choice"},
+        {"scenario": "「publish」の意味として最も適切なものは？", "choices": ["出版する、公表する、掲載する", "隠す", "購入する", "書く"], "correct": 0, "explanation": "publishは書籍などを「出版する、発行する」または情報を「公表する」という意味の動詞です。出版社は publisher です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "副詞編⑧：感情・態度の様子副詞",
+      "type": "Adverbs 8",
+      "emoji": "📍",
+      "subtitle": "優しく、正直に、すぐになどの副詞",
+      "questions": [
+        {"scenario": "「gently」の意味として最も適切なものは？", "choices": ["優しく、穏やかに、そっと", "激しく", "乱暴に", "急いで"], "correct": 0, "explanation": "gentlyは「優しく、穏やかに、そっと（刺激を与えずに）」という意味の副詞です。形容詞はgentleです。対義語はroughly（荒々しく）です。", "type": "choice"},
+        {"scenario": "「happily」の意味として最も適切なものは？", "choices": ["幸せに、楽しそうに、幸いなことに", "不幸にも", "悲しそうに", "怒って"], "correct": 0, "explanation": "happilyは「幸せに、楽しそうに（喜びを伴って）」という意味の副詞です。形容詞はhappyです。対義語はunhappilyです。", "type": "choice"},
+        {"scenario": "「honestly」の意味として最も適切なものは？", "choices": ["正直に、本当に、率直に言って", "嘘をついて", "疑わしく", "曖昧に"], "correct": 0, "explanation": "honestlyは「正直に、誠実に」または文頭で「率直に言って（Honestly speaking）」という意味の副詞です。形容詞はhonestです。", "type": "choice"},
+        {"scenario": "「hopefully」の意味として最も適切なものは？", "choices": ["願わくば、うまくいけば、期待を抱いて", "絶望して", "残念ながら", "おそらく"], "correct": 0, "explanation": "hopefullyは「願わくば、できれば、うまくいけば」と話し手の希望を表す副詞です。形容詞はhopefulです。例: Hopefully, it will be sunny.（願わくば晴れてほしい。）", "type": "choice"},
+        {"scenario": "「implicitly」の意味として最も適切なものは？", "choices": ["暗黙のうちに、それとなく、盲目的に", "明確に", "公式に", "否定的に"], "correct": 0, "explanation": "implicitlyは口に出さず「暗黙のうちに、それとなく」という意味の副詞です。対義語は explicitly（明確に）です。形容詞はimplicitです。", "type": "choice"},
+        {"scenario": "「indeed」の意味として最も適切なものは？", "choices": ["実に、本当に、実際は", "おそらく", "決して〜ない", "たまに"], "correct": 0, "explanation": "indeedは「実に、本当に、まさに（事実を強調する時）」という意味の副詞です。very muchに似ています。例: Thank you very much indeed.（本当にありがとうございました。）", "type": "choice"},
+        {"scenario": "「inevitably」の意味として最も適切なものは？", "choices": ["不可避的に、必然的に、どうしても", "偶然に", "避けられるが", "計画通りに"], "correct": 0, "explanation": "inevitablyは「必然的に、避けられない結果として、どうしても」という意味の副詞です。形容詞はinevitableです。", "type": "choice"},
+        {"scenario": "「initially」の意味として最も適切なものは？", "choices": ["最初は、初期のうちは、はじめに", "最後に", "最近", "ついに"], "correct": 0, "explanation": "initiallyは「最初は、初期の段階では（後に変化する前）」という意味の副詞です。形容詞はinitialです。at firstとほぼ同じです。", "type": "choice"},
+        {"scenario": "「instantly」の意味として最も適切なものは？", "choices": ["即座に、すぐに、インスタントの", "ゆっくりと", "遅れて", "一時的に"], "correct": 0, "explanation": "instantlyは「即座に、すぐに（at onceやimmediatelyと同じ）」という意味の副詞です。形容詞はinstant（即座の）です。", "type": "choice"},
+        {"scenario": "「intently」の意味として最も適切なものは？", "choices": ["熱心に、じっと、一心に", "無関心に", "適当に", "ぼんやりと"], "correct": 0, "explanation": "intentlyは「熱心に、集中して、じっと見つめる」という意味の副詞です。形容詞はintentです。例: listen intently（身を乗り出して聞く）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "重要熟語編⑮：文頭・対比の論理熟語",
+      "type": "Phrasal Verbs 15",
+      "emoji": "🔗",
+      "subtitle": "そもそも、実際は、何としてもなどの前置詞熟語",
+      "questions": [
+        {"scenario": "「in the first place」の意味として最も適切なものは？", "choices": ["そもそも、まず第一に", "最初の場所で", "最終的に", "代わりに"], "correct": 0, "explanation": "in the first place は議論の前提や原因について「そもそも、まず第一に」と言及する際の熟語です。to begin with と似ています。", "type": "choice"},
+        {"scenario": "「on the contrary」の意味として最も適切なものは？", "choices": ["それどころか、まるで反対で", "その結果として", "一般的に", "ついでに"], "correct": 0, "explanation": "on the contrary は相手の意見を否定して「それどころか、まったく反対で」と対比を強調する重要熟語です。対義語は on the other hand などです。", "type": "choice"},
+        {"scenario": "「as a matter of fact」の意味として最も適切なものは？", "choices": ["実際は、実は（相手を驚かせる事実）", "当然のことながら", "例外として", "法律上は"], "correct": 0, "explanation": "as a matter of fact は「実際は、実は（in factとほぼ同じですが、相手に意外な事実を伝えるニュアンス）」という意味の重要熟語です。", "type": "choice"},
+        {"scenario": "「by all means」の意味として最も適切なものは？", "choices": ["ぜひとも、どうぞどうぞ（強い承諾・肯定）", "決して〜ない", "自力で", "偶然に"], "correct": 0, "explanation": "by all means は「ぜひとも、もちろんいいですよ」と許可や要望に喜んで応じる際の定番フレーズです。対義語は by no means（決して〜ない）です。", "type": "choice"},
+        {"scenario": "「by no means」の意味として最も適切なものは？", "choices": ["決して〜ない、全く〜ない", "ぜひとも", "自力で", "偶然に"], "correct": 0, "explanation": "by no means は「決して〜ない、全く〜ない（not at allやunder no circumstancesに近い）」という強い否定の熟語です。対義語は by all means です。", "type": "choice"},
+        {"scenario": "「for the sake of」の意味として最も適切なものは？", "choices": ["〜のために、〜の利益になるように", "〜のせいで", "〜の代わりに", "〜に加えて"], "correct": 0, "explanation": "for the sake of 〜（または for one's sake）は「〜のために、〜の利益（健康・安全など）を考えて」という意味の重要熟語です。for the benefit of と似ています。", "type": "choice"},
+        {"scenario": "「in terms of」の意味として最も適切なものは？", "choices": ["〜の観点から、〜に関して、〜の点では", "〜の代わりに", "〜の条件で", "〜に加えて"], "correct": 0, "explanation": "in terms of 〜は「〜の点から、〜の観点において（from the viewpoint of）」と分野を限定して語る際の重要熟語です。例: in terms of money（金銭的な点では）", "type": "choice"},
+        {"scenario": "「with a view to」の意味として最も適切なものは？", "choices": ["〜する目的で、〜を意図して", "〜の観点から", "〜を心配して", "〜の代わりに"], "correct": 0, "explanation": "with a view to (doing) は「〜する目的で、〜するつもりで」という意味の熟語です。toの後ろが動名詞（-ing）になる点に注意しましょう。", "type": "choice"},
+        {"scenario": "「regardless of」の意味として最も適切なものは？", "choices": ["〜に関わらず、〜を無視して", "〜に関して", "〜のせいで", "〜の代わりに"], "correct": 0, "explanation": "regardless of 〜は年齢や性別、国籍などに「関わらず、〜に関係なく」という意味の超重要熟語です。例: regardless of age（年齢に関わらず）", "type": "choice"},
+        {"scenario": "「contrary to」の意味として最も適切なものは？", "choices": ["〜に反して、〜とは逆に", "〜に従って", "〜のせいで", "〜に加えて"], "correct": 0, "explanation": "contrary to 〜は予想や規則に「反して、〜とは逆に」という意味の熟語表現です。例: contrary to expectations（予想に反して）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "重要熟語編⑯：目的や原因を指す複合熟語",
+      "type": "Phrasal Verbs 16",
+      "emoji": "🔗",
+      "subtitle": "〜に先立って、〜に賛成してなどの前置詞熟語",
+      "questions": [
+        {"scenario": "「prior to」の意味として最も適切なものは？", "choices": ["〜より前に、〜に先立って", "〜の後に", "〜の代わりに", "〜に加えて"], "correct": 0, "explanation": "prior to 〜は時間的に「〜より前に、〜に先立って（beforeの硬い表現）」という意味の重要前置詞句熟語です。例: prior to the meeting（会議に先立って）", "type": "choice"},
+        {"scenario": "「in favor of」の意味として最も適切なものは？", "choices": ["〜に賛成して、〜を支持して、〜に有利に", "〜に反対して", "〜の代わりに", "〜のせいで"], "correct": 0, "explanation": "in favor of 〜は提案や候補者に「賛成して、支持して」という意味の重要熟語です。対義語は against（反対して）です。例: vote in favor of the bill（法案に賛成票を投じる）", "type": "choice"},
+        {"scenario": "「in case of」の意味として最も適切なものは？", "choices": ["（もし）〜の場合には、〜に備えて", "〜の代わりに", "〜のせいで", "〜に加えて"], "correct": 0, "explanation": "in case of (名詞) は「〜の場合には（万が一の事態など）」または「〜に備えて」という意味の重要前置詞句熟語です。例: in case of fire（火災の場合には）", "type": "choice"},
+        {"scenario": "「on account of」の意味として最も適切なものは？", "choices": ["〜のために、〜の理由で（原因・理由）", "〜を代表して", "〜の代わりに", "〜に加えて"], "correct": 0, "explanation": "on account of 〜は「〜のために、〜の理由で」と原因を表す熟語で、because of や due to と似ています。例: on account of bad weather（悪天候のために）", "type": "choice"},
+        {"scenario": "「by virtue of」の意味として最も適切なものは？", "choices": ["〜のおかげで、〜によって（理由・手段）", "〜の代わりに", "〜に加えて", "〜の前に"], "correct": 0, "explanation": "by virtue of 〜は「〜のおかげで、〜の力によって（〜という事実に基づいて）」とポジティブな理由や手段を表す熟語です。thanks to に似ています。", "type": "choice"},
+        {"scenario": "「in light of」Meaning?", "choices": ["〜を考慮すると、〜に照らし合わせて", "〜の代わりに", "〜のせいで", "〜に加えて"], "correct": 0, "explanation": "in light of 〜（または in the light of 〜）は新しい情報などを「考慮すると、〜に照らし合わせて」という意味の重要熟語です。consideringと似ています。", "type": "choice"},
+        {"scenario": "「in the course of」の意味として最も適切なものは？", "choices": ["〜の過程で、〜の間に", "〜の代わりに", "〜の終わりに", "〜のために"], "correct": 0, "explanation": "in the course of 〜は時間や変化の「過程で、〜の間に（duringに近い）」という意味の熟語です。例: in the course of history（歴史の過程で）", "type": "choice"},
+        {"scenario": "「with the exception of」の意味として最も適切なものは？", "choices": ["〜を除いては、〜を例外として", "〜に加えて", "〜の代わりに", "〜のせいで"], "correct": 0, "explanation": "with the exception of 〜は「〜を除いては（except forとほぼ同じ）」という意味の熟語です。exception は「例外」を指す名詞です。", "type": "choice"},
+        {"scenario": "「in accordance with」の意味として最も適切なものは？", "choices": ["〜に従って、〜に準じて、〜と一致して", "〜に反して", "〜の代わりに", "〜のせいで"], "correct": 0, "explanation": "in accordance with 〜は規則や指示に「従って、〜に準じて」という意味のやや硬い熟語表現です。according toに似ています。", "type": "choice"},
+        {"scenario": "「in relation to」の意味として最も適切なものは？", "choices": ["〜に関して、〜に関連して、〜と比較して", "〜の代わりに", "〜のせいで", "〜に反して"], "correct": 0, "explanation": "in relation to 〜は「〜に関して、〜に関連して」という意味の熟語で、regarding や in connection with に似ています。比較してという意味も持ちます。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "会話表現・定型フレーズ⑧：ショッピングでのやり取り",
+      "type": "Conversational Phrases 8",
+      "emoji": "🗣️",
+      "subtitle": "買い物、試着、支払いに関する定番会話表現",
+      "questions": [
+        {"scenario": "「What do you recommend?」の意味として最も適切なものは？", "choices": ["（お店などで）おすすめは何ですか？", "何をしていますか？", "これはいくらですか？", "どういたしまして"], "correct": 0, "explanation": "What do you recommend? はレストランやショップなどで、店員に対して「おすすめは何ですか？」と尋ねる定番フレーズです。recommend は「推薦する」です。", "type": "choice"},
+        {"scenario": "「I'll take it.」の意味として最も適切なものは？", "choices": ["（買い物の決定で）これにします、これを買います", "それを持って行きます", "結構です", "どういたしまして"], "correct": 0, "explanation": "I'll take it.（または I'll buy it.）は、試着や比較の後に「（購入することに決めて）これにします、これを買います」と店員に伝える定番フレーズです。", "type": "choice"},
+        {"scenario": "「Can I pay by credit card?」の意味として最も適切なものは？", "choices": ["クレジットカードで支払えますか？", "現金で支払えますか？", "領収書をもらえますか？", "どういたしまして"], "correct": 0, "explanation": "Can I pay by credit card? は、会計時にクレジットカードが使用できるか確認する定番フレーズです。現金の場合は in cash を使います。", "type": "choice"},
+        {"scenario": "「Where is the fitting room?」の意味として最も適切なものは？", "choices": ["試着室はどこですか？", "レジはどこですか？", "出口はどこですか？", "どういたしまして"], "correct": 0, "explanation": "Where is the fitting room? は、洋服店などで試着したい時に「試着室はどこですか？」と店員に尋ねる定番フレーズです。", "type": "choice"},
+        {"scenario": "「Do you have this in a larger size?」の意味として最も適切なものは？", "choices": ["これのもう少し大きいサイズはありますか？", "これの違う色はありますか？", "これはいくらですか？", "どういたしまして"], "correct": 0, "explanation": "Do you have this in a (larger/smaller) size? は、衣服のサイズ変更を希望する際、「もう少し大きい（小さい）サイズはありますか？」と店員に尋ねる定番フレーズです。", "type": "choice"},
+        {"scenario": "「I'm just browsing.」の意味として最も適切なものは？", "choices": ["（店員への返答で）見ているだけです、ちょっと見て回っています", "本を探しています", "購入します", "どういたしまして"], "correct": 0, "explanation": "I'm just browsing. は、ショップで店員に話しかけられた際、「（特に買うものは決まっておらず）ちょっと見ているだけです」と答える定番の返答です。Just looking, thank you. と同様です。", "type": "choice"},
+        {"scenario": "「Could you wrap it as a gift?」の意味として最も適切なものは？", "choices": ["プレゼント用にラッピング（包装）していただけますか？", "それを袋に入れていただけますか？", "これを返品できますか？", "どういたしまして"], "correct": 0, "explanation": "Could you wrap it as a gift? は、購入した商品をプレゼント用にラッピングしてほしいと店員に依頼する定番フレーズです。wrap は「包む」です。", "type": "choice"},
+        {"scenario": "「Is this on sale?」の意味として最も適切なものは？", "choices": ["これはセール（割引販売）中ですか？", "これは販売されていますか？", "これは本物ですか？", "どういたしまして"], "correct": 0, "explanation": "Is this on sale? は、商品が割引対象（セール品）かどうかを確認する時の定番フレーズです。for sale は「非売品ではない、販売用である」を指します。", "type": "choice"},
+        {"scenario": "「Can I get a receipt?」の意味として最も適切なものは？", "choices": ["レシート（領収書）をいただけますか？", "お釣りはありますか？", "袋をいただけますか？", "どういたしまして"], "correct": 0, "explanation": "Can I get a receipt? は、買い物の後やレストランの会計後に「レシート（領収書）をいただけますか？」と店員に頼む定番フレーズです。", "type": "choice"},
+        {"scenario": "「Is there a discount?」の意味として最も適切なものは？", "choices": ["割引はありますか？", "お釣りはありますか？", "レシートはありますか？", "ありがとうございました"], "correct": 0, "explanation": "Is there a discount? は、学生割引やまとめ買いなどで「割引はありますか？」と確認する時の定番表現です。", "type": "choice"}
+      ]
+    }
+  ]
+}
