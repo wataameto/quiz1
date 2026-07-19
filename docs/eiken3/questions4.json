@@ -6,192 +6,1292 @@
   "tests": [
     {
       "id": 1,
-      "title": "動詞編⑤：ビジネス・日常活動の動詞",
-      "type": "Basic Verbs 5",
-      "emoji": "💼",
-      "subtitle": "稼ぐ、雇用する、遭遇するなどの動詞",
+      "title": "形容詞編①：物事の性質や良し悪しを表す形容詞",
+      "type": "Adjectives 1",
+      "emoji": "🎯",
+      "subtitle": "物事の性質や良し悪しを表す形容詞",
       "questions": [
-        {"scenario": "「drag」Meaning?", "choices": ["引きずる、引っ張る、引きずること", "押す", "持ち上げる", "投げる"], "correct": 0, "explanation": "dragは「（重いものを床などに沿って）引きずる、引っ張る」という意味の動詞です。パソコン操作の「ドラッグ」のことです。例: drag a bag（バッグを引きずる）", "type": "choice"},
-        {"scenario": "「earn」の意味として最も適切なものは？", "choices": ["（お金などを）稼ぐ、得る、博する", "支払う", "寄付する", "失う"], "correct": 0, "explanation": "earnは労働の対価として「（お金・生活費などを）稼ぐ」、または名声などを「得る」という意味の動詞です。例: earn money（お金を稼ぐ）", "type": "choice"},
-        {"scenario": "「educate」の意味として最も適切なものは？", "choices": ["教育する、教える", "学ぶ", "保護する", "罰する"], "correct": 0, "explanation": "educateは「教育する、教える」という意味の動詞です。名詞形はeducation（教育）です。例: educate children（子供たちを教育する）", "type": "choice"},
-        {"scenario": "「elect」の意味として最も適切なものは？", "choices": ["（選挙で）選出する、選ぶ", "投票する", "任命する", "辞職する"], "correct": 0, "explanation": "electは投票や選挙によって「選出する、選ぶ」という意味の動詞です。名詞形はelection（選挙）です。例: elect a president（大統領を選出する）", "type": "choice"},
-        {"scenario": "「embarrass」の意味として最も適切なものは？", "choices": ["恥ずかしがらせる、困惑させる", "喜ばせる", "安心させる", "怒らせる"], "correct": 0, "explanation": "embarrassは人を「恥ずかしがらせる、決まりの悪い思いをさせる」という意味の動詞です。形容詞は embarrassed です。例: embarrass him（彼を困惑させる）", "type": "choice"},
-        {"scenario": "「emerge」の意味として最も適切なものは？", "choices": ["現れる、出現する、浮かび上がる", "消える", "沈む", "移動する"], "correct": 0, "explanation": "emergeは暗闇や水の中から「現れる、出現する」または問題が「浮かび上がる」という意味の動詞です。名詞形はemergenceです。", "type": "choice"},
-        {"scenario": "「employ」の意味として最も適切なものは？", "choices": ["雇う、用いる", "解雇する", "働く", "指示する"], "correct": 0, "explanation": "employは「（人を）雇う」または方法などを「用いる」という意味の動詞です。雇用主は employer、従業員は employee です。名詞形はemploymentです。", "type": "choice"},
-        {"scenario": "「encounter」の意味として最も適切なものは？", "choices": ["遭遇する、偶然出会う、遭遇、衝突", "避ける", "約束する", "追いかける"], "correct": 0, "explanation": "encounterは困難や未知の人に「偶然出会う、遭遇する」という動詞・名詞です。meet by chanceとほぼ同じです。例: encounter a problem（問題に遭遇する）", "type": "choice"},
-        {"scenario": "「endure」の意味として最も適切なものは？", "choices": ["（苦痛などに）耐える、辛抱する、持ちこたえる", "あきらめる", "楽しむ", "怒る"], "correct": 0, "explanation": "endureは苦痛や困難に「耐える、辛抱する」という意味の動詞です。bear や stand に似ています。名詞形はendurance（耐久力）です。", "type": "choice"},
-        {"scenario": "「ensure」の意味として最も適切なものは？", "choices": ["確実にする、保証する、確保する", "疑う", "否定する", "無視する"], "correct": 0, "explanation": "ensureは「確実にする、保証する」という意味の動詞です。sure（確実な）から派生しています。例: ensure safety（安全を確保する）", "type": "choice"}
+        {
+          "scenario": "「certainly」の意味として最も適切なものは？",
+          "choices": [
+            "確かに、きっと",
+            "たぶん",
+            "決して〜ない",
+            "まれに"
+          ],
+          "correct": 0,
+          "explanation": "certainlyは「確かに、きっと、もちろん」という意味の副詞です。例: Certainly.（もちろんです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fortunately」の意味として最も適切なものは？",
+          "choices": [
+            "幸運にも、幸いなことに",
+            "残念ながら",
+            "当然",
+            "意外にも"
+          ],
+          "correct": 0,
+          "explanation": "fortunatelyは「幸運にも、幸いなことに」という意味です。対義語はunfortunatelyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nearly」の意味として最も適切なものは？",
+          "choices": [
+            "ほとんど、もう少しで",
+            "完全に",
+            "全然",
+            "少し"
+          ],
+          "correct": 0,
+          "explanation": "nearlyは「ほとんど、もう少しで」という意味です。例: nearly finished（ほぼ完成した）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「seriously」の意味として最も適切なものは？",
+          "choices": [
+            "真剣に、深刻に",
+            "冗談で",
+            "軽く",
+            "適当に"
+          ],
+          "correct": 0,
+          "explanation": "seriouslyは「真剣に、深刻に」という意味です。例: take it seriously（それを真剣に受け止める）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「broad」の意味として最も適切なものは？",
+          "choices": [
+            "幅の広い、広範な、一般的な",
+            "狭い",
+            "深い",
+            "高い"
+          ],
+          "correct": 0,
+          "explanation": "broadは物理的な幅が「広い」、または範囲が「広範な」という意味の形容詞です。wideとほぼ同じです。対義語はnarrow（狭い）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「casual」の意味として最も適切なものは？",
+          "choices": [
+            "略式の、カジュアルな、普段着の、偶然の",
+            "公式の",
+            "真面目な",
+            "高価な"
+          ],
+          "correct": 0,
+          "explanation": "casualは「略式の、カジュアルな（普段着などの）」または「何気ない、偶然の」という意味の形容詞です。対義語は formal です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complex」の意味として最も適切なものは？",
+          "choices": [
+            "複雑な、複合的な、コンプレックス",
+            "単純な",
+            "平らな",
+            "古い"
+          ],
+          "correct": 0,
+          "explanation": "complexは要素が絡み合って「複雑な、複合の」という意味の形容詞です。対義語はsimpleです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constant」の意味として最も適切なものは？",
+          "choices": [
+            "絶え間ない、一定の、不変の",
+            "一時的な",
+            "まれな",
+            "不規則な"
+          ],
+          "correct": 0,
+          "explanation": "constantは「絶え間ない、絶えず続く」または「一定の、変化しない」という意味の形容詞です。例: constant noise（絶え間ない騒音）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「current」の意味として最も適切なものは？",
+          "choices": [
+            "現在の、最新の、通用している、流れ",
+            "過去の",
+            "将来の",
+            "一時的な"
+          ],
+          "correct": 0,
+          "explanation": "currentは「現在の、最新の」という意味の形容詞です。名詞では「流れ（水流・電流）、風潮」の意味があります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「direct」の意味として最も適切なものは？",
+          "choices": [
+            "直接の、直行の、指揮する、道案内する",
+            "間接の",
+            "遠回りの",
+            "複雑な"
+          ],
+          "correct": 0,
+          "explanation": "directは「直接の、直行の」という形容詞、また「指導する、道案内する」という動詞の意味もあります。対義語はindirectです。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "動詞編⑥：表現・変化・拡大の動詞",
-      "type": "Basic Verbs 6",
-      "emoji": "💼",
-      "subtitle": "楽しませる、設立する、拡大するなどの動詞",
+      "title": "形容詞編②：程度や頻度、物事への向き合い方を表す言葉",
+      "type": "Adjectives 2",
+      "emoji": "📊",
+      "subtitle": "程度や頻度、物事への向き合い方を表す言葉",
       "questions": [
-        {"scenario": "「entertain」の意味として最も適切なものは？", "choices": ["楽しませる、もてなす", "退屈させる", "歓迎する", "批判する"], "correct": 0, "explanation": "entertainは映画やショーで観客を「楽しませる」または客を「もてなす」という意味の動詞です。名詞形はentertainmentです。", "type": "choice"},
-        {"scenario": "「envy」の意味として最も適切なものは？", "choices": ["うらやむ、ねたむ、うらやみ、裂け目", "誇りに思う", "嫌う", "同情する"], "correct": 0, "explanation": "envyは他人の幸運や所有物を「うらやむ、ねたむ」という動詞・名詞です。例: envy his success（彼の成功をうらやむ）", "type": "choice"},
-        {"scenario": "「establish」の意味として最も適切なものは？", "choices": ["設立する、確立する、創立する", "破壊する", "廃止する", "売却する"], "correct": 0, "explanation": "establishは学校や会社を「設立する」または関係を「確立する」という意味の動詞です。名詞形はestablishmentです。foundとほぼ同じです。", "type": "choice"},
-        {"scenario": "「estimate」の意味として最も適切なものは？", "choices": ["見積もる、推定する、見積もり、評価", "計算する", "決定する", "無視する"], "correct": 0, "explanation": "estimateは費用や数量を「見積もる、推定する」という動詞・名詞です。例: estimate the cost（費用を見積もる）", "type": "choice"},
-        {"scenario": "「evaluate」の意味として最も適切なものは？", "choices": ["評価する、査定する", "無視する", "批判する", "同意する"], "correct": 0, "explanation": "evaluateは価値や能力を「評価する、査定する」という意味の動詞です。名詞形はevaluationです。例: evaluate student performance（生徒の成績を評価する）", "type": "choice"},
-        {"scenario": "「exchange」の意味として最も適切なものは？", "choices": ["交換する、両替する、交換、両替", "購入する", "売却する", "保管する"], "correct": 0, "explanation": "exchangeは「（物や意見を）交換する」または通貨を「両替する」という動詞・名詞です。例: foreign exchange（外国為替）", "type": "choice"},
-        {"scenario": "「exhibit」の意味として最も適切なものは？", "choices": ["展示する、展覧会に出品する、展示品", "隠す", "購入する", "印刷する"], "correct": 0, "explanation": "exhibitは美術館などで作品を「展示する」という意味の動詞・名詞です。名詞形はexhibition（展覧会）です。例: exhibit paintings（絵画を展示する）", "type": "choice"},
-        {"scenario": "「expand」の意味として最も適切なものは？", "choices": ["拡大する、広がる、拡張する", "縮小する", "閉じる", "停止する"], "correct": 0, "explanation": "expandはビジネスや事業、気体などが「拡大する、広がる、膨張する」という意味の動詞です。名詞形はexpansionです。", "type": "choice"},
-        {"scenario": "「fade」の意味として最も適切なものは？", "choices": ["（色が）あせる、（音が）消えていく、衰える", "現れる", "輝く", "高まる"], "correct": 0, "explanation": "fadeは色や記憶が「あせる、薄れる」、または音や光が「徐々に消えていく（フェードアウト）」という意味の動詞です。", "type": "choice"},
-        {"scenario": "「fear」の意味として最も適切なものは？", "choices": ["恐れる、怖がる、恐怖、心配", "立ち向かう", "好む", "驚く"], "correct": 0, "explanation": "fearは「（危険などを）恐れる、怖がる」という動詞、また「恐怖、不安」という名詞でもあります。例: fear of dark（暗闇への恐怖）", "type": "choice"}
+        {
+          "scenario": "「equal」の意味として最も適切なものは？",
+          "choices": [
+            "等しい、平等な、匹敵する、等しくなる",
+            "異なる",
+            "不公平な",
+            "一部の"
+          ],
+          "correct": 0,
+          "explanation": "equalは数量や権利が「等しい、平等な」という形容詞、また「等しくなる、匹敵する」という動詞の意味もあります。例: equal rights（平等な権利）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「historical」の意味として最も適切なものは？",
+          "choices": [
+            "歴史上の、歴史的な、由緒ある",
+            "現代の",
+            "科学的な",
+            "文学的な"
+          ],
+          "correct": 0,
+          "explanation": "historicalは「歴史上の、歴史に関する、歴史的な」という意味の形容詞です。history（歴史）から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「independent」の意味として最も適切なものは？",
+          "choices": [
+            "独立した、自立した、他人の力を借りない",
+            "依存した",
+            "孤立した",
+            "共同の"
+          ],
+          "correct": 0,
+          "explanation": "independentは国家や人が「独立した、自立した」という意味の形容詞です。対義語は dependent です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「individual」の意味として最も適切なものは？",
+          "choices": [
+            "個々の、個人の、個人、個体",
+            "集団の",
+            "共通の",
+            "社会的な"
+          ],
+          "correct": 0,
+          "explanation": "individualは「個々の、個人の」という形容詞、また「個人、個体」という名詞でもあります。例: individual sports（個人競技）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「industrial」の意味として最も適切なものは？",
+          "choices": [
+            "産業の、工業の、工業化された",
+            "農業の",
+            "商業の",
+            "伝統的な"
+          ],
+          "correct": 0,
+          "explanation": "industrialは「産業の、工業の、産業界の」という意味の形容詞です。industry（産業）から派生しています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inevitable」の意味として最も適切なものは？",
+          "choices": [
+            "避けられない、必然の、不可避の",
+            "避けられる",
+            "偶然の",
+            "予期せぬ"
+          ],
+          "correct": 0,
+          "explanation": "inevitableは「避けられない、必然の（起こるのが当然の）」という意味の形容詞です。例: inevitable end（必然の結末）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「informal」の意味として最も適切なものは？",
+          "choices": [
+            "非公式の、略式の、カジュアルな",
+            "公式の",
+            "厳格な",
+            "かたい"
+          ],
+          "correct": 0,
+          "explanation": "informalは「非公式の、略式の、カジュアルな」という意味の形容詞です。formal（公式の）に否定のin-がついた形です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inner」Meaning?",
+          "choices": [
+            "内部の、内側の、精神的な",
+            "外部の",
+            "表面の",
+            "中心の"
+          ],
+          "correct": 0,
+          "explanation": "innerは「内部の、内側の（物理的または精神的に奥の方の）」という意味の形容詞です。対義語は outer（外側の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effective」の意味として最も適切なものは？",
+          "choices": [
+            "効果的な、有効な、実施されて",
+            "便利な",
+            "簡単な",
+            "無駄な"
+          ],
+          "correct": 0,
+          "explanation": "effectiveは目的の達成に「効果的な、有効な」という意味の形容詞です。名詞形は effect です。対義語は ineffective です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「precious」の意味として最も適切なものは？",
+          "choices": [
+            "貴重な、大切な、高価な",
+            "無価値な",
+            "安い",
+            "ありふれた"
+          ],
+          "correct": 0,
+          "explanation": "preciousは「（価値が高く）貴重な、大切な、かけがえのない」という意味の形容詞です。例: precious stone（宝石）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 3,
-      "title": "名詞編⑤：ビジネス・経済の重要名詞",
-      "type": "Nouns: Economy & Work",
-      "emoji": "🏢",
-      "subtitle": "会社、価格、税金、ルールなどの経済・社会名詞",
+      "title": "形容詞編③：人の性格・感情を表す形容詞",
+      "type": "Adjectives 3",
+      "emoji": "✨",
+      "subtitle": "人の性格・感情を表す形容詞",
       "questions": [
-        {"scenario": "「business」の意味として最も適切なものは？", "choices": ["ビジネス、商売、職業、用件", "趣味", "休暇", "勉強"], "correct": 0, "explanation": "businessは「ビジネス、商売」のほかに、個人の「職業、用事」という意味もあります。例: on business（仕事で、ビジネスで）", "type": "choice"},
-        {"scenario": "「company」の意味として最も適切なものは？", "choices": ["会社、同席、仲間", "工場", "店舗", "学校"], "correct": 0, "explanation": "companyは「会社」のほかに、「同席、一緒にいること」「仲間」を表する名詞です。例: keep company（一緒にいる）", "type": "choice"},
-        {"scenario": "「cost」の意味として最も適切なものは？", "choices": ["費用、コスト、代償、費用がかかる", "利益", "売上", "予算"], "correct": 0, "explanation": "costは「費用、コスト」という名詞、また「費用がかかる」という動詞の意味もあります。活用は cost-cost-cost です。", "type": "choice"},
-        {"scenario": "「price」の意味として最も適切なものは？", "choices": ["価格、値段、物価、代償", "費用", "価値", "割引"], "correct": 0, "explanation": "priceは個々の商品の「価格、値段」を表す名詞です。costが全体的な「費用」を指すのに対し、小売価格などを指すことが多いです。", "type": "choice"},
-        {"scenario": "「market」の意味として最も適切なものは？", "choices": ["市場（しじょう・いちば）、マーケット", "店舗", "デパート", "工場"], "correct": 0, "explanation": "marketは野菜などの「市場（いちば）」や、商業取引の場としての「市場（しじょう）」を表す名詞です。例: stock market（株式市場）", "type": "choice"},
-        {"scenario": "「product」の意味として最も適切なものは？", "choices": ["製品、生産物、成果", "原料", "機械", "部品"], "correct": 0, "explanation": "productは製造された「製品、生産物」を表す名詞です。produce（生産する）から派生しています。例: local products（特産品）", "type": "choice"},
-        {"scenario": "「project」の意味として最も適切なものは？", "choices": ["計画、プロジェクト、予測する", "結果", "会議", "宿題"], "correct": 0, "explanation": "projectは特定の目標に向けた大規模な「計画、プロジェクト」を表す名詞、または「予測する」という動詞の意味もあります。", "type": "choice"},
-        {"scenario": "「tax」の意味として最も適切なものは？", "choices": ["税金、税、課税する", "罰金", "料金", "利息"], "correct": 0, "explanation": "taxは国などに支払う「税金、税」を表す名詞、または「課税する」という動詞の意味もあります。例: consumption tax（消費税）", "type": "choice"},
-        {"scenario": "「rule」の意味として最も適切なものは？", "choices": ["規則、ルール、支配する、規定する", "法律", "風習", "習慣"], "correct": 0, "explanation": "ruleは「規則、ルール」という名詞、また「支配する、規定する」という動詞の意味もあります。例: follow the rules（ルールに従う）", "type": "choice"},
-        {"scenario": "「president」の意味として最も適切なものは？", "choices": ["大統領、社長、会長、総裁", "大臣", "部長", "知事"], "correct": 0, "explanation": "presidentは国の「大統領」や、企業の「社長、会長」を表す名詞です。組織の最高責任者を指します。", "type": "choice"}
+        {
+          "scenario": "「ordinary」の意味として最も適切なものは？",
+          "choices": [
+            "普通の、平凡な、並の",
+            "特別な",
+            "異常な",
+            "優秀な"
+          ],
+          "correct": 0,
+          "explanation": "ordinaryは「普通の、平凡な、いつもの」という意味の形容詞です。対義語はextraordinary（並外れた、特別の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deep」の意味として最も適切なものは？",
+          "choices": [
+            "深い、濃い",
+            "浅い",
+            "狭い",
+            "広い"
+          ],
+          "correct": 0,
+          "explanation": "deepは「（物理的に）深い」または霧や色などが「濃い」という意味の形容詞です。対義語はshallow（浅い）です。副詞形はdeeplyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「shallow」の意味として最も適切なものは？",
+          "choices": [
+            "浅い、浅はかな",
+            "深い",
+            "狭い",
+            "広い"
+          ],
+          "correct": 0,
+          "explanation": "shallowは「（物理的に）浅い」または考えなどが「浅はかな、浅い」という意味の形容詞です。対義語はdeep（深い）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「narrow」の意味として最も適切なものは？",
+          "choices": [
+            "狭い、細い、狭める",
+            "広い",
+            "太い",
+            "深い"
+          ],
+          "correct": 0,
+          "explanation": "narrowは道や幅が「狭い、細い」という形容詞、また「狭める」という動詞の意味もあります。対義語はwide（広い）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wide」の意味として最も適切なものは？",
+          "choices": [
+            "広い、幅の広い、幅広く",
+            "狭い",
+            "深い",
+            "高い"
+          ],
+          "correct": 0,
+          "explanation": "wideは幅が「広い、幅の広い」という意味の形容詞です。対義語はnarrow（狭い）です。例: wide variety（幅広い種類）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「far」の意味として最も適切なものは？",
+          "choices": [
+            "遠い、遠くに、はるかに",
+            "近い",
+            "近くに",
+            "隣の"
+          ],
+          "correct": 0,
+          "explanation": "farは距離や時間が「遠い」という形容詞、また「遠くに、はるかに」という副詞でもあります。対義語はnearです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「digital」の意味として最も適切なものは？",
+          "choices": [
+            "デジタルの、計数型の",
+            "アナログの",
+            "手動の",
+            "複雑な"
+          ],
+          "correct": 0,
+          "explanation": "digitalは「デジタルの、数値を電子的に処理する」という意味の形容詞です。対義語は analog です。例: digital camera（デジカメ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「online」の意味として最も適切なものは？",
+          "choices": [
+            "オンラインの、ネット接続された、ネットで",
+            "オフラインの",
+            "切断された",
+            "手書きの"
+          ],
+          "correct": 0,
+          "explanation": "onlineは「オンラインの、ネットに接続された」という形容詞・副詞です。対義語は offline です。例: online shopping（ネットショッピング）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「offline」の意味として最も適切なものは？",
+          "choices": [
+            "オフラインの、回線から切断された",
+            "オンラインの",
+            "接続された",
+            "デジタルな"
+          ],
+          "correct": 0,
+          "explanation": "offlineは「オフラインの、ネットから切断された」という形容詞・副詞です。対義語は online です。例: read books offline（オフラインで本を読む）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mobile」の意味として最も適切なものは？",
+          "choices": [
+            "移動式の、モバイルの、可動の",
+            "固定された",
+            "重い",
+            "デジタルな"
+          ],
+          "correct": 0,
+          "explanation": "mobileは「移動式の、持ち運び可能な、可動の」という意味の形容詞です。名詞形は mobility です。例: mobile phone（携帯電話）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 4,
-      "title": "名詞編⑥：IT・テクノロジーの抽象名詞",
-      "type": "Nouns: IT & Tech Concepts",
-      "emoji": "💻",
-      "subtitle": "ネットワーク、接続、ファイルなどのIT関連名詞",
+      "title": "形容詞編④：物理的・論理的な関係を表す形容詞",
+      "type": "Adjectives 4",
+      "emoji": "🌟",
+      "subtitle": "物理的・論理的な関係を表す形容詞",
       "questions": [
-        {"scenario": "「network」の意味として最も適切なものは？", "choices": ["網状組織、ネットワーク、連絡網", "コンピューター", "インターネット", "電話"], "correct": 0, "explanation": "networkは網のように巡らされた「ネットワーク、連絡網」を表す名詞です。例: social network（SNS）", "type": "choice"},
-        {"scenario": "「connection」の意味として最も適切なものは？", "choices": ["接続、関係、つながり", "切断", "対立", "故障"], "correct": 0, "explanation": "connectionは「接続、連結」や「関係、つながり」を表す名詞です。connect（接続する）の名詞形です。例: internet connection（ネット接続）", "type": "choice"},
-        {"scenario": "「document」の意味として最も適切なものは？", "choices": ["書類、文書、記録する", "試験", "成績", "登録"], "correct": 0, "explanation": "documentは「書類、文書」を表す名詞、または出来事を「記録する」という動詞の意味もあります。例: sign the document（書類に署名する）", "type": "choice"},
-        {"scenario": "「software」の意味として最も適切なものは？", "choices": ["ソフトウェア、ソフト", "ハードウェア", "機械", "プログラム"], "correct": 0, "explanation": "softwareはコンピューターを動かす「ソフトウェア」を表す名詞です。対義語は hardware（ハードウェア）です。不可算名詞です。", "type": "choice"},
-        {"scenario": "「access」の意味として最も適切なものは？", "choices": ["接近、アクセス、利用権、通路", "制限", "拒否", "切断"], "correct": 0, "explanation": "accessは「接近、アクセスする方法・権利、利用権」を表す名詞です。動詞でも「アクセスする、接続する」として使われます。", "type": "choice"},
-        {"scenario": "「security」の意味として最も適切なものは？", "choices": ["安全、防犯、セキュリティ、警備", "危険", "事故", "不安"], "correct": 0, "explanation": "securityは情報や場所の「安全、防犯、警備」を表す名詞です。secure（安全な）の名詞形です。例: security guard（警備員）", "type": "choice"},
-        {"scenario": "「user」の意味として最も適切なものは？", "choices": ["利用者、ユーザー", "開発者", "販売員", "消費者"], "correct": 0, "explanation": "userはサービスやシステムの「利用者、ユーザー」を表す名詞です。use（使う）から派生しています。例: smartphone user（スマホ利用者）", "type": "choice"},
-        {"scenario": "「file」の意味として最も適切なものは？", "choices": ["ファイル、とじ込み、整理されたデータ", "ノート", "本箱", "消しゴム"], "correct": 0, "explanation": "fileは書類などを整理する「ファイル、とじ込み」、またはコンピューター上の「ファイル」を表す名詞です。動詞で「整理保管する」もあります。", "type": "choice"},
-        {"scenario": "「folder」の意味として最も適切なものは？", "choices": ["フォルダー、紙挟み、書類入れ", "ファイル", "ノート", "本箱"], "correct": 0, "explanation": "folderはファイルをまとめて入れる「フォルダー、紙挟み」を表す名詞です。fold（折りたたむ）から派生しています。", "type": "choice"},
-        {"scenario": "「display」の意味として最も適切なものは？", "choices": ["展示、表示、ディスプレー", "保管", "隠蔽", "購入"], "correct": 0, "explanation": "displayは「展示、表示、ディスプレー画面」を表す名詞です。動詞でも「展示する、表示する」の意味があります。例: shop window display（ショーウィンドウの展示）", "type": "choice"}
+        {
+          "scenario": "「global」の意味として最も適切なものは？",
+          "choices": [
+            "地球規模の、世界的な、グローバルな",
+            "地域の",
+            "国内の",
+            "限定された"
+          ],
+          "correct": 0,
+          "explanation": "globalは「世界的な、地球全体の」という意味の形容詞です。globe（地球、球体）から派生しています。対義語は local（地元の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「international」の意味として最も適切なものは？",
+          "choices": [
+            "国際的な、国家間の",
+            "国内の",
+            "地元の",
+            "地方の"
+          ],
+          "correct": 0,
+          "explanation": "internationalは「国際的な、国家間の」という意味の形容詞です。nation（国家）に inter-（相互の）がついた形です。対義語は domestic です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commercial」の意味として最も適切なものは？",
+          "choices": [
+            "商業の、商業的な、コマーシャル",
+            "非営利の",
+            "公共の",
+            "学術的な"
+          ],
+          "correct": 0,
+          "explanation": "commercialは「商業の、営利目的の」という形容詞、またテレビの「コマーシャル、広告」という名詞の意味もあります。commerce（商業）から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「financial」の意味として最も適切なものは？",
+          "choices": [
+            "財政の、金融の、財務の",
+            "商業の",
+            "個人的な",
+            "法律上の"
+          ],
+          "correct": 0,
+          "explanation": "financialは「財政の、金融の、財務の」という意味の形容詞です。finance（財政、資金供給）から派生しています。例: financial crisis（金融危機）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「innocent」の意味として最も適切なものは？",
+          "choices": [
+            "無罪の、無実の、無邪気な",
+            "有罪の",
+            "ずる賢い",
+            "邪悪な"
+          ],
+          "correct": 0,
+          "explanation": "innocentは裁判で「無罪の、無実の」、または性格が「無邪気な、純真な」という意味の形容詞です。対義語は guilty（有罪の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「logical」の意味として最も適切なものは？",
+          "choices": [
+            "論理的な、筋の通った",
+            "直感的な",
+            "矛盾した",
+            "複雑な"
+          ],
+          "correct": 0,
+          "explanation": "logicalは「論理的な、筋の通った、妥当な」という意味の形容詞です。logic（論理）から派生しています。対義語はillogicalです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lucky」の意味として最も適切なものは？",
+          "choices": [
+            "運が良い、幸運な、幸運をもたらす",
+            "不運な",
+            "悲しい",
+            "危険な"
+          ],
+          "correct": 0,
+          "explanation": "luckyは「運が良い、幸運な」という意味の形容詞です。luck（運）の形容詞形です。対義語はunluckyです。例: lucky day（幸運な日）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「magnificent」の意味として最も適切なものは？",
+          "choices": [
+            "壮大な、実に見事な、堂々たる",
+            "みすぼらしい",
+            "普通の",
+            "小さな"
+          ],
+          "correct": 0,
+          "explanation": "magnificentは景色や建物、業績などが「壮大な、実に見事な、豪華な」という意味の形容詞です。例: magnificent view（素晴らしい眺め）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「major」の意味として最も適切なものは？",
+          "choices": [
+            "主要な、重大な、専攻する、専攻",
+            "取るに足らない",
+            "少数の",
+            "副次的な"
+          ],
+          "correct": 0,
+          "explanation": "majorは「主要な、重大な、大きな」という形容詞、また大学の「専攻（専攻する）」という名詞・動詞でもあります。対義語はminorです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minor」の意味として最も適切なものは？",
+          "choices": [
+            "重要でない、少数の、未成年者",
+            "主要な",
+            "重大な",
+            "多数の"
+          ],
+          "correct": 0,
+          "explanation": "minorは「（比較して）重要でない、小さい、少数の」という形容詞、また「未成年者」という名詞の意味もあります。対義語はmajorです。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 5,
-      "title": "形容詞編⑤：IT・ビジネスの関連形容詞",
+      "title": "形容詞編⑤：生活の快適さを評価する形容詞",
       "type": "Adjectives 5",
-      "emoji": "⚙️",
-      "subtitle": "デジタル、オンライン、グローバルなどの属性形容詞",
+      "emoji": "💎",
+      "subtitle": "生活の快適さを評価する形容詞",
       "questions": [
-        {"scenario": "「digital」の意味として最も適切なものは？", "choices": ["デジタルの、計数型の", "アナログの", "手動の", "複雑な"], "correct": 0, "explanation": "digitalは「デジタルの、数値を電子的に処理する」という意味の形容詞です。対義語は analog です。例: digital camera（デジカメ）", "type": "choice"},
-        {"scenario": "「online」の意味として最も適切なものは？", "choices": ["オンラインの、ネット接続された、ネットで", "オフラインの", "切断された", "手書きの"], "correct": 0, "explanation": "onlineは「オンラインの、ネットに接続された」という形容詞・副詞です。対義語は offline です。例: online shopping（ネットショッピング）", "type": "choice"},
-        {"scenario": "「offline」の意味として最も適切なものは？", "choices": ["オフラインの、回線から切断された", "オンラインの", "接続された", "デジタルな"], "correct": 0, "explanation": "offlineは「オフラインの、ネットから切断された」という形容詞・副詞です。対義語は online です。例: read books offline（オフラインで本を読む）", "type": "choice"},
-        {"scenario": "「smart」の意味として最も適切なものは？", "choices": ["賢い、頭が良い、スマートな、最新鋭の", "愚かな", "太った", "静かな"], "correct": 0, "explanation": "smartは「賢い、利口な（clever）」という意味や、機械などが「高機能な、スマートな」という意味の形容詞です。例: smartphone（スマホ）", "type": "choice"},
-        {"scenario": "「mobile」の意味として最も適切なものは？", "choices": ["移動式の、モバイルの、可動の", "固定された", "重い", "デジタルな"], "correct": 0, "explanation": "mobileは「移動式の、持ち運び可能な、可動の」という意味の形容詞です。名詞形は mobility です。例: mobile phone（携帯電話）", "type": "choice"},
-        {"scenario": "「global」の意味として最も適切なものは？", "choices": ["地球規模の、世界的な、グローバルな", "地域の", "国内の", "限定された"], "correct": 0, "explanation": "globalは「世界的な、地球全体の」という意味の形容詞です。globe（地球、球体）から派生しています。対義語は local（地元の）です。", "type": "choice"},
-        {"scenario": "「local」の意味として最も適切なものは？", "choices": ["地元の、地方の、各駅停車の", "世界的な", "国家の", "都会の"], "correct": 0, "explanation": "localは「地元の、地方の」という意味の形容詞、また電車の「各駅停車」という意味の名詞もあります。対義語は global や national です。", "type": "choice"},
-        {"scenario": "「international」の意味として最も適切なものは？", "choices": ["国際的な、国家間の", "国内の", "地元の", "地方の"], "correct": 0, "explanation": "internationalは「国際的な、国家間の」という意味の形容詞です。nation（国家）に inter-（相互の）がついた形です。対義語は domestic です。", "type": "choice"},
-        {"scenario": "「commercial」の意味として最も適切なものは？", "choices": ["商業の、商業的な、コマーシャル", "非営利の", "公共の", "学術的な"], "correct": 0, "explanation": "commercialは「商業の、営利目的の」という形容詞、またテレビの「コマーシャル、広告」という名詞の意味もあります。commerce（商業）から来ています。", "type": "choice"},
-        {"scenario": "「financial」の意味として最も適切なものは？", "choices": ["財政の、金融の、財務の", "商業の", "個人的な", "法律上の"], "correct": 0, "explanation": "financialは「財政の、金融の、財務の」という意味の形容詞です。finance（財政、資金供給）から派生しています。例: financial crisis（金融危機）", "type": "choice"}
+        {
+          "scenario": "「modest」の意味として最も適切なものは？",
+          "choices": [
+            "控えめな、謙虚な、適度な、並の",
+            "自慢げな",
+            "豪華な",
+            "傲慢な"
+          ],
+          "correct": 0,
+          "explanation": "modestは「控えめな、謙虚な（傲慢でない）」または規模などが「適度な、並の」という意味の形容詞です。名詞形はmodestyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「moral」の意味として最も適切なものは？",
+          "choices": [
+            "道徳的な、道徳の、倫理的な、教訓",
+            "道徳に反する",
+            "法律上の",
+            "個人的な"
+          ],
+          "correct": 0,
+          "explanation": "moralは「道徳的な、倫理的な」という形容詞、また「教訓」という名詞の意味もあります。対義語はimmoral（不道徳な）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mutual」の意味として最も適切なものは？",
+          "choices": [
+            "相互の、共通の、お互いの",
+            "一方的な",
+            "個別の",
+            "異なる"
+          ],
+          "correct": 0,
+          "explanation": "mutualは「相互の、お互いの」または「共通の」という意味の形容詞です。例: mutual understanding（相互理解）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mysterious」の意味として最も適切なものは？",
+          "choices": [
+            "神秘的な、不可解な、謎に満ちた",
+            "明らかな",
+            "普通の",
+            "科学的な"
+          ],
+          "correct": 0,
+          "explanation": "mysteriousは「神秘的な、不可解な、謎の」という意味の形容詞です。mystery（謎）から派生しています。例: mysterious island（神秘的な島）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fair」の意味として最も適切なものは？",
+          "choices": [
+            "公平な、妥当な、まずまずの、見本市",
+            "不公平な",
+            "素晴らしい",
+            "厳しい"
+          ],
+          "correct": 0,
+          "explanation": "fairは「公平な、公正な」または「まずまずの、かなりの」という形容詞、また「見本市、フェア」という名詞の意味もあります。対義語はunfairです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「desirable」の意味として最も適切なものは？",
+          "choices": [
+            "望ましい、好ましい、手に入れたくなる",
+            "珍しい",
+            "難しい",
+            "怪しい"
+          ],
+          "correct": 0,
+          "explanation": "desirableは状態や条件などが「望ましい、好ましい（価値があり、求められている）」という意味の形容詞です。対義語は undesirable です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「favorite」の意味として最も適切なものは？",
+          "choices": [
+            "お気に入りの、大好きな、お気に入りのもの",
+            "嫌いな",
+            "普通の",
+            "最も安い"
+          ],
+          "correct": 0,
+          "explanation": "favoriteは「お気に入りの、一番好きな」という形容詞、また「お気に入りのもの」という名詞でもあります。例: favorite food（一番好きな食べ物）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flat」の意味として最も適切なものは？",
+          "choices": [
+            "平らな、平坦な、パンクした、アパート",
+            "傾いた",
+            "凸凹の",
+            "高い"
+          ],
+          "correct": 0,
+          "explanation": "flatは「平らな、平坦な」またはタイヤが「パンクした」という形容詞、イギリス英語で「共同住宅、アパート」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「formal」の意味として最も適切なものは？",
+          "choices": [
+            "公式の、正式の、フォーマルな、かたい",
+            "略式の",
+            "普段の",
+            "簡単な"
+          ],
+          "correct": 0,
+          "explanation": "formalは「公式の、正式な」または服装や態度が「かたい、礼儀にかなった」という意味の形容詞です。対義語はinformalやcasualです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「former」の意味として最も適切なものは？",
+          "choices": [
+            "前の、元の、前者の",
+            "後の",
+            "後者の",
+            "現在の"
+          ],
+          "correct": 0,
+          "explanation": "formerは「前の、元の、かつての」という意味の形容詞です。the former で「前者」を指し、対義語は the latter（後者）または latter です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 6,
-      "title": "形容詞編⑥：道徳・心理状態の形容詞",
+      "title": "形容詞編⑥：空間の広がりを表す形容詞",
       "type": "Adjectives 6",
-      "emoji": "😊",
-      "subtitle": "無罪の、論理的な、幸運ななどの形容詞",
+      "emoji": "🔷",
+      "subtitle": "空間の広がりを表す形容詞",
       "questions": [
-        {"scenario": "「innocent」の意味として最も適切なものは？", "choices": ["無罪の、無実の、無邪気な", "有罪の", "ずる賢い", "邪悪な"], "correct": 0, "explanation": "innocentは裁判で「無罪の、無実の」、または性格が「無邪気な、純真な」という意味の形容詞です。対義語は guilty（有罪の）です。", "type": "choice"},
-        {"scenario": "「logical」の意味として最も適切なものは？", "choices": ["論理的な、筋の通った", "直感的な", "矛盾した", "複雑な"], "correct": 0, "explanation": "logicalは「論理的な、筋の通った、妥当な」という意味の形容詞です。logic（論理）から派生しています。対義語はillogicalです。", "type": "choice"},
-        {"scenario": "「lucky」の意味として最も適切なものは？", "choices": ["運が良い、幸運な、幸運をもたらす", "不運な", "悲しい", "危険な"], "correct": 0, "explanation": "luckyは「運が良い、幸運な」という意味の形容詞です。luck（運）の形容詞形です。対義語はunluckyです。例: lucky day（幸運な日）", "type": "choice"},
-        {"scenario": "「magnificent」の意味として最も適切なものは？", "choices": ["壮大な、実に見事な、堂々たる", "みすぼらしい", "普通の", "小さな"], "correct": 0, "explanation": "magnificentは景色や建物、業績などが「壮大な、実に見事な、豪華な」という意味の形容詞です。例: magnificent view（素晴らしい眺め）", "type": "choice"},
-        {"scenario": "「major」の意味として最も適切なものは？", "choices": ["主要な、重大な、専攻する、専攻", "取るに足らない", "少数の", "副次的な"], "correct": 0, "explanation": "majorは「主要な、重大な、大きな」という形容詞、また大学の「専攻（専攻する）」という名詞・動詞でもあります。対義語はminorです。", "type": "choice"},
-        {"scenario": "「minor」の意味として最も適切なものは？", "choices": ["重要でない、少数の、未成年者", "主要な", "重大な", "多数の"], "correct": 0, "explanation": "minorは「（比較して）重要でない、小さい、少数の」という形容詞、また「未成年者」という名詞の意味もあります。対義語はmajorです。", "type": "choice"},
-        {"scenario": "「modest」の意味として最も適切なものは？", "choices": ["控えめな、謙虚な、適度な、並の", "自慢げな", "豪華な", "傲慢な"], "correct": 0, "explanation": "modestは「控えめな、謙虚な（傲慢でない）」または規模などが「適度な、並の」という意味の形容詞です。名詞形はmodestyです。", "type": "choice"},
-        {"scenario": "「moral」の意味として最も適切なものは？", "choices": ["道徳的な、道徳の、倫理的な、教訓", "道徳に反する", "法律上の", "個人的な"], "correct": 0, "explanation": "moralは「道徳的な、倫理的な」という形容詞、また「教訓」という名詞の意味もあります。対義語はimmoral（不道徳な）です。", "type": "choice"},
-        {"scenario": "「mutual」の意味として最も適切なものは？", "choices": ["相互の、共通の、お互いの", "一方的な", "個別の", "異なる"], "correct": 0, "explanation": "mutualは「相互の、お互いの」または「共通の」という意味の形容詞です。例: mutual understanding（相互理解）", "type": "choice"},
-        {"scenario": "「mysterious」の意味として最も適切なものは？", "choices": ["神秘的な、不可解な、謎に満ちた", "明らかな", "普通の", "科学的な"], "correct": 0, "explanation": "mysteriousは「神秘的な、不可解な、謎の」という意味の形容詞です。mystery（謎）から派生しています。例: mysterious island（神秘的な島）", "type": "choice"}
+        {
+          "scenario": "「fresh」の意味として最も適切なものは？",
+          "choices": [
+            "新鮮な、できたての、真新しい",
+            "古い",
+            "腐った",
+            "塩辛い"
+          ],
+          "correct": 0,
+          "explanation": "freshは食品などが「新鮮な、もぎたての」、または水や空気が「澄んだ、さわやかな」という意味の形容詞です。対義語は stale（古い、あせた）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frequent」の意味として最も適切なものは？",
+          "choices": [
+            "頻繁な、しばしば起こる",
+            "まれな",
+            "一時的な",
+            "継続的な"
+          ],
+          "correct": 0,
+          "explanation": "frequentは「頻繁な、度重なる」という意味の形容詞です。副詞形は frequently です。対義語は infrequent（まれな）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「general」の意味として最も適切なものは？",
+          "choices": [
+            "一般的な、全体の、大まかな、将軍",
+            "特別な",
+            "一部の",
+            "詳細な"
+          ],
+          "correct": 0,
+          "explanation": "generalは「一般的な、全体の」という形容詞、また軍隊の「将軍、大将」という名詞の意味もあります。副詞形は generally です。対義語は specific です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grateful」の意味として最も適切なものは？",
+          "choices": [
+            "感謝している、ありがたく思う",
+            "不満な",
+            "怒っている",
+            "無関心な"
+          ],
+          "correct": 0,
+          "explanation": "gratefulは be grateful for/to 〜 の形で「〜に感謝している」という意味の形容詞です。thankfulとほぼ同じです。名詞形はgratitudeです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「guilty」の意味として最も適切なものは？",
+          "choices": [
+            "有罪の、罪の意識がある、後ろめたい",
+            "無罪の",
+            "正直な",
+            "無実の"
+          ],
+          "correct": 0,
+          "explanation": "guiltyは裁判で「有罪の」、または主観的に「罪の意識がある、後ろめたい」という意味の形容詞です。対義語は innocent（無罪の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「helpful」の意味として最も適切なものは？",
+          "choices": [
+            "役に立つ、助けになる",
+            "役に立たない",
+            "邪魔な",
+            "不親切な"
+          ],
+          "correct": 0,
+          "explanation": "helpfulは「役に立つ、助けになる」という意味の形容詞です。help（助ける）+ ful（いっぱいの）です。usefulに似ています。対義語はhelplessです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「natural」の意味として最も適切なものは？",
+          "choices": [
+            "自然の、当然の、生まれつきの、天然の",
+            "人工の",
+            "不自然な",
+            "奇妙な"
+          ],
+          "correct": 0,
+          "explanation": "naturalは「自然の、天然の」「（結果として）当然の」「生まれつきの」という意味の形容詞です。対義語はartificial（人工の）やunnaturalです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「negative」の意味として最も適切なものは？",
+          "choices": [
+            "否定的な、消極的な、マイナスの、陰性の",
+            "肯定的な",
+            "積極的な",
+            "陽性の"
+          ],
+          "correct": 0,
+          "explanation": "negativeは「否定的な、消極的な」あるいは「マイナスの、陰性の」という意味の形容詞です。対義語は positive です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「noble」の意味として最も適切なものは？",
+          "choices": [
+            "高貴な、気高い、貴族の、貴族",
+            "卑しい",
+            "貧しい",
+            "一般的な"
+          ],
+          "correct": 0,
+          "explanation": "nobleは身分が「高貴な」または品格が「気高い」という形容詞、また「貴族」という名詞の意味もあります。対義語は humble などです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「normal」の意味として最も適切なものは？",
+          "choices": [
+            "標準の、正常な、普通の、標準",
+            "異常な",
+            "特別な",
+            "一時的な"
+          ],
+          "correct": 0,
+          "explanation": "normalは「標準の、正常な、普通の」という形容詞・名詞です。対義語は abnormal です。副詞形は normally です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 7,
-      "title": "副詞編③：文脈や態度を示す副詞",
-      "type": "Adverbs 3",
-      "emoji": "📍",
-      "subtitle": "通常は、さもなければ、特になどの論理副詞",
+      "title": "形容詞編⑦：IT・ビジネスで使う形容詞",
+      "type": "Adjectives 7",
+      "emoji": "🎭",
+      "subtitle": "IT・ビジネスで使う形容詞",
       "questions": [
-        {"scenario": "「normally」の意味として最も適切なものは？", "choices": ["普通は、通常は", "異常に", "一時的に", "絶対に"], "correct": 0, "explanation": "normallyは「普通は、通常は（通常の状態では）」という意味の副詞です。usuallyと似ています。形容詞はnormal（普通の）です。", "type": "choice"},
-        {"scenario": "「otherwise」の意味として最も適切なものは？", "choices": ["さもなければ、その他の点では、違った風に", "その代わりに", "同様に", "したがって"], "correct": 0, "explanation": "otherwiseは「さもなければ（if not）」または「その他の点では（in other respects）」という意味の論理副詞です。接続詞のように機能します。", "type": "choice"},
-        {"scenario": "「particularly」の意味として最も適切なものは？", "choices": ["特に、とりわけ、著しく", "一般的に", "偶然に", "ただの"], "correct": 0, "explanation": "particularlyは「特に、とりわけ」という意味の副詞で、especiallyとほぼ同じです。形容詞はparticular（特定の）です。", "type": "choice"},
-        {"scenario": "「shortly」の意味として最も適切なものは？", "choices": ["まもなく、手短に", "長く", "遅れて", "一時的に"], "correct": 0, "explanation": "shortlyは時間的に「まもなく、すぐに（soonとほぼ同じ）」という意味の副詞です。例: shortly after that（その直後）", "type": "choice"},
-        {"scenario": "「similarly」の意味として最も適切なものは？", "choices": ["同様に、同じように", "違って", "個別に", "交互に"], "correct": 0, "explanation": "similarlyは「同様に、同じように」という意味の副詞です。形容詞はsimilar（似ている）です。対義語はdifferentlyです。", "type": "choice"},
-        {"scenario": "「therefore」の意味として最も適切なものは？", "choices": ["それゆえに、したがって、だから", "しかしながら", "さらに", "その代わりに"], "correct": 0, "explanation": "thereforeは原因を受けて結果を導く「それゆえに、したがって、だから」という意味の論理副詞です。soよりフォーマルです。", "type": "choice"},
-        {"scenario": "「thus」の意味として最も適切なものは？", "choices": ["このように、したがって、だから", "逆に", "例えば", "以前は"], "correct": 0, "explanation": "thusは「このように（in this way）」または「したがって、だから（therefore）」という意味のやや硬い副詞です。", "type": "choice"},
-        {"scenario": "「virtually」の意味として最も適切なものは？", "choices": ["実質的に、ほとんど、仮想的に", "実際に", "絶対に〜ない", "一時的に"], "correct": 0, "explanation": "virtuallyは「実質的に、事実上、ほとんど（almost）」という意味の重要副詞です。バーチャルリアリティのバーチャルです。", "type": "choice"},
-        {"scenario": "「barely」の意味として最も適切なものは？", "choices": ["かろうじて、やっと、ほとんど〜ない", "十分に", "絶対に", "簡単に"], "correct": 0, "explanation": "barelyは「かろうじて〜（辛うじて達成できた状態）」または「ほとんど〜ない」という意味の副詞です。only just とほぼ同じです。", "type": "choice"},
-        {"scenario": "「deliberately」の意味として最も適切なものは？", "choices": ["意図的に、故意に、慎重に", "偶然に", "急いで", "突然に"], "correct": 0, "explanation": "deliberatelyは「意図的に、故意に（on purposeとほぼ同じ）」または「慎重に」という意味の副詞です。形容詞はdeliberateです。", "type": "choice"}
+        {
+          "scenario": "「novel (形容詞)」の意味として最も適切なものは？",
+          "choices": [
+            "斬新な、新しい",
+            "古い",
+            "普通の",
+            "複雑な"
+          ],
+          "correct": 0,
+          "explanation": "novelは形容詞として「斬新な、新しい（今までにない）」という意味を持ちます。名詞では「小説」です。例: novel idea（斬新なアイデア）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nuclear」の意味として最も適切なものは？",
+          "choices": [
+            "原子力の、核の",
+            "火力の",
+            "水力の",
+            "太陽光の"
+          ],
+          "correct": 0,
+          "explanation": "nuclearは「原子力の、核の、細胞核の」という意味の形容詞です。例: nuclear energy（原子力エネルギー）、nuclear family（核家族）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「numerous」の意味として最も適切なものは？",
+          "choices": [
+            "多数の、たくさんの",
+            "少数の",
+            "唯一の",
+            "一部の"
+          ],
+          "correct": 0,
+          "explanation": "numerousは「多数の、非常に多くの」という意味の形容詞です。manyとほぼ同じですが、よりフォーマルな響きがあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apparent」の意味として最も適切なものは？",
+          "choices": [
+            "一見〜らしい、明白な、見かけの",
+            "隠された",
+            "曖昧な",
+            "疑わしい"
+          ],
+          "correct": 0,
+          "explanation": "apparentは「（真偽は別として）一見〜らしい、見かけの」または「誰の目にも明白な（obvious）」という意味の形容詞です。例: apparent reason（一見明白な理由）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「occasional」の意味として最も適切なものは？",
+          "choices": [
+            "時折の、予備の、たまの",
+            "頻繁な",
+            "絶え間ない",
+            "定例の"
+          ],
+          "correct": 0,
+          "explanation": "occasionalは頻度が低く「時折の、たまの」という意味の形容詞です。名詞 occasion（機会、出来事）から派生しています。副詞形は occasionally です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「odd」の意味として最も適切なものは？",
+          "choices": [
+            "奇妙な、奇数の、半端な",
+            "普通の",
+            "偶数の",
+            "完璧な"
+          ],
+          "correct": 0,
+          "explanation": "oddは「奇妙な、変な（strange）」、数学の「奇数の」、または「半端な」という意味の形容詞です。偶数は even です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「official」の意味として最も適切なものは？",
+          "choices": [
+            "公式の、公の、公務の、役員",
+            "非公式の",
+            "私的な",
+            "カジュアルな"
+          ],
+          "correct": 0,
+          "explanation": "officialは「公式の、公の」という形容詞、また組織の「役員、公務員」という名詞の意味もあります。副詞形は officially です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ongoing」の意味として最も適切なものは？",
+          "choices": [
+            "継続している、進行中の",
+            "終了した",
+            "一時的な",
+            "過去の"
+          ],
+          "correct": 0,
+          "explanation": "ongoingは計画や議論などが「進行中の、現在継続している」という意味の形容詞です。例: ongoing project（進行中のプロジェクト）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「organic」の意味として最も適切なものは？",
+          "choices": [
+            "有機栽培の、オーガニックの、器官の",
+            "無機の",
+            "化学的な",
+            "人工の"
+          ],
+          "correct": 0,
+          "explanation": "organicは農薬や化学肥料を使わない「有機の、オーガニックの」または「器官の、有機体の」という意味の形容詞です。例: organic vegetables（有機野菜）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「original」の意味として最も適切なものは？",
+          "choices": [
+            "最初の、独自の、独創的な、原作",
+            "コピーの",
+            "最新の",
+            "平凡な"
+          ],
+          "correct": 0,
+          "explanation": "originalは「最初の、起源の」または「独創的な」という形容詞、また「原作、本物」という名詞の意味もあります。名詞形はoriginです。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 8,
-      "title": "重要熟語編⑤：生活・行動・継続の熟語",
-      "type": "Phrasal Verbs 5",
-      "emoji": "🔗",
-      "subtitle": "連絡を保つ、決心する、あきらめるなどの動詞熟語",
+      "title": "形容詞編⑧：道徳観や心理状態を表す形容詞",
+      "type": "Adjectives 8",
+      "emoji": "🌈",
+      "subtitle": "道徳観や心理状態を表す形容詞",
       "questions": [
-        {"scenario": "「keep in touch」の意味として最も適切なものは？", "choices": ["連絡を取り合う、連絡を保つ", "触れ続ける", "秘密にする", "放置する"], "correct": 0, "explanation": "keep in touch (with 〜) は別れ際の挨拶などで「連絡を取り合う、つながりを保つ」という意味の定番熟語です。対義語は lose touch です。", "type": "choice"},
-        {"scenario": "「make up one's mind」の意味として最も適切なものは？", "choices": ["決心する、決定する", "思いつく", "化粧する", "心を落ち着かせる"], "correct": 0, "explanation": "make up one's mind は「決心する、決める」という意味の重要熟語です。decide と同じです。one's には my や his などの所有格が入ります。", "type": "choice"},
-        {"scenario": "「attend to」の意味として最も適切なものは？", "choices": ["〜の世話をする、〜に注意を払う、（顧客に）対応する", "〜を誇りに思う", "〜を怖がる", "〜に注意する"], "correct": 0, "explanation": "attend to 〜は「（病人などの）世話をする」または「〜に注意を払う、対応する」という意味の重要熟語です。例: attend to the matter（その件に対応する）", "type": "choice"},
-        {"scenario": "「look after」の意味として最も適切なものは？", "choices": ["〜の世話をする、面倒を見る", "〜を探す", "〜に似ている", "〜を振り返る"], "correct": 0, "explanation": "look after 〜は「〜の世話をする、面倒を見る」という意味の熟語で、take care of とほぼ同じです。例: look after the dog（犬の世話をする）", "type": "choice"},
-        {"scenario": "「set up」の意味として最も適切なものは？", "choices": ["設立する、組み立てる、設置する", "中止する", "破壊する", "片付ける"], "correct": 0, "explanation": "set up 〜は会社などを「設立する」、装置などを「組み立てる、設置する」という意味の多機能な熟語です。establishに似ています。", "type": "choice"},
-        {"scenario": "「find out」の意味として最も適切なものは？", "choices": ["見つけ出す、知る、調べる", "見失う", "隠す", "捨てる"], "correct": 0, "explanation": "find out 〜は情報などを「見つけ出す、調べる、知る」という意味の熟語です。単に見つける（find）よりも、調べて知るニュアンスが強いです。", "type": "choice"},
-        {"scenario": "「call off」の意味として最も適切なものは？", "choices": ["〜を中止する、取り消す", "始める", "続ける", "提供する"], "correct": 0, "explanation": "call off 〜はイベントや約束などを「中止する、取り消す」という意味の重要熟語です。cancelとほぼ同じです。例: call off the game（試合を中止する）", "type": "choice"},
-        {"scenario": "「carry out」の意味として最も適切なものは？", "choices": ["実行する、遂行する、持ち出す", "運ぶ", "中止する", "あきらめる"], "correct": 0, "explanation": "carry out 〜は「（計画や指示などを）実行する、遂行する」という意味の熟語です。performやexecuteに似ています。例: carry out the task（任務を遂行する）", "type": "choice"},
-        {"scenario": "「search for」の意味として最も適切なものは？", "choices": ["〜を探す、捜索する、捜索", "〜の世話をする", "〜を楽しみにする", "〜に似ている"], "correct": 0, "explanation": "search for 〜は失ったものや情報を「探す、捜索する」という熟語・名詞です。look for と似ていますが、より入念に探すニュアンスがあります。", "type": "choice"},
-        {"scenario": "「run away」の意味として最も適切なものは？", "choices": ["逃げる、走り去る", "追いかける", "追いつく", "走り始める"], "correct": 0, "explanation": "run away (from 〜) は「（場所や困難から）逃げる、走り去る」という意味の熟語です。escapeに似ています。例: run away from home（家出する）", "type": "choice"}
+        {
+          "scenario": "「outgoing」の意味として最も適切なものは？",
+          "choices": [
+            "社交的な、外交的な、去っていく",
+            "内向的な",
+            "静かな",
+            "無礼な"
+          ],
+          "correct": 0,
+          "explanation": "outgoingは性格が「社交的な、外交的な」または職務などから「去っていく、退職する」という意味の形容詞です。対義語は shy や introverted です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「outstanding」の意味として最も適切なものは？",
+          "choices": [
+            "傑出した、目立つ、未解決の",
+            "平凡な",
+            "最悪の",
+            "解決済みの"
+          ],
+          "correct": 0,
+          "explanation": "outstandingは能力などが「傑出した、非常に優れた」または未払いや宿題などが「未解決の、未決済の」という意味の形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「painful」の意味として最も適切なものは？",
+          "choices": [
+            "痛い、痛みを伴う、つらい",
+            "心地よい",
+            "楽しい",
+            "簡単な"
+          ],
+          "correct": 0,
+          "explanation": "painfulは「（体の一部が）痛い、痛みを伴う」または精神的に「つらい」という意味の形容詞です。pain（痛み）+ ful（に満ちた）です。対義語は painless です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「partial」の意味として最も適切なものは？",
+          "choices": [
+            "部分的な、不公平な、偏愛する",
+            "全体の",
+            "公平な",
+            "一時的な"
+          ],
+          "correct": 0,
+          "explanation": "partialは「部分的な、一部の（全体ではない）」、または一方に偏った「不公平な、ひいきする」という意味の形容詞です。対義語は total や impartial です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「particular」の意味として最も適切なものは？",
+          "choices": [
+            "特定の、特別な、好みがうるさい",
+            "一般的な",
+            "普通の",
+            "大雑把な"
+          ],
+          "correct": 0,
+          "explanation": "particularは「特定の、特別の（特定のモノを指し示す）」という意味の形容詞です。副詞形は particularly です。例: for no particular reason（特にこれといった理由もなく）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「passive」の意味として最も適切なものは？",
+          "choices": [
+            "受動的な、消極的な、受け身の",
+            "能動的な",
+            "積極的な",
+            "否定的な"
+          ],
+          "correct": 0,
+          "explanation": "passiveは「受動的な、消極的な（自分から動かない）」という意味の形容詞です。文法で「受動態（受け身）」を指します。対義語は active です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「patient (形容詞)」の意味として最も適切なものは？",
+          "choices": [
+            "忍耐強い、我慢強い",
+            "怒りっぽい",
+            "親切な",
+            "怠慢な"
+          ],
+          "correct": 0,
+          "explanation": "patientは名詞「患者」のほかに、形容詞として「忍耐強い、我慢強い」という意味を持ちます。名詞形は patience（忍耐）です。対義語は impatient です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「peculiar」の意味として最も適切なものは？",
+          "choices": [
+            "特有の、固有の、奇妙な",
+            "共通の",
+            "一般的な",
+            "普通の"
+          ],
+          "correct": 0,
+          "explanation": "peculiarは be peculiar to 〜 の形で「〜に特有の、固有の」という意味、または「奇妙な、変な」という意味の形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「permanent」の意味として最も適切なものは？",
+          "choices": [
+            "永久的な、終身の、常勤の",
+            "一時的な",
+            "現代の",
+            "短い"
+          ],
+          "correct": 0,
+          "explanation": "permanentは「永久的な、終身の、常設の（変化しない）」という意味の形容詞です。対義語は temporary（一時的な）です。パーマ（permanent wave）の語源です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「personal」の意味として最も適切なものは？",
+          "choices": [
+            "個人の、私的な、パーソナルな",
+            "公共の",
+            "社会的な",
+            "共通の"
+          ],
+          "correct": 0,
+          "explanation": "personalは「個人の、私的な（全体・公のものではない）」という意味の形容詞です。person（人）の形容詞形です。例: personal computer（パソコン）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 9,
-      "title": "重要熟語編⑥：前置詞を含む3語熟語",
-      "type": "Phrasal Verbs 6",
-      "emoji": "🔗",
-      "subtitle": "追いつく、ついていく、我慢するなどの3語熟語",
+      "title": "形容詞編⑨：多面的な意味を持つ形容詞表現",
+      "type": "Adjectives 9",
+      "emoji": "🧩",
+      "subtitle": "多面的な意味を持つ形容詞表現",
       "questions": [
-        {"scenario": "「catch up with」の意味として最も適切なものは？", "choices": ["〜に追いつく", "〜を追い越す", "〜についていく", "〜を捕まえる"], "correct": 0, "explanation": "catch up with 〜は遅れている状態から「〜に追いつく」という意味の重要3語熟語です。例: catch up with him（彼に追いつく）", "type": "choice"},
-        {"scenario": "「keep up with」の意味として最も適切なものは？", "choices": ["〜についていく、遅れずについていく", "〜に追いつく", "〜を維持する", "〜を邪魔する"], "correct": 0, "explanation": "keep up with 〜は、遅れないように「〜についていく、遅れずについていく」という意味の熟語です。トレンドなどについていく場合にも使われます。", "type": "choice"},
-        {"scenario": "「make use of」の意味として最も適切なものは？", "choices": ["〜を利用する、使う", "〜を作り出す", "〜を使い果たす", "〜を無駄にする"], "correct": 0, "explanation": "make use of 〜は「〜を利用する、使う（use）」という意味の熟語です。特に利用可能なものを有効活用するニュアンスがあります。", "type": "choice"},
-        {"scenario": "「take advantage of」の意味として最も適切なものは？", "choices": ["〜を利用する、（機会などに）乗ずる", "〜を誇りに思う", "〜を嫌う", "〜に反対する"], "correct": 0, "explanation": "take advantage of 〜は、機会や立場を「（有利に）利用する、乗ずる」という意味の熟語です。悪用するという意味で使われることもあります。", "type": "choice"},
-        {"scenario": "「wait for」の意味として最も適切なものは？", "choices": ["〜を待つ", "〜を振り返る", "〜を探す", "〜を心配する"], "correct": 0, "explanation": "wait for 〜は「（人やバスなどを）待つ」という意味の基本熟語です。例: wait for the bus（バスを待る）", "type": "choice"},
-        {"scenario": "「get along with」の意味として最も適切なものは？", "choices": ["〜と仲良くやっていく、〜と気が合う", "〜と同行する", "〜と競争する", "〜を避ける"], "correct": 0, "explanation": "get along with 〜は「〜と仲良くやっていく、親しくする」という意味の重要熟語です。get on with とほぼ同じです。", "type": "choice"},
-        {"scenario": "「come up with」の意味として最も適切なものは？", "choices": ["（考えなどを）思いつく、提案する", "〜に追いつく", "〜から生じる", "〜に反対する"], "correct": 0, "explanation": "come up with 〜は「（アイデアや計画などを）思いつく、提案する」という意味の重要3語熟語です。例: come up with an idea（考えを思いつく）", "type": "choice"},
-        {"scenario": "「put up with」の意味として最も適切なものは？", "choices": ["〜を我慢する、耐える", "〜を延期する", "〜を中止する", "〜を片付ける"], "correct": 0, "explanation": "put up with 〜は「〜を我慢する、耐える（endure/tolerate）」という意味の重要熟語です。例: put up with the noise（騒音を我慢する）", "type": "choice"},
-        {"scenario": "「run out of」の意味として最も適切なものは？", "choices": ["〜を使い果たす、切らす", "〜から逃げる", "〜を追いかける", "〜を外へ走り出させる"], "correct": 0, "explanation": "run out of 〜は「〜を使い果たす、切らす」という意味の他動詞的熟語です。自動詞の run out（尽きる）から来ています。例: run out of gas（ガス欠になる）", "type": "choice"},
-        {"scenario": "「do without」の意味として最も適切なものは？", "choices": ["〜なしで済ます、なしで行う", "〜なしで失敗する", "〜の代わりにやる", "〜をやめる"], "correct": 0, "explanation": "do without 〜は「〜なしで済ます、なしでやっていく」という意味の熟語です。go without とほぼ同じです。例: do without sugar（砂糖なしで済ます）", "type": "choice"}
+        {
+          "scenario": "「physical」の意味として最も適切なものは？",
+          "choices": [
+            "身体の、肉体的な、物質的な、物理的な",
+            "精神的な",
+            "理論上の",
+            "架空の"
+          ],
+          "correct": 0,
+          "explanation": "physicalは精神（mental）に対して「肉体的な、身体の」、また「物質的な、物理学の」という意味の形容詞です。例: physical education（体育）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pleasant」の意味として最も適切なものは？",
+          "choices": [
+            "楽しい、心地よい、感じの良い",
+            "不快な",
+            "退屈な",
+            "難しい"
+          ],
+          "correct": 0,
+          "explanation": "pleasantは物や天気が「楽しい、心地よい」、または人の態度が「感じが良い」という意味の形容詞です。対義語は unpleasant です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「plentiful」の意味として最も適切なものは？",
+          "choices": [
+            "豊富な、たくさんの",
+            "不足している",
+            "貴重な",
+            "無駄な"
+          ],
+          "correct": 0,
+          "explanation": "plentifulは食料や資源などが「豊富な、たっぷりの」という意味の形容詞です。plenty（豊富さ）から派生しています。abundantに似ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「positive」の意味として最も適切なものは？",
+          "choices": [
+            "肯定的な、積極的な、確信している、陽性の",
+            "否定的な",
+            "消極的な",
+            "陰性の"
+          ],
+          "correct": 0,
+          "explanation": "positiveは「肯定的な、積極的な、前向きな」または「（医療で）陽性の」という意味の形容詞です。対義語は negative です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「possible」の意味として最も適切なものは？",
+          "choices": [
+            "可能な、あり得る、実行できる",
+            "不可能な",
+            "困難な",
+            "正しい"
+          ],
+          "correct": 0,
+          "explanation": "possibleは「可能な、あり得る」という意味の形容詞です。対義語は impossible です。名詞形はpossibilityです。例: if possible（可能ならば）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「potential」の意味として最も適切なものは？",
+          "choices": [
+            "潜在的な、可能性を秘めた、潜在能力、可能性",
+            "現在の",
+            "明らかな",
+            "不可能な"
+          ],
+          "correct": 0,
+          "explanation": "potentialは表面化していないが「潜在的な、可能性のある」という形容詞、また「潜在能力、ポテンシャル」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「practical」の意味として最も適切なものは？",
+          "choices": [
+            "実用的な、現実的な、実地の",
+            "理論的な",
+            "非現実的な",
+            "学術的な"
+          ],
+          "correct": 0,
+          "explanation": "practicalは理論（theoretical）に対して「実用的な、現実的な」という意味の形容詞です。例: practical English（実用英語）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「precise」の意味として最も適切なものは？",
+          "choices": [
+            "正確な、精密な、まさにその",
+            "大雑把な",
+            "曖昧な",
+            "間違った"
+          ],
+          "correct": 0,
+          "explanation": "preciseは数値や測定値、説明などが寸分の狂いもなく「正確な、精密な」という意味の形容詞です。exactに似ています。副詞形は precisely です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「primary」の意味として最も適切なものは？",
+          "choices": [
+            "主要な、第一の、初等の",
+            "二次的な",
+            "最後の",
+            "高等な"
+          ],
+          "correct": 0,
+          "explanation": "primaryは「主要な、第一の」または「初期の、初等の」という意味の形容詞です。例: primary school（小学校）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「probable」の意味として最も適切なものは？",
+          "choices": [
+            "おそらくありそうな、確実視される",
+            "あり得ない",
+            "不可能な",
+            "一時的な"
+          ],
+          "correct": 0,
+          "explanation": "probableは、ほぼ間違いなく「起こりそうな、確実な」という意味の形容詞です。probablyの形容詞形です。対義語は improbable です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 10,
-      "title": "会話表現・定型フレーズ③：頼み事と人間関係",
-      "type": "Conversational Phrases 3",
-      "emoji": "🗣️",
-      "subtitle": "お願い、許可、状況を尋ねるカジュアルな会話表現",
+      "title": "形容詞編⑩：状態や客観性を表す形容詞",
+      "type": "Adjectives 10",
+      "emoji": "🔑",
+      "subtitle": "状態や客観性を表す形容詞",
       "questions": [
-        {"scenario": "「Could you do me a favor?」の意味として最も適切なものは？", "choices": ["お願いを聞いていただけますか？", "助けてもらえませんか？", "お気に入りは何ですか？", "どういたしまして"], "correct": 0, "explanation": "Could you do me a favor? は、相手に何か少し大きなお願い事をしたい時に切り出す定番の丁寧なフレーズです。do a favor で「恩恵を施す、親切にする」という意味です。", "type": "choice"},
-        {"scenario": "「How's it going?」の意味として最も適切なものは？", "choices": ["調子はどう？、最近どう？", "どこへ行くの？", "どうやって行くの？", "何時ですか？"], "correct": 0, "explanation": "How's it going? は「調子はどう？」「元気にやってる？」と親しい間柄で交わす挨拶表現で、How are you? に似ています。", "type": "choice"},
-        {"scenario": "「I have no idea.」の意味として最も適切なものは？", "choices": ["さっぱり分かりません、見当もつきません", "考えがありません", "何でもありません", "問題ありません"], "correct": 0, "explanation": "I have no idea. は、単なる I don't know より強く「さっぱり分からない」「見当もつかない」と答えるときの表現です。", "type": "choice"},
-        {"scenario": "「It doesn't matter.」の意味として最も適切なものは？", "choices": ["どちらでもいいです、たいした問題ではありません", "それは重大な問題です", "関係ありません", "どういたしまして"], "correct": 0, "explanation": "It doesn't matter. は「（結果に影響しないので）どうでもいい、大したことではない」と答える時の定番フレーズです。matter（重要である）の否定です。", "type": "choice"},
-        {"scenario": "「It's none of your business.」の意味として最も適切なものは？", "choices": ["あなたには関係のないことです、余計なお世話です", "それはあなたの仕事ではありません", "取引はありません", "どういたしまして"], "correct": 0, "explanation": "It's none of your business. は「あなたには関係のないことだ」「余計なお世話だ」と相手の干渉を拒む、少し強い表現です。", "type": "choice"},
-        {"scenario": "「Make yourself at home.」の意味として最も適切なものは？", "choices": ["どうぞ楽にしてください、くつろいでください", "家を自分で作りなさい", "家に帰ってください", "お大事に"], "correct": 0, "explanation": "Make yourself at home. は、客を家に招いたときに「どうぞ自分の家にいるようにくつろいでください」と勧める定番表現です。", "type": "choice"},
-        {"scenario": "「No way!」の意味として最も適切なものは？", "choices": ["とんでもない！、まさか！、絶対に嫌だ", "道がありません", "方法がありません", "問題ありません"], "correct": 0, "explanation": "No way! は「まさか！」「とんでもない！」「絶対に嫌だ」など、強い驚きや否定、拒絶を表すカジュアルな口語表現です。", "type": "choice"},
-        {"scenario": "「What a pity!」の意味として最も適切なものは？", "choices": ["それは残念ですね！、気の毒に！", "何が起きたのですか？", "なんて素晴らしいんだ！", "どういたしまして"], "correct": 0, "explanation": "What a pity!（または What a shame!）は、相手の残念なニュースや出来事を聞いた時に「なんて残念なんだ」「気の毒に」と共感する表現です。", "type": "choice"},
-        {"scenario": "「What's up?」の意味として最も適切なものは？", "choices": ["どうしたの？、最近どう？、何かあった？", "何が上にありますか？", "元気ですか？", "どういたしまして"], "correct": 0, "explanation": "What's up? は親しい友達同士で使う非常にカジュアルな「最近どう？」「何かあった？」という挨拶表現です。", "type": "choice"},
-        {"scenario": "「Why not?」の意味として最も適切なものは？", "choices": ["もちろん！、なぜダメなの？、〜したらどう？", "なぜしないのですか？", "絶対にダメです", "どういたしまして"], "correct": 0, "explanation": "Why not? は、勧誘への同意「もちろん！（なぜダメなんだ）」や、否定文に対する「なぜ？」、また提案「〜したらどう？」を意味する万能フレーズです。", "type": "choice"}
+        {
+          "scenario": "「productive」の意味として最も適切なものは？",
+          "choices": [
+            "生産的な、実りの多い",
+            "非生産的な",
+            "怠惰な",
+            "浪費する"
+          ],
+          "correct": 0,
+          "explanation": "productiveは「生産的な、実りの多い」という意味の形容詞です。produce（生産する）や product（製品）の関連語です。名詞形はproductivityです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「professional」の意味として最も適切なものは？",
+          "choices": [
+            "プロの、職業の、専門的な、専門家",
+            "アマチュアの",
+            "趣味の",
+            "簡単な"
+          ],
+          "correct": 0,
+          "explanation": "professionalは「プロの、専門職の」という形容詞、また「専門家、プロの選手」という名詞の意味もあります。対義語は amateur です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「proper」の意味として最も適切なものは？",
+          "choices": [
+            "適切な、ふさわしい、礼儀正しい",
+            "不適切な",
+            "簡単な",
+            "余計な"
+          ],
+          "correct": 0,
+          "explanation": "properはルールや状況に「ふさわしい、適切な、正しい」という意味の形容詞です。副詞形は properly です。対義語は improper です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pure」の意味として最も適切なものは？",
+          "choices": [
+            "純粋な、混じり気のない、清らかな",
+            "汚れた",
+            "複雑な",
+            "人工の"
+          ],
+          "correct": 0,
+          "explanation": "pureは他のものが混ざっていない「純粋な、澄んだ」という意味の形容詞です。名詞形は purity です。対義語は impure です。例: pure water（純水）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rapid」の意味として最も適切なものは？",
+          "choices": [
+            "急速な、素早い",
+            "遅い",
+            "徐々の",
+            "一時的な"
+          ],
+          "correct": 0,
+          "explanation": "rapidは変化や動作が「急速な、素早い（fastやquickより変動が速い様子）」という意味の形容詞です。副詞形は rapidly です。例: rapid growth（急成長）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rare」の意味として最も適切なものは？",
+          "choices": [
+            "珍しい、まれな、（肉の焼き方が）レアの",
+            "ありふれた",
+            "よくある",
+            "生焼けの"
+          ],
+          "correct": 0,
+          "explanation": "rareは滅多に見られない「珍しい、まれな」という意味の形容詞です。副詞形は rarely です。対義語は common です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rational」の意味として最も適切なものは？",
+          "choices": [
+            "理性的の、合理的な、理にかなった",
+            "感情的な",
+            "不合理な",
+            "矛盾した"
+          ],
+          "correct": 0,
+          "explanation": "rationalは感情に流されず「理性的な、合理的な」という意味の形容詞です。reason（理性、理由）から来ています。対義語は irrational です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「raw」の意味として最も適切なものは？",
+          "choices": [
+            "生の、加工していない、未熟な",
+            "調理された",
+            "乾燥した",
+            "古い"
+          ],
+          "correct": 0,
+          "explanation": "rawは火を通していない「生の（食品など）」、または「原料のままの」という意味の形容詞です。例: raw fish（生魚）、raw material（原料）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ready」の意味として最も適切なものは？",
+          "choices": [
+            "準備ができた、覚悟ができている",
+            "遅れている",
+            "準備不足の",
+            "嫌がっている"
+          ],
+          "correct": 0,
+          "explanation": "readyは be ready (for/to do) の形で「準備ができた、いつでもできる」という意味の形容詞です。例: Get ready!（準備しなさい！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「real」の意味として最も適切なものは？",
+          "choices": [
+            "本物の、現実の、実在する、本当の",
+            "偽物の",
+            "仮想の",
+            "誇張された"
+          ],
+          "correct": 0,
+          "explanation": "realは人工や偽物に対して「本物の、現実の、本当の」という意味の形容詞です。副詞形は really です。対義語は artificial や fake です。",
+          "type": "choice"
+        }
       ]
     }
   ]

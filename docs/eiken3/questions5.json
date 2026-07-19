@@ -6,192 +6,1292 @@
   "tests": [
     {
       "id": 1,
-      "title": "動詞編⑦：生活・自然動作の動詞",
-      "type": "Basic Verbs 7",
-      "emoji": "🌳",
-      "subtitle": "エサをやる、流れる、予測するなどの動詞",
+      "title": "形容詞編⑪：評価や可能性を表す形容詞",
+      "type": "Adjectives 11",
+      "emoji": "💡",
+      "subtitle": "評価や可能性を表す形容詞",
       "questions": [
-        {"scenario": "「feed」の意味として最も適切なものは？", "choices": ["エサをやる、養う、供給する、エサ", "食べる", "飢える", "育てる"], "correct": 0, "explanation": "feedは動物に「エサをやる」または家族などを「養う」という動詞、また「エサ、飼料」という名詞の意味もあります。過去形・過去分詞は fed です。", "type": "choice"},
-        {"scenario": "「fetch」の意味として最も適切なものは？", "choices": ["（行って）取ってくる、連れてくる", "持っていく", "投げる", "捨てる"], "correct": 0, "explanation": "fetchは「（ある場所に行って物や人を）取ってくる、呼んでくる、連れてくる」という意味の動詞です。go and get とほぼ同じです。", "type": "choice"},
-        {"scenario": "「float」の意味として最も適切なものは？", "choices": ["浮かぶ、漂う、浮き、浮き輪", "沈む", "泳ぐ", "流される"], "correct": 0, "explanation": "floatは水面や空中に「浮かぶ、漂う」という動詞、また「浮き、浮き輪」という名詞の意味もあります。対義語は sink（沈む）です。", "type": "choice"},
-        {"scenario": "「flow」の意味として最も適切なものは？", "choices": ["流れる、わき出る、流れ", "凍る", "注ぐ", "吹きつける"], "correct": 0, "explanation": "flowは水や空気が「流れる、わき出る」という動詞、また「流れ」という名詞でもあります。例: flow of traffic（交通の流れ）", "type": "choice"},
-        {"scenario": "「focus」の意味として最も適切なものは？", "choices": ["集中する、焦点を合わせる、焦点、中心", "ぼやける", "分散する", "避ける"], "correct": 0, "explanation": "focusは focus on 〜 の形で「〜に集中する、焦点を合わせる」という動詞、また「焦点、中心」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「fold」の意味として最も適切なものは？", "choices": ["折る、折りたたむ、腕を組む", "開く", "破る", "切る"], "correct": 0, "explanation": "foldは紙や服を「折る、折りたたむ」という意味の動詞です。腕や足を組む時にも使われます。対義語は unfold です。フォルダー（folder）の語源です。", "type": "choice"},
-        {"scenario": "「force」の意味として最も適切なものは？", "choices": ["強いる、強制する、力、暴力", "許す", "頼む", "説得する"], "correct": 0, "explanation": "forceは force 人 to do で「人に無理やり〜させる、強いる」という動詞、また物理的・社会的な「力、暴力」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「forecast」の意味として最も適切なものは？", "choices": ["予報する、予測する、予報、予測", "思い出す", "過去を振り返る", "放送する"], "correct": 0, "explanation": "forecastは天気や経済を「予報する、予測する」という動詞、また「予報、予測」という名詞でもあります。例: weather forecast（天気予報）", "type": "choice"},
-        {"scenario": "「frighten」の意味として最も適切なものは？", "choices": ["怖がらせる、ゾッとさせる", "喜ばせる", "驚かせる", "怒らせる"], "correct": 0, "explanation": "frightenは「（一時的に）怖がらせる、ゾッとさせる」という意味の動詞です。scareやterrifyに似ています。形容詞は frightened（怯えた）です。", "type": "choice"},
-        {"scenario": "「gain」の意味として最も適切なものは？", "choices": ["得る、獲得する、増す、利益", "失う", "売る", "寄付する"], "correct": 0, "explanation": "gainは努力によって「得る、獲得する」または体重や速度が「増す」という動詞、また「利益、増加」という名詞の意味もあります。対義語はloseです。", "type": "choice"}
+        {
+          "scenario": "「realistic」の意味として最も適切なものは？",
+          "choices": [
+            "現実的な、現実主義の、本物そっくりの",
+            "理想的な",
+            "空想的な",
+            "架空の"
+          ],
+          "correct": 0,
+          "explanation": "realisticは「現実的な（実行可能な）」または「本物そっくりの」という意味の形容詞です。real から来ています。対義語は unrealistic です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「responsible」の意味として最も適切なものは？",
+          "choices": [
+            "責任がある、信頼できる、原因である",
+            "無責任な",
+            "関係のない",
+            "無料の"
+          ],
+          "correct": 0,
+          "explanation": "responsibleは be responsible for 〜 の形で「〜に責任がある」または「〜の原因である」という意味の重要形容詞です。名詞形は responsibility です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「recent」の意味として最も適切なものは？",
+          "choices": [
+            "最近の、近頃の",
+            "昔の",
+            "将来の",
+            "一時的な"
+          ],
+          "correct": 0,
+          "explanation": "recentは少し前の過去を指す「最近の、近頃の」という意味の形容詞です。副詞形は recently です。例: recent years（近年）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「regional」の意味として最も適切なものは？",
+          "choices": [
+            "地域の、地方の、地元の",
+            "世界的な",
+            "全国的な",
+            "限定された"
+          ],
+          "correct": 0,
+          "explanation": "regionalは「地域の、地方の、地域特有の」という意味の形容詞です。region（地域、地方）から派生しています。例: regional food（郷土料理）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「regular」の意味として最も適切なものは？",
+          "choices": [
+            "定期的な、規則正しい、通常の、レギュラー",
+            "不規則な",
+            "特別な",
+            "臨時の"
+          ],
+          "correct": 0,
+          "explanation": "regularは「定期的な、規則正しい」または「通常の、レギュラーの」という意味の形容詞です。対義語は irregular です。副詞形は regularly です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「relative」の意味として最も適切なものは？",
+          "choices": [
+            "相対的な、比較上の、親戚、身内",
+            "絶対的な",
+            "関係のない",
+            "他人"
+          ],
+          "correct": 0,
+          "explanation": "relativeは他との比較における「相対的な、比較上の」という形容詞、また「親戚、身内」という名詞の意味もあります。対義語は absolute です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「relevant」の意味として最も適切なものは？",
+          "choices": [
+            "関連のある、適切な、妥当な",
+            "無関係の",
+            "不要な",
+            "矛盾した"
+          ],
+          "correct": 0,
+          "explanation": "relevantは be relevant to 〜 の形で「〜に関連がある、適切な」という意味の形容詞です。対義語は irrelevant（無関係の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「steady」の意味として最も適切なものは？",
+          "choices": [
+            "安定した、着実な、固定された、一定の",
+            "疑わしい",
+            "不確実な",
+            "壊れやすい"
+          ],
+          "correct": 0,
+          "explanation": "steadyは物事や動きが「安定した、着実な」または「固定された、一定の」という意味の形容詞です。副詞形は steadily（着実に）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「remote」の意味として最も適切なものは？",
+          "choices": [
+            "遠く離れた、人里離れた、リモコン",
+            "近い",
+            "混雑した",
+            "便利な"
+          ],
+          "correct": 0,
+          "explanation": "remoteは場所や時間が「遠く離れた、僻地の」という意味の形容詞です。テレビの「リモコン（remote control）」の語源です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reluctant」の意味として最も適切なものは？",
+          "choices": [
+            "気が進まない、しぶしぶの",
+            "積極的な",
+            "喜んでの",
+            "自発的な"
+          ],
+          "correct": 0,
+          "explanation": "reluctantは「気が進まない、したくない」という意味の形容詞です。be reluctant to do で「〜したがらない」と使います。副詞形は reluctantly です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "動詞編⑧：探索・動作・対応の動詞",
-      "type": "Basic Verbs 8",
-      "emoji": "🌳",
-      "subtitle": "凝視する、卒業する、扱うなどの動詞",
+      "title": "形容詞編⑫：時間や客観的状態を表す形容詞",
+      "type": "Adjectives 12",
+      "emoji": "🎪",
+      "subtitle": "時間や客観的状態を表す形容詞",
       "questions": [
-        {"scenario": "「gaze」の意味として最も適切なものは？", "choices": ["（見とれて）見つめる、凝視する、凝視", "一瞥する", "目をそらす", "無視する"], "correct": 0, "explanation": "gazeは、興味や驚きを持って「（じっと）見つめる、凝視する」という動詞・名詞です。stare（にらみつける）より好意的なニュアンスが多いです。", "type": "choice"},
-        {"scenario": "「graduate」の意味として最も適切なものは？", "choices": ["卒業する、卒業生", "入学する", "退学する", "留年する"], "correct": 0, "explanation": "graduateは graduate from 〜 で「〜を卒業する」という意味の動詞です。また「卒業生」という名詞の意味もあります。名詞形はgraduationです。", "type": "choice"},
-        {"scenario": "「greet」の意味として最も適切なものは？", "choices": ["挨拶する、迎える", "別れる", "見送る", "無視する"], "correct": 0, "explanation": "greetは「（言葉やしぐさで）挨拶する、迎える」という意味の動詞です。名詞形はgreeting（挨拶、カード）です。例: greet tourists（観光客を迎える）", "type": "choice"},
-        {"scenario": "「guarantee」の意味として最も適切なものは？", "choices": ["保証する、請け合う、保証、保証書", "疑う", "否定する", "壊す"], "correct": 0, "explanation": "guaranteeは品質や権利を「保証する、約束する」という動詞・名詞です。電化製品の保証書は warranty とも言います。", "type": "choice"},
-        {"scenario": "「handle」の意味として最も適切なものは？", "choices": ["扱う、処理する、操縦する、取っ手", "放置する", "壊す", "無視する"], "correct": 0, "explanation": "handleは問題や商品を「手で扱う、処理する」という動詞、またドアなどの「取っ手、ハンドル」という名詞の意味もあります。deal with と似ています。", "type": "choice"},
-        {"scenario": "「hang」の意味として最も適切なものは？", "choices": ["掛ける、ぶら下がる、絞首刑にする", "落とす", "投げる", "拾う"], "correct": 0, "explanation": "hangは「（壁などに）掛ける、ぶら下がる」という意味の動詞です。過去形・過去分詞は hung（絞首刑の意味では hanged）です。", "type": "choice"},
-        {"scenario": "「harm」の意味として最も適切なものは？", "choices": ["害する、傷つける、害、損害", "保護する", "治療する", "助ける"], "correct": 0, "explanation": "harmは「（健康や評判などを）害する、傷つける」という動詞、また「害、悪影響」という名詞の意味もあります。形容詞はharmful（有害な）です。", "type": "choice"},
-        {"scenario": "「heal」の意味として最も適切なものは？", "choices": ["（傷などが）治る、癒やす、治療する", "痛む", "悪化する", "傷つける"], "correct": 0, "explanation": "healはケガや心の痛みが「治る、癒える」または「治療する」という意味の動詞です。cure（病気を治す）に似ています。ヒーリング（healing）の動詞形です。", "type": "choice"},
-        {"scenario": "「hesitate」の意味として最も適切なものは？", "choices": ["ためらう、躊躇する", "決心する", "急ぐ", "拒絶する"], "correct": 0, "explanation": "hesitateは不安などで「ためらう、躊躇する」という意味の動詞です。名詞形はhesitationです。例: Don't hesitate to ask.（遠慮なく尋ねてください。）", "type": "choice"},
-        {"scenario": "「host」の意味として最も適切なものは？", "choices": ["主催する、もてなす、主催者、ホスト", "参加する", "避ける", "見送る"], "correct": 0, "explanation": "hostはイベントを「主催する」または客を「もてなす」という動詞、また「主催者、主人」という名詞の意味もあります。対義語はguestです。", "type": "choice"}
+        {
+          "scenario": "「ridiculous」の意味として最も適切なものは？",
+          "choices": [
+            "ばかばかしい、とんでもない",
+            "賢い",
+            "真面目な",
+            "高価な"
+          ],
+          "correct": 0,
+          "explanation": "ridiculousは話や行動が「ばかばかしい、話にならない、とんでもない」という意味の形容詞です。sillyやfoolishに似ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「royal」の意味として最も適切なものは？",
+          "choices": [
+            "王室の、高貴な、王の",
+            "庶民の",
+            "民間の",
+            "大衆的な"
+          ],
+          "correct": 0,
+          "explanation": "royalは王や女王、王室に関する「王室の、国王の」という意味の形容詞です。例: royal family（王室、皇室）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sacred」の意味として最も適切なものは？",
+          "choices": [
+            "神聖な、宗教的な、不可侵の",
+            "世俗的な",
+            "汚れた",
+            "普通の"
+          ],
+          "correct": 0,
+          "explanation": "sacredは神や宗教に関する「神聖な、聖なる、非常に重要な」という意味の形容詞です。holyと似ています。対義語は secular です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「savage」の意味として最も適切なものは？",
+          "choices": [
+            "野生の、どう猛な、残酷な、未開の、野蛮人",
+            "穏やかな",
+            "飼い慣らされた",
+            "親切な"
+          ],
+          "correct": 0,
+          "explanation": "savageは「どう猛な、野生の」または「残酷な」という形容詞、また「野蛮人」という名詞の意味もあります。wildやbrutalに似ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scarce」の意味として最も適切なものは？",
+          "choices": [
+            "（一時的に）不足している、珍しい",
+            "豊富な",
+            "十分な",
+            "安価な"
+          ],
+          "correct": 0,
+          "explanation": "scarceは食料や物資などが「（一時的に）不足している、不十分な」という意味の形容詞です。名詞形はscarcityです。対義語は plentiful です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scenic」の意味として最も適切なものは？",
+          "choices": [
+            "景色の良い、風景の",
+            "汚い",
+            "都会の",
+            "産業の"
+          ],
+          "correct": 0,
+          "explanation": "scenicは「景色の良い、風景の美しい」という意味の形容詞です。scene（景色）から派生しています。例: scenic route（景色の良いルート）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scientific」の意味として最も適切なものは？",
+          "choices": [
+            "科学的な、理科の",
+            "芸術的な",
+            "伝統的な",
+            "宗教的な"
+          ],
+          "correct": 0,
+          "explanation": "scientificは「科学的な、科学に関する」という意味の形容詞です。science（科学）の形容詞形です。副詞形は scientifically です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「secondary」の意味として最も適切なものは？",
+          "choices": [
+            "第二の、二次的な、中等教育の",
+            "第一の",
+            "主要な",
+            "高等な"
+          ],
+          "correct": 0,
+          "explanation": "secondaryは「第二の、二次的な（第一のprimaryに次ぐ）」という意味の形容詞です。例: secondary school（中等学校、中学校・高校）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「secret」の意味として最も適切なものは？",
+          "choices": [
+            "秘密の、隠された、秘密、秘訣",
+            "公表された",
+            "明らかな",
+            "一般的な"
+          ],
+          "correct": 0,
+          "explanation": "secretは「秘密の、隠された」という形容詞、また「秘密、秘訣（キー）」という名詞の意味もあります。副詞形は secretly です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「secure」の意味として最も適切なものは？",
+          "choices": [
+            "安全な、確かな、確保する、守る",
+            "危険な",
+            "不安な",
+            "不確実な"
+          ],
+          "correct": 0,
+          "explanation": "secureは危険がなく「安全な、しっかり固定された」という形容詞、また「確保する、守る」という動詞の意味もあります。名詞形はsecurityです。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 3,
-      "title": "名詞編⑦：デジタル機器と充電器具",
-      "type": "Nouns: IT Hardware",
-      "emoji": "🖥️",
-      "subtitle": "コンピューター、スマートフォン、周辺機器などのIT名詞",
+      "title": "形容詞編⑬：感情や価値を表す形容詞",
+      "type": "Adjectives 13",
+      "emoji": "🌸",
+      "subtitle": "感情や価値を表す形容詞",
       "questions": [
-        {"scenario": "「computer」の意味として最も適切なものは？", "choices": ["コンピューター、電子計算機", "テレビ", "電話", "プリンター"], "correct": 0, "explanation": "computerは「コンピューター、電子計算機」を表す名詞です。計算する人（compute + er）が語源です。", "type": "choice"},
-        {"scenario": "「keyboard」の意味として最も適切なものは？", "choices": ["キーボード、鍵盤", "モニター", "マウス", "マイク"], "correct": 0, "explanation": "keyboardはパソコンの「キーボード」やピアノなどの「鍵盤」を表す名詞です。例: type on the keyboard（キーボードで打つ）", "type": "choice"},
-        {"scenario": "「mouse」の意味として最も適切なものは？", "choices": ["マウス、ネズミ", "画面", "スピーカー", "接続線"], "correct": 0, "explanation": "mouseはパソコンの「マウス」や、動物の「ネズミ（複数形はmice）」を表す名詞です。動きがネズミに似ていることが由来です。", "type": "choice"},
-        {"scenario": "「printer」の意味として最も適切なものは？", "choices": ["プリンター、印刷機", "キーボード", "スキャナー", "画面"], "correct": 0, "explanation": "printerは紙に印刷を行う「プリンター、印刷機」を表す名詞です。print（印刷する）に人・機械を表す-erがついた形です。", "type": "choice"},
-        {"scenario": "「smartphone」の意味として最も適切なものは？", "choices": ["スマートフォン、スマホ", "携帯電話", "パソコン", "タブレット"], "correct": 0, "explanation": "smartphoneは多機能携帯電話である「スマートフォン」を表す名詞です。smart（賢い）+ phone（電話）です。", "type": "choice"},
-        {"scenario": "「tablet」の意味として最も適切なものは？", "choices": ["タブレット、錠剤", "パソコン", "ノート", "電子辞書"], "correct": 0, "explanation": "tabletは板型の情報端末「タブレット」や、平らな「薬の錠剤」を表す名詞です。例: tablet PC（タブレットPC）", "type": "choice"},
-        {"scenario": "「screen」の意味として最も適切なものは？", "choices": ["画面、スクリーン、上映する、遮る", "キーボード", "スピーカー", "マウス"], "correct": 0, "explanation": "screenはテレビやパソコンの「画面、スクリーン」を表す名詞、また「上映する」という動詞の意味もあります。例: computer screen（パソコン画面）", "type": "choice"},
-        {"scenario": "「cable」の意味として最も適切なものは？", "choices": ["ケーブル、電線、電報", "キーボード", "モニター", "スイッチ"], "correct": 0, "explanation": "cableは電気やデータを送る「ケーブル、電線」を表す名詞です。例: charging cable（充電ケーブル）", "type": "choice"},
-        {"scenario": "「battery」の意味として最も適切なものは？", "choices": ["電池、バッテリー", "電線", "ボタン", "電源"], "correct": 0, "explanation": "batteryは電気を蓄える「電池、バッテリー」を表する名詞です。例: rechargeable battery（充電式電池）", "type": "choice"},
-        {"scenario": "「charger」の意味として最も適切なものは？", "choices": ["充電器", "電池", "接続線", "電源"], "correct": 0, "explanation": "chargerは電池に電気を蓄える「充電器」を表す名詞です。charge（充電する）に機械を表す-erがついた形です。例: phone charger（スマホの充電器）", "type": "choice"}
+        {
+          "scenario": "「sensitive」の意味として最も適切なものは？",
+          "choices": [
+            "敏感な、感性豊かな、取扱注意の",
+            "鈍感な",
+            "無関心な",
+            "強い"
+          ],
+          "correct": 0,
+          "explanation": "sensitiveは刺激や他人の感情に「敏感な、感性豊かな」または「取扱注意の（機密の）」という意味の形容詞です。対義語は insensitive です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「severe」の意味として最も適切なものは？",
+          "choices": [
+            "（気候や病気が）厳しい、深刻な、過酷な、厳格な",
+            "穏やかな",
+            "軽い",
+            "優しい"
+          ],
+          "correct": 0,
+          "explanation": "severeは風雨や痛みが「厳しい、激しい、深刻な」、または態度が「厳格な」という意味の形容詞です。対義語は mild や gentle です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「shameful」の意味として最も適切なものは？",
+          "choices": [
+            "恥ずべき、みっともない",
+            "誇らしい",
+            "名誉な",
+            "楽しい"
+          ],
+          "correct": 0,
+          "explanation": "shamefulは「恥ずべき、みっともない、不名誉な」という意味の形容詞です。shame（恥）から来ています。対義語は proud や honorable です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sheer」の意味として最も適切なものは？",
+          "choices": [
+            "まったくの、純然たる、（崖などが）切り立った",
+            "一部の",
+            "平らな",
+            "濁った"
+          ],
+          "correct": 0,
+          "explanation": "sheerは強調語として「まったくの、純然たる」、または布が「ごく薄い」、崖が「ほぼ垂直の、切り立った」という意味の形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「publish」の意味として最も適切なものは？",
+          "choices": [
+            "出版する、公表する、掲載する",
+            "隠す",
+            "購入する",
+            "書く"
+          ],
+          "correct": 0,
+          "explanation": "publishは書籍などを「出版する、発行する」または情報を「公表する」という意味の動詞です。出版社は publisher です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「similar」の意味として最も適切なものは？",
+          "choices": [
+            "似ている、同様の、類似した",
+            "異なっている",
+            "同じである",
+            "関係のない"
+          ],
+          "correct": 0,
+          "explanation": "similarは be similar to 〜 の形で「〜に似ている、同様の」という意味の形容詞です。名詞形はsimilarityです。対義語は different です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「skillful」の意味として最も適切なものは？",
+          "choices": [
+            "熟練した、上手な、巧みな",
+            "下手な",
+            "未熟な",
+            "簡単な"
+          ],
+          "correct": 0,
+          "explanation": "skillfulは技術があって「熟練した、上手な、巧みな」という意味の形容詞です。skill（技術）から来ています。対義語は unskillful です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「slight」の意味として最も適切なものは？",
+          "choices": [
+            "わずかな、少しの、取るに足らない",
+            "多額の",
+            "重大な",
+            "重い"
+          ],
+          "correct": 0,
+          "explanation": "slightは数量や程度が「わずかな、少しの、取るに足らない」という意味の形容詞です。副詞形は slightly（少し、わずかに）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「slim」の意味として最も適切なものは？",
+          "choices": [
+            "ほっそりした、スリムな、（可能性が）わずかな",
+            "太った",
+            "豊かな",
+            "確実な"
+          ],
+          "correct": 0,
+          "explanation": "slimは体型が「ほっそりした、スリムな（褒め言葉）」、または可能性が「わずかな」という意味の形容詞です。対義語は stout や fat です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「social」の意味として最も適切なものは？",
+          "choices": [
+            "社会の、社会的な、社交的な",
+            "個人の",
+            "私的な",
+            "家庭の"
+          ],
+          "correct": 0,
+          "explanation": "socialは「社会の、社会的な」または「社交的な」という意味の形容詞です。名詞形はsociety（社会）です。例: social network（SNS）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 4,
-      "title": "名詞編⑧：社会で働く職業・人々",
-      "type": "Nouns: Professions",
-      "emoji": "🧑‍💼",
-      "subtitle": "警官、科学者、弁護士などの職業を表す名詞",
+      "title": "形容詞編⑭：重要形容詞の総復習",
+      "type": "Adjectives 14",
+      "emoji": "🎓",
+      "subtitle": "総仕上げ：重要形容詞の総復習",
       "questions": [
-        {"scenario": "「officer」の意味として最も適切なものは？", "choices": ["警官、役人、将校", "社長", "医師", "運転手"], "correct": 0, "explanation": "officerは「警官（police officer）」や、行政の「役人、公務員」、軍隊の「将校」を表す名詞です。office（官職、事務所）から来ています。", "type": "choice"},
-        {"scenario": "「dentist」の意味として最も適切なものは？", "choices": ["歯医者、歯科医師", "内科医", "外科医", "看護師"], "correct": 0, "explanation": "dentistは「歯医者、歯科医」を表す名詞です。dent-（歯）に人を表す-istがついた形です。例: go to the dentist（歯医者に行く）", "type": "choice"},
-        {"scenario": "「scientist」の意味として最も適切なものは？", "choices": ["科学者、理科の先生", "技術者", "小説家", "音楽家"], "correct": 0, "explanation": "scientistは「科学者」を表す名詞です。science（科学）に人を表す-istがついた形です。例: research scientist（研究科学者）", "type": "choice"},
-        {"scenario": "「lawyer」の意味として最も適切なものは？", "choices": ["弁護士", "裁判官", "警察官", "政治家"], "correct": 0, "explanation": "lawyerは法律の専門家である「弁護士」を表す名詞です。law（法律）に人を表す-yerがついた形です。attorneyとも言います。", "type": "choice"},
-        {"scenario": "「politician」の意味として最も適切なものは？", "choices": ["政治家", "役人", "大統領", "外交官"], "correct": 0, "explanation": "politicianは「政治家」を表す名詞です。politics（政治）から派生しています。例: local politician（地方政治家）", "type": "choice"},
-        {"scenario": "「actor」の意味として最も適切なものは？", "choices": ["俳優、役者、男優", "歌手", "監督", "脚本家"], "correct": 0, "explanation": "actorは劇や映画に出演する「俳優、役者」を表す名詞です。act（演技する）の派生語です。女性の俳優は actress とも呼ばれます。", "type": "choice"},
-        {"scenario": "「journalist」の意味として最も適切なものは？", "choices": ["ジャーナリスト、報道記者", "作家", "写真家", "アナウンサー"], "correct": 0, "explanation": "journalistは新聞や雑誌などの「ジャーナリスト、報道記者」を表す名詞です。journal（日誌、雑誌）から来ています。", "type": "choice"},
-        {"scenario": "「mechanic」の意味として最も適切なものは？", "choices": ["整備士、機械工、修理屋", "エンジニア", "大工", "運転手"], "correct": 0, "explanation": "mechanicは車や機械などの「整備士、機械工」を表す名詞です。例: car mechanic（自動車整備士）", "type": "choice"},
-        {"scenario": "「architect」の意味として最も適切なものは？", "choices": ["建築家、設計者", "大工", "左官", "画家"], "correct": 0, "explanation": "architectは建物などの「建築家、設計者」を表す名詞です。名詞形はarchitecture（建築、建築学）です。", "type": "choice"},
-        {"scenario": "「secretary」の意味として最も適切なものは？", "choices": ["秘書、長官、大臣", "受付", "事務員", "社長"], "correct": 0, "explanation": "secretaryは社長などの補佐を行う「秘書」、または米国の「長官、閣僚（Secretary of Stateなど）」を表す名詞です。", "type": "choice"}
+        {
+          "scenario": "「sole」の意味として最も適切なものは？",
+          "choices": [
+            "唯一の、単独の、足の裏、靴底",
+            "共通の",
+            "多数の",
+            "共同の"
+          ],
+          "correct": 0,
+          "explanation": "soleは「唯一の、ただ一つの、単独の」という形容詞、また「足の裏、靴底」という名詞の意味もあります。副詞形は solely です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「solid」の意味として最も適切なものは？",
+          "choices": [
+            "固体の、堅い、しっかりした、固体",
+            "液体の",
+            "気体の",
+            "柔らかい"
+          ],
+          "correct": 0,
+          "explanation": "solidは「固体の、堅い」または内容が「しっかりした」という形容詞、また「固体」という名詞の意味もあります。対義語は liquid（液体）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sour」の意味として最も適切なものは？",
+          "choices": [
+            "酸っぱい、酸味のある、（態度が）不機嫌な",
+            "甘い",
+            "塩辛い",
+            "苦い"
+          ],
+          "correct": 0,
+          "explanation": "sourはレモンなどのように「酸っぱい、酸味がある」または態度が「不機嫌な、気難しい」という意味の形容詞です。対義語は sweet です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「southern」の意味として最も適切なものは？",
+          "choices": [
+            "南の、南部の、南向きの",
+            "北の",
+            "東の",
+            "西の"
+          ],
+          "correct": 0,
+          "explanation": "southernは「南の、南向きの、南部の」という意味の形容詞です。south（南）から来ています。北は northern、東は eastern、西は western です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「spare」の意味として最も適切なものは？",
+          "choices": [
+            "予備の、余分の、割く、省く、スペア",
+            "必要な",
+            "主要な",
+            "不足している"
+          ],
+          "correct": 0,
+          "explanation": "spareは「予備の、余分な（普段使わない）」という形容詞、時間を「割く」という動詞、また「スペア（タイヤなど）」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「specific」の意味として最も適切なものは？",
+          "choices": [
+            "具体的な、特定の、明確な",
+            "曖昧な",
+            "一般的な",
+            "適当な"
+          ],
+          "correct": 0,
+          "explanation": "specificは「具体的な、明確な」または「特定の」という意味の形容詞です。対義語は vague（曖昧な）や general です。副詞形は specifically です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「spiritual」の意味として最も適切なものは？",
+          "choices": [
+            "精神的な、霊的な、宗教的な",
+            "物質的な",
+            "肉体的な",
+            "科学的な"
+          ],
+          "correct": 0,
+          "explanation": "spiritualは物質（material）に対して「精神的な、霊的な、宗教的な」という意味の形容詞です。名詞は spirit（精神、魂）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「splendid」の意味として最も適切なものは？",
+          "choices": [
+            "輝かしい、実に見事な、豪華な",
+            "みすぼらしい",
+            "普通の",
+            "暗い"
+          ],
+          "correct": 0,
+          "explanation": "splendidは景色や衣服、アイデアなどが「実に見事な、輝かしい、素晴らしい」という意味の形容詞です。magnificentに似ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comfortable (再認)」の意味として最も適切なものは？",
+          "choices": [
+            "快適な、心地よい、気楽な",
+            "不快な",
+            "狭い",
+            "高価な"
+          ],
+          "correct": 0,
+          "explanation": "comfortableは「快適な、心地よい」という意味の形容詞です。対義語はuncomfortableです。おさらい問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convenient (再認)」の意味として最も適切なものは？",
+          "choices": [
+            "便利な、都合の良い",
+            "不便な",
+            "難しい",
+            "遠い"
+          ],
+          "correct": 0,
+          "explanation": "convenientは時間や場所が「便利な、都合が良い」という意味の形容詞です。おさらい問題です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 5,
-      "title": "形容詞編⑦：一般的な状態と評価",
-      "type": "Adjectives 7",
-      "emoji": "⭐",
-      "subtitle": "有名な、お気に入りの、外国のなどの形容詞",
+      "title": "形容詞・副詞ミックス：性質と程度を表す言葉",
+      "type": "Adjectives & Adverbs Mix",
+      "emoji": "🔀",
+      "subtitle": "形容詞と副詞が混在する総合セット",
       "questions": [
-        {"scenario": "「fair」の意味として最も適切なものは？", "choices": ["公平な、妥当な、まずまずの、見本市", "不公平な", "素晴らしい", "厳しい"], "correct": 0, "explanation": "fairは「公平な、公正な」または「まずまずの、かなりの」という形容詞、また「見本市、フェア」という名詞の意味もあります。対義語はunfairです。", "type": "choice"},
-        {"scenario": "「desirable」の意味として最も適切なものは？", "choices": ["望ましい、好ましい、手に入れたくなる", "珍しい", "難しい", "怪しい"], "correct": 0, "explanation": "desirableは状態や条件などが「望ましい、好ましい（価値があり、求められている）」という意味の形容詞です。対義語は undesirable です。", "type": "choice"},
-        {"scenario": "「famous」の意味として最も適切なものは？", "choices": ["有名な、名高い", "無名の", "普通の", "素晴らしい"], "correct": 0, "explanation": "famousは多くの人に知られている「有名な」という意味の形容詞です。be famous for 〜（〜で有名だ）でよく使われます。名詞は fame です。", "type": "choice"},
-        {"scenario": "「favorite」の意味として最も適切なものは？", "choices": ["お気に入りの、大好きな、お気に入りのもの", "嫌いな", "普通の", "最も安い"], "correct": 0, "explanation": "favoriteは「お気に入りの、一番好きな」という形容詞、また「お気に入りのもの」という名詞でもあります。例: favorite food（一番好きな食べ物）", "type": "choice"},
-        {"scenario": "「final」の意味として最も適切なものは？", "choices": ["最終の、最後の、決定的な、決勝戦", "最初の", "中間の", "一時的な"], "correct": 0, "explanation": "finalは「最終の、最後の」という形容詞、またスポーツの「決勝戦」や試験の「期末試験（finals）」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「flat」の意味として最も適切なものは？", "choices": ["平らな、平坦な、パンクした、アパート", "傾いた", "凸凹の", "高い"], "correct": 0, "explanation": "flatは「平らな、平坦な」またはタイヤが「パンクした」という形容詞、イギリス英語で「共同住宅、アパート」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「foreign」の意味として最も適切なものは？", "choices": ["外国の、対外的な、異質の", "国内の", "地元の", "伝統的な"], "correct": 0, "explanation": "foreignは「外国の、在来でない」という意味の形容詞です。外国人は foreigner で、対義語は domestic や local です。例: foreign country（外国）", "type": "choice"},
-        {"scenario": "「formal」の意味として最も適切なものは？", "choices": ["公式の、正式の、フォーマルな、かたい", "略式の", "普段の", "簡単な"], "correct": 0, "explanation": "formalは「公式の、正式な」または服装や態度が「かたい、礼儀にかなった」という意味の形容詞です。対義語はinformalやcasualです。", "type": "choice"},
-        {"scenario": "「former」の意味として最も適切なものは？", "choices": ["前の、元の、前者の", "後の", "後者の", "現在の"], "correct": 0, "explanation": "formerは「前の、元の、かつての」という意味の形容詞です。the former で「前者」を指し、対義語は the latter（後者）または latter です。", "type": "choice"},
-        {"scenario": "「free」の意味として最も適切なものは？", "choices": ["自由な、無料の、暇な、免除された", "拘束された", "有料の", "忙しい"], "correct": 0, "explanation": "freeは「自由な」「無料の」「（時間が）暇な、空いている」という意味の多機能な形容詞です。例: free time（自由時間 / 暇な時間）", "type": "choice"}
+        {
+          "scenario": "「necessary (再認)」の意味として最も適切なものは？",
+          "choices": [
+            "必要な、不可欠な",
+            "不要な",
+            "便利な",
+            "無駄な"
+          ],
+          "correct": 0,
+          "explanation": "necessaryは「（目的のために）必要な、欠かせない」という意味の形容詞です。おさらい問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excellent (再認)」の意味として最も適切なものは？",
+          "choices": [
+            "極めて優れた、優秀な",
+            "普通の",
+            "下手な",
+            "古い"
+          ],
+          "correct": 0,
+          "explanation": "excellentは「優秀な、極めて優れた」と高く評価する形容詞です。おさらい問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wake up」の意味として最も適切なものは？",
+          "choices": [
+            "目が覚める、起きる",
+            "寝る",
+            "夢を見る",
+            "眠る"
+          ],
+          "correct": 0,
+          "explanation": "wake upは「目が覚める、起きる」という意味です。get up（ベッドから出る）とセットで覚えましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put on」の意味として最も適切なものは？",
+          "choices": [
+            "着る、履く、身につける",
+            "脱ぐ",
+            "置く",
+            "落とす"
+          ],
+          "correct": 0,
+          "explanation": "put onは「着る、履く、身につける」という意味です。対義語はtake off（脱ぐ）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn on」の意味として最も適切なものは？",
+          "choices": [
+            "つける（電気等）、点ける",
+            "消す",
+            "回す",
+            "壊す"
+          ],
+          "correct": 0,
+          "explanation": "turn onは電気や機械を「つける、点ける」という意味です。対義語はturn offです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「forever」の意味として最も適切なものは？",
+          "choices": [
+            "永遠に、永久に、いつまでも",
+            "一時的に",
+            "ついに",
+            "将来"
+          ],
+          "correct": 0,
+          "explanation": "foreverは「永遠に、永久に、いつまでも」という意味の副詞です。for goodとも言います。例: remember forever（永遠に覚えている）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「properly」の意味として最も適切なものは？",
+          "choices": [
+            "適切に、きちんと、正しく",
+            "不適切に",
+            "簡単に",
+            "適当に"
+          ],
+          "correct": 0,
+          "explanation": "properlyは「適切に、きちんと、正しく」という意味の副詞です。形容詞はproperです。例: clean properly（きちんと掃除する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「separately」の意味として最も適切なものは？",
+          "choices": [
+            "別々に、個別に",
+            "一緒に",
+            "同時に",
+            "交互に"
+          ],
+          "correct": 0,
+          "explanation": "separately is 「別々に、個別に」という意味の副詞です。対義語はtogether（一緒に）です。例: pay separately（別々に支払う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「greatly」の意味として最も適切なものは？",
+          "choices": [
+            "大いに、大層、非常に",
+            "少しだけ",
+            "全然〜ない",
+            "まれに"
+          ],
+          "correct": 0,
+          "explanation": "greatlyは「大いに、非常に（very muchとほぼ同じ）」と程度を強める副詞です。形容詞はgreatです。例: greatly improve（大幅に改善する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mostly」の意味として最も適切なものは？",
+          "choices": [
+            "大部分は、たいてい",
+            "少しだけ",
+            "完全に",
+            "別々に"
+          ],
+          "correct": 0,
+          "explanation": "mostlyは「大部分は、ほとんどは、たいてい」という意味の副詞です。mainlyやalmost entirelyと似ています。例: mostly sunny（だいたい晴れ）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 6,
-      "title": "形容詞編⑧：心身の状態と評価",
-      "type": "Adjectives 8",
-      "emoji": "⭐",
-      "subtitle": "新鮮な、親切な、健康ななどの形容詞",
+      "title": "副詞編①：程度や頻度を表す重要な副詞",
+      "type": "Adverbs 1",
+      "emoji": "📊",
+      "subtitle": "程度や頻度を表す重要な副詞",
       "questions": [
-        {"scenario": "「fresh」の意味として最も適切なものは？", "choices": ["新鮮な、できたての、真新しい", "古い", "腐った", "塩辛い"], "correct": 0, "explanation": "freshは食品などが「新鮮な、もぎたての」、または水や空気が「澄んだ、さわやかな」という意味の形容詞です。対義語は stale（古い、あせた）です。", "type": "choice"},
-        {"scenario": "「friendly」の意味として最も適切なものは？", "choices": ["友好的な、親切な、人懐っこい", "敵対的な", "冷淡な", "恥ずかしがりの"], "correct": 0, "explanation": "friendlyは「友好的な、親切な、人懐っこい」という意味の形容詞です。名詞 friend に形容詞語尾 -ly がついた形です。対義語はunfriendlyです。", "type": "choice"},
-        {"scenario": "「frequent」の意味として最も適切なものは？", "choices": ["頻繁な、しばしば起こる", "まれな", "一時的な", "継続的な"], "correct": 0, "explanation": "frequentは「頻繁な、度重なる」という意味の形容詞です。副詞形は frequently です。対義語は infrequent（まれな）です。", "type": "choice"},
-        {"scenario": "「funny」の意味として最も適切なものは？", "choices": ["おかしい、滑稽な、奇妙な", "真面目な", "退屈な", "悲しい"], "correct": 0, "explanation": "funnyは笑いを誘う「おかしい、滑稽な」または「奇妙な、変な（strangeとほぼ同じ）」という意味の形容詞です。例: funny story（面白い話）", "type": "choice"},
-        {"scenario": "「general」の意味として最も適切なものは？", "choices": ["一般的な、全体の、大まかな、将軍", "特別な", "一部の", "詳細な"], "correct": 0, "explanation": "generalは「一般的な、全体の」という形容詞、また軍隊の「将軍、大将」という名詞の意味もあります。副詞形は generally です。対義語は specific です。", "type": "choice"},
-        {"scenario": "「glad」の意味として最も適切なものは？", "choices": ["嬉しく思う、喜んでいる", "悲しい", "怒っている", "驚いた"], "correct": 0, "explanation": "gladは I'm glad to 〜 の形で「（一時的に）嬉しく思う、喜んでいる」という意味の形容詞です。happyよりも喜びの感情が直接的です。", "type": "choice"},
-        {"scenario": "「grateful」の意味として最も適切なものは？", "choices": ["感謝している、ありがたく思う", "不満な", "怒っている", "無関心な"], "correct": 0, "explanation": "gratefulは be grateful for/to 〜 の形で「〜に感謝している」という意味の形容詞です。thankfulとほぼ同じです。名詞形はgratitudeです。", "type": "choice"},
-        {"scenario": "「guilty」の意味として最も適切なものは？", "choices": ["有罪の、罪の意識がある、後ろめたい", "無罪の", "正直な", "無実の"], "correct": 0, "explanation": "guiltyは裁判で「有罪の」、または主観的に「罪の意識がある、後ろめたい」という意味の形容詞です。対義語は innocent（無罪の）です。", "type": "choice"},
-        {"scenario": "「healthy」の意味として最も適切なものは？", "choices": ["健康な、健康的な、健全な", "病気の", "弱い", "疲れた"], "correct": 0, "explanation": "healthyは「健康な、健康的な」という意味の形容詞です。health（健康）から派生しています。対義語はunhealthyです。例: healthy diet（健康的な食事）", "type": "choice"},
-        {"scenario": "「helpful」の意味として最も適切なものは？", "choices": ["役に立つ、助けになる", "役に立たない", "邪魔な", "不親切な"], "correct": 0, "explanation": "helpfulは「役に立つ、助けになる」という意味の形容詞です。help（助ける）+ ful（いっぱいの）です。usefulに似ています。対義語はhelplessです。", "type": "choice"}
+        {
+          "scenario": "「absolutely」の意味として最も適切なものは？",
+          "choices": [
+            "絶対に、完全に、全くその通り",
+            "おそらく",
+            "たまに",
+            "決して〜ない"
+          ],
+          "correct": 0,
+          "explanation": "absolutelyは「絶対に、完全に」または会話で「全くその通り！」と強く同意するときの副詞です。例: absolutely right（完全に正しい）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「completely」の意味として最も適切なものは？",
+          "choices": [
+            "完全に、すっかり",
+            "部分的に",
+            "ほとんど〜ない",
+            "少し"
+          ],
+          "correct": 0,
+          "explanation": "completelyは「完全に、すっかり」という意味の副詞です。例: completely different（完全に異なる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extremely」の意味として最も適切なものは？",
+          "choices": [
+            "極めて、非常に",
+            "適度に",
+            "少しだけ",
+            "一般的に"
+          ],
+          "correct": 0,
+          "explanation": "extremelyは「極めて、非常に（veryよりさらに程度が強い）」という意味の副詞です。例: extremely cold（極めて寒い）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「quite」の意味として最も適切なものは？",
+          "choices": [
+            "かなり、なかなか、すっかり",
+            "少しだけ",
+            "全然〜ない",
+            "確実に"
+          ],
+          "correct": 0,
+          "explanation": "quiteは「かなり、なかなか（fairlyやratherに近い）」または「すっかり、完全に」という意味の副詞です。例: quite well（かなりよく）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scarcely」の意味として最も適切なものは？",
+          "choices": [
+            "ほとんど〜ない",
+            "十分に",
+            "突然",
+            "徐々に"
+          ],
+          "correct": 0,
+          "explanation": "scarcelyは「ほとんど〜ない（程度の否定）」を表す副詞で、hardlyやseldomと同じく準否定語として扱われます。ほとんど時間がない時などに使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「highly」の意味として最も適切なものは？",
+          "choices": [
+            "非常に、大いに、高度に",
+            "高く（物理的に）",
+            "ほとんど〜ない",
+            "一般的に"
+          ],
+          "correct": 0,
+          "explanation": "highlyは程度や評価が「非常に、大いに、高度に」という意味の副詞です。物理的に高い（high）とは少し異なります。例: highly recommended（非常におすすめ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「primarily」の意味として最も適切なものは？",
+          "choices": [
+            "主として、第一に、元々は",
+            "一般的に",
+            "偶然に",
+            "ただの"
+          ],
+          "correct": 0,
+          "explanation": "primarilyは「主として、第一に（何よりも優先されること）」という意味の副詞です。形容詞はprimaryです。mainlyとほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「readily」の意味として最も適切なものは？",
+          "choices": [
+            "快く、すぐに、容易に",
+            "嫌そうに",
+            "決して〜ない",
+            "偶然に"
+          ],
+          "correct": 0,
+          "explanation": "readilyは「快く、進んで（willingly）」、または「すぐに、容易に（easily）」という意味の副詞です。形容詞 ready から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「possibly」の意味として最も適切なものは？",
+          "choices": [
+            "もしかすると、たぶん、ひょっとすると",
+            "確実に",
+            "絶対に〜ない",
+            "まれに"
+          ],
+          "correct": 0,
+          "explanation": "possiblyは「もしかすると、たぶん（可能性がゼロではない）」を表す副詞です。possibly canの形で「なんとかできる」という意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「normally」の意味として最も適切なものは？",
+          "choices": [
+            "普通は、通常は",
+            "異常に",
+            "一時的に",
+            "絶対に"
+          ],
+          "correct": 0,
+          "explanation": "normallyは「普通は、通常は（通常の状態では）」という意味の副詞です。usuallyと似ています。形容詞はnormal（普通の）です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 7,
-      "title": "副詞編④：時間関係・限界・程度",
-      "type": "Adverbs 4",
-      "emoji": "📍",
-      "subtitle": "結局、文字通り、単になどの副詞",
+      "title": "副詞編②：確実性や強調を表す副詞表現",
+      "type": "Adverbs 2",
+      "emoji": "⏱️",
+      "subtitle": "確実性や強調を表す副詞表現",
       "questions": [
-        {"scenario": "「eventually」の意味として最も適切なものは？", "choices": ["結局は、ついに、やがて", "最初に", "一時的に", "絶対に"], "correct": 0, "explanation": "eventuallyは様々な紆余曲折の末に「結局は、ついに、やがて」という意味の副詞です。finallyやin the endに似ています。", "type": "choice"},
-        {"scenario": "「literally」の意味として最も適切なものは？", "choices": ["文字通り、まさに、比喩でなく", "誇張して", "大まかに", "逆に"], "correct": 0, "explanation": "literallyは「文字通り（誇張でなく事実であること）」または口語で強調語として「まさに、本当に」という意味で使われる副詞です。", "type": "choice"},
-        {"scenario": "「merely」の意味として最も適切なものは？", "choices": ["単に、ただ〜にすぎない", "非常に", "完全に", "主に"], "correct": 0, "explanation": "merelyは「単に、ただ〜にすぎない（onlyとほぼ同じ）」という意味の副詞です。形容詞はmereです。例: merely a student（ただの学生にすぎない）", "type": "choice"},
-        {"scenario": "「chiefly」の意味として最も適切なものは？", "choices": ["主として、主に、大部分は", "完全に", "遠くに", "決して〜ない"], "correct": 0, "explanation": "chieflyは「主として、主に（mostlyやmainlyとほぼ同じ）」という意味の副詞です。形容詞/名詞の chief（主要な、長）から来ています。", "type": "choice"},
-        {"scenario": "「practically」の意味として最も適切なものは？", "choices": ["事実上、ほとんど、実用的に", "理論上は", "全く〜ない", "一時的に"], "correct": 0, "explanation": "practicallyは「事実上、ほとんど（almost）」または「実用的に、実際的に」という意味の副詞です。virtuallyとほぼ同じです。", "type": "choice"},
-        {"scenario": "「roughly」の意味として最も適切なものは？", "choices": ["おおよそ、大雑把に、荒々しく", "正確に", "滑らかに", "徐々に"], "correct": 0, "explanation": "roughlyは「おおよそ、大体（approximatelyとほぼ同じ）」または手触りや態度が「荒々しく、雑に」という意味の副詞です。形容詞はroughです。", "type": "choice"},
-        {"scenario": "「silently」の意味として最も適切なものは？", "choices": ["静かに、黙って、無言で", "騒がしく", "ゆっくり", "直接に"], "correct": 0, "explanation": "silentlyは「静かに、黙って、無言で」という意味の副詞です。silent（静かな）の副詞形です。例: sit silently（黙って座る）", "type": "choice"},
-        {"scenario": "「solely」の意味として最も適切なものは？", "choices": ["単に、単独で、〜だけで", "共同で", "多様に", "主に"], "correct": 0, "explanation": "solelyは「単に、単独で、〜だけで（onlyやaloneとほぼ同じ）」という意味の副詞です。形容詞はsole（単独の）です。例: solely responsible（単独で責任がある）", "type": "choice"},
-        {"scenario": "「somewhat」の意味として最も適切なものは？", "choices": ["いくぶん、多少、やや", "完全に", "少しも〜ない", "大いに"], "correct": 0, "explanation": "somewhatは「いくぶん、多少、やや（a littleやslightlyに近い）」という意味の副詞です。例: somewhat difficult（やや難しい）", "type": "choice"},
-        {"scenario": "「thoroughly」の意味として最も適切なものは？", "choices": ["徹底的に、完全に、つくづく", "大雑把に", "部分的に", "急いで"], "correct": 0, "explanation": "thoroughlyは「徹底的に、完全に（completelyやfullyとほぼ同じ）」という意味の副詞です。形容詞はthorough（徹底的な）です。例: clean thoroughly（徹底的に掃除する）", "type": "choice"}
+        {
+          "scenario": "「otherwise」の意味として最も適切なものは？",
+          "choices": [
+            "さもなければ、その他の点では、違った風に",
+            "その代わりに",
+            "同様に",
+            "したがって"
+          ],
+          "correct": 0,
+          "explanation": "otherwiseは「さもなければ（if not）」または「その他の点では（in other respects）」という意味の論理副詞です。接続詞のように機能します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「particularly」の意味として最も適切なものは？",
+          "choices": [
+            "特に、とりわけ、著しく",
+            "一般的に",
+            "偶然に",
+            "ただの"
+          ],
+          "correct": 0,
+          "explanation": "particularlyは「特に、とりわけ」という意味の副詞で、especiallyとほぼ同じです。形容詞はparticular（特定の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「shortly」の意味として最も適切なものは？",
+          "choices": [
+            "まもなく、手短に",
+            "長く",
+            "遅れて",
+            "一時的に"
+          ],
+          "correct": 0,
+          "explanation": "shortlyは時間的に「まもなく、すぐに（soonとほぼ同じ）」という意味の副詞です。例: shortly after that（その直後）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「similarly」の意味として最も適切なものは？",
+          "choices": [
+            "同様に、同じように",
+            "違って",
+            "個別に",
+            "交互に"
+          ],
+          "correct": 0,
+          "explanation": "similarlyは「同様に、同じように」という意味の副詞です。形容詞はsimilar（似ている）です。対義語はdifferentlyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thus」の意味として最も適切なものは？",
+          "choices": [
+            "このように、したがって、だから",
+            "逆に",
+            "例えば",
+            "以前は"
+          ],
+          "correct": 0,
+          "explanation": "thusは「このように（in this way）」または「したがって、だから（therefore）」という意味のやや硬い副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「virtually」の意味として最も適切なものは？",
+          "choices": [
+            "実質的に、ほとんど、仮想的に",
+            "実際に",
+            "絶対に〜ない",
+            "一時的に"
+          ],
+          "correct": 0,
+          "explanation": "virtuallyは「実質的に、事実上、ほとんど（almost）」という意味の重要副詞です。バーチャルリアリティのバーチャルです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deliberately」の意味として最も適切なものは？",
+          "choices": [
+            "意図的に、故意に、慎重に",
+            "偶然に",
+            "急いで",
+            "突然に"
+          ],
+          "correct": 0,
+          "explanation": "deliberatelyは「意図的に、故意に（on purposeとほぼ同じ）」または「慎重に」という意味の副詞です。形容詞はdeliberateです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「literally」の意味として最も適切なものは？",
+          "choices": [
+            "文字通り、まさに、比喩でなく",
+            "誇張して",
+            "大まかに",
+            "逆に"
+          ],
+          "correct": 0,
+          "explanation": "literallyは「文字通り（誇張でなく事実であること）」または口語で強調語として「まさに、本当に」という意味で使われる副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merely」の意味として最も適切なものは？",
+          "choices": [
+            "単に、ただ〜にすぎない",
+            "非常に",
+            "完全に",
+            "主に"
+          ],
+          "correct": 0,
+          "explanation": "merelyは「単に、ただ〜にすぎない（onlyとほぼ同じ）」という意味の副詞です。形容詞はmereです。例: merely a student（ただの学生にすぎない）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chiefly」の意味として最も適切なものは？",
+          "choices": [
+            "主として、主に、大部分は",
+            "完全に",
+            "遠くに",
+            "決して〜ない"
+          ],
+          "correct": 0,
+          "explanation": "chieflyは「主として、主に（mostlyやmainlyとほぼ同じ）」という意味の副詞です。形容詞/名詞の chief（主要な、長）から来ています。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 8,
-      "title": "重要熟語編⑦：日常の接続表現と対比",
-      "type": "Phrasal Verbs 7",
-      "emoji": "🔗",
-      "subtitle": "偶然、故意に、例えばなどの前置詞熟語",
+      "title": "副詞編③：文脈や態度を示す副詞",
+      "type": "Adverbs 3",
+      "emoji": "🎯",
+      "subtitle": "文脈や態度を示す副詞",
       "questions": [
-        {"scenario": "「by accident」の意味として最も適切なものは？", "choices": ["偶然に、知らずに", "故意に", "計画的に", "安全に"], "correct": 0, "explanation": "by accident は「偶然に、知らずに」という意味の重要熟語です。by chance や accidentally とほぼ同じです。対義語は on purpose です。", "type": "choice"},
-        {"scenario": "「on purpose」の意味として最も適切なものは？", "choices": ["故意に、わざと、意図的に", "偶然に", "間違いで", "急いで"], "correct": 0, "explanation": "on purpose は「故意に、わざと、意図的に」という意味の重要熟語です。deliberately とほぼ同じです。対義語は by accident です。", "type": "choice"},
-        {"scenario": "「in a hurry」の意味として最も適切なものは？", "choices": ["急いで、あわてて", "のんびりと", "時間通りに", "遅れて"], "correct": 0, "explanation": "in a hurry は「急いで、あわてて」という意味の定番熟語です。hurry（急ぐこと、名詞）から来ています。例: in a hurry to catch the train（電車に乗るために急いでいる）", "type": "choice"},
-        {"scenario": "「in public」の意味として最も適切なものは？", "choices": ["人前で、公然と", "秘密裏に", "家の中で", "静かに"], "correct": 0, "explanation": "in public は「人前で、公然と（公共の場で）」という意味の熟語です。対義語は in private です。例: speak in public（人前で話す）", "type": "choice"},
-        {"scenario": "「in private」の意味として最も適切なものは？", "choices": ["非公式に、秘密裏に、プライベートで", "公然と", "大勢で", "賑やかに"], "correct": 0, "explanation": "in private は「非公式に、秘密裏に、自分たちだけで」という意味の熟語です。対義語は in public です。例: talk in private（内密に話す）", "type": "choice"},
-        {"scenario": "「for instance」の意味として最も適切なものは？", "choices": ["例えば", "ついでに", "例外的に", "最初に"], "correct": 0, "explanation": "for instance は「例えば」という意味の熟語で、for example とほぼ同義です。話の具体例を挙げるときに文頭や文中で使われます。", "type": "choice"},
-        {"scenario": "「in general」の意味として最も適切なものは？", "choices": ["一般的に、概して、たいてい", "特別に", "部分的に", "まれに"], "correct": 0, "explanation": "in general は「一般的に、概して、全体として」という意味の熟語です。generally とほぼ同じです。対義語は in particular です。", "type": "choice"},
-        {"scenario": "「as a rule」の意味として最も適切なものは？", "choices": ["原則として、概して、普通は", "規則として", "例外として", "強制的に"], "correct": 0, "explanation": "as a rule は「原則として、普通は、概して」という意味の熟語です。usually や in general と似ています。例: As a rule, we get up early.（概して私たちは早起きだ。）", "type": "choice"},
-        {"scenario": "「after all」の意味として最も適切なものは？", "choices": ["結局、やはり（予想に反して、または理由を添えて）", "道端で", "ついでに", "その方法で"], "correct": 0, "explanation": "after all は「結局、やはり」と予想に反する結果を述べる時、または「なんと言っても〜だから（理由付け）」で使われる重要熟語です。例: He failed after all.（彼は結局失敗した。）", "type": "choice"},
-        {"scenario": "「to some extent」の意味として最も適切なものは？", "choices": ["ある程度まで、多少は", "完全に", "少しも〜ない", "例外的に"], "correct": 0, "explanation": "to some extent は「ある程度まで、多少は」という意味の熟語です。extentは「範囲、程度」を表す名詞です。to a certain degree とほぼ同じです。", "type": "choice"}
+        {
+          "scenario": "「practically」の意味として最も適切なものは？",
+          "choices": [
+            "事実上、ほとんど、実用的に",
+            "理論上は",
+            "全く〜ない",
+            "一時的に"
+          ],
+          "correct": 0,
+          "explanation": "practicallyは「事実上、ほとんど（almost）」または「実用的に、実際的に」という意味の副詞です。virtuallyとほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「roughly」の意味として最も適切なものは？",
+          "choices": [
+            "おおよそ、大雑把に、荒々しく",
+            "正確に",
+            "滑らかに",
+            "徐々に"
+          ],
+          "correct": 0,
+          "explanation": "roughlyは「おおよそ、大体（approximatelyとほぼ同じ）」または手触りや態度が「荒々しく、雑に」という意味の副詞です。形容詞はroughです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「silently」の意味として最も適切なものは？",
+          "choices": [
+            "静かに、黙って、無言で",
+            "騒がしく",
+            "ゆっくり",
+            "直接に"
+          ],
+          "correct": 0,
+          "explanation": "silentlyは「静かに、黙って、無言で」という意味の副詞です。silent（静かな）の副詞形です。例: sit silently（黙って座る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「solely」の意味として最も適切なものは？",
+          "choices": [
+            "単に、単独で、〜だけで",
+            "共同で",
+            "多様に",
+            "主に"
+          ],
+          "correct": 0,
+          "explanation": "solelyは「単に、単独で、〜だけで（onlyやaloneとほぼ同じ）」という意味の副詞です。形容詞はsole（単独の）です。例: solely responsible（単独で責任がある）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「somewhat」の意味として最も適切なものは？",
+          "choices": [
+            "いくぶん、多少、やや",
+            "完全に",
+            "少しも〜ない",
+            "大いに"
+          ],
+          "correct": 0,
+          "explanation": "somewhatは「いくぶん、多少、やや（a littleやslightlyに近い）」という意味の副詞です。例: somewhat difficult（やや難しい）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thoroughly」の意味として最も適切なものは？",
+          "choices": [
+            "徹底的に、完全に、つくづく",
+            "大雑把に",
+            "部分的に",
+            "急いで"
+          ],
+          "correct": 0,
+          "explanation": "thoroughlyは「徹底的に、完全に（completelyやfullyとほぼ同じ）」という意味の副詞です。形容詞はthorough（徹底的な）です。例: clean thoroughly（徹底的に掃除する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tightly」の意味として最も適切なものは？",
+          "choices": [
+            "しっかりと、きつく、かたく",
+            "緩く",
+            "優しく",
+            "別々に"
+          ],
+          "correct": 0,
+          "explanation": "tightlyは「しっかりと、きつく、隙間なく」という意味の副詞です。形容詞はtightです。対義語はlooselyです。例: hold tightly（しっかり握る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「typically」の意味として最も適切なものは？",
+          "choices": [
+            "典型的に、一般的に、概して",
+            "例外的に",
+            "偶然に",
+            "意図的に"
+          ],
+          "correct": 0,
+          "explanation": "typicallyは「典型的に、一般的に（典型的な例として）」という意味の副詞です。形容詞はtypicalです。例: typically Japanese（典型的な日本の）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ultimately」の意味として最も適切なものは？",
+          "choices": [
+            "究極的に、結局は、最終的には",
+            "最初に",
+            "一時的に",
+            "絶対に"
+          ],
+          "correct": 0,
+          "explanation": "ultimatelyは「究極的に、最終的には、結局は（最終結果として）」という意味の副詞です。eventuallyに似ています。形容詞はultimateです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「unexpectedly」の意味として最も適切なものは？",
+          "choices": [
+            "予期せず、不意に、突然に",
+            "計画通りに",
+            "当然ながら",
+            "徐々に"
+          ],
+          "correct": 0,
+          "explanation": "unexpectedlyは「予期せず、不意に、突然に（suddenlyに似ている）」という意味の副詞です。expect（予期する）から派生しています。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 9,
-      "title": "重要熟語編⑧：動詞と前置詞の関係熟語",
-      "type": "Phrasal Verbs 8",
-      "emoji": "🔗",
-      "subtitle": "対処する、干渉する、焦点を当てるなどの動詞熟語",
+      "title": "副詞編④：時間関係や限界を表す副詞",
+      "type": "Adverbs 4",
+      "emoji": "🔁",
+      "subtitle": "時間関係や限界を表す副詞",
       "questions": [
-        {"scenario": "「deal with」の意味として最も適切なものは？", "choices": ["〜に対処する、処理する、扱う、取引する", "〜を避ける", "〜を拒否する", "〜を忘れる"], "correct": 0, "explanation": "deal with 〜は「（問題や課題に）対処する、処理する、扱う」または「〜と取引する」という意味の重要熟語です。cope with や handle と似ています。", "type": "choice"},
-        {"scenario": "「interfere with」の意味として最も適切なものは？", "choices": ["〜を邪魔する、妨げる、干渉する", "〜を助ける", "〜に参加する", "〜を歓迎する"], "correct": 0, "explanation": "interfere with 〜は「〜を邪魔する、妨げる」または「〜に干渉する」という意味の熟語です。例: noise interferes with study（騒音が勉強を妨げる）", "type": "choice"},
-        {"scenario": "「focus on」の意味として最も適切なものは？", "choices": ["〜に焦点を合わせる、集中する", "〜を避ける", "〜から目をそらす", "〜を無視する"], "correct": 0, "explanation": "focus on 〜は「〜に焦点を合わせる、集中する」という意味の重要動詞熟語です。concentrate on とほぼ同じです。", "type": "choice"},
-        {"scenario": "「rely on」の意味として最も適切なものは？", "choices": ["〜に頼る、信頼する", "〜を疑う", "〜から離れる", "〜を管理する"], "correct": 0, "explanation": "rely on 〜は「（人や能力などを）頼る、信頼する」という意味の重要熟語です。depend on や count on に似ています。形容詞は reliable（信頼できる）です。", "type": "choice"},
-        {"scenario": "「agree to」の意味として最も適切なものは？", "choices": ["（計画や提案に）同意する、賛成する", "（人と）意見が一致する", "〜に反対する", "〜を疑う"], "correct": 0, "explanation": "agree to (計画・提案・条件) は、オファーなどを受け入れる「同意する」という意味です。人と意見が一致する場合は agree with を使います。", "type": "choice"},
-        {"scenario": "「object to」の意味として最も適切なものは？", "choices": ["〜に反対する、嫌う、反対する理由", "〜に賛成する", "〜を認める", "〜を提案する"], "correct": 0, "explanation": "object to 〜は「（計画や意見に）反対する、異議を唱える」という意味の熟語です。toの後ろは名詞・動名詞になります。名詞形はobjectionです。", "type": "choice"},
-        {"scenario": "「look down on」の意味として最も適切なものは？", "choices": ["〜を見下す、軽蔑する", "〜を見上げる", "〜を調べる", "〜を尊敬する"], "correct": 0, "explanation": "look down on (upon) 〜は「〜を見下す、軽蔑する」という意味の3語熟語です。対義語は look up to 〜（〜を尊敬する）です。", "type": "choice"},
-        {"scenario": "「look up to」の意味として最も適切なものは？", "choices": ["〜を尊敬する、仰ぎ見る", "〜を見下す", "〜を調べる", "〜に似ている"], "correct": 0, "explanation": "look up to 〜は「〜を尊敬する、仰ぎ見る」という意味の重要3語熟語です。respectとほぼ同じです。対義語は look down on 〜 です。", "type": "choice"},
-        {"scenario": "「stand for」の意味として最も適切なものは？", "choices": ["〜を象徴する、表す、支持する", "〜に反対する", "〜の代わりに立つ", "〜を我慢する"], "correct": 0, "explanation": "stand for 〜は記号などが「〜を象徴する、表す」、あるいは「〜を支持する」という意味の熟語です。例: UN stands for United Nations.（UNは国際連合を表す。）", "type": "choice"},
-        {"scenario": "「bring about」の意味として最も適切なものは？", "choices": ["〜を引き起こす、もたらす", "〜を延期する", "〜を育てる", "〜を連れてくる"], "correct": 0, "explanation": "bring about 〜は「〜を引き起こす、もたらす（causeやlead toとほぼ同じ）」という意味の重要熟語です。例: bring about changes（変化をもたらす）", "type": "choice"}
+        {
+          "scenario": "「actively」の意味として最も適切なものは？",
+          "choices": [
+            "活発に、積極的に",
+            "消極的に",
+            "静かに",
+            "ゆっくりと"
+          ],
+          "correct": 0,
+          "explanation": "activelyは「活発に、積極的に」活動する様子を表す副詞です。形容詞はactiveです。例: actively participate（積極的に参加する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adequately」の意味として最も適切なものは？",
+          "choices": [
+            "適切に、十分に",
+            "不十分に",
+            "過剰に",
+            "不適切に"
+          ],
+          "correct": 0,
+          "explanation": "adequatelyは必要な量や基準を「適切に、十分に」満たしている様子を表す副詞です。形容詞はadequateです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「badly」の意味として最も適切なものは？",
+          "choices": [
+            "ひどく、悪く、とても〜したい",
+            "良く",
+            "上手に",
+            "少しだけ"
+          ],
+          "correct": 0,
+          "explanation": "badlyは「ひどく、悪く」または want や need を強めて「とても（強く）〜したい」という意味の副詞です。例: badly injured（ひどく怪我をした）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「briefly」の意味として最も適切なものは？",
+          "choices": [
+            "簡潔に、短時間だけ、手短に",
+            "詳細に",
+            "長く",
+            "永遠に"
+          ],
+          "correct": 0,
+          "explanation": "brieflyは「手短に、簡潔に」または「短時間だけ」という意味の副詞です。形容詞はbriefです。例: explain briefly（手短に説明する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「closely」の意味として最も適切なものは？",
+          "choices": [
+            "密接に、注意深く、近くに",
+            "遠くに",
+            "大雑把に",
+            "別々に"
+          ],
+          "correct": 0,
+          "explanation": "closelyは距離が「近くに」または観察などが「注意深く、厳密に」という意味の副詞です。例: watch closely（注意深く見守る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deeply」の意味として最も適切なものは？",
+          "choices": [
+            "深く、痛切に、非常に",
+            "浅く",
+            "静かに",
+            "表面上"
+          ],
+          "correct": 0,
+          "explanation": "deeplyは物理的に「深く」または感情が「深く、痛切に、大いに」という意味の副詞です。形容詞はdeepです。例: deeply moved（深く感動した）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「definitely」の意味として最も適切なものは？",
+          "choices": [
+            "絶対に、明確に、確かに、その通り",
+            "おそらく",
+            "絶対に〜ない",
+            "一般的に"
+          ],
+          "correct": 0,
+          "explanation": "definitelyは疑う余地なく「絶対に、明確に」という副詞、また強い返答として「その通り！」としても使われます。例: Definitely yes.（絶対そうです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delightfully」の意味として最も適切なものは？",
+          "choices": [
+            "快く、楽しく、うれしいことに",
+            "不快に",
+            "怒って",
+            "悲しそうに"
+          ],
+          "correct": 0,
+          "explanation": "delightfullyは「快く、愉快に、喜ばしいことに」という意味の副詞です。名詞・動詞 delight（大喜び、喜ばせる）から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「directly」の意味として最も適切なものは？",
+          "choices": [
+            "直接に、直行で、すぐに",
+            "間接的に",
+            "遠回りで",
+            "遅れて"
+          ],
+          "correct": 0,
+          "explanation": "directlyは「直接に（間を置かずに）」または時間的に「すぐに、直ちに」という意味の副詞です。形容詞はdirectです。対義語はindirectlyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「doubtless」の意味として最も適切なものは？",
+          "choices": [
+            "疑いなく、ほぼ確実に、間違いなく",
+            "おそらく",
+            "疑わしいが",
+            "決して〜ない"
+          ],
+          "correct": 0,
+          "explanation": "doubtlessは doubt（疑い）に less（ない）がついた副詞で、「疑いなく、間違いなく、ほぼ確実に」という意味です。probablyより確実性が高いです。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 10,
-      "title": "会話表現・定型フレーズ④：日常会話と来客時の表現",
-      "type": "Conversational Phrases 4",
-      "emoji": "🗣️",
-      "subtitle": "帰宅時の挨拶、久しぶりの対面、見送る際の定番表現",
+      "title": "副詞編⑤：様子や程度を表す副詞",
+      "type": "Adverbs 5",
+      "emoji": "📈",
+      "subtitle": "様子や程度を表す副詞",
       "questions": [
-        {"scenario": "「I'm home.」の意味として最も適切なものは？", "choices": ["ただいま（帰宅時の挨拶）", "家にいます", "ここが私の家です", "お帰りなさい"], "correct": 0, "explanation": "I'm home. は帰宅した際、家族などに「ただいま！」と声をかける時の定番フレーズです。I am home. の略です。", "type": "choice"},
-        {"scenario": "「Welcome back.」の意味として最も適切なものは？", "choices": ["お帰りなさい", "いらっしゃいませ", "ようこそ", "どういたしまして"], "correct": 0, "explanation": "Welcome back.（または Welcome home.）は帰宅した人や、旅から戻った人に対して「お帰りなさい！」と迎える時の定番フレーズです。", "type": "choice"},
-        {"scenario": "「Long time no see.」の意味として最も適切なものは？", "choices": ["久しぶりですね！", "時間がありません", "見てはいけません", "はじめまして"], "correct": 0, "explanation": "Long time no see.（または It's been a long time.）は、数ヶ月や数年ぶりに再会した相手に「お久しぶり！」と挨拶する定番のカジュアルフレーズです。", "type": "choice"},
-        {"scenario": "「It was nice meeting you.」の意味として最も適切なものは？", "choices": ["お会いできて良かったです（別れ際の挨拶）", "はじめまして", "お会いできて嬉しいです", "どういたしまして"], "correct": 0, "explanation": "It was nice meeting you.（過去形）は、初めて会った人と別れる際に「今日はお会いできて良かったです、楽しかったです」と伝える定番表現です。会った瞬間は Nice to meet you. です。", "type": "choice"},
-        {"scenario": "「Have a nice trip.」の意味として最も適切なものは？", "choices": ["良い旅を！、いってらっしゃい", "良い一日を", "旅行が好きですか？", "どういたしまして"], "correct": 0, "explanation": "Have a nice trip. は、旅行や出張に出かける人に対して「良い旅を！」「いってらっしゃい！」と声をかける見送りの定番フレーズです。", "type": "choice"},
-        {"scenario": "「Same to you.」の意味として最も適切なものは？", "choices": ["あなたもね、同じように", "私と同じです", "それがいいです", "どういたしまして"], "correct": 0, "explanation": "Same to you. は「Have a nice weekend.（良い週末を）」などの挨拶に対して、「あなたもね！」「同じようにね！」と答える時の定番フレーズです。", "type": "choice"},
-        {"scenario": "「Give my regards to 〜.」の意味として最も適切なものは？", "choices": ["〜によろしくお伝えください", "〜を私にください", "〜を尊敬しなさい", "どういたしまして"], "correct": 0, "explanation": "Give my regards to (人). は別れ際に「〜によろしくお伝えください」と第三者への伝言を託す丁寧な定番フレーズです。Say hello to 〜 よりフォーマルです。", "type": "choice"},
-        {"scenario": "「You can't miss it.」の意味として最も適切なものは？", "choices": ["（道案内で）すぐに見つかりますよ、見落とすはずがありません", "見逃してはいけません", "見つからないはずです", "どういたしまして"], "correct": 0, "explanation": "You can't miss it. は、道を教えた後に「（建物などが大きくてわかりやすいので）見落とすはずがありません、すぐわかりますよ」と付け加える定番フレーズです。", "type": "choice"},
-        {"scenario": "「It's on me.」の意味として最も適切なものは？", "choices": ["ここは私が奢（おご）ります、私持ちです", "それは私の責任です", "それは私の上にあります", "どういたしまして"], "correct": 0, "explanation": "It's on me.（または Treat is on me.）は、レストランなどで「ここは私が奢ります」と申し出る時のカジュアルな定番フレーズです。It's my treat. とほぼ同じです。", "type": "choice"},
-        {"scenario": "「Keep the change.」の意味として最も適切なものは？", "choices": ["お釣りはとっておいてください", "お釣りをください", "小銭を持っています", "ありがとうございました"], "correct": 0, "explanation": "Keep the change. はタクシーやレストランの支払いで、チップとして「お釣りは取っておいてください」と渡す時の定番フレーズです。change は「お釣り」を指します。", "type": "choice"}
+        {
+          "scenario": "「eagerly」の意味として最も適切なものは？",
+          "choices": [
+            "熱望して、熱心に、しきりに",
+            "嫌そうに",
+            "冷淡に",
+            "のんびりと"
+          ],
+          "correct": 0,
+          "explanation": "eagerlyは「熱望して、熱心に、しきりに〜したがる」という意味の副詞です。形容詞はeager（熱望して）です。例: wait eagerly（首を長くして待つ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「efficiently」の意味として最も適切なものは？",
+          "choices": [
+            "効率的に、能率的に",
+            "非効率的に",
+            "無駄に",
+            "急いで"
+          ],
+          "correct": 0,
+          "explanation": "efficientlyは時間やお金を無駄にせず「効率的に、能率的に」物事を行う様子を表す副詞です。形容詞はefficientです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entirely」の意味として最も適切なものは？",
+          "choices": [
+            "完全に、まったく、全体的に",
+            "部分的に",
+            "ほとんど〜ない",
+            "少しだけ"
+          ],
+          "correct": 0,
+          "explanation": "entirelyは「完全に、まったく、すっかり（completelyやtotallyとほぼ同じ）」という意味の副詞です。形容詞はentire（全体の）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equally」の意味として最も適切なものは？",
+          "choices": [
+            "等しく、平等に、均等に",
+            "不平等に",
+            "別々に",
+            "一方的に"
+          ],
+          "correct": 0,
+          "explanation": "equallyは「等しく、平等に、均等に」という意味の副詞です。形容詞はequal（等しい）です。例: share equally（均等に分ける）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「essentially」の意味として最も適切なものは？",
+          "choices": [
+            "本質的に、基本的には、本質として",
+            "部分的に",
+            "偶然に",
+            "無駄に"
+          ],
+          "correct": 0,
+          "explanation": "essentiallyは「本質的に、基本的には（基本的に重要な点において）」という意味の副詞です。形容詞はessential（不可欠な、本質的な）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「even」の意味として最も適切なものは？",
+          "choices": [
+            "〜でさえ、さらに、（数値が）平らな、偶数の",
+            "決して〜ない",
+            "少しだけ",
+            "特に"
+          ],
+          "correct": 0,
+          "explanation": "evenは「〜でさえ（驚きを伴う強調）」または比較級を強めて「さらに」という副詞、また「平らな、偶数の」という形容詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「strictly」の意味として最も適切なものは？",
+          "choices": [
+            "厳格に、厳密に、絶対に",
+            "だいたい",
+            "おそらく",
+            "逆に"
+          ],
+          "correct": 0,
+          "explanation": "strictlyは規則や適用が「厳格に、厳密に」行われる様子を表す副詞です。形容詞はstrictです。例: strictly forbidden（厳禁）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fairly」の意味として最も適切なものは？",
+          "choices": [
+            "かなり、公正に、まあまあ",
+            "少しだけ",
+            "全然〜ない",
+            "非常に"
+          ],
+          "correct": 0,
+          "explanation": "fairlyは「かなり、まあまあ（ratherやquiteに近いが好意的なニュアンス）」または「公正に」という意味の副詞です。例: fairly good（かなり良い）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「firmly」の意味として最も適切なものは？",
+          "choices": [
+            "しっかりと、固く、断固として",
+            "緩く",
+            "優しく",
+            "一時的に"
+          ],
+          "correct": 0,
+          "explanation": "firmlyは「しっかりと、固く（揺るがない様子）」または「断固として」という意味の副詞です。形容詞はfirm（固い、会社）です。対義語はlooselyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「firstly」の意味として最も適切なものは？",
+          "choices": [
+            "第一に、まず最初に",
+            "最後に",
+            "最近",
+            "ついに"
+          ],
+          "correct": 0,
+          "explanation": "firstlyは発表や論説などで「第一に、まず最初に」と順序を提示する時に使われる副詞です。次には secondly を使います。",
+          "type": "choice"
+        }
       ]
     }
   ]

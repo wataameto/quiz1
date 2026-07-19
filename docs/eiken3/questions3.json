@@ -6,192 +6,1292 @@
   "tests": [
     {
       "id": 1,
-      "title": "動詞編③：伝達・思考・防衛の動詞",
-      "type": "Basic Verbs 3",
-      "emoji": "🗣️",
-      "subtitle": "考慮する、守る、否定するなどの動詞",
+      "title": "名詞編⑤：健康・医療に関わる名詞をチェック",
+      "type": "Nouns 5",
+      "emoji": "🏥",
+      "subtitle": "健康・医療に関わる名詞をチェック",
       "questions": [
-        {"scenario": "「consider」の意味として最も適切なものは？", "choices": ["よく考える、考慮する、みなす", "無視する", "決定する", "忘れる"], "correct": 0, "explanation": "considerは「〜をよく考える、考慮する」または「〜とみなす」という意味の動詞です。名詞形はconsideration（考慮）です。例: consider the problem（問題をよく考える）", "type": "choice"},
-        {"scenario": "「control」の意味として最も適切なものは？", "choices": ["支配する、管理する、抑制する、コントロール", "従う", "任せる", "解放する"], "correct": 0, "explanation": "controlは「（機械や感情、国などを）支配する、管理する、抑える」という動詞・名詞です。例: control emotions（感情を抑える）", "type": "choice"},
-        {"scenario": "「convert」の意味として最も適切なものは？", "choices": ["変換する、変える、改宗させる", "維持する", "破壊する", "隠す"], "correct": 0, "explanation": "convertは形や用途、通貨などを「変換する、変える」という意味の動詞です。例: convert dollars into yen（ドルを円に換算する）", "type": "choice"},
-        {"scenario": "「convey」の意味として最も適切なものは？", "choices": ["（情報や思想などを）伝える、運ぶ", "隠す", "拒絶する", "受け取る"], "correct": 0, "explanation": "conveyは言葉や態度で「（情報・感情などを）伝える」または「運ぶ」という意味の動詞です。例: convey my thanks（感謝の気持ちを伝える）", "type": "choice"},
-        {"scenario": "「cope」の意味として最も適切なものは？", "choices": ["（問題などに）うまく対処する、処理する", "あきらめる", "悪化させる", "避ける"], "correct": 0, "explanation": "copeは cope with 〜 の形で「（問題や困難に）うまく対処する、処理する」という意味の動詞です。deal with に似ています。", "type": "choice"},
-        {"scenario": "「damage」の意味として最も適切なものは？", "choices": ["損害を与える、傷つける、損害、被害", "修理する", "保護する", "改善する"], "correct": 0, "explanation": "damageは「（物や体に）損害を与える、傷つける」という動詞、また「損害、被害（不可算名詞）」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「decorate」の意味として最も適切なものは？", "choices": ["装飾する、飾る", "片付ける", "壊す", "汚す"], "correct": 0, "explanation": "decorateは部屋やケーキなどを「装飾する、飾る」という意味の動詞です。名詞形はdecorationです。例: decorate the room with flowers（花で部屋を飾る）", "type": "choice"},
-        {"scenario": "「defeat」の意味として最も適切なものは？", "choices": ["打ち負かす、破る、敗北", "負ける", "降伏する", "助ける"], "correct": 0, "explanation": "defeatは試合や戦争で相手を「打ち負かす、破る」という動詞、また「敗北」という名詞の意味もあります。対義語は surrender などです。", "type": "choice"},
-        {"scenario": "「defend」の意味として最も適切なものは？", "choices": ["守る、防御する、弁護する", "攻撃する", "降伏する", "非難する"], "correct": 0, "explanation": "defendは敵や批判から「守る、防御する、弁護する」という意味の動詞です。対義語はattack（攻撃する）です。ディフェンスの動詞形です。", "type": "choice"},
-        {"scenario": "「delay」の意味として最も適切なものは？", "choices": ["遅らせる、延期する、遅れ、遅延", "急がせる", "開始する", "完了する"], "correct": 0, "explanation": "delayは「〜を遅らせる、延期する」という動詞、また「遅れ、遅延」という名詞でもあります。例: without delay（遅滞なく、すぐに）", "type": "choice"}
+        {
+          "scenario": "「display」の意味として最も適切なものは？",
+          "choices": [
+            "展示、表示、ディスプレー",
+            "保管",
+            "隠蔽",
+            "購入"
+          ],
+          "correct": 0,
+          "explanation": "displayは「展示、表示、ディスプレー画面」を表す名詞です。動詞でも「展示する、表示する」の意味があります。例: shop window display（ショーウィンドウの展示）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keyboard」の意味として最も適切なものは？",
+          "choices": [
+            "キーボード、鍵盤",
+            "モニター",
+            "マウス",
+            "マイク"
+          ],
+          "correct": 0,
+          "explanation": "keyboardはパソコンの「キーボード」やピアノなどの「鍵盤」を表す名詞です。例: type on the keyboard（キーボードで打つ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mouse」の意味として最も適切なものは？",
+          "choices": [
+            "マウス、ネズミ",
+            "画面",
+            "スピーカー",
+            "接続線"
+          ],
+          "correct": 0,
+          "explanation": "mouseはパソコンの「マウス」や、動物の「ネズミ（複数形はmice）」を表す名詞です。動きがネズミに似ていることが由来です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「printer」の意味として最も適切なものは？",
+          "choices": [
+            "プリンター、印刷機",
+            "キーボード",
+            "スキャナー",
+            "画面"
+          ],
+          "correct": 0,
+          "explanation": "printerは紙に印刷を行う「プリンター、印刷機」を表す名詞です。print（印刷する）に人・機械を表す-erがついた形です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「smartphone」の意味として最も適切なものは？",
+          "choices": [
+            "スマートフォン、スマホ",
+            "携帯電話",
+            "パソコン",
+            "タブレット"
+          ],
+          "correct": 0,
+          "explanation": "smartphoneは多機能携帯電話である「スマートフォン」を表す名詞です。smart（賢い）+ phone（電話）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tablet」の意味として最も適切なものは？",
+          "choices": [
+            "タブレット、錠剤",
+            "パソコン",
+            "ノート",
+            "電子辞書"
+          ],
+          "correct": 0,
+          "explanation": "tabletは板型の情報端末「タブレット」や、平らな「薬の錠剤」を表す名詞です。例: tablet PC（タブレットPC）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「screen」の意味として最も適切なものは？",
+          "choices": [
+            "画面、スクリーン、上映する、遮る",
+            "キーボード",
+            "スピーカー",
+            "マウス"
+          ],
+          "correct": 0,
+          "explanation": "screenはテレビやパソコンの「画面、スクリーン」を表す名詞、また「上映する」という動詞の意味もあります。例: computer screen（パソコン画面）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cable」の意味として最も適切なものは？",
+          "choices": [
+            "ケーブル、電線、電報",
+            "キーボード",
+            "モニター",
+            "スイッチ"
+          ],
+          "correct": 0,
+          "explanation": "cableは電気やデータを送る「ケーブル、電線」を表す名詞です。例: charging cable（充電ケーブル）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charger」の意味として最も適切なものは？",
+          "choices": [
+            "充電器",
+            "電池",
+            "接続線",
+            "電源"
+          ],
+          "correct": 0,
+          "explanation": "chargerは電池に電気を蓄える「充電器」を表す名詞です。charge（充電する）に機械を表す-erがついた形です。例: phone charger（スマホの充電器）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「politician」の意味として最も適切なものは？",
+          "choices": [
+            "政治家",
+            "役人",
+            "大統領",
+            "外交官"
+          ],
+          "correct": 0,
+          "explanation": "politicianは「政治家」を表す名詞です。politics（政治）から派生しています。例: local politician（地方政治家）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "動詞編④：要求・探知・分割の動詞",
-      "type": "Basic Verbs 4",
-      "emoji": "🗣️",
-      "subtitle": "要求する、否定する、分けるなどの動詞",
+      "title": "名詞編⑥：科学・テクノロジー分野の名詞",
+      "type": "Nouns 6",
+      "emoji": "🎨",
+      "subtitle": "科学・テクノロジー分野の名詞",
       "questions": [
-        {"scenario": "「demand」の意味として最も適切なものは？", "choices": ["強く要求する、請求する、需要、要求", "提案する", "譲歩する", "拒絶する"], "correct": 0, "explanation": "demandは権利として「強く要求する」という動詞・名詞です。経済用語で supply（供給）と demand（仕様）の対比が有名です。", "type": "choice"},
-        {"scenario": "「deny」の意味として最も適切なものは？", "choices": ["否定する、拒む", "認める", "主張する", "説明する"], "correct": 0, "explanation": "denyは容疑や事実を「否定する、そんなことはないと言う」という意味の動詞です。対義語はadmit（認める）です。名詞形はdenialです。", "type": "choice"},
-        {"scenario": "「depart」の意味として最も適切なものは？", "choices": ["出発する、旅立つ", "到着する", "留まる", "帰国する"], "correct": 0, "explanation": "departは「（次の目的地に向けて）出発する、旅立つ」という意味の動詞です。名詞形はdeparture（出発）です。対義語はarriveです。", "type": "choice"},
-        {"scenario": "「design」の意味として最も適切なものは？", "choices": ["設計する、デザインする、設計、デザイン", "模倣する", "破壊する", "使用する"], "correct": 0, "explanation": "designは建物や製品を「設計する、デザインする」という動詞、また「設計、デザイン」という名詞の意味もあります。デザイナーは designer です。", "type": "choice"},
-        {"scenario": "「deserve」の意味として最も適切なものは？", "choices": ["（賞や罰などに）値する、〜する価値がある", "不足している", "避ける", "拒絶する"], "correct": 0, "explanation": "deserveは、行動の結果として「〜に値する、〜する資格がある」という意味の動詞です。例: deserve to win（勝つ価値がある）", "type": "choice"},
-        {"scenario": "「detect」の意味として最も適切なものは？", "choices": ["探知する、検出する、見つける", "隠す", "破壊する", "無視する"], "correct": 0, "explanation": "detectは機械などでかすかな兆候やウイルスを「探知する、検出する」という意味の動詞です。探偵は detective です。", "type": "choice"},
-        {"scenario": "「determine」の意味として最も適切なものは？", "choices": ["決定する、決意する、特定する", "迷う", "変更する", "提案する"], "correct": 0, "explanation": "determineは事実や方針を「決定する」または「〜を決意する（be determined to do）」という意味の動詞です。名詞形はdeterminationです。", "type": "choice"},
-        {"scenario": "「differ」の意味として最も適切なものは？", "choices": ["異なる、意見が合わない", "一致する", "似ている", "競争する"], "correct": 0, "explanation": "differは性質などが「異なる、違っている（differ from 〜）」という意味の動詞です。形容詞differentの動詞形です。意見が合わないという意味も持ちます。", "type": "choice"},
-        {"scenario": "「divide」の意味として最も適切なものは？", "choices": ["分ける、分割する、分類する", "混ぜる", "集める", "拡大する"], "correct": 0, "explanation": "divideは「（いくつかの部分に）分ける、分割する」という意味の動詞です。名詞形はdivisionです。例: divide the cake into four（ケーキを4つに分ける）", "type": "choice"},
-        {"scenario": "「donate」の意味として最も適切なものは？", "choices": ["寄付する、提供する", "購入する", "集める", "捨てる"], "correct": 0, "explanation": "donateはお金や物、血液などを「寄付する、提供する」という意味の動詞です。名詞形はdonation（寄付）です。ドナーは donor です。", "type": "choice"}
+        {
+          "scenario": "「mechanic」の意味として最も適切なものは？",
+          "choices": [
+            "整備士、機械工、修理屋",
+            "エンジニア",
+            "大工",
+            "運転手"
+          ],
+          "correct": 0,
+          "explanation": "mechanicは車や機械などの「整備士、機械工」を表す名詞です。例: car mechanic（自動車整備士）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「architect」の意味として最も適切なものは？",
+          "choices": [
+            "建築家、設計者",
+            "大工",
+            "左官",
+            "画家"
+          ],
+          "correct": 0,
+          "explanation": "architectは建物などの「建築家、設計者」を表す名詞です。名詞形はarchitecture（建築、建築学）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「secretary」の意味として最も適切なものは？",
+          "choices": [
+            "秘書、長官、大臣",
+            "受付",
+            "事務員",
+            "社長"
+          ],
+          "correct": 0,
+          "explanation": "secretaryは社長などの補佐を行う「秘書」、または米国の「長官、閣僚（Secretary of Stateなど）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「novel (名詞)」の意味として最も適切なものは？",
+          "choices": [
+            "小説",
+            "詩",
+            "教科書",
+            "漫画"
+          ],
+          "correct": 0,
+          "explanation": "novelは「小説」を表す名詞です。小説家は novelist です。形容詞では「斬新な、新しい」という意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「instrument」の意味として最も適切なものは？",
+          "choices": [
+            "器具、道具、楽器",
+            "機械",
+            "部品",
+            "おもちゃ"
+          ],
+          "correct": 0,
+          "explanation": "instrumentは科学的な「器具、測定器」や、音楽の「楽器（musical instrument）」を表す名詞です。toolよりも精密なものを指します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sculpture」の意味として最も適切なものは？",
+          "choices": [
+            "彫刻、彫塑、彫刻作品",
+            "絵画",
+            "写真",
+            "工芸品"
+          ],
+          "correct": 0,
+          "explanation": "sculptureは木や石、金属を削って作る「彫刻、彫刻作品」を表す名詞です。彫刻家は sculptor です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exhibition」の意味として最も適切なものは？",
+          "choices": [
+            "展覧会、展示会、展示品",
+            "劇場",
+            "映画",
+            "公演"
+          ],
+          "correct": 0,
+          "explanation": "exhibitionは美術品や製品の「展覧会、展示会」を表す名詞です。exhibit（展示する）の名詞形です。例: art exhibition（美術展）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「leisure」の意味として最も適切なものは？",
+          "choices": [
+            "余暇、自由時間、レジャー",
+            "労働",
+            "勉強",
+            "宿題"
+          ],
+          "correct": 0,
+          "explanation": "leisureは仕事や義務のない「余暇、自由時間、レジャー」を表す名詞です。例: leisure activities（レジャー活動）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「client」の意味として最も適切なものは？",
+          "choices": [
+            "依頼人、クライアント、顧客",
+            "店員",
+            "競争相手",
+            "仕入先"
+          ],
+          "correct": 0,
+          "explanation": "clientは弁護士や設計士などの専門職への「依頼人」や、ビジネス上の「顧客、クライアント」を表す名詞です。customerよりも継続的な取引相手を指します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contract (名詞)」の意味として最も適切なものは？",
+          "choices": [
+            "契約、契約書",
+            "計画",
+            "規則",
+            "法律"
+          ],
+          "correct": 0,
+          "explanation": "contractは「契約、契約書」を表す名詞です。動詞では「契約を結ぶ」または「収縮する、縮む」の意味もあります。例: sign a contract（契約に署名する）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 3,
-      "title": "名詞編②：健康・医療・身体トラブル",
-      "type": "Nouns: Health & Medical Issues",
-      "emoji": "🩺",
-      "subtitle": "発熱、頭痛、痛みなどの健康関連名詞",
+      "title": "名詞編⑦：ビジネス・経済で使われる名詞",
+      "type": "Nouns 7",
+      "emoji": "🏙️",
+      "subtitle": "ビジネス・経済で使われる名詞",
       "questions": [
-        {"scenario": "「fever」の意味として最も適切なものは？", "choices": ["熱、発熱、熱狂", "頭痛", "咳", "悪寒"], "correct": 0, "explanation": "feverは風邪などによる「熱、発熱」を表す名詞です。比喩的に「熱狂」を指すこともあります。例: have a high fever（高熱がある）", "type": "choice"},
-        {"scenario": "「headache」の意味として最も適切なものは？", "choices": ["頭痛、悩みの種", "腹痛", "歯痛", "めまい"], "correct": 0, "explanation": "headacheは「頭痛」を表す名詞です。head（頭）+ ache（痛み）です。例: have a bad headache（ひどい頭痛がする）", "type": "choice"},
-        {"scenario": "「stomachache」の意味として最も適切なものは？", "choices": ["腹痛、胃痛", "頭痛", "喉の痛み", "風邪"], "correct": 0, "explanation": "stomachacheは「腹痛、胃痛」を表す名詞です。stomach（胃、お腹）+ ache（痛み）です。例: have a stomachache（お腹が痛い）", "type": "choice"},
-        {"scenario": "「toothache」の意味として最も適切なものは？", "choices": ["歯痛", "口内炎", "頭痛", "腹痛"], "correct": 0, "explanation": "toothacheは「歯痛、歯の痛み」を表す名詞です。tooth（歯）+ ache（痛み）です。例: dentist treats a toothache（歯医者が歯痛を治療する）", "type": "choice"},
-        {"scenario": "「physician」の意味として最も適切なものは？", "choices": ["内科医、医師", "患者", "看護師", "薬剤師"], "correct": 0, "explanation": "physicianは「内科医、医師」を表す名詞です。外科医は surgeon と呼びます。医療系の頻出単語です。", "type": "choice"},
-        {"scenario": "「clinic」の意味として最も適切なものは？", "choices": ["診療所、クリニック、医院", "大病院", "薬局", "保健所"], "correct": 0, "explanation": "clinicは比較的小規模な「診療所、クリニック、個人医院」を表す名詞です。規模の大きい総合病院は hospital と呼びます。", "type": "choice"},
-        {"scenario": "「cough」の意味として最も適切なものは？", "choices": ["咳（せき）、咳をすること", "くしゃみ", "発熱", "鼻水"], "correct": 0, "explanation": "coughは「咳（せき）」を表す名詞、また「咳をする」という動詞でもあります。例: have a dry cough（空咳が出る）", "type": "choice"},
-        {"scenario": "「pain」の意味として最も適切なものは？", "choices": ["痛み、苦痛、苦労", "健康", "治療", "クスリ"], "correct": 0, "explanation": "painは肉体的または精神的な「痛み、苦痛」を表す名詞です。複数形の pains は「苦労、骨折り」を指します。例: feel pain（痛みを感じる）", "type": "choice"},
-        {"scenario": "「injury」の意味として最も適切なものは？", "choices": ["ケガ、負傷、痛手", "病気", "回復", "治療"], "correct": 0, "explanation": "injuryは事故や運動などで負う「ケガ、負傷」を表す名詞です。動詞はinjure（ケガをさせる）です。例: head injury（頭部のケガ）", "type": "choice"},
-        {"scenario": "「stress」の意味として最も適切なものは？", "choices": ["ストレス、緊張、強調、強調する", "リラックス", "運動", "睡眠"], "correct": 0, "explanation": "stressは精神的・肉体的な「ストレス、緊張」や、言葉の「アクセント、強調」を表す名詞、また「強調する」という動詞でもあります。", "type": "choice"}
+        {
+          "scenario": "「meeting」の意味として最も適切なものは？",
+          "choices": [
+            "会議、打ち合わせ、集まり",
+            "授業",
+            "講義",
+            "約束"
+          ],
+          "correct": 0,
+          "explanation": "meetingは仕事の「会議、打ち合わせ」や「集まり、出会い」を表す名詞です。例: hold a meeting（会議を開く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manager」の意味として最も適切なものは？",
+          "choices": [
+            "経営者、支配人、マネージャー、監督",
+            "従業員",
+            "顧客",
+            "株主"
+          ],
+          "correct": 0,
+          "explanation": "managerは部署の「経営者、支配人、マネージャー、管理者」またはスポーツの「監督」を表す名詞です。manage（管理する）の派生語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「agency」の意味として最も適切なものは？",
+          "choices": [
+            "代理店、機関、局",
+            "本社",
+            "店舗",
+            "工場"
+          ],
+          "correct": 0,
+          "explanation": "agencyは代理業務を行う「代理店（travel agencyなど）」や、政府の「機関、局（CIAなど）」を表す名詞です。代理人は agent です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「department」の意味として最も適切なものは？",
+          "choices": [
+            "部門、課、学科、省",
+            "会社",
+            "支店",
+            "工場"
+          ],
+          "correct": 0,
+          "explanation": "departmentは会社や学校などの「部門、課、学科」、または政府の「省」を表す名詞です。デパート（department store）の語源です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crew」の意味として最も適切なものは？",
+          "choices": [
+            "乗組員、クルー、乗員",
+            "店員",
+            "乗客",
+            "運転手"
+          ],
+          "correct": 0,
+          "explanation": "crewは船や飛行機、電車の「乗組員、クルー」や、映画などの撮影スタッフ「クルー」を表す名詞です。例: cabin crew（客室乗務員）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cash」の意味として最も適切なものは？",
+          "choices": [
+            "現金、キャッシュ、現金化する",
+            "小切手",
+            "クレジットカード",
+            "通帳"
+          ],
+          "correct": 0,
+          "explanation": "cashは「現金（紙幣や硬貨）」を表す名詞、また小切手などを「現金化する」という動詞の意味もあります。例: pay in cash（現金で支払う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accident」の意味として最も適切なものは？",
+          "choices": [
+            "事故、偶然の出来事",
+            "計画",
+            "安全",
+            "お祭り"
+          ],
+          "correct": 0,
+          "explanation": "accidentは自動車事故などの「事故」や「偶然の出来事」を表す名詞です。例: car accident（自動車事故）、by accident（偶然に）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advice」の意味として最も適切なものは？",
+          "choices": [
+            "忠告、アドバイス、助言",
+            "命令",
+            "文句",
+            "質問"
+          ],
+          "correct": 0,
+          "explanation": "adviceは「忠告、アドバイス、助言」を表す不可算名詞です。数える時は a piece of advice と言います。動詞形は advise です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「agreement」の意味として最も適切なものは？",
+          "choices": [
+            "合意、一致、契約、協定",
+            "反対",
+            "対立",
+            "口論"
+          ],
+          "correct": 0,
+          "explanation": "agreementは「合意、一致」や「契約、協定」を表す名詞です。agree（同意する）の名詞形です。対義語は disagreement です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amount」の意味として最も適切なものは？",
+          "choices": [
+            "（金や物の）総額、量、総計〜になる",
+            "価格",
+            "費用",
+            "価値"
+          ],
+          "correct": 0,
+          "explanation": "amountは「（あるまとまった金や物質の）総額、量」を表す名詞、または「総計〜になる（amount to 〜）」という動詞の意味もあります。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 4,
-      "title": "名詞編③：科学・エネルギー・テクノロジー",
-      "type": "Nouns: Science & Energy",
-      "emoji": "🧪",
-      "subtitle": "科学技術、材料、研究に関する重要名詞",
+      "title": "名詞編⑧：芸術・文化・娯楽に関する名詞",
+      "type": "Nouns 8",
+      "emoji": "📚",
+      "subtitle": "芸術・文化・娯楽に関する名詞",
       "questions": [
-        {"scenario": "「science」の意味として最も適切なものは？", "choices": ["科学、理科", "数学", "歴史", "芸術"], "correct": 0, "explanation": "scienceは「科学、理科」を表す名詞です。科学者は scientist で、形容詞は scientific です。例: science fiction（SF）", "type": "choice"},
-        {"scenario": "「technology」の意味として最も適切なものは？", "choices": ["科学技術、テクノロジー", "機械", "工業", "専門知識"], "correct": 0, "explanation": "technologyは「科学技術、テクノロジー」を表す名詞です。IT（Information Technology）などの分野で頻出します。", "type": "choice"},
-        {"scenario": "「data」の意味として最も適切なものは？", "choices": ["データ、資料、情報", "数値", "プログラム", "書類"], "correct": 0, "explanation": "dataは「データ、資料、情報」を表す名詞です。複数形扱いされることが多いですが、現代では単数形としても扱われます。", "type": "choice"},
-        {"scenario": "「factor」の意味として最も適切なものは？", "choices": ["要因、要素、因子", "結果", "予算", "目的"], "correct": 0, "explanation": "factorは物事の結果に影響を与える「要因、要素」を表す名詞です。例: key factor（主な要因）", "type": "choice"},
-        {"scenario": "「fuel」の意味として最も適切なものは？", "choices": ["燃料、あおる", "石炭", "ガス", "石油"], "correct": 0, "explanation": "fuelは「燃料」を表す名詞、また「あおる、燃料を補給する」という動詞の意味もあります。例: fossil fuel（化石燃料）", "type": "choice"},
-        {"scenario": "「machine」の意味として最も適切なものは？", "choices": ["機械、装置", "道具", "部品", "乗り物"], "correct": 0, "explanation": "machineは特定の目的を持つ「機械、装置」を表す名詞です。例: vending machine（自動販売機）", "type": "choice"},
-        {"scenario": "「space」の意味として最も適切なものは？", "choices": ["宇宙空間、スペース、空間、間隔", "地球", "星空", "大気"], "correct": 0, "explanation": "spaceは「宇宙空間（outer space）」や、物理的な「スペース、空きスペース」を表す名詞です。例: parking space（駐車場）", "type": "choice"},
-        {"scenario": "「material」の意味として最も適切なものは？", "choices": ["材料、原料、素材、資料", "製品", "部品", "工具"], "correct": 0, "explanation": "materialは製品を作る「材料、素材」や、授業の「資料、教材」を表す名詞です。形容詞では「物質的な」という意味もあります。", "type": "choice"},
-        {"scenario": "「experiment」の意味として最も適切なものは？", "choices": ["実験、試み", "調査", "研究", "発見"], "correct": 0, "explanation": "experimentは科学的な「実験、試み」を表す名詞です。動詞でも「実験する」の意味があります。例: conduct an experiment（実験を行う）", "type": "choice"},
-        {"scenario": "「research」の意味として最も適切なものは？", "choices": ["（学術的な）研究、調査", "実験", "勉強", "論文"], "correct": 0, "explanation": "researchは「（学術的・体系的な）研究、調査」を表す名詞、または「研究する」という動詞でもあります。不可算名詞として扱われます。", "type": "choice"}
+        {
+          "scenario": "「angle」の意味として最も適切なものは？",
+          "choices": [
+            "角、角度、観点",
+            "直線",
+            "曲線",
+            "三角形"
+          ],
+          "correct": 0,
+          "explanation": "angleは図形の「角、角度」や、物事を見る「観点、アングル」を表す名詞です。例: right angle（直角）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anxiety」の意味として最も適切なものは？",
+          "choices": [
+            "心配、不安、切望",
+            "安心",
+            "喜び",
+            "満足"
+          ],
+          "correct": 0,
+          "explanation": "anxietyは将来への「心配、不安、懸念」を表す名詞です。形容詞は anxious（心配して）です。例: anxiety about the exam（試験への不安）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apology」の意味として最も適切なものは？",
+          "choices": [
+            "謝罪、お詫び",
+            "許し",
+            "感謝",
+            "弁解"
+          ],
+          "correct": 0,
+          "explanation": "apologyは「謝罪、お詫び」を表す名詞です。動詞形は apologize（謝る）です。例: accept his apology（彼の謝罪を受け入れる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appearance」の意味として最も適切なものは？",
+          "choices": [
+            "外見、様子、出現",
+            "中身",
+            "性格",
+            "性質"
+          ],
+          "correct": 0,
+          "explanation": "appearanceは人の「外見、容姿」や、表舞台への「出現」を表す名詞です。appear（現れる）から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「applause」の意味として最も適切なものは？",
+          "choices": [
+            "拍手、喝采",
+            "歓声",
+            "ブーイング",
+            "沈黙"
+          ],
+          "correct": 0,
+          "explanation": "applauseは劇やスピーチの後などに送られる「拍手、喝采（不可算名詞）」を表す名詞です。動詞形は applaud です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appointment」の意味として最も適切なものは？",
+          "choices": [
+            "（面会の）約束、予約、任命",
+            "約束（一般的な）",
+            "切符の予約",
+            "会議の予定"
+          ],
+          "correct": 0,
+          "explanation": "appointmentは医者やビジネス相手など「人と会う約束、面会の予約」を表す名詞です。飲食店の予約は reservation を使うことが多いです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「area」の意味として最も適切なものは？",
+          "choices": [
+            "地域、面積、エリア、分野",
+            "国",
+            "都市",
+            "境界"
+          ],
+          "correct": 0,
+          "explanation": "areaは特定の「地域、地方、エリア」や、数学の「面積」を表す名詞です。例: urban area（都市部）、rural area（地方）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「argument」の意味として最も適切なものは？",
+          "choices": [
+            "議論、口論、主張",
+            "同意",
+            "妥協",
+            "解決"
+          ],
+          "correct": 0,
+          "explanation": "argumentは意見の対立を伴う「議論、口論」や、論理的な「主張」を表す名詞です。動詞形は argue です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「army」の意味として最も適切なものは？",
+          "choices": [
+            "陸軍、軍隊",
+            "海軍",
+            "空軍",
+            "警察"
+          ],
+          "correct": 0,
+          "explanation": "armyは「陸軍」や、一般的な「軍隊」を表す名詞です。海軍は navy、空軍は air force です。例: join the army（軍隊に入る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「article」の意味として最も適切なものは？",
+          "choices": [
+            "記事、論説、品物、冠詞",
+            "本",
+            "辞書",
+            "新聞"
+          ],
+          "correct": 0,
+          "explanation": "articleは新聞や雑誌の「記事」のほか、店にある「品物」、文法の「冠詞（a/the）」という意味も持つ名詞です。例: newspaper article（新聞記事）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 5,
-      "title": "形容詞編③：生活の快適さ・評価",
-      "type": "Adjectives 3",
-      "emoji": "🌟",
-      "subtitle": "快適な、便利な、必要ななどの評価形容詞",
+      "title": "名詞編⑨：オフィスや職場でよく使う名詞",
+      "type": "Nouns 9",
+      "emoji": "🧑‍🤝‍🧑",
+      "subtitle": "オフィスや職場でよく使う名詞",
       "questions": [
-        {"scenario": "「comfortable」の意味として最も適切なものは？", "choices": ["快適な、心地よい、気楽な", "不快な", "狭い", "高価な"], "correct": 0, "explanation": "comfortableは「快適な、心地よい（心身がリラックスできる）」という意味の形容詞です。対義語はuncomfortableです。副詞形はcomfortablyです。", "type": "choice"},
-        {"scenario": "「effective」の意味として最も適切なものは？", "choices": ["効果的な、有効な、実施されて", "便利な", "簡単な", "無駄な"], "correct": 0, "explanation": "effectiveは目的の達成に「効果的な、有効な」という意味の形容詞です。名詞形は effect です。対義語は ineffective です。", "type": "choice"},
-        {"scenario": "「necessary」の意味として最も適切なものは？", "choices": ["必要な、不可欠な", "不要な", "便利な", "無駄な"], "correct": 0, "explanation": "necessaryは「（目的のために）必要な、欠かせない」という意味の形容詞です。対義語はunnecessaryです。名詞形はnecessityです。", "type": "choice"},
-        {"scenario": "「excellent」の意味として最も適切なものは？", "choices": ["極めて優れた、優秀な", "普通の", "下手な", "古い"], "correct": 0, "explanation": "excellentは「優秀な、極めて優れた」と高く評価する形容詞です。greatよりもさらに相手を称賛する度合いが強いです。名詞形はexcellenceです。", "type": "choice"},
-        {"scenario": "「precious」の意味として最も適切なものは？", "choices": ["貴重な、大切な、高価な", "無価値な", "安い", "ありふれた"], "correct": 0, "explanation": "preciousは「（価値が高く）貴重な、大切な、かけがえのない」という意味の形容詞です。例: precious stone（宝石）", "type": "choice"},
-        {"scenario": "「safe」の意味として最も適切なものは？", "choices": ["安全な、無事な", "危険な", "怪しい", "安心な"], "correct": 0, "explanation": "safeは「安全な、無事な」という意味の形容詞です。名詞では貴重品を入れる「金庫」の意味があります。対義語はdangerousです。", "type": "choice"},
-        {"scenario": "「strange」の意味として最も適切なものは？", "choices": ["奇妙な、見知らぬ、変な", "普通の", "見慣れた", "親しい"], "correct": 0, "explanation": "strangeは「奇妙な、変な」または「見知らぬ、不案内な」という意味の形容詞です。見知らぬ人は stranger です。", "type": "choice"},
-        {"scenario": "「ordinary」の意味として最も適切なものは？", "choices": ["普通の、平凡な、並の", "特別な", "異常な", "優秀な"], "correct": 0, "explanation": "ordinaryは「普通の、平凡な、いつもの」という意味の形容詞です。対義語はextraordinary（並外れた、特別の）です。", "type": "choice"},
-        {"scenario": "「perfect」の意味として最も適切なものは？", "choices": ["完璧な、完全な、最適な", "不完全な", "一部の", "壊れた"], "correct": 0, "explanation": "perfectは「完璧な、欠点のない」という意味の形容詞です。副詞形はperfectly（完璧に、まったく）です。対義語はimperfectです。", "type": "choice"},
-        {"scenario": "「clear」の意味として最も適切なものは？", "choices": ["澄んだ、明らかな、はっきりした", "濁った", "疑わしい", "薄暗い"], "correct": 0, "explanation": "clearは天気や水が「澄んだ、晴れた」、事実や説明が「明らかな、はっきりした」という形容詞、また「片付ける」という動詞の意味もあります。", "type": "choice"}
+        {
+          "scenario": "「aspect」の意味として最も適切なものは？",
+          "choices": [
+            "側面、様相、見地",
+            "全体",
+            "背景",
+            "表面"
+          ],
+          "correct": 0,
+          "explanation": "aspectは物事の特定の「側面、局面」を表す名詞です。例: aspect of culture（文化の側面）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「association」の意味として最も適切なものは？",
+          "choices": [
+            "協会、団体、連合、連想",
+            "会社",
+            "学校",
+            "商店"
+          ],
+          "correct": 0,
+          "explanation": "associationは特定の目的を持つ「協会、団体、連盟」や、頭の中の「連想」を表す名詞です。動詞形は associate です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「audience」の意味として最も適切なものは？",
+          "choices": [
+            "聴衆、観客、読者",
+            "出演者",
+            "選手",
+            "店員"
+          ],
+          "correct": 0,
+          "explanation": "audienceは演劇や講演、テレビ番組の「聴衆、観客、視聴者」を集合的に表す名詞です。個々の観客は spectator などと呼びます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「authority」の意味として最も適切なものは？",
+          "choices": [
+            "権威、権限、当局",
+            "服従",
+            "無秩序",
+            "一般市民"
+          ],
+          "correct": 0,
+          "explanation": "authorityは特定の分野の「権威、専門家」や、法的な「権限」、行政の「当局（authorities）」を表す名詞です。形容詞は authoritative です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「average」の意味として最も適切なものは？",
+          "choices": [
+            "平均、平均の、平均〜になる",
+            "最高値",
+            "最低値",
+            "合計"
+          ],
+          "correct": 0,
+          "explanation": "averageは「平均、平均値」という名詞、また「平均の」という形容詞、さらに「平均〜になる」という動詞の意味もあります。例: on average（平均して）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「background」の意味として最も適切なものは？",
+          "choices": [
+            "背景、経歴、育ち、バックグラウンド",
+            "前景",
+            "将来",
+            "表面"
+          ],
+          "correct": 0,
+          "explanation": "backgroundは絵などの「背景」や、人の「経歴、育ち、社会的背景」を表す名詞です。対義語は foreground（前景）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「baggage」の意味として最も適切なものは？",
+          "choices": [
+            "（旅行の）手荷物、バッグ類",
+            "服",
+            "切符",
+            "お土産"
+          ],
+          "correct": 0,
+          "explanation": "baggageは旅行時の「手荷物」をまとめて表す不可算名詞です。luggageとほぼ同じです。数える時は a piece of baggage と言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「balance」の意味として最も適切なものは？",
+          "choices": [
+            "バランス、均衡、残高、バランスをとる",
+            "不均衡",
+            "合計",
+            "損失"
+          ],
+          "correct": 0,
+          "explanation": "balanceは「バランス、均衡」や、銀行口座の「預金残高」を表す名詞、また「バランスをとる」という動詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「band」の意味として最も適切なものは？",
+          "choices": [
+            "バンド、楽団、帯、紐、結束する",
+            "歌手",
+            "楽器",
+            "コンサート"
+          ],
+          "correct": 0,
+          "explanation": "bandは音楽の「バンド、楽団」のほか、ゴムなどの「帯、紐」、また「結束する」という動詞の意味もあります。例: rubber band（輪ゴム）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「barrier」の意味として最も適切なものは？",
+          "choices": [
+            "障壁、防壁、障害、関門",
+            "通路",
+            "目標",
+            "橋"
+          ],
+          "correct": 0,
+          "explanation": "barrierは物理的な「防壁、障壁」や、心理的・言語的な「障害、壁」を表す名詞です。例: language barrier（言葉の壁）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 6,
-      "title": "形容詞編④：空間の測定と広がり",
-      "type": "Adjectives 4",
-      "emoji": "📏",
-      "subtitle": "深い、狭い、巨大ななどの空間を表現する形容詞",
+      "title": "名詞編⑩：社会制度や生活に関わる名詞",
+      "type": "Nouns 10",
+      "emoji": "🌆",
+      "subtitle": "社会制度や生活に関わる名詞",
       "questions": [
-        {"scenario": "「deep」の意味として最も適切なものは？", "choices": ["深い、濃い", "浅い", "狭い", "広い"], "correct": 0, "explanation": "deepは「（物理的に）深い」または霧や色などが「濃い」という意味の形容詞です。対義語はshallow（浅い）です。副詞形はdeeplyです。", "type": "choice"},
-        {"scenario": "「shallow」の意味として最も適切なものは？", "choices": ["浅い、浅はかな", "深い", "狭い", "広い"], "correct": 0, "explanation": "shallowは「（物理的に）浅い」または考えなどが「浅はかな、浅い」という意味の形容詞です。対義語はdeep（深い）です。", "type": "choice"},
-        {"scenario": "「narrow」の意味として最も適切なものは？", "choices": ["狭い、細い、狭める", "広い", "太い", "深い"], "correct": 0, "explanation": "narrowは道や幅が「狭い、細い」という形容詞、また「狭める」という動詞の意味もあります。対義語はwide（広い）です。", "type": "choice"},
-        {"scenario": "「wide」の意味として最も適切なものは？", "choices": ["広い、幅の広い、幅広く", "狭い", "深い", "高い"], "correct": 0, "explanation": "wideは幅が「広い、幅の広い」という意味の形容詞です。対義語はnarrow（狭い）です。例: wide variety（幅広い種類）", "type": "choice"},
-        {"scenario": "「huge」の意味として最も適切なものは？", "choices": ["巨大な、莫大な", "小さな", "狭い", "薄い"], "correct": 0, "explanation": "huge is 「巨大な、とてつもなく大きい」という意味の形容詞です。very largeとほぼ同じです。例: huge success（大成功）", "type": "choice"},
-        {"scenario": "「tiny」の意味として最も適切なものは？", "choices": ["とても小さな、ごくわずかな", "巨大な", "広い", "厚い"], "correct": 0, "explanation": "tinyは「とても小さな、極小の」という意味の形容詞です。very smallとほぼ頃に同じです。対義語はhugeやgiantです。", "type": "choice"},
-        {"scenario": "「far」の意味として最も適切なものは？", "choices": ["遠い、遠くに、はるかに", "近い", "近くに", "隣の"], "correct": 0, "explanation": "farは距離や時間が「遠い」という形容詞、また「遠くに、はるかに」という副詞でもあります。対義語はnearです。", "type": "choice"},
-        {"scenario": "「near」の意味として最も適切なものは？", "choices": ["近い、近くに、〜の近くに", "遠い", "遠くに", "反対の"], "correct": 0, "explanation": "nearは「近い」という形容詞、「近くに」という副詞、「〜の近くに」という前置詞の意味があります。対義語はfarです。", "type": "choice"},
-        {"scenario": "「thick」の意味として最も適切なものは？", "choices": ["厚い、太い、濃い", "薄い", "細い", "軽い"], "correct": 0, "explanation": "thickは本などが「厚い」、線などが「太い」、霧や液体が「濃い」という意味の形容詞です。対義語はthinです。", "type": "choice"},
-        {"scenario": "「thin」の意味として最も適切なものは？", "choices": ["薄い、細い、痩せた", "厚い", "太い", "太った"], "correct": 0, "explanation": "thinは本などが「薄い」、線が「細い」、体型が「痩せた」という意味の形容詞です。対義語はthickです。", "type": "choice"}
+        {
+          "scenario": "「beauty」の意味として最も適切なものは？",
+          "choices": [
+            "美しさ、美人",
+            "醜さ",
+            "化粧品",
+            "芸術品"
+          ],
+          "correct": 0,
+          "explanation": "beautyは「美しさ、美」を表す不可算名詞、または「美人、美しいもの（可算）」を表す名詞です。形容詞は beautiful です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「behavior」の意味として最も適切なものは？",
+          "choices": [
+            "行動、ふるまい、行儀",
+            "思考",
+            "性格",
+            "外見"
+          ],
+          "correct": 0,
+          "explanation": "behaviorは人の「行動、ふるまい」を表す不可算名詞です。動詞形は behave です。例: good behavior（行儀の良いふるまい）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「belief」の意味として最も適切なものは？",
+          "choices": [
+            "信念、信頼、信仰、信じること",
+            "疑い",
+            "知識",
+            "事実"
+          ],
+          "correct": 0,
+          "explanation": "beliefは「信念、信頼、信仰」を表す名詞です。動詞 believe の名詞形です。対義語は disbelief や doubt です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「benefit」の意味として最も適切なものは？",
+          "choices": [
+            "利益、恩恵、給付金、〜に利益をもたらす",
+            "損失",
+            "費用",
+            "被害"
+          ],
+          "correct": 0,
+          "explanation": "benefitは「利益、恩恵」という名詞、また「〜にプラスになる、利益をもたらす」という動詞の意味もあります。例: health benefits（健康上の利点）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「birth」の意味として最も適切なものは？",
+          "choices": [
+            "誕生、出生、出産",
+            "死",
+            "誕生日",
+            "成長"
+          ],
+          "correct": 0,
+          "explanation": "birthは「誕生、出産」を表す名詞です。例: date of birth（生年月日）、give birth to 〜（〜を出産する）。対義語は death です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blame (名詞)」の意味として最も適切なものは？",
+          "choices": [
+            "（過失などの）責任、非難",
+            "賞賛",
+            "言い訳",
+            "許し"
+          ],
+          "correct": 0,
+          "explanation": "blameは動詞「〜のせいにする」のほかに、名詞として「（過失や事故に対する）責任、非難」という意味を持ちます。例: take the blame（責任を負う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「board」の意味として最も適切なものは？",
+          "choices": [
+            "板、委員会、搭乗する",
+            "机",
+            "切符",
+            "建物"
+          ],
+          "correct": 0,
+          "explanation": "boardは「板（木板など）」や、組織の「委員会、役員会」を表す名詞、また飛行機などに「搭乗する」という動詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「border」の意味として最も適切なものは？",
+          "choices": [
+            "国境、境界、縁、接する",
+            "中心",
+            "道",
+            "川"
+          ],
+          "correct": 0,
+          "explanation": "borderは国と国の「国境」や、物の「境界、縁」を表す名詞、または「〜と接する」という動詞の意味もあります。例: cross the border（国境を越える）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boundary」の意味として最も適切なものは？",
+          "choices": [
+            "境界、境界線、限界",
+            "領域",
+            "中心",
+            "交差点"
+          ],
+          "correct": 0,
+          "explanation": "boundaryは領土や分野の「境界、境界線」を表す名詞です。borderよりも概念的・物理的な線を明示する響きがあります。複数形は boundaries です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brand」の意味として最も適切なものは？",
+          "choices": [
+            "ブランド、商標、銘柄",
+            "製品",
+            "偽物",
+            "広告"
+          ],
+          "correct": 0,
+          "explanation": "brandは商品の「ブランド、商標、銘柄」を表す名詞です。例: brand-new（新品の、真新しい）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 7,
-      "title": "副詞編②：確実性や程度の強調",
-      "type": "Adverbs 2",
-      "emoji": "📍",
-      "subtitle": "完全に、非常に、特になどの強調副詞",
+      "title": "名詞編⑪：人間関係・社会的属性を表す名詞",
+      "type": "Nouns 11",
+      "emoji": "🏛️",
+      "subtitle": "人間関係・社会的属性を表す名詞",
       "questions": [
-        {"scenario": "「absolutely」の意味として最も適切なものは？", "choices": ["絶対に、完全に、全くその通り", "おそらく", "たまに", "決して〜ない"], "correct": 0, "explanation": "absolutelyは「絶対に、完全に」または会話で「全くその通り！」と強く同意するときの副詞です。例: absolutely right（完全に正しい）", "type": "choice"},
-        {"scenario": "「completely」の意味として最も適切なものは？", "choices": ["完全に、すっかり", "部分的に", "ほとんど〜ない", "少し"], "correct": 0, "explanation": "completelyは「完全に、すっかり」という意味の副詞です。例: completely different（完全に異なる）", "type": "choice"},
-        {"scenario": "「extremely」の意味として最も適切なものは？", "choices": ["極めて、非常に", "適度に", "少しだけ", "一般的に"], "correct": 0, "explanation": "extremelyは「極めて、非常に（veryよりさらに程度が強い）」という意味の副詞です。例: extremely cold（極めて寒い）", "type": "choice"},
-        {"scenario": "「quite」の意味として最も適切なものは？", "choices": ["かなり、なかなか、すっかり", "少しだけ", "全然〜ない", "確実に"], "correct": 0, "explanation": "quiteは「かなり、なかなか（fairlyやratherに近い）」または「すっかり、完全に」という意味の副詞です。例: quite well（かなりよく）", "type": "choice"},
-        {"scenario": "「really」の意味として最も適切なものは？", "choices": ["本当に、実際は、実に", "おそらく", "偶然に", "決して〜ない"], "correct": 0, "explanation": "reallyは「本当に、実際は」または形容詞を修飾して「とても、実に」という意味の副詞です。例: really interest（本当に面白い）", "type": "choice"},
-        {"scenario": "「scarcely」の意味として最も適切なものは？", "choices": ["ほとんど〜ない", "十分に", "突然", "徐々に"], "correct": 0, "explanation": "scarcelyは「ほとんど〜ない（程度の否定）」を表す副詞で、hardlyやseldomと同じく準否定語として扱われます。ほとんど時間がない時などに使います。", "type": "choice"},
-        {"scenario": "「highly」の意味として最も適切なものは？", "choices": ["非常に、大いに、高度に", "高く（物理的に）", "ほとんど〜ない", "一般的に"], "correct": 0, "explanation": "highlyは程度や評価が「非常に、大いに、高度に」という意味の副詞です。物理的に高い（high）とは少し異なります。例: highly recommended（非常におすすめ）", "type": "choice"},
-        {"scenario": "「primarily」の意味として最も適切なものは？", "choices": ["主として、第一に、元々は", "一般的に", "偶然に", "ただの"], "correct": 0, "explanation": "primarilyは「主として、第一に（何よりも優先されること）」という意味の副詞です。形容詞はprimaryです。mainlyとほぼ同じです。", "type": "choice"},
-        {"scenario": "「readily」の意味として最も適切なものは？", "choices": ["快く、すぐに、容易に", "嫌そうに", "決して〜ない", "偶然に"], "correct": 0, "explanation": "readilyは「快く、進んで（willingly）」、または「すぐに、容易に（easily）」という意味の副詞です。形容詞 ready から来ています。", "type": "choice"},
-        {"scenario": "「possibly」の意味として最も適切なものは？", "choices": ["もしかすると、たぶん、ひょっとすると", "確実に", "絶対に〜ない", "まれに"], "correct": 0, "explanation": "possiblyは「もしかすると、たぶん（可能性がゼロではない）」を表す副詞です。possibly canの形で「なんとかできる」という意味もあります。", "type": "choice"}
+        {
+          "scenario": "「breath」の意味として最も適切なものは？",
+          "choices": [
+            "息、呼吸",
+            "声",
+            "喉",
+            "風"
+          ],
+          "correct": 0,
+          "explanation": "breathは「息、呼吸」を表す名詞です。動詞は breathe（呼吸する）です。例: take a deep breath（深呼吸する）、out of breath（息が切れて）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「broadcast」の意味として最も適切なものは？",
+          "choices": [
+            "放送、番組、放送する、放映する",
+            "印刷",
+            "新聞",
+            "録音"
+          ],
+          "correct": 0,
+          "explanation": "broadcastはテレビやラジオの「放送、放映」という名詞、また「放送する」という動詞の意味もあります。活用は broadcast-broadcast-broadcast です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brotherhood」の意味として最も適切なものは？",
+          "choices": [
+            "兄弟愛、同胞愛、結社",
+            "親子",
+            "友情",
+            "親戚"
+          ],
+          "correct": 0,
+          "explanation": "brotherhoodは「兄弟愛、同胞愛（人類みな兄弟の精神）」や、同じ目的を持つ「団体、結社」を表す名詞です。brotherから派生しています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bubble」の意味として最も適切なものは？",
+          "choices": [
+            "泡、あぶく、バブル、泡立つ",
+            "水滴",
+            "波",
+            "湯気"
+          ],
+          "correct": 0,
+          "explanation": "bubbleは水や石鹸の「泡、あぶく」を表す名詞、また「泡立つ」という動詞の意味もあります。経済の「バブル」も指します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「buyer」の意味として最も適切なものは？",
+          "choices": [
+            "買い手、バイヤー、仕入れ担当者",
+            "売り手",
+            "製造者",
+            "仲介者"
+          ],
+          "correct": 0,
+          "explanation": "buyerは商品の「買い手、購入者」や、デパートなどの「仕入れ担当者」を表する名詞です。buy（買う）から派生しています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cabin」の意味として最も適切なものは？",
+          "choices": [
+            "小屋、客室、キャビン",
+            "大邸宅",
+            "アパート",
+            "ホテル"
+          ],
+          "correct": 0,
+          "explanation": "cabinは森の中などの「丸太小屋」や、船・飛行機の「客室、キャビン」を表す名詞です。例: cabin crew（客室乗務員）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cabinet」の意味として最も適切なものは？",
+          "choices": [
+            "キャビネット、飾り棚、内閣",
+            "会議室",
+            "机",
+            "金庫"
+          ],
+          "correct": 0,
+          "explanation": "cabinetは書類や食器を収納する「キャビネット、戸棚」や、国の「内閣、閣僚」を表す名詞です。例: cabinet minister（閣僚）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cafe」の意味として最も適切なものは？",
+          "choices": [
+            "カフェ、喫茶店、軽食堂",
+            "レストラン",
+            "バー",
+            "ホテル"
+          ],
+          "correct": 0,
+          "explanation": "cafeはコーヒーや軽食を提供する「カフェ、喫茶店」を表す名詞です。フランス語のカフェから来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「campaign」の意味として最も適切なものは？",
+          "choices": [
+            "（政治・宣伝などの）組織的運動、キャンペーン",
+            "選挙",
+            "会議",
+            "広告"
+          ],
+          "correct": 0,
+          "explanation": "campaignは特定の社会的・政治的・商業的目標のための「組織的運動、キャンペーン」を表す名詞、または「運動を行う」という動詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「campus」の意味として最も適切なものは？",
+          "choices": [
+            "（大学などの）キャンパス、構内",
+            "教室",
+            "運動場",
+            "学校"
+          ],
+          "correct": 0,
+          "explanation": "campusは大学や研究所などの「キャンパス、構内、敷地」を表す名詞です。例: on campus（学内で）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 8,
-      "title": "重要熟語編③：条件や制限、対比の熟語",
-      "type": "Phrasal Verbs 3",
-      "emoji": "🔗",
-      "subtitle": "条件を示したり、数量の制限、程度を対比する熟語",
+      "title": "名詞編⑫：大学生活や都市に関する名詞",
+      "type": "Nouns 12",
+      "emoji": "🗺️",
+      "subtitle": "大学生活や都市に関する名詞",
       "questions": [
-        {"scenario": "「based on」の意味として最も適切なものは？", "choices": ["〜に基づいて、基礎を置いて", "〜のせいで", "〜に加えて", "〜の代わりに"], "correct": 0, "explanation": "based on 〜は「〜に基づいて、基礎を置いて」という意味の形容詞表現です。例: based on a true story（実話に基づいて）", "type": "choice"},
-        {"scenario": "「due to」の意味として最も適切なものは？", "choices": ["〜のために、〜のせいで（原因・理由）", "〜に感謝して", "〜の代わりに", "〜に反対して"], "correct": 0, "explanation": "due to 〜は「〜のために、〜のせいで」と原因・理由を表す前置詞句で、because of や thanks to と似ていますが、より硬い表現です。", "type": "choice"},
-        {"scenario": "「in addition to」の意味として最も適切なものは？", "choices": ["〜に加えて、〜だけでなく〜も", "〜の代わりに", "〜するために", "〜の前に"], "correct": 0, "explanation": "in addition to 〜は「〜に加えて、〜のほかに」という意味の熟語表現です。besidesとほぼ同じです。例: in addition to English（英語に加えて）", "type": "choice"},
-        {"scenario": "「in place of」の意味として最も適切なものは？", "choices": ["〜の代わりに、〜の代理として", "〜と一緒に", "〜の後で", "〜の前に"], "correct": 0, "explanation": "in place of 〜は「〜の代わりに、〜の代理として」という意味の熟語です。instead of とほぼ同義です。例: in place of paper cups（紙コップの代わりに）", "type": "choice"},
-        {"scenario": "「as ~ as possible」の意味として最も適切なものは？", "choices": ["できるだけ〜", "〜と同じくらい", "〜するにつれて", "〜の代わりに"], "correct": 0, "explanation": "as (形容詞/副詞) as possible は「できるだけ〜」という意味の定番表現です。as 〜 as one can とも言います。例: as soon as possible（できるだけ早く）", "type": "choice"},
-        {"scenario": "「at least」の意味として最も適切なものは？", "choices": ["少なくとも、最低でも", "せいぜい、多くとも", "ついに", "最初に"], "correct": 0, "explanation": "at least (数詞・名詞) は「少なくとも、最低限〜」という意味の重要熟語です。対義語は at most（せいぜい）です。例: at least three times（少なくとも3回）", "type": "choice"},
-        {"scenario": "「by far」の意味として最も適切なものは？", "choices": ["（比較級・最上級を強めて）はるかに、断然", "遠くまでに", "自力で", "偶然に"], "correct": 0, "explanation": "by farは、比較級や最上級の前に置いて「はるかに、断然、ずば抜けて」と程度を強める熟語です。例: by far the best（断然トップ）", "type": "choice"},
-        {"scenario": "「not only ~ but also ...」の意味として最も適切なものは？", "choices": ["〜だけでなく…も", "〜か…のどちらか", "〜も…も両方ない", "〜の代わりに…"], "correct": 0, "explanation": "not only A but also B は「AだけでなくBも」と二つの事柄を並列・強調する重要熟語です。B as well as A とほぼ同じです。", "type": "choice"},
-        {"scenario": "「more or less」の意味として最も適切なものは？", "choices": ["多かれ少なかれ、だいたい", "さらに多く", "さらに少なく", "全く異なる"], "correct": 0, "explanation": "more or lessは「多かれ少なかれ」または「だいたい、ほぼ（almost）」という意味の熟語表現です。", "type": "choice"},
-        {"scenario": "「no longer」の意味として最も適切なものは？", "choices": ["もはや〜ない", "もっと長く", "長くはない", "ついに"], "correct": 0, "explanation": "no longer (動詞) は「もはや〜ない、もはや〜していない」と状態の終了を表す熟語です。not 〜 any longerとほぼ同じです。", "type": "choice"}
+        {
+          "scenario": "「canal」の意味として最も適切なものは？",
+          "choices": [
+            "運河、水路",
+            "川",
+            "海",
+            "トンネル"
+          ],
+          "correct": 0,
+          "explanation": "canalは人工的に作られた「運河、水路」を表す名詞です。例: the Panama Canal（パナマ運河）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「candidate」の意味として最も適切なものは？",
+          "choices": [
+            "候補者、志望者",
+            "当選者",
+            "有権者",
+            "面接官"
+          ],
+          "correct": 0,
+          "explanation": "candidateは選挙の「候補者」や、試験・就職の「志望者、受験者」を表す名詞です。例: presidential candidate（大統領候補）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「capacity」の意味として最も適切なものは？",
+          "choices": [
+            "収容能力、定員、容量、能力",
+            "限界",
+            "体積",
+            "重量"
+          ],
+          "correct": 0,
+          "explanation": "capacityは容器や部屋の「収容能力、定員、容量」、または人の「理解力、能力」を表す名詞です。例: seating capacity（収容人数）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「capital」の意味として最も適切なものは？",
+          "choices": [
+            "首都、資本、大文字、主要な、死刑の",
+            "地方",
+            "労働",
+            "小文字"
+          ],
+          "correct": 0,
+          "explanation": "capitalは国の「首都」、経済の「資本」、アルファベットの「大文字」を表す名詞です。形容詞では「主要な」「死刑の（capital punishment）」もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「celebration」の意味として最も適切なものは？",
+          "choices": [
+            "祝賀、お祝い、祝賀会",
+            "葬儀",
+            "会議",
+            "競争"
+          ],
+          "correct": 0,
+          "explanation": "celebrationは成功などを祝う「お祝い、祝賀会」を表する名詞です。動詞は celebrate（祝う）です。例: birthday celebration（誕生日祝い）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cell」の意味として最も適切なものは？",
+          "choices": [
+            "細胞、小部屋、電池",
+            "器官",
+            "筋肉",
+            "骨"
+          ],
+          "correct": 0,
+          "explanation": "cellは生物の「細胞」や、刑務所・修道院の「小部屋（独房）」、また「電池（fuel cellなど）」を表す名詞です。例: cell phone（携帯電話）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ceremony」の意味として最も適切なものは？",
+          "choices": [
+            "儀式、式典",
+            "パーティー",
+            "展示会",
+            "会議"
+          ],
+          "correct": 0,
+          "explanation": "ceremonyは結婚式や卒業式などの「儀式、式典」を表す名詞です。形容詞は ceremonial です。例: opening ceremony（開会式）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chain」の意味として最も適切なものは？",
+          "choices": [
+            "鎖、チェーン、チェーン店、つなぐ",
+            "紐",
+            "ロープ",
+            "ベルト"
+          ],
+          "correct": 0,
+          "explanation": "chainは金属の「鎖、チェーン」や、系列店「チェーン店」を表す名詞、または「つなぐ」という動詞の意味もあります。例: fast-food chain（ファストフード店）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「challenge」の意味として最も適切なものは？",
+          "choices": [
+            "挑戦、課題、挑戦する、異議を唱える",
+            "成功",
+            "あきらめ",
+            "妥協"
+          ],
+          "correct": 0,
+          "explanation": "challengeは「挑戦、やりがいのある課題」という名詞、また「挑戦する、挑む」という動詞の意味もあります。形容詞は challenging です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「champion」の意味として最も適切なものは？",
+          "choices": [
+            "選手権保持者、チャンピオン、擁護者",
+            "敗者",
+            "審判",
+            "監督"
+          ],
+          "correct": 0,
+          "explanation": "championはスポーツなどの「優勝者、チャンピオン」のほか、思想などの「擁護者、支持者」を表す名詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 9,
-      "title": "重要熟語編④：日常動作・計画と伝達",
-      "type": "Phrasal Verbs 4",
-      "emoji": "🔗",
-      "subtitle": "世話をする、注意する、延期するなどの動詞熟語",
+      "title": "名詞編⑬：重要名詞の総復習",
+      "type": "Nouns 13",
+      "emoji": "👥",
+      "subtitle": "総仕上げ：重要名詞の総復習",
       "questions": [
-        {"scenario": "「care for」の意味として最も適切なものは？", "choices": ["〜の世話をする、〜を好む", "運ぶ", "中止する", "あきらめる"], "correct": 0, "explanation": "care for 〜は「〜の世話をする（look after）」または否定・疑問文で「〜を好む（like）」という意味の熟語です。例: care for the sick child（病気の子の世話をする）", "type": "choice"},
-        {"scenario": "「make a mistake」の意味として最も適切なものは？", "choices": ["間違える、誤りをおかす", "正解する", "修正する", "嘘をつく"], "correct": 0, "explanation": "make a mistakeは「間違える、失敗する」という意味の定番熟語です。複数形は make mistakes になります。例: make mistakes in spelling（スペルを間違える）", "type": "choice"},
-        {"scenario": "「pay attention to」の意味として最も適切なものは？", "choices": ["〜に注意を払う、注目する", "お金を支払う", "〜を無視する", "〜に反対する"], "correct": 0, "explanation": "pay attention to 〜は「〜に注意を払う、注目する」という意味の重要熟語です。例: Pay attention to the teacher.（先生に注意を向けなさい。）", "type": "choice"},
-        {"scenario": "「put off」の意味として最も適切なものは？", "choices": ["延期する、先延ばしにする、消す", "開始する", "中止する", "脱ぐ"], "correct": 0, "explanation": "put off 〜は「（予定などを）延期する、先延ばしにする」という意味の熟語です。postponeと同じです。例: put off the meeting（会議を延期する）", "type": "choice"},
-        {"scenario": "「show off」の意味として最も適切なものは？", "choices": ["見せびらかす、自慢する", "展示する", "案内する", "隠す"], "correct": 0, "explanation": "show off (〜) は「（実力や持ち物を）見せびらかす、自慢する」という意味の熟語です。例: show off his new car（新車を自慢する）", "type": "choice"},
-        {"scenario": "「speak ill of」の意味として最も適切なものは？", "choices": ["〜の悪口を言う", "〜を褒める", "〜と病気について話す", "〜に反対する"], "correct": 0, "explanation": "speak ill of 〜は「〜の悪口を言う、陰口を叩く」という意味の熟語です。対義語は speak well of 〜（〜を褒める）です。", "type": "choice"},
-        {"scenario": "「tell a lie」の意味として最も適切なものは？", "choices": ["嘘をつく", "本当のことを言う", "約束する", "秘密を話す"], "correct": 0, "explanation": "tell a lieは「嘘をつく」という意味の熟語です。例: Don't tell a lie.（嘘をついてはいけません。）", "type": "choice"},
-        {"scenario": "「write down」の意味として最も適切なものは？", "choices": ["書き留める、メモする", "削除する", "本を書く", "読む"], "correct": 0, "explanation": "write down 〜は「（忘れないように）書き留める、メモする」という意味の熟語です。take note ofとほぼ同じです。例: write down the number（電話番号をメモする）", "type": "choice"},
-        {"scenario": "「turn down」の意味として最も適切なものは？", "choices": ["断る、拒ぜつする、（音量を）下げる", "受け入れる", "音量を上げる", "回転する"], "correct": 0, "explanation": "turn down 〜は「（招待やオファーを）断る、拒絶する（refuse）」または「（音量や火力を）下げる」という意味の熟語です。", "type": "choice"},
-        {"scenario": "「meanwhile」の意味として最も適切なものは？", "choices": ["その間に、一方では", "途中で", "その方法で", "ついでに"], "correct": 0, "explanation": "meanwhileは「その間に（別の場所で起こっていること）」または「一方では（対比）」を表す副詞です。話の転換で使われます。", "type": "choice"}
+        {
+          "scenario": "「championship」の意味として最も適切なものは？",
+          "choices": [
+            "選手権大会、王座、優勝",
+            "練習試合",
+            "準優勝",
+            "表彰式"
+          ],
+          "correct": 0,
+          "explanation": "championshipは「選手権大会」や「王座、優勝（者の地位）」を表す名詞です。例: world championship（世界選手権）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chance」の意味として最も適切なものは？",
+          "choices": [
+            "機会、チャンス、見込み、偶然、偶然の",
+            "必然",
+            "計画",
+            "障害"
+          ],
+          "correct": 0,
+          "explanation": "chanceは好ましい「機会（opportunity）」、または確率「見込み、可能性」を表す名詞です。例: by chance（偶然に）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「channel」の意味として最も適切なものは？",
+          "choices": [
+            "（テレビなどの）チャンネル、経路、海峡",
+            "放送局",
+            "プログラム",
+            "アンテナ"
+          ],
+          "correct": 0,
+          "explanation": "channelはテレビの「チャンネル」や、情報・物資の「伝達経路、ルート」、または「海峡」を表す名詞です。例: distribution channels（流通経路）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chapter」の意味として最も適切なものは？",
+          "choices": [
+            "（書籍の）章、支部、時代",
+            "ページ",
+            "目次",
+            "索引"
+          ],
+          "correct": 0,
+          "explanation": "chapterは小説や教科書などの「章（第1章など）」、または団体の「支部」を表す名詞です。例: Chapter 1（第1章）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「character」の意味として最も適切なものは？",
+          "choices": [
+            "性格、個性、特徴、登場人物、文字",
+            "外見",
+            "名前",
+            "セリフ"
+          ],
+          "correct": 0,
+          "explanation": "characterは人の「性格、個性」、小説などの「登場人物」、または漢字などの「文字（Chinese characters）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charity」の意味として最も適切なものは？",
+          "choices": [
+            "慈善、慈悲、慈善団体（活動）",
+            "営利企業",
+            "学校",
+            "病院"
+          ],
+          "correct": 0,
+          "explanation": "charityは困っている人を助ける「慈善、慈悲」、または寄付金で運営される「慈善団体」を表す名詞です。例: charity event（チャリティーイベント）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chart」の意味として最も適切なものは？",
+          "choices": [
+            "図表、グラフ、海図、図表にする",
+            "ノート",
+            "写真",
+            "看板"
+          ],
+          "correct": 0,
+          "explanation": "chartは情報を整理した「図表、グラフ、カルテ」や「海図」を表す名詞、または「図表にする」という動詞の意味もあります。例: pie chart（円グラフ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chemical」の意味として最も適切なものは？",
+          "choices": [
+            "化学物質、化学薬品、化学の",
+            "物理の",
+            "生物の",
+            "天然の"
+          ],
+          "correct": 0,
+          "explanation": "chemicalは「化学物質、化学薬品」という名詞、また「化学の、化学的な」という形容詞の意味もあります。例: chemical reaction（化学反応）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chemist」の意味として最も適切なものは？",
+          "choices": [
+            "化学者、薬剤師、薬局",
+            "科学者",
+            "医師",
+            "物理学者"
+          ],
+          "correct": 0,
+          "explanation": "chemistは「化学者」という意味のほか、イギリス英語で「薬剤師、薬局（drugstore）」を指す名詞です。chemistryの関連語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chemistry」の意味として最も適切なものは？",
+          "choices": [
+            "化学、化学的性質、（人と人の）相性",
+            "物理学",
+            "生物学",
+            "地学"
+          ],
+          "correct": 0,
+          "explanation": "chemistryは学問の「化学」のほか、人と人の「相性、化学反応」を表す名詞です。例: organic chemistry（有機化学）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 10,
-      "title": "会話表現・定型フレーズ②：要望と時間の確認",
-      "type": "Conversational Phrases 2",
-      "emoji": "🗣️",
-      "subtitle": "〜したい、時間・道を尋ねる際の定番会話表現",
+      "title": "名詞・形容詞ミックス：物や場所と性質を表す言葉",
+      "type": "Nouns & Adjectives Mix",
+      "emoji": "🔀",
+      "subtitle": "名詞と形容詞が混在する総合セット",
       "questions": [
-        {"scenario": "「Would you like to 〜?」の意味として最も適切なものは？", "choices": ["〜したいですか？、〜しませんか？（勧誘）", "〜するのが好きですか？", "〜しなければなりませんか？", "〜は本当ですか？"], "correct": 0, "explanation": "Would you like to (動詞の原形) ? は相手に「〜したいですか？」と意向を尋ねたり、「〜しませんか？」と丁寧に勧誘する定番フレーズです。", "type": "choice"},
-        {"scenario": "「I'd like to 〜」の意味として最も適切なものは？", "choices": ["〜したいのですが（丁寧）", "〜するのが好きです", "〜するつもりです", "どういたしまして"], "correct": 0, "explanation": "I'd like to (I would like to) (動詞 of 原形) は、I want to より丁寧に「〜したいのですが」と希望を伝える定番フレーズです。", "type": "choice"},
-        {"scenario": "「What can I do for you?」の意味として最も適切なものは？", "choices": ["いらっしゃいませ、何かご用でしょうか？", "何をすればいいですか？", "手伝ってください", "どういたしまして"], "correct": 0, "explanation": "What can I do for you? は店員が客に対して言う「いらっしゃいませ、何かご用ですか？」や、困っている人に「何か力になれることはありますか？」と尋ねる定番フレーズです。", "type": "choice"},
-        {"scenario": "「Just looking, thank you.」の意味として最も適切なものは？", "choices": ["見ているだけです、ありがとう（店員への返答）", "ただ探しています", "何もありません", "どういたしまして"], "correct": 0, "explanation": "Just looking, thank you. は店で店員に「May I help you?（何かお探しですか？）」などと声をかけられた際、「見ているだけですので大丈夫です、ありがとう」と答える定番の返答です。", "type": "choice"},
-        {"scenario": "「How long does it take?」の意味として最も適切なものは？", "choices": ["どれくらいの時間（期間）がかかりますか？", "どれくらいの長さですか？", "それは遠いですか？", "どういたしまして"], "correct": 0, "explanation": "How long does it take (to do/to 場所) ? は、目的地への移動時間や作業に「どれくらい時間がかかりますか？」と所要時間を尋ねる超定番フレーズです。", "type": "choice"},
-        {"scenario": "「Could you tell me the way to 〜?」の意味として最も適切なものは？", "choices": ["〜への道を教えていただけますか？", "〜へ連れて行ってくれますか？", "〜へ行ったことがありますか？", "どういたしまして"], "correct": 0, "explanation": "Could you tell me the way to (場所) ? は知らない人に「〜への道を教えていただけますか？」と丁寧に道を尋ねる超定番フレーズです。", "type": "choice"},
-        {"scenario": "「What's the matter?」の意味として最も適切なものは？", "choices": ["どうしたの？、何かあったの？", "何が重要ですか？", "体調はどうですか？", "どういたしまして"], "correct": 0, "explanation": "What's the matter?（または What's wrong?）は、相手の顔色が悪い時などに「どうしたの？」「どこか具合が悪いの？」と心配して尋ねる定番表現です。", "type": "choice"},
-        {"scenario": "「Take care.」の意味として最も適切なものは？", "choices": ["気をつけてね、お大事に、じゃあね", "面倒を見てください", "注意してください", "どういたしまして"], "correct": 0, "explanation": "Take care. は別れ際の「じゃあね、気をつけてね」や、体調の悪い相手への「お大事に」として使われる定番フレーズです。", "type": "choice"},
-        {"scenario": "「I'm sorry, but 〜」の意味として最も適切なものは？", "choices": ["残念ながら〜、申し訳ありませんが〜", "ごめんなさい、しかし〜", "そうは思いません", "どういたしまして"], "correct": 0, "explanation": "I'm sorry, but (主語+動詞) は相手の誘いを断る時や、言いにくい悪い知らせを伝える時にクッションとして使う「申し訳ありませんが〜」「あいにく〜」という定番表現です。", "type": "choice"},
-        {"scenario": "「Is that all?」の意味として最も適切なものは？", "choices": ["ご注文は以上ですか？、それだけですか？", "それは本当ですか？", "それは全部ですか？", "ありがとうございました"], "correct": 0, "explanation": "Is that all? は買い物の会計やレストランの注文時、店員が客に「（ご注文などは）以上でよろしいですか？」と確認する定番フレーズです。客側は「That's all.（以上です）」と答えます。", "type": "choice"}
+        {
+          "scenario": "「chest」の意味として最も適切なものは？",
+          "choices": [
+            "胸、胸部、大箱、たんす",
+            "お腹",
+            "背中",
+            "肩"
+          ],
+          "correct": 0,
+          "explanation": "chestは人間の「胸、胸部」、または蓋付きの「大箱、衣類整理ダンス」を表す名詞です。胸の骨格は chest と言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chief」の意味として最も適切なものは？",
+          "choices": [
+            "長、ボス、チーフ、主要な、最高位の",
+            "部下",
+            "補佐",
+            "一般社員"
+          ],
+          "correct": 0,
+          "explanation": "chiefは組織の「長、かしら、チーフ」という名詞、また「主要な、最高位の」という形容詞の意味もあります。例: chief executive officer（CEO）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accurate」の意味として最も適切なものは？",
+          "choices": [
+            "正確な、精密な",
+            "不正確な",
+            "大雑把な",
+            "適当な"
+          ],
+          "correct": 0,
+          "explanation": "accurateは「正確な、精密な」という意味です。例: accurate information（正確な情報）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convenient」の意味として最も適切なものは？",
+          "choices": [
+            "便利な、都合の良い",
+            "不便な",
+            "難しい",
+            "高価な"
+          ],
+          "correct": 0,
+          "explanation": "convenientは「便利な、都合の良い」という意味です。「コンビニ」は convenience store（convenienceは名詞）です。例: a convenient location（便利な場所）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delicious」の意味として最も適切なものは？",
+          "choices": [
+            "美味しい",
+            "まずい",
+            "辛い",
+            "甘い"
+          ],
+          "correct": 0,
+          "explanation": "deliciousは「美味しい」という意味です。very deliciousとは言わず、absolutely deliciousなどを使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「efficient」の意味として最も適切なものは？",
+          "choices": [
+            "効率的な、能率の良い",
+            "非効率な",
+            "遅い",
+            "無駄な"
+          ],
+          "correct": 0,
+          "explanation": "efficientは「効率的な、能率の良い」という意味です。例: an efficient method（効率的な方法）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「familiar」の意味として最も適切なものは？",
+          "choices": [
+            "よく知っている、馴染みのある",
+            "未知の",
+            "珍しい",
+            "難しい"
+          ],
+          "correct": 0,
+          "explanation": "familiarは「よく知っている、馴染みのある」という意味です。例: be familiar with 〜（〜に精通している）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「obvious」の意味として最も適切なものは？",
+          "choices": [
+            "明らかな、はっきりした",
+            "不明な",
+            "秘密の",
+            "複雑な"
+          ],
+          "correct": 0,
+          "explanation": "obviousは「明らかな、一目で分かる」という意味です。例: It's obvious.（それは明らかだ。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reasonable」の意味として最も適切なものは？",
+          "choices": [
+            "理にかなった、妥当な、手頃な",
+            "高すぎる",
+            "無理な",
+            "バカげた"
+          ],
+          "correct": 0,
+          "explanation": "reasonableは「理にかなった、妥当な」または「手頃な（値段が）」という意味です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「suitable」の意味として最も適切なものは？",
+          "choices": [
+            "適した、ふさわしい",
+            "不適切な",
+            "合わない",
+            "悪い"
+          ],
+          "correct": 0,
+          "explanation": "suitableは「適した、ふさわしい」という意味です。例: suitable for beginners（初心者向けの）",
+          "type": "choice"
+        }
       ]
     }
   ]

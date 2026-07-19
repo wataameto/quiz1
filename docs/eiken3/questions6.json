@@ -1,197 +1,1297 @@
 {
   "id": "eiken3",
   "level": 6,
-  "label": "📚 応用総仕上げ・対話表現編",
+  "label": "📚 芸術文化・論理表現編",
   "description": "英検3級レベルの応用英単語⑤（動詞・名詞・形容詞・副詞・熟語・会話表現）",
   "tests": [
     {
       "id": 1,
-      "title": "動詞編⑨：探索・指示・意図の動詞",
-      "type": "Basic Verbs 9",
-      "emoji": "🔄",
-      "subtitle": "狩りをする、特定する、意図するなどの動詞",
+      "title": "副詞編⑥：多様な論理関係を表す副詞",
+      "type": "Adverbs 6",
+      "emoji": "🌀",
+      "subtitle": "多様な論理関係を表す副詞",
       "questions": [
-        {"scenario": "「hunt」の意味として最も適切なものは？", "choices": ["狩りをする、捜し求める、狩り", "逃げる", "隠す", "殺す"], "correct": 0, "explanation": "huntは獲物を「狩る、狩猟する」または探し物を「捜し求める（hunt for 〜）」という動詞・名詞です。例: job hunting（就職活動）", "type": "choice"},
-        {"scenario": "「identify」の意味として最も適切なものは？", "choices": ["（本人・同一物だと）特定する、確認する、同一視する", "疑う", "否定する", "隠す"], "correct": 0, "explanation": "identifyは「（人や物をだれ・何であるか）特定する、確認する」という意味の動詞です。名詞形はidentification（ID、身分証明）です。例: identify the body（身元を確認する）", "type": "choice"},
-        {"scenario": "「illustrate」の意味として最も適切なものは？", "choices": ["説明する、図解する、挿絵を入れる", "描く", "文章を書く", "読む"], "correct": 0, "explanation": "illustrateは図や例を用いて「説明する、図解する」または本に「挿絵を入れる」という意味の動詞です。イラストは illustration です。", "type": "choice"},
-        {"scenario": "「imagine」の意味として最も適切なものは？", "choices": ["想像する、心に描く、思い込む", "計画する", "見る", "忘れる"], "correct": 0, "explanation": "imagineは「想像する、心に描く」という意味の動詞です。名詞形はimagination（想像力）です。例: imagine life on Mars（火星での生活を想像する）", "type": "choice"},
-        {"scenario": "「imitate」の意味として最も適切なものは？", "choices": ["模倣する、真似る、まねる", "創造する", "無視する", "嫌う"], "correct": 0, "explanation": "imitateは動作や声を「模倣する、真似る」という意味の動詞です。コピーすることです。名詞形はimitation（模倣、模造品）です。", "type": "choice"},
-        {"scenario": "「imply」の意味として最も適切なものは？", "choices": ["暗に示す、ほのめかす、含む", "明確に述べる", "否定する", "隠す"], "correct": 0, "explanation": "implyは言葉の裏に「暗に示す、ほのめかす、言外に含む」という意味の動詞です。名詞形はimplicationです。対義語は express です。", "type": "choice"},
-        {"scenario": "「import」の意味として最も適切なものは？", "choices": ["輸入する、導入する、輸入、輸入品", "輸出する", "販売する", "運ぶ"], "correct": 0, "explanation": "importは「（外国から商品を）輸入する」という動詞・名詞です。im-（中に）+ port（港）です。対義語は export（輸出する）です。", "type": "choice"},
-        {"scenario": "「impress」の意味として最も適切なものは？", "choices": ["感銘を与える、好印象を与える、感銘", "失望させる", "怒らせる", "無視する"], "correct": 0, "explanation": "impressは「（人に）感銘を与える、強い印象を与える」という意味の動詞です。名詞形はimpression（印象）です。例: impress the interviewer（面接官に好印象を与える）", "type": "choice"},
-        {"scenario": "「indicate」の意味として最も適切なものは？", "choices": ["指し示す、示す、表す", "隠す", "否定する", "避ける"], "correct": 0, "explanation": "indicateは針や数値が「指し示す、表す、示す」という意味の動詞です。例: indicate a change（変化を示す）", "type": "choice"},
-        {"scenario": "「influence」の意味として最も適切なものは？", "choices": ["影響を与える、作用する、影響、効果", "従う", "避ける", "保護する"], "correct": 0, "explanation": "influenceは人や考えに「影響を与える、作用する」という動詞、また「影響、影響力」という名詞でもあります。形容詞はinfluentialです。affectに似ています。", "type": "choice"}
+        {
+          "scenario": "「formerly」の意味として最も適切なものは？",
+          "choices": [
+            "以前は、かつては",
+            "将来は",
+            "最近は",
+            "一時的に"
+          ],
+          "correct": 0,
+          "explanation": "formerlyは「以前は、かつては（過去のある時点では）」という意味の副詞です。形容詞はformerです。対義語はcurrently（現在は）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「luckily」の意味として最も適切なものは？",
+          "choices": [
+            "幸運にも、幸いなことに",
+            "不運にも",
+            "偶然に",
+            "当然ながら"
+          ],
+          "correct": 0,
+          "explanation": "luckilyは「幸運にも、幸いなことに」という意味の副詞です。fortunatelyとほぼ同じ意味で、形容詞 lucky から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fully」の意味として最も適切なものは？",
+          "choices": [
+            "十分に、完全に、すっかり",
+            "部分的に",
+            "ほとんど〜ない",
+            "少しだけ"
+          ],
+          "correct": 0,
+          "explanation": "fullyは「十分に、完全に、すっかり」という意味の副詞です。full（いっぱいの）の副詞形です。例: fully recovered（完全に回復した）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「generally」の意味として最も適切なものは？",
+          "choices": [
+            "一般的に、概して、通常は",
+            "特別に",
+            "部分的に",
+            "まれに"
+          ],
+          "correct": 0,
+          "explanation": "generallyは「一般的に、概して、通常は」という意味の副詞です。in general とほぼ同じです。形容詞はgeneralです。対義語はspecificallyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「happily」の意味として最も適切なものは？",
+          "choices": [
+            "幸せに、楽しそうに、幸いなことに",
+            "不幸にも",
+            "悲しそうに",
+            "怒って"
+          ],
+          "correct": 0,
+          "explanation": "happilyは「幸せに、楽しそうに（喜びを伴って）」という意味の副詞です。形容詞はhappyです。対義語はunhappilyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「honestly」の意味として最も適切なものは？",
+          "choices": [
+            "正直に、本当に、率直に言って",
+            "嘘をついて",
+            "疑わしく",
+            "曖昧に"
+          ],
+          "correct": 0,
+          "explanation": "honestlyは「正直に、誠実に」または文頭で「率直に言って（Honestly speaking）」という意味の副詞です。形容詞はhonestです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hopefully」の意味として最も適切なものは？",
+          "choices": [
+            "願わくば、うまくいけば、期待を抱いて",
+            "絶望して",
+            "残念ながら",
+            "おそらく"
+          ],
+          "correct": 0,
+          "explanation": "hopefullyは「願わくば、できれば、うまくいけば」と話し手の希望を表す副詞です。形容詞はhopefulです。例: Hopefully, it will be sunny.（願わくば晴れてほしい。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「implicitly」の意味として最も適切なものは？",
+          "choices": [
+            "暗黙のうちに、それとなく、盲目的に",
+            "明確に",
+            "公式に",
+            "否定的に"
+          ],
+          "correct": 0,
+          "explanation": "implicitlyは口に出さず「暗黙のうちに、それとなく」という意味の副詞です。対義語は explicitly（明確に）です。形容詞はimplicitです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「indeed」の意味として最も適切なものは？",
+          "choices": [
+            "実に、本当に、実際は",
+            "おそらく",
+            "決して〜ない",
+            "たまに"
+          ],
+          "correct": 0,
+          "explanation": "indeedは「実に、本当に、まさに（事実を強調する時）」という意味の副詞です。very muchに似ています。例: Thank you very much indeed.（本当にありがとうございました。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inevitably」の意味として最も適切なものは？",
+          "choices": [
+            "不可避的に、必然的に、どうしても",
+            "偶然に",
+            "避けられるが",
+            "計画通りに"
+          ],
+          "correct": 0,
+          "explanation": "inevitablyは「必然的に、避けられない結果として、どうしても」という意味の副詞です。形容詞はinevitableです。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "動詞編⑩：伝達・判断・干渉の動詞",
-      "type": "Basic Verbs 10",
-      "emoji": "🔄",
-      "subtitle": "知らせる、主張する、干渉するなどの動詞",
+      "title": "副詞編⑦：重要副詞の総復習",
+      "type": "Adverbs 7",
+      "emoji": "🕐",
+      "subtitle": "総仕上げ：重要副詞の総復習",
       "questions": [
-        {"scenario": "「inform」の意味として最も適切なものは？", "choices": ["知らせる、通知する", "尋ねる", "隠す", "騙す"], "correct": 0, "explanation": "informは inform 人 of 事柄 で「人に知らせる、通知する」という意味の動詞です。名詞形はinformation（情報）です。インフォメーションの動詞形です。", "type": "choice"},
-        {"scenario": "「insist」の意味として最も適切なものは？", "choices": ["強く主張する、言い張る", "譲歩する", "疑う", "黙る"], "correct": 0, "explanation": "insistは反論されても「強く主張する、言い張る（insist on 〜 / insist that 〜）」という意味の動詞です。名詞形はinsistenceです。", "type": "choice"},
-        {"scenario": "「inspect」の意味として最も適切なものは？", "choices": ["検査する、点検する、視察する", "無視する", "破壊する", "使用する"], "correct": 0, "explanation": "inspectは欠陥などがないか「（詳しく）検査する、点検する、視察する」という意味の動詞です。検査官は inspector です。examineに似ています。", "type": "choice"},
-        {"scenario": "「inspire」の意味として最も適切なものは？", "choices": ["奮い立たせる、ひらめきを与える", "落胆させる", "怒らせる", "邪魔する"], "correct": 0, "explanation": "inspireは人を「奮い立たせる、創作意欲やひらめきを与える」という意味の動詞です。名詞形はinspiration（インスピレーション）です。", "type": "choice"},
-        {"scenario": "「insult」の意味として最も適切なものは？", "choices": ["侮辱する、無礼なことを言う、侮辱", "褒める", "謝罪する", "感謝する"], "correct": 0, "explanation": "insultは「（言葉や態度で）侮辱する」という動詞、また「侮辱、無礼」という名詞でもあります。対義語はpraiseやcomplimentです。", "type": "choice"},
-        {"scenario": "「intend」の意味として最も適切なものは？", "choices": ["意図する、〜するつもりである", "偶然行う", "あきらめる", "避ける"], "correct": 0, "explanation": "intendは intend to do で「〜するつもりである、〜を意図する」という意味の動詞です。名詞形はintention（意図、目的）です。", "type": "choice"},
-        {"scenario": "「interfere」の意味として最も適切なものは？", "choices": ["干渉する、邪魔する、お節介を焼く", "助ける", "無視する", "参加する"], "correct": 0, "explanation": "interfereは interfere in/with 〜 で「（他人の事に）干渉する、邪魔する、お節介を焼く」という意味の動詞です。名詞形はinterferenceです。", "type": "choice"},
-        {"scenario": "「interpret」の意味として最も適切なものは？", "choices": ["通訳する、解釈する、説明する", "聞く", "話す", "翻訳する"], "correct": 0, "explanation": "interpretは言葉を「通訳する」または状況や夢を「解釈する」という意味の動詞です。通訳者は interpreter です。翻訳する（translate）とは区別されます。", "type": "choice"},
-        {"scenario": "「interrupt」の意味として最も適切なものは？", "choices": ["中断する、遮る、邪魔をする", "続ける", "開始する", "助ける"], "correct": 0, "explanation": "interruptは人の会話や作業を「中断する、途中で遮る、邪魔をする」という意味の動詞です。名詞形はinterruptionです。", "type": "choice"},
-        {"scenario": "「judge」の意味として最も適切なものは？", "choices": ["判断する、裁く、裁判官、審査員", "従う", "迷う", "疑う"], "correct": 0, "explanation": "judgeは善悪や勝敗を「判断する、裁く」という動詞、また「裁判官、審査員（ジャッジ）」という名詞でもあります。名詞形はjudgment（判断）です。", "type": "choice"}
+        {
+          "scenario": "「initially」の意味として最も適切なものは？",
+          "choices": [
+            "最初は、初期のうちは、はじめに",
+            "最後に",
+            "最近",
+            "ついに"
+          ],
+          "correct": 0,
+          "explanation": "initiallyは「最初は、初期の段階では（後に変化する前）」という意味の副詞です。形容詞はinitialです。at firstとほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「intently」の意味として最も適切なものは？",
+          "choices": [
+            "熱心に、じっと、一心に",
+            "無関心に",
+            "適当に",
+            "ぼんやりと"
+          ],
+          "correct": 0,
+          "explanation": "intentlyは「熱心に、集中して、じっと見つめる」という意味の副詞です。形容詞はintentです。例: listen intently（身を乗り出して聞く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inwardly」の意味として最も適切なものは？",
+          "choices": [
+            "心の中で、内側に、内面的に",
+            "外側に",
+            "公然と",
+            "騒がしく"
+          ],
+          "correct": 0,
+          "explanation": "inwardlyは「心の中で、内面的に（外には出さずに）」または「内側へ」という意味の副詞です。対義語は outwardly です。形容詞はinwardです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「justly」の意味として最も適切なものは？",
+          "choices": [
+            "公正に、正当に、当然ながら",
+            "不当に",
+            "大雑把に",
+            "偶然に"
+          ],
+          "correct": 0,
+          "explanation": "justlyは「公正に、正当に（正義に基づいて）」または「当然ながら（もっともな理由で）」という意味の副詞です。形容詞はjust（公正な、ただの）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keenly」の意味として最も適切なものは？",
+          "choices": [
+            "痛切に、熱心に、鋭く",
+            "鈍く",
+            "ぼんやりと",
+            "嫌そうに"
+          ],
+          "correct": 0,
+          "explanation": "keenlyは痛みや寒さを「痛切に、身にしみて」感じる様子、または「熱心に、鋭く」観察する様子を表す副詞です。形容詞はkeenです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「largely」の意味として最も適切なものは？",
+          "choices": [
+            "大部分は、主に、大いに",
+            "少しだけ",
+            "完全に",
+            "別々に"
+          ],
+          "correct": 0,
+          "explanation": "largelyは「大部分は、主に（mostlyやmainlyとほぼ同じ）」という意味の副詞です。形容詞はlargeです。例: largely due to 〜（大部分は〜のせいで）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lately」の意味として最も適切なものは？",
+          "choices": [
+            "最近、近頃",
+            "遅れて",
+            "将来",
+            "以前は"
+          ],
+          "correct": 0,
+          "explanation": "latelyは現在完了形などと一緒に使われ「最近、近頃（recentlyとほぼ同じ）」という意味の副詞です。late（遅い）の派生語ですが、意味が異なります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lightly」の意味として最も適切なものは？",
+          "choices": [
+            "軽く、軽快に、気楽に、軽視して",
+            "重く",
+            "激しく",
+            "慎重に"
+          ],
+          "correct": 0,
+          "explanation": "lightlyは「軽く、軽快に」または物事を「気楽に考える、軽視する」という意味の副詞です。形容詞はlightです。対義語はheavilyです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「locally」の意味として最も適切なものは？",
+          "choices": [
+            "地元で、局所的に、地方で",
+            "世界的に",
+            "全国的に",
+            "中心部で"
+          ],
+          "correct": 0,
+          "explanation": "locallyは「地元で、その地域で」または医療などで「局所的に」という意味の副詞です。形容詞はlocalです。例: locally grown vegetables（地元産の野菜）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mainly」の意味として最も適切なものは？",
+          "choices": [
+            "主に、大部分は、たいてい",
+            "少しだけ",
+            "別々に",
+            "完全に"
+          ],
+          "correct": 0,
+          "explanation": "mainlyは「主に、大部分は（mostlyやlargelyとほぼ同じ）」という意味の副詞です。形容詞はmain（主要な）です。例: mainly students（主に学生）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 3,
-      "title": "名詞編⑨：芸術・文化・エンタメ",
-      "type": "Nouns: Art & Culture",
-      "emoji": "🎨",
-      "subtitle": "小説、美術館、コンサート、楽器などの文化名詞",
+      "title": "重要熟語編①：英検3級で必須の基本熟語動詞",
+      "type": "Idioms & Phrasal Verbs 1",
+      "emoji": "🔗",
+      "subtitle": "英検3級で必須の基本熟語動詞",
       "questions": [
-        {"scenario": "「novel (名詞)」の意味として最も適切なものは？", "choices": ["小説", "詩", "教科書", "漫画"], "correct": 0, "explanation": "novelは「小説」を表す名詞です。小説家は novelist です。形容詞では「斬新な、新しい」という意味もあります。", "type": "choice"},
-        {"scenario": "「gallery」の意味として最も適切なものは？", "choices": ["美術展示室、画廊、ギャラリー", "劇場", "博物館", "図書館"], "correct": 0, "explanation": "galleryは絵画などを展示・販売する「美術展示室、画廊、ギャラリー」を表す名詞です。例: art gallery（美術館）", "type": "choice"},
-        {"scenario": "「museum」の意味として最も適切なものは？", "choices": ["博物館、美術館", "図書館", "劇場", "水族館"], "correct": 0, "explanation": "museumは歴史や科学、美術 of 資料を展示する「博物館、美術館」を表す名詞です。例: history museum（歴史博物館）", "type": "choice"},
-        {"scenario": "「concert」の意味として最も適切なものは？", "choices": ["コンサート、音楽会、演奏会", "演劇", "映画", "講義"], "correct": 0, "explanation": "concertは音楽の「コンサート、演奏会」を表す名詞です。例: live concert（ライブコンサート）", "type": "choice"},
-        {"scenario": "「theater」の意味として最も適切なものは？", "choices": ["劇場、映画館", "美術館", "展示場", "スタジアム"], "correct": 0, "explanation": "theaterは演劇を上演する「劇場」や「映画館（movie theater）」を表す名詞です。演劇そのものを指すこともあります。", "type": "choice"},
-        {"scenario": "「instrument」の意味として最も適切なものは？", "choices": ["器具、道具、楽器", "機械", "部品", "おもちゃ"], "correct": 0, "explanation": "instrumentは科学的な「器具、測定器」や、音楽の「楽器（musical instrument）」を表す名詞です。toolよりも精密なものを指します。", "type": "choice"},
-        {"scenario": "「sculpture」の意味として最も適切なものは？", "choices": ["彫刻、彫塑、彫刻作品", "絵画", "写真", "工芸品"], "correct": 0, "explanation": "sculptureは木や石、金属を削って作る「彫刻、彫刻作品」を表す名詞です。彫刻家は sculptor です。", "type": "choice"},
-        {"scenario": "「exhibition」の意味として最も適切なものは？", "choices": ["展覧会、展示会、展示品", "劇場", "映画", "公演"], "correct": 0, "explanation": "exhibitionは美術品や製品の「展覧会、展示会」を表す名詞です。exhibit（展示する）の名詞形です。例: art exhibition（美術展）", "type": "choice"},
-        {"scenario": "「craft」の意味として最も適切なものは？", "choices": ["工芸、手芸、工芸品、船、飛行機", "絵画", "音楽", "文学"], "correct": 0, "explanation": "craftは手作業で作る「工芸、手芸」や「工芸品」、または宇宙船（spacecraft）や航空機（aircraft）などの「船、乗り物」を表す名詞です。", "type": "choice"},
-        {"scenario": "「leisure」の意味として最も適切なものは？", "choices": ["余暇、自由時間、レジャー", "労働", "勉強", "宿題"], "correct": 0, "explanation": "leisureは仕事や義務のない「余暇、自由時間、レジャー」を表す名詞です。例: leisure activities（レジャー活動）", "type": "choice"}
+        {
+          "scenario": "「as soon as」の意味として最も適切なものは？",
+          "choices": [
+            "〜するとすぐに",
+            "〜する前に",
+            "〜した後で",
+            "〜しながら"
+          ],
+          "correct": 0,
+          "explanation": "as soon as 〜は「〜するとすぐに」という意味の接続詞句です。例: As soon as I arrived, it rained.（私が着くとすぐに雨が降った。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be interested in」の意味として最も適切なものは？",
+          "choices": [
+            "〜に興味がある",
+            "〜に興味がない",
+            "〜を知っている",
+            "〜を忘れている"
+          ],
+          "correct": 0,
+          "explanation": "be interested in 〜は「〜に興味がある」という重要表現です。interest（興味）の形容詞interestedを使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be proud of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を誇りに思う",
+            "〜を恥じる",
+            "〜を忘れる",
+            "〜を諦める"
+          ],
+          "correct": 0,
+          "explanation": "be proud of 〜は「〜を誇りに思う」という意味です。例: be proud of my son（息子を誇りに思う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be worried about」の意味として最も適切なものは？",
+          "choices": [
+            "〜を心配している",
+            "〜を楽しみにしている",
+            "〜に怒っている",
+            "〜に感謝している"
+          ],
+          "correct": 0,
+          "explanation": "be worried about 〜は「〜を心配している」という意味です。worry（心配）の形容詞worriedを使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「have to」の意味として最も適切なものは？",
+          "choices": [
+            "〜しなければならない",
+            "〜してもよい",
+            "〜してはいけない",
+            "〜したい"
+          ],
+          "correct": 0,
+          "explanation": "have to 〜は「〜しなければならない」という意味で、mustとほぼ同じです。過去形はhad toになります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be able to」の意味として最も適切なものは？",
+          "choices": [
+            "〜できる",
+            "〜できない",
+            "〜したい",
+            "〜するつもりだ"
+          ],
+          "correct": 0,
+          "explanation": "be able to 〜は「〜できる」という意味でcanとほぼ同じですが、時制を変えやすい利点があります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「would like to」の意味として最も適切なものは？",
+          "choices": [
+            "〜したい（丁寧）",
+            "〜したくない",
+            "〜しなければならない",
+            "〜できる"
+          ],
+          "correct": 0,
+          "explanation": "would like to 〜はwant to 〜の丁寧な表現で「〜したい」という意味です。例: I'd like to go.（行きたいです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「used to」の意味として最も適切なものは？",
+          "choices": [
+            "以前は〜していた、かつて〜だった",
+            "〜に慣れている",
+            "〜を使う",
+            "〜を使い果たす"
+          ],
+          "correct": 0,
+          "explanation": "used to 〜は「以前は〜していた、かつて〜だった」という過去の習慣・状態を表します。現在とは違うことを示します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「because of」の意味として最も適切なものは？",
+          "choices": [
+            "〜のせいで、〜のために",
+            "〜のおかげで",
+            "〜にもかかわらず",
+            "〜によると"
+          ],
+          "correct": 0,
+          "explanation": "because of 〜は「〜のせいで、〜のために」という意味です。名詞句の後ろに来ます。because 〜は節（主語＋動詞）が続きます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thanks to」の意味として最も適切なものは？",
+          "choices": [
+            "〜のおかげで",
+            "〜のせいで",
+            "〜にもかかわらず",
+            "〜によると"
+          ],
+          "correct": 0,
+          "explanation": "thanks to 〜は「〜のおかげで」という良い意味で使う表現です。例: Thanks to you, I passed.（あなたのおかげで合格した。）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 4,
-      "title": "名詞編⑩：オフィスとビジネスライフ",
-      "type": "Nouns: Office & Business Life",
-      "emoji": "💼",
-      "subtitle": "事務所、顧客、契約、会議などのビジネス名詞",
+      "title": "重要熟語編②：会話や長文でよく使われる決まり文句",
+      "type": "Idioms & Phrasal Verbs 2",
+      "emoji": "💬",
+      "subtitle": "会話や長文でよく使われる決まり文句",
       "questions": [
-        {"scenario": "「office」の意味として最も適切なものは？", "choices": ["事務所、オフィス、役所", "工場", "店舗", "学校"], "correct": 0, "explanation": "officeは事務仕事を行う「事務所、オフィス」や「役所」を表す名詞です。そこで働く人は office worker です。", "type": "choice"},
-        {"scenario": "「client」の意味として最も適切なものは？", "choices": ["依頼人、クライアント、顧客", "店員", "競争相手", "仕入先"], "correct": 0, "explanation": "clientは弁護士や設計士などの専門職への「依頼人」や、ビジネス上の「顧客、クライアント」を表す名詞です。customerよりも継続的な取引相手を指します。", "type": "choice"},
-        {"scenario": "「contract (名詞)」の意味として最も適切なものは？", "choices": ["契約、契約書", "計画", "規則", "法律"], "correct": 0, "explanation": "contractは「契約、契約書」を表す名詞です。動詞では「契約を結ぶ」または「収縮する、縮む」の意味もあります。例: sign a contract（契約に署名する）", "type": "choice"},
-        {"scenario": "「meeting」の意味として最も適切なものは？", "choices": ["会議、打ち合わせ、集まり", "授業", "講義", "約束"], "correct": 0, "explanation": "meetingは仕事の「会議、打ち合わせ」や「集まり、出会い」を表す名詞です。例: hold a meeting（会議を開く）", "type": "choice"},
-        {"scenario": "「manager」の意味として最も適切なものは？", "choices": ["経営者、支配人、マネージャー、監督", "従業員", "顧客", "株主"], "correct": 0, "explanation": "managerは部署の「経営者、支配人、マネージャー、管理者」またはスポーツの「監督」を表す名詞です。manage（管理する）の派生語です。", "type": "choice"},
-        {"scenario": "「agency」の意味として最も適切なものは？", "choices": ["代理店、機関、局", "本社", "店舗", "工場"], "correct": 0, "explanation": "agencyは代理業務を行う「代理店（travel agencyなど）」や、政府の「機関、局（CIAなど）」を表す名詞です。代理人は agent です。", "type": "choice"},
-        {"scenario": "「department」の意味として最も適切なものは？", "choices": ["部門、課、学科、省", "会社", "支店", "工場"], "correct": 0, "explanation": "departmentは会社や学校などの「部門、課、学科」、または政府の「省」を表す名詞です。デパート（department store）の語源です。", "type": "choice"},
-        {"scenario": "「budget」の意味として最も適切なものは？", "choices": ["予算、経費、予算案", "利益", "売上", "税金"], "correct": 0, "explanation": "budgetは国や企業の「予算、経費、予算案」を表す名詞です。例: low budget movie（低予算映画）", "type": "choice"},
-        {"scenario": "「crew」の意味として最も適切なものは？", "choices": ["乗組員、クルー、乗員", "店員", "乗客", "運転手"], "correct": 0, "explanation": "crewは船や飛行機、電車の「乗組員、クルー」や、映画などの撮影スタッフ「クルー」を表す名詞です。例: cabin crew（客室乗務員）", "type": "choice"},
-        {"scenario": "「cash」の意味として最も適切なものは？", "choices": ["現金、キャッシュ、現金化する", "小切手", "クレジットカード", "通帳"], "correct": 0, "explanation": "cashは「現金（紙幣や硬貨）」を表す名詞、また小切手などを「現金化する」という動詞の意味もあります。例: pay in cash（現金で支払う）", "type": "choice"}
+        {
+          "scenario": "「in order to」の意味として最も適切なものは？",
+          "choices": [
+            "〜するために（目的）",
+            "〜した後で",
+            "〜する代わりに",
+            "〜にもかかわらず"
+          ],
+          "correct": 0,
+          "explanation": "in order to 〜は「〜するために（目的）」という意味です。to 〜だけでも同じ意味ですが、in order toの方が目的であることをより明確に示せます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「instead of」の意味として最も適切なものは？",
+          "choices": [
+            "〜の代わりに",
+            "〜と一緒に",
+            "〜の後で",
+            "〜の前に"
+          ],
+          "correct": 0,
+          "explanation": "instead of 〜は「〜の代わりに」という意味です。ofの後は名詞または動名詞が来ます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「according to」の意味として最も適切なものは？",
+          "choices": [
+            "〜によると、〜に従って",
+            "〜のせいで",
+            "〜にもかかわらず",
+            "〜のために"
+          ],
+          "correct": 0,
+          "explanation": "according to 〜は「〜によると、〜に従って」という意味です。例: According to the news, it will rain.（ニュースによると雨が降る。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as well as」の意味として最も適切なものは？",
+          "choices": [
+            "〜だけでなく〜も、〜と同様に",
+            "〜よりも",
+            "〜の代わりに",
+            "〜のために"
+          ],
+          "correct": 0,
+          "explanation": "as well as 〜は「〜だけでなく〜も」または「〜と同様に」という意味です。例: He speaks English as well as Japanese.（彼は日本語と同様に英語も話す。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on the other hand」の意味として最も適切なものは？",
+          "choices": [
+            "一方、他方では",
+            "この手で",
+            "反対の手で",
+            "手の上で"
+          ],
+          "correct": 0,
+          "explanation": "on the other handは対比を示す「一方、他方では」という意味の接続表現です。on the one hand（一方で）と対で使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be famous for」の意味として最も適切なものは？",
+          "choices": [
+            "〜で有名である",
+            "〜が苦手である",
+            "〜を誇りに思う",
+            "〜に怒っている"
+          ],
+          "correct": 0,
+          "explanation": "be famous for 〜は「〜で有名である、〜の理由で知られている」という意味の重要熟語です。例: be famous for tea（お茶で有名だ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be full of」の意味として最も適切なものは？",
+          "choices": [
+            "〜でいっぱいである、満ちている",
+            "〜が不足している",
+            "〜を誇りに思う",
+            "〜に満足している"
+          ],
+          "correct": 0,
+          "explanation": "be full of 〜は「〜でいっぱいである、満ちている」という意味の熟語です。be filled with とほぼ同じです。例: be full of energy（活力に満ちている）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be different from」の意味として最も適切なものは？",
+          "choices": [
+            "〜と違っている、異なる",
+            "〜と似ている",
+            "〜と同じである",
+            "〜から離れる"
+          ],
+          "correct": 0,
+          "explanation": "be different from 〜は「〜と異なっている、違っている」という意味の熟語です。名詞 difference を使います。例: My opinion is different from yours.（私の意見はあなたと違います。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be surprised at」の意味として最も適切なものは？",
+          "choices": [
+            "〜に驚く",
+            "〜に怒る",
+            "〜を楽しみにする",
+            "〜を恐れる"
+          ],
+          "correct": 0,
+          "explanation": "be surprised at 〜は「〜に驚く」という意味の熟語です。byを使うこともあります。例: I was surprised at the news.（私はそのニュースに驚いた。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be conscious of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を意識している、気づいている",
+            "〜を誇りに思う",
+            "〜を恥じている",
+            "〜を無視している"
+          ],
+          "correct": 0,
+          "explanation": "be conscious of 〜は「〜を意識している、自覚している、気づいている」という意味の重要熟語です。aware of とほぼ同じです。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 5,
-      "title": "形容詞編⑨：多面的な形容詞表現",
-      "type": "Adjectives 9",
-      "emoji": "🌟",
-      "subtitle": "神経質な、公式の、元のなどの形容詞",
+      "title": "重要熟語編③：前置詞や接続詞を使った頻出イディオム",
+      "type": "Idioms & Phrasal Verbs 3",
+      "emoji": "🔤",
+      "subtitle": "前置詞や接続詞を使った頻出イディオム",
       "questions": [
-        {"scenario": "「natural」の意味として最も適切なものは？", "choices": ["自然の、当然の、生まれつきの、天然の", "人工の", "不自然な", "奇妙な"], "correct": 0, "explanation": "naturalは「自然の、天然の」「（結果として）当然の」「生まれつきの」という意味の形容詞です。対義語はartificial（人工の）やunnaturalです。", "type": "choice"},
-        {"scenario": "「negative」の意味として最も適切なものは？", "choices": ["否定的な、消極的な、マイナスの、陰性の", "肯定的な", "積極的な", "陽性の"], "correct": 0, "explanation": "negativeは「否定的な、消極的な」あるいは「マイナスの、陰性の」という意味の形容詞です。対義語は positive です。", "type": "choice"},
-        {"scenario": "「nervous」の意味として最も適切なものは？", "choices": ["緊張して、不安な、神経質な", "落ち着いた", "勇敢な", "喜んでいる"], "correct": 0, "explanation": "nervousは試験や発表の前などで「緊張している、不安な」、または「神経質な」という意味の形容詞です。例: feel nervous（緊張する）", "type": "choice"},
-        {"scenario": "「nice」の意味として最も適切なものは？", "choices": ["良い、親切な、素敵な", "悪い", "難しい", "古い"], "correct": 0, "explanation": "niceは「良い、親切な、素敵な」という意味の基本形容詞です。例: Have a nice day!（良い一日を！）", "type": "choice"},
-        {"scenario": "「noble」の意味として最も適切なものは？", "choices": ["高貴な、気高い、貴族の、貴族", "卑しい", "貧しい", "一般的な"], "correct": 0, "explanation": "nobleは身分が「高貴な」または品格が「気高い」という形容詞、また「貴族」という名詞の意味もあります。対義語は humble などです。", "type": "choice"},
-        {"scenario": "「noisy」の意味として最も適切なものは？", "choices": ["騒がしい、うるさい", "静かな", "きれいな", "暗い"], "correct": 0, "explanation": "noisyは人や場所が「騒がしい、うるさい」という意味の形容詞です。noise（騒音）から来ています。対義語は quiet です。", "type": "choice"},
-        {"scenario": "「normal」の意味として最も適切なものは？", "choices": ["標準の、正常な、普通の、標準", "異常な", "特別な", "一時的な"], "correct": 0, "explanation": "normalは「標準の、正常な、普通の」という形容詞・名詞です。対義語は abnormal です。副詞形は normally です。", "type": "choice"},
-        {"scenario": "「novel (形容詞)」の意味として最も適切なものは？", "choices": ["斬新な、新しい", "古い", "普通の", "複雑な"], "correct": 0, "explanation": "novelは形容詞として「斬新な、新しい（今までにない）」という意味を持ちます。名詞では「小説」です。例: novel idea（斬新なアイデア）", "type": "choice"},
-        {"scenario": "「nuclear」の意味として最も適切なものは？", "choices": ["原子力の、核の", "火力の", "水力の", "太陽光の"], "correct": 0, "explanation": "nuclearは「原子力の、核の、細胞核の」という意味の形容詞です。例: nuclear energy（原子力エネルギー）、nuclear family（核家族）", "type": "choice"},
-        {"scenario": "「numerous」の意味として最も適切なものは？", "choices": ["多数の、たくさんの", "少数の", "唯一の", "一部の"], "correct": 0, "explanation": "numerousは「多数の、非常に多くの」という意味の形容詞です。manyとほぼ同じですが、よりフォーマルな響きがあります。", "type": "choice"}
+        {
+          "scenario": "「be fond of」の意味として最も適切なものは？",
+          "choices": [
+            "〜が好きである、好んでいる",
+            "〜に興味がある",
+            "〜に飽きている",
+            "〜を恐れている"
+          ],
+          "correct": 0,
+          "explanation": "be fond of 〜は「〜が好きである、好む」という意味の定番熟語です。like とほぼ同じです。例: be fond of reading（読書が好きだ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be scared of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を怖がっている、恐れる",
+            "〜を楽しみにしている",
+            "〜を誇りに思っている",
+            "〜に怒っている"
+          ],
+          "correct": 0,
+          "explanation": "be scared of 〜は「〜を怖がる、恐れる」という意味の熟語です。be afraid of とほぼ同じですが、より日常会話でよく使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be capable of」の意味として最も適切なものは？",
+          "choices": [
+            "〜する能力がある、〜ができる",
+            "〜が得意である",
+            "〜が苦手である",
+            "〜に慣れている"
+          ],
+          "correct": 0,
+          "explanation": "be capable of 〜（後ろは名詞・動名詞）は「〜する能力がある、〜ができる」という意味の重要熟語です。be able to と似ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be bad at」の意味として最も適切なものは？",
+          "choices": [
+            "〜が苦手である、下手である",
+            "〜が得意である",
+            "〜に怒っている",
+            "〜に慣れている"
+          ],
+          "correct": 0,
+          "explanation": "be bad at 〜は「〜が苦手である、下手である」という意味の熟語です。対義語 is be good at 〜 です。例: be bad at math（数学が苦手だ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「belong to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に所属している、〜のものである",
+            "〜から離れる",
+            "〜に参加する",
+            "〜を訪問する"
+          ],
+          "correct": 0,
+          "explanation": "belong to 〜は「（組織などに）所属している」または「〜の所有物である」という意味の熟語です。例: belong to the school band（スクールバンドに所属する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depend on」の意味として最も適切なものは？",
+          "choices": [
+            "〜に依存する、〜次第である、頼る",
+            "〜から独立する",
+            "〜を疑う",
+            "〜を管理する"
+          ],
+          "correct": 0,
+          "explanation": "depend on 〜は「〜に依存する、頼る」または「〜次第である」という意味の重要熟語です。例: depend on parents（親に頼る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lead to」の意味として最も適切なものは？",
+          "choices": [
+            "〜につながる、〜を引き起こす",
+            "〜を導く",
+            "〜から離れる",
+            "〜を止める"
+          ],
+          "correct": 0,
+          "explanation": "lead to (結果など) は「〜につながる、〜を引き起こす（cause）」という意味の重要熟語です。過去形はledになります。例: Smoking leads to cancer.（喫煙は癌につながる。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「result in」の意味として最も適切なものは？",
+          "choices": [
+            "〜という結果になる、終わる",
+            "〜から生じる",
+            "〜を解決する",
+            "〜を原因とする"
+          ],
+          "correct": 0,
+          "explanation": "result in (結果) は「（出来事が）〜という結果になる、〜で終わる」という意味です。原因から生じる場合は result from を使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn out to be」の意味として最も適切なものは？",
+          "choices": [
+            "〜だと判明する、結果として〜になる",
+            "〜を断る",
+            "〜に変わる",
+            "〜を指し示す"
+          ],
+          "correct": 0,
+          "explanation": "turn out to be 〜（または単に turn out 〜）は「（後から）〜だと分かる、判明する」という意味の重要熟語です。prove to be と同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come true」の意味として最も適切なものは？",
+          "choices": [
+            "（夢などが）実現する、叶う",
+            "本当になる",
+            "ここへ来る",
+            "真実を話す"
+          ],
+          "correct": 0,
+          "explanation": "come trueは「（夢や願い、予言などが）実現する、叶う」という意味の定番熟語です。例: My dream came true.（夢が叶った。）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 6,
-      "title": "形容詞編⑩：状態・客観性の形容詞",
-      "type": "Adjectives 10",
-      "emoji": "🌟",
-      "subtitle": "明らかな、時折の、公式のなどの形容詞",
+      "title": "重要熟語編④：条件や制限、対比を表す熟語",
+      "type": "Idioms & Phrasal Verbs 4",
+      "emoji": "🧷",
+      "subtitle": "条件や制限、対比を表す熟語",
       "questions": [
-        {"scenario": "「apparent」の意味として最も適切なものは？", "choices": ["一見〜らしい、明白な、見かけの", "隠された", "曖昧な", "疑わしい"], "correct": 0, "explanation": "apparentは「（真偽は別として）一見〜らしい、見かけの」または「誰の目にも明白な（obvious）」という意味の形容詞です。例: apparent reason（一見明白な理由）", "type": "choice"},
-        {"scenario": "「occasional」の意味として最も適切なものは？", "choices": ["時折の、予備の、たまの", "頻繁な", "絶え間ない", "定例の"], "correct": 0, "explanation": "occasionalは頻度が低く「時折の、たまの」という意味の形容詞です。名詞 occasion（機会、出来事）から派生しています。副詞形は occasionally です。", "type": "choice"},
-        {"scenario": "「odd」の意味として最も適切なものは？", "choices": ["奇妙な、奇数の、半端な", "普通の", "偶数の", "完璧な"], "correct": 0, "explanation": "oddは「奇妙な、変な（strange）」、数学の「奇数の」、または「半端な」という意味の形容詞です。偶数は even です。", "type": "choice"},
-        {"scenario": "「official」の意味として最も適切なものは？", "choices": ["公式の、公の、公務の、役員", "非公式の", "私的な", "カジュアルな"], "correct": 0, "explanation": "officialは「公式の、公の」という形容詞、また組織の「役員、公務員」という名詞の意味もあります。副詞形は officially です。", "type": "choice"},
-        {"scenario": "「ongoing」の意味として最も適切なものは？", "choices": ["継続している、進行中の", "終了した", "一時的な", "過去の"], "correct": 0, "explanation": "ongoingは計画や議論などが「進行中の、現在継続している」という意味の形容詞です。例: ongoing project（進行中のプロジェクト）", "type": "choice"},
-        {"scenario": "「opposite」の意味として最も適切なものは？", "choices": ["反対側の、逆の、逆のもの、〜の向かいに", "同じ側の", "類似した", "隣接した"], "correct": 0, "explanation": "oppositeは「反対側の、逆の」という形容詞、また「逆のもの」という名詞、前置詞（〜の向かいに）としても使われます。", "type": "choice"},
-        {"scenario": "「organic」の意味として最も適切なものは？", "choices": ["有機栽培の、オーガニックの、器官の", "無機の", "化学的な", "人工の"], "correct": 0, "explanation": "organicは農薬や化学肥料を使わない「有機の、オーガニックの」または「器官の、有機体の」という意味の形容詞です。例: organic vegetables（有機野菜）", "type": "choice"},
-        {"scenario": "「original」の意味として最も適切なものは？", "choices": ["最初の、独自の、独創的な、原作", "コピーの", "最新の", "平凡な"], "correct": 0, "explanation": "originalは「最初の、起源の」または「独創的な」という形容詞、また「原作、本物」という名詞の意味もあります。名詞形はoriginです。", "type": "choice"},
-        {"scenario": "「outgoing」の意味として最も適切なものは？", "choices": ["社交的な、外交的な、去っていく", "内向的な", "静かな", "無礼な"], "correct": 0, "explanation": "outgoingは性格が「社交的な、外交的な」または職務などから「去っていく、退職する」という意味の形容詞です。対義語は shy や introverted です。", "type": "choice"},
-        {"scenario": "「outstanding」の意味として最も適切なものは？", "choices": ["傑出した、目立つ、未解決の", "平凡な", "最悪の", "解決済みの"], "correct": 0, "explanation": "outstandingは能力などが「傑出した、非常に優れた」または未払いや宿題などが「未解決の、未決済の」という意味の形容詞です。", "type": "choice"}
+        {
+          "scenario": "「go wrong」の意味として最も適切なものは？",
+          "choices": [
+            "うまくいかない、故障する、間違える",
+            "正しい道を行く",
+            "去る",
+            "道に迷う"
+          ],
+          "correct": 0,
+          "explanation": "go wrongは計画などが「うまくいかない」、機械が「故障する、おかしくなる」という意味の熟語です。例: Everything went wrong.（全てが空回りした。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run out」の意味として最も適切なものは？",
+          "choices": [
+            "尽きる、切れる、外へ走る",
+            "走り去る",
+            "追いかける",
+            "使い果たす"
+          ],
+          "correct": 0,
+          "explanation": "run outは水や時間が「尽きる、切れる」という意味の自動詞熟語です。〜を使い果たす（他動詞的）は run out of です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give in」の意味として最も適切なものは？",
+          "choices": [
+            "屈する、降伏する、提出する",
+            "あきらめる",
+            "受け取る",
+            "中へ入る"
+          ],
+          "correct": 0,
+          "explanation": "give in (to 〜) は「（誘惑や要求に）屈する、降伏する」または「提出する（hand in）」という意味の熟語です。例: refuse to give in（屈するのを拒む）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「based on」の意味として最も適切なものは？",
+          "choices": [
+            "〜に基づいて、基礎を置いて",
+            "〜のせいで",
+            "〜に加えて",
+            "〜の代わりに"
+          ],
+          "correct": 0,
+          "explanation": "based on 〜は「〜に基づいて、基礎を置いて」という意味の形容詞表現です。例: based on a true story（実話に基づいて）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「due to」の意味として最も適切なものは？",
+          "choices": [
+            "〜のために、〜のせいで（原因・理由）",
+            "〜に感謝して",
+            "〜の代わりに",
+            "〜に反対して"
+          ],
+          "correct": 0,
+          "explanation": "due to 〜は「〜のために、〜のせいで」と原因・理由を表す前置詞句で、because of や thanks to と似ていますが、より硬い表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in addition to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に加えて、〜だけでなく〜も",
+            "〜の代わりに",
+            "〜するために",
+            "〜の前に"
+          ],
+          "correct": 0,
+          "explanation": "in addition to 〜は「〜に加えて、〜のほかに」という意味の熟語表現です。besidesとほぼ同じです。例: in addition to English（英語に加えて）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in place of」の意味として最も適切なものは？",
+          "choices": [
+            "〜の代わりに、〜の代理として",
+            "〜と一緒に",
+            "〜の後で",
+            "〜の前に"
+          ],
+          "correct": 0,
+          "explanation": "in place of 〜は「〜の代わりに、〜の代理として」という意味の熟語です。instead of とほぼ同義です。例: in place of paper cups（紙コップの代わりに）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as ~ as possible」の意味として最も適切なものは？",
+          "choices": [
+            "できるだけ〜",
+            "〜と同じくらい",
+            "〜するにつれて",
+            "〜の代わりに"
+          ],
+          "correct": 0,
+          "explanation": "as (形容詞/副詞) as possible は「できるだけ〜」という意味の定番表現です。as 〜 as one can とも言います。例: as soon as possible（できるだけ早く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at least」の意味として最も適切なものは？",
+          "choices": [
+            "少なくとも、最低でも",
+            "せいぜい、多くとも",
+            "ついに",
+            "最初に"
+          ],
+          "correct": 0,
+          "explanation": "at least (数詞・名詞) は「少なくとも、最低限〜」という意味の重要熟語です。対義語は at most（せいぜい）です。例: at least three times（少なくとも3回）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by far」の意味として最も適切なものは？",
+          "choices": [
+            "（比較級・最上級を強めて）はるかに、断然",
+            "遠くまでに",
+            "自力で",
+            "偶然に"
+          ],
+          "correct": 0,
+          "explanation": "by farは、比較級や最上級の前に置いて「はるかに、断然、ずば抜けて」と程度を強める熟語です。例: by far the best（断然トップ）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 7,
-      "title": "副詞編⑤：様子・程度を表する副詞",
-      "type": "Adverbs 5",
-      "emoji": "📍",
-      "subtitle": "しっかりと、典型的に、予期せずなどの副詞",
+      "title": "重要熟語編⑤：日常動作や計画・伝達に関わる熟語",
+      "type": "Idioms & Phrasal Verbs 5",
+      "emoji": "📎",
+      "subtitle": "日常動作や計画・伝達に関わる熟語",
       "questions": [
-        {"scenario": "「tightly」の意味として最も適切なものは？", "choices": ["しっかりと、きつく、かたく", "緩く", "優しく", "別々に"], "correct": 0, "explanation": "tightlyは「しっかりと、きつく、隙間なく」という意味の副詞です。形容詞はtightです。対義語はlooselyです。例: hold tightly（しっかり握る）", "type": "choice"},
-        {"scenario": "「typically」の意味として最も適切なものは？", "choices": ["典型的に、一般的に、概して", "例外的に", "偶然に", "意図的に"], "correct": 0, "explanation": "typicallyは「典型的に、一般的に（典型的な例として）」という意味の副詞です。形容詞はtypicalです。例: typically Japanese（典型的な日本の）", "type": "choice"},
-        {"scenario": "「ultimately」の意味として最も適切なものは？", "choices": ["究極的に、結局は、最終的には", "最初に", "一時的に", "絶対に"], "correct": 0, "explanation": "ultimatelyは「究極的に、最終的には、結局は（最終結果として）」という意味の副詞です。eventuallyに似ています。形容詞はultimateです。", "type": "choice"},
-        {"scenario": "「unexpectedly」の意味として最も適切なものは？", "choices": ["予期せず、不意に、突然に", "計画通りに", "当然ながら", "徐々に"], "correct": 0, "explanation": "unexpectedlyは「予期せず、不意に、突然に（suddenlyに似ている）」という意味の副詞です。expect（予期する）から派生しています。", "type": "choice"},
-        {"scenario": "「actively」の意味として最も適切なものは？", "choices": ["活発に、積極的に", "消極的に", "静かに", "ゆっくりと"], "correct": 0, "explanation": "activelyは「活発に、積極的に」活動する様子を表す副詞です。形容詞はactiveです。例: actively participate（積極的に参加する）", "type": "choice"},
-        {"scenario": "「adequately」の意味として最も適切なものは？", "choices": ["適切に、十分に", "不十分に", "過剰に", "不適切に"], "correct": 0, "explanation": "adequatelyは必要な量や基準を「適切に、十分に」満たしている様子を表す副詞です。形容詞はadequateです。", "type": "choice"},
-        {"scenario": "「badly」の意味として最も適切なものは？", "choices": ["ひどく、悪く、とても〜したい", "良く", "上手に", "少しだけ"], "correct": 0, "explanation": "badlyは「ひどく、悪く」または want や need を強めて「とても（強く）〜したい」という意味の副詞です。例: badly injured（ひどく怪我をした）", "type": "choice"},
-        {"scenario": "「briefly」の意味として最も適切なものは？", "choices": ["簡潔に、短時間だけ、手短に", "詳細に", "長く", "永遠に"], "correct": 0, "explanation": "brieflyは「手短に、簡潔に」または「短時間だけ」という意味の副詞です。形容詞はbriefです。例: explain briefly（手短に説明する）", "type": "choice"},
-        {"scenario": "「carefully」の意味として最も適切なものは？", "choices": ["注意深く、慎重に、丁寧に", "不注意に", "適当に", "素早く"], "correct": 0, "explanation": "carefullyは「注意深く、慎重に、丁寧に」という意味の基本副詞です。形容詞はcarefulです。対義語はcarelesslyです。", "type": "choice"},
-        {"scenario": "「closely」の意味として最も適切なものは？", "choices": ["密接に、注意深く、近くに", "遠くに", "大雑把に", "別々に"], "correct": 0, "explanation": "closelyは距離が「近くに」または観察などが「注意深く、厳密に」という意味の副詞です。例: watch closely（注意深く見守る）", "type": "choice"}
+        {
+          "scenario": "「not only ~ but also ...」の意味として最も適切なものは？",
+          "choices": [
+            "〜だけでなく…も",
+            "〜か…のどちらか",
+            "〜も…も両方ない",
+            "〜の代わりに…"
+          ],
+          "correct": 0,
+          "explanation": "not only A but also B は「AだけでなくBも」と二つの事柄を並列・強調する重要熟語です。B as well as A とほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「more or less」の意味として最も適切なものは？",
+          "choices": [
+            "多かれ少なかれ、だいたい",
+            "さらに多く",
+            "さらに少なく",
+            "全く異なる"
+          ],
+          "correct": 0,
+          "explanation": "more or lessは「多かれ少なかれ」または「だいたい、ほぼ（almost）」という意味の熟語表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「no longer」の意味として最も適切なものは？",
+          "choices": [
+            "もはや〜ない",
+            "もっと長く",
+            "長くはない",
+            "ついに"
+          ],
+          "correct": 0,
+          "explanation": "no longer (動詞) は「もはや〜ない、もはや〜していない」と状態の終了を表す熟語です。not 〜 any longerとほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「care for」の意味として最も適切なものは？",
+          "choices": [
+            "〜の世話をする、〜を好む",
+            "運ぶ",
+            "中止する",
+            "あきらめる"
+          ],
+          "correct": 0,
+          "explanation": "care for 〜は「〜の世話をする（look after）」または否定・疑問文で「〜を好む（like）」という意味の熟語です。例: care for the sick child（病気の子の世話をする）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make a mistake」の意味として最も適切なものは？",
+          "choices": [
+            "間違える、誤りをおかす",
+            "正解する",
+            "修正する",
+            "嘘をつく"
+          ],
+          "correct": 0,
+          "explanation": "make a mistakeは「間違える、失敗する」という意味の定番熟語です。複数形は make mistakes になります。例: make mistakes in spelling（スペルを間違える）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pay attention to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に注意を払う、注目する",
+            "お金を支払う",
+            "〜を無視する",
+            "〜に反対する"
+          ],
+          "correct": 0,
+          "explanation": "pay attention to 〜は「〜に注意を払う、注目する」という意味の重要熟語です。例: Pay attention to the teacher.（先生に注意を向けなさい。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「show off」の意味として最も適切なものは？",
+          "choices": [
+            "見せびらかす、自慢する",
+            "展示する",
+            "案内する",
+            "隠す"
+          ],
+          "correct": 0,
+          "explanation": "show off (〜) は「（実力や持ち物を）見せびらかす、自慢する」という意味の熟語です。例: show off his new car（新車を自慢する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「speak ill of」の意味として最も適切なものは？",
+          "choices": [
+            "〜の悪口を言う",
+            "〜を褒める",
+            "〜と病気について話す",
+            "〜に反対する"
+          ],
+          "correct": 0,
+          "explanation": "speak ill of 〜は「〜の悪口を言う、陰口を叩く」という意味の熟語です。対義語は speak well of 〜（〜を褒める）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tell a lie」の意味として最も適切なものは？",
+          "choices": [
+            "嘘をつく",
+            "本当のことを言う",
+            "約束する",
+            "秘密を話す"
+          ],
+          "correct": 0,
+          "explanation": "tell a lieは「嘘をつく」という意味の熟語です。例: Don't tell a lie.（嘘をついてはいけません。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「write down」の意味として最も適切なものは？",
+          "choices": [
+            "書き留める、メモする",
+            "削除する",
+            "本を書く",
+            "読む"
+          ],
+          "correct": 0,
+          "explanation": "write down 〜は「（忘れないように）書き留める、メモする」という意味の熟語です。take note ofとほぼ同じです。例: write down the number（電話番号をメモする）",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 8,
-      "title": "重要熟語編⑨：遭遇と引き継ぎの動作",
-      "type": "Phrasal Verbs 9",
-      "emoji": "🔗",
-      "subtitle": "偶然出会う、克服する、引き継ぐなどの動詞熟語",
+      "title": "重要熟語編⑥：生活・行動・継続を表す熟語",
+      "type": "Idioms & Phrasal Verbs 6",
+      "emoji": "🔧",
+      "subtitle": "生活・行動・継続を表す熟語",
       "questions": [
-        {"scenario": "「come across」の意味として最も適切なものは？", "choices": ["〜に偶然出会う、ふと見つける", "〜を横切る", "〜を乗り越える", "〜を思いつく"], "correct": 0, "explanation": "come across 〜は「〜に偶然出会う、ふと見つける（find by chance/encounter）」という意味の熟語です。例: come across an old photo（古い写真をふと見つける）", "type": "choice"},
-        {"scenario": "「get over」の意味として最も適切なものは？", "choices": ["（病気や困難を）乗り越える、克服する、回復する", "〜を降りる", "〜を避ける", "〜をあきらめる"], "correct": 0, "explanation": "get over 〜は「（病気やショック、困難を）乗り越える、克服する（overcome）」という意味の重要熟語です。recover from に似ています。", "type": "choice"},
-        {"scenario": "「go through」の意味として最も適切なものは？", "choices": ["（困難などを）経験する、通り抜ける、通過する", "〜に反対する", "〜をあきらめる", "〜を調査する"], "correct": 0, "explanation": "go through 〜は「（苦難などを）経験する（experience）」、または「〜を通り抜ける、通過する」という意味の重要熟語です。例: go through a hard time（つらい時期を経験する）", "type": "choice"},
-        {"scenario": "「keep on」の意味として最も適切なものは？", "choices": ["〜し続ける", "〜を始める", "〜を止める", "〜を身につける"], "correct": 0, "explanation": "keep on (doing) は「〜し続ける」という意味の熟語で、continue とほぼ同じです。例: keep on reading（読み続ける）", "type": "choice"},
-        {"scenario": "「look into」の意味として最も適切なものは？", "choices": ["〜を調査する、調べる、のぞき込む", "〜を軽蔑する", "〜を尊敬する", "〜に似ている"], "correct": 0, "explanation": "look into 〜は問題などを「調査する、調べる（investigate/examine）」、または「〜の中をのぞき込む」という意味の重要熟語です。", "type": "choice"},
-        {"scenario": "「make out」の意味として最も適切なものは？", "choices": ["〜を理解する、見分ける、作成する", "〜を作り出す", "〜を使い果たす", "〜を自慢する"], "correct": 0, "explanation": "make out 〜は暗くて見えにくいものを「見分ける」または「〜を理解する（understand）」という意味の熟語です。書類を作成するという意味もあります。", "type": "choice"},
-        {"scenario": "「point out」の意味として最も適切なものは？", "choices": ["〜を指摘する、指し示す", "〜を指名する", "〜を無視する", "〜を非難する"], "correct": 0, "explanation": "point out 〜は間違いや事実を「指摘する、指し示す」という意味の重要熟語です。例: point out mistakes（間違いを指摘する）", "type": "choice"},
-        {"scenario": "「set out」の意味として最も適切なものは？", "choices": ["（旅などに）出発する、着手する", "〜を組み立てる", "〜を中止する", "〜を隠す"], "correct": 0, "explanation": "set out (on a journey) は旅などに「出発する（set offやdepartとほぼ同じ）」、または仕事を「始める、着手する」という意味の熟語です。", "type": "choice"},
-        {"scenario": "「take over」の意味として最も適切なものは？", "choices": ["（職務や会社などを）引き継ぐ、買収する", "〜を追い越す", "〜を中止する", "〜を引き受ける"], "correct": 0, "explanation": "take over 〜は「（仕事や責任などを）引き継ぐ、交代する」または企業を「買収する」という意味の重要熟語です。例: take over his job（彼の仕事を引き継ぐ）", "type": "choice"},
-        {"scenario": "「break down」の意味として最も適切なものは？", "choices": ["（機械が）故障する、崩壊する、泣き崩れる", "修理する", "組み立てる", "開始する"], "correct": 0, "explanation": "break down は車や機械などが「故障する、動かなくなる」という意味の重要自動詞熟語です。精神的に「泣き崩れる」などの意味もあります。", "type": "choice"}
+        {
+          "scenario": "「meanwhile」の意味として最も適切なものは？",
+          "choices": [
+            "その間に、一方では",
+            "途中で",
+            "その方法で",
+            "ついでに"
+          ],
+          "correct": 0,
+          "explanation": "meanwhileは「その間に（別の場所で起こっていること）」または「一方では（対比）」を表す副詞です。話の転換で使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep in touch」の意味として最も適切なものは？",
+          "choices": [
+            "連絡を取り合う、連絡を保つ",
+            "触れ続ける",
+            "秘密にする",
+            "放置する"
+          ],
+          "correct": 0,
+          "explanation": "keep in touch (with 〜) は別れ際の挨拶などで「連絡を取り合う、つながりを保つ」という意味の定番熟語です。対義語は lose touch です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attend to」の意味として最も適切なものは？",
+          "choices": [
+            "〜の世話をする、〜に注意を払う、（顧客に）対応する",
+            "〜を誇りに思う",
+            "〜を怖がる",
+            "〜に注意する"
+          ],
+          "correct": 0,
+          "explanation": "attend to 〜は「（病人などの）世話をする」または「〜に注意を払う、対応する」という意味の重要熟語です。例: attend to the matter（その件に対応する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「find out」の意味として最も適切なものは？",
+          "choices": [
+            "見つけ出す、知る、調べる",
+            "見失う",
+            "隠す",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "find out 〜は情報などを「見つけ出す、調べる、知る」という意味の熟語です。単に見つける（find）よりも、調べて知るニュアンスが強いです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「search for」の意味として最も適切なものは？",
+          "choices": [
+            "〜を探す、捜索する、捜索",
+            "〜の世話をする",
+            "〜を楽しみにする",
+            "〜に似ている"
+          ],
+          "correct": 0,
+          "explanation": "search for 〜は失ったものや情報を「探す、捜索する」という熟語・名詞です。look for と似ていますが、より入念に探すニュアンスがあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run away」の意味として最も適切なものは？",
+          "choices": [
+            "逃げる、走り去る",
+            "追いかける",
+            "追いつく",
+            "走り始める"
+          ],
+          "correct": 0,
+          "explanation": "run away (from 〜) は「（場所や困難から）逃げる、走り去る」という意味の熟語です。escapeに似ています。例: run away from home（家出する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「catch up with」の意味として最も適切なものは？",
+          "choices": [
+            "〜に追いつく",
+            "〜を追い越す",
+            "〜についていく",
+            "〜を捕まえる"
+          ],
+          "correct": 0,
+          "explanation": "catch up with 〜は遅れている状態から「〜に追いつく」という意味の重要3語熟語です。例: catch up with him（彼に追いつく）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep up with」の意味として最も適切なものは？",
+          "choices": [
+            "〜についていく、遅れずについていく",
+            "〜に追いつく",
+            "〜を維持する",
+            "〜を邪魔する"
+          ],
+          "correct": 0,
+          "explanation": "keep up with 〜は、遅れないように「〜についていく、遅れずについていく」という意味の熟語です。トレンドなどについていく場合にも使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make use of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を利用する、使う",
+            "〜を作り出す",
+            "〜を使い果たす",
+            "〜を無駄にする"
+          ],
+          "correct": 0,
+          "explanation": "make use of 〜は「〜を利用する、使う（use）」という意味の熟語です。特に利用可能なものを有効活用するニュアンスがあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take advantage of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を利用する、（機会などに）乗ずる",
+            "〜を誇りに思う",
+            "〜を嫌う",
+            "〜に反対する"
+          ],
+          "correct": 0,
+          "explanation": "take advantage of 〜は、機会や立場を「（有利に）利用する、乗ずる」という意味の熟語です。悪用するという意味で使われることもあります。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 9,
-      "title": "重要熟語編⑩：副詞・前置詞の論理熟語",
-      "type": "Phrasal Verbs 10",
-      "emoji": "🔗",
-      "subtitle": "突然、結果として、〜にもかかわらずなどの熟語",
+      "title": "重要熟語編⑦：前置詞を含む3語の重要熟語",
+      "type": "Idioms & Phrasal Verbs 7",
+      "emoji": "⚙️",
+      "subtitle": "前置詞を含む3語の重要熟語",
       "questions": [
-        {"scenario": "「all of a sudden」の意味として最も適切なものは？", "choices": ["突然、不意に", "ついに", "徐々に", "一般的に"], "correct": 0, "explanation": "all of a sudden は「突然、不意に」という意味の熟語です。suddenly とほぼ同じですが、より口語的でドラマチックに使われます。", "type": "choice"},
-        {"scenario": "「as a result」の意味として最も適切なものは？", "choices": ["結果として、その結果", "原因として", "例外として", "ついでに"], "correct": 0, "explanation": "as a result (of 〜) は「（〜の）結果として、その結果」と因果関係を導く重要熟語表現です。したがって（therefore）に近い意味です。", "type": "choice"},
-        {"scenario": "「at the same time」の意味として最も適切なものは？", "choices": ["同時に、それと同時に", "時間通りに", "最初に", "別々に"], "correct": 0, "explanation": "at the same time は「同時に」または逆接的に「それと同時に、しかし一方で」という意味の重要熟語表現です。simultaneouslyとほぼ同じです。", "type": "choice"},
-        {"scenario": "「by means of」の意味として最も適切なものは？", "choices": ["〜によって、〜を用いて（手段）", "〜の代わりに", "〜のせいで", "〜に加えて"], "correct": 0, "explanation": "by means of 〜は「〜の手段によって、〜を用いて」と方法・手段を表す熟語です。means は「手段」という名詞です。例: by means of technology（テクノロジーを用いて）", "type": "choice"},
-        {"scenario": "「in spite of」の意味として最も適切なものは？", "choices": ["〜にもかかわらず", "〜の代わりに", "〜のために（目的）", "〜のせいで"], "correct": 0, "explanation": "in spite of 〜は「〜にもかかわらず（譲歩）」という意味の重要前置詞句熟語です。despiteとほぼ同じです。対義語は because of です。", "type": "choice"},
-        {"scenario": "「as opposed to」の意味として最も適切なものは？", "choices": ["〜とは対照的に、〜ではなくて、〜に反して", "〜と一緒に", "〜に加えて", "〜の前に"], "correct": 0, "explanation": "as opposed to 〜 は「〜とは対照的に、〜ではなく（contrast/instead of）」と対比を強める熟語です。例: grain as opposed to meat（肉ではなく穀物）", "type": "choice"},
-        {"scenario": "「on behalf of」の意味として最も適切なものは？", "choices": ["〜を代表して、〜の代わりに、〜のために", "〜に賛成して", "〜のせいで", "〜に加えて"], "correct": 0, "explanation": "on behalf of 〜は「〜を代表して、〜の代わりに」という意味の重要熟語です。例: on behalf of our school（私たちの学校を代表して）", "type": "choice"},
-        {"scenario": "「so far」の意味として最も適切なものは？", "choices": ["今までのところ、これまでは、そこまで", "はるか遠くに", "将来", "ついに"], "correct": 0, "explanation": "so far は「今までのところ、これまでは（現在完了形と一緒に使われることが多い）」という意味の重要熟語です。up to now とほぼ同じです。", "type": "choice"},
-        {"scenario": "「up to」の意味として最も適切なものは？", "choices": ["〜まで、〜の責任で、〜を企んで", "〜の上に", "〜から離れて", "〜を超えて"], "correct": 0, "explanation": "up to 〜は数値の限界「〜まで」、責任「〜次第だ（It's up to you.）」、企み「〜を企んでいる」など多様な意味を持つ重要熟語です。", "type": "choice"},
-        {"scenario": "「with respect to」の意味として最も適切なものは？", "choices": ["〜に関して、〜については", "〜を尊敬して", "〜の代わりに", "〜のせいで"], "correct": 0, "explanation": "with respect to 〜は「〜に関して、〜については（aboutやregardingの硬い表現）」という意味の熟語です。in respect ofとも言います。", "type": "choice"}
+        {
+          "scenario": "「wait for」の意味として最も適切なものは？",
+          "choices": [
+            "〜を待つ",
+            "〜を振り返る",
+            "〜を探す",
+            "〜を心配する"
+          ],
+          "correct": 0,
+          "explanation": "wait for 〜は「（人やバスなどを）待つ」という意味の基本熟語です。例: wait for the bus（バスを待る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get along with」の意味として最も適切なものは？",
+          "choices": [
+            "〜と仲良くやっていく、〜と気が合う",
+            "〜と同行する",
+            "〜と競争する",
+            "〜を避ける"
+          ],
+          "correct": 0,
+          "explanation": "get along with 〜は「〜と仲良くやっていく、親しくする」という意味の重要熟語です。get on with とほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come up with」の意味として最も適切なものは？",
+          "choices": [
+            "（考えなどを）思いつく、提案する",
+            "〜に追いつく",
+            "〜から生じる",
+            "〜に反対する"
+          ],
+          "correct": 0,
+          "explanation": "come up with 〜は「（アイデアや計画などを）思いつく、提案する」という意味の重要3語熟語です。例: come up with an idea（考えを思いつく）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put up with」の意味として最も適切なものは？",
+          "choices": [
+            "〜を我慢する、耐える",
+            "〜を延期する",
+            "〜を中止する",
+            "〜を片付ける"
+          ],
+          "correct": 0,
+          "explanation": "put up with 〜は「〜を我慢する、耐える（endure/tolerate）」という意味の重要熟語です。例: put up with the noise（騒音を我慢する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「do without」の意味として最も適切なものは？",
+          "choices": [
+            "〜なしで済ます、なしで行う",
+            "〜なしで失敗する",
+            "〜の代わりにやる",
+            "〜をやめる"
+          ],
+          "correct": 0,
+          "explanation": "do without 〜は「〜なしで済ます、なしでやっていく」という意味の熟語です。go without とほぼ同じです。例: do without sugar（砂糖なしで済ます）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by accident」の意味として最も適切なものは？",
+          "choices": [
+            "偶然に、知らずに",
+            "故意に",
+            "計画的に",
+            "安全に"
+          ],
+          "correct": 0,
+          "explanation": "by accident は「偶然に、知らずに」という意味の重要熟語です。by chance や accidentally とほぼ同じです。対義語は on purpose です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on purpose」の意味として最も適切なものは？",
+          "choices": [
+            "故意に、わざと、意図的に",
+            "偶然に",
+            "間違いで",
+            "急いで"
+          ],
+          "correct": 0,
+          "explanation": "on purpose は「故意に、わざと、意図的に」という意味の重要熟語です。deliberately とほぼ同じです。対義語は by accident です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in public」の意味として最も適切なものは？",
+          "choices": [
+            "人前で、公然と",
+            "秘密裏に",
+            "家の中で",
+            "静かに"
+          ],
+          "correct": 0,
+          "explanation": "in public は「人前で、公然と（公共の場で）」という意味の熟語です。対義語は in private です。例: speak in public（人前で話す）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in private」の意味として最も適切なものは？",
+          "choices": [
+            "非公式に、秘密裏に、プライベートで",
+            "公然と",
+            "大勢で",
+            "賑やかに"
+          ],
+          "correct": 0,
+          "explanation": "in private は「非公式に、秘密裏に、自分たちだけで」という意味の熟語です。対義語は in public です。例: talk in private（内密に話す）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for instance」の意味として最も適切なものは？",
+          "choices": [
+            "例えば",
+            "ついでに",
+            "例外的に",
+            "最初に"
+          ],
+          "correct": 0,
+          "explanation": "for instance は「例えば」という意味の熟語で、for example とほぼ同義です。話の具体例を挙げるときに文頭や文中で使われます。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 10,
-      "title": "会話表現・定型フレーズ⑤：疑問とトラブル対応",
-      "type": "Conversational Phrases 5",
-      "emoji": "🗣️",
-      "subtitle": "ゆっくり話してほしい、理解できないなどの対話表現",
+      "title": "重要熟語編⑧：日常の接続表現と対比を表す熟語",
+      "type": "Idioms & Phrasal Verbs 8",
+      "emoji": "🪢",
+      "subtitle": "日常の接続表現と対比を表す熟語",
       "questions": [
-        {"scenario": "「Could you speak more slowly?」の意味として最も適切なものは？", "choices": ["もう少しゆっくり話していただけますか？", "もう少し大声で話していただけますか？", "それを繰り返していただけますか？", "どういたしまして"], "correct": 0, "explanation": "Could you speak more slowly? は相手の英語が早すぎて聞き取れない際、よりゆっくり話すよう丁寧に依頼する定番フレーズです。", "type": "choice"},
-        {"scenario": "「I didn't catch what you said.」の意味として最も適切なものは？", "choices": ["おっしゃったことが聞き取れませんでした", "あなたが言ったことを捕まえませんでした", "私は賛成できません", "どういたしまして"], "correct": 0, "explanation": "I didn't catch what you said. は、相手の言った言葉（音声）が「聞き取れなかった」ことを伝える定番フレーズです。catchは「聞き取る」という意味です。", "type": "choice"},
-        {"scenario": "「Let me check.」の意味として最も適切なものは？", "choices": ["確認させてください、調べてみますね", "確認してください", "終わりました", "どういたしまして"], "correct": 0, "explanation": "Let me check. は質問などに対して、その場ですぐに答えられない時に「確認させてください」「調べてみます」と時間をもらう定番の表現です。", "type": "choice"},
-        {"scenario": "「I'll be right back.」の意味として最も適切なものは？", "choices": ["すぐに戻ります、ちょっと失礼します", "すぐそこに行きます", "戻りたくありません", "どういたしまして"], "correct": 0, "explanation": "I'll be right back. はその場を一時的に離れる際、「すぐに戻ります、少々お待ちください」と相手に伝える超定番フレーズです。", "type": "choice"},
-        {"scenario": "「Please help yourself.」の意味として最も適切なものは？", "choices": ["どうぞご自由にお取りください、お召し上がりください", "自分を助けてください", "どうぞ座ってください", "お大事に"], "correct": 0, "explanation": "Please help yourself (to 〜). はパーティーなどで「どうぞご自由に（食べ物などを）お取りください、召し上がってください」と勧める定番フレーズです。", "type": "choice"},
-        {"scenario": "「I'm on my way.」の意味として最も適切なものは？", "choices": ["今向かっています、途中にいます", "私の道の上にいます", "迷子になりました", "どういたしまして"], "correct": 0, "explanation": "I'm on my way (to 場所). は、待ち合わせ場所に向かっている最中に「今そちらへ向かっているところです」と相手に連絡する定番フレーズです。", "type": "choice"},
-        {"scenario": "「It's worth a try.」の意味として最も適切なものは？", "choices": ["やってみる価値はありますよ、ダメ元でやってみよう", "試すのは無駄です", "それは高価すぎます", "どういたしまして"], "correct": 0, "explanation": "It's worth a try.（または It's worth trying.）は「やってみるだけの価値はある」「ダメ元でやってみよう」と挑戦を促す定番フレーズです。worth は「〜の価値がある」という形容詞です。", "type": "choice"},
-        {"scenario": "「I can't afford it.」の意味として最も適切なものは？", "choices": ["（経済的に）そんな余裕はありません、買えません", "それを持つことができません", "それが嫌いです", "どういたしまして"], "correct": 0, "explanation": "I can't afford it. は、値段が高くて「買う余裕がない」、または時間がなくて「〜する余裕がない」と断る定番の表現です。afford（余裕がある）から来ています。", "type": "choice"},
-        {"scenario": "「That depends.」の意味として最も適切なものは？", "choices": ["状況によります、一概には言えません", "それはあなた次第です", "私は依存しています", "どういたしまして"], "correct": 0, "explanation": "That depends.（または It depends.）は、相手の質問に対して「状況によるね」「一概には言えないね」と曖昧に答える時の定番フレーズです。", "type": "choice"},
-        {"scenario": "「Congratulations!」の意味として最も適切なものは？", "choices": ["おめでとうございます！", "頑張ってください！", "ありがとうございました！", "どういたしまして"], "correct": 0, "explanation": "Congratulations! は、合格や結婚、成功などを「おめでとう！」と直接祝う時の超定番表現です。お祝いの場面では常に複数形の「s」を伴います。", "type": "choice"}
+        {
+          "scenario": "「in general」の意味として最も適切なものは？",
+          "choices": [
+            "一般的に、概して、たいてい",
+            "特別に",
+            "部分的に",
+            "まれに"
+          ],
+          "correct": 0,
+          "explanation": "in general は「一般的に、概して、全体として」という意味の熟語です。generally とほぼ同じです。対義語は in particular です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as a rule」の意味として最も適切なものは？",
+          "choices": [
+            "原則として、概して、普通は",
+            "規則として",
+            "例外として",
+            "強制的に"
+          ],
+          "correct": 0,
+          "explanation": "as a rule は「原則として、普通は、概して」という意味の熟語です。usually や in general と似ています。例: As a rule, we get up early.（概して私たちは早起きだ。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「to some extent」の意味として最も適切なものは？",
+          "choices": [
+            "ある程度まで、多少は",
+            "完全に",
+            "少しも〜ない",
+            "例外的に"
+          ],
+          "correct": 0,
+          "explanation": "to some extent は「ある程度まで、多少は」という意味の熟語です。extentは「範囲、程度」を表す名詞です。to a certain degree とほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deal with」の意味として最も適切なものは？",
+          "choices": [
+            "〜に対処する、処理する、扱う、取引する",
+            "〜を避ける",
+            "〜を拒否する",
+            "〜を忘れる"
+          ],
+          "correct": 0,
+          "explanation": "deal with 〜は「（問題や課題に）対処する、処理する、扱う」または「〜と取引する」という意味の重要熟語です。cope with や handle と似ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「interfere with」の意味として最も適切なものは？",
+          "choices": [
+            "〜を邪魔する、妨げる、干渉する",
+            "〜を助ける",
+            "〜に参加する",
+            "〜を歓迎する"
+          ],
+          "correct": 0,
+          "explanation": "interfere with 〜は「〜を邪魔する、妨げる」または「〜に干渉する」という意味の熟語です。例: noise interferes with study（騒音が勉強を妨げる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「focus on」の意味として最も適切なものは？",
+          "choices": [
+            "〜に焦点を合わせる、集中する",
+            "〜を避ける",
+            "〜から目をそらす",
+            "〜を無視する"
+          ],
+          "correct": 0,
+          "explanation": "focus on 〜は「〜に焦点を合わせる、集中する」という意味の重要動詞熟語です。concentrate on とほぼ同じです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rely on」の意味として最も適切なものは？",
+          "choices": [
+            "〜に頼る、信頼する",
+            "〜を疑う",
+            "〜から離れる",
+            "〜を管理する"
+          ],
+          "correct": 0,
+          "explanation": "rely on 〜は「（人や能力などを）頼る、信頼する」という意味の重要熟語です。depend on や count on に似ています。形容詞は reliable（信頼できる）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「agree to」の意味として最も適切なものは？",
+          "choices": [
+            "（計画や提案に）同意する、賛成する",
+            "（人と）意見が一致する",
+            "〜に反対する",
+            "〜を疑う"
+          ],
+          "correct": 0,
+          "explanation": "agree to (計画・提案・条件) は、オファーなどを受け入れる「同意する」という意味です。人と意見が一致する場合は agree with を使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「object to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に反対する、嫌う、反対する理由",
+            "〜に賛成する",
+            "〜を認める",
+            "〜を提案する"
+          ],
+          "correct": 0,
+          "explanation": "object to 〜は「（計画や意見に）反対する、異議を唱える」という意味の熟語です。toの後ろは名詞・動名詞になります。名詞形はobjectionです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look down on」の意味として最も適切なものは？",
+          "choices": [
+            "〜を見下す、軽蔑する",
+            "〜を見上げる",
+            "〜を調べる",
+            "〜を尊敬する"
+          ],
+          "correct": 0,
+          "explanation": "look down on (upon) 〜は「〜を見下す、軽蔑する」という意味の3語熟語です。対義語は look up to 〜（〜を尊敬する）です。",
+          "type": "choice"
+        }
       ]
     }
   ]
