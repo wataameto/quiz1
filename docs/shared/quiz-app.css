@@ -36,8 +36,6 @@
     .part-score-row .part-arrow { color: #a0aec0; font-size: 0.72rem; flex-shrink: 0; transition: transform 0.2s ease; }
     .part-block.open .part-score-row .part-arrow { transform: rotate(90deg); }
 
-    .total-score-bar { font-size: 0.9rem; color: #718096; margin-bottom: 8px; }
-    .total-score-bar .value span { font-size: 0.9rem; font-weight: 400; opacity: 0.8; }
     .part-set-list { display: flex; flex-direction: column; }
     .part-block .part-set-list { display: none; background: #fff; border-top: 1.5px solid #e2e8f0; }
     .part-block.open .part-set-list { display: flex; }
@@ -154,7 +152,7 @@
     .next-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(247,151,30,0.4); }
     .result-header { text-align: center; margin-bottom: 10px; }
     .result-header h1 { font-size: 1.4rem; font-weight: 800; color: #2d3748; }
-    .score-ring { width: 320px; max-width: 100%; height: 90px; border-radius: 24px; background: linear-gradient(135deg, #f7971e, #ffd200); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 10px; box-shadow: 0 12px 40px rgba(247,151,30,0.4); animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1); }
+    .score-ring { width: 320px; max-width: 100%; min-height: 90px; padding: 8px 0; border-radius: 24px; background: linear-gradient(135deg, #f7971e, #ffd200); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 10px; box-shadow: 0 12px 40px rgba(247,151,30,0.4); animation: popIn 0.5s cubic-bezier(.34,1.56,.64,1); }
     .score-num { font-size: 2.2rem; font-weight: 900; color: #2d3748; line-height: 1; }
     .score-unit { font-size: 0.8rem; color: rgba(45,55,72,0.75); }
     .score-main { font-size: 2.2rem; font-weight: 900; }
@@ -288,7 +286,7 @@
       #quiz-subtitle { display: none; }
       .result-header { margin-bottom: 6px; }
       .result-header h1 { font-size: 1.15rem; }
-      .score-ring { height: 70px; margin: 0 auto 6px; }
+      .score-ring { min-height: 70px; margin: 0 auto 6px; }
       .score-area { margin: 4px 0; }
       .score-stars { font-size: 1.2rem; margin-bottom: 4px; }
       .score-msg { margin-bottom: 2px; }

@@ -292,8 +292,13 @@ async function loadAllQuestions() {
         );
       }
       
-      const loadedLevels = await Promise.all(fetchPromises);
-      loadedLevels.forEach(({ level, data }) => {
+      const settledLevels = await Promise.allSettled(fetchPromises);
+      settledLevels.forEach(result => {
+        if (result.status !== 'fulfilled') {
+          console.error('Failed to load a quiz part:', result.reason);
+          return;
+        }
+        const { level, data } = result.value;
         quizData[level] = data;
         if (level > maxLevel) maxLevel = level;
       });
@@ -700,11 +705,10 @@ async function showScoreHistory() {
 
     const setSections = [];
     for (const t of tests) {
-      const history = await getHistory(t.id, level);
+      const [history, best] = await Promise.all([getHistory(t.id, level), getBest(t.id, level)]);
       const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
       // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
       const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
-      const best = await getBest(t.id, level);
       if (best >= 0) levelCorrect += Math.round(best / 100 * qCount);
       levelExamAttempts += attemptCount;
       history.forEach(h => {

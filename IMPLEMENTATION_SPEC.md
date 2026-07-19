@@ -43,7 +43,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 ### メインメニュー docs/index.html
 - 初期表示は screen-loading。auth.onAuthStateChanged(user => ...) が currentUser を設定したら、ログイン状態に関わらず常に showHomeScreen() を呼ぶ（専用ログイン画面はない）。
 - loginWithGoogle() は Google Identity Services (GIS) のトークンクライアントを同期的に呼び出す方式（signInWithPopup/signInWithRedirectは使わない。詳細はAI_PROJECT_GUIDE.mdのログイン方式の節）。ログアウトは confirm() ではなく logout-modal（自前モーダル）を経由する confirmLogout()。
-- 左上の auth-status に、未ログイン時は「🔐 ログイン」ボタン、ログイン時は「👤 ユーザー名 ログアウト」を表示する（renderAuthStatus）。
+- 左上の auth-status に、未ログイン時は「🔐 ログイン」ボタン、ログイン時は色付きアバター（ユーザー名の頭文字）＋ユーザー名＋ログアウトボタンを表示する（renderAuthStatus。メインメニューと同じ見た目）。
 - 教材一覧はdocs/config.jsonのキーから動的に組み立てる（updateScoreDisplay()がObject.keys(menuConfig)を使う）。path(`./<id>/`)とcollection(`quiz_<id>`)は命名規則で導出するため、docs/index.html側に別途登録する静的配列は持たない。クイズを追加するときはconfig.jsonにエントリを1つ足すだけでよい。
 - loadQuizMetaAll() は docs/quiz-meta.json を1回だけfetchする（Promiseをキャッシュして並列呼び出しでも1リクエストに集約）。calculateQuizMeta(quizId, questionsPath) はこのメタを優先して使い、載っていないクイズだけ questions*.json を直接fetchするフォールバックに落ちる。
 - getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の lesson_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
