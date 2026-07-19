@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 7,
+  "label": "動詞編③",
+  "description": "重要動詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "動詞編3セット1",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 601~610",
+      "subtitle": "動詞 601~610",
       "questions": [
         {
           "scenario": "「destroy」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "動詞編3セット2",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 611~620",
+      "subtitle": "動詞 611~620",
       "questions": [
         {
           "scenario": "「dissolve」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "動詞編3セット3",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 621~630",
+      "subtitle": "動詞 621~630",
       "questions": [
         {
           "scenario": "「edit」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "動詞編3セット4",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 631~640",
+      "subtitle": "動詞 631~640",
       "questions": [
         {
           "scenario": "「evolve」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "動詞編3セット5",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 641~650",
+      "subtitle": "動詞 641~650",
       "questions": [
         {
           "scenario": "「explore」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "動詞編3セット6",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 651~660",
+      "subtitle": "動詞 651~660",
       "questions": [
         {
           "scenario": "「forbid」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "動詞編3セット7",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 661~670",
+      "subtitle": "動詞 661~670",
       "questions": [
         {
           "scenario": "「glance」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "動詞編3セット8",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 671~680",
+      "subtitle": "動詞 671~680",
       "questions": [
         {
           "scenario": "「grin」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "動詞編3セット9",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 681~690",
+      "subtitle": "動詞 681~690",
       "questions": [
         {
           "scenario": "「incorporate」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "動詞編3セット10",
       "type": "vocabulary",
       "emoji": "⚡",
-      "subtitle": "英検準2級の動詞 691~700",
+      "subtitle": "動詞 691~700",
       "questions": [
         {
           "scenario": "「insert」の意味として最も適切なものは？",

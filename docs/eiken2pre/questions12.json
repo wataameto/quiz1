@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 12,
+  "label": "熟語編①",
+  "description": "重要熟語のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "熟語編2セット1",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1101~1110",
+      "subtitle": "熟語 1101~1110",
       "questions": [
         {
           "scenario": "「look over」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "熟語編2セット2",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1111~1120",
+      "subtitle": "熟語 1111~1120",
       "questions": [
         {
           "scenario": "「keep in touch with」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "熟語編2セット3",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1121~1130",
+      "subtitle": "熟語 1121~1130",
       "questions": [
         {
           "scenario": "「set about」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "熟語編2セット4",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1131~1140",
+      "subtitle": "熟語 1131~1140",
       "questions": [
         {
           "scenario": "「go for」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "熟語編2セット5",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1141~1150",
+      "subtitle": "熟語 1141~1150",
       "questions": [
         {
           "scenario": "「hold back」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "熟語編2セット6",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1151~1160",
+      "subtitle": "熟語 1151~1160",
       "questions": [
         {
           "scenario": "「pull through」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "熟語編2セット7",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1161~1170",
+      "subtitle": "熟語 1161~1170",
       "questions": [
         {
           "scenario": "「hand out」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "熟語編2セット8",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1171~1180",
+      "subtitle": "熟語 1171~1180",
       "questions": [
         {
           "scenario": "「blow over」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "熟語編2セット9",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1181~1190",
+      "subtitle": "熟語 1181~1190",
       "questions": [
         {
           "scenario": "「see off」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "熟語編2セット10",
       "type": "vocabulary",
       "emoji": "📖",
-      "subtitle": "英検準2級の熟語 1191~1200",
+      "subtitle": "熟語 1191~1200",
       "questions": [
         {
           "scenario": "「at any rate」の意味として最も適切なものは？",

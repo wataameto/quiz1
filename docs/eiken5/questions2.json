@@ -1,8 +1,8 @@
 {
   "id": "eiken5",
   "level": 2,
-  "label": "🔤 基礎単語編②",
-  "description": "英検5級レベルの基本英単語②（動詞・名詞・形容詞・前置詞・数字・色）",
+  "label": "パート 2",
+  "description": "重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,
@@ -11,16 +11,126 @@
       "emoji": "🎯",
       "subtitle": "覚えておきたい日常の動作動詞",
       "questions": [
-        {"scenario": "「have」の意味として最も適切なものは？", "choices": ["持っている、〜がある", "あげる", "借りる", "失う"], "correct": 0, "explanation": "haveは「〜を持っている」「〜がある」という意味の動詞です。例: I have a dog.（私は犬を飼っています。）", "type": "choice"},
-        {"scenario": "「help」の意味として最も適切なものは？", "choices": ["助ける、手伝う", "邪魔する", "止める", "見る"], "correct": 0, "explanation": "helpは「助ける、手伝う」という意味の動詞です。例: help my mother（母を手伝う）", "type": "choice"},
-        {"scenario": "「make」の意味として最も適切なものは？", "choices": ["作る、〜にする", "壊す", "使う", "売る"], "correct": 0, "explanation": "makeは「作る」「〜にする」という意味の動詞です。例: make a cake（ケーキを作る）", "type": "choice"},
-        {"scenario": "「take」の意味として最も適切なものは？", "choices": ["取る、持っていく、（写真を）撮る", "置く", "捨てる", "返す"], "correct": 0, "explanation": "takeは「取る」「持っていく」「（写真を）撮る」など幅広い意味を持つ動詞です。例: take a picture（写真を撮る）", "type": "choice"},
-        {"scenario": "「buy」の意味として最も適切なものは？", "choices": ["買う", "売る", "借りる", "貸す"], "correct": 0, "explanation": "buyは「買う」という意味の動詞です。例: buy a book（本を買う）", "type": "choice"},
-        {"scenario": "「use」の意味として最も適切なものは？", "choices": ["使う", "作る", "壊す", "捨てる"], "correct": 0, "explanation": "useは「使う、利用する」という意味の動詞です。例: use a computer（コンピュータを使う）", "type": "choice"},
-        {"scenario": "「know」の意味として最も適切なものは？\n", "choices": ["知っている", "忘れる", "聞く", "考える"], "correct": 0, "explanation": "knowは「知っている」という意味の状態動詞です。例: I know him.（私は彼を知っています。）", "type": "choice"},
-        {"scenario": "「try」の意味として最も適切なものは？", "choices": ["試みる、やってみる", "諦める", "失敗する", "成功する"], "correct": 0, "explanation": "tryは「試みる、やってみる」という意味の動詞です。例: try again（もう一度やってみる）", "type": "choice"},
-        {"scenario": "「give」の意味として最も適切なものは？", "choices": ["与える、あげる", "もらう", "借りる", "盗む"], "correct": 0, "explanation": "giveは「与える、あげる」という意味の動詞です。例: give a present（プレゼントをあげる）", "type": "choice"},
-        {"scenario": "「start」の意味として最も適切なものは？", "choices": ["始める、始まる", "終わる、終える", "続ける", "止める"], "correct": 0, "explanation": "startは「始める、始まる」という意味の動詞です。例: start running（走り始める）", "type": "choice"}
+        {
+          "scenario": "「have」の意味として最も適切なものは？",
+          "choices": [
+            "持っている、〜がある",
+            "あげる",
+            "借りる",
+            "失う"
+          ],
+          "correct": 0,
+          "explanation": "haveは「〜を持っている」「〜がある」という意味の動詞です。例: I have a dog.（私は犬を飼っています。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「help」の意味として最も適切なものは？",
+          "choices": [
+            "助ける、手伝う",
+            "邪魔する",
+            "止める",
+            "見る"
+          ],
+          "correct": 0,
+          "explanation": "helpは「助ける、手伝う」という意味の動詞です。例: help my mother（母を手伝う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make」の意味として最も適切なものは？",
+          "choices": [
+            "作る、〜にする",
+            "壊す",
+            "使う",
+            "売る"
+          ],
+          "correct": 0,
+          "explanation": "makeは「作る」「〜にする」という意味の動詞です。例: make a cake（ケーキを作る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take」の意味として最も適切なものは？",
+          "choices": [
+            "取る、持っていく、（写真を）撮る",
+            "置く",
+            "捨てる",
+            "返す"
+          ],
+          "correct": 0,
+          "explanation": "takeは「取る」「持っていく」「（写真を）撮る」など幅広い意味を持つ動詞です。例: take a picture（写真を撮る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「buy」の意味として最も適切なものは？",
+          "choices": [
+            "買う",
+            "売る",
+            "借りる",
+            "貸す"
+          ],
+          "correct": 0,
+          "explanation": "buyは「買う」という意味の動詞です。例: buy a book（本を買う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「use」の意味として最も適切なものは？",
+          "choices": [
+            "使う",
+            "作る",
+            "壊す",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "useは「使う、利用する」という意味の動詞です。例: use a computer（コンピュータを使う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「know」の意味として最も適切なものは？\n",
+          "choices": [
+            "知っている",
+            "忘れる",
+            "聞く",
+            "考える"
+          ],
+          "correct": 0,
+          "explanation": "knowは「知っている」という意味の状態動詞です。例: I know him.（私は彼を知っています。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「try」の意味として最も適切なものは？",
+          "choices": [
+            "試みる、やってみる",
+            "諦める",
+            "失敗する",
+            "成功する"
+          ],
+          "correct": 0,
+          "explanation": "tryは「試みる、やってみる」という意味の動詞です。例: try again（もう一度やってみる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give」の意味として最も適切なものは？",
+          "choices": [
+            "与える、あげる",
+            "もらう",
+            "借りる",
+            "盗む"
+          ],
+          "correct": 0,
+          "explanation": "giveは「与える、あげる」という意味の動詞です。例: give a present（プレゼントをあげる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「start」の意味として最も適切なものは？",
+          "choices": [
+            "始める、始まる",
+            "終わる、終える",
+            "続ける",
+            "止める"
+          ],
+          "correct": 0,
+          "explanation": "startは「始める、始まる」という意味の動詞です。例: start running（走り始める）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -30,16 +140,126 @@
       "emoji": "🧭",
       "subtitle": "移動・感覚・思考の動詞",
       "questions": [
-        {"scenario": "「look」の意味として最も適切なものは？", "choices": ["〜を（意識して）見る、〜に見える", "聞く", "触る", "嗅ぐ"], "correct": 0, "explanation": "lookは「（意識して）見る」という意味です。look at 〜（〜を見る）、look happy（幸せそうに見える）のように使います。", "type": "choice"},
-        {"scenario": "「put」の意味として最も適切なものは？", "choices": ["置く、入れる", "取る", "投げる", "持ち上げる"], "correct": 0, "explanation": "putは「置く、入れる、〜の状態にする」という意味の動詞です。例: put the book on the desk（机に本を置く）", "type": "choice"},
-        {"scenario": "「love」の意味として最も適切なものは？", "choices": ["大好きだ、愛している", "嫌いだ", "怖い", "寂しい"], "correct": 0, "explanation": "loveは「大好きだ、愛している」という意味の動詞です。likeよりも強い気持ちを表します。例: I love music.（音楽が大好きです。）", "type": "choice"},
-        {"scenario": "「see」の意味として最も適切なものは？", "choices": ["見える、会う、わかる", "聞こえる", "触れる", "感じる"], "correct": 0, "explanation": "seeは「見える（自然に目に入る）」「会う」「わかる」という意味の動詞です。例: I see a bird.（鳥が見える。）", "type": "choice"},
-        {"scenario": "「stop」の意味として最も適切なものは？", "choices": ["止まる、止める", "始める", "続ける", "急ぐ"], "correct": 0, "explanation": "stopは「止まる、止める」という意味の動詞です。例: Stop here.（ここで止まりなさい。）", "type": "choice"},
-        {"scenario": "「think」の意味として最も適切なものは？", "choices": ["思う、考える", "知っている", "忘れる", "信じる"], "correct": 0, "explanation": "thinkは「思う、考える」という意味の動詞です。例: I think it's fun.（楽しいと思います。）", "type": "choice"},
-        {"scenario": "「get」の意味として最も適切なものは？", "choices": ["手に入れる、〜になる", "なくす", "あげる", "使う"], "correct": 0, "explanation": "getは「手に入れる」「〜になる」など幅広い意味を持ちます。例: get a letter（手紙を受け取る）、get tired（疲れる）", "type": "choice"},
-        {"scenario": "「show」の意味として最も適切なものは？", "choices": ["見せる、示す", "隠す", "見る", "覚える"], "correct": 0, "explanation": "showは「見せる、示す」という意味の動詞です。例: show me your picture（あなたの写真を見せて）", "type": "choice"},
-        {"scenario": "「answer」の意味として最も適切なものは？", "choices": ["答える、返事をする", "質問する", "忘れる", "繰り返す"], "correct": 0, "explanation": "answerは「答える、返事をする」という意味の動詞です。名詞で「答え」という意味にもなります。例: answer the question（質問に答える）", "type": "choice"},
-        {"scenario": "「find」の意味として最も適切なものは？", "choices": ["見つける、わかる", "失う", "隠す", "捨てる"], "correct": 0, "explanation": "findは「見つける」「（調べてみて）わかる」という意味の動詞です。例: find my key（鍵を見つける）", "type": "choice"}
+        {
+          "scenario": "「look」の意味として最も適切なものは？",
+          "choices": [
+            "〜を（意識して）見る、〜に見える",
+            "聞く",
+            "触る",
+            "嗅ぐ"
+          ],
+          "correct": 0,
+          "explanation": "lookは「（意識して）見る」という意味です。look at 〜（〜を見る）、look happy（幸せそうに見える）のように使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put」の意味として最も適切なものは？",
+          "choices": [
+            "置く、入れる",
+            "取る",
+            "投げる",
+            "持ち上げる"
+          ],
+          "correct": 0,
+          "explanation": "putは「置く、入れる、〜の状態にする」という意味の動詞です。例: put the book on the desk（机に本を置く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「love」の意味として最も適切なものは？",
+          "choices": [
+            "大好きだ、愛している",
+            "嫌いだ",
+            "怖い",
+            "寂しい"
+          ],
+          "correct": 0,
+          "explanation": "loveは「大好きだ、愛している」という意味の動詞です。likeよりも強い気持ちを表します。例: I love music.（音楽が大好きです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「see」の意味として最も適切なものは？",
+          "choices": [
+            "見える、会う、わかる",
+            "聞こえる",
+            "触れる",
+            "感じる"
+          ],
+          "correct": 0,
+          "explanation": "seeは「見える（自然に目に入る）」「会う」「わかる」という意味の動詞です。例: I see a bird.（鳥が見える。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stop」の意味として最も適切なものは？",
+          "choices": [
+            "止まる、止める",
+            "始める",
+            "続ける",
+            "急ぐ"
+          ],
+          "correct": 0,
+          "explanation": "stopは「止まる、止める」という意味の動詞です。例: Stop here.（ここで止まりなさい。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「think」の意味として最も適切なものは？",
+          "choices": [
+            "思う、考える",
+            "知っている",
+            "忘れる",
+            "信じる"
+          ],
+          "correct": 0,
+          "explanation": "thinkは「思う、考える」という意味の動詞です。例: I think it's fun.（楽しいと思います。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get」の意味として最も適切なものは？",
+          "choices": [
+            "手に入れる、〜になる",
+            "なくす",
+            "あげる",
+            "使う"
+          ],
+          "correct": 0,
+          "explanation": "getは「手に入れる」「〜になる」など幅広い意味を持ちます。例: get a letter（手紙を受け取る）、get tired（疲れる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「show」の意味として最も適切なものは？",
+          "choices": [
+            "見せる、示す",
+            "隠す",
+            "見る",
+            "覚える"
+          ],
+          "correct": 0,
+          "explanation": "showは「見せる、示す」という意味の動詞です。例: show me your picture（あなたの写真を見せて）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「answer」の意味として最も適切なものは？",
+          "choices": [
+            "答える、返事をする",
+            "質問する",
+            "忘れる",
+            "繰り返す"
+          ],
+          "correct": 0,
+          "explanation": "answerは「答える、返事をする」という意味の動詞です。名詞で「答え」という意味にもなります。例: answer the question（質問に答える）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「find」の意味として最も適切なものは？",
+          "choices": [
+            "見つける、わかる",
+            "失う",
+            "隠す",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "findは「見つける」「（調べてみて）わかる」という意味の動詞です。例: find my key（鍵を見つける）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -49,16 +269,126 @@
       "emoji": "🍎",
       "subtitle": "食事や食べ物に関する身近な単語",
       "questions": [
-        {"scenario": "「food」の意味として最も適切なものは？", "choices": ["食べ物、食料", "飲み物", "おやつ", "薬"], "correct": 0, "explanation": "foodは「食べ物、食料」という意味の名詞です。例: Japanese food（日本食）", "type": "choice"},
-        {"scenario": "「rice」の意味として最も適切なものは？", "choices": ["ご飯、米", "パン", "うどん", "そば"], "correct": 0, "explanation": "riceは「ご飯、米」という意味の名詞です。日本の食卓に欠かせない食べ物ですね。", "type": "choice"},
-        {"scenario": "「bread」の意味として最も適切なものは？", "choices": ["パン", "ご飯", "お菓子", "クッキー"], "correct": 0, "explanation": "breadは「パン」という意味の名詞です。例: a slice of bread（パン一枚）", "type": "choice"},
-        {"scenario": "「egg」の意味として最も適切なものは？", "choices": ["卵", "肉", "魚", "野菜"], "correct": 0, "explanation": "eggは「卵」という意味の名詞です。例: cook an egg（卵を調理する）", "type": "choice"},
-        {"scenario": "「milk」の意味として最も適切なものは？", "choices": ["牛乳、ミルク", "ジュース", "水", "お茶"], "correct": 0, "explanation": "milkは「牛乳、ミルク」という意味の名詞です。例: drink milk（牛乳を飲む）", "type": "choice"},
-        {"scenario": "「juice」の意味として最も適切なものは？", "choices": ["ジュース、果汁", "水", "お茶", "コーヒー"], "correct": 0, "explanation": "juiceは「ジュース、果汁」という意味の名詞です。例: orange juice（オレンジジュース）", "type": "choice"},
-        {"scenario": "「apple」の意味として最も適切なものは？", "choices": ["りんご", "みかん", "バナナ", "ぶどう"], "correct": 0, "explanation": "appleは「りんご」という意味の名詞です。例: an apple a day（一日一個のりんご）", "type": "choice"},
-        {"scenario": "「lunch」の意味として最も適切なものは？", "choices": ["昼食、ランチ", "朝食", "夕食", "おやつ"], "correct": 0, "explanation": "lunchは「昼食、ランチ」という意味の名詞です。例: have lunch（昼食を食べる）", "type": "choice"},
-        {"scenario": "「dinner」の意味として最も適切なものは？", "choices": ["夕食、ディナー", "朝食", "昼食", "間食"], "correct": 0, "explanation": "dinnerは「夕食、ディナー」という意味の名詞です。例: have dinner（夕食を食べる）", "type": "choice"},
-        {"scenario": "「cake」の意味として最も適切なものは？", "choices": ["ケーキ", "クッキー", "アイスクリーム", "ドーナツ"], "correct": 0, "explanation": "cakeは「ケーキ」という意味の名詞です。例: birthday cake（バースデーケーキ）", "type": "choice"}
+        {
+          "scenario": "「food」の意味として最も適切なものは？",
+          "choices": [
+            "食べ物、食料",
+            "飲み物",
+            "おやつ",
+            "薬"
+          ],
+          "correct": 0,
+          "explanation": "foodは「食べ物、食料」という意味の名詞です。例: Japanese food（日本食）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rice」の意味として最も適切なものは？",
+          "choices": [
+            "ご飯、米",
+            "パン",
+            "うどん",
+            "そば"
+          ],
+          "correct": 0,
+          "explanation": "riceは「ご飯、米」という意味の名詞です。日本の食卓に欠かせない食べ物ですね。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bread」の意味として最も適切なものは？",
+          "choices": [
+            "パン",
+            "ご飯",
+            "お菓子",
+            "クッキー"
+          ],
+          "correct": 0,
+          "explanation": "breadは「パン」という意味の名詞です。例: a slice of bread（パン一枚）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「egg」の意味として最も適切なものは？",
+          "choices": [
+            "卵",
+            "肉",
+            "魚",
+            "野菜"
+          ],
+          "correct": 0,
+          "explanation": "eggは「卵」という意味の名詞です。例: cook an egg（卵を調理する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「milk」の意味として最も適切なものは？",
+          "choices": [
+            "牛乳、ミルク",
+            "ジュース",
+            "水",
+            "お茶"
+          ],
+          "correct": 0,
+          "explanation": "milkは「牛乳、ミルク」という意味の名詞です。例: drink milk（牛乳を飲む）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「juice」の意味として最も適切なものは？",
+          "choices": [
+            "ジュース、果汁",
+            "水",
+            "お茶",
+            "コーヒー"
+          ],
+          "correct": 0,
+          "explanation": "juiceは「ジュース、果汁」という意味の名詞です。例: orange juice（オレンジジュース）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apple」の意味として最も適切なものは？",
+          "choices": [
+            "りんご",
+            "みかん",
+            "バナナ",
+            "ぶどう"
+          ],
+          "correct": 0,
+          "explanation": "appleは「りんご」という意味の名詞です。例: an apple a day（一日一個のりんご）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lunch」の意味として最も適切なものは？",
+          "choices": [
+            "昼食、ランチ",
+            "朝食",
+            "夕食",
+            "おやつ"
+          ],
+          "correct": 0,
+          "explanation": "lunchは「昼食、ランチ」という意味の名詞です。例: have lunch（昼食を食べる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dinner」の意味として最も適切なものは？",
+          "choices": [
+            "夕食、ディナー",
+            "朝食",
+            "昼食",
+            "間食"
+          ],
+          "correct": 0,
+          "explanation": "dinnerは「夕食、ディナー」という意味の名詞です。例: have dinner（夕食を食べる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cake」の意味として最も適切なものは？",
+          "choices": [
+            "ケーキ",
+            "クッキー",
+            "アイスクリーム",
+            "ドーナツ"
+          ],
+          "correct": 0,
+          "explanation": "cakeは「ケーキ」という意味の名詞です。例: birthday cake（バースデーケーキ）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -68,16 +398,126 @@
       "emoji": "🏙️",
       "subtitle": "よく行く場所や身近な建物の名前",
       "questions": [
-        {"scenario": "「park」の意味として最も適切なものは？", "choices": ["公園", "駐車場", "森", "庭"], "correct": 0, "explanation": "parkは「公園」という意味の名詞です。例: play in the park（公園で遊ぶ）", "type": "choice"},
-        {"scenario": "「store」の意味として最も適切なものは？", "choices": ["店、商店", "倉庫", "工場", "駅"], "correct": 0, "explanation": "storeは「店、商店」という意味の名詞です。例: go to the store（お店に行く）", "type": "choice"},
-        {"scenario": "「library」の意味として最も適切なものは？", "choices": ["図書館", "本屋", "博物館", "体育館"], "correct": 0, "explanation": "libraryは「図書館」という意味の名詞です。例: study at the library（図書館で勉強する）", "type": "choice"},
-        {"scenario": "「hospital」の意味として最も適切なものは？", "choices": ["病院", "診療所", "薬局", "保健室"], "correct": 0, "explanation": "hospitalは「病院」という意味の名詞です。例: go to the hospital（病院に行く）", "type": "choice"},
-        {"scenario": "「station」の意味として最も適切なものは？", "choices": ["駅", "バス停", "空港", "港"], "correct": 0, "explanation": "stationは「駅」という意味の名詞です。例: train station（電車の駅）", "type": "choice"},
-        {"scenario": "「house」の意味として最も適切なものは？", "choices": ["家、住宅", "マンション", "アパート", "ビル"], "correct": 0, "explanation": "houseは「家、住宅」という意味の名詞です。例: my house（私の家）", "type": "choice"},
-        {"scenario": "「city」の意味として最も適切なものは？", "choices": ["都市、市", "村", "町", "国"], "correct": 0, "explanation": "cityは「都市、市」という意味の名詞です。例: a big city（大きな都市）", "type": "choice"},
-        {"scenario": "「street」の意味として最も適切なものは？", "choices": ["通り、道路", "公園", "川", "山"], "correct": 0, "explanation": "streetは「（建物が並ぶ）通り、道路」という意味の名詞です。例: a busy street（賑やかな通り）", "type": "choice"},
-        {"scenario": "「restaurant」の意味として最も適切なものは？", "choices": ["レストラン、食堂", "カフェ", "コンビニ", "スーパー"], "correct": 0, "explanation": "restaurantは「レストラン、食堂」という意味の名詞です。例: eat at a restaurant（レストランで食事をする）", "type": "choice"},
-        {"scenario": "「zoo」の意味として最も適切なものは？", "choices": ["動物園", "植物園", "水族館", "遊園地"], "correct": 0, "explanation": "zooは「動物園」という意味の名詞です。例: go to the zoo（動物園に行く）", "type": "choice"}
+        {
+          "scenario": "「park」の意味として最も適切なものは？",
+          "choices": [
+            "公園",
+            "駐車場",
+            "森",
+            "庭"
+          ],
+          "correct": 0,
+          "explanation": "parkは「公園」という意味の名詞です。例: play in the park（公園で遊ぶ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「store」の意味として最も適切なものは？",
+          "choices": [
+            "店、商店",
+            "倉庫",
+            "工場",
+            "駅"
+          ],
+          "correct": 0,
+          "explanation": "storeは「店、商店」という意味の名詞です。例: go to the store（お店に行く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「library」の意味として最も適切なものは？",
+          "choices": [
+            "図書館",
+            "本屋",
+            "博物館",
+            "体育館"
+          ],
+          "correct": 0,
+          "explanation": "libraryは「図書館」という意味の名詞です。例: study at the library（図書館で勉強する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hospital」の意味として最も適切なものは？",
+          "choices": [
+            "病院",
+            "診療所",
+            "薬局",
+            "保健室"
+          ],
+          "correct": 0,
+          "explanation": "hospitalは「病院」という意味の名詞です。例: go to the hospital（病院に行く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「station」の意味として最も適切なものは？",
+          "choices": [
+            "駅",
+            "バス停",
+            "空港",
+            "港"
+          ],
+          "correct": 0,
+          "explanation": "stationは「駅」という意味の名詞です。例: train station（電車の駅）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「house」の意味として最も適切なものは？",
+          "choices": [
+            "家、住宅",
+            "マンション",
+            "アパート",
+            "ビル"
+          ],
+          "correct": 0,
+          "explanation": "houseは「家、住宅」という意味の名詞です。例: my house（私の家）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「city」の意味として最も適切なものは？",
+          "choices": [
+            "都市、市",
+            "村",
+            "町",
+            "国"
+          ],
+          "correct": 0,
+          "explanation": "cityは「都市、市」という意味の名詞です。例: a big city（大きな都市）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「street」の意味として最も適切なものは？",
+          "choices": [
+            "通り、道路",
+            "公園",
+            "川",
+            "山"
+          ],
+          "correct": 0,
+          "explanation": "streetは「（建物が並ぶ）通り、道路」という意味の名詞です。例: a busy street（賑やかな通り）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「restaurant」の意味として最も適切なものは？",
+          "choices": [
+            "レストラン、食堂",
+            "カフェ",
+            "コンビニ",
+            "スーパー"
+          ],
+          "correct": 0,
+          "explanation": "restaurantは「レストラン、食堂」という意味の名詞です。例: eat at a restaurant（レストランで食事をする）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「zoo」の意味として最も適切なものは？",
+          "choices": [
+            "動物園",
+            "植物園",
+            "水族館",
+            "遊園地"
+          ],
+          "correct": 0,
+          "explanation": "zooは「動物園」という意味の名詞です。例: go to the zoo（動物園に行く）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -87,16 +527,126 @@
       "emoji": "💪",
       "subtitle": "体の部位や健康に関する基本単語",
       "questions": [
-        {"scenario": "「head」の意味として最も適切なものは？", "choices": ["頭", "顔", "肩", "首"], "correct": 0, "explanation": "headは「頭」という意味の名詞です。例: shake your head（頭を振る）", "type": "choice"},
-        {"scenario": "「hand」の意味として最も適切なものは？", "choices": ["手", "足", "指", "腕"], "correct": 0, "explanation": "handは「手」という意味の名詞です。例: wash hands（手を洗う）", "type": "choice"},
-        {"scenario": "「eye」の意味として最も適切なものは？", "choices": ["目", "耳", "鼻", "口"], "correct": 0, "explanation": "eyeは「目」という意味の名詞です。例: close your eyes（目を閉じる）", "type": "choice"},
-        {"scenario": "「ear」の意味として最も適切なものは？", "choices": ["耳", "目", "口", "鼻"], "correct": 0, "explanation": "earは「耳」という意味の名詞です。例: listen with your ears（耳で聴く）", "type": "choice"},
-        {"scenario": "「mouth」の意味として最も適切なものは？", "choices": ["口", "歯", "舌", "唇"], "correct": 0, "explanation": "mouthは「口」という意味の名詞です。例: open your mouth（口を開けて）", "type": "choice"},
-        {"scenario": "「nose」の意味として最も適切なものは？", "choices": ["鼻", "口", "耳", "顎"], "correct": 0, "explanation": "noseは「鼻」という意味の名詞です。例: blow your nose（鼻をかむ）", "type": "choice"},
-        {"scenario": "「leg」の意味として最も適切なものは？", "choices": ["足（太ももから足首まで）、脚", "腕", "手", "肩"], "correct": 0, "explanation": "legは足首から太ももまでの「脚」全体を指す名詞です。例: run with your legs（脚で走る）", "type": "choice"},
-        {"scenario": "「back」の意味として最も適切なものは？", "choices": ["背中、後ろ", "お腹", "胸", "肩"], "correct": 0, "explanation": "backは「背中」「後ろ」という意味の名詞です。例: my back hurts（腰・背中が痛い）", "type": "choice"},
-        {"scenario": "「sick」の意味として最も適切なものは？", "choices": ["病気の、気分が悪い", "健康な", "元気な", "疲れた"], "correct": 0, "explanation": "sickは「病気の、気分が悪い」という意味の形容詞です。例: I feel sick.（気分が悪いです。）", "type": "choice"},
-        {"scenario": "「tired」の意味として最も適切なものは？", "choices": ["疲れた", "元気な", "眠い", "空腹の"], "correct": 0, "explanation": "tiredは「疲れた」という意味の形容詞です。例: I'm tired.（疲れました。）", "type": "choice"}
+        {
+          "scenario": "「head」の意味として最も適切なものは？",
+          "choices": [
+            "頭",
+            "顔",
+            "肩",
+            "首"
+          ],
+          "correct": 0,
+          "explanation": "headは「頭」という意味の名詞です。例: shake your head（頭を振る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hand」の意味として最も適切なものは？",
+          "choices": [
+            "手",
+            "足",
+            "指",
+            "腕"
+          ],
+          "correct": 0,
+          "explanation": "handは「手」という意味の名詞です。例: wash hands（手を洗う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eye」の意味として最も適切なものは？",
+          "choices": [
+            "目",
+            "耳",
+            "鼻",
+            "口"
+          ],
+          "correct": 0,
+          "explanation": "eyeは「目」という意味の名詞です。例: close your eyes（目を閉じる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ear」の意味として最も適切なものは？",
+          "choices": [
+            "耳",
+            "目",
+            "口",
+            "鼻"
+          ],
+          "correct": 0,
+          "explanation": "earは「耳」という意味の名詞です。例: listen with your ears（耳で聴く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mouth」の意味として最も適切なものは？",
+          "choices": [
+            "口",
+            "歯",
+            "舌",
+            "唇"
+          ],
+          "correct": 0,
+          "explanation": "mouthは「口」という意味の名詞です。例: open your mouth（口を開けて）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nose」の意味として最も適切なものは？",
+          "choices": [
+            "鼻",
+            "口",
+            "耳",
+            "顎"
+          ],
+          "correct": 0,
+          "explanation": "noseは「鼻」という意味の名詞です。例: blow your nose（鼻をかむ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「leg」の意味として最も適切なものは？",
+          "choices": [
+            "足（太ももから足首まで）、脚",
+            "腕",
+            "手",
+            "肩"
+          ],
+          "correct": 0,
+          "explanation": "legは足首から太ももまでの「脚」全体を指す名詞です。例: run with your legs（脚で走る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「back」の意味として最も適切なものは？",
+          "choices": [
+            "背中、後ろ",
+            "お腹",
+            "胸",
+            "肩"
+          ],
+          "correct": 0,
+          "explanation": "backは「背中」「後ろ」という意味の名詞です。例: my back hurts（腰・背中が痛い）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sick」の意味として最も適切なものは？",
+          "choices": [
+            "病気の、気分が悪い",
+            "健康な",
+            "元気な",
+            "疲れた"
+          ],
+          "correct": 0,
+          "explanation": "sickは「病気の、気分が悪い」という意味の形容詞です。例: I feel sick.（気分が悪いです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tired」の意味として最も適切なものは？",
+          "choices": [
+            "疲れた",
+            "元気な",
+            "眠い",
+            "空腹の"
+          ],
+          "correct": 0,
+          "explanation": "tiredは「疲れた」という意味の形容詞です。例: I'm tired.（疲れました。）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -106,16 +656,126 @@
       "emoji": "⚽",
       "subtitle": "スポーツや趣味に関する単語",
       "questions": [
-        {"scenario": "「sport」の意味として最も適切なものは？", "choices": ["スポーツ、運動", "趣味", "ゲーム", "遊び"], "correct": 0, "explanation": "sportは「スポーツ、運動競技」という意味の名詞です。例: I like sports.（スポーツが好きです。）", "type": "choice"},
-        {"scenario": "「game」の意味として最も適切なものは？", "choices": ["ゲーム、試合", "練習", "運動", "遊び場"], "correct": 0, "explanation": "gameは「ゲーム」「試合」という意味の名詞です。例: a video game（テレビゲーム）、a soccer game（サッカーの試合）", "type": "choice"},
-        {"scenario": "「music」の意味として最も適切なものは？", "choices": ["音楽", "絵画", "映画", "ダンス"], "correct": 0, "explanation": "musicは「音楽」という意味の名詞です。例: listen to music（音楽を聴く）", "type": "choice"},
-        {"scenario": "「movie」の意味として最も適切なものは？", "choices": ["映画", "テレビ番組", "アニメ", "マンガ"], "correct": 0, "explanation": "movieは「映画」という意味の名詞です。例: watch a movie（映画を見る）", "type": "choice"},
-        {"scenario": "「team」の意味として最も適切なものは？", "choices": ["チーム、グループ", "一人", "ライバル", "コーチ"], "correct": 0, "explanation": "teamは「チーム、グループ」という意味の名詞です。例: our team（私たちのチーム）", "type": "choice"},
-        {"scenario": "「ball」の意味として最も適切なものは？", "choices": ["ボール、球", "バット", "ラケット", "ゴール"], "correct": 0, "explanation": "ballは「ボール、球」という意味の名詞です。例: kick the ball（ボールを蹴る）", "type": "choice"},
-        {"scenario": "「camera」の意味として最も適切なものは？", "choices": ["カメラ", "ビデオ", "望遠鏡", "顕微鏡"], "correct": 0, "explanation": "cameraは「カメラ」という意味の名詞です。例: take a photo with a camera（カメラで写真を撮る）", "type": "choice"},
-        {"scenario": "「picture」の意味として最も適切なものは？", "choices": ["写真、絵", "映画", "本", "雑誌"], "correct": 0, "explanation": "pictureは「写真、絵」という意味の名詞です。例: take a picture（写真を撮る）", "type": "choice"},
-        {"scenario": "「club」の意味として最も適切なものは？", "choices": ["クラブ、部活、同好会", "学校", "ゲーム", "スタジアム"], "correct": 0, "explanation": "clubは「クラブ、部活、同好会」という意味の名詞です。例: join a club（クラブに入る）", "type": "choice"},
-        {"scenario": "「vacation」の意味として最も適切なものは？", "choices": ["休暇、バケーション", "授業", "試験", "行事"], "correct": 0, "explanation": "vacationは「休暇、バケーション」という意味の名詞です。例: summer vacation（夏休み）", "type": "choice"}
+        {
+          "scenario": "「sport」の意味として最も適切なものは？",
+          "choices": [
+            "スポーツ、運動",
+            "趣味",
+            "ゲーム",
+            "遊び"
+          ],
+          "correct": 0,
+          "explanation": "sportは「スポーツ、運動競技」という意味の名詞です。例: I like sports.（スポーツが好きです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「game」の意味として最も適切なものは？",
+          "choices": [
+            "ゲーム、試合",
+            "練習",
+            "運動",
+            "遊び場"
+          ],
+          "correct": 0,
+          "explanation": "gameは「ゲーム」「試合」という意味の名詞です。例: a video game（テレビゲーム）、a soccer game（サッカーの試合）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「music」の意味として最も適切なものは？",
+          "choices": [
+            "音楽",
+            "絵画",
+            "映画",
+            "ダンス"
+          ],
+          "correct": 0,
+          "explanation": "musicは「音楽」という意味の名詞です。例: listen to music（音楽を聴く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「movie」の意味として最も適切なものは？",
+          "choices": [
+            "映画",
+            "テレビ番組",
+            "アニメ",
+            "マンガ"
+          ],
+          "correct": 0,
+          "explanation": "movieは「映画」という意味の名詞です。例: watch a movie（映画を見る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「team」の意味として最も適切なものは？",
+          "choices": [
+            "チーム、グループ",
+            "一人",
+            "ライバル",
+            "コーチ"
+          ],
+          "correct": 0,
+          "explanation": "teamは「チーム、グループ」という意味の名詞です。例: our team（私たちのチーム）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ball」の意味として最も適切なものは？",
+          "choices": [
+            "ボール、球",
+            "バット",
+            "ラケット",
+            "ゴール"
+          ],
+          "correct": 0,
+          "explanation": "ballは「ボール、球」という意味の名詞です。例: kick the ball（ボールを蹴る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「camera」の意味として最も適切なものは？",
+          "choices": [
+            "カメラ",
+            "ビデオ",
+            "望遠鏡",
+            "顕微鏡"
+          ],
+          "correct": 0,
+          "explanation": "cameraは「カメラ」という意味の名詞です。例: take a photo with a camera（カメラで写真を撮る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「picture」の意味として最も適切なものは？",
+          "choices": [
+            "写真、絵",
+            "映画",
+            "本",
+            "雑誌"
+          ],
+          "correct": 0,
+          "explanation": "pictureは「写真、絵」という意味の名詞です。例: take a picture（写真を撮る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「club」の意味として最も適切なものは？",
+          "choices": [
+            "クラブ、部活、同好会",
+            "学校",
+            "ゲーム",
+            "スタジアム"
+          ],
+          "correct": 0,
+          "explanation": "clubは「クラブ、部活、同好会」という意味の名詞です。例: join a club（クラブに入る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vacation」の意味として最も適切なものは？",
+          "choices": [
+            "休暇、バケーション",
+            "授業",
+            "試験",
+            "行事"
+          ],
+          "correct": 0,
+          "explanation": "vacationは「休暇、バケーション」という意味の名詞です。例: summer vacation（夏休み）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -125,16 +785,126 @@
       "emoji": "🎨",
       "subtitle": "見た目や感覚を表すさまざまな形容詞",
       "questions": [
-        {"scenario": "「young」の意味として最も適切なものは？", "choices": ["若い", "老いた", "背が高い", "大きい"], "correct": 0, "explanation": "youngは「若い」という意味の形容詞です。oldの対義語です。例: a young girl（若い女の子）", "type": "choice"},
-        {"scenario": "「funny」の意味として最も適切なものは？", "choices": ["おかしい、面白い", "退屈な", "悲しい", "怖い"], "correct": 0, "explanation": "funnyは「おかしい、笑える、面白い」という意味の形容詞です。例: a funny story（おかしな話）", "type": "choice"},
-        {"scenario": "「great」の意味として最も適切なものは？", "choices": ["すごい、すばらしい、大きな", "普通の", "小さい", "悪い"], "correct": 0, "explanation": "greatは「すごい、すばらしい」「大きな」という意味の形容詞です。例: Great job!（すばらしい！）", "type": "choice"},
-        {"scenario": "「fine」の意味として最も適切なものは？", "choices": ["元気な、良い、晴れた", "病気の", "悪い", "寒い"], "correct": 0, "explanation": "fineは「元気な、良い」「（天気が）晴れた」という意味の形容詞です。例: I'm fine.（元気です。）", "type": "choice"},
-        {"scenario": "「right」の意味として最も適切なものは？", "choices": ["正しい、右の", "間違った", "左の", "曲がった"], "correct": 0, "explanation": "rightは「正しい、正確な」「右の」という意味の形容詞です。例: the right answer（正しい答え）", "type": "choice"},
-        {"scenario": "「wrong」の意味として最も適切なものは？", "choices": ["間違った、おかしい", "正しい", "良い", "きれいな"], "correct": 0, "explanation": "wrongは「間違った、正しくない」という意味の形容詞です。rightの対義語です。例: a wrong answer（間違った答え）", "type": "choice"},
-        {"scenario": "「free」の意味として最も適切なものは？", "choices": ["自由な、暇な、無料の", "忙しい", "高い", "難しい"], "correct": 0, "explanation": "freeは「自由な」「暇な」「無料の」という意味の形容詞です。例: free time（暇な時間）", "type": "choice"},
-        {"scenario": "「kind」の意味として最も適切なものは？", "choices": ["親切な、優しい", "意地悪な", "怖い", "厳しい"], "correct": 0, "explanation": "kindは「親切な、優しい」という意味の形容詞です。例: a kind person（親切な人）", "type": "choice"},
-        {"scenario": "「sweet」の意味として最も適切なものは？", "choices": ["甘い、かわいい", "辛い", "すっぱい", "苦い"], "correct": 0, "explanation": "sweetは「甘い」「（見た目や性格が）かわいい、優しい」という意味の形容詞です。例: a sweet cake（甘いケーキ）", "type": "choice"},
-        {"scenario": "「hungry」の意味として最も適切なものは？", "choices": ["空腹な、お腹がすいた", "満腹な", "のどが渇いた", "眠い"], "correct": 0, "explanation": "hungryは「空腹な、お腹がすいた」という意味の形容詞です。例: I'm hungry.（お腹がすいた。）", "type": "choice"}
+        {
+          "scenario": "「young」の意味として最も適切なものは？",
+          "choices": [
+            "若い",
+            "老いた",
+            "背が高い",
+            "大きい"
+          ],
+          "correct": 0,
+          "explanation": "youngは「若い」という意味の形容詞です。oldの対義語です。例: a young girl（若い女の子）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「funny」の意味として最も適切なものは？",
+          "choices": [
+            "おかしい、面白い",
+            "退屈な",
+            "悲しい",
+            "怖い"
+          ],
+          "correct": 0,
+          "explanation": "funnyは「おかしい、笑える、面白い」という意味の形容詞です。例: a funny story（おかしな話）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「great」の意味として最も適切なものは？",
+          "choices": [
+            "すごい、すばらしい、大きな",
+            "普通の",
+            "小さい",
+            "悪い"
+          ],
+          "correct": 0,
+          "explanation": "greatは「すごい、すばらしい」「大きな」という意味の形容詞です。例: Great job!（すばらしい！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fine」の意味として最も適切なものは？",
+          "choices": [
+            "元気な、良い、晴れた",
+            "病気の",
+            "悪い",
+            "寒い"
+          ],
+          "correct": 0,
+          "explanation": "fineは「元気な、良い」「（天気が）晴れた」という意味の形容詞です。例: I'm fine.（元気です。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「right」の意味として最も適切なものは？",
+          "choices": [
+            "正しい、右の",
+            "間違った",
+            "左の",
+            "曲がった"
+          ],
+          "correct": 0,
+          "explanation": "rightは「正しい、正確な」「右の」という意味の形容詞です。例: the right answer（正しい答え）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wrong」の意味として最も適切なものは？",
+          "choices": [
+            "間違った、おかしい",
+            "正しい",
+            "良い",
+            "きれいな"
+          ],
+          "correct": 0,
+          "explanation": "wrongは「間違った、正しくない」という意味の形容詞です。rightの対義語です。例: a wrong answer（間違った答え）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「free」の意味として最も適切なものは？",
+          "choices": [
+            "自由な、暇な、無料の",
+            "忙しい",
+            "高い",
+            "難しい"
+          ],
+          "correct": 0,
+          "explanation": "freeは「自由な」「暇な」「無料の」という意味の形容詞です。例: free time（暇な時間）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「kind」の意味として最も適切なものは？",
+          "choices": [
+            "親切な、優しい",
+            "意地悪な",
+            "怖い",
+            "厳しい"
+          ],
+          "correct": 0,
+          "explanation": "kindは「親切な、優しい」という意味の形容詞です。例: a kind person（親切な人）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sweet」の意味として最も適切なものは？",
+          "choices": [
+            "甘い、かわいい",
+            "辛い",
+            "すっぱい",
+            "苦い"
+          ],
+          "correct": 0,
+          "explanation": "sweetは「甘い」「（見た目や性格が）かわいい、優しい」という意味の形容詞です。例: a sweet cake（甘いケーキ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hungry」の意味として最も適切なものは？",
+          "choices": [
+            "空腹な、お腹がすいた",
+            "満腹な",
+            "のどが渇いた",
+            "眠い"
+          ],
+          "correct": 0,
+          "explanation": "hungryは「空腹な、お腹がすいた」という意味の形容詞です。例: I'm hungry.（お腹がすいた。）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -144,16 +914,126 @@
       "emoji": "🌈",
       "subtitle": "色や数字、場所を示す大切な言葉",
       "questions": [
-        {"scenario": "「red」の意味として最も適切なものは？", "choices": ["赤い、赤", "青い", "黄色い", "緑の"], "correct": 0, "explanation": "redは「赤い、赤」という意味の形容詞・名詞です。例: a red apple（赤いりんご）", "type": "choice"},
-        {"scenario": "「blue」の意味として最も適切なものは？", "choices": ["青い、青", "赤い", "緑の", "黄色い"], "correct": 0, "explanation": "blueは「青い、青」という意味の形容詞・名詞です。例: a blue sky（青い空）", "type": "choice"},
-        {"scenario": "「white」の意味として最も適切なものは？", "choices": ["白い、白", "黒い", "灰色の", "透明な"], "correct": 0, "explanation": "whiteは「白い、白」という意味の形容詞・名詞です。例: white snow（白い雪）", "type": "choice"},
-        {"scenario": "「black」の意味として最も適切なものは？", "choices": ["黒い、黒", "白い", "灰色の", "茶色い"], "correct": 0, "explanation": "blackは「黒い、黒」という意味の形容詞・名詞です。例: a black cat（黒猫）", "type": "choice"},
-        {"scenario": "「green」の意味として最も適切なものは？", "choices": ["緑の、緑", "黄色い", "青い", "茶色い"], "correct": 0, "explanation": "greenは「緑の、緑」という意味の形容詞・名詞です。例: green grass（緑の草）", "type": "choice"},
-        {"scenario": "「in」の意味として最も適切なものは？", "choices": ["〜の中に（で）、〜に（時間）", "〜の上に", "〜の下に", "〜の横に"], "correct": 0, "explanation": "inは「〜の中に（で）」という場所を表す前置詞です。時間を表す「〜に」（in the morning）としても使われます。例: in the box（箱の中に）", "type": "choice"},
-        {"scenario": "「on」の意味として最も適切なものは？", "choices": ["〜の上に（接触して）、〜に（日付）", "〜の中に", "〜の下に", "〜の前に"], "correct": 0, "explanation": "onは「〜の上に（接触して）」という前置詞です。日付に使う「〜に」（on Monday）としても使います。例: on the table（テーブルの上に）", "type": "choice"},
-        {"scenario": "「to」の意味として最も適切なものは？", "choices": ["〜へ、〜に、〜まで", "〜から", "〜で", "〜と一緒に"], "correct": 0, "explanation": "toは「〜へ」「〜に」「〜まで」と方向・目的地を表す前置詞です。例: go to school（学校へ行く）", "type": "choice"},
-        {"scenario": "「with」の意味として最も適切なものは？", "choices": ["〜と一緒に、〜を使って", "〜なしに", "〜から", "〜まで"], "correct": 0, "explanation": "withは「〜と一緒に」「〜を使って」という意味の前置詞です。例: play with friends（友達と遊ぶ）", "type": "choice"},
-        {"scenario": "「for」の意味として最も適切なものは？", "choices": ["〜のために、〜の間（期間）", "〜から", "〜まで", "〜の中に"], "correct": 0, "explanation": "forは「〜のために」「〜の間」という意味の前置詞です。例: a present for you（あなたへのプレゼント）", "type": "choice"}
+        {
+          "scenario": "「red」の意味として最も適切なものは？",
+          "choices": [
+            "赤い、赤",
+            "青い",
+            "黄色い",
+            "緑の"
+          ],
+          "correct": 0,
+          "explanation": "redは「赤い、赤」という意味の形容詞・名詞です。例: a red apple（赤いりんご）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blue」の意味として最も適切なものは？",
+          "choices": [
+            "青い、青",
+            "赤い",
+            "緑の",
+            "黄色い"
+          ],
+          "correct": 0,
+          "explanation": "blueは「青い、青」という意味の形容詞・名詞です。例: a blue sky（青い空）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「white」の意味として最も適切なものは？",
+          "choices": [
+            "白い、白",
+            "黒い",
+            "灰色の",
+            "透明な"
+          ],
+          "correct": 0,
+          "explanation": "whiteは「白い、白」という意味の形容詞・名詞です。例: white snow（白い雪）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「black」の意味として最も適切なものは？",
+          "choices": [
+            "黒い、黒",
+            "白い",
+            "灰色の",
+            "茶色い"
+          ],
+          "correct": 0,
+          "explanation": "blackは「黒い、黒」という意味の形容詞・名詞です。例: a black cat（黒猫）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「green」の意味として最も適切なものは？",
+          "choices": [
+            "緑の、緑",
+            "黄色い",
+            "青い",
+            "茶色い"
+          ],
+          "correct": 0,
+          "explanation": "greenは「緑の、緑」という意味の形容詞・名詞です。例: green grass（緑の草）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in」の意味として最も適切なものは？",
+          "choices": [
+            "〜の中に（で）、〜に（時間）",
+            "〜の上に",
+            "〜の下に",
+            "〜の横に"
+          ],
+          "correct": 0,
+          "explanation": "inは「〜の中に（で）」という場所を表す前置詞です。時間を表す「〜に」（in the morning）としても使われます。例: in the box（箱の中に）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on」の意味として最も適切なものは？",
+          "choices": [
+            "〜の上に（接触して）、〜に（日付）",
+            "〜の中に",
+            "〜の下に",
+            "〜の前に"
+          ],
+          "correct": 0,
+          "explanation": "onは「〜の上に（接触して）」という前置詞です。日付に使う「〜に」（on Monday）としても使います。例: on the table（テーブルの上に）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「to」の意味として最も適切なものは？",
+          "choices": [
+            "〜へ、〜に、〜まで",
+            "〜から",
+            "〜で",
+            "〜と一緒に"
+          ],
+          "correct": 0,
+          "explanation": "toは「〜へ」「〜に」「〜まで」と方向・目的地を表す前置詞です。例: go to school（学校へ行く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「with」の意味として最も適切なものは？",
+          "choices": [
+            "〜と一緒に、〜を使って",
+            "〜なしに",
+            "〜から",
+            "〜まで"
+          ],
+          "correct": 0,
+          "explanation": "withは「〜と一緒に」「〜を使って」という意味の前置詞です。例: play with friends（友達と遊ぶ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for」の意味として最も適切なものは？",
+          "choices": [
+            "〜のために、〜の間（期間）",
+            "〜から",
+            "〜まで",
+            "〜の中に"
+          ],
+          "correct": 0,
+          "explanation": "forは「〜のために」「〜の間」という意味の前置詞です。例: a present for you（あなたへのプレゼント）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -163,16 +1043,126 @@
       "emoji": "📊",
       "subtitle": "程度や数を表す大切な言葉",
       "questions": [
-        {"scenario": "「very」の意味として最も適切なものは？", "choices": ["とても、非常に", "少し", "全然〜ない", "あまり〜ない"], "correct": 0, "explanation": "veryは「とても、非常に」という意味の副詞です。形容詞や副詞を強調します。例: very happy（とても幸せ）", "type": "choice"},
-        {"scenario": "「always」の意味として最も適切なものは？", "choices": ["いつも、常に", "時々", "決して〜ない", "たまに"], "correct": 0, "explanation": "alwaysは「いつも、常に」という頻度を表す副詞です。例: I always eat breakfast.（私はいつも朝食を食べます。）", "type": "choice"},
-        {"scenario": "「sometimes」の意味として最も適切なものは？", "choices": ["時々", "いつも", "決して〜ない", "毎日"], "correct": 0, "explanation": "sometimesは「時々」という意味の副詞です。例: I sometimes play soccer.（私は時々サッカーをします。）", "type": "choice"},
-        {"scenario": "「never」の意味として最も適切なものは？", "choices": ["決して〜ない、一度も〜ない", "いつも", "時々", "もうすぐ"], "correct": 0, "explanation": "neverは「決して〜ない、一度も〜ない」という強い否定の副詞です。例: I never eat meat.（私は絶対に肉を食べません。）", "type": "choice"},
-        {"scenario": "「again」の意味として最も適切なものは？", "choices": ["もう一度、また", "初めて", "最後に", "そろそろ"], "correct": 0, "explanation": "againは「もう一度、また」という意味の副詞です。例: try again（もう一度やってみる）", "type": "choice"},
-        {"scenario": "「now」の意味として最も適切なものは？", "choices": ["今、現在", "前に", "後で", "明日"], "correct": 0, "explanation": "nowは「今、現在」という意味の副詞です。例: I'm studying now.（今勉強しています。）", "type": "choice"},
-        {"scenario": "「today」の意味として最も適切なものは？", "choices": ["今日", "昨日", "明日", "毎日"], "correct": 0, "explanation": "todayは「今日」という意味の副詞・名詞です。例: What day is today?（今日は何曜日ですか？）", "type": "choice"},
-        {"scenario": "「tomorrow」の意味として最も適切なものは？", "choices": ["明日", "今日", "昨日", "来週"], "correct": 0, "explanation": "tomorrowは「明日」という意味の副詞・名詞です。例: see you tomorrow（また明日）", "type": "choice"},
-        {"scenario": "「often」の意味として最も適切なものは？", "choices": ["よく、しばしば", "たまに", "いつも", "決して〜ない"], "correct": 0, "explanation": "oftenは「よく、しばしば」という頻度を表す副詞です。例: I often watch TV.（私はよくテレビを見ます。）", "type": "choice"},
-        {"scenario": "「too」の意味として最も適切なものは？", "choices": ["〜も（また）、〜すぎる", "まったく〜ない", "もう一度", "少し"], "correct": 0, "explanation": "tooは「〜も（また）」「〜すぎる」という意味の副詞です。例: Me too.（私もそうです。）、too big（大きすぎる）", "type": "choice"}
+        {
+          "scenario": "「very」の意味として最も適切なものは？",
+          "choices": [
+            "とても、非常に",
+            "少し",
+            "全然〜ない",
+            "あまり〜ない"
+          ],
+          "correct": 0,
+          "explanation": "veryは「とても、非常に」という意味の副詞です。形容詞や副詞を強調します。例: very happy（とても幸せ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「always」の意味として最も適切なものは？",
+          "choices": [
+            "いつも、常に",
+            "時々",
+            "決して〜ない",
+            "たまに"
+          ],
+          "correct": 0,
+          "explanation": "alwaysは「いつも、常に」という頻度を表す副詞です。例: I always eat breakfast.（私はいつも朝食を食べます。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sometimes」の意味として最も適切なものは？",
+          "choices": [
+            "時々",
+            "いつも",
+            "決して〜ない",
+            "毎日"
+          ],
+          "correct": 0,
+          "explanation": "sometimesは「時々」という意味の副詞です。例: I sometimes play soccer.（私は時々サッカーをします。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「never」の意味として最も適切なものは？",
+          "choices": [
+            "決して〜ない、一度も〜ない",
+            "いつも",
+            "時々",
+            "もうすぐ"
+          ],
+          "correct": 0,
+          "explanation": "neverは「決して〜ない、一度も〜ない」という強い否定の副詞です。例: I never eat meat.（私は絶対に肉を食べません。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「again」の意味として最も適切なものは？",
+          "choices": [
+            "もう一度、また",
+            "初めて",
+            "最後に",
+            "そろそろ"
+          ],
+          "correct": 0,
+          "explanation": "againは「もう一度、また」という意味の副詞です。例: try again（もう一度やってみる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「now」の意味として最も適切なものは？",
+          "choices": [
+            "今、現在",
+            "前に",
+            "後で",
+            "明日"
+          ],
+          "correct": 0,
+          "explanation": "nowは「今、現在」という意味の副詞です。例: I'm studying now.（今勉強しています。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「today」の意味として最も適切なものは？",
+          "choices": [
+            "今日",
+            "昨日",
+            "明日",
+            "毎日"
+          ],
+          "correct": 0,
+          "explanation": "todayは「今日」という意味の副詞・名詞です。例: What day is today?（今日は何曜日ですか？）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tomorrow」の意味として最も適切なものは？",
+          "choices": [
+            "明日",
+            "今日",
+            "昨日",
+            "来週"
+          ],
+          "correct": 0,
+          "explanation": "tomorrowは「明日」という意味の副詞・名詞です。例: see you tomorrow（また明日）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「often」の意味として最も適切なものは？",
+          "choices": [
+            "よく、しばしば",
+            "たまに",
+            "いつも",
+            "決して〜ない"
+          ],
+          "correct": 0,
+          "explanation": "oftenは「よく、しばしば」という頻度を表す副詞です。例: I often watch TV.（私はよくテレビを見ます。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「too」の意味として最も適切なものは？",
+          "choices": [
+            "〜も（また）、〜すぎる",
+            "まったく〜ない",
+            "もう一度",
+            "少し"
+          ],
+          "correct": 0,
+          "explanation": "tooは「〜も（また）」「〜すぎる」という意味の副詞です。例: Me too.（私もそうです。）、too big（大きすぎる）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -182,16 +1172,126 @@
       "emoji": "💬",
       "subtitle": "日常会話でよく使う返事・感情表現",
       "questions": [
-        {"scenario": "「sorry」の意味として最も適切なものは？", "choices": ["ごめんなさい、すみません", "ありがとう", "よろしく", "どうぞ"], "correct": 0, "explanation": "sorryは「ごめんなさい、すみません」という謝罪の言葉です。例: I'm sorry.（ごめんなさい。）", "type": "choice"},
-        {"scenario": "「sure」の意味として最も適切なものは？", "choices": ["もちろん、いいよ、確かな", "だめ", "わからない", "もしかして"], "correct": 0, "explanation": "sureは「もちろん、いいよ」という承諾の返事、または「確かな」という形容詞です。例: Sure!（もちろん！）", "type": "choice"},
-        {"scenario": "「jump」の意味として最も適切なものは？", "choices": ["跳ぶ、飛び跳ねる", "走る", "転ぶ", "滑る"], "correct": 0, "explanation": "jumpは「跳ぶ、飛び跳ねる」という意味の動詞です。例: jump high（高く跳ぶ）", "type": "choice"},
-        {"scenario": "「really」の意味として最も適切なものは？", "choices": ["本当に、実際に", "少しだけ", "たぶん", "あまり〜ない"], "correct": 0, "explanation": "reallyは「本当に、実際に」という意味の副詞です。例: I really like it.（本当に好きです。）", "type": "choice"},
-        {"scenario": "「maybe」の意味として最も適切なものは？", "choices": ["たぶん、もしかすると", "絶対に", "決して〜ない", "もちろん"], "correct": 0, "explanation": "maybeは「たぶん、もしかすると」という意味の副詞です。例: Maybe it will rain.（たぶん雨が降るでしょう。）", "type": "choice"},
-        {"scenario": "「nice」の意味として最も適切なものは？", "choices": ["すてきな、いい、感じの良い", "醜い", "怖い", "難しい"], "correct": 0, "explanation": "niceは「すてきな、いい、感じの良い」という意味の形容詞です。例: Nice to meet you.（はじめまして。）", "type": "choice"},
-        {"scenario": "「of course」の意味として最も適切なものは？", "choices": ["もちろん", "ありがとう", "ごめんなさい", "やめて"], "correct": 0, "explanation": "of courseは「もちろん」という意味の表現です。sureよりも丁寧・フォーマルな感じがあります。例: Of course!（もちろんです！）", "type": "choice"},
-        {"scenario": "「all right」の意味として最も適切なものは？", "choices": ["大丈夫、いいよ、わかった", "だめです", "嫌です", "無理です"], "correct": 0, "explanation": "all rightは「大丈夫、いいよ、わかった」という意味の表現です。OKと同じように使われます。例: All right!（わかった！）", "type": "choice"},
-        {"scenario": "「let's」の意味として最も適切なものは？", "choices": ["〜しましょう（一緒に）", "〜しなさい", "〜してはいけない", "〜するべきだ"], "correct": 0, "explanation": "let'sは「（一緒に）〜しましょう」と誘うときに使います。例: Let's go!（さあ、行きましょう！）", "type": "choice"},
-        {"scenario": "「can」の意味として最も適切なものは？", "choices": ["〜できる、〜してよい", "〜しなければならない", "〜してはいけない", "〜するべきだ"], "correct": 0, "explanation": "canは「〜できる（能力）」「〜してよい（許可）」という意味の助動詞です。例: I can swim.（私は泳げます。）", "type": "choice"}
+        {
+          "scenario": "「sorry」の意味として最も適切なものは？",
+          "choices": [
+            "ごめんなさい、すみません",
+            "ありがとう",
+            "よろしく",
+            "どうぞ"
+          ],
+          "correct": 0,
+          "explanation": "sorryは「ごめんなさい、すみません」という謝罪の言葉です。例: I'm sorry.（ごめんなさい。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sure」の意味として最も適切なものは？",
+          "choices": [
+            "もちろん、いいよ、確かな",
+            "だめ",
+            "わからない",
+            "もしかして"
+          ],
+          "correct": 0,
+          "explanation": "sureは「もちろん、いいよ」という承諾の返事、または「確かな」という形容詞です。例: Sure!（もちろん！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「jump」の意味として最も適切なものは？",
+          "choices": [
+            "跳ぶ、飛び跳ねる",
+            "走る",
+            "転ぶ",
+            "滑る"
+          ],
+          "correct": 0,
+          "explanation": "jumpは「跳ぶ、飛び跳ねる」という意味の動詞です。例: jump high（高く跳ぶ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「really」の意味として最も適切なものは？",
+          "choices": [
+            "本当に、実際に",
+            "少しだけ",
+            "たぶん",
+            "あまり〜ない"
+          ],
+          "correct": 0,
+          "explanation": "reallyは「本当に、実際に」という意味の副詞です。例: I really like it.（本当に好きです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maybe」の意味として最も適切なものは？",
+          "choices": [
+            "たぶん、もしかすると",
+            "絶対に",
+            "決して〜ない",
+            "もちろん"
+          ],
+          "correct": 0,
+          "explanation": "maybeは「たぶん、もしかすると」という意味の副詞です。例: Maybe it will rain.（たぶん雨が降るでしょう。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nice」の意味として最も適切なものは？",
+          "choices": [
+            "すてきな、いい、感じの良い",
+            "醜い",
+            "怖い",
+            "難しい"
+          ],
+          "correct": 0,
+          "explanation": "niceは「すてきな、いい、感じの良い」という意味の形容詞です。例: Nice to meet you.（はじめまして。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「of course」の意味として最も適切なものは？",
+          "choices": [
+            "もちろん",
+            "ありがとう",
+            "ごめんなさい",
+            "やめて"
+          ],
+          "correct": 0,
+          "explanation": "of courseは「もちろん」という意味の表現です。sureよりも丁寧・フォーマルな感じがあります。例: Of course!（もちろんです！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「all right」の意味として最も適切なものは？",
+          "choices": [
+            "大丈夫、いいよ、わかった",
+            "だめです",
+            "嫌です",
+            "無理です"
+          ],
+          "correct": 0,
+          "explanation": "all rightは「大丈夫、いいよ、わかった」という意味の表現です。OKと同じように使われます。例: All right!（わかった！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「let's」の意味として最も適切なものは？",
+          "choices": [
+            "〜しましょう（一緒に）",
+            "〜しなさい",
+            "〜してはいけない",
+            "〜するべきだ"
+          ],
+          "correct": 0,
+          "explanation": "let'sは「（一緒に）〜しましょう」と誘うときに使います。例: Let's go!（さあ、行きましょう！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「can」の意味として最も適切なものは？",
+          "choices": [
+            "〜できる、〜してよい",
+            "〜しなければならない",
+            "〜してはいけない",
+            "〜するべきだ"
+          ],
+          "correct": 0,
+          "explanation": "canは「〜できる（能力）」「〜してよい（許可）」という意味の助動詞です。例: I can swim.（私は泳げます。）",
+          "type": "choice"
+        }
       ]
     }
   ]

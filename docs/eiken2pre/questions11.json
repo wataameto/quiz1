@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 11,
+  "label": "形容詞・副詞編③",
+  "description": "重要形容詞・副詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "形容詞・副詞編3セット1",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1001~1010",
+      "subtitle": "形容詞・副詞 1001~1010",
       "questions": [
         {
           "scenario": "「convex」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "形容詞・副詞編3セット2",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1011~1020",
+      "subtitle": "形容詞・副詞 1011~1020",
       "questions": [
         {
           "scenario": "「dedicated」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "形容詞・副詞編3セット3",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1021~1030",
+      "subtitle": "形容詞・副詞 1021~1030",
       "questions": [
         {
           "scenario": "「democratic」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "形容詞・副詞編3セット4",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1031~1040",
+      "subtitle": "形容詞・副詞 1031~1040",
       "questions": [
         {
           "scenario": "「deserved」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "形容詞・副詞編3セット5",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1041~1050",
+      "subtitle": "形容詞・副詞 1041~1050",
       "questions": [
         {
           "scenario": "「devoted」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "形容詞・副詞編3セット6",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1051~1060",
+      "subtitle": "形容詞・副詞 1051~1060",
       "questions": [
         {
           "scenario": "「discrete」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "形容詞・副詞編3セット7",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1061~1070",
+      "subtitle": "形容詞・副詞 1061~1070",
       "questions": [
         {
           "scenario": "「dismayed」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "形容詞・副詞編3セット8",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1071~1080",
+      "subtitle": "形容詞・副詞 1071~1080",
       "questions": [
         {
           "scenario": "「disruptive」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "形容詞・副詞編3セット9",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1081~1090",
+      "subtitle": "形容詞・副詞 1081~1090",
       "questions": [
         {
           "scenario": "「disturbing」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "形容詞・副詞編3セット10",
       "type": "vocabulary",
       "emoji": "📐",
-      "subtitle": "英検準2級の形容詞・副詞 1091~1100",
+      "subtitle": "形容詞・副詞 1091~1100",
       "questions": [
         {
           "scenario": "「doomed」の意味として最も適切なものは？",

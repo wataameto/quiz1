@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 6,
+  "label": "動詞編②",
+  "description": "重要動詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "動詞編2セット1",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 501~510",
+      "subtitle": "動詞 501~510",
       "questions": [
         {
           "scenario": "「accumulate」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "動詞編2セット2",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 511~520",
+      "subtitle": "動詞 511~520",
       "questions": [
         {
           "scenario": "「argue」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "動詞編2セット3",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 521~530",
+      "subtitle": "動詞 521~530",
       "questions": [
         {
           "scenario": "「await」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "動詞編2セット4",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 531~540",
+      "subtitle": "動詞 531~540",
       "questions": [
         {
           "scenario": "「cancel」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "動詞編2セット5",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 541~550",
+      "subtitle": "動詞 541~550",
       "questions": [
         {
           "scenario": "「civilize」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "動詞編2セット6",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 551~560",
+      "subtitle": "動詞 551~560",
       "questions": [
         {
           "scenario": "「commend」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "動詞編2セット7",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 561~570",
+      "subtitle": "動詞 561~570",
       "questions": [
         {
           "scenario": "「concur」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "動詞編2セット8",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 571~580",
+      "subtitle": "動詞 571~580",
       "questions": [
         {
           "scenario": "「consolidate」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "動詞編2セット9",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 581~590",
+      "subtitle": "動詞 581~590",
       "questions": [
         {
           "scenario": "「convene」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "動詞編2セット10",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検準2級の動詞 591~600",
+      "subtitle": "動詞 591~600",
       "questions": [
         {
           "scenario": "「decline」の意味として最も適切なものは？",

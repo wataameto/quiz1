@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "level": 7,
+  "label": "名詞編③",
+  "description": "重要名詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "名詞編セット1",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 601~610",
+      "subtitle": "名詞 601~610",
       "questions": [
         {
           "scenario": "「imagery」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "名詞編セット2",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 611~620",
+      "subtitle": "名詞 611~620",
       "questions": [
         {
           "scenario": "「immobility」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "名詞編セット3",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 621~630",
+      "subtitle": "名詞 621~630",
       "questions": [
         {
           "scenario": "「impatience」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "名詞編セット4",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 631~640",
+      "subtitle": "名詞 631~640",
       "questions": [
         {
           "scenario": "「imposition」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "名詞編セット5",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 641~650",
+      "subtitle": "名詞 641~650",
       "questions": [
         {
           "scenario": "「impurity」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "名詞編セット6",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 651~660",
+      "subtitle": "名詞 651~660",
       "questions": [
         {
           "scenario": "「incarnation」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "名詞編セット7",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 661~670",
+      "subtitle": "名詞 661~670",
       "questions": [
         {
           "scenario": "「incitement」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "名詞編セット8",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 671~680",
+      "subtitle": "名詞 671~680",
       "questions": [
         {
           "scenario": "「incongruity」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "名詞編セット9",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 681~690",
+      "subtitle": "名詞 681~690",
       "questions": [
         {
           "scenario": "「indicator」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "名詞編セット10",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 691~700",
+      "subtitle": "名詞 691~700",
       "questions": [
         {
           "scenario": "「indisposition」の意味として最も適切なものは？",

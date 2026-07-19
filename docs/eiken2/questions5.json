@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "level": 5,
+  "label": "名詞編①",
+  "description": "重要名詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "名詞編セット1",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 401~410",
+      "subtitle": "名詞 401~410",
       "questions": [
         {
           "scenario": "「gardener」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "名詞編セット2",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 411~420",
+      "subtitle": "名詞 411~420",
       "questions": [
         {
           "scenario": "「grievance」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "名詞編セット3",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 421~430",
+      "subtitle": "名詞 421~430",
       "questions": [
         {
           "scenario": "「guardian」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "名詞編セット4",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 431~440",
+      "subtitle": "名詞 431~440",
       "questions": [
         {
           "scenario": "「gymnastics」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "名詞編セット5",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 441~450",
+      "subtitle": "名詞 441~450",
       "questions": [
         {
           "scenario": "「handicap」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "名詞編セット6",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 451~460",
+      "subtitle": "名詞 451~460",
       "questions": [
         {
           "scenario": "「hedge」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "名詞編セット7",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 461~470",
+      "subtitle": "名詞 461~470",
       "questions": [
         {
           "scenario": "「hemp」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "名詞編セット8",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 471~480",
+      "subtitle": "名詞 471~480",
       "questions": [
         {
           "scenario": "「herring」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "名詞編セット9",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 481~490",
+      "subtitle": "名詞 481~490",
       "questions": [
         {
           "scenario": "「hilt」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "名詞編セット10",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 491~500",
+      "subtitle": "名詞 491~500",
       "questions": [
         {
           "scenario": "「hoax」の意味として最も適切なものは？",

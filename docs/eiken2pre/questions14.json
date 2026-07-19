@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 14,
+  "label": "実戦・総合編①",
+  "description": "実戦総合問題",
   "tests": [
     {
       "id": 1,
       "title": "実戦編1セット1",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1301~1310",
+      "subtitle": "実戦語彙 1301~1310",
       "questions": [
         {
           "scenario": "「extract」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "実戦編1セット2",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1311~1320",
+      "subtitle": "実戦語彙 1311~1320",
       "questions": [
         {
           "scenario": "「fabric」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "実戦編1セット3",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1321~1330",
+      "subtitle": "実戦語彙 1321~1330",
       "questions": [
         {
           "scenario": "「feat」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "実戦編1セット4",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1331~1340",
+      "subtitle": "実戦語彙 1331~1340",
       "questions": [
         {
           "scenario": "「fitness」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "実戦編1セット5",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1341~1350",
+      "subtitle": "実戦語彙 1341~1350",
       "questions": [
         {
           "scenario": "「flock」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "実戦編1セット6",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1351~1360",
+      "subtitle": "実戦語彙 1351~1360",
       "questions": [
         {
           "scenario": "「fatal」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "実戦編1セット7",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1361~1370",
+      "subtitle": "実戦語彙 1361~1370",
       "questions": [
         {
           "scenario": "「fraud」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "実戦編1セット8",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1371~1380",
+      "subtitle": "実戦語彙 1371~1380",
       "questions": [
         {
           "scenario": "「frown」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "実戦編1セット9",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1381~1390",
+      "subtitle": "実戦語彙 1381~1390",
       "questions": [
         {
           "scenario": "「furnace」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "実戦編1セット10",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検準2級の実戦語彙 1391~1400",
+      "subtitle": "実戦語彙 1391~1400",
       "questions": [
         {
           "scenario": "「gadget」の意味として最も適切なものは？",

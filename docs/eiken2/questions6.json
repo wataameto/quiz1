@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "level": 6,
+  "label": "名詞編②",
+  "description": "重要名詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "名詞編セット1",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 501~510",
+      "subtitle": "名詞 501~510",
       "questions": [
         {
           "scenario": "「homage」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "名詞編セット2",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 511~520",
+      "subtitle": "名詞 511~520",
       "questions": [
         {
           "scenario": "「honeysuckle」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "名詞編セット3",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 521~530",
+      "subtitle": "名詞 521~530",
       "questions": [
         {
           "scenario": "「horoscope」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "名詞編セット4",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 531~540",
+      "subtitle": "名詞 531~540",
       "questions": [
         {
           "scenario": "「hostel」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "名詞編セット5",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 541~550",
+      "subtitle": "名詞 541~550",
       "questions": [
         {
           "scenario": "「housetop」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "名詞編セット6",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 551~560",
+      "subtitle": "名詞 551~560",
       "questions": [
         {
           "scenario": "「huddle」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "名詞編セット7",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 561~570",
+      "subtitle": "名詞 561~570",
       "questions": [
         {
           "scenario": "「humor」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "名詞編セット8",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 571~580",
+      "subtitle": "名詞 571~580",
       "questions": [
         {
           "scenario": "「hutch」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "名詞編セット9",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 581~590",
+      "subtitle": "名詞 581~590",
       "questions": [
         {
           "scenario": "「hypnosis」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "名詞編セット10",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 591~600",
+      "subtitle": "名詞 591~600",
       "questions": [
         {
           "scenario": "「idiot」の意味として最も適切なものは？",

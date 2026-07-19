@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "level": 8,
+  "label": "名詞編④",
+  "description": "重要名詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "名詞編セット1",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 701~710",
+      "subtitle": "名詞 701~710",
       "questions": [
         {
           "scenario": "「inequality」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "名詞編セット2",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 711~720",
+      "subtitle": "名詞 711~720",
       "questions": [
         {
           "scenario": "「infection」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "名詞編セット3",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 721~730",
+      "subtitle": "名詞 721~730",
       "questions": [
         {
           "scenario": "「infinitive」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "名詞編セット4",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 731~740",
+      "subtitle": "名詞 731~740",
       "questions": [
         {
           "scenario": "「influenza」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "名詞編セット5",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 741~750",
+      "subtitle": "名詞 741~750",
       "questions": [
         {
           "scenario": "「ingestion」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "名詞編セット6",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 751~760",
+      "subtitle": "名詞 751~760",
       "questions": [
         {
           "scenario": "「iniquity」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "名詞編セット7",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 761~770",
+      "subtitle": "名詞 761~770",
       "questions": [
         {
           "scenario": "「innkeeper」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "名詞編セット8",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 771~780",
+      "subtitle": "名詞 771~780",
       "questions": [
         {
           "scenario": "「inquisition」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "名詞編セット9",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 781~790",
+      "subtitle": "名詞 781~790",
       "questions": [
         {
           "scenario": "「insight」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "名詞編セット10",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検2級の名詞 791~800",
+      "subtitle": "名詞 791~800",
       "questions": [
         {
           "scenario": "「inspection」の意味として最も適切なものは？",

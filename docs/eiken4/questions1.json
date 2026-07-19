@@ -1,8 +1,8 @@
 {
   "id": "eiken4",
   "level": 1,
-  "label": "🔤 基礎単語編①",
-  "description": "英検4級レベルの基本英単語①（動詞・名詞・形容詞・副詞・会話表現）",
+  "label": "パート 1",
+  "description": "重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,
@@ -11,16 +11,126 @@
       "emoji": "💡",
       "subtitle": "意思や考え、状態を表す重要な動詞",
       "questions": [
-        {"scenario": "「agree」の意味として最も適切なものは？", "choices": ["同意する、意見が一致する", "反対する", "決める", "疑う"], "correct": 0, "explanation": "agreeは「同意する、意見が一致する」という意味の動詞です。例: I agree with you.（あなたに同意します。）", "type": "choice"},
-        {"scenario": "「believe」の意味として最も適切なものは？", "choices": ["信じる、思う", "疑う", "拒否する", "忘れる"], "correct": 0, "explanation": "believeは「信じる、思う」という意味の動詞です。例: I believe him.（私は彼を信じています。）", "type": "choice"},
-        {"scenario": "「decide」の意味として最も適切なものは？", "choices": ["決める、決意する", "迷う", "諦める", "始める"], "correct": 0, "explanation": "decideは「決める、決意する」という意味の動詞です。例: decide to go（行くことを決める）", "type": "choice"},
-        {"scenario": "「hope」の意味として最も適切なものは？", "choices": ["望む、希望する", "絶望する", "恐れる", "後悔する"], "correct": 0, "explanation": "hopeは「望む、希望する」という意味の動詞・名詞です。例: I hope so.（そう望みます。）", "type": "choice"},
-        {"scenario": "「mean」の意味として最も適切なものは？", "choices": ["意味する、〜のつもりで言う", "隠す", "表現する", "無視する"], "correct": 0, "explanation": "meanは「〜を意味する」という意味の動詞です。例: What do you mean?（どういう意味ですか？）", "type": "choice"},
-        {"scenario": "「return」の意味として最も適切なものは？", "choices": ["戻る、帰る、返す", "出発する", "留まる", "借りる"], "correct": 0, "explanation": "returnは「戻る、帰る」または「〜を返す」という意味の動詞です。例: return home（家に帰る）", "type": "choice"},
-        {"scenario": "「spend」の意味として最も適切なものは？", "choices": ["（時間やお金を）費やす、過ごす", "貯める", "稼ぐ", "無駄にする"], "correct": 0, "explanation": "spendは「（時間やおカネを）費やす、過ごす」という意味の動詞です。例: spend time with family（家族と時間を過ごす）", "type": "choice"},
-        {"scenario": "「understand」の意味として最も適切なものは？", "choices": ["理解する、わかる", "誤解する", "忘れる", "教える"], "correct": 0, "explanation": "understandは「理解する、わかる」という意味の動詞です。例: I understand.（分かりました。）", "type": "choice"},
-        {"scenario": "「wish」の意味として最も適切なものは？", "choices": ["願う、望む", "断る", "恐れる", "怒る"], "correct": 0, "explanation": "wishは「願う、望む」という意味の動詞・名詞です。hopeよりも実現が難しい願いによく使われます。", "type": "choice"},
-        {"scenario": "「worry」の意味として最も適切なものは？", "choices": ["心配する、悩む", "安心する", "怒る", "喜ぶ"], "correct": 0, "explanation": "worryは「心配する、悩む」という意味の動詞・名詞です。例: Don't worry.（心配しないで。）", "type": "choice"}
+        {
+          "scenario": "「agree」の意味として最も適切なものは？",
+          "choices": [
+            "同意する、意見が一致する",
+            "反対する",
+            "決める",
+            "疑う"
+          ],
+          "correct": 0,
+          "explanation": "agreeは「同意する、意見が一致する」という意味の動詞です。例: I agree with you.（あなたに同意します。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「believe」の意味として最も適切なものは？",
+          "choices": [
+            "信じる、思う",
+            "疑う",
+            "拒否する",
+            "忘れる"
+          ],
+          "correct": 0,
+          "explanation": "believeは「信じる、思う」という意味の動詞です。例: I believe him.（私は彼を信じています。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decide」の意味として最も適切なものは？",
+          "choices": [
+            "決める、決意する",
+            "迷う",
+            "諦める",
+            "始める"
+          ],
+          "correct": 0,
+          "explanation": "decideは「決める、決意する」という意味の動詞です。例: decide to go（行くことを決める）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hope」の意味として最も適切なものは？",
+          "choices": [
+            "望む、希望する",
+            "絶望する",
+            "恐れる",
+            "後悔する"
+          ],
+          "correct": 0,
+          "explanation": "hopeは「望む、希望する」という意味の動詞・名詞です。例: I hope so.（そう望みます。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mean」の意味として最も適切なものは？",
+          "choices": [
+            "意味する、〜のつもりで言う",
+            "隠す",
+            "表現する",
+            "無視する"
+          ],
+          "correct": 0,
+          "explanation": "meanは「〜を意味する」という意味の動詞です。例: What do you mean?（どういう意味ですか？）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「return」の意味として最も適切なものは？",
+          "choices": [
+            "戻る、帰る、返す",
+            "出発する",
+            "留まる",
+            "借りる"
+          ],
+          "correct": 0,
+          "explanation": "returnは「戻る、帰る」または「〜を返す」という意味の動詞です。例: return home（家に帰る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「spend」の意味として最も適切なものは？",
+          "choices": [
+            "（時間やお金を）費やす、過ごす",
+            "貯める",
+            "稼ぐ",
+            "無駄にする"
+          ],
+          "correct": 0,
+          "explanation": "spendは「（時間やおカネを）費やす、過ごす」という意味の動詞です。例: spend time with family（家族と時間を過ごす）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「understand」の意味として最も適切なものは？",
+          "choices": [
+            "理解する、わかる",
+            "誤解する",
+            "忘れる",
+            "教える"
+          ],
+          "correct": 0,
+          "explanation": "understandは「理解する、わかる」という意味の動詞です。例: I understand.（分かりました。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wish」の意味として最も適切なものは？",
+          "choices": [
+            "願う、望む",
+            "断る",
+            "恐れる",
+            "怒る"
+          ],
+          "correct": 0,
+          "explanation": "wishは「願う、望む」という意味の動詞・名詞です。hopeよりも実現が難しい願いによく使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「worry」の意味として最も適切なものは？",
+          "choices": [
+            "心配する、悩む",
+            "安心する",
+            "怒る",
+            "喜ぶ"
+          ],
+          "correct": 0,
+          "explanation": "worryは「心配する、悩む」という意味の動詞・名詞です。例: Don't worry.（心配しないで。）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -30,16 +140,126 @@
       "emoji": "🏃",
       "subtitle": "移動や日常の様々な活動を表す動詞",
       "questions": [
-        {"scenario": "「arrive」の意味として最も適切なものは？", "choices": ["到着する、届く", "出発する", "戻る", "去る"], "correct": 0, "explanation": "arriveは「到着する、届く」という意味の動詞です。通常 arrive at/in 〜 の形で使います。", "type": "choice"},
-        {"scenario": "「borrow」の意味として最も適切なものは？", "choices": ["（無料で）借りる", "貸す", "返す", "買う"], "correct": 0, "explanation": "borrowは「（無料で）借りる」という意味の動詞です。お金を払って借りる場合はrentなどを使います。", "type": "choice"},
-        {"scenario": "「change」の意味として最も適切なものは？", "choices": ["変える、変わる、おつり", "保つ", "壊す", "見つける"], "correct": 0, "explanation": "changeは「変える、変わる」という動詞、また「おつり、変化」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「collect」の意味として最も適切なものは？", "choices": ["集める、収集する", "捨てる", "散らかす", "選ぶ"], "correct": 0, "explanation": "collectは「集める、収集する」という意味の動詞です。例: collect stamps（切手を集める）", "type": "choice"},
-        {"scenario": "「drop」の意味として最も適切なものは？", "choices": ["落とす、落ちる、しずく", "拾う", "投げる", "捕まえる"], "correct": 0, "explanation": "dropは「落とす、落ちる」という動詞、また「しずく（涙のしずくなど）」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「explain」の意味として最も適切なものは？", "choices": ["説明する", "質問する", "理解する", "隠す"], "correct": 0, "explanation": "explainは「（分かりやすく）説明する」という意味の動詞です。例: explain the rules（ルールを説明する）", "type": "choice"},
-        {"scenario": "「join」の意味として最も適切なものは？", "choices": ["加わる、参加する、つなぐ", "去る", "断る", "分ける"], "correct": 0, "explanation": "joinは「加わる、参加する」「つなぐ」という意味の動詞です。例: join the club（クラブに入る）", "type": "choice"},
-        {"scenario": "「receive」の意味として最も適切なものは？", "choices": ["受け取る、もらう", "与える", "拒否する", "送る"], "correct": 0, "explanation": "receiveは「受け取る、もらう」という意味の動詞です。例: receive a letter（手紙を受け取る）", "type": "choice"},
-        {"scenario": "「send」の意味として最も適切なものは？", "choices": ["送る、送信する", "受け取る", "持ってくる", "捨てる"], "correct": 0, "explanation": "sendは「送る、送信する」という意味の動詞です。対義語はreceive（受け取る）です。", "type": "choice"},
-        {"scenario": "「travel」の意味として最も適切なものは？", "choices": ["旅行する", "働く", "滞在する", "引っ越す"], "correct": 0, "explanation": "travelは「旅行する」という意味の動詞・名詞です。例: travel around the world（世界中を旅行する）", "type": "choice"}
+        {
+          "scenario": "「arrive」の意味として最も適切なものは？",
+          "choices": [
+            "到着する、届く",
+            "出発する",
+            "戻る",
+            "去る"
+          ],
+          "correct": 0,
+          "explanation": "arriveは「到着する、届く」という意味の動詞です。通常 arrive at/in 〜 の形で使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「borrow」の意味として最も適切なものは？",
+          "choices": [
+            "（無料で）借りる",
+            "貸す",
+            "返す",
+            "買う"
+          ],
+          "correct": 0,
+          "explanation": "borrowは「（無料で）借りる」という意味の動詞です。お金を払って借りる場合はrentなどを使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「change」の意味として最も適切なものは？",
+          "choices": [
+            "変える、変わる、おつり",
+            "保つ",
+            "壊す",
+            "見つける"
+          ],
+          "correct": 0,
+          "explanation": "changeは「変える、変わる」という動詞、また「おつり、変化」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collect」の意味として最も適切なものは？",
+          "choices": [
+            "集める、収集する",
+            "捨てる",
+            "散らかす",
+            "選ぶ"
+          ],
+          "correct": 0,
+          "explanation": "collectは「集める、収集する」という意味の動詞です。例: collect stamps（切手を集める）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drop」の意味として最も適切なものは？",
+          "choices": [
+            "落とす、落ちる、しずく",
+            "拾う",
+            "投げる",
+            "捕まえる"
+          ],
+          "correct": 0,
+          "explanation": "dropは「落とす、落ちる」という動詞、また「しずく（涙のしずくなど）」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explain」の意味として最も適切なものは？",
+          "choices": [
+            "説明する",
+            "質問する",
+            "理解する",
+            "隠す"
+          ],
+          "correct": 0,
+          "explanation": "explainは「（分かりやすく）説明する」という意味の動詞です。例: explain the rules（ルールを説明する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「join」の意味として最も適切なものは？",
+          "choices": [
+            "加わる、参加する、つなぐ",
+            "去る",
+            "断る",
+            "分ける"
+          ],
+          "correct": 0,
+          "explanation": "joinは「加わる、参加する」「つなぐ」という意味の動詞です。例: join the club（クラブに入る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「receive」の意味として最も適切なものは？",
+          "choices": [
+            "受け取る、もらう",
+            "与える",
+            "拒否する",
+            "送る"
+          ],
+          "correct": 0,
+          "explanation": "receiveは「受け取る、もらう」という意味の動詞です。例: receive a letter（手紙を受け取る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「send」の意味として最も適切なものは？",
+          "choices": [
+            "送る、送信する",
+            "受け取る",
+            "持ってくる",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "sendは「送る、送信する」という意味の動詞です。対義語はreceive（受け取る）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「travel」の意味として最も適切なものは？",
+          "choices": [
+            "旅行する",
+            "働く",
+            "滞在する",
+            "引っ越す"
+          ],
+          "correct": 0,
+          "explanation": "travelは「旅行する」という意味の動詞・名詞です。例: travel around the world（世界中を旅行する）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -49,16 +269,126 @@
       "emoji": "👥",
       "subtitle": "身の回りの人間関係や立場を表す名詞",
       "questions": [
-        {"scenario": "「clerk」の意味として最も適切なものは？", "choices": ["事務員、店員", "店長", "警察官", "社長"], "correct": 0, "explanation": "clerkは「事務員、店員、ホテルのフロント係」などを表す名詞です。", "type": "choice"},
-        {"scenario": "「customer」の意味として最も適切なものは？", "choices": ["客、顧客", "店員", "主人", "泥棒"], "correct": 0, "explanation": "customerは店などで買い物をする「客、顧客」を表す名詞です。", "type": "choice"},
-        {"scenario": "「guest」の意味として最も適切なものは？", "choices": ["（招待された）客、ゲスト", "主催者", "店員", "近所の人"], "correct": 0, "explanation": "guestはパーティーやホテルに「招待された客、来客、ゲスト」を表す名詞です。", "type": "choice"},
-        {"scenario": "「host」の意味として最も適切なものは？", "choices": ["（客をもてなす）主人、主催者", "客", "料理人", "店員"], "correct": 0, "explanation": "hostは客をもてなす側の「主人、主催者、ホスト」を表す名詞です。対義語はguest（客）です。", "type": "choice"},
-        {"scenario": "「member」の意味として最も適切なものは？", "choices": ["メンバー、会員、一員", "リーダー", "コーチ", "ライバル"], "correct": 0, "explanation": "memberはグループやクラブの「一員、メンバー、会員」を表す名詞です。", "type": "choice"},
-        {"scenario": "「neighbor」の意味として最も適切なものは？", "choices": ["近所の人、隣人", "親戚", "友達", "先生"], "correct": 0, "explanation": "neighborは近くに住んでいる「近所の人、隣人」を表す名詞です。", "type": "choice"},
-        {"scenario": "「owner」の意味として最も適切なものは？", "choices": ["持ち主、所有者、オーナー", "従業員", "顧客", "泥棒"], "correct": 0, "explanation": "ownerは「持ち主、所有者、オーナー」を表す名詞です。own（所有する）から来ています。", "type": "choice"},
-        {"scenario": "「soldier」の意味として最も適切なものは？", "choices": ["軍人、兵士", "警察官", "消防士", "政治家"], "correct": 0, "explanation": "soldierは「軍人、兵士」を表す名詞です。", "type": "choice"},
-        {"scenario": "「stranger」の意味として最も適切なものは？", "choices": ["見知らぬ人、他人", "友達", "親戚", "有名人"], "correct": 0, "explanation": "strangerは「見知らぬ人、他人、よそ者」を表す名詞です。strange（奇妙な、未知の）から来ています。", "type": "choice"},
-        {"scenario": "「cousin」の意味として最も適切なものは？", "choices": ["いとこ", "甥", "姪", "叔父"], "correct": 0, "explanation": "cousinは父母の兄弟姉妹の子供である「いとこ」を表す名詞です。", "type": "choice"}
+        {
+          "scenario": "「clerk」の意味として最も適切なものは？",
+          "choices": [
+            "事務員、店員",
+            "店長",
+            "警察官",
+            "社長"
+          ],
+          "correct": 0,
+          "explanation": "clerkは「事務員、店員、ホテルのフロント係」などを表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「customer」の意味として最も適切なものは？",
+          "choices": [
+            "客、顧客",
+            "店員",
+            "主人",
+            "泥棒"
+          ],
+          "correct": 0,
+          "explanation": "customerは店などで買い物をする「客、顧客」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「guest」の意味として最も適切なものは？",
+          "choices": [
+            "（招待された）客、ゲスト",
+            "主催者",
+            "店員",
+            "近所の人"
+          ],
+          "correct": 0,
+          "explanation": "guestはパーティーやホテルに「招待された客、来客、ゲスト」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「host」の意味として最も適切なものは？",
+          "choices": [
+            "（客をもてなす）主人、主催者",
+            "客",
+            "料理人",
+            "店員"
+          ],
+          "correct": 0,
+          "explanation": "hostは客をもてなす側の「主人、主催者、ホスト」を表す名詞です。対義語はguest（客）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「member」の意味として最も適切なものは？",
+          "choices": [
+            "メンバー、会員、一員",
+            "リーダー",
+            "コーチ",
+            "ライバル"
+          ],
+          "correct": 0,
+          "explanation": "memberはグループやクラブの「一員、メンバー、会員」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「neighbor」の意味として最も適切なものは？",
+          "choices": [
+            "近所の人、隣人",
+            "親戚",
+            "友達",
+            "先生"
+          ],
+          "correct": 0,
+          "explanation": "neighborは近くに住んでいる「近所の人、隣人」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「owner」の意味として最も適切なものは？",
+          "choices": [
+            "持ち主、所有者、オーナー",
+            "従業員",
+            "顧客",
+            "泥棒"
+          ],
+          "correct": 0,
+          "explanation": "ownerは「持ち主、所有者、オーナー」を表す名詞です。own（所有する）から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「soldier」の意味として最も適切なものは？",
+          "choices": [
+            "軍人、兵士",
+            "警察官",
+            "消防士",
+            "政治家"
+          ],
+          "correct": 0,
+          "explanation": "soldierは「軍人、兵士」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stranger」の意味として最も適切なものは？",
+          "choices": [
+            "見知らぬ人、他人",
+            "友達",
+            "親戚",
+            "有名人"
+          ],
+          "correct": 0,
+          "explanation": "strangerは「見知らぬ人、他人、よそ者」を表す名詞です。strange（奇妙な、未知の）から来ています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cousin」の意味として最も適切なものは？",
+          "choices": [
+            "いとこ",
+            "甥",
+            "姪",
+            "叔父"
+          ],
+          "correct": 0,
+          "explanation": "cousinは父母の兄弟姉妹の子供である「いとこ」を表す名詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -68,16 +398,126 @@
       "emoji": "🏛️",
       "subtitle": "街の中の大きな施設や場所の名前",
       "questions": [
-        {"scenario": "「airport」の意味として最も適切なものは？", "choices": ["空港", "駅", "港", "停留所"], "correct": 0, "explanation": "airportは飛行機が発着する「空港」を表す名詞です。air（空気、空）とport（港）が合わさっています。", "type": "choice"},
-        {"scenario": "「castle」の意味として最も適切なものは？", "choices": ["城", "宮殿", "塔", "教会"], "correct": 0, "explanation": "castleは「城（しろ）」を表す名詞です。例: Himeji Castle（姫路城）", "type": "choice"},
-        {"scenario": "「factory」の意味として最も適切なものは？", "choices": ["工場", "事務所", "倉庫", "お店"], "correct": 0, "explanation": "factoryは製品を作る「工場」を表す名詞です。例: car factory（自動車工場）", "type": "choice"},
-        {"scenario": "「harbor」の意味として最も適切なものは？", "choices": ["港、入り江", "空港", "駅", "公園"], "correct": 0, "explanation": "harborは船が停泊する「港、入り江」を表す名詞です。portとも言います。", "type": "choice"},
-        {"scenario": "「museum」の意味として最も適切なものは？", "choices": ["博物館、美術館", "図書館", "映画館", "劇場"], "correct": 0, "explanation": "museumは「博物館」または「美術館」を表す名詞です。例: history museum（歴史博物館）", "type": "choice"},
-        {"scenario": "「police station」の意味として最も適切なものは？", "choices": ["警察署、交番", "消防署", "市役所", "郵便局"], "correct": 0, "explanation": "police stationは「警察署」や「交番」を表す名詞です。", "type": "choice"},
-        {"scenario": "「shrine」の意味として最も適切なものは？", "choices": ["神社、聖堂", "寺", "教会", "城"], "correct": 0, "explanation": "shrineは日本の「神社」や「聖堂」を表す名詞です。お寺はtempleと言います。", "type": "choice"},
-        {"scenario": "「temple」の意味として最も適切なものは？", "choices": ["寺、寺院、神殿", "神社", "教会", "城"], "correct": 0, "explanation": "templeは「寺、寺院」または「神殿」を表す名詞です。神社はshrineと言います。", "type": "choice"},
-        {"scenario": "「theater」の意味として最も適切なものは？", "choices": ["劇場、映画館", "博物館", "図書館", "スタジアム"], "correct": 0, "explanation": "theaterは芝居を見る「劇場」、または「映画館」を表す名詞です。", "type": "choice"},
-        {"scenario": "「stadium」の意味として最も適切なものは？", "choices": ["競技場、スタジアム", "体育館", "公園", "広場"], "correct": 0, "explanation": "stadiumはスポーツやイベントを行う「競技場、スタジアム」を表す名詞です。", "type": "choice"}
+        {
+          "scenario": "「airport」の意味として最も適切なものは？",
+          "choices": [
+            "空港",
+            "駅",
+            "港",
+            "停留所"
+          ],
+          "correct": 0,
+          "explanation": "airportは飛行機が発着する「空港」を表す名詞です。air（空気、空）とport（港）が合わさっています。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「castle」の意味として最も適切なものは？",
+          "choices": [
+            "城",
+            "宮殿",
+            "塔",
+            "教会"
+          ],
+          "correct": 0,
+          "explanation": "castleは「城（しろ）」を表す名詞です。例: Himeji Castle（姫路城）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「factory」の意味として最も適切なものは？",
+          "choices": [
+            "工場",
+            "事務所",
+            "倉庫",
+            "お店"
+          ],
+          "correct": 0,
+          "explanation": "factoryは製品を作る「工場」を表す名詞です。例: car factory（自動車工場）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「harbor」の意味として最も適切なものは？",
+          "choices": [
+            "港、入り江",
+            "空港",
+            "駅",
+            "公園"
+          ],
+          "correct": 0,
+          "explanation": "harborは船が停泊する「港、入り江」を表す名詞です。portとも言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「museum」の意味として最も適切なものは？",
+          "choices": [
+            "博物館、美術館",
+            "図書館",
+            "映画館",
+            "劇場"
+          ],
+          "correct": 0,
+          "explanation": "museumは「博物館」または「美術館」を表す名詞です。例: history museum（歴史博物館）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「police station」の意味として最も適切なものは？",
+          "choices": [
+            "警察署、交番",
+            "消防署",
+            "市役所",
+            "郵便局"
+          ],
+          "correct": 0,
+          "explanation": "police stationは「警察署」や「交番」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「shrine」の意味として最も適切なものは？",
+          "choices": [
+            "神社、聖堂",
+            "寺",
+            "教会",
+            "城"
+          ],
+          "correct": 0,
+          "explanation": "shrineは日本の「神社」や「聖堂」を表す名詞です。お寺はtempleと言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「temple」の意味として最も適切なものは？",
+          "choices": [
+            "寺、寺院、神殿",
+            "神社",
+            "教会",
+            "城"
+          ],
+          "correct": 0,
+          "explanation": "templeは「寺、寺院」または「神殿」を表す名詞です。神社はshrineと言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「theater」の意味として最も適切なものは？",
+          "choices": [
+            "劇場、映画館",
+            "博物館",
+            "図書館",
+            "スタジアム"
+          ],
+          "correct": 0,
+          "explanation": "theaterは芝居を見る「劇場」、または「映画館」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stadium」の意味として最も適切なものは？",
+          "choices": [
+            "競技場、スタジアム",
+            "体育館",
+            "公園",
+            "広場"
+          ],
+          "correct": 0,
+          "explanation": "stadiumはスポーツやイベントを行う「競技場、スタジアム」を表す名詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -87,16 +527,126 @@
       "emoji": "🌍",
       "subtitle": "地球や宇宙、自然に関する地理的単語",
       "questions": [
-        {"scenario": "「earth」の意味として最も適切なものは？", "choices": ["地球、大地、土", "太陽", "宇宙", "世界"], "correct": 0, "explanation": "earthは私たちが住む「地球」や、「大地、土」を表す名詞です。地球を指す時は the Earth と大文字で書くこともあります。", "type": "choice"},
-        {"scenario": "「field」の意味として最も適切なものは？", "choices": ["野原、畑、分野、競技場", "森", "川", "山"], "correct": 0, "explanation": "fieldは「野原、畑」、またスポーツの「競技場（フィールド）」や学問の「分野」を表す名詞です。", "type": "choice"},
-        {"scenario": "「ground」の意味として最も適切なものは？", "choices": ["地面、土地、運動場", "空", "海", "壁"], "correct": 0, "explanation": "groundは「地面、地表」、または学校の「運動場（グラウンド）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「island」の意味として最も適切なものは？", "choices": ["島", "半島", "大陸", "湖"], "correct": 0, "explanation": "islandは水に囲まれた「島（しま）」を表す名詞です。sは発音しません。", "type": "choice"},
-        {"scenario": "「moon」の意味として最も適切なものは？", "choices": ["月（天体）", "太陽", "地球", "星"], "correct": 0, "explanation": "moonは夜空に輝く「月」を表す名詞です。通常 the moon と the を付けて表します。", "type": "choice"},
-        {"scenario": "「planet」の意味として最も適切なものは？", "choices": ["惑星", "恒星", "衛星", "彗星"], "correct": 0, "explanation": "planetは地球や火星などの「惑星（わくせい）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「sand」の意味として最も適切なものは？", "choices": ["砂", "石", "土", "水"], "correct": 0, "explanation": "sandはビーチや砂漠にある「砂（すな）」を表す名詞です。例: sand castle（砂の城）", "type": "choice"},
-        {"scenario": "「stone」の意味として最も適切なものは？", "choices": ["石、小石", "岩", "土", "砂"], "correct": 0, "explanation": "stoneは「石、小石」を表す名詞です。より大きな岩はrockと言います。", "type": "choice"},
-        {"scenario": "「world」の意味として最も適切なものは？", "choices": ["世界、地球", "宇宙", "国", "都市"], "correct": 0, "explanation": "worldは「世界」を表す名詞です。通常 the world と the を付けて使います。例: travel the world（世界を旅する）", "type": "choice"},
-        {"scenario": "「space」の意味として最も適切なものは？", "choices": ["宇宙、空間、すき間", "地球", "世界", "空"], "correct": 0, "explanation": "spaceは星々が存在する「宇宙（外宇宙）」、または「空間、スペース」を表す名詞です。", "type": "choice"}
+        {
+          "scenario": "「earth」の意味として最も適切なものは？",
+          "choices": [
+            "地球、大地、土",
+            "太陽",
+            "宇宙",
+            "世界"
+          ],
+          "correct": 0,
+          "explanation": "earthは私たちが住む「地球」や、「大地、土」を表す名詞です。地球を指す時は the Earth と大文字で書くこともあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「field」の意味として最も適切なものは？",
+          "choices": [
+            "野原、畑、分野、競技場",
+            "森",
+            "川",
+            "山"
+          ],
+          "correct": 0,
+          "explanation": "fieldは「野原、畑」、またスポーツの「競技場（フィールド）」や学問の「分野」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ground」の意味として最も適切なものは？",
+          "choices": [
+            "地面、土地、運動場",
+            "空",
+            "海",
+            "壁"
+          ],
+          "correct": 0,
+          "explanation": "groundは「地面、地表」、または学校の「運動場（グラウンド）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「island」の意味として最も適切なものは？",
+          "choices": [
+            "島",
+            "半島",
+            "大陸",
+            "湖"
+          ],
+          "correct": 0,
+          "explanation": "islandは水に囲まれた「島（しま）」を表す名詞です。sは発音しません。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「moon」の意味として最も適切なものは？",
+          "choices": [
+            "月（天体）",
+            "太陽",
+            "地球",
+            "星"
+          ],
+          "correct": 0,
+          "explanation": "moonは夜空に輝く「月」を表す名詞です。通常 the moon と the を付けて表します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「planet」の意味として最も適切なものは？",
+          "choices": [
+            "惑星",
+            "恒星",
+            "衛星",
+            "彗星"
+          ],
+          "correct": 0,
+          "explanation": "planetは地球や火星などの「惑星（わくせい）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sand」の意味として最も適切なものは？",
+          "choices": [
+            "砂",
+            "石",
+            "土",
+            "水"
+          ],
+          "correct": 0,
+          "explanation": "sandはビーチや砂漠にある「砂（すな）」を表す名詞です。例: sand castle（砂の城）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stone」の意味として最も適切なものは？",
+          "choices": [
+            "石、小石",
+            "岩",
+            "土",
+            "砂"
+          ],
+          "correct": 0,
+          "explanation": "stoneは「石、小石」を表す名詞です。より大きな岩はrockと言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「world」の意味として最も適切なものは？",
+          "choices": [
+            "世界、地球",
+            "宇宙",
+            "国",
+            "都市"
+          ],
+          "correct": 0,
+          "explanation": "worldは「世界」を表す名詞です。通常 the world と the を付けて使います。例: travel the world（世界を旅する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「space」の意味として最も適切なものは？",
+          "choices": [
+            "宇宙、空間、すき間",
+            "地球",
+            "世界",
+            "空"
+          ],
+          "correct": 0,
+          "explanation": "spaceは星々が存在する「宇宙（外宇宙）」、または「空間、スペース」を表す名詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -106,16 +656,126 @@
       "emoji": "🌟",
       "subtitle": "人や物の状態や評価を表す形容詞",
       "questions": [
-        {"scenario": "「careful」の意味として最も適切なものは？", "choices": ["注意深い、気をつける", "不注意な", "優しい", "賢い"], "correct": 0, "explanation": "carefulは「注意深い、気をつける」という意味の形容詞です。例: Be careful!（気をつけて！）", "type": "choice"},
-        {"scenario": "「dangerous」の意味として最も適切なものは？", "choices": ["危険な", "安全な", "簡単な", "難しい"], "correct": 0, "explanation": "dangerousは「危険な」という意味の形容詞です。safe（安全な）の対義語です。例: a dangerous road（危険な道）", "type": "choice"},
-        {"scenario": "「difficult」の意味として最も適切なものは？", "choices": ["難しい、困難な", "簡単な", "面白い", "つまらない"], "correct": 0, "explanation": "difficultは「難しい」という意味の形容詞です。easy（簡単な）の対義語です。例: a difficult question（難しい問題）", "type": "choice"},
-        {"scenario": "「excited」の意味として最も適切なものは？", "choices": ["わくわくした、興奮した", "退屈した", "怒った", "悲しい"], "correct": 0, "explanation": "excitedは楽しみで「わくわくした、興奮した」という意味の形容詞です。例: I'm excited.（わくわくしています。）", "type": "choice"},
-        {"scenario": "「famous」の意味として最も適切なものは？", "choices": ["有名な", "無名な", "親切な", "美しい"], "correct": 0, "explanation": "famousは「有名な」という意味の形容詞です。例: a famous actor（有名な俳優）", "type": "choice"},
-        {"scenario": "「glad」の意味として最も適切なものは？", "choices": ["うれしい、喜んで", "悲しい", "怒った", "心配な"], "correct": 0, "explanation": "gladは「うれしい、喜んで」という意味の形容詞です。happyと似た意味です。例: I'm glad to meet you.（お会いできて嬉しいです。）", "type": "choice"},
-        {"scenario": "「interesting」の意味として最も適切なものは？", "choices": ["面白い、興味深い", "退屈な", "難しい", "簡単な"], "correct": 0, "explanation": "interestingは（知的な興味を引きつけて）「面白い、興味深い」という意味の形容詞です。例: an interesting book（面白い本）", "type": "choice"},
-        {"scenario": "「necessary」の意味として最も適切なものは？", "choices": ["必要な、欠かせない", "不要な", "特別な", "簡単な"], "correct": 0, "explanation": "necessaryは「必要な、欠かせない」という意味の形容詞です。例: Water is necessary for life.（水は生命に不可欠です。）", "type": "choice"},
-        {"scenario": "「special」の意味として最も適切なものは？", "choices": ["特別な、独特の", "普通の", "安い", "新しい"], "correct": 0, "explanation": "specialは「特別な、独特の、専門の」という意味の形容詞です。例: a special present（特別なプレゼント）", "type": "choice"},
-        {"scenario": "「useful」の意味として最も適切なものは？", "choices": ["役に立つ、便利な", "役に立たない", "使いにくい", "高価な"], "correct": 0, "explanation": "usefulは「役に立つ、便利な」という意味の形容詞です。use（使う）とful（いっぱいの）から来ています。例: a useful tool（便利な道具）", "type": "choice"}
+        {
+          "scenario": "「careful」の意味として最も適切なものは？",
+          "choices": [
+            "注意深い、気をつける",
+            "不注意な",
+            "優しい",
+            "賢い"
+          ],
+          "correct": 0,
+          "explanation": "carefulは「注意深い、気をつける」という意味の形容詞です。例: Be careful!（気をつけて！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dangerous」の意味として最も適切なものは？",
+          "choices": [
+            "危険な",
+            "安全な",
+            "簡単な",
+            "難しい"
+          ],
+          "correct": 0,
+          "explanation": "dangerousは「危険な」という意味の形容詞です。safe（安全な）の対義語です。例: a dangerous road（危険な道）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「difficult」の意味として最も適切なものは？",
+          "choices": [
+            "難しい、困難な",
+            "簡単な",
+            "面白い",
+            "つまらない"
+          ],
+          "correct": 0,
+          "explanation": "difficultは「難しい」という意味の形容詞です。easy（簡単な）の対義語です。例: a difficult question（難しい問題）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excited」の意味として最も適切なものは？",
+          "choices": [
+            "わくわくした、興奮した",
+            "退屈した",
+            "怒った",
+            "悲しい"
+          ],
+          "correct": 0,
+          "explanation": "excitedは楽しみで「わくわくした、興奮した」という意味の形容詞です。例: I'm excited.（わくわくしています。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「famous」の意味として最も適切なものは？",
+          "choices": [
+            "有名な",
+            "無名な",
+            "親切な",
+            "美しい"
+          ],
+          "correct": 0,
+          "explanation": "famousは「有名な」という意味の形容詞です。例: a famous actor（有名な俳優）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glad」の意味として最も適切なものは？",
+          "choices": [
+            "うれしい、喜んで",
+            "悲しい",
+            "怒った",
+            "心配な"
+          ],
+          "correct": 0,
+          "explanation": "gladは「うれしい、喜んで」という意味の形容詞です。happyと似た意味です。例: I'm glad to meet you.（お会いできて嬉しいです。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「interesting」の意味として最も適切なものは？",
+          "choices": [
+            "面白い、興味深い",
+            "退屈な",
+            "難しい",
+            "簡単な"
+          ],
+          "correct": 0,
+          "explanation": "interestingは（知的な興味を引きつけて）「面白い、興味深い」という意味の形容詞です。例: an interesting book（面白い本）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「necessary」の意味として最も適切なものは？",
+          "choices": [
+            "必要な、欠かせない",
+            "不要な",
+            "特別な",
+            "簡単な"
+          ],
+          "correct": 0,
+          "explanation": "necessaryは「必要な、欠かせない」という意味の形容詞です。例: Water is necessary for life.（水は生命に不可欠です。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「special」の意味として最も適切なものは？",
+          "choices": [
+            "特別な、独特の",
+            "普通の",
+            "安い",
+            "新しい"
+          ],
+          "correct": 0,
+          "explanation": "specialは「特別な、独特の、専門の」という意味の形容詞です。例: a special present（特別なプレゼント）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「useful」の意味として最も適切なものは？",
+          "choices": [
+            "役に立つ、便利な",
+            "役に立たない",
+            "使いにくい",
+            "高価な"
+          ],
+          "correct": 0,
+          "explanation": "usefulは「役に立つ、便利な」という意味の形容詞です。use（使う）とful（いっぱいの）から来ています。例: a useful tool（便利な道具）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -125,16 +785,126 @@
       "emoji": "🎭",
       "subtitle": "性格や感情、様子を表す形容詞",
       "questions": [
-        {"scenario": "「boring」の意味として最も適切なものは？", "choices": ["退屈な、つまらない", "面白い", "簡単な", "難しい"], "correct": 0, "explanation": "boringは「退屈な、つまらない」という意味の形容詞です。interesting（面白い）の対義語です。例: a boring movie（退屈な映画）", "type": "choice"},
-        {"scenario": "「brave」の意味として最も適切なものは？", "choices": ["勇敢な、勇気のある", "臆病な", "優しい", "乱暴な"], "correct": 0, "explanation": "braveは「勇敢な、勇気のある」という意味の形容詞です。例: a brave soldier（勇敢な兵士）", "type": "choice"},
-        {"scenario": "「clear」の意味として最も適切なものは？", "choices": ["澄んだ、はっきりした、透明な", "濁った", "暗い", "騒がしい"], "correct": 0, "explanation": "clearは水や空が「澄んだ」、話や音が「はっきりした」という意味の形容詞です。例: clear sky（澄んだ空）", "type": "choice"},
-        {"scenario": "「lazy」の意味として最も適切なものは？", "choices": ["怠惰な、怠けている", "勤勉な", "元気な", "優しい"], "correct": 0, "explanation": "lazyは「怠惰な、怠けている」という意味の形容詞です。例: a lazy boy（怠け者の少年）", "type": "choice"},
-        {"scenario": "「noisy」の意味として最も適切なものは？", "choices": ["騒がしい、うるさい", "静かな", "暗い", "明るい"], "correct": 0, "explanation": "noisyは「騒がしい、うるさい、雑音の多い」という意味の形容詞です。quiet（静かな）の対義語です。", "type": "choice"},
-        {"scenario": "「polite」の意味として最も適切なものは？", "choices": ["礼儀正しい、丁寧な", "失礼な", "優しい", "怒った"], "correct": 0, "explanation": "politeは「礼儀正しい、丁寧な」という意味の形容詞です。対義語はrude（失礼な）です。例: a polite clerk（礼儀正しい店員）", "type": "choice"},
-        {"scenario": "「proud」の意味として最も適切なものは？", "choices": ["誇りに思う、自慢している", "恥じている", "悲しんでいる", "怒っている"], "correct": 0, "explanation": "proudは「誇りに思う、誇り高き」という意味の形容詞です。通常 be proud of 〜（〜を誇りに思う）の形で使われます。", "type": "choice"},
-        {"scenario": "「rude」の意味として最も適切なものは？", "choices": ["無礼な、失礼な", "丁寧な", "親切な", "賢い"], "correct": 0, "explanation": "rudeは「無礼な、失礼な」という意味の形容詞です。polite（丁寧な）の対義語です。例: a rude answer（失礼な返答）", "type": "choice"},
-        {"scenario": "「simple」の意味として最も適切なものは？", "choices": ["簡単な、単純な、地味な", "複雑な", "難しい", "派手な"], "correct": 0, "explanation": "simpleは「簡単な、単純な」または「地味な、質素な」という意味の形容詞です。例: a simple question（単純な質問）", "type": "choice"},
-        {"scenario": "「strange」の意味として最も適切なものは？", "choices": ["奇妙な、見慣れない、不思議な", "普通の", "有名な", "新しい"], "correct": 0, "explanation": "strangeは「奇妙な、変な、見慣れない」という意味の形容詞です。名詞形はstranger（見知らぬ人）です。", "type": "choice"}
+        {
+          "scenario": "「boring」の意味として最も適切なものは？",
+          "choices": [
+            "退屈な、つまらない",
+            "面白い",
+            "簡単な",
+            "難しい"
+          ],
+          "correct": 0,
+          "explanation": "boringは「退屈な、つまらない」という意味の形容詞です。interesting（面白い）の対義語です。例: a boring movie（退屈な映画）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brave」の意味として最も適切なものは？",
+          "choices": [
+            "勇敢な、勇気のある",
+            "臆病な",
+            "優しい",
+            "乱暴な"
+          ],
+          "correct": 0,
+          "explanation": "braveは「勇敢な、勇気のある」という意味の形容詞です。例: a brave soldier（勇敢な兵士）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clear」の意味として最も適切なものは？",
+          "choices": [
+            "澄んだ、はっきりした、透明な",
+            "濁った",
+            "暗い",
+            "騒がしい"
+          ],
+          "correct": 0,
+          "explanation": "clearは水や空が「澄んだ」、話や音が「はっきりした」という意味の形容詞です。例: clear sky（澄んだ空）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lazy」の意味として最も適切なものは？",
+          "choices": [
+            "怠惰な、怠けている",
+            "勤勉な",
+            "元気な",
+            "優しい"
+          ],
+          "correct": 0,
+          "explanation": "lazyは「怠惰な、怠けている」という意味の形容詞です。例: a lazy boy（怠け者の少年）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「noisy」の意味として最も適切なものは？",
+          "choices": [
+            "騒がしい、うるさい",
+            "静かな",
+            "暗い",
+            "明るい"
+          ],
+          "correct": 0,
+          "explanation": "noisyは「騒がしい、うるさい、雑音の多い」という意味の形容詞です。quiet（静かな）の対義語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「polite」の意味として最も適切なものは？",
+          "choices": [
+            "礼儀正しい、丁寧な",
+            "失礼な",
+            "優しい",
+            "怒った"
+          ],
+          "correct": 0,
+          "explanation": "politeは「礼儀正しい、丁寧な」という意味の形容詞です。対義語はrude（失礼な）です。例: a polite clerk（礼儀正しい店員）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「proud」の意味として最も適切なものは？",
+          "choices": [
+            "誇りに思う、自慢している",
+            "恥じている",
+            "悲しんでいる",
+            "怒っている"
+          ],
+          "correct": 0,
+          "explanation": "proudは「誇りに思う、誇り高き」という意味の形容詞です。通常 be proud of 〜（〜を誇りに思う）の形で使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rude」の意味として最も適切なものは？",
+          "choices": [
+            "無礼な、失礼な",
+            "丁寧な",
+            "親切な",
+            "賢い"
+          ],
+          "correct": 0,
+          "explanation": "rudeは「無礼な、失礼な」という意味の形容詞です。polite（丁寧な）の対義語です。例: a rude answer（失礼な返答）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「simple」の意味として最も適切なものは？",
+          "choices": [
+            "簡単な、単純な、地味な",
+            "複雑な",
+            "難しい",
+            "派手な"
+          ],
+          "correct": 0,
+          "explanation": "simpleは「簡単な、単純な」または「地味な、質素な」という意味の形容詞です。例: a simple question（単純な質問）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「strange」の意味として最も適切なものは？",
+          "choices": [
+            "奇妙な、見慣れない、不思議な",
+            "普通の",
+            "有名な",
+            "新しい"
+          ],
+          "correct": 0,
+          "explanation": "strangeは「奇妙な、変な、見慣れない」という意味の形容詞です。名詞形はstranger（見知らぬ人）です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -144,16 +914,126 @@
       "emoji": "🗺️",
       "subtitle": "時間や状態、位置関係を示す言葉",
       "questions": [
-        {"scenario": "「already」の意味として最も適切なものは？", "choices": ["すでに、もう", "まだ", "いつも", "決して〜ない"], "correct": 0, "explanation": "alreadyは肯定文で「すでに、もう」という意味の副詞です。例: I have already eaten lunch.（私はすでに昼食を食べました。）", "type": "choice"},
-        {"scenario": "「easily」の意味として最も適切なものは？", "choices": ["簡単に、容易に", "難しく", "ゆっくり", "速く"], "correct": 0, "explanation": "easilyは「簡単に、容易に」という意味の副詞です。形容詞easyの副詞形です。例: win easily（簡単に勝つ）", "type": "choice"},
-        {"scenario": "「finally」の意味として最も適切なものは？", "choices": ["ついに、やっと、最後に", "最初に", "突然に", "いつも"], "correct": 0, "explanation": "finallyは「ついに、やっと」「最後に」という意味の副詞です。例: Finally, we arrived.（ついに私たちは到着した。）", "type": "choice"},
-        {"scenario": "「inside」の意味として最も適切なものは？", "choices": ["内側に、中に", "外側に", "上に", "下に"], "correct": 0, "explanation": "insideは「内側に、中に」という意味の副詞・前置詞・名詞です。対義語はoutside（外側に）です。", "type": "choice"},
-        {"scenario": "「outside」の意味として最も適切なものは？", "choices": ["外側に、外で", "内側に", "真ん中に", "裏側に"], "correct": 0, "explanation": "outsideは「外側に、外で」という意味の副詞・前置詞・名詞です。対義語はinside（内側に）です。例: play outside（外で遊ぶ）", "type": "choice"},
-        {"scenario": "「through」の意味として最も適切なものは？", "choices": ["〜を通り抜けて、〜の間じゅう", "〜の近くに", "〜の下に", "〜に反して"], "correct": 0, "explanation": "throughは「〜を通り抜けて（貫通）」「〜の間じゅう（期間）」という意味の前置詞・副詞です。例: walk through the park（公園を通り抜ける）", "type": "choice"},
-        {"scenario": "「during」の意味として最も適切なものは？", "choices": ["〜の間（特定の期間）", "〜のために", "〜と一緒に", "〜から"], "correct": 0, "explanation": "duringは「〜の間（特定の期間中）」を表す前置詞です。for（〜の間）と異なり、duringの後は「夏休み」などの特定の期間を表す名詞が来ます。", "type": "choice"},
-        {"scenario": "「against」の意味として最も適切なものは？", "choices": ["〜に反対して、〜に寄りかかって", "〜に賛成して", "〜の近くに", "〜に向かって"], "correct": 0, "explanation": "againstは「〜に反対して」「〜に寄りかかって（接触）」という意味の前置詞です。例: lean against the wall（壁にもたれかかる）", "type": "choice"},
-        {"scenario": "「without」の意味として最も適切なものは？", "choices": ["〜なしで、〜を持たずに", "〜と一緒に", "〜の中に", "〜について"], "correct": 0, "explanation": "withoutは「〜なしで、〜を持たずに」という意味の前置詞です。withの対義語です。例: go out without an umbrella（傘なしで外出する）", "type": "choice"},
-        {"scenario": "「toward」の意味として最も適切なものは？", "choices": ["〜の方へ、〜に向かって", "〜から離れて", "〜の中に", "〜の下に"], "correct": 0, "explanation": "towardは「〜の方へ、〜に向かって（方向）」を表す前置詞です。例: walk toward the station（駅の方へ歩く）", "type": "choice"}
+        {
+          "scenario": "「already」の意味として最も適切なものは？",
+          "choices": [
+            "すでに、もう",
+            "まだ",
+            "いつも",
+            "決して〜ない"
+          ],
+          "correct": 0,
+          "explanation": "alreadyは肯定文で「すでに、もう」という意味の副詞です。例: I have already eaten lunch.（私はすでに昼食を食べました。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「easily」の意味として最も適切なものは？",
+          "choices": [
+            "簡単に、容易に",
+            "難しく",
+            "ゆっくり",
+            "速く"
+          ],
+          "correct": 0,
+          "explanation": "easilyは「簡単に、容易に」という意味の副詞です。形容詞easyの副詞形です。例: win easily（簡単に勝つ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「finally」の意味として最も適切なものは？",
+          "choices": [
+            "ついに、やっと、最後に",
+            "最初に",
+            "突然に",
+            "いつも"
+          ],
+          "correct": 0,
+          "explanation": "finallyは「ついに、やっと」「最後に」という意味の副詞です。例: Finally, we arrived.（ついに私たちは到着した。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inside」の意味として最も適切なものは？",
+          "choices": [
+            "内側に、中に",
+            "外側に",
+            "上に",
+            "下に"
+          ],
+          "correct": 0,
+          "explanation": "insideは「内側に、中に」という意味の副詞・前置詞・名詞です。対義語はoutside（外側に）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「outside」の意味として最も適切なものは？",
+          "choices": [
+            "外側に、外で",
+            "内側に",
+            "真ん中に",
+            "裏側に"
+          ],
+          "correct": 0,
+          "explanation": "outsideは「外側に、外で」という意味の副詞・前置詞・名詞です。対義語はinside（内側に）です。例: play outside（外で遊ぶ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「through」の意味として最も適切なものは？",
+          "choices": [
+            "〜を通り抜けて、〜の間じゅう",
+            "〜の近くに",
+            "〜の下に",
+            "〜に反して"
+          ],
+          "correct": 0,
+          "explanation": "throughは「〜を通り抜けて（貫通）」「〜の間じゅう（期間）」という意味の前置詞・副詞です。例: walk through the park（公園を通り抜ける）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「during」の意味として最も適切なものは？",
+          "choices": [
+            "〜の間（特定の期間）",
+            "〜のために",
+            "〜と一緒に",
+            "〜から"
+          ],
+          "correct": 0,
+          "explanation": "duringは「〜の間（特定の期間中）」を表す前置詞です。for（〜の間）と異なり、duringの後は「夏休み」などの特定の期間を表す名詞が来ます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「against」の意味として最も適切なものは？",
+          "choices": [
+            "〜に反対して、〜に寄りかかって",
+            "〜に賛成して",
+            "〜の近くに",
+            "〜に向かって"
+          ],
+          "correct": 0,
+          "explanation": "againstは「〜に反対して」「〜に寄りかかって（接触）」という意味の前置詞です。例: lean against the wall（壁にもたれかかる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「without」の意味として最も適切なものは？",
+          "choices": [
+            "〜なしで、〜を持たずに",
+            "〜と一緒に",
+            "〜の中に",
+            "〜について"
+          ],
+          "correct": 0,
+          "explanation": "withoutは「〜なしで、〜を持たずに」という意味の前置詞です。withの対義語です。例: go out without an umbrella（傘なしで外出する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「toward」の意味として最も適切なものは？",
+          "choices": [
+            "〜の方へ、〜に向かって",
+            "〜から離れて",
+            "〜の中に",
+            "〜の下に"
+          ],
+          "correct": 0,
+          "explanation": "towardは「〜の方へ、〜に向かって（方向）」を表す前置詞です。例: walk toward the station（駅の方へ歩く）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -163,16 +1043,126 @@
       "emoji": "⏳",
       "subtitle": "時間的な概念や予定を表す名詞",
       "questions": [
-        {"scenario": "「century」の意味として最も適切なものは？", "choices": ["世紀、100年間", "年代", "世代", "月日"], "correct": 0, "explanation": "centuryは「世紀、100年間」を表す名詞です。例: 21st century（21世紀）", "type": "choice"},
-        {"scenario": "「diary」の意味として最も適切なものは？", "choices": ["日記、日誌", "手帳", "教科書", "小説"], "correct": 0, "explanation": "diaryは「日記、日誌」を表す名詞です。例: write in my diary（日記を書く）", "type": "choice"},
-        {"scenario": "「degree」の意味として最も適切なものは？", "choices": ["（温度・角度の）度、学位", "パーセント", "距離", "重さ"], "correct": 0, "explanation": "degreeは温度や角度の「度（ど）」、または大学などの「学位」を表す名詞です。例: 30 degrees Celsius（摂氏30度）", "type": "choice"},
-        {"scenario": "「future」の意味として最も適切なものは？", "choices": ["未来、将来", "過去", "現在", "世紀"], "correct": 0, "explanation": "futureは「未来、将来」という意味の名詞・形容詞です。対義語はpast（過去）です。例: in the future（将来に）", "type": "choice"},
-        {"scenario": "「holiday」の意味として最も適切なものは？", "choices": ["休日、祝日、休み", "平日", "週末", "仕事"], "correct": 0, "explanation": "holidayは「休日、祝祭日」を表す名詞です。例: summer holidays（夏休み）", "type": "choice"},
-        {"scenario": "「midnight」の意味として最も適切なものは？", "choices": ["夜の12時、真夜中", "正午", "夕暮れ", "夜明け"], "correct": 0, "explanation": "midnightは「夜の12時、夜中、真夜中」を表す名詞です。対義語はnoon（正午）です。", "type": "choice"},
-        {"scenario": "「noon」の意味として最も適切なものは？", "choices": ["正午、お昼の12時", "真夜中", "朝方", "夕方"], "correct": 0, "explanation": "noonは「正午、昼の12時」を表す名詞です。対義語はmidnight（真夜中）です。例: at noon（正午に）", "type": "choice"},
-        {"scenario": "「past」の意味として最も適切なものは？", "choices": ["過去、過去の、〜を過ぎて", "未来", "現在", "予定"], "correct": 0, "explanation": "pastは「過去」という名詞、また「過去の」という形容詞、時間を「〜過ぎて」という前置詞の意味もあります。", "type": "choice"},
-        {"scenario": "「schedule」の意味として最も適切なものは？", "choices": ["予定、スケジュール", "結果", "目標", "授業"], "correct": 0, "explanation": "scheduleは「予定、スケジュール、時刻表」を表す名詞です。例: busy schedule（忙しい予定）", "type": "choice"},
-        {"scenario": "「moment」の意味として最も適切なものは？", "choices": ["瞬間、少しの間", "時間", "時計", "歴史"], "correct": 0, "explanation": "momentは「瞬間」または「少しの間」という意味の名詞です。例: Just a moment.（ちょっと待ってください。）", "type": "choice"}
+        {
+          "scenario": "「century」の意味として最も適切なものは？",
+          "choices": [
+            "世紀、100年間",
+            "年代",
+            "世代",
+            "月日"
+          ],
+          "correct": 0,
+          "explanation": "centuryは「世紀、100年間」を表す名詞です。例: 21st century（21世紀）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「diary」の意味として最も適切なものは？",
+          "choices": [
+            "日記、日誌",
+            "手帳",
+            "教科書",
+            "小説"
+          ],
+          "correct": 0,
+          "explanation": "diaryは「日記、日誌」を表す名詞です。例: write in my diary（日記を書く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「degree」の意味として最も適切なものは？",
+          "choices": [
+            "（温度・角度の）度、学位",
+            "パーセント",
+            "距離",
+            "重さ"
+          ],
+          "correct": 0,
+          "explanation": "degreeは温度や角度の「度（ど）」、または大学などの「学位」を表す名詞です。例: 30 degrees Celsius（摂氏30度）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「future」の意味として最も適切なものは？",
+          "choices": [
+            "未来、将来",
+            "過去",
+            "現在",
+            "世紀"
+          ],
+          "correct": 0,
+          "explanation": "futureは「未来、将来」という意味の名詞・形容詞です。対義語はpast（過去）です。例: in the future（将来に）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「holiday」の意味として最も適切なものは？",
+          "choices": [
+            "休日、祝日、休み",
+            "平日",
+            "週末",
+            "仕事"
+          ],
+          "correct": 0,
+          "explanation": "holidayは「休日、祝祭日」を表す名詞です。例: summer holidays（夏休み）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midnight」の意味として最も適切なものは？",
+          "choices": [
+            "夜の12時、真夜中",
+            "正午",
+            "夕暮れ",
+            "夜明け"
+          ],
+          "correct": 0,
+          "explanation": "midnightは「夜の12時、夜中、真夜中」を表す名詞です。対義語はnoon（正午）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「noon」の意味として最も適切なものは？",
+          "choices": [
+            "正午、お昼の12時",
+            "真夜中",
+            "朝方",
+            "夕方"
+          ],
+          "correct": 0,
+          "explanation": "noonは「正午、昼の12時」を表す名詞です。対義語はmidnight（真夜中）です。例: at noon（正午に）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「past」の意味として最も適切なものは？",
+          "choices": [
+            "過去、過去の、〜を過ぎて",
+            "未来",
+            "現在",
+            "予定"
+          ],
+          "correct": 0,
+          "explanation": "pastは「過去」という名詞、また「過去の」という形容詞、時間を「〜過ぎて」という前置詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「schedule」の意味として最も適切なものは？",
+          "choices": [
+            "予定、スケジュール",
+            "結果",
+            "目標",
+            "授業"
+          ],
+          "correct": 0,
+          "explanation": "scheduleは「予定、スケジュール、時刻表」を表す名詞です。例: busy schedule（忙しい予定）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「moment」の意味として最も適切なものは？",
+          "choices": [
+            "瞬間、少しの間",
+            "時間",
+            "時計",
+            "歴史"
+          ],
+          "correct": 0,
+          "explanation": "momentは「瞬間」または「少しの間」という意味の名詞です。例: Just a moment.（ちょっと待ってください。）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -182,16 +1172,126 @@
       "emoji": "🗣️",
       "subtitle": "日常会話や読解で頻出する重要熟語",
       "questions": [
-        {"scenario": "「after all」の意味として最も適切なものは？", "choices": ["結局、やはり", "何よりもまず", "すべての後で", "ついに"], "correct": 0, "explanation": "after allは「結局、やはり」という意味の重要な熟語です。予想に反した結末によく使われます。", "type": "choice"},
-        {"scenario": "「all the time」の意味として最も適切なものは？", "choices": ["いつも、その間ずっと", "時間通りに", "時々", "決して〜ない"], "correct": 0, "explanation": "all the timeは「いつも」「その間ずっと（常に）」という意味の熟語です。例: smiling all the time（いつも笑っている）", "type": "choice"},
-        {"scenario": "「by the way」の意味として最も適切なものは？", "choices": ["ところで、ちなみに", "途中で", "その方法で", "ついでに"], "correct": 0, "explanation": "by the wayは会話の話題を変えるときに使う「ところで、ちなみに」というフレーズです。", "type": "choice"},
-        {"scenario": "「check in」の意味として最も適切なものは？", "choices": ["（ホテルや空港で）搭乗・宿泊手続きをする", "確認する", "退出する", "荷物を預ける"], "correct": 0, "explanation": "check inはホテルや空港で「搭乗手続きをする、チェックインする」という意味の熟語です。対義語はcheck outです。", "type": "choice"},
-        {"scenario": "「for example」の意味として最も適切なものは？", "choices": ["例えば", "例外として", "サンプルとして", "模範的に"], "correct": 0, "explanation": "for exampleは具体例を挙げるときの「例えば」という重要なフレーズです。for instanceとも言います。", "type": "choice"},
-        {"scenario": "「long ago」の意味として最も適切なものは？", "choices": ["ずっと昔に、かなり前に", "もうすぐ", "最近", "いつまでも"], "correct": 0, "explanation": "long agoは「ずっと昔に、かなり前に」という意味の熟語です。おとぎ話の冒頭などでよく使われます。", "type": "choice"},
-        {"scenario": "「make up one's mind」の意味として最も適切なものは？", "choices": ["決心する、決める", "化粧する", "思い出す", "心を落ち着ける"], "correct": 0, "explanation": "make up one's mindは「決心する、決める」という意味の熟語です。decideと同義です。例: I made up my mind.（決心しました。）", "type": "choice"},
-        {"scenario": "「once again」の意味として最も適切なものは？", "choices": ["もう一度、再度", "かつて", "たまに", "同時に"], "correct": 0, "explanation": "once againは「もう一度、再度」という意味の熟語です。once moreとも言います。", "type": "choice"},
-        {"scenario": "「shake hands」の意味として最も適切なものは？", "choices": ["握手する", "手を振る", "手を洗う", "手を挙げる"], "correct": 0, "explanation": "shake handsは「握手する」という意味の熟語です。互いの手を握るので通常 hands と複数形になります。", "type": "choice"},
-        {"scenario": "「turn off」の意味として最も適切なものは？", "choices": ["（テレビや電気を）消す、消す", "点ける", "曲がる", "止める"], "correct": 0, "explanation": "turn offは電気、テレビ、水道などを「消す、止める」という意味の熟語です。対義語はturn on（点ける）です。", "type": "choice"}
+        {
+          "scenario": "「after all」の意味として最も適切なものは？",
+          "choices": [
+            "結局、やはり",
+            "何よりもまず",
+            "すべての後で",
+            "ついに"
+          ],
+          "correct": 0,
+          "explanation": "after allは「結局、やはり」という意味の重要な熟語です。予想に反した結末によく使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「all the time」の意味として最も適切なものは？",
+          "choices": [
+            "いつも、その間ずっと",
+            "時間通りに",
+            "時々",
+            "決して〜ない"
+          ],
+          "correct": 0,
+          "explanation": "all the timeは「いつも」「その間ずっと（常に）」という意味の熟語です。例: smiling all the time（いつも笑っている）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by the way」の意味として最も適切なものは？",
+          "choices": [
+            "ところで、ちなみに",
+            "途中で",
+            "その方法で",
+            "ついでに"
+          ],
+          "correct": 0,
+          "explanation": "by the wayは会話の話題を変えるときに使う「ところで、ちなみに」というフレーズです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「check in」の意味として最も適切なものは？",
+          "choices": [
+            "（ホテルや空港で）搭乗・宿泊手続きをする",
+            "確認する",
+            "退出する",
+            "荷物を預ける"
+          ],
+          "correct": 0,
+          "explanation": "check inはホテルや空港で「搭乗手続きをする、チェックインする」という意味の熟語です。対義語はcheck outです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for example」の意味として最も適切なものは？",
+          "choices": [
+            "例えば",
+            "例外として",
+            "サンプルとして",
+            "模範的に"
+          ],
+          "correct": 0,
+          "explanation": "for exampleは具体例を挙げるときの「例えば」という重要なフレーズです。for instanceとも言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「long ago」の意味として最も適切なものは？",
+          "choices": [
+            "ずっと昔に、かなり前に",
+            "もうすぐ",
+            "最近",
+            "いつまでも"
+          ],
+          "correct": 0,
+          "explanation": "long agoは「ずっと昔に、かなり前に」という意味の熟語です。おとぎ話の冒頭などでよく使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make up one's mind」の意味として最も適切なものは？",
+          "choices": [
+            "決心する、決める",
+            "化粧する",
+            "思い出す",
+            "心を落ち着ける"
+          ],
+          "correct": 0,
+          "explanation": "make up one's mindは「決心する、決める」という意味の熟語です。decideと同義です。例: I made up my mind.（決心しました。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「once again」の意味として最も適切なものは？",
+          "choices": [
+            "もう一度、再度",
+            "かつて",
+            "たまに",
+            "同時に"
+          ],
+          "correct": 0,
+          "explanation": "once againは「もう一度、再度」という意味の熟語です。once moreとも言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「shake hands」の意味として最も適切なものは？",
+          "choices": [
+            "握手する",
+            "手を振る",
+            "手を洗う",
+            "手を挙げる"
+          ],
+          "correct": 0,
+          "explanation": "shake handsは「握手する」という意味の熟語です。互いの手を握るので通常 hands と複数形になります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn off」の意味として最も適切なものは？",
+          "choices": [
+            "（テレビや電気を）消す、消す",
+            "点ける",
+            "曲がる",
+            "止める"
+          ],
+          "correct": 0,
+          "explanation": "turn offは電気、テレビ、水道などを「消す、止める」という意味の熟語です。対義語はturn on（点ける）です。",
+          "type": "choice"
+        }
       ]
     }
   ]

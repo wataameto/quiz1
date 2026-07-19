@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "level": 3,
+  "label": "動詞編③",
+  "description": "重要動詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "動詞編セット1",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 201~210",
+      "subtitle": "動詞 201~210",
       "questions": [
         {
           "scenario": "「clutter」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "動詞編セット2",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 211~220",
+      "subtitle": "動詞 211~220",
       "questions": [
         {
           "scenario": "「cogitate」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "動詞編セット3",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 221~230",
+      "subtitle": "動詞 221~230",
       "questions": [
         {
           "scenario": "「commercialize」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "動詞編セット4",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 231~240",
+      "subtitle": "動詞 231~240",
       "questions": [
         {
           "scenario": "「condescend」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "動詞編セット5",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 241~250",
+      "subtitle": "動詞 241~250",
       "questions": [
         {
           "scenario": "「consort」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "動詞編セット6",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 251~260",
+      "subtitle": "動詞 251~260",
       "questions": [
         {
           "scenario": "「corrode」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "動詞編セット7",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 261~270",
+      "subtitle": "動詞 261~270",
       "questions": [
         {
           "scenario": "「covenant」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "動詞編セット8",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 271~280",
+      "subtitle": "動詞 271~280",
       "questions": [
         {
           "scenario": "「crave」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "動詞編セット9",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 281~290",
+      "subtitle": "動詞 281~290",
       "questions": [
         {
           "scenario": "「cringe」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "動詞編セット10",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 291~300",
+      "subtitle": "動詞 291~300",
       "questions": [
         {
           "scenario": "「crow」の意味として最も適切なものは？",

@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 9,
+  "label": "名詞編④",
+  "description": "重要名詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "名詞編4セット1",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 801~810",
+      "subtitle": "名詞 801~810",
       "questions": [
         {
           "scenario": "「brink」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "名詞編4セット2",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 811~820",
+      "subtitle": "名詞 811~820",
       "questions": [
         {
           "scenario": "「broom」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "名詞編4セット3",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 821~830",
+      "subtitle": "名詞 821~830",
       "questions": [
         {
           "scenario": "「cavity」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "名詞編4セット4",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 831~840",
+      "subtitle": "名詞 831~840",
       "questions": [
         {
           "scenario": "「chapel」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "名詞編4セット5",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 841~850",
+      "subtitle": "名詞 841~850",
       "questions": [
         {
           "scenario": "「chord」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "名詞編4セット6",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 851~860",
+      "subtitle": "名詞 851~860",
       "questions": [
         {
           "scenario": "「civilian」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "名詞編4セット7",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 861~870",
+      "subtitle": "名詞 861~870",
       "questions": [
         {
           "scenario": "「cleaner」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "名詞編4セット8",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 871~880",
+      "subtitle": "名詞 871~880",
       "questions": [
         {
           "scenario": "「closure」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "名詞編4セット9",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 881~890",
+      "subtitle": "名詞 881~890",
       "questions": [
         {
           "scenario": "「cockpit」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "名詞編4セット10",
       "type": "vocabulary",
       "emoji": "📦",
-      "subtitle": "英検準2級の名詞 891~900",
+      "subtitle": "名詞 891~900",
       "questions": [
         {
           "scenario": "「coldness」の意味として最も適切なものは？",

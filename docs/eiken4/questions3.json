@@ -1,8 +1,8 @@
 {
   "id": "eiken4",
   "level": 3,
-  "label": "🔤 基礎単語編③",
-  "description": "英検4級レベルの基本英単語③（動詞・名詞・形容詞・副詞・会話表現）",
+  "label": "パート 3",
+  "description": "重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,
@@ -11,16 +11,126 @@
       "emoji": "🤝",
       "subtitle": "人とのコミュニケーションや生活の行動",
       "questions": [
-        {"scenario": "「behave」の意味として最も適切なものは？", "choices": ["ふるまう、行動する", "信じる", "従う", "案内する"], "correct": 0, "explanation": "behaveは「ふるまう、行儀よく行動する」という意味の動詞です。例: behave well（行儀よくふるまう）", "type": "choice"},
-        {"scenario": "「communicate」の意味として最も適切なものは？", "choices": ["意思を通じ合う、伝える", "隠す", "拒否する", "競争する"], "correct": 0, "explanation": "communicateは「（言葉や手紙で）意思を通じ合う、連絡する、伝える」という意味の動詞です。名詞形はcommunicationです。", "type": "choice"},
-        {"scenario": "「control」の意味として最も適切なものは？", "choices": ["支配する、管理する、制御する", "手放す", "従う", "信じる"], "correct": 0, "explanation": "controlは「支配する、管理する、制御する」という意味の動詞・名詞です。例: control the machine（機械を制御する）", "type": "choice"},
-        {"scenario": "「encourage」の意味として最も適切なものは？", "choices": ["励ます、勇気づける", "怒る", "邪魔する", "悲しませる"], "correct": 0, "explanation": "encourageは「励ます、勇気づける」という意味の動詞です。courage（勇気）にen（〜にする）がついた言葉です。", "type": "choice"},
-        {"scenario": "「hide」の意味として最も適切なものは？", "choices": ["隠す、隠れる", "探す", "見せる", "壊す"], "correct": 0, "explanation": "hideは「（人や物を）隠す」または「自分が隠れる」という意味の動詞です。例: hide behind the tree（木の後ろに隠れる）", "type": "choice"},
-        {"scenario": "「hurt」の意味として最も適切なものは？", "choices": ["傷つける、痛む、けが", "治す", "助ける", "守る"], "correct": 0, "explanation": "hurtは「傷つける」「痛む」という意味の動詞です。名詞で「心の痛み、けが」という意味もあります。例: My leg hurts.（脚が痛みます。）", "type": "choice"},
-        {"scenario": "「match」の意味として最も適切なものは？", "choices": ["調和する、似合う、試合、マッチ", "異なる", "競う", "壊す"], "correct": 0, "explanation": "matchは「（色やデザインが）調和する、似合う」という動詞、また「試合、マッチ」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「promise」の意味として最も適切なものは？", "choices": ["約束する、約束", "破る", "断る", "忘れる"], "correct": 0, "explanation": "promiseは「約束する」という動詞、また「約束」という名詞の意味もあります。例: keep a promise（約束を守る）", "type": "choice"},
-        {"scenario": "「create」の意味として最も適切なものは？", "choices": ["作り出す、創造する", "壊す", "見つける", "捨てる"], "correct": 0, "explanation": "createは「（新しいものを）作り出す、創造する」という意味の動詞です。名詞形はcreation（創造）やcreator（クリエイター）です。", "type": "choice"},
-        {"scenario": "「realize」の意味として最も適切なものは？", "choices": ["悟る、はっきり理解する、実現する", "誤解する", "忘れる", "計画する"], "correct": 0, "explanation": "realizeは「（考えてみて）はっきり理解する、悟る」または「夢などを実現する」という意味の動詞です。", "type": "choice"}
+        {
+          "scenario": "「behave」の意味として最も適切なものは？",
+          "choices": [
+            "ふるまう、行動する",
+            "信じる",
+            "従う",
+            "案内する"
+          ],
+          "correct": 0,
+          "explanation": "behaveは「ふるまう、行儀よく行動する」という意味の動詞です。例: behave well（行儀よくふるまう）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「communicate」の意味として最も適切なものは？",
+          "choices": [
+            "意思を通じ合う、伝える",
+            "隠す",
+            "拒否する",
+            "競争する"
+          ],
+          "correct": 0,
+          "explanation": "communicateは「（言葉や手紙で）意思を通じ合う、連絡する、伝える」という意味の動詞です。名詞形はcommunicationです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「control」の意味として最も適切なものは？",
+          "choices": [
+            "支配する、管理する、制御する",
+            "手放す",
+            "従う",
+            "信じる"
+          ],
+          "correct": 0,
+          "explanation": "controlは「支配する、管理する、制御する」という意味の動詞・名詞です。例: control the machine（機械を制御する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「encourage」の意味として最も適切なものは？",
+          "choices": [
+            "励ます、勇気づける",
+            "怒る",
+            "邪魔する",
+            "悲しませる"
+          ],
+          "correct": 0,
+          "explanation": "encourageは「励ます、勇気づける」という意味の動詞です。courage（勇気）にen（〜にする）がついた言葉です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hide」の意味として最も適切なものは？",
+          "choices": [
+            "隠す、隠れる",
+            "探す",
+            "見せる",
+            "壊す"
+          ],
+          "correct": 0,
+          "explanation": "hideは「（人や物を）隠す」または「自分が隠れる」という意味の動詞です。例: hide behind the tree（木の後ろに隠れる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hurt」の意味として最も適切なものは？",
+          "choices": [
+            "傷つける、痛む、けが",
+            "治す",
+            "助ける",
+            "守る"
+          ],
+          "correct": 0,
+          "explanation": "hurtは「傷つける」「痛む」という意味の動詞です。名詞で「心の痛み、けが」という意味もあります。例: My leg hurts.（脚が痛みます。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「match」の意味として最も適切なものは？",
+          "choices": [
+            "調和する、似合う、試合、マッチ",
+            "異なる",
+            "競う",
+            "壊す"
+          ],
+          "correct": 0,
+          "explanation": "matchは「（色やデザインが）調和する、似合う」という動詞、また「試合、マッチ」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「promise」の意味として最も適切なものは？",
+          "choices": [
+            "約束する、約束",
+            "破る",
+            "断る",
+            "忘れる"
+          ],
+          "correct": 0,
+          "explanation": "promiseは「約束する」という動詞、また「約束」という名詞の意味もあります。例: keep a promise（約束を守る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「create」の意味として最も適切なものは？",
+          "choices": [
+            "作り出す、創造する",
+            "壊す",
+            "見つける",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "createは「（新しいものを）作り出す、創造する」という意味の動詞です。名詞形はcreation（創造）やcreator（クリエイター）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「realize」の意味として最も適切なものは？",
+          "choices": [
+            "悟る、はっきり理解する、実現する",
+            "誤解する",
+            "忘れる",
+            "計画する"
+          ],
+          "correct": 0,
+          "explanation": "realizeは「（考えてみて）はっきり理解する、悟る」または「夢などを実現する」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -30,16 +140,126 @@
       "emoji": "📈",
       "subtitle": "成長や変化、状態の向上を表す動詞",
       "questions": [
-        {"scenario": "「design」の意味として最も適切なものは？", "choices": ["設計する、デザインする、設計図", "壊す", "建てる", "修理する"], "correct": 0, "explanation": "designは「設計する、デザインする」という動詞、また「設計図、デザイン」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「develop」の意味として最も適切なものは？", "choices": ["開発する、発達させる", "衰退する", "破壊する", "維持する"], "correct": 0, "explanation": "developは「開発する」「（能力などを）発達させる」という意味の動詞です。名詞形はdevelopment（開発）です。", "type": "choice"},
-        {"scenario": "「fail」の意味として最も適切なものは？", "choices": ["失敗する、（試験に）落ちる", "成功する", "合格する", "挑戦する"], "correct": 0, "explanation": "failは「失敗する」「（試験などに）落ちる」という意味の動詞です。対義語はsucceed（成功する）、pass（合格する）です。", "type": "choice"},
-        {"scenario": "「feed」の意味として最も適切なものは？", "choices": ["エサ（食べ物）をやる、養う", "食べる", "料理する", "捨てる"], "correct": 0, "explanation": "feedは動物に「エサをやる」や、家族を「養う」という意味の動詞です。例: feed the dog（犬にエサをやる）", "type": "choice"},
-        {"scenario": "「fit」の意味として最も適切なものは？", "choices": ["（サイズや形が）合う、適した", "異なる", "汚す", "破れる"], "correct": 0, "explanation": "fitは「（サイズや形が）ぴったり合う、適合する」という意味の動詞・形容詞です。例: This shirt fits me.（このシャツは私にぴったり合う。）", "type": "choice"},
-        {"scenario": "「grow」の意味として最も適切なものは？", "choices": ["成長する、育てる、栽培する", "枯れる", "縮む", "買う"], "correct": 0, "explanation": "growは「成長する、大きくなる」または植物などを「育てる、栽培する」という意味の動詞です。", "type": "choice"},
-        {"scenario": "「hold」の意味として最も適切なものは？", "choices": ["持つ、握る、（会などを）開催する", "投げる", "落とす", "捨てる"], "correct": 0, "explanation": "holdは「（手で）持つ、握る」またはイベントを「開催する」という意味の動詞です。例: hold a meeting（会議を開催する）", "type": "choice"},
-        {"scenario": "「improve」の意味として最も適切なものは？", "choices": ["改善する、向上させる、良くなる", "悪化する", "壊す", "保つ"], "correct": 0, "explanation": "improveは「改善する、向上させる」「（状況や状態が）良くなる」という意味の動詞です。", "type": "choice"},
-        {"scenario": "「increase」の意味として最も適切なものは？", "choices": ["増やす、増える、増加", "減らす", "一定に保つ", "割る"], "correct": 0, "explanation": "increaseは「増やす、増える」という動詞、また「増加」という名詞の意味もあります。対義語はdecreaseやreduce（減らす）です。", "type": "choice"},
-        {"scenario": "「reduce」の意味として最も適切なものは？", "choices": ["減らす、削減する、縮小する", "増やす", "拡大する", "保つ"], "correct": 0, "explanation": "reduceは量や価格を「減らす、削減する」という意味の動詞です。対義語はincrease（増やす）です。", "type": "choice"}
+        {
+          "scenario": "「design」の意味として最も適切なものは？",
+          "choices": [
+            "設計する、デザインする、設計図",
+            "壊す",
+            "建てる",
+            "修理する"
+          ],
+          "correct": 0,
+          "explanation": "designは「設計する、デザインする」という動詞、また「設計図、デザイン」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「develop」の意味として最も適切なものは？",
+          "choices": [
+            "開発する、発達させる",
+            "衰退する",
+            "破壊する",
+            "維持する"
+          ],
+          "correct": 0,
+          "explanation": "developは「開発する」「（能力などを）発達させる」という意味の動詞です。名詞形はdevelopment（開発）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fail」の意味として最も適切なものは？",
+          "choices": [
+            "失敗する、（試験に）落ちる",
+            "成功する",
+            "合格する",
+            "挑戦する"
+          ],
+          "correct": 0,
+          "explanation": "failは「失敗する」「（試験などに）落ちる」という意味の動詞です。対義語はsucceed（成功する）、pass（合格する）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「feed」の意味として最も適切なものは？",
+          "choices": [
+            "エサ（食べ物）をやる、養う",
+            "食べる",
+            "料理する",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "feedは動物に「エサをやる」や、家族を「養う」という意味の動詞です。例: feed the dog（犬にエサをやる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fit」の意味として最も適切なものは？",
+          "choices": [
+            "（サイズや形が）合う、適した",
+            "異なる",
+            "汚す",
+            "破れる"
+          ],
+          "correct": 0,
+          "explanation": "fitは「（サイズや形が）ぴったり合う、適合する」という意味の動詞・形容詞です。例: This shirt fits me.（このシャツは私にぴったり合う。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grow」の意味として最も適切なものは？",
+          "choices": [
+            "成長する、育てる、栽培する",
+            "枯れる",
+            "縮む",
+            "買う"
+          ],
+          "correct": 0,
+          "explanation": "growは「成長する、大きくなる」または植物などを「育てる、栽培する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold」の意味として最も適切なものは？",
+          "choices": [
+            "持つ、握る、（会などを）開催する",
+            "投げる",
+            "落とす",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "holdは「（手で）持つ、握る」またはイベントを「開催する」という意味の動詞です。例: hold a meeting（会議を開催する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「improve」の意味として最も適切なものは？",
+          "choices": [
+            "改善する、向上させる、良くなる",
+            "悪化する",
+            "壊す",
+            "保つ"
+          ],
+          "correct": 0,
+          "explanation": "improveは「改善する、向上させる」「（状況や状態が）良くなる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「increase」の意味として最も適切なものは？",
+          "choices": [
+            "増やす、増える、増加",
+            "減らす",
+            "一定に保つ",
+            "割る"
+          ],
+          "correct": 0,
+          "explanation": "increaseは「増やす、増える」という動詞、また「増加」という名詞の意味もあります。対義語はdecreaseやreduce（減らす）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reduce」の意味として最も適切なものは？",
+          "choices": [
+            "減らす、削減する、縮小する",
+            "増やす",
+            "拡大する",
+            "保つ"
+          ],
+          "correct": 0,
+          "explanation": "reduceは量や価格を「減らす、削減する」という意味の動詞です。対義語はincrease（増やす）です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -49,16 +269,126 @@
       "emoji": "🚇",
       "subtitle": "交通手段や通信手段に関する名詞",
       "questions": [
-        {"scenario": "「helicopter」の意味として最も適切なものは？", "choices": ["ヘリコプター", "飛行機", "ドローン", "熱気球"], "correct": 0, "explanation": "helicopterは空飛ぶ「ヘリコプター」を表す名詞です。", "type": "choice"},
-        {"scenario": "「motorcycle」の意味として最も適切なものは？", "choices": ["オートバイ、バイク", "自転車", "スクーター", "自動車"], "correct": 0, "explanation": "motorcycleはエンジン付きの「オートバイ、バイク」を表す名詞です。bikeとも言います。", "type": "choice"},
-        {"scenario": "「subway」の意味として最も適切なものは？", "choices": ["地下鉄", "路面電車", "新幹線", "高速道路"], "correct": 0, "explanation": "subwayは地下を走る「地下鉄」を表す名詞です。イギリス英語ではundergroundとも言います。", "type": "choice"},
-        {"scenario": "「taxi」の意味として最も適切なものは？", "choices": ["タクシー", "バス", "自家用車", "トラック"], "correct": 0, "explanation": "taxiは「タクシー」を表す名詞です。例: take a taxi（タクシーに乗る）", "type": "choice"},
-        {"scenario": "「truck」の意味として最も適切なものは？", "choices": ["トラック、貨物自動車", "乗用車", "バス", "トレーラー"], "correct": 0, "explanation": "truckは荷物を運ぶための「トラック」を表す名詞です。", "type": "choice"},
-        {"scenario": "「traffic」の意味として最も適切なものは？", "choices": ["交通、交通量", "道路", "信号", "事故"], "correct": 0, "explanation": "trafficは道路を走る車などの「交通、交通量」を表す名詞です。例: heavy traffic（交通渋滞、激しい交通量）", "type": "choice"},
-        {"scenario": "「signal」の意味として最も適切なものは？", "choices": ["信号、合図、サイン", "道路", "標識", "警察官"], "correct": 0, "explanation": "signalは「信号、合図、サイン」を表す名詞です。例: traffic signal（交通信号機）", "type": "choice"},
-        {"scenario": "「ticket」の意味として最も適切なものは？", "choices": ["切符、乗車券、チケット", "パンフレット", "カード", "切手"], "correct": 0, "explanation": "ticketは電車などの「切符、乗車券」、または入場用の「チケット」を表す名詞です。例: train ticket（電車の切符）", "type": "choice"},
-        {"scenario": "「address」の意味として最も適切なものは？", "choices": ["住所、あて先、演説", "電話番号", "氏名", "年齢"], "correct": 0, "explanation": "addressは手紙の送付先や住んでいる「住所、あて先」、または「演説」という意味の名詞です。", "type": "choice"},
-        {"scenario": "「passenger」の意味として最も適切なものは？", "choices": ["乗客、旅客", "運転手", "歩行者", "乗組員"], "correct": 0, "explanation": "passengerは電車や飛行機などの「乗客、旅客」を表す名詞です。例: train passengers（電車の乗客）", "type": "choice"}
+        {
+          "scenario": "「helicopter」の意味として最も適切なものは？",
+          "choices": [
+            "ヘリコプター",
+            "飛行機",
+            "ドローン",
+            "熱気球"
+          ],
+          "correct": 0,
+          "explanation": "helicopterは空飛ぶ「ヘリコプター」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「motorcycle」の意味として最も適切なものは？",
+          "choices": [
+            "オートバイ、バイク",
+            "自転車",
+            "スクーター",
+            "自動車"
+          ],
+          "correct": 0,
+          "explanation": "motorcycleはエンジン付きの「オートバイ、バイク」を表す名詞です。bikeとも言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「subway」の意味として最も適切なものは？",
+          "choices": [
+            "地下鉄",
+            "路面電車",
+            "新幹線",
+            "高速道路"
+          ],
+          "correct": 0,
+          "explanation": "subwayは地下を走る「地下鉄」を表す名詞です。イギリス英語ではundergroundとも言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「taxi」の意味として最も適切なものは？",
+          "choices": [
+            "タクシー",
+            "バス",
+            "自家用車",
+            "トラック"
+          ],
+          "correct": 0,
+          "explanation": "taxiは「タクシー」を表す名詞です。例: take a taxi（タクシーに乗る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「truck」の意味として最も適切なものは？",
+          "choices": [
+            "トラック、貨物自動車",
+            "乗用車",
+            "バス",
+            "トレーラー"
+          ],
+          "correct": 0,
+          "explanation": "truckは荷物を運ぶための「トラック」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「traffic」の意味として最も適切なものは？",
+          "choices": [
+            "交通、交通量",
+            "道路",
+            "信号",
+            "事故"
+          ],
+          "correct": 0,
+          "explanation": "trafficは道路を走る車などの「交通、交通量」を表す名詞です。例: heavy traffic（交通渋滞、激しい交通量）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「signal」の意味として最も適切なものは？",
+          "choices": [
+            "信号、合図、サイン",
+            "道路",
+            "標識",
+            "警察官"
+          ],
+          "correct": 0,
+          "explanation": "signalは「信号、合図、サイン」を表す名詞です。例: traffic signal（交通信号機）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ticket」の意味として最も適切なものは？",
+          "choices": [
+            "切符、乗車券、チケット",
+            "パンフレット",
+            "カード",
+            "切手"
+          ],
+          "correct": 0,
+          "explanation": "ticketは電車などの「切符、乗車券」、または入場用の「チケット」を表す名詞です。例: train ticket（電車の切符）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「address」の意味として最も適切なものは？",
+          "choices": [
+            "住所、あて先、演説",
+            "電話番号",
+            "氏名",
+            "年齢"
+          ],
+          "correct": 0,
+          "explanation": "addressは手紙の送付先や住んでいる「住所、あて先」、または「演説」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「passenger」の意味として最も適切なものは？",
+          "choices": [
+            "乗客、旅客",
+            "運転手",
+            "歩行者",
+            "乗組員"
+          ],
+          "correct": 0,
+          "explanation": "passengerは電車や飛行機などの「乗客、旅客」を表す名詞です。例: train passengers（電車の乗客）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -68,16 +398,126 @@
       "emoji": "🧼",
       "subtitle": "家で使う道具や文房具の名詞",
       "questions": [
-        {"scenario": "「envelope」の意味として最も適切なものは？", "choices": ["封筒", "便箋", "切手", "はがき"], "correct": 0, "explanation": "envelopeは手紙を入れる「封筒（ふうとう）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「glue」の意味として最も適切なものは？", "choices": ["のり、接着剤", "ハサミ", "テープ", "ホッチキス"], "correct": 0, "explanation": "glueは紙などをくっつける「のり、接着剤」を表す名詞です。", "type": "choice"},
-        {"scenario": "「scissors」の意味として最も適切なものは？", "choices": ["ハサミ", "カッター", "定規", "のり"], "correct": 0, "explanation": "scissorsは「ハサミ」を表す名詞です。常に複数形で使われます。例: a pair of scissors（ハサミ1丁）", "type": "choice"},
-        {"scenario": "「tape」の意味として最も適切なものは？", "choices": ["テープ、粘着テープ、録音テープ", "ひも", "リボン", "糸"], "correct": 0, "explanation": "tapeは「粘着テープ」や、録音・録画用の「テープ」を表す名詞です。例: adhesive tape（セロハンテープ）", "type": "choice"},
-        {"scenario": "「stamp」の意味として最も適切なものは？", "choices": ["切手、スタンプ、消印", "封筒", "はがき", "インク"], "correct": 0, "explanation": "stampは手紙に貼る「切手」、または「スタンプ、印鑑」を表す名詞です。例: collect stamps（切手を集める）", "type": "choice"},
-        {"scenario": "「towel」の意味として最も適切なものは？", "choices": ["タオル、手拭い", "ハンカチ", "雑巾", "シーツ"], "correct": 0, "explanation": "towelは体を拭く「タオル」を表す名詞です。例: bath towel（バスタオル）", "type": "choice"},
-        {"scenario": "「soap」の意味として最も適切なものは？", "choices": ["石鹸（せっけん）", "シャンプー", "洗剤", "歯磨き粉"], "correct": 0, "explanation": "soapは体を洗う「石鹸」を表す名詞です。数えられない名詞（物質名詞）です。", "type": "choice"},
-        {"scenario": "「comb」の意味として最も適切なものは？", "choices": ["髪くし、くしで髪をとかす", "ブラシ", "ハサミ", "鏡"], "correct": 0, "explanation": "combは髪を整える「くし」を表す名詞、または「髪をとかす」という動詞の意味もあります。", "type": "choice"},
-        {"scenario": "「map」の意味として最も適切なものは？", "choices": ["地図", "案内図", "教科書", "地球儀"], "correct": 0, "explanation": "mapは「地図」を表す名詞です。例: road map（道路地図）", "type": "choice"},
-        {"scenario": "「pocket」の意味として最も適切なものは？", "choices": ["ポケット、物入れ", "財布", "カバン", "ボタン"], "correct": 0, "explanation": "pocketは衣服に付いている「ポケット」を表す名詞です。例: pocket money（お小遣い）", "type": "choice"}
+        {
+          "scenario": "「envelope」の意味として最も適切なものは？",
+          "choices": [
+            "封筒",
+            "便箋",
+            "切手",
+            "はがき"
+          ],
+          "correct": 0,
+          "explanation": "envelopeは手紙を入れる「封筒（ふうとう）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glue」の意味として最も適切なものは？",
+          "choices": [
+            "のり、接着剤",
+            "ハサミ",
+            "テープ",
+            "ホッチキス"
+          ],
+          "correct": 0,
+          "explanation": "glueは紙などをくっつける「のり、接着剤」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scissors」の意味として最も適切なものは？",
+          "choices": [
+            "ハサミ",
+            "カッター",
+            "定規",
+            "のり"
+          ],
+          "correct": 0,
+          "explanation": "scissorsは「ハサミ」を表す名詞です。常に複数形で使われます。例: a pair of scissors（ハサミ1丁）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tape」の意味として最も適切なものは？",
+          "choices": [
+            "テープ、粘着テープ、録音テープ",
+            "ひも",
+            "リボン",
+            "糸"
+          ],
+          "correct": 0,
+          "explanation": "tapeは「粘着テープ」や、録音・録画用の「テープ」を表す名詞です。例: adhesive tape（セロハンテープ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stamp」の意味として最も適切なものは？",
+          "choices": [
+            "切手、スタンプ、消印",
+            "封筒",
+            "はがき",
+            "インク"
+          ],
+          "correct": 0,
+          "explanation": "stampは手紙に貼る「切手」、または「スタンプ、印鑑」を表す名詞です。例: collect stamps（切手を集める）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「towel」の意味として最も適切なものは？",
+          "choices": [
+            "タオル、手拭い",
+            "ハンカチ",
+            "雑巾",
+            "シーツ"
+          ],
+          "correct": 0,
+          "explanation": "towelは体を拭く「タオル」を表す名詞です。例: bath towel（バスタオル）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「soap」の意味として最も適切なものは？",
+          "choices": [
+            "石鹸（せっけん）",
+            "シャンプー",
+            "洗剤",
+            "歯磨き粉"
+          ],
+          "correct": 0,
+          "explanation": "soapは体を洗う「石鹸」を表す名詞です。数えられない名詞（物質名詞）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comb」の意味として最も適切なものは？",
+          "choices": [
+            "髪くし、くしで髪をとかす",
+            "ブラシ",
+            "ハサミ",
+            "鏡"
+          ],
+          "correct": 0,
+          "explanation": "combは髪を整える「くし」を表す名詞、または「髪をとかす」という動詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「map」の意味として最も適切なものは？",
+          "choices": [
+            "地図",
+            "案内図",
+            "教科書",
+            "地球儀"
+          ],
+          "correct": 0,
+          "explanation": "mapは「地図」を表す名詞です。例: road map（道路地図）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pocket」の意味として最も適切なものは？",
+          "choices": [
+            "ポケット、物入れ",
+            "財布",
+            "カバン",
+            "ボタン"
+          ],
+          "correct": 0,
+          "explanation": "pocketは衣服に付いている「ポケット」を表す名詞です。例: pocket money（お小遣い）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -87,16 +527,126 @@
       "emoji": "📰",
       "subtitle": "情報通信や趣味に関する名詞",
       "questions": [
-        {"scenario": "「internet」の意味として最も適切なものは？", "choices": ["インターネット", "コンピューター", "スマートフォン", "通信網"], "correct": 0, "explanation": "internetは「インターネット」を表す名詞です。通常 the internet と the を付け、大文字で始めることも多いです。", "type": "choice"},
-        {"scenario": "「website」の意味として最も適切なものは？", "choices": ["ウェブサイト、ホームページ", "メール", "ブログ", "アプリ"], "correct": 0, "explanation": "websiteはインターネット上の「ウェブサイト、ホームページ」を表す名詞です。", "type": "choice"},
-        {"scenario": "「email」の意味として最も適切なものは？", "choices": ["電子メール、Eメール、メールを送る", "手紙", "電話", "メッセージ"], "correct": 0, "explanation": "emailは「電子メール」という名詞、また「メールを送る」という動詞の意味もあります。", "type": "choice"},
-        {"scenario": "「message」の意味として最も適切なものは？", "choices": ["伝言、メッセージ、メッセージを送る", "手紙", "電話", "会話"], "correct": 0, "explanation": "messageは伝えたい用件である「伝言、メッセージ」を表す名詞です。例: leave a message（伝言を残す）", "type": "choice"},
-        {"scenario": "「newspaper」の意味として最も適切なものは？", "choices": ["新聞", "雑誌", "教科書", "チラシ"], "correct": 0, "explanation": "newspaperは情報を伝える「新聞」を表す名詞です。例: read a newspaper（新聞を読む）", "type": "choice"},
-        {"scenario": "「magazine」の意味として最も適切なものは？", "choices": ["雑誌", "新聞", "小説", "コミック"], "correct": 0, "explanation": "magazineは定期刊行される「雑誌」を表す名詞です。例: fashion magazine（ファッション誌）", "type": "choice"},
-        {"scenario": "「hobby」の意味として最も適切なものは？", "choices": ["趣味", "仕事", "特技", "遊び"], "correct": 0, "explanation": "hobbyは余暇に楽しむ「趣味」を表す名詞です。複数形は hobbies です。", "type": "choice"},
-        {"scenario": "「photo」の意味として最も適切なものは？", "choices": ["写真", "カメラ", "絵画", "映画"], "correct": 0, "explanation": "photoはphotographの略語で、「写真」を表す名詞です。例: take a photo（写真を撮る）", "type": "choice"},
-        {"scenario": "「album」の意味として最も適切なものは？", "choices": ["アルバム、音楽アルバム", "写真", "本", "ノート"], "correct": 0, "explanation": "albumは写真や切手を入れる「アルバム」、または音楽の「アルバムCD」を表す名詞です。", "type": "choice"},
-        {"scenario": "「novel」の意味として最も適切なものは？", "choices": ["小説", "雑誌", "新聞", "漫画"], "correct": 0, "explanation": "novelは長編の「小説」を表す名詞です。例: read a novel（小説を読む）", "type": "choice"}
+        {
+          "scenario": "「internet」の意味として最も適切なものは？",
+          "choices": [
+            "インターネット",
+            "コンピューター",
+            "スマートフォン",
+            "通信網"
+          ],
+          "correct": 0,
+          "explanation": "internetは「インターネット」を表す名詞です。通常 the internet と the を付け、大文字で始めることも多いです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「website」の意味として最も適切なものは？",
+          "choices": [
+            "ウェブサイト、ホームページ",
+            "メール",
+            "ブログ",
+            "アプリ"
+          ],
+          "correct": 0,
+          "explanation": "websiteはインターネット上の「ウェブサイト、ホームページ」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「email」の意味として最も適切なものは？",
+          "choices": [
+            "電子メール、Eメール、メールを送る",
+            "手紙",
+            "電話",
+            "メッセージ"
+          ],
+          "correct": 0,
+          "explanation": "emailは「電子メール」という名詞、また「メールを送る」という動詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「message」の意味として最も適切なものは？",
+          "choices": [
+            "伝言、メッセージ、メッセージを送る",
+            "手紙",
+            "電話",
+            "会話"
+          ],
+          "correct": 0,
+          "explanation": "messageは伝えたい用件である「伝言、メッセージ」を表す名詞です。例: leave a message（伝言を残す）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「newspaper」の意味として最も適切なものは？",
+          "choices": [
+            "新聞",
+            "雑誌",
+            "教科書",
+            "チラシ"
+          ],
+          "correct": 0,
+          "explanation": "newspaperは情報を伝える「新聞」を表す名詞です。例: read a newspaper（新聞を読む）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「magazine」の意味として最も適切なものは？",
+          "choices": [
+            "雑誌",
+            "新聞",
+            "小説",
+            "コミック"
+          ],
+          "correct": 0,
+          "explanation": "magazineは定期刊行される「雑誌」を表す名詞です。例: fashion magazine（ファッション誌）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hobby」の意味として最も適切なものは？",
+          "choices": [
+            "趣味",
+            "仕事",
+            "特技",
+            "遊び"
+          ],
+          "correct": 0,
+          "explanation": "hobbyは余暇に楽しむ「趣味」を表す名詞です。複数形は hobbies です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「photo」の意味として最も適切なものは？",
+          "choices": [
+            "写真",
+            "カメラ",
+            "絵画",
+            "映画"
+          ],
+          "correct": 0,
+          "explanation": "photoはphotographの略語で、「写真」を表す名詞です。例: take a photo（写真を撮る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「album」の意味として最も適切なものは？",
+          "choices": [
+            "アルバム、音楽アルバム",
+            "写真",
+            "本",
+            "ノート"
+          ],
+          "correct": 0,
+          "explanation": "albumは写真や切手を入れる「アルバム」、または音楽の「アルバムCD」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「novel」の意味として最も適切なものは？",
+          "choices": [
+            "小説",
+            "雑誌",
+            "新聞",
+            "漫画"
+          ],
+          "correct": 0,
+          "explanation": "novelは長編の「小説」を表す名詞です。例: read a novel（小説を読む）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -106,16 +656,126 @@
       "emoji": "⚖️",
       "subtitle": "金額や物理的な特徴を表す形容詞",
       "questions": [
-        {"scenario": "「cheap」の意味として最も適切なものは？", "choices": ["安い、安っぽい", "高い", "新しい", "古い"], "correct": 0, "explanation": "cheapは価格が「安い」、または「安っぽい」という意味の形容詞です。対義語はexpensive（高い）です。", "type": "choice"},
-        {"scenario": "「expensive」の意味として最も適切なものは？", "choices": ["高い、高価な", "安い", "軽い", "重い"], "correct": 0, "explanation": "expensiveは価格が「高い、高価な」という意味の形容詞です。cheap（安い）の対義語です。", "type": "choice"},
-        {"scenario": "「rich」の意味として最も適切なものは？", "choices": ["豊かな、富んでいる、金持ちの", "貧しい", "安い", "高い"], "correct": 0, "explanation": "richは財産が「豊かな、お金持ちの」または資源などが「富んでいる」という意味の形容詞です。対義語はpoorです。", "type": "choice"},
-        {"scenario": "「poor」の意味として最も適切なものは？", "choices": ["貧しい、下手な、かわいそうな", "豊かな", "上手な", "美しい"], "correct": 0, "explanation": "poorは財産が「貧しい」、能力が「下手な」、状態が「かわいそうな」など多くの意味を持つ形容詞です。", "type": "choice"},
-        {"scenario": "「healthy」の意味として最も適切なものは？", "choices": ["健康な、健康によい", "病気の", "弱い", "冷たい"], "correct": 0, "explanation": "healthyは「健康な」または食べ物などが「健康によい」という意味の形容詞です。名詞形はhealthです。", "type": "choice"},
-        {"scenario": "「silent」の意味として最も適切なものは？", "choices": ["静かな、無音の、沈黙した", "うるさい", "暗い", "明るい"], "correct": 0, "explanation": "silentは物音がなく「静かな、無音の」という意味の形容詞です。quietと似ていますが、より完全な静寂を指します。", "type": "choice"},
-        {"scenario": "「loud」の意味として最も適切なものは？", "choices": ["（声や音が）大きい、うるさい、大声で", "静かな", "暗い", "速い"], "correct": 0, "explanation": "loudは「（声や音が）大きい、うるさい」という意味の形容詞・副詞です。対義語はsoftやquietです。", "type": "choice"},
-        {"scenario": "「huge」の意味として最も適切なものは？", "choices": ["巨大な、莫大な", "ごく小さい", "重い", "高い"], "correct": 0, "explanation": "hugeは「巨大な、とてつもなく大きい」という意味の形容詞です。very bigと同じようなニュアンスです。", "type": "choice"},
-        {"scenario": "「thick」の意味として最も適切なものは？", "choices": ["厚い、太い、濃い", "薄い", "細い", "軽い"], "correct": 0, "explanation": "thickは本が「厚い」、線が「太い」、霧が「濃い」という意味の形容詞です。対義語はthin（薄い、細い）です。", "type": "choice"},
-        {"scenario": "「thin」の意味として最も適切なものは？", "choices": ["薄い、細い、痩せた", "厚い", "太い", "重い"], "correct": 0, "explanation": "thinは本が「薄い」、線が「細い」、人が「痩せた」という意味の形容詞です。thickの対義語です。", "type": "choice"}
+        {
+          "scenario": "「cheap」の意味として最も適切なものは？",
+          "choices": [
+            "安い、安っぽい",
+            "高い",
+            "新しい",
+            "古い"
+          ],
+          "correct": 0,
+          "explanation": "cheapは価格が「安い」、または「安っぽい」という意味の形容詞です。対義語はexpensive（高い）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expensive」の意味として最も適切なものは？",
+          "choices": [
+            "高い、高価な",
+            "安い",
+            "軽い",
+            "重い"
+          ],
+          "correct": 0,
+          "explanation": "expensiveは価格が「高い、高価な」という意味の形容詞です。cheap（安い）の対義語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rich」の意味として最も適切なものは？",
+          "choices": [
+            "豊かな、富んでいる、金持ちの",
+            "貧しい",
+            "安い",
+            "高い"
+          ],
+          "correct": 0,
+          "explanation": "richは財産が「豊かな、お金持ちの」または資源などが「富んでいる」という意味の形容詞です。対義語はpoorです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「poor」の意味として最も適切なものは？",
+          "choices": [
+            "貧しい、下手な、かわいそうな",
+            "豊かな",
+            "上手な",
+            "美しい"
+          ],
+          "correct": 0,
+          "explanation": "poorは財産が「貧しい」、能力が「下手な」、状態が「かわいそうな」など多くの意味を持つ形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「healthy」の意味として最も適切なものは？",
+          "choices": [
+            "健康な、健康によい",
+            "病気の",
+            "弱い",
+            "冷たい"
+          ],
+          "correct": 0,
+          "explanation": "healthyは「健康な」または食べ物などが「健康によい」という意味の形容詞です。名詞形はhealthです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「silent」の意味として最も適切なものは？",
+          "choices": [
+            "静かな、無音の、沈黙した",
+            "うるさい",
+            "暗い",
+            "明るい"
+          ],
+          "correct": 0,
+          "explanation": "silentは物音がなく「静かな、無音の」という意味の形容詞です。quietと似ていますが、より完全な静寂を指します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「loud」の意味として最も適切なものは？",
+          "choices": [
+            "（声や音が）大きい、うるさい、大声で",
+            "静かな",
+            "暗い",
+            "速い"
+          ],
+          "correct": 0,
+          "explanation": "loudは「（声や音が）大きい、うるさい」という意味の形容詞・副詞です。対義語はsoftやquietです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「huge」の意味として最も適切なものは？",
+          "choices": [
+            "巨大な、莫大な",
+            "ごく小さい",
+            "重い",
+            "高い"
+          ],
+          "correct": 0,
+          "explanation": "hugeは「巨大な、とてつもなく大きい」という意味の形容詞です。very bigと同じようなニュアンスです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thick」の意味として最も適切なものは？",
+          "choices": [
+            "厚い、太い、濃い",
+            "薄い",
+            "細い",
+            "軽い"
+          ],
+          "correct": 0,
+          "explanation": "thickは本が「厚い」、線が「太い」、霧が「濃い」という意味の形容詞です。対義語はthin（薄い、細い）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thin」の意味として最も適切なものは？",
+          "choices": [
+            "薄い、細い、痩せた",
+            "厚い",
+            "太い",
+            "重い"
+          ],
+          "correct": 0,
+          "explanation": "thinは本が「薄い」、線が「細い」、人が「痩せた」という意味の形容詞です。thickの対義語です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -125,16 +785,126 @@
       "emoji": "🪵",
       "subtitle": "頻度や特定の素材を表す形容詞",
       "questions": [
-        {"scenario": "「daily」の意味として最も適切なものは？", "choices": ["毎日の、日々の、毎日", "毎週の", "毎月の", "毎年の"], "correct": 0, "explanation": "dailyは「毎日の、日々の」という意味の形容詞・副詞・名詞です。dayの形容詞形です。例: daily newspaper（日刊紙）", "type": "choice"},
-        {"scenario": "「weekly」の意味として最も適切なものは？", "choices": ["毎週の、週1回の、毎週", "毎日の", "毎月の", "毎年の"], "correct": 0, "explanation": "weeklyは「毎週の、週1回の」という意味の形容詞・副詞・名詞です。weekの形容詞形です。例: weekly magazine（週刊誌）", "type": "choice"},
-        {"scenario": "「monthly」の意味として最も適切なものは？", "choices": ["毎月の、月1回の、毎月", "毎日の", "毎週の", "毎年の"], "correct": 0, "explanation": "monthlyは「毎月の、月1回の」という意味の形容詞・副詞・名詞です。monthの形容詞形です。", "type": "choice"},
-        {"scenario": "「yearly」の意味として最も適切なものは？", "choices": ["毎年の、年1回の、毎年", "毎日の", "毎週の", "毎月の"], "correct": 0, "explanation": "yearly is the adjective form of year, meaning 'happening once every year'.", "type": "choice"},
-        {"scenario": "「final」の意味として最も適切なものは？", "choices": ["最後の、最終的な、決勝戦", "最初の", "途中の", "新しい"], "correct": 0, "explanation": "finalは「最後の、最終的な」という形容詞、またスポーツの「決勝戦」という名詞の意味もあります。", "type": "choice"},
-        {"scenario": "「central」の意味として最も適切なものは？", "choices": ["中央の、中心的な", "端の", "地方の", "外国の"], "correct": 0, "explanation": "centralは「中央の、中心的な」という意味の形容詞です。center（中心）の形容詞形です。例: Central Station（中央駅）", "type": "choice"},
-        {"scenario": "「main」の意味として最も適切なものは？", "choices": ["主な、主要な、主力", "一部の", "副次的な", "不要な"], "correct": 0, "explanation": "mainは「主な、主要な、最も重要な」という意味の形容詞です。例: main street（大通り）", "type": "choice"},
-        {"scenario": "「plastic」の意味として最も適切なものは？", "choices": ["プラスチック製の、ビニール製の", "木製の", "金属製の", "紙製の"], "correct": 0, "explanation": "plasticは「プラスチック製の」または「ビニール製の」という意味の形容詞・名詞です。例: plastic bag（レジ袋、ビニール袋）", "type": "choice"},
-        {"scenario": "「wooden」の意味として最も適切なものは？", "choices": ["木製の、木で作られた", "金属製の", "紙製の", "プラスチック製の"], "correct": 0, "explanation": "woodenは「木製の、木で作られた」という意味の形容詞です。wood（木、木材）の形容詞形です。例: wooden table（木製のテーブル）", "type": "choice"},
-        {"scenario": "「metal」の意味として最も適切なものは？", "choices": ["金属製の、金属", "木製の", "ガラス製の", "プラスチック製の"], "correct": 0, "explanation": "metalは「金属製の」という形容詞、また「金属」という名詞の意味もあります。例: metal box（金属の箱）", "type": "choice"}
+        {
+          "scenario": "「daily」の意味として最も適切なものは？",
+          "choices": [
+            "毎日の、日々の、毎日",
+            "毎週の",
+            "毎月の",
+            "毎年の"
+          ],
+          "correct": 0,
+          "explanation": "dailyは「毎日の、日々の」という意味の形容詞・副詞・名詞です。dayの形容詞形です。例: daily newspaper（日刊紙）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「weekly」の意味として最も適切なものは？",
+          "choices": [
+            "毎週の、週1回の、毎週",
+            "毎日の",
+            "毎月の",
+            "毎年の"
+          ],
+          "correct": 0,
+          "explanation": "weeklyは「毎週の、週1回の」という意味の形容詞・副詞・名詞です。weekの形容詞形です。例: weekly magazine（週刊誌）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「monthly」の意味として最も適切なものは？",
+          "choices": [
+            "毎月の、月1回の、毎月",
+            "毎日の",
+            "毎週の",
+            "毎年の"
+          ],
+          "correct": 0,
+          "explanation": "monthlyは「毎月の、月1回の」という意味の形容詞・副詞・名詞です。monthの形容詞形です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「yearly」の意味として最も適切なものは？",
+          "choices": [
+            "毎年の、年1回の、毎年",
+            "毎日の",
+            "毎週の",
+            "毎月の"
+          ],
+          "correct": 0,
+          "explanation": "yearly is the adjective form of year, meaning 'happening once every year'.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「final」の意味として最も適切なものは？",
+          "choices": [
+            "最後の、最終的な、決勝戦",
+            "最初の",
+            "途中の",
+            "新しい"
+          ],
+          "correct": 0,
+          "explanation": "finalは「最後の、最終的な」という形容詞、またスポーツの「決勝戦」という名詞の意味もあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「central」の意味として最も適切なものは？",
+          "choices": [
+            "中央の、中心的な",
+            "端の",
+            "地方の",
+            "外国の"
+          ],
+          "correct": 0,
+          "explanation": "centralは「中央の、中心的な」という意味の形容詞です。center（中心）の形容詞形です。例: Central Station（中央駅）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「main」の意味として最も適切なものは？",
+          "choices": [
+            "主な、主要な、主力",
+            "一部の",
+            "副次的な",
+            "不要な"
+          ],
+          "correct": 0,
+          "explanation": "mainは「主な、主要な、最も重要な」という意味の形容詞です。例: main street（大通り）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「plastic」の意味として最も適切なものは？",
+          "choices": [
+            "プラスチック製の、ビニール製の",
+            "木製の",
+            "金属製の",
+            "紙製の"
+          ],
+          "correct": 0,
+          "explanation": "plasticは「プラスチック製の」または「ビニール製の」という意味の形容詞・名詞です。例: plastic bag（レジ袋、ビニール袋）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wooden」の意味として最も適切なものは？",
+          "choices": [
+            "木製の、木で作られた",
+            "金属製の",
+            "紙製の",
+            "プラスチック製の"
+          ],
+          "correct": 0,
+          "explanation": "woodenは「木製の、木で作られた」という意味の形容詞です。wood（木、木材）の形容詞形です。例: wooden table（木製のテーブル）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「metal」の意味として最も適切なものは？",
+          "choices": [
+            "金属製の、金属",
+            "木製の",
+            "ガラス製の",
+            "プラスチック製の"
+          ],
+          "correct": 0,
+          "explanation": "metalは「金属製の」という形容詞、また「金属」という名詞の意味もあります。例: metal box（金属の箱）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -144,16 +914,126 @@
       "emoji": "📍",
       "subtitle": "急な状況の変化や確実性を示す言葉",
       "questions": [
-        {"scenario": "「suddenly」の意味として最も適切なものは？", "choices": ["突然に、急に", "ゆっくりと", "ついに", "いつも"], "correct": 0, "explanation": "suddenlyは「突然に、急に、出し抜けに」という意味の副詞です。例: suddenly start to rain（急に雨が降り始める）", "type": "choice"},
-        {"scenario": "「naturally」の意味として最も適切なものは？", "choices": ["当然ながら、自然に、生まれつき", "不自然に", "偶然に", "決して〜ない"], "correct": 0, "explanation": "naturallyは「当然ながら（もちろん）」「自然に」という意味の副詞です。nature（自然）の副詞形です。", "type": "choice"},
-        {"scenario": "「successfully」の意味として最も適切なものは？", "choices": ["成功して、うまく", "失敗して", "必死に", "簡単に"], "correct": 0, "explanation": "successfullyは「成功して、うまく」という意味の副詞です。succeed（成功する）の副詞形です。例: complete the project successfully（プロジェクトを無事に完了する）", "type": "choice"},
-        {"scenario": "「carefully」の意味として最も適切なものは？", "choices": ["注意深く、丁寧に", "不注意に", "簡単に", "素早く"], "correct": 0, "explanation": "carefullyは「注意深く、丁寧に」という意味の副詞です。careful（注意深い）の副詞形です。例: read carefully（注意深く読む）", "type": "choice"},
-        {"scenario": "「quietly」の意味として最も適切なものは？", "choices": ["静かに、そっと", "うるさく", "早く", "ゆっくり"], "correct": 0, "explanation": "quietlyは「静かに、そっと、黙って」という意味の副詞です。quiet（静かな）の副詞形です。例: speak quietly（静かに話す）", "type": "choice"},
-        {"scenario": "「loudly」の意味として最も適切なものは？", "choices": ["大声で、うるさく", "静かに", "ゆっくりと", "はっきりと"], "correct": 0, "explanation": "loudlyは「大声で、うるさく」という意味の副詞です。loud（大きい）の副詞形です。例: laugh loudly（大声で笑う）", "type": "choice"},
-        {"scenario": "「gently」の意味として最も適切なものは？", "choices": ["優しく、穏やかに、そっと", "激しく", "冷たく", "乱暴に"], "correct": 0, "explanation": "gentlyは「優しく、穏やかに、そっと」という意味の副詞です。gentle（優しい）の副詞形です。例: touch gently（優しく触る）", "type": "choice"},
-        {"scenario": "「safely」の意味として最も適切なものは？", "choices": ["安全に、無事に", "危険に", "簡単に", "速く"], "correct": 0, "explanation": "safelyは「安全に、無事に」という意味の副詞です。safe（安全な）の副詞形です。例: arrive safely（無事に到着する）", "type": "choice"},
-        {"scenario": "「clearly」の意味として最も適切なものは？", "choices": ["はっきりと、明らかに", "濁って", "疑わしく", "静かに"], "correct": 0, "explanation": "clearlyは「はっきりと、明らかに」という意味の副詞です。clear（澄んだ、明確な）の副詞形です。例: see clearly（はっきり見える）", "type": "choice"},
-        {"scenario": "「exactly」の意味として最も適切なものは？", "choices": ["正確に、まさに、その通り", "およそ", "だいたい", "たぶん"], "correct": 0, "explanation": "exactlyは「正確に」「まさに、ちょうど」という意味の副詞です。同意の返事「その通り！」としても使います。", "type": "choice"}
+        {
+          "scenario": "「suddenly」の意味として最も適切なものは？",
+          "choices": [
+            "突然に、急に",
+            "ゆっくりと",
+            "ついに",
+            "いつも"
+          ],
+          "correct": 0,
+          "explanation": "suddenlyは「突然に、急に、出し抜けに」という意味の副詞です。例: suddenly start to rain（急に雨が降り始める）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「naturally」の意味として最も適切なものは？",
+          "choices": [
+            "当然ながら、自然に、生まれつき",
+            "不自然に",
+            "偶然に",
+            "決して〜ない"
+          ],
+          "correct": 0,
+          "explanation": "naturallyは「当然ながら（もちろん）」「自然に」という意味の副詞です。nature（自然）の副詞形です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「successfully」の意味として最も適切なものは？",
+          "choices": [
+            "成功して、うまく",
+            "失敗して",
+            "必死に",
+            "簡単に"
+          ],
+          "correct": 0,
+          "explanation": "successfullyは「成功して、うまく」という意味の副詞です。succeed（成功する）の副詞形です。例: complete the project successfully（プロジェクトを無事に完了する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carefully」の意味として最も適切なものは？",
+          "choices": [
+            "注意深く、丁寧に",
+            "不注意に",
+            "簡単に",
+            "素早く"
+          ],
+          "correct": 0,
+          "explanation": "carefullyは「注意深く、丁寧に」という意味の副詞です。careful（注意深い）の副詞形です。例: read carefully（注意深く読む）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「quietly」の意味として最も適切なものは？",
+          "choices": [
+            "静かに、そっと",
+            "うるさく",
+            "早く",
+            "ゆっくり"
+          ],
+          "correct": 0,
+          "explanation": "quietlyは「静かに、そっと、黙って」という意味の副詞です。quiet（静かな）の副詞形です。例: speak quietly（静かに話す）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「loudly」の意味として最も適切なものは？",
+          "choices": [
+            "大声で、うるさく",
+            "静かに",
+            "ゆっくりと",
+            "はっきりと"
+          ],
+          "correct": 0,
+          "explanation": "loudlyは「大声で、うるさく」という意味の副詞です。loud（大きい）の副詞形です。例: laugh loudly（大声で笑う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gently」の意味として最も適切なものは？",
+          "choices": [
+            "優しく、穏やかに、そっと",
+            "激しく",
+            "冷たく",
+            "乱暴に"
+          ],
+          "correct": 0,
+          "explanation": "gentlyは「優しく、穏やかに、そっと」という意味の副詞です。gentle（優しい）の副詞形です。例: touch gently（優しく触る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「safely」の意味として最も適切なものは？",
+          "choices": [
+            "安全に、無事に",
+            "危険に",
+            "簡単に",
+            "速く"
+          ],
+          "correct": 0,
+          "explanation": "safelyは「安全に、無事に」という意味の副詞です。safe（安全な）の副詞形です。例: arrive safely（無事に到着する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clearly」の意味として最も適切なものは？",
+          "choices": [
+            "はっきりと、明らかに",
+            "濁って",
+            "疑わしく",
+            "静かに"
+          ],
+          "correct": 0,
+          "explanation": "clearlyは「はっきりと、明らかに」という意味の副詞です。clear（澄んだ、明確な）の副詞形です。例: see clearly（はっきり見える）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exactly」の意味として最も適切なものは？",
+          "choices": [
+            "正確に、まさに、その通り",
+            "およそ",
+            "だいたい",
+            "たぶん"
+          ],
+          "correct": 0,
+          "explanation": "exactlyは「正確に」「まさに、ちょうど」という意味の副詞です。同意の返事「その通り！」としても使います。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -163,16 +1043,126 @@
       "emoji": "🎭",
       "subtitle": "社会的な行事や心の状態に関する名詞",
       "questions": [
-        {"scenario": "「festival」の意味として最も適切なものは？", "choices": ["祭り、フェスティバル", "試合", "会議", "授業"], "correct": 0, "explanation": "festivalは「祭り、フェスティバル、祝祭」を表す名詞です。例: school festival（文化祭、学園祭）", "type": "choice"},
-        {"scenario": "「party」の意味として最も適切なものは？", "choices": ["パーティー、会合、政党、仲間", "仕事", "一人", "家族"], "correct": 0, "explanation": "partyは社交的な「パーティー、会合」、または「政党」や「一行、グループ（登山パーティーなど）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「event」の意味として最も適切なものは？", "choices": ["出来事、行事、イベント", "日常", "練習", "習慣"], "correct": 0, "explanation": "eventは「出来事、行事、イベント、競技種目」を表す名詞です。例: school events（学校行事）", "type": "choice"},
-        {"scenario": "「culture」の意味として最も適切なものは？", "choices": ["文化、教養", "自然", "歴史", "技術"], "correct": 0, "explanation": "cultureは「文化、教養」を表す名詞です。例: Japanese culture（日本文化）", "type": "choice"},
-        {"scenario": "「tradition」の意味として最も適切なものは？", "choices": ["伝統、慣習", "流行", "新しいもの", "規則"], "correct": 0, "explanation": "traditionは古くから伝わる「伝統、しきたり、慣習」を表す名詞です。例: traditional music（伝統音楽）", "type": "choice"},
-        {"scenario": "「memory」の意味として最も適切なものは？", "choices": ["記憶、思い出、記念", "忘却", "未来", "夢"], "correct": 0, "explanation": "memoryは「記憶、記憶力」または「思い出」を表す名詞です。例: happy memories（幸せな思い出）", "type": "choice"},
-        {"scenario": "「anniversary」の意味として最も適切なものは？", "choices": ["記念日、周年", "誕生日", "休日", "祭り"], "correct": 0, "explanation": "anniversaryは結婚記念日などの「記念日、周年」を表す名詞です。例: wedding anniversary（結婚記念日）", "type": "choice"},
-        {"scenario": "「plan」の意味として最も適切なものは？", "choices": ["計画、予定、プラン、計画する", "結果", "過去", "目標"], "correct": 0, "explanation": "planは「計画、予定」という名詞、また「計画する」という動詞の意味もあります。例: make a plan（計画を立てる）", "type": "choice"},
-        {"scenario": "「activity」の意味として最も適切なものは？", "choices": ["活動、行動", "休息", "計画", "思考"], "correct": 0, "explanation": "activityは「活動、活発な行動」を表す名詞です。例: club activities（部活動）", "type": "choice"},
-        {"scenario": "「project」の意味として最も適切なものは？", "choices": ["プロジェクト、計画、企画", "結果", "報告書", "課題"], "correct": 0, "explanation": "projectは、目標を持って行う大規模な「プロジェクト、計画、研究企画」を表す名詞です。", "type": "choice"}
+        {
+          "scenario": "「festival」の意味として最も適切なものは？",
+          "choices": [
+            "祭り、フェスティバル",
+            "試合",
+            "会議",
+            "授業"
+          ],
+          "correct": 0,
+          "explanation": "festivalは「祭り、フェスティバル、祝祭」を表す名詞です。例: school festival（文化祭、学園祭）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「party」の意味として最も適切なものは？",
+          "choices": [
+            "パーティー、会合、政党、仲間",
+            "仕事",
+            "一人",
+            "家族"
+          ],
+          "correct": 0,
+          "explanation": "partyは社交的な「パーティー、会合」、または「政党」や「一行、グループ（登山パーティーなど）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「event」の意味として最も適切なものは？",
+          "choices": [
+            "出来事、行事、イベント",
+            "日常",
+            "練習",
+            "習慣"
+          ],
+          "correct": 0,
+          "explanation": "eventは「出来事、行事、イベント、競技種目」を表す名詞です。例: school events（学校行事）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「culture」の意味として最も適切なものは？",
+          "choices": [
+            "文化、教養",
+            "自然",
+            "歴史",
+            "技術"
+          ],
+          "correct": 0,
+          "explanation": "cultureは「文化、教養」を表す名詞です。例: Japanese culture（日本文化）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tradition」の意味として最も適切なものは？",
+          "choices": [
+            "伝統、慣習",
+            "流行",
+            "新しいもの",
+            "規則"
+          ],
+          "correct": 0,
+          "explanation": "traditionは古くから伝わる「伝統、しきたり、慣習」を表す名詞です。例: traditional music（伝統音楽）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「memory」の意味として最も適切なものは？",
+          "choices": [
+            "記憶、思い出、記念",
+            "忘却",
+            "未来",
+            "夢"
+          ],
+          "correct": 0,
+          "explanation": "memoryは「記憶、記憶力」または「思い出」を表す名詞です。例: happy memories（幸せな思い出）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anniversary」の意味として最も適切なものは？",
+          "choices": [
+            "記念日、周年",
+            "誕生日",
+            "休日",
+            "祭り"
+          ],
+          "correct": 0,
+          "explanation": "anniversaryは結婚記念日などの「記念日、周年」を表す名詞です。例: wedding anniversary（結婚記念日）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「plan」の意味として最も適切なものは？",
+          "choices": [
+            "計画、予定、プラン、計画する",
+            "結果",
+            "過去",
+            "目標"
+          ],
+          "correct": 0,
+          "explanation": "planは「計画、予定」という名詞、また「計画する」という動詞の意味もあります。例: make a plan（計画を立てる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「activity」の意味として最も適切なものは？",
+          "choices": [
+            "活動、行動",
+            "休息",
+            "計画",
+            "思考"
+          ],
+          "correct": 0,
+          "explanation": "activityは「活動、活発な行動」を表す名詞です。例: club activities（部活動）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「project」の意味として最も適切なものは？",
+          "choices": [
+            "プロジェクト、計画、企画",
+            "結果",
+            "報告書",
+            "課題"
+          ],
+          "correct": 0,
+          "explanation": "projectは、目標を持って行う大規模な「プロジェクト、計画、研究企画」を表す名詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -182,16 +1172,126 @@
       "emoji": "🗣️",
       "subtitle": "日常の会話や動作でよく使う熟語",
       "questions": [
-        {"scenario": "「ask for」の意味として最も適切なものは？", "choices": ["〜を求める、請求する", "〜を尋ねる", "〜を断る", "〜に答える"], "correct": 0, "explanation": "ask forは「〜を（助けや情報、物を）求める、請求する」という意味の熟語です。例: ask for help（助けを求める）", "type": "choice"},
-        {"scenario": "「blow out」の意味として最も適切なものは？", "choices": ["（火などを）吹き消す", "点火する", "燃え上がる", "捨てる"], "correct": 0, "explanation": "blow outはキャンドルの火などを息で「吹き消す」という意味の熟語です。例: blow out the candles（キャンドルを吹き消す）", "type": "choice"},
-        {"scenario": "「call back」の意味として最も適切なものは？", "choices": ["折り返し電話する、呼び戻す", "電話を切る", "電話をかける", "無視する"], "correct": 0, "explanation": "call backは「折り返し電話をかける」「呼び戻す」という意味の熟語です。例: I'll call you back.（折り返し電話します。）", "type": "choice"},
-        {"scenario": "「day after tomorrow」の意味として最も適切なものは？", "choices": ["明後日（あさって）", "一昨日（おととい）", "明日", "昨日"], "correct": 0, "explanation": "day after tomorrowは「明後日（あさって）」を表す表現です。直訳すると「明日の後の日」です。", "type": "choice"},
-        {"scenario": "「day before yesterday」の意味として最も適切なものは？", "choices": ["一昨日（おととい）", "明後日", "昨日", "先週"], "correct": 0, "explanation": "day before yesterdayは「一昨日（おととい）」を表す表現です。直訳すると「昨日の前の日」です。", "type": "choice"},
-        {"scenario": "「far from」の意味として最も適切なものは？", "choices": ["〜から遠い、決して〜でない", "〜の近くに", "〜に向かって", "〜を越えて"], "correct": 0, "explanation": "far fromは「〜から（距離が）遠い」という意味の熟語です。例: far from the station（駅から遠い）", "type": "choice"},
-        {"scenario": "「in a hurry」の意味として最も適切なものは？", "choices": ["急いで、慌てて", "ゆっくりと", "時間通りに", "遅れて"], "correct": 0, "explanation": "in a hurryは「急いで、慌てて」という状態を表す熟語です。例: I am in a hurry.（私は急いでいます。）", "type": "choice"},
-        {"scenario": "「in fact」の意味として最も適切なものは？", "choices": ["実際は、実は", "とにかく", "例えば", "最後に"], "correct": 0, "explanation": "in factは「実際は、実は（本当のところ）」と事実を強調する熟語です。actuallyと同義です。", "type": "choice"},
-        {"scenario": "「look like」の意味として最も適切なものは？", "choices": ["〜に似ている、〜のように見える", "〜を好む", "〜を探す", "〜を世話する"], "correct": 0, "explanation": "look likeは「〜に（外見などが）似ている、〜のように見える」という意味の熟語です。例: look like his father（お父さんに似ている）", "type": "choice"},
-        {"scenario": "「run out of」の意味として最も適切なものは？", "choices": ["〜を使い果たす、切らす", "〜から逃げる", "〜を走らせる", "〜を見つける"], "correct": 0, "explanation": "run out ofは、お金や時間、ガソリンなどの蓄えを「使い果たす、切らす」という意味の熟語です。例: run out of money（お金を使い果たす）", "type": "choice"}
+        {
+          "scenario": "「ask for」の意味として最も適切なものは？",
+          "choices": [
+            "〜を求める、請求する",
+            "〜を尋ねる",
+            "〜を断る",
+            "〜に答える"
+          ],
+          "correct": 0,
+          "explanation": "ask forは「〜を（助けや情報、物を）求める、請求する」という意味の熟語です。例: ask for help（助けを求める）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blow out」の意味として最も適切なものは？",
+          "choices": [
+            "（火などを）吹き消す",
+            "点火する",
+            "燃え上がる",
+            "捨てる"
+          ],
+          "correct": 0,
+          "explanation": "blow outはキャンドルの火などを息で「吹き消す」という意味の熟語です。例: blow out the candles（キャンドルを吹き消す）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「call back」の意味として最も適切なものは？",
+          "choices": [
+            "折り返し電話する、呼び戻す",
+            "電話を切る",
+            "電話をかける",
+            "無視する"
+          ],
+          "correct": 0,
+          "explanation": "call backは「折り返し電話をかける」「呼び戻す」という意味の熟語です。例: I'll call you back.（折り返し電話します。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「day after tomorrow」の意味として最も適切なものは？",
+          "choices": [
+            "明後日（あさって）",
+            "一昨日（おととい）",
+            "明日",
+            "昨日"
+          ],
+          "correct": 0,
+          "explanation": "day after tomorrowは「明後日（あさって）」を表す表現です。直訳すると「明日の後の日」です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「day before yesterday」の意味として最も適切なものは？",
+          "choices": [
+            "一昨日（おととい）",
+            "明後日",
+            "昨日",
+            "先週"
+          ],
+          "correct": 0,
+          "explanation": "day before yesterdayは「一昨日（おととい）」を表す表現です。直訳すると「昨日の前の日」です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「far from」の意味として最も適切なものは？",
+          "choices": [
+            "〜から遠い、決して〜でない",
+            "〜の近くに",
+            "〜に向かって",
+            "〜を越えて"
+          ],
+          "correct": 0,
+          "explanation": "far fromは「〜から（距離が）遠い」という意味の熟語です。例: far from the station（駅から遠い）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in a hurry」の意味として最も適切なものは？",
+          "choices": [
+            "急いで、慌てて",
+            "ゆっくりと",
+            "時間通りに",
+            "遅れて"
+          ],
+          "correct": 0,
+          "explanation": "in a hurryは「急いで、慌てて」という状態を表す熟語です。例: I am in a hurry.（私は急いでいます。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in fact」の意味として最も適切なものは？",
+          "choices": [
+            "実際は、実は",
+            "とにかく",
+            "例えば",
+            "最後に"
+          ],
+          "correct": 0,
+          "explanation": "in factは「実際は、実は（本当のところ）」と事実を強調する熟語です。actuallyと同義です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look like」の意味として最も適切なものは？",
+          "choices": [
+            "〜に似ている、〜のように見える",
+            "〜を好む",
+            "〜を探す",
+            "〜を世話する"
+          ],
+          "correct": 0,
+          "explanation": "look likeは「〜に（外見などが）似ている、〜のように見える」という意味の熟語です。例: look like his father（お父さんに似ている）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run out of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を使い果たす、切らす",
+            "〜から逃げる",
+            "〜を走らせる",
+            "〜を見つける"
+          ],
+          "correct": 0,
+          "explanation": "run out ofは、お金や時間、ガソリンなどの蓄えを「使い果たす、切らす」という意味の熟語です。例: run out of money（お金を使い果たす）",
+          "type": "choice"
+        }
       ]
     }
   ]

@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 15,
+  "label": "実戦・総合編②",
+  "description": "実戦総合問題",
   "tests": [
     {
       "id": 1,
       "title": "実戦編2セット1",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1401~1410",
+      "subtitle": "実戦語彙 1401~1410",
       "questions": [
         {
           "scenario": "「gasoline」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "実戦編2セット2",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1411~1420",
+      "subtitle": "実戦語彙 1411~1420",
       "questions": [
         {
           "scenario": "「generosity」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "実戦編2セット3",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1421~1430",
+      "subtitle": "実戦語彙 1421~1430",
       "questions": [
         {
           "scenario": "「geography」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "実戦編2セット4",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1431~1440",
+      "subtitle": "実戦語彙 1431~1440",
       "questions": [
         {
           "scenario": "「gild」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "実戦編2セット5",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1441~1450",
+      "subtitle": "実戦語彙 1441~1450",
       "questions": [
         {
           "scenario": "「glassware」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "実戦編2セット6",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1451~1460",
+      "subtitle": "実戦語彙 1451~1460",
       "questions": [
         {
           "scenario": "「glitter」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "実戦編2セット7",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1461~1470",
+      "subtitle": "実戦語彙 1461~1470",
       "questions": [
         {
           "scenario": "「glossy」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "実戦編2セット8",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1471~1480",
+      "subtitle": "実戦語彙 1471~1480",
       "questions": [
         {
           "scenario": "「goblet」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "実戦編2セット9",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1481~1490",
+      "subtitle": "実戦語彙 1481~1490",
       "questions": [
         {
           "scenario": "「gorilla」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "実戦編2セット10",
       "type": "vocabulary",
       "emoji": "🏅",
-      "subtitle": "英検準2級の実戦語彙 1491~1500",
+      "subtitle": "実戦語彙 1491~1500",
       "questions": [
         {
           "scenario": "「graceful」の意味として最も適切なものは？",

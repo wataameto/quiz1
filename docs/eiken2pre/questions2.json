@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 2,
+  "label": "名詞編①",
+  "description": "重要名詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "名詞編①：生活・身近な物",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（1〜10）",
+      "subtitle": "頻出名詞（1〜10）",
       "questions": [
         {
           "scenario": "「acid」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "名詞編②：自然・環境",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（11〜20）",
+      "subtitle": "頻出名詞（11〜20）",
       "questions": [
         {
           "scenario": "「app」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "名詞編③：社会・文化",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（21〜30）",
+      "subtitle": "頻出名詞（21〜30）",
       "questions": [
         {
           "scenario": "「ash」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "名詞編④：身体・健康",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（31〜40）",
+      "subtitle": "頻出名詞（31〜40）",
       "questions": [
         {
           "scenario": "「autonomy」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "名詞編⑤：科学・技術",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（41〜50）",
+      "subtitle": "頻出名詞（41〜50）",
       "questions": [
         {
           "scenario": "「ballot」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "名詞編⑥：ビジネス・経済",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（51〜60）",
+      "subtitle": "頻出名詞（51〜60）",
       "questions": [
         {
           "scenario": "「basin」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "名詞編⑦：乗り物・交通",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（61〜70）",
+      "subtitle": "頻出名詞（61〜70）",
       "questions": [
         {
           "scenario": "「beggar」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "名詞編⑧：動物・植物",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（71〜80）",
+      "subtitle": "頻出名詞（71〜80）",
       "questions": [
         {
           "scenario": "「biscuit」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "名詞編⑨：場所・建物",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（81〜90）",
+      "subtitle": "頻出名詞（81〜90）",
       "questions": [
         {
           "scenario": "「boot」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "名詞編⑩：抽象概念",
       "type": "vocabulary",
       "emoji": "📝",
-      "subtitle": "英検準2級の頻出名詞（91〜100）",
+      "subtitle": "頻出名詞（91〜100）",
       "questions": [
         {
           "scenario": "「buckle」の意味として最も適切なものは？",

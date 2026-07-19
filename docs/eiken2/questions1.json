@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
   "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "label": "動詞編①",
+  "description": "重要動詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "動詞編セット1",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 1~10",
+      "subtitle": "動詞 1~10",
       "questions": [
         {
           "scenario": "「abbreviate」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "動詞編セット2",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 11~20",
+      "subtitle": "動詞 11~20",
       "questions": [
         {
           "scenario": "「accentuate」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "動詞編セット3",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 21~30",
+      "subtitle": "動詞 21~30",
       "questions": [
         {
           "scenario": "「acquit」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "動詞編セット4",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 31~40",
+      "subtitle": "動詞 31~40",
       "questions": [
         {
           "scenario": "「adulate」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "動詞編セット5",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 41~50",
+      "subtitle": "動詞 41~50",
       "questions": [
         {
           "scenario": "「aid」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "動詞編セット6",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 51~60",
+      "subtitle": "動詞 51~60",
       "questions": [
         {
           "scenario": "「amalgamate」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "動詞編セット7",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 61~70",
+      "subtitle": "動詞 61~70",
       "questions": [
         {
           "scenario": "「antagonize」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "動詞編セット8",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 71~80",
+      "subtitle": "動詞 71~80",
       "questions": [
         {
           "scenario": "「ascertain」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "動詞編セット9",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 81~90",
+      "subtitle": "動詞 81~90",
       "questions": [
         {
           "scenario": "「augment」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "動詞編セット10",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 91~100",
+      "subtitle": "動詞 91~100",
       "questions": [
         {
           "scenario": "「barter」の意味として最も適切なものは？",

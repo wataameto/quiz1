@@ -1,8 +1,8 @@
 {
   "id": "eiken4",
   "level": 4,
-  "label": "🔤 基礎単語編④",
-  "description": "英検4級レベルの基本英単語④（仕事・自然・建物・食事・感情・副詞・会話）",
+  "label": "パート 4",
+  "description": "重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,
@@ -11,16 +11,126 @@
       "emoji": "💼",
       "subtitle": "仕事や活動に関する動詞",
       "questions": [
-        {"scenario": "「assemble」の意味として最も適切なものは？", "choices": ["組み立てる、集める", "分解する", "破壊する", "隠す"], "correct": 0, "explanation": "assembleは「組み立てる、集める」という意味の動詞です。例: assemble the parts（部品を組み立てる）", "type": "choice"},
-        {"scenario": "「budget」の意味として最も適切なものは？", "choices": ["予算を組む、予算", "支出、浪費", "利益、収益", "税金"], "correct": 0, "explanation": "budgetは「予算を組む、予算」として使われます。例: set a budget（予算を設定する）", "type": "choice"},
-        {"scenario": "「climate」の意味として最も適切なものは？", "choices": ["気候、環境", "天気、気温", "季節、時期", "風景"], "correct": 0, "explanation": "climate is weather conditions of a place over a long period.", "type": "choice"},
-        {"scenario": "「connect」の意味として最も適切なものは？", "choices": ["つなぐ、接続する", "切断する", "作る", "破壊する"], "correct": 0, "explanation": "connectは「つなぐ、接続する」という意味の動詞です。例: connect to the internet（インターネットに接続する）", "type": "choice"},
-        {"scenario": "「evaluate」の意味として最も適切なものは？", "choices": ["評価する、見積もる", "無視する", "削除する", "改善する"], "correct": 0, "explanation": "evaluateは「評価する、見積もる」という意味の動詞です。例: evaluate the result（結果を評価する）", "type": "choice"},
-        {"scenario": "「finance」の意味として最も適切なものは？", "choices": ["資金を提供する、財務", "借金する", "投資する", "税金を払う"], "correct": 0, "explanation": "financeは「資金を提供する、財務」として使われます。例: finance a project（プロジェクトに資金を提供する）", "type": "choice"},
-        {"scenario": "「gather」の意味として最も適切なものは？", "choices": ["集める、集まる", "分散する", "隠す", "破壊する"], "correct": 0, "explanation": "gatherは「集める、集まる」という意味の動詞です。例: gather information（情報を集める）", "type": "choice"},
-        {"scenario": "「hire」の意味として最も適切なものは？", "choices": ["雇う、採用する", "解雇する", "辞めさせる", "昇進させる"], "correct": 0, "explanation": "hireは「雇う、採用する」という意味の動詞です。例: hire a new employee（新しい従業員を雇う）", "type": "choice"},
-        {"scenario": "「invest」の意味として最も適切なものは？", "choices": ["投資する、投入する", "貯金する", "浪費する", "借りる"], "correct": 0, "explanation": "investは「投資する、投入する」という意味の動詞です。例: invest money in stocks（株にお金を投資する）", "type": "choice"},
-        {"scenario": "「promote」の意味として最も適切なものは？", "choices": ["促進する、昇進させる", "妨害する", "削除する", "反対する"], "correct": 0, "explanation": "promoteは「促進する、昇進させる」という意味の動詞です。例: promote a product（製品を宣伝する）", "type": "choice"}
+        {
+          "scenario": "「assemble」の意味として最も適切なものは？",
+          "choices": [
+            "組み立てる、集める",
+            "分解する",
+            "破壊する",
+            "隠す"
+          ],
+          "correct": 0,
+          "explanation": "assembleは「組み立てる、集める」という意味の動詞です。例: assemble the parts（部品を組み立てる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「budget」の意味として最も適切なものは？",
+          "choices": [
+            "予算を組む、予算",
+            "支出、浪費",
+            "利益、収益",
+            "税金"
+          ],
+          "correct": 0,
+          "explanation": "budgetは「予算を組む、予算」として使われます。例: set a budget（予算を設定する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「climate」の意味として最も適切なものは？",
+          "choices": [
+            "気候、環境",
+            "天気、気温",
+            "季節、時期",
+            "風景"
+          ],
+          "correct": 0,
+          "explanation": "climate is weather conditions of a place over a long period.",
+          "type": "choice"
+        },
+        {
+          "scenario": "「connect」の意味として最も適切なものは？",
+          "choices": [
+            "つなぐ、接続する",
+            "切断する",
+            "作る",
+            "破壊する"
+          ],
+          "correct": 0,
+          "explanation": "connectは「つなぐ、接続する」という意味の動詞です。例: connect to the internet（インターネットに接続する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「evaluate」の意味として最も適切なものは？",
+          "choices": [
+            "評価する、見積もる",
+            "無視する",
+            "削除する",
+            "改善する"
+          ],
+          "correct": 0,
+          "explanation": "evaluateは「評価する、見積もる」という意味の動詞です。例: evaluate the result（結果を評価する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「finance」の意味として最も適切なものは？",
+          "choices": [
+            "資金を提供する、財務",
+            "借金する",
+            "投資する",
+            "税金を払う"
+          ],
+          "correct": 0,
+          "explanation": "financeは「資金を提供する、財務」として使われます。例: finance a project（プロジェクトに資金を提供する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gather」の意味として最も適切なものは？",
+          "choices": [
+            "集める、集まる",
+            "分散する",
+            "隠す",
+            "破壊する"
+          ],
+          "correct": 0,
+          "explanation": "gatherは「集める、集まる」という意味の動詞です。例: gather information（情報を集める）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hire」の意味として最も適切なものは？",
+          "choices": [
+            "雇う、採用する",
+            "解雇する",
+            "辞めさせる",
+            "昇進させる"
+          ],
+          "correct": 0,
+          "explanation": "hireは「雇う、採用する」という意味の動詞です。例: hire a new employee（新しい従業員を雇う）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「invest」の意味として最も適切なものは？",
+          "choices": [
+            "投資する、投入する",
+            "貯金する",
+            "浪費する",
+            "借りる"
+          ],
+          "correct": 0,
+          "explanation": "investは「投資する、投入する」という意味の動詞です。例: invest money in stocks（株にお金を投資する）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「promote」の意味として最も適切なものは？",
+          "choices": [
+            "促進する、昇進させる",
+            "妨害する",
+            "削除する",
+            "反対する"
+          ],
+          "correct": 0,
+          "explanation": "promoteは「促進する、昇進させる」という意味の動詞です。例: promote a product（製品を宣伝する）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -30,16 +140,126 @@
       "emoji": "🏢",
       "subtitle": "建物や場所に関する名詞",
       "questions": [
-        {"scenario": "「elevator」の意味として最も適切なものは？", "choices": ["エレベーター、昇降機", "階段", "エスカレーター", "ドア"], "correct": 0, "explanation": "elevatorは建物の上下に人を運ぶ装置です。", "type": "choice"},
-        {"scenario": "「gallery」の意味として最も適切なものは？", "choices": ["美術館、画廊", "劇場", "図書館", "カフェ"], "correct": 0, "explanation": "galleryは絵画や展示品を見せる場所です。", "type": "choice"},
-        {"scenario": "「habitat」の意味として最も適切なものは？", "choices": ["生息地、住環境", "住宅、家", "公園、庭", "市場"], "correct": 0, "explanation": "habitatは動植物が自然に住む環境です。", "type": "choice"},
-        {"scenario": "「apartment」の意味として最も適切なものは？", "choices": ["アパート、マンションの一室", "一軒家", "ホテル", "寮"], "correct": 0, "explanation": "apartmentは集合住宅内の「アパート、マンションの一室」を表す名詞です。", "type": "choice"},
-        {"scenario": "「garage」の意味として最も適切なものは？", "choices": ["車庫、ガレージ", "駐車場", "倉庫", "車道"], "correct": 0, "explanation": "garageは車を保管する「車庫、ガレージ」を表す名詞です。", "type": "choice"},
-        {"scenario": "「cafeteria」の意味として最も適切なものは？", "choices": ["食堂、カフェテリア", "体育館", "図書館", "ホール"], "correct": 0, "explanation": "cafeteriaはセルフサービス形式の「食堂、カフェテリア」です。", "type": "choice"},
-        {"scenario": "「tower」の意味として最も適切なものは？", "choices": ["塔、タワー", "城", "橋", "坂"], "correct": 0, "explanation": "towerは高く伸びる「塔、タワー」を表す名詞です。例: Tokyo Tower（東京タワー）", "type": "choice"},
-        {"scenario": "「cinema」の意味として最も適切なものは？", "choices": ["映画館、シネマ", "劇場", "コンサートホール", "遊園地"], "correct": 0, "explanation": "cinemaは「映画館」を表す名詞です。アメリカではmovie theaterともいいます。", "type": "choice"},
-        {"scenario": "「gym」の意味として最も適切なものは？", "choices": ["体育館、ジム", "公園", "プール", "グラウンド"], "correct": 0, "explanation": "gymはgymnasiumの略で「体育館、スポーツジム」を表す名詞です。", "type": "choice"},
-        {"scenario": "「mall」の意味として最も適切なものは？", "choices": ["ショッピングモール", "市場", "デパート", "商店街"], "correct": 0, "explanation": "mallは多くの店が集まる「ショッピングモール」を表す名詞です。", "type": "choice"}
+        {
+          "scenario": "「elevator」の意味として最も適切なものは？",
+          "choices": [
+            "エレベーター、昇降機",
+            "階段",
+            "エスカレーター",
+            "ドア"
+          ],
+          "correct": 0,
+          "explanation": "elevatorは建物の上下に人を運ぶ装置です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gallery」の意味として最も適切なものは？",
+          "choices": [
+            "美術館、画廊",
+            "劇場",
+            "図書館",
+            "カフェ"
+          ],
+          "correct": 0,
+          "explanation": "galleryは絵画や展示品を見せる場所です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「habitat」の意味として最も適切なものは？",
+          "choices": [
+            "生息地、住環境",
+            "住宅、家",
+            "公園、庭",
+            "市場"
+          ],
+          "correct": 0,
+          "explanation": "habitatは動植物が自然に住む環境です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apartment」の意味として最も適切なものは？",
+          "choices": [
+            "アパート、マンションの一室",
+            "一軒家",
+            "ホテル",
+            "寮"
+          ],
+          "correct": 0,
+          "explanation": "apartmentは集合住宅内の「アパート、マンションの一室」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「garage」の意味として最も適切なものは？",
+          "choices": [
+            "車庫、ガレージ",
+            "駐車場",
+            "倉庫",
+            "車道"
+          ],
+          "correct": 0,
+          "explanation": "garageは車を保管する「車庫、ガレージ」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cafeteria」の意味として最も適切なものは？",
+          "choices": [
+            "食堂、カフェテリア",
+            "体育館",
+            "図書館",
+            "ホール"
+          ],
+          "correct": 0,
+          "explanation": "cafeteriaはセルフサービス形式の「食堂、カフェテリア」です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tower」の意味として最も適切なものは？",
+          "choices": [
+            "塔、タワー",
+            "城",
+            "橋",
+            "坂"
+          ],
+          "correct": 0,
+          "explanation": "towerは高く伸びる「塔、タワー」を表す名詞です。例: Tokyo Tower（東京タワー）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cinema」の意味として最も適切なものは？",
+          "choices": [
+            "映画館、シネマ",
+            "劇場",
+            "コンサートホール",
+            "遊園地"
+          ],
+          "correct": 0,
+          "explanation": "cinemaは「映画館」を表す名詞です。アメリカではmovie theaterともいいます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gym」の意味として最も適切なものは？",
+          "choices": [
+            "体育館、ジム",
+            "公園",
+            "プール",
+            "グラウンド"
+          ],
+          "correct": 0,
+          "explanation": "gymはgymnasiumの略で「体育館、スポーツジム」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mall」の意味として最も適切なものは？",
+          "choices": [
+            "ショッピングモール",
+            "市場",
+            "デパート",
+            "商店街"
+          ],
+          "correct": 0,
+          "explanation": "mallは多くの店が集まる「ショッピングモール」を表す名詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -49,16 +269,126 @@
       "emoji": "😊",
       "subtitle": "感情や評価を表す形容詞",
       "questions": [
-        {"scenario": "「joyful」の意味として最も適切なものは？", "choices": ["楽しい、喜びに満ちた", "悲しい", "怖い", "退屈な"], "correct": 0, "explanation": "joyfulは「楽しい、喜びに満ちた」形容詞です。", "type": "choice"},
-        {"scenario": "「relaxed」の意味として最も適切なものは？", "choices": ["リラックスした、くつろいだ", "緊張した", "疲れた", "怒った"], "correct": 0, "explanation": "relaxedは「くつろいだ、緊張していない」形容詞です。", "type": "choice"},
-        {"scenario": "「confident」の意味として最も適切なものは？", "choices": ["自信のある、確信した", "不安な", "無関心な", "怒りっぽい"], "correct": 0, "explanation": "confidentは「自信がある」形容詞です。", "type": "choice"},
-        {"scenario": "「critical」の意味として最も適切なものは？", "choices": ["批判的な、重要な", "賞賛する", "無視する", "柔らかい"], "correct": 0, "explanation": "criticalは「批判的」「重要な」両方の意味があります。", "type": "choice"},
-        {"scenario": "「generous」の意味として最も適切なものは？", "choices": ["寛大な、気前がいい", "けちな", "弱い", "頑固な"], "correct": 0, "explanation": "generousは「寛大な、気前がいい」形容詞です。", "type": "choice"},
-        {"scenario": "「hostile」 の意味として最も適切なものは？", "choices": ["敵対的な、敵意のある", "友好的な", "中立的な", "無関心な"], "correct": 0, "explanation": "hostileは「敵対的」「敵意がある」形容詞です。", "type": "choice"},
-        {"scenario": "「patient」の意味として最も適切なものは？", "choices": ["忍耐強い、辛抱強い", "焦る", "短気な", "怠慢な"], "correct": 0, "explanation": "patientは「忍耐強い」「我慢できる」形容詞です。", "type": "choice"},
-        {"scenario": "「sincere」の意味として最も適切なものは？", "choices": ["誠実な、本心からの", "嘘つきの", "無関心な", "軽薄な"], "correct": 0, "explanation": "sincereは「誠実な、真心のこもった」形容詞です。", "type": "choice"},
-        {"scenario": "「thoughtful」の意味として最も適切なものは？", "choices": ["思いやりのある、配慮した", "軽率な", "無神経な", "怠惰な"], "correct": 0, "explanation": "thoughtfulは「思いやりのある、考慮した」形容詞です。", "type": "choice"},
-        {"scenario": "「victorious」の意味として最も適切なものは？", "choices": ["勝利した、成功した", "敗北した", "不安定な", "未確定の"], "correct": 0, "explanation": "victoriousは「勝利した、成功した」形容詞です。", "type": "choice"}
+        {
+          "scenario": "「joyful」の意味として最も適切なものは？",
+          "choices": [
+            "楽しい、喜びに満ちた",
+            "悲しい",
+            "怖い",
+            "退屈な"
+          ],
+          "correct": 0,
+          "explanation": "joyfulは「楽しい、喜びに満ちた」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「relaxed」の意味として最も適切なものは？",
+          "choices": [
+            "リラックスした、くつろいだ",
+            "緊張した",
+            "疲れた",
+            "怒った"
+          ],
+          "correct": 0,
+          "explanation": "relaxedは「くつろいだ、緊張していない」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confident」の意味として最も適切なものは？",
+          "choices": [
+            "自信のある、確信した",
+            "不安な",
+            "無関心な",
+            "怒りっぽい"
+          ],
+          "correct": 0,
+          "explanation": "confidentは「自信がある」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「critical」の意味として最も適切なものは？",
+          "choices": [
+            "批判的な、重要な",
+            "賞賛する",
+            "無視する",
+            "柔らかい"
+          ],
+          "correct": 0,
+          "explanation": "criticalは「批判的」「重要な」両方の意味があります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「generous」の意味として最も適切なものは？",
+          "choices": [
+            "寛大な、気前がいい",
+            "けちな",
+            "弱い",
+            "頑固な"
+          ],
+          "correct": 0,
+          "explanation": "generousは「寛大な、気前がいい」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hostile」 の意味として最も適切なものは？",
+          "choices": [
+            "敵対的な、敵意のある",
+            "友好的な",
+            "中立的な",
+            "無関心な"
+          ],
+          "correct": 0,
+          "explanation": "hostileは「敵対的」「敵意がある」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「patient」の意味として最も適切なものは？",
+          "choices": [
+            "忍耐強い、辛抱強い",
+            "焦る",
+            "短気な",
+            "怠慢な"
+          ],
+          "correct": 0,
+          "explanation": "patientは「忍耐強い」「我慢できる」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sincere」の意味として最も適切なものは？",
+          "choices": [
+            "誠実な、本心からの",
+            "嘘つきの",
+            "無関心な",
+            "軽薄な"
+          ],
+          "correct": 0,
+          "explanation": "sincereは「誠実な、真心のこもった」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thoughtful」の意味として最も適切なものは？",
+          "choices": [
+            "思いやりのある、配慮した",
+            "軽率な",
+            "無神経な",
+            "怠惰な"
+          ],
+          "correct": 0,
+          "explanation": "thoughtfulは「思いやりのある、考慮した」形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「victorious」の意味として最も適切なものは？",
+          "choices": [
+            "勝利した、成功した",
+            "敗北した",
+            "不安定な",
+            "未確定の"
+          ],
+          "correct": 0,
+          "explanation": "victoriousは「勝利した、成功した」形容詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -68,16 +398,126 @@
       "emoji": "⏱️",
       "subtitle": "時間・頻度・程度を示す副詞／前置詞",
       "questions": [
-        {"scenario": "「occasionally」の意味として最も適切なものは？", "choices": ["時々、たまに", "毎日", "常に", "決して"], "correct": 0, "explanation": "occasionallyは「時々、たまに」副詞です。", "type": "choice"},
-        {"scenario": "「frequently」の意味として最も適切なものは？", "choices": ["頻繁に、しばしば", "まれに", "一度だけ", "決して"], "correct": 0, "explanation": "frequentlyは「頻繁に、しばしば」副詞です。", "type": "choice"},
-        {"scenario": "「barely」の意味として最も適切なものは？", "choices": ["ほとんど…ない、ややだけ", "十分に", "完全に", "完全に否定して"], "correct": 0, "explanation": "barelyは「ほとんど…ない、ぎりぎり」副詞です。", "type": "choice"},
-        {"scenario": "「throughout」の意味として最も適切なものは？", "choices": ["…の間ずっと、全体にわたって", "…の一部だけ", "…の外側に", "…の前に"], "correct": 0, "explanation": "throughoutは「…の間ずっと、全体にわたって」前置詞・副詞です。", "type": "choice"},
-        {"scenario": "「beyond」の意味として最も適切なものは？", "choices": ["…を超えて、向こう側に", "…の中に", "…の近くに", "…の下に"], "correct": 0, "explanation": "beyondは「…を超えて、向こう側に」前置詞です。", "type": "choice"},
-        {"scenario": "「despite」の意味として最も適切なものは？", "choices": ["…にもかかわらず", "…のために", "…の前に", "…の後で"], "correct": 0, "explanation": "despiteは「…にもかかわらず」前置詞です。", "type": "choice"},
-        {"scenario": "「unless」の意味として最も適切なものは？", "choices": ["…でない限り、もし…でなければ", "…の時に", "…の後で", "…の前に"], "correct": 0, "explanation": "unlessは「…でない限り、もし…でなければ」接続詞です。", "type": "choice"},
-        {"scenario": "「therefore」の意味として最も適切なものは？", "choices": ["したがって、それゆえに", "しかしながら", "それでも", "たとえば"], "correct": 0, "explanation": "thereforeは「したがって、だから」副詞です。", "type": "choice"},
-        {"scenario": "「perhaps」の意味として最も適切なものは？", "choices": ["もしかしたら、おそらく", "確実に", "絶対に", "もちろん"], "correct": 0, "explanation": "perhapsは「もしかしたら、おそらく」副詞です。", "type": "choice"},
-        {"scenario": "「nevertheless」の意味として最も適切なものは？", "choices": ["それでも、にもかかわらず", "だから", "しかし", "それに"], "correct": 0, "explanation": "neverthelessは「それでも、にもかかわらず」副詞です。", "type": "choice"}
+        {
+          "scenario": "「occasionally」の意味として最も適切なものは？",
+          "choices": [
+            "時々、たまに",
+            "毎日",
+            "常に",
+            "決して"
+          ],
+          "correct": 0,
+          "explanation": "occasionallyは「時々、たまに」副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frequently」の意味として最も適切なものは？",
+          "choices": [
+            "頻繁に、しばしば",
+            "まれに",
+            "一度だけ",
+            "決して"
+          ],
+          "correct": 0,
+          "explanation": "frequentlyは「頻繁に、しばしば」副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「barely」の意味として最も適切なものは？",
+          "choices": [
+            "ほとんど…ない、ややだけ",
+            "十分に",
+            "完全に",
+            "完全に否定して"
+          ],
+          "correct": 0,
+          "explanation": "barelyは「ほとんど…ない、ぎりぎり」副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「throughout」の意味として最も適切なものは？",
+          "choices": [
+            "…の間ずっと、全体にわたって",
+            "…の一部だけ",
+            "…の外側に",
+            "…の前に"
+          ],
+          "correct": 0,
+          "explanation": "throughoutは「…の間ずっと、全体にわたって」前置詞・副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beyond」の意味として最も適切なものは？",
+          "choices": [
+            "…を超えて、向こう側に",
+            "…の中に",
+            "…の近くに",
+            "…の下に"
+          ],
+          "correct": 0,
+          "explanation": "beyondは「…を超えて、向こう側に」前置詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「despite」の意味として最も適切なものは？",
+          "choices": [
+            "…にもかかわらず",
+            "…のために",
+            "…の前に",
+            "…の後で"
+          ],
+          "correct": 0,
+          "explanation": "despiteは「…にもかかわらず」前置詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「unless」の意味として最も適切なものは？",
+          "choices": [
+            "…でない限り、もし…でなければ",
+            "…の時に",
+            "…の後で",
+            "…の前に"
+          ],
+          "correct": 0,
+          "explanation": "unlessは「…でない限り、もし…でなければ」接続詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「therefore」の意味として最も適切なものは？",
+          "choices": [
+            "したがって、それゆえに",
+            "しかしながら",
+            "それでも",
+            "たとえば"
+          ],
+          "correct": 0,
+          "explanation": "thereforeは「したがって、だから」副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「perhaps」の意味として最も適切なものは？",
+          "choices": [
+            "もしかしたら、おそらく",
+            "確実に",
+            "絶対に",
+            "もちろん"
+          ],
+          "correct": 0,
+          "explanation": "perhapsは「もしかしたら、おそらく」副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nevertheless」の意味として最も適切なものは？",
+          "choices": [
+            "それでも、にもかかわらず",
+            "だから",
+            "しかし",
+            "それに"
+          ],
+          "correct": 0,
+          "explanation": "neverthelessは「それでも、にもかかわらず」副詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -87,16 +527,126 @@
       "emoji": "🗣️",
       "subtitle": "日常で頻繁に使う熟語・フレーズ",
       "questions": [
-        {"scenario": "「look after」の意味として最も適切なものは？", "choices": ["世話をする、面倒を見る", "見つめる", "無視する", "探す"], "correct": 0, "explanation": "look afterは「世話をする、面倒を見る」熟語です。", "type": "choice"},
-        {"scenario": "「set up」の意味として最も適切なものは？", "choices": ["設置する、準備する", "壊す", "閉じる", "削除する"], "correct": 0, "explanation": "set upは「設置する、準備する」熟語です。", "type": "choice"},
-        {"scenario": "「take off」の意味として最も適切なものは？", "choices": ["離陸する、脱ぐ", "乗る", "開始する", "戻す"], "correct": 0, "explanation": "take offは「離陸する」や「服を脱ぐ」熟語です。", "type": "choice"},
-        {"scenario": "「give up」の意味として最も適切なものは？", "choices": ["諦める、やめる", "始める", "続ける", "要求する"], "correct": 0, "explanation": "give upは「諦める、やめる」熟語です。", "type": "choice"},
-        {"scenario": "「run into」の意味として最も適切なものは？", "choices": ["偶然出会う、ぶつかる", "走り抜ける", "逃げる", "追いかける"], "correct": 0, "explanation": "run intoは「偶然出会う、衝突する」熟語です。", "type": "choice"},
-        {"scenario": "「put off」の意味として最も適切なものは？", "choices": ["延期する、先延ばしにする", "除去する", "開始する", "引き起こす"], "correct": 0, "explanation": "put offは「延期する」熟語です。", "type": "choice"},
-        {"scenario": "「break up」の意味として最も適切なものは？", "choices": ["別れる、解散する", "作る", "集合する", "続く"], "correct": 0, "explanation": "break upは「別れる、解散する」熟語です。", "type": "choice"},
-        {"scenario": "「carry out」の意味として最も適切なものは？", "choices": ["実行する、遂行する", "運ぶ", "持ち帰る", "放棄する"], "correct": 0, "explanation": "carry outは「実行する、遂行する」熟語です。", "type": "choice"},
-        {"scenario": "「check out」の意味として最も適切なものは？", "choices": ["チェックアウトする、確認する", "チェックインする", "予約する", "購入する"], "correct": 0, "explanation": "check outはホテルのチェックアウトや、物事を確認する意味で使われます。", "type": "choice"},
-        {"scenario": "「fill out」の意味として最も適切なものは？", "choices": ["記入する、書き入れる", "埋め尽くす", "削除する", "コピーする"], "correct": 0, "explanation": "fill outは書類などを記入する意味です。", "type": "choice"}
+        {
+          "scenario": "「look after」の意味として最も適切なものは？",
+          "choices": [
+            "世話をする、面倒を見る",
+            "見つめる",
+            "無視する",
+            "探す"
+          ],
+          "correct": 0,
+          "explanation": "look afterは「世話をする、面倒を見る」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「set up」の意味として最も適切なものは？",
+          "choices": [
+            "設置する、準備する",
+            "壊す",
+            "閉じる",
+            "削除する"
+          ],
+          "correct": 0,
+          "explanation": "set upは「設置する、準備する」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take off」の意味として最も適切なものは？",
+          "choices": [
+            "離陸する、脱ぐ",
+            "乗る",
+            "開始する",
+            "戻す"
+          ],
+          "correct": 0,
+          "explanation": "take offは「離陸する」や「服を脱ぐ」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give up」の意味として最も適切なものは？",
+          "choices": [
+            "諦める、やめる",
+            "始める",
+            "続ける",
+            "要求する"
+          ],
+          "correct": 0,
+          "explanation": "give upは「諦める、やめる」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run into」の意味として最も適切なものは？",
+          "choices": [
+            "偶然出会う、ぶつかる",
+            "走り抜ける",
+            "逃げる",
+            "追いかける"
+          ],
+          "correct": 0,
+          "explanation": "run intoは「偶然出会う、衝突する」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put off」の意味として最も適切なものは？",
+          "choices": [
+            "延期する、先延ばしにする",
+            "除去する",
+            "開始する",
+            "引き起こす"
+          ],
+          "correct": 0,
+          "explanation": "put offは「延期する」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break up」の意味として最も適切なものは？",
+          "choices": [
+            "別れる、解散する",
+            "作る",
+            "集合する",
+            "続く"
+          ],
+          "correct": 0,
+          "explanation": "break upは「別れる、解散する」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carry out」の意味として最も適切なものは？",
+          "choices": [
+            "実行する、遂行する",
+            "運ぶ",
+            "持ち帰る",
+            "放棄する"
+          ],
+          "correct": 0,
+          "explanation": "carry outは「実行する、遂行する」熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「check out」の意味として最も適切なものは？",
+          "choices": [
+            "チェックアウトする、確認する",
+            "チェックインする",
+            "予約する",
+            "購入する"
+          ],
+          "correct": 0,
+          "explanation": "check outはホテルのチェックアウトや、物事を確認する意味で使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fill out」の意味として最も適切なものは？",
+          "choices": [
+            "記入する、書き入れる",
+            "埋め尽くす",
+            "削除する",
+            "コピーする"
+          ],
+          "correct": 0,
+          "explanation": "fill outは書類などを記入する意味です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -106,16 +656,126 @@
       "emoji": "🌿",
       "subtitle": "自然や環境に関わる動詞",
       "questions": [
-        {"scenario": "「bloom」の意味として最も適切なものは？", "choices": ["花が咲く、開く", "枯れる", "散る", "実る"], "correct": 0, "explanation": "bloomは『花が咲く、開く』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「drain」の意味として最も適切なものは？", "choices": ["流す、排水する", "注ぐ", "溜める", "飲む"], "correct": 0, "explanation": "drainは『流す、排水する』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「freeze」の意味として最も適切なものは？", "choices": ["凍らせる、凍る", "溶かす", "暖める", "乾かす"], "correct": 0, "explanation": "freezeは『凍らせる、凍る』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「shine」の意味として最も適切なものは？", "choices": ["輝く、光る", "曇る", "消える", "隠れる"], "correct": 0, "explanation": "shineは太陽や光が「輝く、光る」という意味の動詞です。例: The sun is shining.（太陽が輝いている。）", "type": "choice"},
-        {"scenario": "「harvest」の意味として最も適切なものは？", "choices": ["収穫する、取り入れる", "植える", "捨てる", "保存する"], "correct": 0, "explanation": "harvestは『収穫する』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「melt」の意味として最も適切なものは？", "choices": ["溶かす、溶ける", "凍る", "乾く", "燃える"], "correct": 0, "explanation": "meltは『溶かす、溶ける』という意味です。", "type": "choice"},
-        {"scenario": "「scatter」の意味として最も適切なものは？", "choices": ["散らばる、まき散らす", "集める", "植える", "積む"], "correct": 0, "explanation": "scatterは「散らばる、まき散らす」という意味の動詞です。例: scatter seeds（種をまく）", "type": "choice"},
-        {"scenario": "「preserve」の意味として最も適切なものは？", "choices": ["保存する、保護する", "捨てる", "破壊する", "販売する"], "correct": 0, "explanation": "preserveは『保存する、保護する』という意味です。", "type": "choice"},
-        {"scenario": "「recycle」の意味として最も適切なものは？", "choices": ["再利用する、リサイクルする", "廃棄する", "購入する", "修理する"], "correct": 0, "explanation": "recycleは『再利用する、リサイクルする』という意味です。", "type": "choice"},
-        {"scenario": "「spread」の意味として最も適切なものは？", "choices": ["広がる、広める", "縮む", "消える", "集まる"], "correct": 0, "explanation": "spreadは「広がる、（うわさなどを）広める」という意味の動詞です。例: spread the news（ニュースを広める）", "type": "choice"}
+        {
+          "scenario": "「bloom」の意味として最も適切なものは？",
+          "choices": [
+            "花が咲く、開く",
+            "枯れる",
+            "散る",
+            "実る"
+          ],
+          "correct": 0,
+          "explanation": "bloomは『花が咲く、開く』という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drain」の意味として最も適切なものは？",
+          "choices": [
+            "流す、排水する",
+            "注ぐ",
+            "溜める",
+            "飲む"
+          ],
+          "correct": 0,
+          "explanation": "drainは『流す、排水する』という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「freeze」の意味として最も適切なものは？",
+          "choices": [
+            "凍らせる、凍る",
+            "溶かす",
+            "暖める",
+            "乾かす"
+          ],
+          "correct": 0,
+          "explanation": "freezeは『凍らせる、凍る』という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「shine」の意味として最も適切なものは？",
+          "choices": [
+            "輝く、光る",
+            "曇る",
+            "消える",
+            "隠れる"
+          ],
+          "correct": 0,
+          "explanation": "shineは太陽や光が「輝く、光る」という意味の動詞です。例: The sun is shining.（太陽が輝いている。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「harvest」の意味として最も適切なものは？",
+          "choices": [
+            "収穫する、取り入れる",
+            "植える",
+            "捨てる",
+            "保存する"
+          ],
+          "correct": 0,
+          "explanation": "harvestは『収穫する』という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「melt」の意味として最も適切なものは？",
+          "choices": [
+            "溶かす、溶ける",
+            "凍る",
+            "乾く",
+            "燃える"
+          ],
+          "correct": 0,
+          "explanation": "meltは『溶かす、溶ける』という意味です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「scatter」の意味として最も適切なものは？",
+          "choices": [
+            "散らばる、まき散らす",
+            "集める",
+            "植える",
+            "積む"
+          ],
+          "correct": 0,
+          "explanation": "scatterは「散らばる、まき散らす」という意味の動詞です。例: scatter seeds（種をまく）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「preserve」の意味として最も適切なものは？",
+          "choices": [
+            "保存する、保護する",
+            "捨てる",
+            "破壊する",
+            "販売する"
+          ],
+          "correct": 0,
+          "explanation": "preserveは『保存する、保護する』という意味です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「recycle」の意味として最も適切なものは？",
+          "choices": [
+            "再利用する、リサイクルする",
+            "廃棄する",
+            "購入する",
+            "修理する"
+          ],
+          "correct": 0,
+          "explanation": "recycleは『再利用する、リサイクルする』という意味です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「spread」の意味として最も適切なものは？",
+          "choices": [
+            "広がる、広める",
+            "縮む",
+            "消える",
+            "集まる"
+          ],
+          "correct": 0,
+          "explanation": "spreadは「広がる、（うわさなどを）広める」という意味の動詞です。例: spread the news（ニュースを広める）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -125,16 +785,126 @@
       "emoji": "🍽️",
       "subtitle": "食事や飲み物に関する名詞",
       "questions": [
-        {"scenario": "「sandwich」の意味として最も適切なものは？", "choices": ["サンドイッチ", "ハンバーガー", "パン", "トースト"], "correct": 0, "explanation": "sandwichはパンに具材を挟んだ「サンドイッチ」を表す名詞です。", "type": "choice"},
-        {"scenario": "「cheese」の意味として最も適切なものは？", "choices": ["チーズ、乳製品", "バター", "ヨーグルト", "ミルク"], "correct": 0, "explanation": "cheeseは『チーズ』です。", "type": "choice"},
-        {"scenario": "「coffee」の意味として最も適切なものは？", "choices": ["コーヒー、飲み物", "紅茶", "ジュース", "水"], "correct": 0, "explanation": "coffeeは『コーヒー』です。", "type": "choice"},
-        {"scenario": "「fruit」の意味として最も適切なものは？", "choices": ["果物、フルーツ", "野菜", "肉", "魚"], "correct": 0, "explanation": "fruitは『果物』です。", "type": "choice"},
-        {"scenario": "「meat」の意味として最も適切なものは？", "choices": ["肉、ミート", "魚", "野菜", "豆"], "correct": 0, "explanation": "meatは『肉』です。", "type": "choice"},
-        {"scenario": "「cereal」の意味として最も適切なものは？", "choices": ["シリアル、穀物", "スープ", "パン", "サラダ"], "correct": 0, "explanation": "cerealは朝食用の「シリアル」や、米・小麦などの「穀物」を表す名詞です。", "type": "choice"},
-        {"scenario": "「tea」の意味として最も適切なものは？", "choices": ["お茶、飲み物", "コーヒー", "ジュース", "水"], "correct": 0, "explanation": "teaは『お茶』です。", "type": "choice"},
-        {"scenario": "「vegetable」の意味として最も適切なものは？", "choices": ["野菜", "果物", "肉", "魚"], "correct": 0, "explanation": "vegetableは『野菜』です。", "type": "choice"},
-        {"scenario": "「water (飲み物)」", "choices": ["水、飲み物", "ジュース", "コーヒー", "ミルク"], "correct": 0, "explanation": "waterは『水』です。", "type": "choice"},
-        {"scenario": "「seafood」の意味として最も適切なものは？", "choices": ["海産物、シーフード", "肉", "野菜", "果物"], "correct": 0, "explanation": "seafoodは魚介類などの「海産物、シーフード」を表す名詞です。", "type": "choice"}
+        {
+          "scenario": "「sandwich」の意味として最も適切なものは？",
+          "choices": [
+            "サンドイッチ",
+            "ハンバーガー",
+            "パン",
+            "トースト"
+          ],
+          "correct": 0,
+          "explanation": "sandwichはパンに具材を挟んだ「サンドイッチ」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cheese」の意味として最も適切なものは？",
+          "choices": [
+            "チーズ、乳製品",
+            "バター",
+            "ヨーグルト",
+            "ミルク"
+          ],
+          "correct": 0,
+          "explanation": "cheeseは『チーズ』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coffee」の意味として最も適切なものは？",
+          "choices": [
+            "コーヒー、飲み物",
+            "紅茶",
+            "ジュース",
+            "水"
+          ],
+          "correct": 0,
+          "explanation": "coffeeは『コーヒー』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fruit」の意味として最も適切なものは？",
+          "choices": [
+            "果物、フルーツ",
+            "野菜",
+            "肉",
+            "魚"
+          ],
+          "correct": 0,
+          "explanation": "fruitは『果物』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meat」の意味として最も適切なものは？",
+          "choices": [
+            "肉、ミート",
+            "魚",
+            "野菜",
+            "豆"
+          ],
+          "correct": 0,
+          "explanation": "meatは『肉』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cereal」の意味として最も適切なものは？",
+          "choices": [
+            "シリアル、穀物",
+            "スープ",
+            "パン",
+            "サラダ"
+          ],
+          "correct": 0,
+          "explanation": "cerealは朝食用の「シリアル」や、米・小麦などの「穀物」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tea」の意味として最も適切なものは？",
+          "choices": [
+            "お茶、飲み物",
+            "コーヒー",
+            "ジュース",
+            "水"
+          ],
+          "correct": 0,
+          "explanation": "teaは『お茶』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「vegetable」の意味として最も適切なものは？",
+          "choices": [
+            "野菜",
+            "果物",
+            "肉",
+            "魚"
+          ],
+          "correct": 0,
+          "explanation": "vegetableは『野菜』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「water (飲み物)」",
+          "choices": [
+            "水、飲み物",
+            "ジュース",
+            "コーヒー",
+            "ミルク"
+          ],
+          "correct": 0,
+          "explanation": "waterは『水』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「seafood」の意味として最も適切なものは？",
+          "choices": [
+            "海産物、シーフード",
+            "肉",
+            "野菜",
+            "果物"
+          ],
+          "correct": 0,
+          "explanation": "seafoodは魚介類などの「海産物、シーフード」を表す名詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -144,16 +914,126 @@
       "emoji": "🙂",
       "subtitle": "感情や状態を表す形容詞",
       "questions": [
-        {"scenario": "「upset」の意味として最も適切なものは？", "choices": ["動揺した、腹を立てた", "満足した", "安心した", "誇らしい"], "correct": 0, "explanation": "upsetは「動揺した、腹を立てた」という意味の形容詞です。例: She looks upset.（彼女は動揺しているようだ。）", "type": "choice"},
-        {"scenario": "「bored」の意味として最も適切なものは？", "choices": ["退屈な、飽き飽きした", "楽しい", "興奮した", "驚いた"], "correct": 0, "explanation": "boredは『退屈な』です。", "type": "choice"},
-        {"scenario": "「curious」の意味として最も適切なものは？", "choices": ["好奇心が強い、知りたがりの", "怠惰な", "無関心な", "恥ずかしい"], "correct": 0, "explanation": "curiousは『好奇心が強い』です。", "type": "choice"},
-        {"scenario": "「delighted」の意味として最も適切なものは？", "choices": ["とても喜んでいる、満足している", "悲しい", "驚いた", "疲れた"], "correct": 0, "explanation": "delightedは『とても喜んでいる』という形容詞です。", "type": "choice"},
-        {"scenario": "「embarrassed」の意味として最も適切なものは？", "choices": ["恥ずかしい、照れくさい", "自信がある", "怒っている", "驚いた"], "correct": 0, "explanation": "embarrassedは『恥ずかしい』です。", "type": "choice"},
-        {"scenario": "「frustrated」の意味として最も適切なものは？", "choices": ["欲求不満な、イライラした", "リラックスした", "喜んだ", "驚いた"], "correct": 0, "explanation": "frustratedは『欲求不満な、イライラした』です。", "type": "choice"},
-        {"scenario": "「jealous」の意味として最も適切なものは？", "choices": ["嫉妬している、やきもちを焼く", "誇らしい", "恥ずかしい", "満足した"], "correct": 0, "explanation": "jealousは「嫉妬している、やきもちを焼く」という形容詞です。例: feel jealous（嫉妬を感じる）", "type": "choice"},
-        {"scenario": "「ashamed」の意味として最も適切なものは？", "choices": ["恥じている、恥ずかしく思う", "誇りに思う", "驚いた", "安心した"], "correct": 0, "explanation": "ashamedは「恥じている、恥ずかしく思う」という形容詞です。例: feel ashamed（恥じる）", "type": "choice"},
-        {"scenario": "「relieved」の意味として最も適切なものは？", "choices": ["安心した、ホッとした", "怖がった", "驚いた", "怒った"], "correct": 0, "explanation": "relievedは『安心した』です。", "type": "choice"},
-        {"scenario": "「disappointed」の意味として最も適切なものは？", "choices": ["がっかりした、失望した", "満足した", "喜んだ", "興奮した"], "correct": 0, "explanation": "disappointedは期待が外れて「がっかりした、失望した」という意味の形容詞です。", "type": "choice"}
+        {
+          "scenario": "「upset」の意味として最も適切なものは？",
+          "choices": [
+            "動揺した、腹を立てた",
+            "満足した",
+            "安心した",
+            "誇らしい"
+          ],
+          "correct": 0,
+          "explanation": "upsetは「動揺した、腹を立てた」という意味の形容詞です。例: She looks upset.（彼女は動揺しているようだ。）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bored」の意味として最も適切なものは？",
+          "choices": [
+            "退屈な、飽き飽きした",
+            "楽しい",
+            "興奮した",
+            "驚いた"
+          ],
+          "correct": 0,
+          "explanation": "boredは『退屈な』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curious」の意味として最も適切なものは？",
+          "choices": [
+            "好奇心が強い、知りたがりの",
+            "怠惰な",
+            "無関心な",
+            "恥ずかしい"
+          ],
+          "correct": 0,
+          "explanation": "curiousは『好奇心が強い』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delighted」の意味として最も適切なものは？",
+          "choices": [
+            "とても喜んでいる、満足している",
+            "悲しい",
+            "驚いた",
+            "疲れた"
+          ],
+          "correct": 0,
+          "explanation": "delightedは『とても喜んでいる』という形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embarrassed」の意味として最も適切なものは？",
+          "choices": [
+            "恥ずかしい、照れくさい",
+            "自信がある",
+            "怒っている",
+            "驚いた"
+          ],
+          "correct": 0,
+          "explanation": "embarrassedは『恥ずかしい』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frustrated」の意味として最も適切なものは？",
+          "choices": [
+            "欲求不満な、イライラした",
+            "リラックスした",
+            "喜んだ",
+            "驚いた"
+          ],
+          "correct": 0,
+          "explanation": "frustratedは『欲求不満な、イライラした』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「jealous」の意味として最も適切なものは？",
+          "choices": [
+            "嫉妬している、やきもちを焼く",
+            "誇らしい",
+            "恥ずかしい",
+            "満足した"
+          ],
+          "correct": 0,
+          "explanation": "jealousは「嫉妬している、やきもちを焼く」という形容詞です。例: feel jealous（嫉妬を感じる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ashamed」の意味として最も適切なものは？",
+          "choices": [
+            "恥じている、恥ずかしく思う",
+            "誇りに思う",
+            "驚いた",
+            "安心した"
+          ],
+          "correct": 0,
+          "explanation": "ashamedは「恥じている、恥ずかしく思う」という形容詞です。例: feel ashamed（恥じる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「relieved」の意味として最も適切なものは？",
+          "choices": [
+            "安心した、ホッとした",
+            "怖がった",
+            "驚いた",
+            "怒った"
+          ],
+          "correct": 0,
+          "explanation": "relievedは『安心した』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disappointed」の意味として最も適切なものは？",
+          "choices": [
+            "がっかりした、失望した",
+            "満足した",
+            "喜んだ",
+            "興奮した"
+          ],
+          "correct": 0,
+          "explanation": "disappointedは期待が外れて「がっかりした、失望した」という意味の形容詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -163,16 +1043,126 @@
       "emoji": "⏰",
       "subtitle": "頻度・程度・時間を示す副詞・前置詞",
       "questions": [
-        {"scenario": "「rarely」の意味として最も適切なものは？", "choices": ["めったに…ない、まれに", "いつも", "しばしば", "必ず"], "correct": 0, "explanation": "rarelyは「めったに…ない、まれに」という意味の頻度を表す副詞です。", "type": "choice"},
-        {"scenario": "「seldom」の意味として最も適切なものは？", "choices": ["めったに…ない、まれにしか…ない", "時々", "いつも", "必ず"], "correct": 0, "explanation": "seldomはrarelyと同様に「めったに…ない」という意味の頻度を表す副詞です。", "type": "choice"},
-        {"scenario": "「hardly」の意味として最も適切なものは？", "choices": ["ほとんど…ない、全然…ない", "十分に", "完全に", "すぐに"], "correct": 0, "explanation": "hardlyは『ほとんど…ない』です。", "type": "choice"},
-        {"scenario": "「within」の意味として最も適切なものは？", "choices": ["…の中で、…以内に", "…の外に", "…を超えて", "…の後で"], "correct": 0, "explanation": "withinは「…の中で、…以内に」という前置詞です。例: within a week（1週間以内に）", "type": "choice"},
-        {"scenario": "「besides」の意味として最も適切なものは？", "choices": ["…のほかに、…以外に", "…の前に", "…の後で", "…の代わりに"], "correct": 0, "explanation": "besidesは『…のほかに、…以外に』です。", "type": "choice"},
-        {"scenario": "「among」の意味として最も適切なものは？", "choices": ["…の中で、…の間に", "…の外に", "…の後で", "…の前に"], "correct": 0, "explanation": "amongは『…の中で、…の間に』です。", "type": "choice"},
-        {"scenario": "「except」の意味として最も適切なものは？", "choices": ["…を除いて、…以外は", "…を加えて", "…の代わりに", "…の後で"], "correct": 0, "explanation": "exceptは「…を除いて、…以外は」という前置詞です。例: every day except Sunday（日曜日以外は毎日）", "type": "choice"},
-        {"scenario": "「beneath」の意味として最も適切なものは？", "choices": ["…の下に、下へ", "…の上に", "…の中に", "…の隣に"], "correct": 0, "explanation": "beneathは「…の下に、下へ」という前置詞です。underと同じ意味ですが、よりフォーマルな表現です。", "type": "choice"},
-        {"scenario": "「opposite」の意味として最も適切なものは？", "choices": ["反対側の、向かいの", "同じ方向の", "隣の", "近くの"], "correct": 0, "explanation": "oppositeは「反対側の、向かいの」という形容詞・前置詞です。例: the house opposite（向かいの家）", "type": "choice"},
-        {"scenario": "「along」の意味として最も適切なものは？", "choices": ["…に沿って、…をたどって", "…を通って", "…の中に", "…の上に"], "correct": 0, "explanation": "alongは「…に沿って、…をたどって」という前置詞・副詞です。例: walk along the river（川沿いを歩く）", "type": "choice"}
+        {
+          "scenario": "「rarely」の意味として最も適切なものは？",
+          "choices": [
+            "めったに…ない、まれに",
+            "いつも",
+            "しばしば",
+            "必ず"
+          ],
+          "correct": 0,
+          "explanation": "rarelyは「めったに…ない、まれに」という意味の頻度を表す副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「seldom」の意味として最も適切なものは？",
+          "choices": [
+            "めったに…ない、まれにしか…ない",
+            "時々",
+            "いつも",
+            "必ず"
+          ],
+          "correct": 0,
+          "explanation": "seldomはrarelyと同様に「めったに…ない」という意味の頻度を表す副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hardly」の意味として最も適切なものは？",
+          "choices": [
+            "ほとんど…ない、全然…ない",
+            "十分に",
+            "完全に",
+            "すぐに"
+          ],
+          "correct": 0,
+          "explanation": "hardlyは『ほとんど…ない』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「within」の意味として最も適切なものは？",
+          "choices": [
+            "…の中で、…以内に",
+            "…の外に",
+            "…を超えて",
+            "…の後で"
+          ],
+          "correct": 0,
+          "explanation": "withinは「…の中で、…以内に」という前置詞です。例: within a week（1週間以内に）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「besides」の意味として最も適切なものは？",
+          "choices": [
+            "…のほかに、…以外に",
+            "…の前に",
+            "…の後で",
+            "…の代わりに"
+          ],
+          "correct": 0,
+          "explanation": "besidesは『…のほかに、…以外に』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「among」の意味として最も適切なものは？",
+          "choices": [
+            "…の中で、…の間に",
+            "…の外に",
+            "…の後で",
+            "…の前に"
+          ],
+          "correct": 0,
+          "explanation": "amongは『…の中で、…の間に』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「except」の意味として最も適切なものは？",
+          "choices": [
+            "…を除いて、…以外は",
+            "…を加えて",
+            "…の代わりに",
+            "…の後で"
+          ],
+          "correct": 0,
+          "explanation": "exceptは「…を除いて、…以外は」という前置詞です。例: every day except Sunday（日曜日以外は毎日）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beneath」の意味として最も適切なものは？",
+          "choices": [
+            "…の下に、下へ",
+            "…の上に",
+            "…の中に",
+            "…の隣に"
+          ],
+          "correct": 0,
+          "explanation": "beneathは「…の下に、下へ」という前置詞です。underと同じ意味ですが、よりフォーマルな表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「opposite」の意味として最も適切なものは？",
+          "choices": [
+            "反対側の、向かいの",
+            "同じ方向の",
+            "隣の",
+            "近くの"
+          ],
+          "correct": 0,
+          "explanation": "oppositeは「反対側の、向かいの」という形容詞・前置詞です。例: the house opposite（向かいの家）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「along」の意味として最も適切なものは？",
+          "choices": [
+            "…に沿って、…をたどって",
+            "…を通って",
+            "…の中に",
+            "…の上に"
+          ],
+          "correct": 0,
+          "explanation": "alongは「…に沿って、…をたどって」という前置詞・副詞です。例: walk along the river（川沿いを歩く）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -182,16 +1172,126 @@
       "emoji": "🗨️",
       "subtitle": "日常会話でよく使う熟語・フレーズ",
       "questions": [
-        {"scenario": "「ask out」の意味として最も適切なものは？", "choices": ["デートに誘う、申し込む", "質問する", "逃げる", "注文する"], "correct": 0, "explanation": "ask outは『デートに誘う』という熟語です。", "type": "choice"},
-        {"scenario": "「bring up」の意味として最も適切なものは？", "choices": ["持ち出す、話題にする", "持ち上げる", "持ち帰る", "持ち込む"], "correct": 0, "explanation": "bring upは『持ち出す、話題にする』です。", "type": "choice"},
-        {"scenario": "「call off」の意味として最も適切なものは？", "choices": ["中止する、キャンセルする", "呼び出す", "電話する", "呼びかける"], "correct": 0, "explanation": "call offは『中止する、キャンセルする』です。", "type": "choice"},
-        {"scenario": "「come across」の意味として最も適切なものは？", "choices": ["偶然出会う、見つける", "来る", "過ぎる", "通りかかる"], "correct": 0, "explanation": "come acrossは『偶然出会う、見つける』です。", "type": "choice"},
-        {"scenario": "「figure out」の意味として最も適切なものは？", "choices": ["解決する、分かる、考えつく", "描く", "測る", "計算する"], "correct": 0, "explanation": "figure outは『解決する、分かる、考えつく』です。", "type": "choice"},
-        {"scenario": "「end up」の意味として最も適切なものは？", "choices": ["結局〜になる、〜に終わる", "終わる", "始まる", "続ける"], "correct": 0, "explanation": "end upは「結局〜になる、〜に終わる」という意味の熟語です。例: end up staying（結局泊まることになる）", "type": "choice"},
-        {"scenario": "「pick up」の意味として最も適切なものは？", "choices": ["拾う、受け取る、習得する", "置く", "落とす", "削除する"], "correct": 0, "explanation": "pick upは『拾う、受け取る、習得する』です。", "type": "choice"},
-        {"scenario": "「turn down」の意味として最も適切なものは？", "choices": ["断る、下げる", "回す", "上げる", "開く"], "correct": 0, "explanation": "turn downは『断る、下げる』です。", "type": "choice"},
-        {"scenario": "「work out」の意味として最も適切なものは？", "choices": ["運動する、解決する", "働く", "試す", "破る"], "correct": 0, "explanation": "work outは『運動する、解決する』です。", "type": "choice"},
-        {"scenario": "「show up」の意味として最も適切なものは？", "choices": ["現れる、姿を見せる", "隠れる", "逃げる", "閉じる"], "correct": 0, "explanation": "show upは『現れる、姿を見せる』です。", "type": "choice"}
+        {
+          "scenario": "「ask out」の意味として最も適切なものは？",
+          "choices": [
+            "デートに誘う、申し込む",
+            "質問する",
+            "逃げる",
+            "注文する"
+          ],
+          "correct": 0,
+          "explanation": "ask outは『デートに誘う』という熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bring up」の意味として最も適切なものは？",
+          "choices": [
+            "持ち出す、話題にする",
+            "持ち上げる",
+            "持ち帰る",
+            "持ち込む"
+          ],
+          "correct": 0,
+          "explanation": "bring upは『持ち出す、話題にする』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「call off」の意味として最も適切なものは？",
+          "choices": [
+            "中止する、キャンセルする",
+            "呼び出す",
+            "電話する",
+            "呼びかける"
+          ],
+          "correct": 0,
+          "explanation": "call offは『中止する、キャンセルする』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come across」の意味として最も適切なものは？",
+          "choices": [
+            "偶然出会う、見つける",
+            "来る",
+            "過ぎる",
+            "通りかかる"
+          ],
+          "correct": 0,
+          "explanation": "come acrossは『偶然出会う、見つける』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「figure out」の意味として最も適切なものは？",
+          "choices": [
+            "解決する、分かる、考えつく",
+            "描く",
+            "測る",
+            "計算する"
+          ],
+          "correct": 0,
+          "explanation": "figure outは『解決する、分かる、考えつく』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「end up」の意味として最も適切なものは？",
+          "choices": [
+            "結局〜になる、〜に終わる",
+            "終わる",
+            "始まる",
+            "続ける"
+          ],
+          "correct": 0,
+          "explanation": "end upは「結局〜になる、〜に終わる」という意味の熟語です。例: end up staying（結局泊まることになる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pick up」の意味として最も適切なものは？",
+          "choices": [
+            "拾う、受け取る、習得する",
+            "置く",
+            "落とす",
+            "削除する"
+          ],
+          "correct": 0,
+          "explanation": "pick upは『拾う、受け取る、習得する』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn down」の意味として最も適切なものは？",
+          "choices": [
+            "断る、下げる",
+            "回す",
+            "上げる",
+            "開く"
+          ],
+          "correct": 0,
+          "explanation": "turn downは『断る、下げる』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「work out」の意味として最も適切なものは？",
+          "choices": [
+            "運動する、解決する",
+            "働く",
+            "試す",
+            "破る"
+          ],
+          "correct": 0,
+          "explanation": "work outは『運動する、解決する』です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「show up」の意味として最も適切なものは？",
+          "choices": [
+            "現れる、姿を見せる",
+            "隠れる",
+            "逃げる",
+            "閉じる"
+          ],
+          "correct": 0,
+          "explanation": "show upは『現れる、姿を見せる』です。",
+          "type": "choice"
+        }
       ]
     }
   ]

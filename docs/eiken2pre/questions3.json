@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 3,
+  "label": "名詞編②",
+  "description": "重要名詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "名詞編・抽象概念パート1",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（1〜10）",
+      "subtitle": "重要名詞（1〜10）",
       "questions": [
         {
           "scenario": "「abandonment」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "名詞編・抽象概念パート2",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（11〜20）",
+      "subtitle": "重要名詞（11〜20）",
       "questions": [
         {
           "scenario": "「achievement」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "名詞編・抽象概念パート3",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（21〜30）",
+      "subtitle": "重要名詞（21〜30）",
       "questions": [
         {
           "scenario": "「adoption」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "名詞編・抽象概念パート4",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（31〜40）",
+      "subtitle": "重要名詞（31〜40）",
       "questions": [
         {
           "scenario": "「amusement」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "名詞編・抽象概念パート5",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（41〜50）",
+      "subtitle": "重要名詞（41〜50）",
       "questions": [
         {
           "scenario": "「assistance」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "名詞編・抽象概念パート6",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（51〜60）",
+      "subtitle": "重要名詞（51〜60）",
       "questions": [
         {
           "scenario": "「beginning」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "名詞編・抽象概念パート7",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（61〜70）",
+      "subtitle": "重要名詞（61〜70）",
       "questions": [
         {
           "scenario": "「category」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "名詞編・抽象概念パート8",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（71〜80）",
+      "subtitle": "重要名詞（71〜80）",
       "questions": [
         {
           "scenario": "「comfort」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "名詞編・抽象概念パート9",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（81〜90）",
+      "subtitle": "重要名詞（81〜90）",
       "questions": [
         {
           "scenario": "「completion」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "名詞編・抽象概念パート10",
       "type": "vocabulary",
       "emoji": "🧩",
-      "subtitle": "英検準2級の重要名詞（91〜100）",
+      "subtitle": "重要名詞（91〜100）",
       "questions": [
         {
           "scenario": "「conference」の意味として最も適切なものは？",

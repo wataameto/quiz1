@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "level": 14,
+  "label": "実戦・総合編①",
+  "description": "実戦総合問題",
   "tests": [
     {
       "id": 1,
       "title": "実戦編セット1",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1301~1310",
+      "subtitle": "実戦語彙 1301~1310",
       "questions": [
         {
           "scenario": "「mandatory」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "実戦編セット2",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1311~1320",
+      "subtitle": "実戦語彙 1311~1320",
       "questions": [
         {
           "scenario": "「mischievous」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "実戦編セット3",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1321~1330",
+      "subtitle": "実戦語彙 1321~1330",
       "questions": [
         {
           "scenario": "「muddy」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "実戦編セット4",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1331~1340",
+      "subtitle": "実戦語彙 1331~1340",
       "questions": [
         {
           "scenario": "「malice」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "実戦編セット5",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1341~1350",
+      "subtitle": "実戦語彙 1341~1350",
       "questions": [
         {
           "scenario": "「mantelpiece」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "実戦編セット6",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1351~1360",
+      "subtitle": "実戦語彙 1351~1360",
       "questions": [
         {
           "scenario": "「marshal」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "実戦編セット7",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1361~1370",
+      "subtitle": "実戦語彙 1361~1370",
       "questions": [
         {
           "scenario": "「maternity」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "実戦編セット8",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1371~1380",
+      "subtitle": "実戦語彙 1371~1380",
       "questions": [
         {
           "scenario": "「mayor」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "実戦編セット9",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1381~1390",
+      "subtitle": "実戦語彙 1381~1390",
       "questions": [
         {
           "scenario": "「mediator」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "実戦編セット10",
       "type": "vocabulary",
       "emoji": "🏆",
-      "subtitle": "英検2級の実戦語彙 1391~1400",
+      "subtitle": "実戦語彙 1391~1400",
       "questions": [
         {
           "scenario": "「melancholia」の意味として最も適切なものは？",

@@ -1,15 +1,15 @@
 {
   "id": "eiken2pre",
-  "level": 1,
-  "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "level": 5,
+  "label": "パート 5",
+  "description": "重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "重要熟語①：前置詞・副詞句",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(1〜10)",
+      "subtitle": "重要熟語・表現(1〜10)",
       "questions": [
         {
           "scenario": "「along with」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "重要熟語②：動詞句(1)",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(11〜20)",
+      "subtitle": "重要熟語・表現(11〜20)",
       "questions": [
         {
           "scenario": "「be ready to」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "重要熟語③：動詞句(2)",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(21〜30)",
+      "subtitle": "重要熟語・表現(21〜30)",
       "questions": [
         {
           "scenario": "「come about」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "重要熟語④：be動詞の熟語",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(31〜40)",
+      "subtitle": "重要熟語・表現(31〜40)",
       "questions": [
         {
           "scenario": "「for free」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "重要熟語⑤：基本動詞の熟語",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(41〜50)",
+      "subtitle": "重要熟語・表現(41〜50)",
       "questions": [
         {
           "scenario": "「hear from」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "重要熟語⑥：副詞的表現",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(51〜60)",
+      "subtitle": "重要熟語・表現(51〜60)",
       "questions": [
         {
           "scenario": "「in particular」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "重要熟語⑦：接続詞的表現",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(61〜70)",
+      "subtitle": "重要熟語・表現(61〜70)",
       "questions": [
         {
           "scenario": "「make a decision」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "重要熟語⑧：頻出イディオム(1)",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(71〜80)",
+      "subtitle": "重要熟語・表現(71〜80)",
       "questions": [
         {
           "scenario": "「on time」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "重要熟語⑨：頻出イディオム(2)",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(81〜90)",
+      "subtitle": "重要熟語・表現(81〜90)",
       "questions": [
         {
           "scenario": "「take pride in」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "重要熟語⑩：総まとめ",
       "type": "vocabulary",
       "emoji": "🔗",
-      "subtitle": "英検準2級レベルの重要熟語・表現(91〜100)",
+      "subtitle": "重要熟語・表現(91〜100)",
       "questions": [
         {
           "scenario": "「come along」の意味として最も適切なものは？",

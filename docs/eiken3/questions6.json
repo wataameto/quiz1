@@ -1,8 +1,8 @@
 {
   "id": "eiken3",
   "level": 6,
-  "label": "📚 芸術文化・論理表現編",
-  "description": "英検3級レベルの応用英単語⑤（動詞・名詞・形容詞・副詞・熟語・会話表現）",
+  "label": "パート 6",
+  "description": "重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,
@@ -267,7 +267,7 @@
       "title": "重要熟語編①：英検3級で必須の基本熟語動詞",
       "type": "Idioms & Phrasal Verbs 1",
       "emoji": "🔗",
-      "subtitle": "英検3級で必須の基本熟語動詞",
+      "subtitle": "で必須の基本熟語動詞",
       "questions": [
         {
           "scenario": "「as soon as」の意味として最も適切なものは？",

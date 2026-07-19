@@ -1,15 +1,15 @@
 {
   "id": "eiken2",
-  "level": 1,
-  "label": "📘 英検2級 単語・熟語",
-  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "level": 2,
+  "label": "動詞編②",
+  "description": "重要動詞のクイズ",
   "tests": [
     {
       "id": 1,
       "title": "動詞編セット1",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 101~110",
+      "subtitle": "動詞 101~110",
       "questions": [
         {
           "scenario": "「begrudge」の意味として最も適切なものは？",
@@ -138,7 +138,7 @@
       "title": "動詞編セット2",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 111~120",
+      "subtitle": "動詞 111~120",
       "questions": [
         {
           "scenario": "「beset」の意味として最も適切なものは？",
@@ -267,7 +267,7 @@
       "title": "動詞編セット3",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 121~130",
+      "subtitle": "動詞 121~130",
       "questions": [
         {
           "scenario": "「blacken」の意味として最も適切なものは？",
@@ -396,7 +396,7 @@
       "title": "動詞編セット4",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 131~140",
+      "subtitle": "動詞 131~140",
       "questions": [
         {
           "scenario": "「blubber」の意味として最も適切なものは？",
@@ -525,7 +525,7 @@
       "title": "動詞編セット5",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 141~150",
+      "subtitle": "動詞 141~150",
       "questions": [
         {
           "scenario": "「brawl」の意味として最も適切なものは？",
@@ -654,7 +654,7 @@
       "title": "動詞編セット6",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 151~160",
+      "subtitle": "動詞 151~160",
       "questions": [
         {
           "scenario": "「bulge」の意味として最も適切なものは？",
@@ -783,7 +783,7 @@
       "title": "動詞編セット7",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 161~170",
+      "subtitle": "動詞 161~170",
       "questions": [
         {
           "scenario": "「calibrate」の意味として最も適切なものは？",
@@ -912,7 +912,7 @@
       "title": "動詞編セット8",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 171~180",
+      "subtitle": "動詞 171~180",
       "questions": [
         {
           "scenario": "「catalyze」の意味として最も適切なものは？",
@@ -1041,7 +1041,7 @@
       "title": "動詞編セット9",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 181~190",
+      "subtitle": "動詞 181~190",
       "questions": [
         {
           "scenario": "「choreograph」の意味として最も適切なものは？",
@@ -1170,7 +1170,7 @@
       "title": "動詞編セット10",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
-      "subtitle": "英検2級の動詞 191~200",
+      "subtitle": "動詞 191~200",
       "questions": [
         {
           "scenario": "「cleave」の意味として最も適切なものは？",

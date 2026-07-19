@@ -1,8 +1,8 @@
 {
   "id": "eiken5",
   "level": 5,
-  "label": "🔤 基礎単語編⑤",
-  "description": "英検5級レベルの基本英単語⑤（動詞・名詞・形容詞・数字・日常会話）",
+  "label": "パート 5",
+  "description": "重要単語・表現のクイズ",
   "tests": [
     {
       "id": 1,
@@ -11,16 +11,126 @@
       "emoji": "🧠",
       "subtitle": "思考や記憶、好む状態を表す動詞",
       "questions": [
-        {"scenario": "「enjoy」の意味として最も適切なものは？", "choices": ["楽しむ", "嫌う", "悲しむ", "働く"], "correct": 0, "explanation": "enjoyは「楽しむ」という意味の動詞です。例: enjoy the party（パーティーを楽しむ）", "type": "choice"},
-        {"scenario": "「remember」の意味として最も適切なものは？", "choices": ["覚えている、思い出す", "忘れる", "知る", "考える"], "correct": 0, "explanation": "rememberは「覚えている、思い出す」という意味の動詞です。対義語はforget（忘れる）です。", "type": "choice"},
-        {"scenario": "「forget」の意味として最も適切なものは？", "choices": ["忘れる", "覚えている", "思い出す", "考える"], "correct": 0, "explanation": "forgetは「忘れる」という意味の動詞です。対義語はremember（覚えている）です。例: Don't forget!（忘れないで！）", "type": "choice"},
-        {"scenario": "「lose」の意味として最も適切なものは？", "choices": ["失う、なくす、負ける", "見つける", "勝つ", "手に入れる"], "correct": 0, "explanation": "loseは「失う、なくす」または試合に「負ける」という意味の動詞です。例: lose the game（試合に負ける）", "type": "choice"},
-        {"scenario": "「choose」の意味として最も適切なものは？", "choices": ["選ぶ", "捨てる", "探す", "買う"], "correct": 0, "explanation": "chooseは「選ぶ、選択する」という意味の動詞です。例: choose a book（本を選ぶ）", "type": "choice"},
-        {"scenario": "「check」の意味として最も適切なものは？", "choices": ["確かめる、検査する、チェックする", "忘れる", "書く", "消す"], "correct": 0, "explanation": "checkは「確かめる、検査する、照合する」という意味の動詞です。例: check the time（時間を確かめる）", "type": "choice"},
-        {"scenario": "「sound」を動詞として使うとどんな意味か？", "choices": ["（〜のように）聞こえる、音が鳴る", "見る", "歌う", "静かにする"], "correct": 0, "explanation": "soundは「音」という名詞のほかに、「〜のように聞こえる」という動詞の意味があります。例: Sounds good!（良さそうだね！）", "type": "choice"},
-        {"scenario": "「guess」の意味として最も適切なものは？", "choices": ["推測する、言い当てる", "知っている", "忘れる", "答える"], "correct": 0, "explanation": "guessは「（根拠が少ない状態で）推測する、言い当てる」という意味の動詞です。例: Guess what!（何だと思う！）", "type": "choice"},
-        {"scenario": "「keep」の意味として最も適切なものは？", "choices": ["持ち続ける、保つ、守る", "捨てる", "手渡す", "失う"], "correct": 0, "explanation": "keepは「持ち続ける」「（状態を）保つ」「（約束を）守る」という意味の動詞です。例: keep the promise（約束を守る）", "type": "choice"},
-        {"scenario": "「leave」の意味として最も適切なものは？", "choices": ["去る、出発する、残す、置き忘れる", "来る", "到着する", "持ってくる"], "correct": 0, "explanation": "leaveは「去る、出発する」や、「残す、置き忘れる」など多くの意味を持つ重要な動詞です。例: leave the room（部屋を出る）", "type": "choice"}
+        {
+          "scenario": "「enjoy」の意味として最も適切なものは？",
+          "choices": [
+            "楽しむ",
+            "嫌う",
+            "悲しむ",
+            "働く"
+          ],
+          "correct": 0,
+          "explanation": "enjoyは「楽しむ」という意味の動詞です。例: enjoy the party（パーティーを楽しむ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「remember」の意味として最も適切なものは？",
+          "choices": [
+            "覚えている、思い出す",
+            "忘れる",
+            "知る",
+            "考える"
+          ],
+          "correct": 0,
+          "explanation": "rememberは「覚えている、思い出す」という意味の動詞です。対義語はforget（忘れる）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「forget」の意味として最も適切なものは？",
+          "choices": [
+            "忘れる",
+            "覚えている",
+            "思い出す",
+            "考える"
+          ],
+          "correct": 0,
+          "explanation": "forgetは「忘れる」という意味の動詞です。対義語はremember（覚えている）です。例: Don't forget!（忘れないで！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lose」の意味として最も適切なものは？",
+          "choices": [
+            "失う、なくす、負ける",
+            "見つける",
+            "勝つ",
+            "手に入れる"
+          ],
+          "correct": 0,
+          "explanation": "loseは「失う、なくす」または試合に「負ける」という意味の動詞です。例: lose the game（試合に負ける）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「choose」の意味として最も適切なものは？",
+          "choices": [
+            "選ぶ",
+            "捨てる",
+            "探す",
+            "買う"
+          ],
+          "correct": 0,
+          "explanation": "chooseは「選ぶ、選択する」という意味の動詞です。例: choose a book（本を選ぶ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「check」の意味として最も適切なものは？",
+          "choices": [
+            "確かめる、検査する、チェックする",
+            "忘れる",
+            "書く",
+            "消す"
+          ],
+          "correct": 0,
+          "explanation": "checkは「確かめる、検査する、照合する」という意味の動詞です。例: check the time（時間を確かめる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sound」を動詞として使うとどんな意味か？",
+          "choices": [
+            "（〜のように）聞こえる、音が鳴る",
+            "見る",
+            "歌う",
+            "静かにする"
+          ],
+          "correct": 0,
+          "explanation": "soundは「音」という名詞のほかに、「〜のように聞こえる」という動詞の意味があります。例: Sounds good!（良さそうだね！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「guess」の意味として最も適切なものは？",
+          "choices": [
+            "推測する、言い当てる",
+            "知っている",
+            "忘れる",
+            "答える"
+          ],
+          "correct": 0,
+          "explanation": "guessは「（根拠が少ない状態で）推測する、言い当てる」という意味の動詞です。例: Guess what!（何だと思う！）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep」の意味として最も適切なものは？",
+          "choices": [
+            "持ち続ける、保つ、守る",
+            "捨てる",
+            "手渡す",
+            "失う"
+          ],
+          "correct": 0,
+          "explanation": "keepは「持ち続ける」「（状態を）保つ」「（約束を）守る」という意味の動詞です。例: keep the promise（約束を守る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「leave」の意味として最も適切なものは？",
+          "choices": [
+            "去る、出発する、残す、置き忘れる",
+            "来る",
+            "到着する",
+            "持ってくる"
+          ],
+          "correct": 0,
+          "explanation": "leaveは「去る、出発する」や、「残す、置き忘れる」など多くの意味を持つ重要な動詞です。例: leave the room（部屋を出る）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -30,16 +140,126 @@
       "emoji": "🐻",
       "subtitle": "いろいろな動物の名前",
       "questions": [
-        {"scenario": "「rabbit」の意味として最も適切なものは？", "choices": ["うさぎ", "クマ", "サル", "リス"], "correct": 0, "explanation": "rabbitは「うさぎ（兎）」を表す名詞です。例: white rabbit（白いウサギ）", "type": "choice"},
-        {"scenario": "「bear」の意味として最も適切なものは？", "choices": ["クマ", "ライオン", "トラ", "ゾウ"], "correct": 0, "explanation": "bearは「クマ（熊）」を表す名詞です。例: polar bear（ホッキョクグマ）", "type": "choice"},
-        {"scenario": "「lion」の意味として最も適切なものは？", "choices": ["ライオン", "トラ", "ヒョウ", "オオカミ"], "correct": 0, "explanation": "lionは「ライオン」を表す名詞です。百獣の王とも呼ばれますね。", "type": "choice"},
-        {"scenario": "「tiger」の意味として最も適切なものは？", "choices": ["トラ", "ライオン", "ネコ", "イヌ"], "correct": 0, "explanation": "tigerは「トラ（虎）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「monkey」の意味として最も適切なものは？", "choices": ["サル", "ゴリラ", "チンパンジー", "クマ"], "correct": 0, "explanation": "monkeyは「サル（猿）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「elephant」の意味として最も適切なものは？", "choices": ["ゾウ", "キリン", "カバ", "サイ"], "correct": 0, "explanation": "elephantは鼻の長い動物である「ゾウ（象）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「horse」の意味として最も適切なものは？", "choices": ["馬", "ウシ", "ブタ", "羊"], "correct": 0, "explanation": "horseは「馬（うま）」を表す名詞です。例: ride a horse（馬に乗る）", "type": "choice"},
-        {"scenario": "「cow」の意味として最も適切なものは？", "choices": ["乳牛、メス牛", "馬", "羊", "ヤギ"], "correct": 0, "explanation": "cowは「（主に乳を搾るための）雌牛、乳牛」を表す名詞です。", "type": "choice"},
-        {"scenario": "「pig」の意味として最も適切なものは？", "choices": ["ブタ", "ウシ", "ウマ", "ニワトリ"], "correct": 0, "explanation": "pigは「ブタ（豚）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「sheep」の意味として最も適切なものは？", "choices": ["羊", "ヤギ", "ウマ", "ウシ"], "correct": 0, "explanation": "sheepはモコモコした毛の動物「羊（ひつじ）」を表す名詞です。単数形と複数形が同じ形（単複同形）です。", "type": "choice"}
+        {
+          "scenario": "「rabbit」の意味として最も適切なものは？",
+          "choices": [
+            "うさぎ",
+            "クマ",
+            "サル",
+            "リス"
+          ],
+          "correct": 0,
+          "explanation": "rabbitは「うさぎ（兎）」を表す名詞です。例: white rabbit（白いウサギ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bear」の意味として最も適切なものは？",
+          "choices": [
+            "クマ",
+            "ライオン",
+            "トラ",
+            "ゾウ"
+          ],
+          "correct": 0,
+          "explanation": "bearは「クマ（熊）」を表す名詞です。例: polar bear（ホッキョクグマ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「lion」の意味として最も適切なものは？",
+          "choices": [
+            "ライオン",
+            "トラ",
+            "ヒョウ",
+            "オオカミ"
+          ],
+          "correct": 0,
+          "explanation": "lionは「ライオン」を表す名詞です。百獣の王とも呼ばれますね。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tiger」の意味として最も適切なものは？",
+          "choices": [
+            "トラ",
+            "ライオン",
+            "ネコ",
+            "イヌ"
+          ],
+          "correct": 0,
+          "explanation": "tigerは「トラ（虎）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「monkey」の意味として最も適切なものは？",
+          "choices": [
+            "サル",
+            "ゴリラ",
+            "チンパンジー",
+            "クマ"
+          ],
+          "correct": 0,
+          "explanation": "monkeyは「サル（猿）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elephant」の意味として最も適切なものは？",
+          "choices": [
+            "ゾウ",
+            "キリン",
+            "カバ",
+            "サイ"
+          ],
+          "correct": 0,
+          "explanation": "elephantは鼻の長い動物である「ゾウ（象）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「horse」の意味として最も適切なものは？",
+          "choices": [
+            "馬",
+            "ウシ",
+            "ブタ",
+            "羊"
+          ],
+          "correct": 0,
+          "explanation": "horseは「馬（うま）」を表す名詞です。例: ride a horse（馬に乗る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cow」の意味として最も適切なものは？",
+          "choices": [
+            "乳牛、メス牛",
+            "馬",
+            "羊",
+            "ヤギ"
+          ],
+          "correct": 0,
+          "explanation": "cowは「（主に乳を搾るための）雌牛、乳牛」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pig」の意味として最も適切なものは？",
+          "choices": [
+            "ブタ",
+            "ウシ",
+            "ウマ",
+            "ニワトリ"
+          ],
+          "correct": 0,
+          "explanation": "pigは「ブタ（豚）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sheep」の意味として最も適切なものは？",
+          "choices": [
+            "羊",
+            "ヤギ",
+            "ウマ",
+            "ウシ"
+          ],
+          "correct": 0,
+          "explanation": "sheepはモコモコした毛の動物「羊（ひつじ）」を表す名詞です。単数形と複数形が同じ形（単複同形）です。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -49,16 +269,126 @@
       "emoji": "🍌",
       "subtitle": "食卓でおなじみの果物や野菜、肉の名前",
       "questions": [
-        {"scenario": "「banana」の意味として最も適切なものは？", "choices": ["バナナ", "りんご", "みかん", "レモン"], "correct": 0, "explanation": "bananaは「バナナ」を表す名詞です。黄色い果物です。", "type": "choice"},
-        {"scenario": "「orange」の意味として最も適切なものは？", "choices": ["オレンジ、みかん、オレンジ色", "りんご", "ぶどう", "いちご"], "correct": 0, "explanation": "orangeは果物の「オレンジ、みかん」、または「オレンジ色（橙色）」を表す名詞・形容詞です。", "type": "choice"},
-        {"scenario": "「grape」の意味として最も適切なものは？", "choices": ["ぶどう", "いちご", "バナナ", "もも"], "correct": 0, "explanation": "grapeは「ぶどう（葡萄）」を表す名詞です。例: grape juice（ぶどうジュース）", "type": "choice"},
-        {"scenario": "「tomato」の意味として最も適切なものは？", "choices": ["トマト", "ジャガイモ", "タマネギ", "キャベツ"], "correct": 0, "explanation": "tomatoは「トマト」を表す名詞です。赤くて丸い野菜（果実）です。", "type": "choice"},
-        {"scenario": "「potato」の意味として最も適切なものは？", "choices": ["ジャガイモ", "サツマイモ", "トマト", "ニンジン"], "correct": 0, "explanation": "potatoは「ジャガイモ」を表す名詞です。例: sweet potato（サツマイモ）", "type": "choice"},
-        {"scenario": "「salad」の意味として最も適切なものは？", "choices": ["サラダ", "スープ", "サンドイッチ", "ステーキ"], "correct": 0, "explanation": "saladは野菜などを盛り合わせた「サラダ」を表す名詞です。例: potato salad（ポテトサラダ）", "type": "choice"},
-        {"scenario": "「beef」の意味として最も適切なものは？", "choices": ["牛肉", "豚肉", "鶏肉", "羊肉"], "correct": 0, "explanation": "beefは「牛肉（ぎゅうにく）」を表す名詞です。生きた牛はcowやoxと言います。", "type": "choice"},
-        {"scenario": "「pork」の意味として最も適切なものは？", "choices": ["豚肉", "牛肉", "鶏肉", "魚の肉"], "correct": 0, "explanation": "porkは「豚肉（ぶたにく）」を表す名詞です。生きた豚はpigと言います。", "type": "choice"},
-        {"scenario": "「chicken」の意味として最も適切なものは？", "choices": ["鶏肉、ニワトリ", "豚肉", "牛肉", "七面鳥"], "correct": 0, "explanation": "chickenは「鶏肉」、または鳥の「ニワトリ（鶏）」を表す名詞です。", "type": "choice"},
-        {"scenario": "「soup」の意味として最も適切なものは？", "choices": ["スープ、汁物", "ジュース", "水", "サラダ"], "correct": 0, "explanation": "soupは温かい「スープ、汁物」を表す名詞です。例: hot soup（温かいスープ）", "type": "choice"}
+        {
+          "scenario": "「banana」の意味として最も適切なものは？",
+          "choices": [
+            "バナナ",
+            "りんご",
+            "みかん",
+            "レモン"
+          ],
+          "correct": 0,
+          "explanation": "bananaは「バナナ」を表す名詞です。黄色い果物です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「orange」の意味として最も適切なものは？",
+          "choices": [
+            "オレンジ、みかん、オレンジ色",
+            "りんご",
+            "ぶどう",
+            "いちご"
+          ],
+          "correct": 0,
+          "explanation": "orangeは果物の「オレンジ、みかん」、または「オレンジ色（橙色）」を表す名詞・形容詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grape」の意味として最も適切なものは？",
+          "choices": [
+            "ぶどう",
+            "いちご",
+            "バナナ",
+            "もも"
+          ],
+          "correct": 0,
+          "explanation": "grapeは「ぶどう（葡萄）」を表す名詞です。例: grape juice（ぶどうジュース）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tomato」の意味として最も適切なものは？",
+          "choices": [
+            "トマト",
+            "ジャガイモ",
+            "タマネギ",
+            "キャベツ"
+          ],
+          "correct": 0,
+          "explanation": "tomatoは「トマト」を表す名詞です。赤くて丸い野菜（果実）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「potato」の意味として最も適切なものは？",
+          "choices": [
+            "ジャガイモ",
+            "サツマイモ",
+            "トマト",
+            "ニンジン"
+          ],
+          "correct": 0,
+          "explanation": "potatoは「ジャガイモ」を表す名詞です。例: sweet potato（サツマイモ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「salad」の意味として最も適切なものは？",
+          "choices": [
+            "サラダ",
+            "スープ",
+            "サンドイッチ",
+            "ステーキ"
+          ],
+          "correct": 0,
+          "explanation": "saladは野菜などを盛り合わせた「サラダ」を表す名詞です。例: potato salad（ポテトサラダ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beef」の意味として最も適切なものは？",
+          "choices": [
+            "牛肉",
+            "豚肉",
+            "鶏肉",
+            "羊肉"
+          ],
+          "correct": 0,
+          "explanation": "beefは「牛肉（ぎゅうにく）」を表す名詞です。生きた牛はcowやoxと言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pork」の意味として最も適切なものは？",
+          "choices": [
+            "豚肉",
+            "牛肉",
+            "鶏肉",
+            "魚の肉"
+          ],
+          "correct": 0,
+          "explanation": "porkは「豚肉（ぶたにく）」を表す名詞です。生きた豚はpigと言います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chicken」の意味として最も適切なものは？",
+          "choices": [
+            "鶏肉、ニワトリ",
+            "豚肉",
+            "牛肉",
+            "七面鳥"
+          ],
+          "correct": 0,
+          "explanation": "chickenは「鶏肉」、または鳥の「ニワトリ（鶏）」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「soup」の意味として最も適切なものは？",
+          "choices": [
+            "スープ、汁物",
+            "ジュース",
+            "水",
+            "サラダ"
+          ],
+          "correct": 0,
+          "explanation": "soupは温かい「スープ、汁物」を表す名詞です。例: hot soup（温かいスープ）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -68,16 +398,126 @@
       "emoji": "🧦",
       "subtitle": "身につけるものとカラーのバリエーション",
       "questions": [
-        {"scenario": "「socks」の意味として最も適切なものは？", "choices": ["靴下", "靴", "手袋", "ズボン"], "correct": 0, "explanation": "socksは「靴下（くつした）」を表す名詞です。通常2つで一足のため複数形で使われます。", "type": "choice"},
-        {"scenario": "「pants」の意味として最も適切なものは？", "choices": ["ズボン、パンツ", "スカート", "シャツ", "靴下"], "correct": 0, "explanation": "pantsは「ズボン」を表す名詞です。イギリス英語ではtrousersとも言います。通常複数形で使います。", "type": "choice"},
-        {"scenario": "「skirt」の意味として最も適切なものは？", "choices": ["スカート", "ズボン", "ドレス", "コート"], "correct": 0, "explanation": "skirtは「スカート」を表す名詞です。例: long skirt（長いスカート）", "type": "choice"},
-        {"scenario": "「dress」の意味として最も適切なものは？", "choices": ["ドレス、ワンピース、衣服", "スカート", "ズボン", "シャツ"], "correct": 0, "explanation": "dressは「ドレス、ワンピース」、または「衣服」全般を表す名詞です。", "type": "choice"},
-        {"scenario": "「jacket」の意味として最も適切なものは？", "choices": ["ジャケット、上着", "ズボン", "コート", "シャツ"], "correct": 0, "explanation": "jacketは丈の短い「ジャケット、上着」を表す名詞です。", "type": "choice"},
-        {"scenario": "「yellow」の意味として最も適切なものは？", "choices": ["黄色い、黄色", "赤い", "青い", "緑の"], "correct": 0, "explanation": "yellowは「黄色い、黄色」を表す形容詞・名詞です。例: a yellow flower（黄色い花）", "type": "choice"},
-        {"scenario": "「brown」の意味として最も適切なものは？", "choices": ["茶色い、茶色", "黄色い", "黒い", "灰色の"], "correct": 0, "explanation": "brownは「茶色い、茶色（褐色）」を表す形容詞・名詞です。例: brown dog（茶色い犬）", "type": "choice"},
-        {"scenario": "「pink」の意味として最も適切なものは？", "choices": ["桃色の、ピンク", "赤い", "白い", "紫の"], "correct": 0, "explanation": "pinkは「桃色の、ピンク」を表す形容詞・名詞です。例: pink ribbon（ピンクのリボン）", "type": "choice"},
-        {"scenario": "「purple」の意味として最も適切なものは？", "choices": ["紫の、紫", "青い", "ピンクの", "茶色い"], "correct": 0, "explanation": "purpleは「紫の、紫」を表す形容詞・名詞です。例: purple grapes（紫色のぶどう）", "type": "choice"},
-        {"scenario": "「gray」の意味として最も適切なものは？", "choices": ["灰色の、グレー", "黒い", "白い", "青い"], "correct": 0, "explanation": "grayは「灰色の、グレー」を表す形容詞・名詞です。イギリスではgreyとつづることもあります。", "type": "choice"}
+        {
+          "scenario": "「socks」の意味として最も適切なものは？",
+          "choices": [
+            "靴下",
+            "靴",
+            "手袋",
+            "ズボン"
+          ],
+          "correct": 0,
+          "explanation": "socksは「靴下（くつした）」を表す名詞です。通常2つで一足のため複数形で使われます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pants」の意味として最も適切なものは？",
+          "choices": [
+            "ズボン、パンツ",
+            "スカート",
+            "シャツ",
+            "靴下"
+          ],
+          "correct": 0,
+          "explanation": "pantsは「ズボン」を表す名詞です。イギリス英語ではtrousersとも言います。通常複数形で使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「skirt」の意味として最も適切なものは？",
+          "choices": [
+            "スカート",
+            "ズボン",
+            "ドレス",
+            "コート"
+          ],
+          "correct": 0,
+          "explanation": "skirtは「スカート」を表す名詞です。例: long skirt（長いスカート）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dress」の意味として最も適切なものは？",
+          "choices": [
+            "ドレス、ワンピース、衣服",
+            "スカート",
+            "ズボン",
+            "シャツ"
+          ],
+          "correct": 0,
+          "explanation": "dressは「ドレス、ワンピース」、または「衣服」全般を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「jacket」の意味として最も適切なものは？",
+          "choices": [
+            "ジャケット、上着",
+            "ズボン",
+            "コート",
+            "シャツ"
+          ],
+          "correct": 0,
+          "explanation": "jacketは丈の短い「ジャケット、上着」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「yellow」の意味として最も適切なものは？",
+          "choices": [
+            "黄色い、黄色",
+            "赤い",
+            "青い",
+            "緑の"
+          ],
+          "correct": 0,
+          "explanation": "yellowは「黄色い、黄色」を表す形容詞・名詞です。例: a yellow flower（黄色い花）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brown」の意味として最も適切なものは？",
+          "choices": [
+            "茶色い、茶色",
+            "黄色い",
+            "黒い",
+            "灰色の"
+          ],
+          "correct": 0,
+          "explanation": "brownは「茶色い、茶色（褐色）」を表す形容詞・名詞です。例: brown dog（茶色い犬）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pink」の意味として最も適切なものは？",
+          "choices": [
+            "桃色の、ピンク",
+            "赤い",
+            "白い",
+            "紫の"
+          ],
+          "correct": 0,
+          "explanation": "pinkは「桃色の、ピンク」を表す形容詞・名詞です。例: pink ribbon（ピンクのリボン）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「purple」の意味として最も適切なものは？",
+          "choices": [
+            "紫の、紫",
+            "青い",
+            "ピンクの",
+            "茶色い"
+          ],
+          "correct": 0,
+          "explanation": "purpleは「紫の、紫」を表す形容詞・名詞です。例: purple grapes（紫色のぶどう）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gray」の意味として最も適切なものは？",
+          "choices": [
+            "灰色の、グレー",
+            "黒い",
+            "白い",
+            "青い"
+          ],
+          "correct": 0,
+          "explanation": "grayは「灰色の、グレー」を表す形容詞・名詞です。イギリスではgreyとつづることもあります。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -87,16 +527,126 @@
       "emoji": "🧑‍✈️",
       "subtitle": "いろいろな職業や身分を表す名詞",
       "questions": [
-        {"scenario": "「nurse」の意味として最も適切なものは？", "choices": ["看護師、ナース", "医者", "患者", "薬剤師"], "correct": 0, "explanation": "nurseは「看護師」を表す名詞です。例: work as a nurse（看護師として働く）", "type": "choice"},
-        {"scenario": "「singer」の意味として最も適切なものは？", "choices": ["歌手", "俳優", "ダンサー", "演奏家"], "correct": 0, "explanation": "singerは「歌手」を表す名詞です。sing（歌う）にerがついた形です。例: a famous singer（有名な歌手）", "type": "choice"},
-        {"scenario": "「driver」の意味として最も適切なものは？", "choices": ["運転手", "歩行者", "乗客", "パイロット"], "correct": 0, "explanation": "driverは「（車の）運転手」を表す名詞です。drive（運転する）にrがついた形です。例: bus driver（バスの運転手）", "type": "choice"},
-        {"scenario": "「player」の意味として最も適切なものは？", "choices": ["（スポーツなどの）選手、演奏者", "観客", "コーチ", "審判"], "correct": 0, "explanation": "playerはスポーツなどの「選手、プレイヤー」、または楽器の「演奏者」を表す名詞です。", "type": "choice"},
-        {"scenario": "「pilot」の意味として最も適切なものは？", "choices": ["（飛行機などの）操縦士、パイロット", "運転手", "船長", "車掌"], "correct": 0, "explanation": "pilotは飛行機の「操縦士、パイロット」を表す名詞です。", "type": "choice"},
-        {"scenario": "「actor」の意味として最も適切なものは？", "choices": ["俳優、役者", "歌手", "監督", "脚本家"], "correct": 0, "explanation": "actorは「俳優、役者」を表す名詞です。女性を特にactressと呼ぶこともあります。", "type": "choice"},
-        {"scenario": "「writer」の意味として最も適切なものは？", "choices": ["作家、著者", "読者", "編集者", "画家"], "correct": 0, "explanation": "writerは「作家、文筆家、著者」を表す名詞です。write（書く）にrがついた形です。", "type": "choice"},
-        {"scenario": "「king」の意味として最も適切なものは？", "choices": ["王、国王", "女王", "王子", "王女"], "correct": 0, "explanation": "kingは「王、国王、キング」を表す名詞です。対義語はqueen（女王）です。", "type": "choice"},
-        {"scenario": "「queen」の意味として最も適切なものは？", "choices": ["女王、王妃", "国王", "王子", "姫"], "correct": 0, "explanation": "queenは「女王、王妃、クイーン」を表す名詞です。対義語はking（王）です。", "type": "choice"},
-        {"scenario": "「police officer」の意味として最も適切なものは？", "choices": ["警察官", "消防士", "警備員", "軍人"], "correct": 0, "explanation": "police officerは「警察官」を表す名詞です。昔はpolicemanとも言われました。", "type": "choice"}
+        {
+          "scenario": "「nurse」の意味として最も適切なものは？",
+          "choices": [
+            "看護師、ナース",
+            "医者",
+            "患者",
+            "薬剤師"
+          ],
+          "correct": 0,
+          "explanation": "nurseは「看護師」を表す名詞です。例: work as a nurse（看護師として働く）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「singer」の意味として最も適切なものは？",
+          "choices": [
+            "歌手",
+            "俳優",
+            "ダンサー",
+            "演奏家"
+          ],
+          "correct": 0,
+          "explanation": "singerは「歌手」を表す名詞です。sing（歌う）にerがついた形です。例: a famous singer（有名な歌手）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「driver」の意味として最も適切なものは？",
+          "choices": [
+            "運転手",
+            "歩行者",
+            "乗客",
+            "パイロット"
+          ],
+          "correct": 0,
+          "explanation": "driverは「（車の）運転手」を表す名詞です。drive（運転する）にrがついた形です。例: bus driver（バスの運転手）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「player」の意味として最も適切なものは？",
+          "choices": [
+            "（スポーツなどの）選手、演奏者",
+            "観客",
+            "コーチ",
+            "審判"
+          ],
+          "correct": 0,
+          "explanation": "playerはスポーツなどの「選手、プレイヤー」、または楽器の「演奏者」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pilot」の意味として最も適切なものは？",
+          "choices": [
+            "（飛行機などの）操縦士、パイロット",
+            "運転手",
+            "船長",
+            "車掌"
+          ],
+          "correct": 0,
+          "explanation": "pilotは飛行機の「操縦士、パイロット」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「actor」の意味として最も適切なものは？",
+          "choices": [
+            "俳優、役者",
+            "歌手",
+            "監督",
+            "脚本家"
+          ],
+          "correct": 0,
+          "explanation": "actorは「俳優、役者」を表す名詞です。女性を特にactressと呼ぶこともあります。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「writer」の意味として最も適切なものは？",
+          "choices": [
+            "作家、著者",
+            "読者",
+            "編集者",
+            "画家"
+          ],
+          "correct": 0,
+          "explanation": "writerは「作家、文筆家、著者」を表す名詞です。write（書く）にrがついた形です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「king」の意味として最も適切なものは？",
+          "choices": [
+            "王、国王",
+            "女王",
+            "王子",
+            "王女"
+          ],
+          "correct": 0,
+          "explanation": "kingは「王、国王、キング」を表す名詞です。対義語はqueen（女王）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「queen」の意味として最も適切なものは？",
+          "choices": [
+            "女王、王妃",
+            "国王",
+            "王子",
+            "姫"
+          ],
+          "correct": 0,
+          "explanation": "queenは「女王、王妃、クイーン」を表す名詞です。対義語はking（王）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「police officer」の意味として最も適切なものは？",
+          "choices": [
+            "警察官",
+            "消防士",
+            "警備員",
+            "軍人"
+          ],
+          "correct": 0,
+          "explanation": "police officerは「警察官」を表す名詞です。昔はpolicemanとも言われました。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -106,16 +656,126 @@
       "emoji": "📅",
       "subtitle": "1年の前半にあたる1月から6月まで",
       "questions": [
-        {"scenario": "「January」の意味として最も適切なものは？", "choices": ["1月（いちがつ）", "2月", "3月", "12月"], "correct": 0, "explanation": "Januaryは「1月」を指す名詞です。頭文字は必ず大文字で書きます。", "type": "choice"},
-        {"scenario": "「February」の意味として最も適切なものは？", "choices": ["2月（にがつ）", "1月", "3月", "4月"], "correct": 0, "explanation": "Februaryは「2月」を指す名詞です。スペルが少し難しいので注意しましょう。", "type": "choice"},
-        {"scenario": "「March」の意味として最も適切なものは？", "choices": ["3月（さんがつ）", "4月", "5月", "2月"], "correct": 0, "explanation": "Marchは「3月」を指す名詞です。春の始まりの月ですね。", "type": "choice"},
-        {"scenario": "「April」の意味として最も適切なものは？", "choices": ["4月（しがつ）", "3月", "5月", "6月"], "correct": 0, "explanation": "Aprilは「4月」を指す名詞です。新学期の始まる月です。", "type": "choice"},
-        {"scenario": "「May」の意味として最も適切なものは？", "choices": ["5月（ごがつ）", "6月", "4月", "3月"], "correct": 0, "explanation": "Mayは「5月」を指す名詞です。助動詞のmayと同じスペルですが、月名は常に大文字で始めます。", "type": "choice"},
-        {"scenario": "「June」の意味として最も適切なものは？", "choices": ["6月（ろくがつ）", "7月", "5月", "4月"], "correct": 0, "explanation": "Juneは「6月」を指す名詞です。日本では梅雨の時期ですね。", "type": "choice"},
-        {"scenario": "「months」のように複数形にするとどんな意味か？", "choices": ["（複数の）月、数ヶ月", "週", "年", "曜日"], "correct": 0, "explanation": "month（月）にsがついた複数形で、「数ヶ月、いくつかの月」を表します。", "type": "choice"},
-        {"scenario": "「first」の意味として最も適切なものは？", "choices": ["第1の、最初の、最初に", "2番目の", "最後の", "次の"], "correct": 0, "explanation": "firstは順序の「最初の、第1の」、または「最初に」という意味の形容詞・副詞（序数詞）です。", "type": "choice"},
-        {"scenario": "「calendar」の意味として最も適切なものは？", "choices": ["カレンダー、暦", "時計", "ノート", "手帳"], "correct": 0, "explanation": "calendarは日付や曜日を確認する「カレンダー、暦」を表す名詞です。", "type": "choice"},
-        {"scenario": "「half」の意味として最も適切なものは？", "choices": ["半分、2分の1", "全部", "倍", "一部"], "correct": 0, "explanation": "halfは「半分、2分の1」を表す名詞・形容詞です。例: half an hour（30分＝半時間）", "type": "choice"}
+        {
+          "scenario": "「January」の意味として最も適切なものは？",
+          "choices": [
+            "1月（いちがつ）",
+            "2月",
+            "3月",
+            "12月"
+          ],
+          "correct": 0,
+          "explanation": "Januaryは「1月」を指す名詞です。頭文字は必ず大文字で書きます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「February」の意味として最も適切なものは？",
+          "choices": [
+            "2月（にがつ）",
+            "1月",
+            "3月",
+            "4月"
+          ],
+          "correct": 0,
+          "explanation": "Februaryは「2月」を指す名詞です。スペルが少し難しいので注意しましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「March」の意味として最も適切なものは？",
+          "choices": [
+            "3月（さんがつ）",
+            "4月",
+            "5月",
+            "2月"
+          ],
+          "correct": 0,
+          "explanation": "Marchは「3月」を指す名詞です。春の始まりの月ですね。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「April」の意味として最も適切なものは？",
+          "choices": [
+            "4月（しがつ）",
+            "3月",
+            "5月",
+            "6月"
+          ],
+          "correct": 0,
+          "explanation": "Aprilは「4月」を指す名詞です。新学期の始まる月です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「May」の意味として最も適切なものは？",
+          "choices": [
+            "5月（ごがつ）",
+            "6月",
+            "4月",
+            "3月"
+          ],
+          "correct": 0,
+          "explanation": "Mayは「5月」を指す名詞です。助動詞のmayと同じスペルですが、月名は常に大文字で始めます。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「June」の意味として最も適切なものは？",
+          "choices": [
+            "6月（ろくがつ）",
+            "7月",
+            "5月",
+            "4月"
+          ],
+          "correct": 0,
+          "explanation": "Juneは「6月」を指す名詞です。日本では梅雨の時期ですね。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「months」のように複数形にするとどんな意味か？",
+          "choices": [
+            "（複数の）月、数ヶ月",
+            "週",
+            "年",
+            "曜日"
+          ],
+          "correct": 0,
+          "explanation": "month（月）にsがついた複数形で、「数ヶ月、いくつかの月」を表します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「first」の意味として最も適切なものは？",
+          "choices": [
+            "第1の、最初の、最初に",
+            "2番目の",
+            "最後の",
+            "次の"
+          ],
+          "correct": 0,
+          "explanation": "firstは順序の「最初の、第1の」、または「最初に」という意味の形容詞・副詞（序数詞）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「calendar」の意味として最も適切なものは？",
+          "choices": [
+            "カレンダー、暦",
+            "時計",
+            "ノート",
+            "手帳"
+          ],
+          "correct": 0,
+          "explanation": "calendarは日付や曜日を確認する「カレンダー、暦」を表す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「half」の意味として最も適切なものは？",
+          "choices": [
+            "半分、2分の1",
+            "全部",
+            "倍",
+            "一部"
+          ],
+          "correct": 0,
+          "explanation": "halfは「半分、2分の1」を表す名詞・形容詞です。例: half an hour（30分＝半時間）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -125,16 +785,126 @@
       "emoji": "🗓️",
       "subtitle": "1年の後半にあたる7月から12月まで",
       "questions": [
-        {"scenario": "「July」の意味として最も適切なものは？", "choices": ["7月（しちがつ）", "8月", "6月", "9月"], "correct": 0, "explanation": "Julyは「7月」を指す名詞です。本格的な夏が始まる月です。", "type": "choice"},
-        {"scenario": "「August」の意味として最も適切なものは？", "choices": ["8月（はちがつ）", "7月", "9月", "10月"], "correct": 0, "explanation": "Augustは「8月」を指す名詞です。夏休みの多い月ですね。", "type": "choice"},
-        {"scenario": "「September」の意味として最も適切なものは？", "choices": ["9月（くがつ）", "10月", "8月", "11月"], "correct": 0, "explanation": "Septemberは「9月」を指す名詞です。秋の始まりの月です。", "type": "choice"},
-        {"scenario": "「October」の意味として最も適切なものは？", "choices": ["10月（じゅうがつ）", "9月", "11月", "12月"], "correct": 0, "explanation": "Octoberは「10月」を指す名詞です。ハロウィンがある月ですね。", "type": "choice"},
-        {"scenario": "「November」の意味として最も適切なものは？", "choices": ["11月（じゅういちがつ）", "10月", "12月", "9月"], "correct": 0, "explanation": "Novemberは「11月」を指す名詞です。", "type": "choice"},
-        {"scenario": "「December」の意味として最も適切なものは？", "choices": ["12月（じゅうにがつ）", "11月", "1月", "10月"], "correct": 0, "explanation": "Decemberは「12月」を指す名詞です。1年の最後の月です。", "type": "choice"},
-        {"scenario": "「last」を時間に関して使うとどんな意味か？", "choices": ["この前の、最後の", "最初の", "次の", "毎回の"], "correct": 0, "explanation": "lastには「この前の（時間）」という意味があります。例: last month（先月）、last week（先週）", "type": "choice"},
-        {"scenario": "「next」を時間に関して使うとどんな意味か？", "choices": ["次の、隣の", "前の", "最初の", "最近の"], "correct": 0, "explanation": "nextには「次の」という意味があります。例: next month（来月）、next week（来週）", "type": "choice"},
-        {"scenario": "「every」の意味として最も適切なものは？", "choices": ["すべての、毎〜", "いくつかの", "どれでも", "全く〜ない"], "correct": 0, "explanation": "everyは「すべての」「毎〜」という意味の形容詞です。例: every day（毎日）、every Sunday（毎週日曜日）", "type": "choice"},
-        {"scenario": "「end」の意味として最も適切なものは？", "choices": ["終わり、端", "始まり", "途中", "中央"], "correct": 0, "explanation": "endは「終わり、結末」という意味の名詞です。対義語はbeginningやstart（始まり）です。例: the end of the year（年末）", "type": "choice"}
+        {
+          "scenario": "「July」の意味として最も適切なものは？",
+          "choices": [
+            "7月（しちがつ）",
+            "8月",
+            "6月",
+            "9月"
+          ],
+          "correct": 0,
+          "explanation": "Julyは「7月」を指す名詞です。本格的な夏が始まる月です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「August」の意味として最も適切なものは？",
+          "choices": [
+            "8月（はちがつ）",
+            "7月",
+            "9月",
+            "10月"
+          ],
+          "correct": 0,
+          "explanation": "Augustは「8月」を指す名詞です。夏休みの多い月ですね。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「September」の意味として最も適切なものは？",
+          "choices": [
+            "9月（くがつ）",
+            "10月",
+            "8月",
+            "11月"
+          ],
+          "correct": 0,
+          "explanation": "Septemberは「9月」を指す名詞です。秋の始まりの月です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「October」の意味として最も適切なものは？",
+          "choices": [
+            "10月（じゅうがつ）",
+            "9月",
+            "11月",
+            "12月"
+          ],
+          "correct": 0,
+          "explanation": "Octoberは「10月」を指す名詞です。ハロウィンがある月ですね。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「November」の意味として最も適切なものは？",
+          "choices": [
+            "11月（じゅういちがつ）",
+            "10月",
+            "12月",
+            "9月"
+          ],
+          "correct": 0,
+          "explanation": "Novemberは「11月」を指す名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「December」の意味として最も適切なものは？",
+          "choices": [
+            "12月（じゅうにがつ）",
+            "11月",
+            "1月",
+            "10月"
+          ],
+          "correct": 0,
+          "explanation": "Decemberは「12月」を指す名詞です。1年の最後の月です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「last」を時間に関して使うとどんな意味か？",
+          "choices": [
+            "この前の、最後の",
+            "最初の",
+            "次の",
+            "毎回の"
+          ],
+          "correct": 0,
+          "explanation": "lastには「この前の（時間）」という意味があります。例: last month（先月）、last week（先週）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「next」を時間に関して使うとどんな意味か？",
+          "choices": [
+            "次の、隣の",
+            "前の",
+            "最初の",
+            "最近の"
+          ],
+          "correct": 0,
+          "explanation": "nextには「次の」という意味があります。例: next month（来月）、next week（来週）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「every」の意味として最も適切なものは？",
+          "choices": [
+            "すべての、毎〜",
+            "いくつかの",
+            "どれでも",
+            "全く〜ない"
+          ],
+          "correct": 0,
+          "explanation": "everyは「すべての」「毎〜」という意味の形容詞です。例: every day（毎日）、every Sunday（毎週日曜日）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「end」の意味として最も適切なものは？",
+          "choices": [
+            "終わり、端",
+            "始まり",
+            "途中",
+            "中央"
+          ],
+          "correct": 0,
+          "explanation": "endは「終わり、結末」という意味の名詞です。対義語はbeginningやstart（始まり）です。例: the end of the year（年末）",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -144,16 +914,126 @@
       "emoji": "💯",
       "subtitle": "10の倍数や100以上の大きな単位の数",
       "questions": [
-        {"scenario": "「thirty」の意味として最も適切なものは？", "choices": ["30（さんじゅう）", "13", "3", "300"], "correct": 0, "explanation": "thirtyは数字の「30」を表します。13 (thirteen) と聞き分けましょう。", "type": "choice"},
-        {"scenario": "「forty」の意味として最も適切なものは？", "choices": ["40（よんじゅう）", "14", "4", "400"], "correct": 0, "explanation": "fortyは数字の「40」を表します。fourtyではなく「u」が抜けるスペルに注意します。", "type": "choice"},
-        {"scenario": "「fifty」の意味として最も適切なものは？", "choices": ["50（ごじゅう）", "15", "5", "500"], "correct": 0, "explanation": "fiftyは数字の「50」を表します。", "type": "choice"},
-        {"scenario": "「sixty」の意味として最も適切なものは？", "choices": ["60（ろくじゅう）", "16", "6", "600"], "correct": 0, "explanation": "sixtyは数字の「60」を表します。", "type": "choice"},
-        {"scenario": "「seventy」の意味として最も適切なものは？", "choices": ["70（ななじゅう）", "17", "7", "700"], "correct": 0, "explanation": "seventyは数字の「70」を表します。", "type": "choice"},
-        {"scenario": "「eighty」の意味として最も適切なものは？", "choices": ["80（はちじゅう）", "18", "8", "800"], "correct": 0, "explanation": "eightyは数字の「80」を表します。", "type": "choice"},
-        {"scenario": "「ninety」の意味として最も適切なものは？", "choices": ["90（きゅうじゅう）", "19", "9", "900"], "correct": 0, "explanation": "ninetyは数字の「90」を表します。", "type": "choice"},
-        {"scenario": "「hundred」の意味として最も適切なものは？", "choices": ["100（ひゃく）", "10", "1000", "50"], "correct": 0, "explanation": "hundredは「100」を表す数詞・名詞です。例: one hundred（100）", "type": "choice"},
-        {"scenario": "「thousand」の意味として最も適切なものは？", "choices": ["1000（せん）", "100", "10000", "10"], "correct": 0, "explanation": "thousandは「1000」を表す数詞・名詞です。例: two thousand（2000）", "type": "choice"},
-        {"scenario": "「zero」の意味として最も適切なものは？", "choices": ["0（ゼロ、れい）", "1", "10", "無し"], "correct": 0, "explanation": "zeroは数字の「0、ゼロ」を表します。O（オー）と読まれることもあります。", "type": "choice"}
+        {
+          "scenario": "「thirty」の意味として最も適切なものは？",
+          "choices": [
+            "30（さんじゅう）",
+            "13",
+            "3",
+            "300"
+          ],
+          "correct": 0,
+          "explanation": "thirtyは数字の「30」を表します。13 (thirteen) と聞き分けましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「forty」の意味として最も適切なものは？",
+          "choices": [
+            "40（よんじゅう）",
+            "14",
+            "4",
+            "400"
+          ],
+          "correct": 0,
+          "explanation": "fortyは数字の「40」を表します。fourtyではなく「u」が抜けるスペルに注意します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fifty」の意味として最も適切なものは？",
+          "choices": [
+            "50（ごじゅう）",
+            "15",
+            "5",
+            "500"
+          ],
+          "correct": 0,
+          "explanation": "fiftyは数字の「50」を表します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「sixty」の意味として最も適切なものは？",
+          "choices": [
+            "60（ろくじゅう）",
+            "16",
+            "6",
+            "600"
+          ],
+          "correct": 0,
+          "explanation": "sixtyは数字の「60」を表します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「seventy」の意味として最も適切なものは？",
+          "choices": [
+            "70（ななじゅう）",
+            "17",
+            "7",
+            "700"
+          ],
+          "correct": 0,
+          "explanation": "seventyは数字の「70」を表します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eighty」の意味として最も適切なものは？",
+          "choices": [
+            "80（はちじゅう）",
+            "18",
+            "8",
+            "800"
+          ],
+          "correct": 0,
+          "explanation": "eightyは数字の「80」を表します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ninety」の意味として最も適切なものは？",
+          "choices": [
+            "90（きゅうじゅう）",
+            "19",
+            "9",
+            "900"
+          ],
+          "correct": 0,
+          "explanation": "ninetyは数字の「90」を表します。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hundred」の意味として最も適切なものは？",
+          "choices": [
+            "100（ひゃく）",
+            "10",
+            "1000",
+            "50"
+          ],
+          "correct": 0,
+          "explanation": "hundredは「100」を表す数詞・名詞です。例: one hundred（100）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「thousand」の意味として最も適切なものは？",
+          "choices": [
+            "1000（せん）",
+            "100",
+            "10000",
+            "10"
+          ],
+          "correct": 0,
+          "explanation": "thousandは「1000」を表す数詞・名詞です。例: two thousand（2000）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「zero」の意味として最も適切なものは？",
+          "choices": [
+            "0（ゼロ、れい）",
+            "1",
+            "10",
+            "無し"
+          ],
+          "correct": 0,
+          "explanation": "zeroは数字の「0、ゼロ」を表します。O（オー）と読まれることもあります。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -163,16 +1043,126 @@
       "emoji": "⚡",
       "subtitle": "速さや重要度などを表す言葉",
       "questions": [
-        {"scenario": "「important」の意味として最も適切なものは？", "choices": ["重要な、大切な", "簡単な", "難しい", "面白い"], "correct": 0, "explanation": "importantは「重要な、大切な」という意味の形容詞です。例: important information（重要な情報）", "type": "choice"},
-        {"scenario": "「popular」の意味として最も適切なものは？", "choices": ["人気のある、流行の", "有名な", "親切な", "珍しい"], "correct": 0, "explanation": "popularは「人気のある、大衆的な」という意味の形容詞です。例: popular music（ポピュラー音楽、ポップス）", "type": "choice"},
-        {"scenario": "「basic」の意味として最も適切なものは？", "choices": ["基本的な、基礎の", "応用的な", "難しい", "簡単な"], "correct": 0, "explanation": "basicは「基本的な、基礎の」という意味の形容詞です。例: basic words（基本単語）", "type": "choice"},
-        {"scenario": "「soft」の意味として最も適切なものは？", "choices": ["柔らかい、穏やかな", "硬い", "重い", "冷たい"], "correct": 0, "explanation": "softは「柔らかい」という意味の形容詞です。対義語はhard（硬い）です。", "type": "choice"},
-        {"scenario": "「early」の意味として最も適切なものは？", "choices": ["早い、早く（時間的に）", "遅い、遅く", "速い、速く", "ゆっくり"], "correct": 0, "explanation": "earlyは時間的に「早い」「早く」という意味の形容詞・副詞です。対義語はlateです。例: get up early（早く起きる）", "type": "choice"},
-        {"scenario": "「late」の意味として最も適切なものは？", "choices": ["遅い、遅れて、遅くに", "早い、早く", "最近の", "最後の"], "correct": 0, "explanation": "lateは時間的に「遅い、遅れて」という意味の形容詞・副詞です。対義語はearlyです。例: don't be late（遅れないで）", "type": "choice"},
-        {"scenario": "「quickly」の意味として最も適切なものは？", "choices": ["素早く、急いで", "ゆっくりと", "静かに", "いつも"], "correct": 0, "explanation": "quicklyは「素早く、急いで、速く」という意味の副詞です。例: run quickly（素早く走る）", "type": "choice"},
-        {"scenario": "「slowly」の意味として最も適切なものは？", "choices": ["ゆっくりと、遅く", "早く", "すぐに", "時々"], "correct": 0, "explanation": "slowlyは「ゆっくりと、遅く」という意味の副詞です。対義語はquicklyです。例: speak slowly（ゆっくり話す）", "type": "choice"},
-        {"scenario": "「together」の意味として最も適切なものは？", "choices": ["一緒に、共に", "別々に", "一人で", "いつも"], "correct": 0, "explanation": "togetherは「一緒に、共に」という意味の副詞です。例: play together（一緒に遊ぶ）", "type": "choice"},
-        {"scenario": "「another」の意味として最も適切なものは？", "choices": ["もう一つの、別の", "同じ", "最後の", "すべての"], "correct": 0, "explanation": "anotherは「もう一つの、別の」という意味の形容詞・代名詞です。an + other からなっています。", "type": "choice"}
+        {
+          "scenario": "「important」の意味として最も適切なものは？",
+          "choices": [
+            "重要な、大切な",
+            "簡単な",
+            "難しい",
+            "面白い"
+          ],
+          "correct": 0,
+          "explanation": "importantは「重要な、大切な」という意味の形容詞です。例: important information（重要な情報）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「popular」の意味として最も適切なものは？",
+          "choices": [
+            "人気のある、流行の",
+            "有名な",
+            "親切な",
+            "珍しい"
+          ],
+          "correct": 0,
+          "explanation": "popularは「人気のある、大衆的な」という意味の形容詞です。例: popular music（ポピュラー音楽、ポップス）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「basic」の意味として最も適切なものは？",
+          "choices": [
+            "基本的な、基礎の",
+            "応用的な",
+            "難しい",
+            "簡単な"
+          ],
+          "correct": 0,
+          "explanation": "basicは「基本的な、基礎の」という意味の形容詞です。例: basic words（基本単語）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「soft」の意味として最も適切なものは？",
+          "choices": [
+            "柔らかい、穏やかな",
+            "硬い",
+            "重い",
+            "冷たい"
+          ],
+          "correct": 0,
+          "explanation": "softは「柔らかい」という意味の形容詞です。対義語はhard（硬い）です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「early」の意味として最も適切なものは？",
+          "choices": [
+            "早い、早く（時間的に）",
+            "遅い、遅く",
+            "速い、速く",
+            "ゆっくり"
+          ],
+          "correct": 0,
+          "explanation": "earlyは時間的に「早い」「早く」という意味の形容詞・副詞です。対義語はlateです。例: get up early（早く起きる）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「late」の意味として最も適切なものは？",
+          "choices": [
+            "遅い、遅れて、遅くに",
+            "早い、早く",
+            "最近の",
+            "最後の"
+          ],
+          "correct": 0,
+          "explanation": "lateは時間的に「遅い、遅れて」という意味の形容詞・副詞です。対義語はearlyです。例: don't be late（遅れないで）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「quickly」の意味として最も適切なものは？",
+          "choices": [
+            "素早く、急いで",
+            "ゆっくりと",
+            "静かに",
+            "いつも"
+          ],
+          "correct": 0,
+          "explanation": "quicklyは「素早く、急いで、速く」という意味の副詞です。例: run quickly（素早く走る）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「slowly」の意味として最も適切なものは？",
+          "choices": [
+            "ゆっくりと、遅く",
+            "早く",
+            "すぐに",
+            "時々"
+          ],
+          "correct": 0,
+          "explanation": "slowlyは「ゆっくりと、遅く」という意味の副詞です。対義語はquicklyです。例: speak slowly（ゆっくり話す）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「together」の意味として最も適切なものは？",
+          "choices": [
+            "一緒に、共に",
+            "別々に",
+            "一人で",
+            "いつも"
+          ],
+          "correct": 0,
+          "explanation": "togetherは「一緒に、共に」という意味の副詞です。例: play together（一緒に遊ぶ）",
+          "type": "choice"
+        },
+        {
+          "scenario": "「another」の意味として最も適切なものは？",
+          "choices": [
+            "もう一つの、別の",
+            "同じ",
+            "最後の",
+            "すべての"
+          ],
+          "correct": 0,
+          "explanation": "anotherは「もう一つの、別の」という意味の形容詞・代名詞です。an + other からなっています。",
+          "type": "choice"
+        }
       ]
     },
     {
@@ -182,16 +1172,126 @@
       "emoji": "🗣️",
       "subtitle": "様々な挨拶や思いやりのあるフレーズ",
       "questions": [
-        {"scenario": "「welcome home」の意味として最も適切なものは？", "choices": ["おかえりなさい", "ただいま", "ようこそわが家へ", "いってらっしゃい"], "correct": 0, "explanation": "welcome homeは、帰宅した人（I'm home.と言った人）に対する「おかえりなさい」という挨拶です。", "type": "choice"},
-        {"scenario": "「congratulations」の意味として最も適切なものは？", "choices": ["おめでとうございます", "ありがとう", "すみません", "がんばって"], "correct": 0, "explanation": "congratulationsは、お祝いの場面で言う「おめでとう！」という表現です。最後にsをつけるのがポイントです。", "type": "choice"},
-        {"scenario": "「I'm full」の意味として最も適切なものは？", "choices": ["お腹がいっぱいです", "お腹がすいています", "眠いです", "喉が渇いています"], "correct": 0, "explanation": "I'm full.は「お腹がいっぱいです」と伝える定番のフレーズです。", "type": "choice"},
-        {"scenario": "「I'm thirsty」の意味として最も適切なものは？", "choices": ["のどが渇いています", "お腹がすいています", "お腹がいっぱいです", "疲れています"], "correct": 0, "explanation": "I'm thirsty.は「のどが渇いています」と伝えるフレーズです。thirsty（のどが渇いた）を使います。", "type": "choice"},
-        {"scenario": "「I'm sleepy」の意味として最も適切なものは？", "choices": ["眠いです", "疲れています", "元気です", "悲しいです"], "correct": 0, "explanation": "I'm sleepy.は「眠いです」と伝えるフレーズです。sleepy（眠い）を使います。", "type": "choice"},
-        {"scenario": "「go ahead」の意味として最も適切なものは？", "choices": ["どうぞ（お先に進めてください）", "やめてください", "さようなら", "気をつけて"], "correct": 0, "explanation": "go aheadは、相手に順番を譲ったり、行動を促す時の「どうぞ（お先に・やってみてください）」というフレーズです。", "type": "choice"},
-        {"scenario": "「no problem」の意味として最も適切なものは？", "choices": ["問題ありません、どういたしまして、大丈夫です", "ダメです", "分かりません", "お気をつけて"], "correct": 0, "explanation": "no problemは、感謝や謝罪に対する返答で「問題ないよ」「どういたしまして」「大丈夫だよ」という意味です。", "type": "choice"},
-        {"scenario": "「see you later」の意味として最も適切なものは？", "choices": ["また後でね、さようなら", "はじめまして", "おやすみなさい", "お気をつけて"], "correct": 0, "explanation": "see you laterは、また後で会う予定がある時や、カジュアルな別れの挨拶「またね」「じゃあまた」として使います。", "type": "choice"},
-        {"scenario": "「nice to meet you」の意味として最も適切なものは？", "choices": ["はじめまして、お会いできて嬉しいです", "さようなら", "ありがとう", "どういたしまして"], "correct": 0, "explanation": "nice to meet youは、初めて会った時に交わす「はじめまして」という挨拶です。", "type": "choice"},
-        {"scenario": "「take care」の意味として最も適切なものは？", "choices": ["気をつけてね、お大事に", "がんばってね", "ありがとう", "さようなら"], "correct": 0, "explanation": "take careは、別れ際に「気をつけてね」と声をかけたり、病気の人に「お大事に」と言う時に使う温かいフレーズです。", "type": "choice"}
+        {
+          "scenario": "「welcome home」の意味として最も適切なものは？",
+          "choices": [
+            "おかえりなさい",
+            "ただいま",
+            "ようこそわが家へ",
+            "いってらっしゃい"
+          ],
+          "correct": 0,
+          "explanation": "welcome homeは、帰宅した人（I'm home.と言った人）に対する「おかえりなさい」という挨拶です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「congratulations」の意味として最も適切なものは？",
+          "choices": [
+            "おめでとうございます",
+            "ありがとう",
+            "すみません",
+            "がんばって"
+          ],
+          "correct": 0,
+          "explanation": "congratulationsは、お祝いの場面で言う「おめでとう！」という表現です。最後にsをつけるのがポイントです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「I'm full」の意味として最も適切なものは？",
+          "choices": [
+            "お腹がいっぱいです",
+            "お腹がすいています",
+            "眠いです",
+            "喉が渇いています"
+          ],
+          "correct": 0,
+          "explanation": "I'm full.は「お腹がいっぱいです」と伝える定番のフレーズです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「I'm thirsty」の意味として最も適切なものは？",
+          "choices": [
+            "のどが渇いています",
+            "お腹がすいています",
+            "お腹がいっぱいです",
+            "疲れています"
+          ],
+          "correct": 0,
+          "explanation": "I'm thirsty.は「のどが渇いています」と伝えるフレーズです。thirsty（のどが渇いた）を使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「I'm sleepy」の意味として最も適切なものは？",
+          "choices": [
+            "眠いです",
+            "疲れています",
+            "元気です",
+            "悲しいです"
+          ],
+          "correct": 0,
+          "explanation": "I'm sleepy.は「眠いです」と伝えるフレーズです。sleepy（眠い）を使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go ahead」の意味として最も適切なものは？",
+          "choices": [
+            "どうぞ（お先に進めてください）",
+            "やめてください",
+            "さようなら",
+            "気をつけて"
+          ],
+          "correct": 0,
+          "explanation": "go aheadは、相手に順番を譲ったり、行動を促す時の「どうぞ（お先に・やってみてください）」というフレーズです。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「no problem」の意味として最も適切なものは？",
+          "choices": [
+            "問題ありません、どういたしまして、大丈夫です",
+            "ダメです",
+            "分かりません",
+            "お気をつけて"
+          ],
+          "correct": 0,
+          "explanation": "no problemは、感謝や謝罪に対する返答で「問題ないよ」「どういたしまして」「大丈夫だよ」という意味です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「see you later」の意味として最も適切なものは？",
+          "choices": [
+            "また後でね、さようなら",
+            "はじめまして",
+            "おやすみなさい",
+            "お気をつけて"
+          ],
+          "correct": 0,
+          "explanation": "see you laterは、また後で会う予定がある時や、カジュアルな別れの挨拶「またね」「じゃあまた」として使います。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nice to meet you」の意味として最も適切なものは？",
+          "choices": [
+            "はじめまして、お会いできて嬉しいです",
+            "さようなら",
+            "ありがとう",
+            "どういたしまして"
+          ],
+          "correct": 0,
+          "explanation": "nice to meet youは、初めて会った時に交わす「はじめまして」という挨拶です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take care」の意味として最も適切なものは？",
+          "choices": [
+            "気をつけてね、お大事に",
+            "がんばってね",
+            "ありがとう",
+            "さようなら"
+          ],
+          "correct": 0,
+          "explanation": "take careは、別れ際に「気をつけてね」と声をかけたり、病気の人に「お大事に」と言う時に使う温かいフレーズです。",
+          "type": "choice"
+        }
       ]
     }
   ]
