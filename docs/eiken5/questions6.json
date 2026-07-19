@@ -1,0 +1,198 @@
+{
+  "id": "eiken5",
+  "level": 6,
+  "label": "🔤 基礎単語編⑥",
+  "description": "英検5級レベルの基本英単語⑥（動作・天気・体・食べ物・生き物・身の回りの物）",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編③：体を使う動作",
+      "type": "Basic Verbs 3",
+      "emoji": "🤸",
+      "subtitle": "遊びやスポーツでよく使う体の動きの言葉",
+      "questions": [
+        {"scenario": "「climb」の意味として最も適切なものは？", "choices": ["登る", "落ちる", "座る", "止まる"], "correct": 0, "explanation": "climbは「（山や木などに）登る」という意味の動詞です。例: climb a mountain（山に登る）", "type": "choice"},
+        {"scenario": "「draw」の意味として最も適切なものは？", "choices": ["（絵を）描く", "書く", "消す", "切る"], "correct": 0, "explanation": "drawは鉛筆などで「（絵や図を）描く」という意味の動詞です。例: draw a picture（絵を描く）", "type": "choice"},
+        {"scenario": "「paint」の意味として最も適切なものは？", "choices": ["（絵の具で）描く、塗る", "洗う", "拭く", "折る"], "correct": 0, "explanation": "paintは絵の具などで「描く、塗る」という意味の動詞です。例: paint a picture（絵を描く）", "type": "choice"},
+        {"scenario": "「cut」の意味として最も適切なものは？", "choices": ["切る", "結ぶ", "貼る", "折る"], "correct": 0, "explanation": "cutは「切る」という意味の動詞です。例: cut paper（紙を切る）", "type": "choice"},
+        {"scenario": "「throw」の意味として最も適切なものは？", "choices": ["投げる", "受け取る", "落とす", "拾う"], "correct": 0, "explanation": "throwは「投げる」という意味の動詞です。例: throw a ball（ボールを投げる）", "type": "choice"},
+        {"scenario": "「kick」の意味として最も適切なものは？", "choices": ["蹴る", "投げる", "打つ", "触る"], "correct": 0, "explanation": "kickは「（足で）蹴る」という意味の動詞です。例: kick a ball（ボールを蹴る）", "type": "choice"},
+        {"scenario": "「hug」の意味として最も適切なものは？", "choices": ["抱きしめる", "押す", "叩く", "握る"], "correct": 0, "explanation": "hugは「抱きしめる」という意味の動詞です。例: hug a friend（友達を抱きしめる）", "type": "choice"},
+        {"scenario": "「skip」の意味として最も適切なものは？", "choices": ["スキップする、飛び跳ねながら進む", "座る", "眠る", "泣く"], "correct": 0, "explanation": "skipは「スキップする」、片足ずつ軽く飛び跳ねながら進むという意味の動詞です。", "type": "choice"},
+        {"scenario": "「roll」の意味として最も適切なものは？", "choices": ["転がる、転がす", "跳ぶ", "滑る", "落ちる"], "correct": 0, "explanation": "rollは「転がる、転がす」という意味の動詞です。例: roll a ball（ボールを転がす）", "type": "choice"},
+        {"scenario": "「bounce」の意味として最も適切なものは？", "choices": ["跳ねる、弾む", "沈む", "浮く", "止まる"], "correct": 0, "explanation": "bounceはボールなどが「跳ねる、弾む」という意味の動詞です。例: The ball bounces.（ボールが跳ねる。）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編④：手を使う動作",
+      "type": "Basic Verbs 4",
+      "emoji": "🙌",
+      "subtitle": "料理や日常のしぐさに関する動詞",
+      "questions": [
+        {"scenario": "「dig」の意味として最も適切なものは？", "choices": ["（穴を）掘る", "埋める", "積む", "運ぶ"], "correct": 0, "explanation": "digは「（土などを）掘る」という意味の動詞です。例: dig a hole（穴を掘る）", "type": "choice"},
+        {"scenario": "「pour」の意味として最も適切なものは？", "choices": ["注ぐ", "こぼす", "飲む", "混ぜる"], "correct": 0, "explanation": "pourは液体を「注ぐ」という意味の動詞です。例: pour milk（牛乳を注ぐ）", "type": "choice"},
+        {"scenario": "「mix」の意味として最も適切なものは？", "choices": ["混ぜる", "分ける", "冷やす", "温める"], "correct": 0, "explanation": "mixは「混ぜる」という意味の動詞です。例: mix eggs and sugar（卵と砂糖を混ぜる）", "type": "choice"},
+        {"scenario": "「stir」の意味として最も適切なものは？", "choices": ["かき混ぜる", "焼く", "揚げる", "蒸す"], "correct": 0, "explanation": "stirはスプーンなどで「かき混ぜる」という意味の動詞です。例: stir the soup（スープをかき混ぜる）", "type": "choice"},
+        {"scenario": "「smell」の意味として最も適切なものは？", "choices": ["においがする、においをかぐ", "味がする", "音がする", "光る"], "correct": 0, "explanation": "smellは「においがする」または「においをかぐ」という意味の動詞です。例: This flower smells good.（この花はいいにおいがする。）", "type": "choice"},
+        {"scenario": "「wave」の意味として最も適切なものは？", "choices": ["（手を）振る", "叩く", "つかむ", "投げる"], "correct": 0, "explanation": "waveは挨拶などで「手を振る」という意味の動詞です。例: wave a hand（手を振る）", "type": "choice"},
+        {"scenario": "「clap」の意味として最も適切なものは？", "choices": ["拍手する", "踊る", "歌う", "叫ぶ"], "correct": 0, "explanation": "clapは「拍手する」という意味の動詞です。例: clap your hands（手を叩く）", "type": "choice"},
+        {"scenario": "「nod」の意味として最も適切なものは？", "choices": ["うなずく", "首を振る", "見つめる", "微笑む"], "correct": 0, "explanation": "nodは同意して「うなずく」という意味の動詞です。例: nod one's head（うなずく）", "type": "choice"},
+        {"scenario": "「bend」の意味として最も適切なものは？", "choices": ["曲げる、かがむ", "伸ばす", "立つ", "座る"], "correct": 0, "explanation": "bendは体や物を「曲げる、かがめる」という意味の動詞です。例: bend your knees（ひざを曲げる）", "type": "choice"},
+        {"scenario": "「lift」の意味として最も適切なものは？", "choices": ["持ち上げる", "下ろす", "落とす", "運ぶ"], "correct": 0, "explanation": "liftは「持ち上げる」という意味の動詞です。例: lift a box（箱を持ち上げる）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "天気編：空の様子",
+      "type": "Weather Words",
+      "emoji": "🌦️",
+      "subtitle": "毎日の天気を表す形容詞",
+      "questions": [
+        {"scenario": "「sunny」の意味として最も適切なものは？", "choices": ["晴れた", "雨の", "曇った", "風の強い"], "correct": 0, "explanation": "sunnyは「（天気が）晴れた」という意味の形容詞です。例: a sunny day（晴れた日）", "type": "choice"},
+        {"scenario": "「rainy」の意味として最も適切なものは？", "choices": ["雨の、雨降りの", "晴れた", "雪の", "曇った"], "correct": 0, "explanation": "rainyは「雨の、雨降りの」という意味の形容詞です。例: a rainy day（雨の日）", "type": "choice"},
+        {"scenario": "「snowy」の意味として最も適切なものは？", "choices": ["雪の、雪の多い", "雨の", "晴れた", "暑い"], "correct": 0, "explanation": "snowyは「雪の、雪の多い」という意味の形容詞です。例: a snowy mountain（雪山）", "type": "choice"},
+        {"scenario": "「windy」の意味として最も適切なものは？", "choices": ["風の強い", "静かな", "暑い", "湿った"], "correct": 0, "explanation": "windyは「風の強い」という意味の形容詞です。例: a windy day（風の強い日）", "type": "choice"},
+        {"scenario": "「cloudy」の意味として最も適切なものは？", "choices": ["曇った", "晴れた", "雨の", "霧の"], "correct": 0, "explanation": "cloudyは「（空が）曇った」という意味の形容詞です。例: a cloudy sky（曇り空）", "type": "choice"},
+        {"scenario": "「foggy」の意味として最も適切なものは？", "choices": ["霧のかかった", "風の強い", "晴れた", "雷の"], "correct": 0, "explanation": "foggyは「霧のかかった」という意味の形容詞です。例: a foggy morning（霧のかかった朝）", "type": "choice"},
+        {"scenario": "「stormy」の意味として最も適切なものは？", "choices": ["嵐の、荒れた", "穏やかな", "晴れた", "涼しい"], "correct": 0, "explanation": "stormyは「嵐の、荒れた」という意味の形容詞です。例: a stormy night（嵐の夜）", "type": "choice"},
+        {"scenario": "「chilly」の意味として最も適切なものは？", "choices": ["肌寒い", "暑い", "蒸し暑い", "温かい"], "correct": 0, "explanation": "chillyは「肌寒い、ひんやりした」という意味の形容詞です。例: a chilly morning（肌寒い朝）", "type": "choice"},
+        {"scenario": "「mild」の意味として最も適切なものは？", "choices": ["温暖な、穏やかな", "厳しい", "極端な", "蒸し暑い"], "correct": 0, "explanation": "mildは気候などが「温暖な、穏やかな」という意味の形容詞です。例: mild weather（温暖な気候）", "type": "choice"},
+        {"scenario": "「icy」の意味として最も適切なものは？", "choices": ["氷のような、凍った", "暖かい", "湿った", "乾いた"], "correct": 0, "explanation": "icyは「氷のような、凍った」という意味の形容詞です。例: an icy road（凍った道）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "形容詞編③：気持ちと様子",
+      "type": "Adjectives: Feelings & Appearance",
+      "emoji": "🙀",
+      "subtitle": "気持ちや物の状態を表す形容詞",
+      "questions": [
+        {"scenario": "「scared」の意味として最も適切なものは？", "choices": ["怖がった", "うれしい", "退屈な", "怒った"], "correct": 0, "explanation": "scaredは「怖がった、おびえた」という意味の形容詞です。例: I'm scared of dogs.（私は犬が怖いです。）", "type": "choice"},
+        {"scenario": "「surprised」の意味として最も適切なものは？", "choices": ["驚いた", "悲しい", "満足した", "疲れた"], "correct": 0, "explanation": "surprisedは「驚いた」という意味の形容詞です。例: I was surprised.（私は驚きました。）", "type": "choice"},
+        {"scenario": "「worried」の意味として最も適切なものは？", "choices": ["心配な、不安な", "安心した", "満足な", "うれしい"], "correct": 0, "explanation": "worriedは「心配な、不安な」という意味の形容詞です。例: a worried face（心配そうな顔）", "type": "choice"},
+        {"scenario": "「shy」の意味として最も適切なものは？", "choices": ["恥ずかしがりの、内気な", "活発な", "勇敢な", "親切な"], "correct": 0, "explanation": "shyは「恥ずかしがりの、内気な」という意味の形容詞です。例: a shy boy（内気な男の子）", "type": "choice"},
+        {"scenario": "「silly」の意味として最も適切なものは？", "choices": ["ばかげた、おかしな", "賢い", "真面目な", "静かな"], "correct": 0, "explanation": "sillyは「ばかげた、おかしな」という意味の形容詞です。例: a silly joke（ばかげた冗談）", "type": "choice"},
+        {"scenario": "「messy」の意味として最も適切なものは？", "choices": ["散らかった", "きれいな", "整理された", "新しい"], "correct": 0, "explanation": "messyは「散らかった、乱雑な」という意味の形容詞です。例: a messy room（散らかった部屋）", "type": "choice"},
+        {"scenario": "「neat」の意味として最も適切なものは？", "choices": ["きちんとした、整然とした", "散らかった", "汚い", "古い"], "correct": 0, "explanation": "neatは「きちんとした、整然とした」という意味の形容詞です。例: a neat desk（きちんとした机）", "type": "choice"},
+        {"scenario": "「smooth」の意味として最も適切なものは？", "choices": ["なめらかな、すべすべの", "ざらざらの", "鋭い", "固い"], "correct": 0, "explanation": "smoothは「なめらかな、すべすべの」という意味の形容詞です。例: smooth skin（すべすべの肌）", "type": "choice"},
+        {"scenario": "「rough」の意味として最も適切なものは？", "choices": ["ざらざらの、粗い", "なめらかな", "柔らかい", "薄い"], "correct": 0, "explanation": "roughは「ざらざらの、粗い」という意味の形容詞です。例: rough skin（ざらざらの肌）", "type": "choice"},
+        {"scenario": "「sharp」の意味として最も適切なものは？", "choices": ["鋭い、よく切れる", "鈍い", "丸い", "柔らかい"], "correct": 0, "explanation": "sharpは「（刃物などが）鋭い、よく切れる」という意味の形容詞です。例: a sharp knife（よく切れるナイフ）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "動物編②：森や水辺の生き物",
+      "type": "Animals 2",
+      "emoji": "🐸",
+      "subtitle": "動物園や自然でよく見る生き物の名前",
+      "questions": [
+        {"scenario": "「panda」の意味として最も適切なものは？", "choices": ["パンダ", "くま", "きつね", "うさぎ"], "correct": 0, "explanation": "pandaは「パンダ」という意味の名詞です。白と黒の毛が特徴の動物です。", "type": "choice"},
+        {"scenario": "「fox」の意味として最も適切なものは？", "choices": ["きつね", "おおかみ", "たぬき", "リス"], "correct": 0, "explanation": "foxは「きつね」という意味の名詞です。例: a clever fox（賢いきつね）", "type": "choice"},
+        {"scenario": "「deer」の意味として最も適切なものは？", "choices": ["しか", "うし", "うま", "やぎ"], "correct": 0, "explanation": "deerは「しか」という意味の名詞です。単数形と複数形が同じ形です。", "type": "choice"},
+        {"scenario": "「duck」の意味として最も適切なものは？", "choices": ["アヒル、カモ", "にわとり", "はと", "がちょう"], "correct": 0, "explanation": "duckは「アヒル、カモ」という意味の名詞です。例: a white duck（白いアヒル）", "type": "choice"},
+        {"scenario": "「frog」の意味として最も適切なものは？", "choices": ["カエル", "ヘビ", "とかげ", "かめ"], "correct": 0, "explanation": "frogは「カエル」という意味の名詞です。例: a green frog（緑色のカエル）", "type": "choice"},
+        {"scenario": "「snake」の意味として最も適切なものは？", "choices": ["ヘビ", "カエル", "とかげ", "みみず"], "correct": 0, "explanation": "snakeは「ヘビ」という意味の名詞です。例: a long snake（長いヘビ）", "type": "choice"},
+        {"scenario": "「turtle」の意味として最も適切なものは？", "choices": ["かめ", "カエル", "ヘビ", "とかげ"], "correct": 0, "explanation": "turtleは「かめ」という意味の名詞です。例: a slow turtle（歩みの遅いかめ）", "type": "choice"},
+        {"scenario": "「butterfly」の意味として最も適切なものは？", "choices": ["ちょう", "とんぼ", "が", "はち"], "correct": 0, "explanation": "butterflyは「ちょう」という意味の名詞です。例: a beautiful butterfly（美しいちょう）", "type": "choice"},
+        {"scenario": "「bee」の意味として最も適切なものは？", "choices": ["みつばち、はち", "あり", "ちょう", "とんぼ"], "correct": 0, "explanation": "beeは「みつばち、はち」という意味の名詞です。例: a busy bee（忙しく働くはち）", "type": "choice"},
+        {"scenario": "「ant」の意味として最も適切なものは？", "choices": ["あり", "はち", "くも", "みみず"], "correct": 0, "explanation": "antは「あり」という意味の名詞です。例: a small ant（小さなあり）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "体の部分編",
+      "type": "Parts of the Body",
+      "emoji": "🦶",
+      "subtitle": "自分の体を表す基本的な名詞",
+      "questions": [
+        {"scenario": "「foot」の意味として最も適切なものは？", "choices": ["足（足首から下）", "手", "腕", "脚全体"], "correct": 0, "explanation": "footは「足（足首から下の部分）」という意味の名詞です。複数形は feet になります。", "type": "choice"},
+        {"scenario": "「arm」の意味として最も適切なものは？", "choices": ["腕", "足", "手", "指"], "correct": 0, "explanation": "armは「腕」という意味の名詞です。例: raise your arm（腕を上げる）", "type": "choice"},
+        {"scenario": "「finger」の意味として最も適切なものは？", "choices": ["（手の）指", "（足の）指", "手のひら", "つめ"], "correct": 0, "explanation": "fingerは「（手の）指」という意味の名詞です。例: point a finger（指をさす）", "type": "choice"},
+        {"scenario": "「hair」の意味として最も適切なものは？", "choices": ["髪の毛", "顔", "肌", "つめ"], "correct": 0, "explanation": "hairは「髪の毛」という意味の名詞です。例: long hair（長い髪）", "type": "choice"},
+        {"scenario": "「face」の意味として最も適切なものは？", "choices": ["顔", "頭", "首", "肩"], "correct": 0, "explanation": "faceは「顔」という意味の名詞です。例: wash your face（顔を洗う）", "type": "choice"},
+        {"scenario": "「tooth」の意味として最も適切なものは？", "choices": ["歯", "舌", "唇", "あご"], "correct": 0, "explanation": "toothは「歯」という意味の名詞です。複数形は teeth になります。", "type": "choice"},
+        {"scenario": "「neck」の意味として最も適切なものは？", "choices": ["首", "肩", "背中", "胸"], "correct": 0, "explanation": "neckは「首」という意味の名詞です。例: a long neck（長い首）", "type": "choice"},
+        {"scenario": "「shoulder」の意味として最も適切なものは？", "choices": ["肩", "首", "腕", "背中"], "correct": 0, "explanation": "shoulderは「肩」という意味の名詞です。例: pat on the shoulder（肩を軽く叩く）", "type": "choice"},
+        {"scenario": "「knee」の意味として最も適切なものは？", "choices": ["ひざ", "足首", "もも", "肘"], "correct": 0, "explanation": "kneeは「ひざ」という意味の名詞です。例: bend your knee（ひざを曲げる）", "type": "choice"},
+        {"scenario": "「toe」の意味として最も適切なものは？", "choices": ["（足の）指", "（手の）指", "かかと", "足首"], "correct": 0, "explanation": "toeは「（足の）指」という意味の名詞です。例: little toe（足の小指）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "食べ物編②：おやつと野菜",
+      "type": "Food 2",
+      "emoji": "🍭",
+      "subtitle": "おやつや料理でよく出てくる食べ物の名前",
+      "questions": [
+        {"scenario": "「candy」の意味として最も適切なものは？", "choices": ["キャンディー、あめ", "チョコレート", "クッキー", "ガム"], "correct": 0, "explanation": "candyは「キャンディー、あめ」という意味の名詞です。例: eat candy（あめを食べる）", "type": "choice"},
+        {"scenario": "「cookie」の意味として最も適切なものは？", "choices": ["クッキー", "ケーキ", "パン", "パイ"], "correct": 0, "explanation": "cookieは「クッキー」という意味の名詞です。例: bake cookies（クッキーを焼く）", "type": "choice"},
+        {"scenario": "「ice cream」の意味として最も適切なものは？", "choices": ["アイスクリーム", "ヨーグルト", "プリン", "ゼリー"], "correct": 0, "explanation": "ice creamは「アイスクリーム」という意味の名詞です。例: vanilla ice cream（バニラアイスクリーム）", "type": "choice"},
+        {"scenario": "「pizza」の意味として最も適切なものは？", "choices": ["ピザ", "パスタ", "サンドイッチ", "ハンバーガー"], "correct": 0, "explanation": "pizzaは「ピザ」という意味の名詞です。例: a slice of pizza（ピザ一切れ）", "type": "choice"},
+        {"scenario": "「hamburger」の意味として最も適切なものは？", "choices": ["ハンバーガー", "ホットドッグ", "サンドイッチ", "ピザ"], "correct": 0, "explanation": "hamburgerは「ハンバーガー」という意味の名詞です。例: eat a hamburger（ハンバーガーを食べる）", "type": "choice"},
+        {"scenario": "「hot dog」の意味として最も適切なものは？", "choices": ["ホットドッグ", "ハンバーガー", "焼きそば", "ソーセージ炒め"], "correct": 0, "explanation": "hot dogはパンにソーセージを挟んだ「ホットドッグ」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「carrot」の意味として最も適切なものは？", "choices": ["にんじん", "たまねぎ", "じゃがいも", "とうもろこし"], "correct": 0, "explanation": "carrotは「にんじん」という意味の名詞です。例: orange carrots（オレンジ色のにんじん）", "type": "choice"},
+        {"scenario": "「strawberry」の意味として最も適切なものは？", "choices": ["いちご", "さくらんぼ", "もも", "すいか"], "correct": 0, "explanation": "strawberryは「いちご」という意味の名詞です。例: sweet strawberries（甘いいちご）", "type": "choice"},
+        {"scenario": "「chocolate」の意味として最も適切なものは？", "choices": ["チョコレート", "キャンディー", "クッキー", "ケーキ"], "correct": 0, "explanation": "chocolateは「チョコレート」という意味の名詞です。例: a chocolate cake（チョコレートケーキ）", "type": "choice"},
+        {"scenario": "「pancake」の意味として最も適切なものは？", "choices": ["パンケーキ、ホットケーキ", "トースト", "ワッフル", "ドーナツ"], "correct": 0, "explanation": "pancakeは「パンケーキ、ホットケーキ」という意味の名詞です。例: eat pancakes for breakfast（朝食にパンケーキを食べる）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "身の回りの物・場所編",
+      "type": "Everyday Things & Places",
+      "emoji": "🎈",
+      "subtitle": "体の一部や身近な場所、遊び道具の言葉",
+      "questions": [
+        {"scenario": "「elbow」の意味として最も適切なものは？", "choices": ["ひじ", "ひざ", "手首", "足首"], "correct": 0, "explanation": "elbowは「ひじ」という意味の名詞です。例: bend your elbow（ひじを曲げる）", "type": "choice"},
+        {"scenario": "「chin」の意味として最も適切なものは？", "choices": ["あご", "ほお", "額", "唇"], "correct": 0, "explanation": "chinは「あご」という意味の名詞です。例: rest your chin on your hand（あごを手にのせる）", "type": "choice"},
+        {"scenario": "「cheek」の意味として最も適切なものは？", "choices": ["ほお、頬", "あご", "額", "耳"], "correct": 0, "explanation": "cheekは「ほお、頬」という意味の名詞です。例: rosy cheeks（バラ色のほお）", "type": "choice"},
+        {"scenario": "「farm」の意味として最も適切なものは？", "choices": ["農場", "工場", "牧場の動物", "森"], "correct": 0, "explanation": "farmは「農場」という意味の名詞です。例: work on a farm（農場で働く）", "type": "choice"},
+        {"scenario": "「town」の意味として最も適切なものは？", "choices": ["町", "村", "市", "国"], "correct": 0, "explanation": "townは「町」という意味の名詞です。cityより小さい規模を指すことが多いです。", "type": "choice"},
+        {"scenario": "「village」の意味として最も適切なものは？", "choices": ["村", "町", "都市", "国"], "correct": 0, "explanation": "villageは「村」という意味の名詞です。townよりさらに小さい集落を指します。", "type": "choice"},
+        {"scenario": "「pool」の意味として最も適切なものは？", "choices": ["プール", "池", "湖", "海"], "correct": 0, "explanation": "poolは「プール」という意味の名詞です。例: swim in a pool（プールで泳ぐ）", "type": "choice"},
+        {"scenario": "「glasses」の意味として最も適切なものは？", "choices": ["めがね", "帽子", "手袋", "マフラー"], "correct": 0, "explanation": "glassesは「めがね」という意味の名詞です。常に複数形で使います。例: wear glasses（めがねをかける）", "type": "choice"},
+        {"scenario": "「kite」の意味として最も適切なものは？", "choices": ["たこ（凧）", "風船", "コマ", "けん玉"], "correct": 0, "explanation": "kiteは空に揚げる「たこ（凧）」という意味の名詞です。例: fly a kite（たこを揚げる）", "type": "choice"},
+        {"scenario": "「balloon」の意味として最も適切なものは？", "choices": ["風船", "たこ（凧）", "ボール", "旗"], "correct": 0, "explanation": "balloonは「風船」という意味の名詞です。例: a red balloon（赤い風船）", "type": "choice"}
+      ]
+    },
+    {
+      "id": 9,
+      "title": "家族編②・小さな生き物編",
+      "type": "Family 2 & Small Creatures",
+      "emoji": "🐛",
+      "subtitle": "親戚を表す言葉と、庭や草むらの小さな生き物",
+      "questions": [
+        {"scenario": "「grandmother」の意味として最も適切なものは？", "choices": ["祖母、おばあさん", "祖父", "母", "おば"], "correct": 0, "explanation": "grandmotherは「祖母、おばあさん」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「grandfather」の意味として最も適切なものは？", "choices": ["祖父、おじいさん", "祖母", "父", "おじ"], "correct": 0, "explanation": "grandfatherは「祖父、おじいさん」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「aunt」の意味として最も適切なものは？", "choices": ["おば", "おじ", "いとこ", "祖母"], "correct": 0, "explanation": "auntは「おば」という意味の名詞です。父母の姉妹などを指します。", "type": "choice"},
+        {"scenario": "「uncle」の意味として最も適切なものは？", "choices": ["おじ", "おば", "いとこ", "祖父"], "correct": 0, "explanation": "uncleは「おじ」という意味の名詞です。父母の兄弟などを指します。", "type": "choice"},
+        {"scenario": "「insect」の意味として最も適切なものは？", "choices": ["昆虫", "鳥", "魚", "動物"], "correct": 0, "explanation": "insectは「昆虫」という意味の名詞です。例: a small insect（小さな昆虫）", "type": "choice"},
+        {"scenario": "「worm」の意味として最も適切なものは？", "choices": ["みみず、虫", "あり", "くも", "はち"], "correct": 0, "explanation": "wormは「みみず」など細長い虫という意味の名詞です。", "type": "choice"},
+        {"scenario": "「spider」の意味として最も適切なものは？", "choices": ["くも", "あり", "はち", "みみず"], "correct": 0, "explanation": "spiderは「くも」という意味の名詞です。例: a spider web（くもの巣）", "type": "choice"},
+        {"scenario": "「crab」の意味として最も適切なものは？", "choices": ["かに", "えび", "貝", "たこ"], "correct": 0, "explanation": "crabは「かに」という意味の名詞です。例: a small crab（小さなかに）", "type": "choice"},
+        {"scenario": "「snail」の意味として最も適切なものは？", "choices": ["かたつむり", "なめくじ", "みみず", "かえる"], "correct": 0, "explanation": "snailは「かたつむり」という意味の名詞です。例: a slow snail（動きの遅いかたつむり）", "type": "choice"},
+        {"scenario": "「ladybug」の意味として最も適切なものは？", "choices": ["てんとう虫", "ちょう", "とんぼ", "が"], "correct": 0, "explanation": "ladybugは「てんとう虫」という意味の名詞です。赤や黄色に黒い点がある小さな虫です。", "type": "choice"}
+      ]
+    },
+    {
+      "id": 10,
+      "title": "文房具・遊び道具編",
+      "type": "School Supplies & Toys",
+      "emoji": "🖍️",
+      "subtitle": "教室や机の上でよく見る道具の名前",
+      "questions": [
+        {"scenario": "「crayon」の意味として最も適切なものは？", "choices": ["クレヨン", "色鉛筆", "絵の具", "マーカー"], "correct": 0, "explanation": "crayonは「クレヨン」という意味の名詞です。例: draw with crayons（クレヨンで描く）", "type": "choice"},
+        {"scenario": "「sticker」の意味として最も適切なものは？", "choices": ["シール、ステッカー", "切手", "ラベル", "テープ"], "correct": 0, "explanation": "stickerは「シール、ステッカー」という意味の名詞です。例: put a sticker（シールを貼る）", "type": "choice"},
+        {"scenario": "「robot」の意味として最も適切なものは？", "choices": ["ロボット", "機械", "コンピューター", "おもちゃの車"], "correct": 0, "explanation": "robotは「ロボット」という意味の名詞です。例: play with a robot（ロボットで遊ぶ）", "type": "choice"},
+        {"scenario": "「puzzle」の意味として最も適切なものは？", "choices": ["パズル", "積み木", "人形", "ゲーム機"], "correct": 0, "explanation": "puzzleは「パズル」という意味の名詞です。例: a jigsaw puzzle（ジグソーパズル）", "type": "choice"},
+        {"scenario": "「marker」の意味として最も適切なものは？", "choices": ["マーカー、サインペン", "鉛筆", "消しゴム", "定規"], "correct": 0, "explanation": "markerは太い線が書ける「マーカー、サインペン」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「folder」の意味として最も適切なものは？", "choices": ["フォルダー、書類ばさみ", "封筒", "ノート", "手帳"], "correct": 0, "explanation": "folderは書類を挟んで整理する「フォルダー」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「backpack」の意味として最も適切なものは？", "choices": ["リュックサック、背負いかばん", "手さげかばん", "財布", "帽子"], "correct": 0, "explanation": "backpackは背中に背負う「リュックサック」という意味の名詞です。例: carry a backpack（リュックサックを背負う）", "type": "choice"},
+        {"scenario": "「lunchbox」の意味として最も適切なものは？", "choices": ["弁当箱", "水筒", "お皿", "コップ"], "correct": 0, "explanation": "lunchboxは「弁当箱」という意味の名詞です。例: bring a lunchbox（弁当箱を持ってくる）", "type": "choice"},
+        {"scenario": "「chalk」の意味として最も適切なものは？", "choices": ["チョーク", "鉛筆", "クレヨン", "絵の具"], "correct": 0, "explanation": "chalkは黒板に書く「チョーク」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「globe」の意味として最も適切なものは？", "choices": ["地球儀", "地図", "コンパス", "望遠鏡"], "correct": 0, "explanation": "globeは「地球儀」という意味の名詞です。例: spin a globe（地球儀を回す）", "type": "choice"}
+      ]
+    }
+  ]
+}

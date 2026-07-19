@@ -184,7 +184,7 @@
       "questions": [
         {"scenario": "「sorry」の意味として最も適切なものは？", "choices": ["ごめんなさい、すみません", "ありがとう", "よろしく", "どうぞ"], "correct": 0, "explanation": "sorryは「ごめんなさい、すみません」という謝罪の言葉です。例: I'm sorry.（ごめんなさい。）", "type": "choice"},
         {"scenario": "「sure」の意味として最も適切なものは？", "choices": ["もちろん、いいよ、確かな", "だめ", "わからない", "もしかして"], "correct": 0, "explanation": "sureは「もちろん、いいよ」という承諾の返事、または「確かな」という形容詞です。例: Sure!（もちろん！）", "type": "choice"},
-        {"scenario": "「great」を感嘆詞的に使うとどんな意味か？", "choices": ["すごい！、すばらしい！", "最悪だ！", "普通だね", "どうしよう…"], "correct": 0, "explanation": "Greatは感嘆詞的に「すごい！、すばらしい！」という気持ちを表します。例: That's great!（それはすばらしい！）", "type": "choice"},
+        {"scenario": "「jump」の意味として最も適切なものは？", "choices": ["跳ぶ、飛び跳ねる", "走る", "転ぶ", "滑る"], "correct": 0, "explanation": "jumpは「跳ぶ、飛び跳ねる」という意味の動詞です。例: jump high（高く跳ぶ）", "type": "choice"},
         {"scenario": "「really」の意味として最も適切なものは？", "choices": ["本当に、実際に", "少しだけ", "たぶん", "あまり〜ない"], "correct": 0, "explanation": "reallyは「本当に、実際に」という意味の副詞です。例: I really like it.（本当に好きです。）", "type": "choice"},
         {"scenario": "「maybe」の意味として最も適切なものは？", "choices": ["たぶん、もしかすると", "絶対に", "決して〜ない", "もちろん"], "correct": 0, "explanation": "maybeは「たぶん、もしかすると」という意味の副詞です。例: Maybe it will rain.（たぶん雨が降るでしょう。）", "type": "choice"},
         {"scenario": "「nice」の意味として最も適切なものは？", "choices": ["すてきな、いい、感じの良い", "醜い", "怖い", "難しい"], "correct": 0, "explanation": "niceは「すてきな、いい、感じの良い」という意味の形容詞です。例: Nice to meet you.（はじめまして。）", "type": "choice"},
