@@ -1184,7 +1184,7 @@ async function showHome() {
     let bannerHtml = '';
     if (fullyCleared) {
       bannerHtml += `<div class="full-clear-celebrate">
-        <p>🎉 全問正解達成！</p>
+        <p onclick="playFullClearSparkle(event)" style="cursor:pointer;">🎉 全問正解達成！</p>
         <button onclick="confirmAdvanceLap()">🏁 次の周へ進む</button>
       </div>`;
     }
