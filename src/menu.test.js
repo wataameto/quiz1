@@ -1,5 +1,26 @@
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
+
+// docs/index.html はブラウザ専用のプレーンスクリプトでrequire()できないため、
+// ソースから関数定義部分だけを中括弧の対応を数えて切り出し、vmで実行してテストする
+// （src/配下に手動で同じロジックのコピーを置くと、今回のバグ（best_/lesson_の食い違い）
+// のように実装と乖離して気付けなくなるため、実物のソースをそのまま実行する）。
+function extractFunctionSource(source, functionName) {
+  let startIdx = source.indexOf(`async function ${functionName}(`);
+  if (startIdx === -1) startIdx = source.indexOf(`function ${functionName}(`);
+  if (startIdx === -1) throw new Error(`${functionName} not found in source`);
+  const braceStart = source.indexOf('{', startIdx);
+  let depth = 0;
+  for (let i = braceStart; i < source.length; i++) {
+    if (source[i] === '{') depth++;
+    else if (source[i] === '}') {
+      depth--;
+      if (depth === 0) return source.slice(startIdx, i + 1);
+    }
+  }
+  throw new Error(`Could not find end of function ${functionName}`);
+}
 
 describe('Main menu HTML', () => {
   const docsDir = path.join(__dirname, '..', 'docs');
@@ -36,6 +57,41 @@ describe('Main menu HTML', () => {
   test('should count only current question files for menu scores', () => {
     expect(indexHtml).toContain('data[`lesson_${level}_${testId}`]');
     expect(indexHtml).not.toContain("Object.keys(data).filter(k => k.startsWith('lesson_'))");
+  });
+
+  test('getQuizScore should compute a nonzero correct count from real lesson_ score data (regression test for the best_/lesson_ field-name bug)', async () => {
+    const fnSource = extractFunctionSource(indexHtml, 'getQuizScore');
+    const sandbox = {
+      currentUser: { uid: 'test-uid' },
+      calculateQuizMeta: async () => ({
+        total: 8,
+        setCounts: { 1: { 1: 2, 2: 2 }, 2: { 1: 2, 2: 2 } },
+      }),
+      userDataAction: async () => ({ lesson_1_1: 100, lesson_1_2: 50, lap: 1 }),
+      console,
+    };
+    vm.createContext(sandbox);
+    vm.runInContext(fnSource, sandbox);
+    const result = await sandbox.getQuizScore('sample', './sample/');
+    // lesson_1_1: 100点 → 2/2問、lesson_1_2: 50点 → 1/2問（四捨五入）、level2は未挑戦
+    expect(result).toEqual({ correct: 3, total: 8, lap: 1 });
+  });
+
+  test('getQuizScore should return 0 correct when the score doc has no matching lesson_ fields', async () => {
+    const fnSource = extractFunctionSource(indexHtml, 'getQuizScore');
+    const sandbox = {
+      currentUser: { uid: 'test-uid' },
+      calculateQuizMeta: async () => ({
+        total: 8,
+        setCounts: { 1: { 1: 2, 2: 2 }, 2: { 1: 2, 2: 2 } },
+      }),
+      userDataAction: async () => ({ best_1_1: 100 }), // 古いフィールド名しか無いケース
+      console,
+    };
+    vm.createContext(sandbox);
+    vm.runInContext(fnSource, sandbox);
+    const result = await sandbox.getQuizScore('sample', './sample/');
+    expect(result.correct).toBe(0);
   });
 
   test('should clear current user when auth signs out in quiz pages', () => {

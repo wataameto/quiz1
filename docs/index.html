@@ -886,7 +886,7 @@
   </div>
 </div>
 
-<script src="shared/quiz-app.js?v=20260720071525"></script>
+<script src="shared/quiz-app.js?v=20260720074017"></script>
 <script>
 // Firebase初期化・認証（firebaseConfig/auth/db/currentUser/GOOGLE_CLIENT_ID/
 // loginWithGoogle/logout/confirmLogout/renderAuthStatus/userDataAction）は
@@ -1400,7 +1400,9 @@ function renderPwaInstallUI() {
     return;
   }
 
-  bannerText.textContent = 'ホーム画面に追加すると、アプリのようにすぐ開けます';
+  bannerText.innerHTML = ios
+    ? '📲 Safariの共有ボタン（□に↑）→「ホーム画面に追加」でアプリのように使えます<br>iOSの場合、Chromeなど他のブラウザでは追加できません。'
+    : '📲 ブラウザのインストールボタン（アドレスバー付近）から、ホーム画面に追加できます';
   installBtn.classList.toggle('hidden', !deferredInstallPrompt);
   banner.classList.remove('hidden');
 }
