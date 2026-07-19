@@ -110,6 +110,7 @@
       .choices { min-height: 220px; }
       .feedback { min-height: 50px; }
       .explanation { min-height: 80px; }
+      #quiz-subtitle { display: none; }
     }
     .quiz-header { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
     .quiz-header-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
