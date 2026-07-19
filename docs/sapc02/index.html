@@ -15,14 +15,14 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719215116">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719215859">
   <style id="dynamic-colors"></style>
 </head>
 <body>
 <div class="container">
   <div id="screen-home">
     <div class="home-top">
-      <p class="screen-label" style="position:absolute; top:6px; left:0; right:0; text-align:center; margin:0;">教材トップ</p>
+      <p class="screen-label" style="position:absolute; top:6px; left:0; right:0; text-align:center; margin:0; pointer-events:none;">教材トップ</p>
       <div class="home-top-row">
         <a href="../" onclick="backToMainMenu(event)" style="background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
         <button class="btn-reset-corner" onclick="openScoreModal()">📊 成績/設定</button>
@@ -259,7 +259,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260719215116"></script>
+<script src="../shared/quiz-app.js?v=20260719215859"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
