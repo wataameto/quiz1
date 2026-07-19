@@ -69,15 +69,15 @@
       "subtitle": "気持ちや物の状態を表す形容詞",
       "questions": [
         {"scenario": "「scared」の意味として最も適切なものは？", "choices": ["怖がった", "うれしい", "退屈な", "怒った"], "correct": 0, "explanation": "scaredは「怖がった、おびえた」という意味の形容詞です。例: I'm scared of dogs.（私は犬が怖いです。）", "type": "choice"},
-        {"scenario": "「surprised」の意味として最も適切なものは？", "choices": ["驚いた", "悲しい", "満足した", "疲れた"], "correct": 0, "explanation": "surprisedは「驚いた」という意味の形容詞です。例: I was surprised.（私は驚きました。）", "type": "choice"},
-        {"scenario": "「worried」の意味として最も適切なものは？", "choices": ["心配な、不安な", "安心した", "満足な", "うれしい"], "correct": 0, "explanation": "worriedは「心配な、不安な」という意味の形容詞です。例: a worried face（心配そうな顔）", "type": "choice"},
+        {"scenario": "「bowl」の意味として最も適切なものは？", "choices": ["ボウル、鉢", "皿", "コップ", "カップ"], "correct": 0, "explanation": "bowlは丸い形の「ボウル、鉢」を表す名詞です。", "type": "choice"},
+        {"scenario": "「bottle」の意味として最も適切なものは？", "choices": ["瓶、ボトル", "缶", "箱", "袋"], "correct": 0, "explanation": "bottleは液体を入れる「瓶、ボトル」を表す名詞です。", "type": "choice"},
         {"scenario": "「shy」の意味として最も適切なものは？", "choices": ["恥ずかしがりの、内気な", "活発な", "勇敢な", "親切な"], "correct": 0, "explanation": "shyは「恥ずかしがりの、内気な」という意味の形容詞です。例: a shy boy（内気な男の子）", "type": "choice"},
         {"scenario": "「silly」の意味として最も適切なものは？", "choices": ["ばかげた、おかしな", "賢い", "真面目な", "静かな"], "correct": 0, "explanation": "sillyは「ばかげた、おかしな」という意味の形容詞です。例: a silly joke（ばかげた冗談）", "type": "choice"},
         {"scenario": "「messy」の意味として最も適切なものは？", "choices": ["散らかった", "きれいな", "整理された", "新しい"], "correct": 0, "explanation": "messyは「散らかった、乱雑な」という意味の形容詞です。例: a messy room（散らかった部屋）", "type": "choice"},
         {"scenario": "「neat」の意味として最も適切なものは？", "choices": ["きちんとした、整然とした", "散らかった", "汚い", "古い"], "correct": 0, "explanation": "neatは「きちんとした、整然とした」という意味の形容詞です。例: a neat desk（きちんとした机）", "type": "choice"},
-        {"scenario": "「smooth」の意味として最も適切なものは？", "choices": ["なめらかな、すべすべの", "ざらざらの", "鋭い", "固い"], "correct": 0, "explanation": "smoothは「なめらかな、すべすべの」という意味の形容詞です。例: smooth skin（すべすべの肌）", "type": "choice"},
-        {"scenario": "「rough」の意味として最も適切なものは？", "choices": ["ざらざらの、粗い", "なめらかな", "柔らかい", "薄い"], "correct": 0, "explanation": "roughは「ざらざらの、粗い」という意味の形容詞です。例: rough skin（ざらざらの肌）", "type": "choice"},
-        {"scenario": "「sharp」の意味として最も適切なものは？", "choices": ["鋭い、よく切れる", "鈍い", "丸い", "柔らかい"], "correct": 0, "explanation": "sharpは「（刃物などが）鋭い、よく切れる」という意味の形容詞です。例: a sharp knife（よく切れるナイフ）", "type": "choice"}
+        {"scenario": "「blanket」の意味として最も適切なものは？", "choices": ["毛布", "枕", "シーツ", "布団"], "correct": 0, "explanation": "blanketは寒さをしのぐための「毛布」を表す名詞です。", "type": "choice"},
+        {"scenario": "「candle」の意味として最も適切なものは？", "choices": ["ろうそく", "電球", "ランタン", "マッチ"], "correct": 0, "explanation": "candleは火をともす「ろうそく」を表す名詞です。", "type": "choice"},
+        {"scenario": "「cushion」の意味として最も適切なものは？", "choices": ["クッション", "枕", "毛布", "マット"], "correct": 0, "explanation": "cushionは座ったり寄りかかったりする「クッション」を表す名詞です。", "type": "choice"}
       ]
     },
     {
@@ -113,8 +113,8 @@
         {"scenario": "「face」の意味として最も適切なものは？", "choices": ["顔", "頭", "首", "肩"], "correct": 0, "explanation": "faceは「顔」という意味の名詞です。例: wash your face（顔を洗う）", "type": "choice"},
         {"scenario": "「tooth」の意味として最も適切なものは？", "choices": ["歯", "舌", "唇", "あご"], "correct": 0, "explanation": "toothは「歯」という意味の名詞です。複数形は teeth になります。", "type": "choice"},
         {"scenario": "「neck」の意味として最も適切なものは？", "choices": ["首", "肩", "背中", "胸"], "correct": 0, "explanation": "neckは「首」という意味の名詞です。例: a long neck（長い首）", "type": "choice"},
-        {"scenario": "「shoulder」の意味として最も適切なものは？", "choices": ["肩", "首", "腕", "背中"], "correct": 0, "explanation": "shoulderは「肩」という意味の名詞です。例: pat on the shoulder（肩を軽く叩く）", "type": "choice"},
-        {"scenario": "「knee」の意味として最も適切なものは？", "choices": ["ひざ", "足首", "もも", "肘"], "correct": 0, "explanation": "kneeは「ひざ」という意味の名詞です。例: bend your knee（ひざを曲げる）", "type": "choice"},
+        {"scenario": "「path」の意味として最も適切なものは？", "choices": ["小道、進路", "高速道路", "橋", "広場"], "correct": 0, "explanation": "pathは人が歩く「小道」や物事の「進路」を表す名詞です。例: a path through the woods（森の中の小道）", "type": "choice"},
+        {"scenario": "「fence」の意味として最も適切なものは？", "choices": ["柵、フェンス", "壁", "門", "屋根"], "correct": 0, "explanation": "fenceは敷地を囲む「柵、フェンス」を表す名詞です。", "type": "choice"},
         {"scenario": "「toe」の意味として最も適切なものは？", "choices": ["（足の）指", "（手の）指", "かかと", "足首"], "correct": 0, "explanation": "toeは「（足の）指」という意味の名詞です。例: little toe（足の小指）", "type": "choice"}
       ]
     },
@@ -149,9 +149,9 @@
         {"scenario": "「cheek」の意味として最も適切なものは？", "choices": ["ほお、頬", "あご", "額", "耳"], "correct": 0, "explanation": "cheekは「ほお、頬」という意味の名詞です。例: rosy cheeks（バラ色のほお）", "type": "choice"},
         {"scenario": "「farm」の意味として最も適切なものは？", "choices": ["農場", "工場", "牧場の動物", "森"], "correct": 0, "explanation": "farmは「農場」という意味の名詞です。例: work on a farm（農場で働く）", "type": "choice"},
         {"scenario": "「town」の意味として最も適切なものは？", "choices": ["町", "村", "市", "国"], "correct": 0, "explanation": "townは「町」という意味の名詞です。cityより小さい規模を指すことが多いです。", "type": "choice"},
-        {"scenario": "「village」の意味として最も適切なものは？", "choices": ["村", "町", "都市", "国"], "correct": 0, "explanation": "villageは「村」という意味の名詞です。townよりさらに小さい集落を指します。", "type": "choice"},
-        {"scenario": "「pool」の意味として最も適切なものは？", "choices": ["プール", "池", "湖", "海"], "correct": 0, "explanation": "poolは「プール」という意味の名詞です。例: swim in a pool（プールで泳ぐ）", "type": "choice"},
-        {"scenario": "「glasses」の意味として最も適切なものは？", "choices": ["めがね", "帽子", "手袋", "マフラー"], "correct": 0, "explanation": "glassesは「めがね」という意味の名詞です。常に複数形で使います。例: wear glasses（めがねをかける）", "type": "choice"},
+        {"scenario": "「drawer」の意味として最も適切なものは？", "choices": ["引き出し", "棚", "戸棚", "箱"], "correct": 0, "explanation": "drawerは机やタンスの「引き出し」を表す名詞です。", "type": "choice"},
+        {"scenario": "「bucket」の意味として最も適切なものは？", "choices": ["バケツ", "箱", "袋", "かご"], "correct": 0, "explanation": "bucketは水などを運ぶ「バケツ」を表す名詞です。", "type": "choice"},
+        {"scenario": "「leaf」の意味として最も適切なものは？", "choices": ["葉", "枝", "根", "幹"], "correct": 0, "explanation": "leafは木や植物の「葉」を表す名詞です。複数形はleavesです。", "type": "choice"},
         {"scenario": "「kite」の意味として最も適切なものは？", "choices": ["たこ（凧）", "風船", "コマ", "けん玉"], "correct": 0, "explanation": "kiteは空に揚げる「たこ（凧）」という意味の名詞です。例: fly a kite（たこを揚げる）", "type": "choice"},
         {"scenario": "「balloon」の意味として最も適切なものは？", "choices": ["風船", "たこ（凧）", "ボール", "旗"], "correct": 0, "explanation": "balloonは「風船」という意味の名詞です。例: a red balloon（赤い風船）", "type": "choice"}
       ]
@@ -167,10 +167,10 @@
         {"scenario": "「grandfather」の意味として最も適切なものは？", "choices": ["祖父、おじいさん", "祖母", "父", "おじ"], "correct": 0, "explanation": "grandfatherは「祖父、おじいさん」という意味の名詞です。", "type": "choice"},
         {"scenario": "「aunt」の意味として最も適切なものは？", "choices": ["おば", "おじ", "いとこ", "祖母"], "correct": 0, "explanation": "auntは「おば」という意味の名詞です。父母の姉妹などを指します。", "type": "choice"},
         {"scenario": "「uncle」の意味として最も適切なものは？", "choices": ["おじ", "おば", "いとこ", "祖父"], "correct": 0, "explanation": "uncleは「おじ」という意味の名詞です。父母の兄弟などを指します。", "type": "choice"},
-        {"scenario": "「insect」の意味として最も適切なものは？", "choices": ["昆虫", "鳥", "魚", "動物"], "correct": 0, "explanation": "insectは「昆虫」という意味の名詞です。例: a small insect（小さな昆虫）", "type": "choice"},
+        {"scenario": "「branch」の意味として最も適切なものは？", "choices": ["枝、支店", "根", "葉", "幹"], "correct": 0, "explanation": "branchは木の「枝」、または会社の「支店」を表す名詞です。", "type": "choice"},
         {"scenario": "「worm」の意味として最も適切なものは？", "choices": ["みみず、虫", "あり", "くも", "はち"], "correct": 0, "explanation": "wormは「みみず」など細長い虫という意味の名詞です。", "type": "choice"},
-        {"scenario": "「spider」の意味として最も適切なものは？", "choices": ["くも", "あり", "はち", "みみず"], "correct": 0, "explanation": "spiderは「くも」という意味の名詞です。例: a spider web（くもの巣）", "type": "choice"},
-        {"scenario": "「crab」の意味として最も適切なものは？", "choices": ["かに", "えび", "貝", "たこ"], "correct": 0, "explanation": "crabは「かに」という意味の名詞です。例: a small crab（小さなかに）", "type": "choice"},
+        {"scenario": "「bush」の意味として最も適切なものは？", "choices": ["低木、茂み", "草原", "森", "花畑"], "correct": 0, "explanation": "bushは背の低い「低木、茂み」を表す名詞です。", "type": "choice"},
+        {"scenario": "「corner」の意味として最も適切なものは？", "choices": ["角、隅", "中心", "端", "壁"], "correct": 0, "explanation": "cornerは道や部屋の「角、隅」を表す名詞です。例: on the corner（角に）", "type": "choice"},
         {"scenario": "「snail」の意味として最も適切なものは？", "choices": ["かたつむり", "なめくじ", "みみず", "かえる"], "correct": 0, "explanation": "snailは「かたつむり」という意味の名詞です。例: a slow snail（動きの遅いかたつむり）", "type": "choice"},
         {"scenario": "「ladybug」の意味として最も適切なものは？", "choices": ["てんとう虫", "ちょう", "とんぼ", "が"], "correct": 0, "explanation": "ladybugは「てんとう虫」という意味の名詞です。赤や黄色に黒い点がある小さな虫です。", "type": "choice"}
       ]
@@ -187,11 +187,11 @@
         {"scenario": "「robot」の意味として最も適切なものは？", "choices": ["ロボット", "機械", "コンピューター", "おもちゃの車"], "correct": 0, "explanation": "robotは「ロボット」という意味の名詞です。例: play with a robot（ロボットで遊ぶ）", "type": "choice"},
         {"scenario": "「puzzle」の意味として最も適切なものは？", "choices": ["パズル", "積み木", "人形", "ゲーム機"], "correct": 0, "explanation": "puzzleは「パズル」という意味の名詞です。例: a jigsaw puzzle（ジグソーパズル）", "type": "choice"},
         {"scenario": "「marker」の意味として最も適切なものは？", "choices": ["マーカー、サインペン", "鉛筆", "消しゴム", "定規"], "correct": 0, "explanation": "markerは太い線が書ける「マーカー、サインペン」という意味の名詞です。", "type": "choice"},
-        {"scenario": "「folder」の意味として最も適切なものは？", "choices": ["フォルダー、書類ばさみ", "封筒", "ノート", "手帳"], "correct": 0, "explanation": "folderは書類を挟んで整理する「フォルダー」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「pond」の意味として最も適切なものは？", "choices": ["池", "湖", "川", "海"], "correct": 0, "explanation": "pondは湖より小さい「池」を表す名詞です。", "type": "choice"},
         {"scenario": "「backpack」の意味として最も適切なものは？", "choices": ["リュックサック、背負いかばん", "手さげかばん", "財布", "帽子"], "correct": 0, "explanation": "backpackは背中に背負う「リュックサック」という意味の名詞です。例: carry a backpack（リュックサックを背負う）", "type": "choice"},
         {"scenario": "「lunchbox」の意味として最も適切なものは？", "choices": ["弁当箱", "水筒", "お皿", "コップ"], "correct": 0, "explanation": "lunchboxは「弁当箱」という意味の名詞です。例: bring a lunchbox（弁当箱を持ってくる）", "type": "choice"},
         {"scenario": "「chalk」の意味として最も適切なものは？", "choices": ["チョーク", "鉛筆", "クレヨン", "絵の具"], "correct": 0, "explanation": "chalkは黒板に書く「チョーク」という意味の名詞です。", "type": "choice"},
-        {"scenario": "「globe」の意味として最も適切なものは？", "choices": ["地球儀", "地図", "コンパス", "望遠鏡"], "correct": 0, "explanation": "globeは「地球儀」という意味の名詞です。例: spin a globe（地球儀を回す）", "type": "choice"}
+        {"scenario": "「rainbow」の意味として最も適切なものは？", "choices": ["虹", "夕焼け", "朝焼け", "稲妻"], "correct": 0, "explanation": "rainbowは雨上がりの空に現れる「虹」を表す名詞です。", "type": "choice"}
       ]
     }
   ]

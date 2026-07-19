@@ -87,16 +87,16 @@
       "emoji": "🏙️",
       "subtitle": "街や建物の中の細かい場所を表す名詞",
       "questions": [
-        {"scenario": "「corner」の意味として最も適切なものは？", "choices": ["角、隅", "中心", "端", "壁"], "correct": 0, "explanation": "cornerは道や部屋の「角、隅」を表す名詞です。例: on the corner（角に）", "type": "choice"},
+        {"scenario": "「crab」の意味として最も適切なものは？", "choices": ["かに", "えび", "貝", "たこ"], "correct": 0, "explanation": "crabは「かに」という意味の名詞です。例: a small crab（小さなかに）", "type": "choice"},
         {"scenario": "「downtown」の意味として最も適切なものは？", "choices": ["繁華街、中心街", "郊外", "田舎", "住宅街"], "correct": 0, "explanation": "downtownは都市の「繁華街、中心街」を表す名詞・副詞です。例: go downtown（繁華街へ行く）", "type": "choice"},
         {"scenario": "「entrance」の意味として最も適切なものは？", "choices": ["入り口、入場", "出口", "通路", "廊下"], "correct": 0, "explanation": "entranceは「入り口、入場」を表す名詞です。対義語はexit（出口）です。", "type": "choice"},
         {"scenario": "「exit」の意味として最も適切なものは？", "choices": ["出口、退出する", "入り口", "通路", "階段"], "correct": 0, "explanation": "exitは「出口」という名詞、「退出する」という動詞の意味もあります。対義語はentrance（入り口）です。", "type": "choice"},
-        {"scenario": "「fence」の意味として最も適切なものは？", "choices": ["柵、フェンス", "壁", "門", "屋根"], "correct": 0, "explanation": "fenceは敷地を囲む「柵、フェンス」を表す名詞です。", "type": "choice"},
+        {"scenario": "「knee」の意味として最も適切なものは？", "choices": ["ひざ", "足首", "もも", "肘"], "correct": 0, "explanation": "kneeは「ひざ」という意味の名詞です。例: bend your knee（ひざを曲げる）", "type": "choice"},
         {"scenario": "「hallway」の意味として最も適切なものは？", "choices": ["廊下、玄関ホール", "階段", "部屋", "屋根"], "correct": 0, "explanation": "hallwayは建物内の「廊下、玄関ホール」を表す名詞です。", "type": "choice"},
         {"scenario": "「highway」の意味として最も適切なものは？", "choices": ["幹線道路、高速道路", "小道", "橋", "駐車場"], "correct": 0, "explanation": "highwayは車が多く通る「幹線道路、高速道路」を表す名詞です。", "type": "choice"},
         {"scenario": "「lane」の意味として最も適切なものは？", "choices": ["小道、車線", "高速道路", "橋", "広場"], "correct": 0, "explanation": "laneは狭い「小道」や道路の「車線」を表す名詞です。", "type": "choice"},
         {"scenario": "「neighborhood」の意味として最も適切なものは？", "choices": ["近所、地域", "都市", "国", "州"], "correct": 0, "explanation": "neighborhoodは住んでいる場所の「近所、地域」を表す名詞です。", "type": "choice"},
-        {"scenario": "「path」の意味として最も適切なものは？", "choices": ["小道、進路", "高速道路", "橋", "広場"], "correct": 0, "explanation": "pathは人が歩く「小道」や物事の「進路」を表す名詞です。例: a path through the woods（森の中の小道）", "type": "choice"}
+        {"scenario": "「shoulder」の意味として最も適切なものは？", "choices": ["肩", "首", "腕", "背中"], "correct": 0, "explanation": "shoulderは「肩」という意味の名詞です。例: pat on the shoulder（肩を軽く叩く）", "type": "choice"}
       ]
     },
     {
@@ -106,15 +106,15 @@
       "emoji": "🌿",
       "subtitle": "自然の中に見られる地形や植物の名詞",
       "questions": [
-        {"scenario": "「branch」の意味として最も適切なものは？", "choices": ["枝、支店", "根", "葉", "幹"], "correct": 0, "explanation": "branchは木の「枝」、または会社の「支店」を表す名詞です。", "type": "choice"},
-        {"scenario": "「bush」の意味として最も適切なものは？", "choices": ["低木、茂み", "草原", "森", "花畑"], "correct": 0, "explanation": "bushは背の低い「低木、茂み」を表す名詞です。", "type": "choice"},
+        {"scenario": "「insect」の意味として最も適切なものは？", "choices": ["昆虫", "鳥", "魚", "動物"], "correct": 0, "explanation": "insectは「昆虫」という意味の名詞です。例: a small insect（小さな昆虫）", "type": "choice"},
+        {"scenario": "「spider」の意味として最も適切なものは？", "choices": ["くも", "あり", "はち", "みみず"], "correct": 0, "explanation": "spiderは「くも」という意味の名詞です。例: a spider web（くもの巣）", "type": "choice"},
         {"scenario": "「jungle」の意味として最も適切なものは？", "choices": ["ジャングル、密林", "砂漠", "草原", "湖"], "correct": 0, "explanation": "jungleは熱帯の「ジャングル、密林」を表す名詞です。", "type": "choice"},
         {"scenario": "「lawn」の意味として最も適切なものは？", "choices": ["芝生", "花壇", "畑", "森"], "correct": 0, "explanation": "lawnは手入れされた「芝生」を表す名詞です。例: mow the lawn（芝生を刈る）", "type": "choice"},
-        {"scenario": "「leaf」の意味として最も適切なものは？", "choices": ["葉", "枝", "根", "幹"], "correct": 0, "explanation": "leafは木や植物の「葉」を表す名詞です。複数形はleavesです。", "type": "choice"},
+        {"scenario": "「glasses」の意味として最も適切なものは？", "choices": ["めがね", "帽子", "手袋", "マフラー"], "correct": 0, "explanation": "glassesは「めがね」という意味の名詞です。常に複数形で使います。例: wear glasses（めがねをかける）", "type": "choice"},
         {"scenario": "「meadow」の意味として最も適切なものは？", "choices": ["牧草地、草原", "森", "砂漠", "湿地"], "correct": 0, "explanation": "meadowは草花が生える「牧草地、草原」を表す名詞です。", "type": "choice"},
-        {"scenario": "「pond」の意味として最も適切なものは？", "choices": ["池", "湖", "川", "海"], "correct": 0, "explanation": "pondは湖より小さい「池」を表す名詞です。", "type": "choice"},
+        {"scenario": "「folder」の意味として最も適切なものは？", "choices": ["フォルダー、書類ばさみ", "封筒", "ノート", "手帳"], "correct": 0, "explanation": "folderは書類を挟んで整理する「フォルダー」という意味の名詞です。", "type": "choice"},
         {"scenario": "「prairie」の意味として最も適切なものは？", "choices": ["大草原、プレーリー", "砂漠", "森林", "山地"], "correct": 0, "explanation": "prairieは北米などにある広大な「大草原」を表す名詞です。", "type": "choice"},
-        {"scenario": "「rainbow」の意味として最も適切なものは？", "choices": ["虹", "夕焼け", "朝焼け", "稲妻"], "correct": 0, "explanation": "rainbowは雨上がりの空に現れる「虹」を表す名詞です。", "type": "choice"},
+        {"scenario": "「globe」の意味として最も適切なものは？", "choices": ["地球儀", "地図", "コンパス", "望遠鏡"], "correct": 0, "explanation": "globeは「地球儀」という意味の名詞です。例: spin a globe（地球儀を回す）", "type": "choice"},
         {"scenario": "「reef」の意味として最も適切なものは？", "choices": ["（サンゴ）礁", "島", "岬", "湾"], "correct": 0, "explanation": "reefは海中の「（サンゴ）礁」を表す名詞です。例: coral reef（サンゴ礁）", "type": "choice"}
       ]
     },
@@ -126,15 +126,15 @@
       "subtitle": "家庭や生活の中で使う道具の名詞",
       "questions": [
         {"scenario": "「battery」の意味として最も適切なものは？", "choices": ["電池、バッテリー", "電球", "配線", "充電器"], "correct": 0, "explanation": "batteryは機器を動かす「電池、バッテリー」を表す名詞です。", "type": "choice"},
-        {"scenario": "「blanket」の意味として最も適切なものは？", "choices": ["毛布", "枕", "シーツ", "布団"], "correct": 0, "explanation": "blanketは寒さをしのぐための「毛布」を表す名詞です。", "type": "choice"},
-        {"scenario": "「bottle」の意味として最も適切なものは？", "choices": ["瓶、ボトル", "缶", "箱", "袋"], "correct": 0, "explanation": "bottleは液体を入れる「瓶、ボトル」を表す名詞です。", "type": "choice"},
-        {"scenario": "「bowl」の意味として最も適切なものは？", "choices": ["ボウル、鉢", "皿", "コップ", "カップ"], "correct": 0, "explanation": "bowlは丸い形の「ボウル、鉢」を表す名詞です。", "type": "choice"},
-        {"scenario": "「bucket」の意味として最も適切なものは？", "choices": ["バケツ", "箱", "袋", "かご"], "correct": 0, "explanation": "bucketは水などを運ぶ「バケツ」を表す名詞です。", "type": "choice"},
+        {"scenario": "「smooth」の意味として最も適切なものは？", "choices": ["なめらかな、すべすべの", "ざらざらの", "鋭い", "固い"], "correct": 0, "explanation": "smoothは「なめらかな、すべすべの」という意味の形容詞です。例: smooth skin（すべすべの肌）", "type": "choice"},
+        {"scenario": "「worried」の意味として最も適切なものは？", "choices": ["心配な、不安な", "安心した", "満足な", "うれしい"], "correct": 0, "explanation": "worriedは「心配な、不安な」という意味の形容詞です。例: a worried face（心配そうな顔）", "type": "choice"},
+        {"scenario": "「surprised」の意味として最も適切なものは？", "choices": ["驚いた", "悲しい", "満足した", "疲れた"], "correct": 0, "explanation": "surprisedは「驚いた」という意味の形容詞です。例: I was surprised.（私は驚きました。）", "type": "choice"},
+        {"scenario": "「pool」の意味として最も適切なものは？", "choices": ["プール", "池", "湖", "海"], "correct": 0, "explanation": "poolは「プール」という意味の名詞です。例: swim in a pool（プールで泳ぐ）", "type": "choice"},
         {"scenario": "「calculator」の意味として最も適切なものは？", "choices": ["電卓、計算機", "時計", "定規", "コンパス"], "correct": 0, "explanation": "calculatorは計算をする「電卓、計算機」を表す名詞です。", "type": "choice"},
-        {"scenario": "「candle」の意味として最も適切なものは？", "choices": ["ろうそく", "電球", "ランタン", "マッチ"], "correct": 0, "explanation": "candleは火をともす「ろうそく」を表す名詞です。", "type": "choice"},
+        {"scenario": "「rough」の意味として最も適切なものは？", "choices": ["ざらざらの、粗い", "なめらかな", "柔らかい", "薄い"], "correct": 0, "explanation": "roughは「ざらざらの、粗い」という意味の形容詞です。例: rough skin（ざらざらの肌）", "type": "choice"},
         {"scenario": "「cart」の意味として最も適切なものは？", "choices": ["カート、手押し車", "自転車", "台車", "かご"], "correct": 0, "explanation": "cartは荷物を運ぶ「カート、手押し車」を表す名詞です。例: shopping cart（買い物カート）", "type": "choice"},
-        {"scenario": "「cushion」の意味として最も適切なものは？", "choices": ["クッション", "枕", "毛布", "マット"], "correct": 0, "explanation": "cushionは座ったり寄りかかったりする「クッション」を表す名詞です。", "type": "choice"},
-        {"scenario": "「drawer」の意味として最も適切なものは？", "choices": ["引き出し", "棚", "戸棚", "箱"], "correct": 0, "explanation": "drawerは机やタンスの「引き出し」を表す名詞です。", "type": "choice"}
+        {"scenario": "「sharp」の意味として最も適切なものは？", "choices": ["鋭い、よく切れる", "鈍い", "丸い", "柔らかい"], "correct": 0, "explanation": "sharpは「（刃物などが）鋭い、よく切れる」という意味の形容詞です。例: a sharp knife（よく切れるナイフ）", "type": "choice"},
+        {"scenario": "「village」の意味として最も適切なものは？", "choices": ["村", "町", "都市", "国"], "correct": 0, "explanation": "villageは「村」という意味の名詞です。townよりさらに小さい集落を指します。", "type": "choice"}
       ]
     },
     {
