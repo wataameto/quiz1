@@ -194,23 +194,34 @@ function soundFanfare() { [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60]
 function soundGood()    { tone(784,'sine',0,0.15,0.25); tone(1047,'sine',0.14,0.20,0.25); }
 function soundShine()   { tone(1319,'sine',0,0.35,0.18); tone(1976,'sine',0.04,0.32,0.15); tone(2637,'sine',0.08,0.30,0.12); tone(3520,'sine',0.12,0.26,0.08); }
 
-function launchSparkles(x, y, count = 14) {
+function launchSparkles(x, y, count = 28) {
   const wrap = document.getElementById('confetti-wrap');
   if (!wrap) return;
   wrap.setAttribute('aria-hidden', 'true');
+
+  const flash = document.createElement('div');
+  flash.className = 'sparkle-flash';
+  flash.setAttribute('aria-hidden', 'true');
+  flash.style.left = x + 'px';
+  flash.style.top = y + 'px';
+  wrap.appendChild(flash);
+  flash.addEventListener('animationend', () => flash.remove());
+
+  const glyphs = ['✨', '⭐', '🌟'];
   for (let i = 0; i < count; i++) {
     const el = document.createElement('div');
     el.className = 'sparkle-piece';
     el.setAttribute('aria-hidden', 'true');
-    el.textContent = '✨';
+    el.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
     el.style.left = x + 'px';
     el.style.top = y + 'px';
     const angle = Math.random() * Math.PI * 2;
-    const dist = 40 + Math.random() * 60;
+    const dist = 70 + Math.random() * 110;
     el.style.setProperty('--sx', Math.cos(angle) * dist + 'px');
     el.style.setProperty('--sy', Math.sin(angle) * dist + 'px');
-    el.style.fontSize = (14 + Math.random() * 14) + 'px';
-    el.style.animationDelay = (Math.random() * 0.1) + 's';
+    el.style.fontSize = (18 + Math.random() * 22) + 'px';
+    el.style.animationDuration = (0.6 + Math.random() * 0.5) + 's';
+    el.style.animationDelay = (Math.random() * 0.12) + 's';
     wrap.appendChild(el);
     el.addEventListener('animationend', () => el.remove());
   }

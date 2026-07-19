@@ -163,8 +163,10 @@
     .score-msg { display: inline; font-size: 1rem; font-weight: 700; color: #2d3748; }
     .best-msg { font-size: 0.85rem; color: #d69e2e; font-weight: 700; margin-bottom: 2px; }
     .full-clear-badge { display: inline-block; background: linear-gradient(135deg, #ffd700, #ffb300); color: #7c4a00; font-weight: 800; font-size: 0.85rem; padding: 6px 14px; border-radius: 999px; margin-bottom: 10px; box-shadow: 0 3px 10px rgba(255,179,0,0.35); cursor: pointer; }
-    .sparkle-piece { position: absolute; pointer-events: none; transform: translate(-50%, -50%); animation: sparklePop 0.7s ease-out forwards; }
-    @keyframes sparklePop { 0% { transform: translate(-50%, -50%) scale(0.3); opacity: 1; } 100% { transform: translate(calc(-50% + var(--sx)), calc(-50% + var(--sy))) scale(1.1); opacity: 0; } }
+    .sparkle-piece { position: absolute; pointer-events: none; transform: translate(-50%, -50%); text-shadow: 0 0 6px rgba(255,215,0,0.9); animation-name: sparklePop; animation-timing-function: ease-out; animation-fill-mode: forwards; }
+    @keyframes sparklePop { 0% { transform: translate(-50%, -50%) scale(0); opacity: 1; } 25% { transform: translate(-50%, -50%) scale(1.4); opacity: 1; } 100% { transform: translate(calc(-50% + var(--sx)), calc(-50% + var(--sy))) scale(0.6); opacity: 0; } }
+    .sparkle-flash { position: absolute; width: 16px; height: 16px; pointer-events: none; border-radius: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,215,0,0.7) 40%, rgba(255,215,0,0) 75%); animation: sparkleFlash 0.5s ease-out forwards; }
+    @keyframes sparkleFlash { 0% { transform: translate(-50%, -50%) scale(0.3); opacity: 1; } 100% { transform: translate(-50%, -50%) scale(9); opacity: 0; } }
     .full-clear-celebrate { background: linear-gradient(135deg, #fffbea, #fff3c4); border: 2px solid #ffd700; border-radius: 14px; padding: 14px 18px; margin-bottom: 15px; text-align: center; }
     .full-clear-celebrate p { font-size: 1rem; font-weight: 800; color: #7c4a00; margin-bottom: 10px; }
     .full-clear-celebrate button { background: linear-gradient(135deg, #f7971e, #ffd200); border: none; border-radius: 10px; padding: 10px 20px; font-size: 0.9rem; font-weight: 800; color: #2d3748; cursor: pointer; font-family: inherit; transition: all 0.15s; }
