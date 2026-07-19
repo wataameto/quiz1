@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719115928">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719120208">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -48,192 +48,176 @@
       </div>
       <div class="quiz-title-wrap">
         <h2 id="quiz-title"></h2>
-        <span id="quiz-badge"></span>
-      </div>
-      <div class="progress-bar-container">
-        <div id="progress-bar"></div>
-      </div>
-      <div class="quiz-meta-info">
-        <span id="question-number"></span>
-        <span id="current-lap-display" class="lap-badge" style="display:none;"></span>
+        <p id="quiz-subtitle"></p>
       </div>
     </div>
-
-    <div class="quiz-main-area">
-      <div class="question-container">
-        <div id="question-text"></div>
+    <div class="progress-wrap">
+      <div class="progress-top">
+        <span id="progress-label"></span>
+        <span id="progress-pct"></span>
       </div>
-
-      <div class="choices-container" id="choices-grid"></div>
-
-      <div id="feedback" class="feedback hidden">
-        <div class="feedback-icon" id="feedback-icon"></div>
-        <div class="feedback-title" id="feedback-title"></div>
-        <div class="explanation-container" id="explanation-container">
-          <div class="explanation-title">解説</div>
-          <div id="explanation-text" class="explanation-text"></div>
-        </div>
-        <button id="next-btn" class="next-btn" onclick="nextQuestion()">次の問題へ</button>
-      </div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-bar"></div></div>
     </div>
+    <div class="scenario" id="scenario"></div>
+    <div class="choices" id="choices"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="explanation" id="explanation"></div>
+    <button class="next-btn" id="next-btn"></button>
   </div>
 
   <div id="screen-results" class="hidden">
-    <div class="results-card">
-      <div class="results-header">
-        <h2>結果発表</h2>
-        <p id="result-meta"></p>
+    <div class="result-header"><h1 id="result-title"></h1></div>
+    <div class="score-area">
+      <div class="score-ring">
+        <span class="score-num" id="score-num"></span>
       </div>
-      <div class="result-score-circle">
-        <span id="result-score"></span>
-        <span class="score-unit">点</span>
-      </div>
-      <div id="result-evaluation" class="result-evaluation"></div>
-      <div id="result-best-score" class="result-best-score"></div>
-      
-      <div class="result-actions">
-        <button class="btn-primary" onclick="showHome()">テスト選択へ戻る</button>
-        <button id="retry-btn" class="btn-secondary" onclick="retryTest()">もう一度挑戦</button>
-        <button id="review-wrong-btn" class="btn-accent" onclick="startWrongReview()" style="display:none;">間違いだけ復習</button>
-      </div>
-
-      <div class="answers-list-section">
-        <h3>解答一覧</h3>
-        <div id="answers-summary-list"></div>
-      </div>
+      <div class="score-stars" id="score-stars"></div>
+      <p class="score-msg" id="score-msg"></p>
+      <p class="best-msg" id="best-msg"></p>
     </div>
+    <div class="result-list">
+      <h3>📋 解答一覧</h3>
+      <div id="answer-list"></div>
+    </div>
+    <button id="review-btn" class="btn-review" onclick="startReview()" style="display:none"></button>
+    <button class="btn-home" onclick="showHome()">🏠 テスト選択に戻る</button>
   </div>
 
   <div id="screen-admin" class="hidden">
-    <div class="admin-header">
-      <button class="admin-back" onclick="showHome()">テスト選択へ戻る</button>
-      <h2>問題データプレビュー</h2>
+    <div class="admin-top">
+      <a href="../" onclick="backToMainMenu(event)" style="position:absolute; top:0; left:0; background:transparent; color:#667eea; border:2px solid #667eea; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;">🏠 メインメニュー</a>
+      <div style="height:42px;"></div>
+      <div class="admin-title" id="admin-title">問題一覧</div>
+      <div class="admin-subtitle" id="admin-subtitle"></div>
     </div>
-    <div id="admin-content"></div>
+    <div id="admin-list"></div>
   </div>
-</div>
 
-<!-- 成績・設定モーダル -->
-<div id="score-modal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>📊 成績・設定</h2>
-      <span class="close-btn" onclick="closeScoreModal()">&times;</span>
-    </div>
-    <div class="modal-body">
-      <div class="settings-section">
-        <h3>表示設定</h3>
-        <div class="setting-item">
-          <label for="font-size-select">文字サイズ</label>
-          <select id="font-size-select" onchange="changeFontSize(this.value)">
-            <option value="xxs">極小 (XXS)</option>
-            <option value="xs">小 (XS)</option>
-            <option value="s">やや小 (S)</option>
-            <option value="m" selected>標準 (M)</option>
-            <option value="l">大 (L)</option>
-          </select>
+  <!-- 成績メニュー（履歴確認・リセット） -->
+  <div id="score-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:400px; width:90%; text-align:center;">
+      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">📊 成績・設定</h2>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <button onclick="showScoreHistory()" style="padding:12px; background:#edf2f7; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">📜 成績履歴を見る</button>
+        <button onclick="resetScores()" style="padding:12px; background:#fff5f5; border:1.5px solid #e53e3e; border-radius:8px; cursor:pointer; font-weight:700; color:#e53e3e; font-family:inherit;">🗑️ 成績をリセット</button>
+        <div style="border-top:1.5px solid #edf2f7; margin-top:6px; padding-top:14px; text-align:left;">
+          <p style="font-size:0.8rem; color:#718096; font-weight:700; margin-bottom:8px;">⚙️ 表示サイズ</p>
+          <div style="display:flex; gap:6px;">
+            <button id="font-size-btn-xxs" onclick="setFontSize('xxs')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">XXS</button>
+            <button id="font-size-btn-xs" onclick="setFontSize('xs')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">XS</button>
+            <button id="font-size-btn-s" onclick="setFontSize('s')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">S</button>
+            <button id="font-size-btn-m" onclick="setFontSize('m')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">M</button>
+            <button id="font-size-btn-l" onclick="setFontSize('l')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">L</button>
+          </div>
         </div>
+        <button onclick="closeScoreModal()" style="padding:12px; background:transparent; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#718096; font-family:inherit;">閉じる</button>
       </div>
-      
-      <div class="score-history-section">
-        <h3>挑戦履歴</h3>
-        <div id="history-list-container">
-          <p class="no-history-text">履歴がありません</p>
+    </div>
+  </div>
+
+  <!-- 成績履歴 -->
+  <div id="history-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:480px; width:90%; max-height:80vh; display:flex; flex-direction:column; text-align:left;">
+      <h2 style="font-size:1.1rem; color:#2d3748; margin-bottom:12px; font-weight:800; text-align:center; flex-shrink:0;">📜 成績履歴（<span id="history-part-label"></span>）</h2>
+      <div id="history-list" style="overflow-y:auto; flex:1; min-height:0;"></div>
+      <div style="display:flex; gap:10px; margin-top:16px; flex-shrink:0;">
+        <button onclick="confirmDeleteSelectedHistory()" style="flex:1; padding:12px; background:#fff5f5; border:1.5px solid #e53e3e; border-radius:8px; cursor:pointer; font-weight:700; color:#e53e3e; font-family:inherit;">🗑️ 選択した履歴を削除</button>
+        <button onclick="closeHistoryModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 履歴削除確認ダイアログ -->
+  <div id="delete-history-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; z-index:10001;">
+    <div style="background:#fff; border-radius:16px; padding:20px; box-shadow:0 20px 60px rgba(0,0,0,0.45); max-width:400px; width:90%; text-align:center; border:3px solid #e53e3e;">
+      <div style="font-size:2.6rem; margin-bottom:6px; line-height:1;">💣</div>
+      <h2 style="font-size:1.15rem; color:#c53030; margin-bottom:10px; font-weight:800; letter-spacing:0.05em;">⚠️ 危険操作 ⚠️</h2>
+      <p style="color:#4a5568; margin-bottom:8px; font-size:0.9rem; font-weight:700; line-height:1.5;">選択した履歴を削除します。</p>
+      <p style="color:#e53e3e; margin-bottom:20px; font-size:0.85rem; font-weight:800;">この操作は取り消せません。本当によろしいですか？</p>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeDeleteHistoryModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
+        <button onclick="deleteSelectedHistory()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:800; color:#fff; font-family:inherit;">💣 削除する</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 次の周へ進む確認ダイアログ -->
+  <div id="advance-lap-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10001;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:400px; width:90%; text-align:center;">
+      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">次の周へ進みますか？</h2>
+      <p style="color:#718096; margin-bottom:24px; font-size:0.95rem;">各セットの最高点・誤答記録がリセットされます（挑戦履歴と周回数は消えません）。</p>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeAdvanceLapModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
+        <button onclick="advanceLap()" style="flex:1; padding:12px; background:#f7971e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit;">🏁 進む</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- リセット確認ダイアログ -->
+  <div id="reset-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:420px; width:90%; text-align:center;">
+      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">スコアをリセット</h2>
+      <p style="color:#718096; margin-bottom:18px; font-size:0.95rem;">どのスコアをリセットしますか？</p>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="text-align:left; border:1.5px solid #f7971e; border-radius:10px; padding:10px 12px;">
+          <button onclick="confirmResetCurrentLevel()" style="width:100%; padding:10px; background:#f7971e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">現在のパートのみ</button>
+          <p style="margin:0; font-size:0.76rem; color:#7c4a00; line-height:1.5;">消える: このパートの最高点・誤答記録・挑戦履歴・通し回数<br>残る: 周回数(⭐)・周回履歴・全問正解達成記録、他のパートの成績</p>
         </div>
-        <button id="delete-selected-history-btn" class="btn-danger btn-sm" onclick="confirmDeleteSelectedHistory()" style="display:none; margin-top:10px;">選択した履歴を削除</button>
+        <div style="text-align:left; border:1.5px solid #e53e3e; border-radius:10px; padding:10px 12px;">
+          <button onclick="confirmResetAllLevels()" style="width:100%; padding:10px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">教材まるごと(全パート)</button>
+          <p style="margin:0; font-size:0.76rem; color:#9b2c2c; line-height:1.5;">消える: この教材の成績データを全部（周回数・周回履歴・全問正解達成記録も含む）</p>
+        </div>
+        <button onclick="closeResetModal()" style="padding:10px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
       </div>
-      
-      <div class="danger-zone">
-        <h3>危険ゾーン</h3>
-        <p class="danger-desc">この教材のすべての成績データ（最高点、挑戦履歴、誤答記録）を完全に消去します。</p>
-        <button class="btn-danger" onclick="confirmResetCurrentLevel()">成績をリセットする</button>
+    </div>
+  </div>
+
+  <!-- リセット最終確認（危険操作） -->
+  <div id="reset-danger-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; z-index:10001;">
+    <div style="background:#fff; border-radius:16px; padding:20px; box-shadow:0 20px 60px rgba(0,0,0,0.45); max-width:400px; width:90%; text-align:center; border:3px solid #e53e3e;">
+      <div style="font-size:2.6rem; margin-bottom:6px; line-height:1;">💣</div>
+      <h2 style="font-size:1.15rem; color:#c53030; margin-bottom:10px; font-weight:800; letter-spacing:0.05em;">⚠️ 危険操作 ⚠️</h2>
+      <p id="reset-danger-message" style="color:#4a5568; margin-bottom:8px; font-size:0.9rem; font-weight:700; line-height:1.5;"></p>
+      <p style="color:#e53e3e; margin-bottom:20px; font-size:0.85rem; font-weight:800;">この操作は取り消せません。本当によろしいですか？</p>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeResetDangerModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
+        <button id="reset-danger-execute-btn" onclick="executeResetDanger(this)" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:800; color:#fff; font-family:inherit;">💣 実行する</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ログアウト確認ダイアログ -->
+  <div id="logout-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:440px; width:90%; text-align:center;">
+      <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">ログアウトしますか？</h2>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeLogoutModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; white-space:nowrap;">キャンセル</button>
+        <button onclick="confirmLogout()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; white-space:nowrap;">ログアウト</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 用語検索ダイアログ -->
+  <div id="search-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+    <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:480px; width:90%; text-align:left;">
+      <h2 style="font-size:1.05rem; color:#2d3748; margin-bottom:10px; font-weight:800;">🔍 用語を検索</h2>
+      <p style="color:#a0aec0; font-size:0.78rem; margin-bottom:10px;">気になる部分をドラッグして選択すると、その範囲だけ検索できます。選択しなければ全文で検索します。</p>
+      <div id="search-modal-text" style="background:#f7f8ff; border-radius:10px; padding:14px; font-size:0.9rem; color:#2d3748; line-height:1.6; max-height:240px; overflow-y:auto; user-select:text; -webkit-user-select:text; margin-bottom:16px;"></div>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeSearchModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; white-space:nowrap;">閉じる</button>
+        <button onclick="runTermSearch()" style="flex:1; padding:12px; background:#667eea; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; white-space:nowrap;">🔍 Googleで検索</button>
       </div>
     </div>
   </div>
 </div>
-
-<!-- ログアウト確認モーダル -->
-<div id="logout-modal" class="modal">
-  <div class="modal-content modal-confirm">
-    <div class="modal-header">
-      <h2>確認</h2>
-    </div>
-    <div class="modal-body">
-      <p>本当にログアウトしますか？</p>
-      <div class="confirm-actions">
-        <button class="btn-secondary" onclick="closeLogoutModal()">キャンセル</button>
-        <button class="btn-danger" onclick="logout()">ログアウトする</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 成績リセット確認モーダル -->
-<div id="reset-modal" class="modal">
-  <div class="modal-content modal-confirm">
-    <div class="modal-header">
-      <h2>成績リセットの確認</h2>
-    </div>
-    <div class="modal-body">
-      <p>この教材のすべての成績データをリセットします。よろしいですか？</p>
-      <div class="confirm-actions">
-        <button class="btn-secondary" onclick="closeResetModal()">キャンセル</button>
-        <button class="btn-danger" onclick="resetCurrentLevel()">リセットする</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 履歴削除確認モーダル -->
-<div id="delete-history-modal" class="modal">
-  <div class="modal-content modal-confirm">
-    <div class="modal-header">
-      <h2>履歴削除の確認</h2>
-    </div>
-    <div class="modal-body">
-      <p>選択した履歴を削除します。よろしいですか？（※最高点や誤答記録は削除されません）</p>
-      <div class="confirm-actions">
-        <button class="btn-secondary" onclick="closeDeleteHistoryModal()">キャンセル</button>
-        <button class="btn-danger" onclick="deleteSelectedHistory()">削除する</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 周回進捗確認モーダル -->
-<div id="advance-lap-modal" class="modal">
-  <div class="modal-content modal-confirm">
-    <div class="modal-header">
-      <h2>次の周へ進む確認</h2>
-    </div>
-    <div class="modal-body">
-      <p>次の周へ進みますか？<br><small style="color:#d500f9;">※最高点と現在の誤答記録はリセットされますが、これまでの周回数や詳細な挑戦履歴は保持されます。</small></p>
-      <div class="confirm-actions">
-        <button class="btn-secondary" onclick="closeAdvanceLapModal()">キャンセル</button>
-        <button class="btn-primary" onclick="advanceLap()">次の周へ進む</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 全文コピー・検索用モーダル -->
-<div id="search-modal" class="modal">
-  <div class="modal-content search-modal-content">
-    <div class="modal-header">
-      <h2>🔍 全文表示 / 検索</h2>
-      <span class="close-btn" onclick="closeSearchModal()">&times;</span>
-    </div>
-    <div class="modal-body">
-      <p class="search-hint">テキストをドラッグ選択して「Googleで検索」を押すと、選択範囲のみを検索できます。</p>
-      <textarea id="search-text-area" readonly></textarea>
-      <div class="search-actions">
-        <button class="btn-primary" onclick="runTermSearch()">Googleで検索</button>
-        <button class="btn-secondary" onclick="closeSearchModal()">閉じる</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script src="../shared/quiz-app.js?v=20260719115928"></script>
+<div class="confetti-wrap" id="confetti-wrap"></div>
+<script src="../shared/quiz-app.js?v=20260719120208"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../sw.js').catch(e => console.error('SW registration failed:', e));
+  });
+}
+</script>
 </body>
 </html>
