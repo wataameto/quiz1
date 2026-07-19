@@ -20,6 +20,12 @@ let currentUser = null;
 let bestScores = {};
 let cacheInitialized = false;
 
+const UNIT_NAME = 'レッスン';
+
+function getLessonName(t) {
+  return `${UNIT_NAME}${t.id}　${t.type || ''}`;
+}
+
 // ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
 const FONT_SIZE_KEY = 'quizFontSize';
 const FONT_SIZES = { xxs: '70%', xs: '80%', s: '90%', m: '100%', l: '115%' };
@@ -952,8 +958,6 @@ async function showHome() {
     bannerEl.style.display = bannerHtml ? 'block' : 'none';
   }
 
-  const unitName = 'レッスン';
-
   // レベル別スコアを計算・表示（パートが1個だけの教材も同じアコーディオン表示に統一する）
   const partScoresSection = document.getElementById('part-scores-section');
   const partScoresList = document.getElementById('part-scores-list');
@@ -985,7 +989,7 @@ async function showHome() {
     const levelLabel = getPartLabel(levelData, level);
     const isOpen = level === currentLevel && !homeCollapsed;
     const blockClass = `part-block${isOpen ? ' open' : ''}${level === currentLevel ? ' active' : ''}`;
-    const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel, unitName);
+    const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel);
 
     partScoresHtml += `<div class="${blockClass}">
         <div class="part-score-row" onclick="toggleLevel(${level});">
@@ -1002,7 +1006,7 @@ async function showHome() {
   document.getElementById('test-grid').innerHTML = '';
 }
 
-async function buildSetRowsHtml(tests, level, partLabel, unitName) {
+async function buildSetRowsHtml(tests, level, partLabel) {
   let html = '';
   for (const t of tests) {
     const best = await getBest(t.id, level);
@@ -1030,7 +1034,7 @@ async function buildSetRowsHtml(tests, level, partLabel, unitName) {
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
       <div class="set-main">
-        <div class="set-name"><span class="set-icon-inline">${t.emoji}</span>${unitName}${t.id}　${t.type || ''}</div>
+        <div class="set-name"><span class="set-icon-inline">${t.emoji}</span>${getLessonName(t)}</div>
         <div class="set-sub">${escapeHtml(t.subtitle || partLabel)} ${questionCount}問</div>
       </div>
       <div class="set-meta">
@@ -1235,7 +1239,7 @@ function renderQuestion() {
   const pct = Math.round((currentQ / total) * 100);
 
   document.getElementById('quiz-part-label').textContent = getPartLabel(quizData[currentLevel], currentLevel);
-  document.getElementById('quiz-title').textContent    = currentTest.title;
+  document.getElementById('quiz-title').textContent    = getLessonName(currentTest);
   document.getElementById('quiz-subtitle').textContent = currentTest.subtitle;
   document.getElementById('progress-bar').style.width  = pct + '%';
   document.getElementById('progress-label').textContent = `第 ${currentQ + 1} 問 ／ ${total} 問`;
