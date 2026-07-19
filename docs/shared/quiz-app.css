@@ -267,9 +267,15 @@
       .set-actions .btn-title { font-size: 0.68rem; }
       .set-actions .btn-sub { font-size: 0.54rem; }
       .set-actions .btn-sub-score { font-size: 0.66rem; }
-      .scenario { min-height: 60px; }
-      .choices { min-height: 220px; }
-      .feedback { min-height: 40px; }
-      .explanation { min-height: 60px; }
+      .quiz-header { gap: 6px; margin-bottom: 8px; }
+      .quiz-title-wrap h2 { font-size: 1.05rem; }
+      .progress-wrap { margin-bottom: 8px; }
+      .progress-top { margin-bottom: 4px; }
+      .progress-bar-bg { height: 8px; }
+      .scenario { min-height: 60px; padding: 12px 14px; margin-bottom: 8px; }
+      .choices { min-height: 220px; gap: 6px; }
+      .choice-btn { padding: 10px 14px; }
+      .feedback { min-height: 40px; margin-top: 8px; padding: 10px 14px; }
+      .explanation { min-height: 60px; margin-top: 6px; padding: 8px 12px; }
       #quiz-subtitle { display: none; }
     }
