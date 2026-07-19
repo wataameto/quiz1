@@ -259,7 +259,6 @@ async function loadAllQuestions() {
             .quiz-back { background: ${cfg.accentColor}; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.16); }
             .quiz-back:hover { filter: brightness(0.92); }
             .next-btn { background: ${cfg.topGradient}; color: #2d3748; }
-            .btn-home { background: ${cfg.topGradient}; color: #2d3748; }
           `;
 
           // メインメニューボタンの色を更新
