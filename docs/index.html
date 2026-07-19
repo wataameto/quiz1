@@ -1287,7 +1287,7 @@ function renderScoreRowHtml(r) {
   if (isFull) markText += '+⭐';
   const clearMark = markText ? `<span class="full-clear-mark">${markText}</span> ` : '';
   return `<a href="${r.path}?from=menu" class="score-row score-link" target="_blank">
-      <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name} <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}セット</span></span>
+      <span class="score-row-name">${quizCodeBadgeHtml(r.id)}${r.emoji} ${r.name} <span class="score-row-count">${r.meta.parts}パート・${r.meta.sets}レッスン</span></span>
       <span class="score-row-meta">
         <span class="score-row-result">
           <span class="score-row-correct">${clearMark}✅ ${r.score.correct}/${r.meta.total}問正解</span>
@@ -1387,7 +1387,7 @@ function renderQuizToggleList() {
   function toggleRowHtml(r) {
     const on = isQuizVisible(r.id);
     const pinned = isQuizPinned(r.id);
-    const metaText = compact ? '' : `　${r.meta.parts}パート・${r.meta.sets}セット・${r.meta.total}問`;
+    const metaText = compact ? '' : `　${r.meta.parts}パート・${r.meta.sets}レッスン・${r.meta.total}問`;
     const descHtml = compact ? '' : `<span class="quiz-toggle-desc">${r.description}</span>`;
     return `<div class="quiz-toggle-row">
       <div class="quiz-toggle-top">

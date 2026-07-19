@@ -13,7 +13,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - メインメニューは認証状態に関わらず常にホーム画面（教材一覧・検索・成績枠）を表示する。専用ログイン画面はない。ログインが必要な操作（教材トグルなど）だけ、その場でログインを促す。
 - 問題数とパート数は questions*.json から動的に計算する。固定の「3パート」「180問」のような表示に戻さない。
 - 現在はテストに10問前提が残る箇所がある。問題数ルールを本格的に変える場合は src/bokiQuestions.test.js と表示仕様を見直す。
-- 旧スコアキー best_<testId> は questions1.json の後方互換としてのみ扱う。新規保存は best_<level>_<testId> を使う。
+- 旧スコアキー lesson_<testId> は questions1.json の後方互換としてのみ扱う。新規保存は lesson_<level>_<testId> を使う。
 - ユーザー変更・ログアウト時は bestScores と cacheInitialized をリセットし、別ユーザーのキャッシュを残さない。
 - resetCurrentLevel() は Firestore document の存在確認後に update する。存在しない document に update しない。
 - ?admin=1 は管理者認証付きではなく、URLで開ける軽量レビュー画面。セキュリティ機能として扱わない。
@@ -24,7 +24,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - Firestoreに新しいコレクションを追加するときは、セキュリティルールが `scores` または `^quiz_.*` にマッチするコレクション名しか許可していないことに注意する（例: メニュー設定は `menu_prefs` ではなく `quiz_menu_prefs`）。
 - 新しいクイズの questions1.json（以降の各レベルファイルも）には必ず `id` フィールド（クイズスラッグと同じ値）を入れる。これが無いと `quizId` が undefined のままになり、成績が `quiz_undefined` コレクションに保存される（実際に発生した事故。sap/sample追加時に発覚し修正済み）。
 - メインメニューは docs/quiz-meta.json（ビルド時生成）を読んで各クイズの parts/sets/total/setCounts を得る。questions*.json 自体をメインメニューから直接fetchするのは、quiz-meta.jsonに載っていない教材（ローカルで新規追加してまだコミット/ビルドしていない場合など）へのフォールバックのみ。
-- 全クリア・周回機能（`isFullyCleared()`/`getLap()`/`advanceLap()`）は、周回を進めても `best_`/`wrongAnswers_` は削除するが `history_`/`lap`/`lapHistory`/`fullClearHistory` は消さない。`lapAttemptCount` だけは周回が進むたびに0へ明示的にリセットする。「周回のたびに成績は初期化されるが、過去の挑戦履歴と周回数・達成記録は積み上がる」という設計。
+- 全クリア・周回機能（`isFullyCleared()`/`getLap()`/`advanceLap()`）は、周回を進めても `lesson_`/`lessonWrongAnswers_` は削除するが `lessonHistory_`/`lap`/`lapHistory`/`fullClearHistory` は消さない。`lapAttemptCount` だけは周回が進むたびに0へ明示的にリセットする。「周回のたびに成績は初期化されるが、過去の挑戦履歴と周回数・達成記録は積み上がる」という設計。
 - 「次の周へ進む」「選択した履歴を削除」は破壊的操作のため、実行前に自前モーダル（advance-lap-modal, delete-history-modal）で確認する。confirmAdvanceLap()/confirmDeleteSelectedHistory() が確認モーダルを開き、advanceLap()/deleteSelectedHistory() が実処理を行う2段構え。
 
 ## 現在の実装スナップショット
@@ -46,7 +46,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 左上の auth-status に、未ログイン時は「🔐 ログイン」ボタン、ログイン時は「👤 ユーザー名 ログアウト」を表示する（renderAuthStatus）。
 - 教材一覧はdocs/config.jsonのキーから動的に組み立てる（updateScoreDisplay()がObject.keys(menuConfig)を使う）。path(`./<id>/`)とcollection(`quiz_<id>`)は命名規則で導出するため、docs/index.html側に別途登録する静的配列は持たない。クイズを追加するときはconfig.jsonにエントリを1つ足すだけでよい。
 - loadQuizMetaAll() は docs/quiz-meta.json を1回だけfetchする（Promiseをキャッシュして並列呼び出しでも1リクエストに集約）。calculateQuizMeta(quizId, questionsPath) はこのメタを優先して使い、載っていないクイズだけ questions*.json を直接fetchするフォールバックに落ちる。
-- getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の best_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
+- getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の lesson_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
 - 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。各行には正答数表示の直前に `⭐×N`（lap>0のとき）を出し、さらに全問正解済みだが「次の周へ進む」をまだ押していない状態（correct===totalかつ）なら `+⭐` を追記する（メインメニューはFirestoreを都度読み直さない設計のため、この判定だけは既存のcorrect/totalから導出する）。
 - 「教材一覧」（quiz-toggle-section）は全クイズをトグルスイッチ（左側）付きで一覧表示し、上に検索ボックス（quiz-search-input）でタイトル・説明・idコード（`bokinyu`, `sapc02`等）を絞り込める。各行の名前の前には`id`を大文字化した短いコードバッジ（`.quiz-code-badge`）を表示する。
 - 教材ごとのON/OFFは visiblePrefs（{quizId: boolean}）で管理し、Firestoreの `quiz_menu_prefs/{uid}` ドキュメントの`visible`フィールドに保存する。初回（ドキュメント未作成）はデフォルト全部OFF。
@@ -64,24 +64,24 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 画面は主に screen-home（「教材トップ」ラベル表示）, screen-quiz, screen-results, screen-admin を切り替える。
 - currentLevel は現在のパート、maxLevel は読み込めた最大パート数、quizData[level] は各パートのJSON、TESTS は現在パートの tests。
 - showHome() はパートごとに `.part-block` を描画する（アコーディオン）。パート行クリックで toggleLevel() が呼ばれ、シングルアコーディオン（1つ開くと他は閉じる）で開閉する。初期状態は全パート閉じている（homeCollapsed = true）。パート行の集計表示（`.part-value`）は「試験 X/Y問(N回)・演習/復習(M回)」の形式で、先頭に「試験」ラベルを明記する（演習/復習の回数と並べたときにどちらの回数か分かるように）。
-- 各セットは `.part-set-row`（横長のリスト行、Finder風）で、行自体はクリック不可。ボタンは「試験」（.set-exam-btn、goToTest → startTest(id, false, false)、常時表示）と、誤答があれば「誤答復習」（.set-review-btn）、なければ「演習」（.set-practice-btn）（どちらも記録なし）の2つ。ボタン内の2行目（成績や回数）は `.btn-sub-score` クラスで1行目より大きいフォントにする。3つのボタンとも文言の長さで幅が揃わないことがあるため `.set-actions button` に min-width（PC 7.8rem / 520px以下 7.0rem）を指定して幅を揃える。
+- 各レッスンは `.part-set-row`（横長のリスト行、Finder風。クラス名はリネーム前の名残でsetのまま）で、行自体はクリック不可。ボタンは「試験」（.set-exam-btn、goToTest → startTest(id, false, false)、常時表示）と、誤答があれば「誤答復習」（.set-review-btn）、なければ「演習」（.set-practice-btn）（どちらも記録なし）の2つ。ボタン内の2行目（成績や回数）は `.btn-sub-score` クラスで1行目より大きいフォントにする。3つのボタンとも文言の長さで幅が揃わないことがあるため `.set-actions button` に min-width（PC 7.8rem / 520px以下 7.0rem）を指定して幅を揃える。
 - goToTest(level, testId, isReview, isPractice) は必要ならパートを切り替えてから startTest() を呼ぶ。
 - startTest(id, isReview, isPracticeMode) は通常テスト（記録あり）、間違い復習、練習モードを兼ねる。記録されるのは isReview も isPracticeMode も false のときだけ（showResults() 内）。
 - renderQuestion() は選択肢を毎問シャッフルし、shuffledChoices に元の選択肢インデックスを保持する。
 - answer() は選択後に正誤表示、効果音、解説、次へ進む操作を出す。
-- showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。試験モードのときは recordTestResult() を呼び、最高: X点/N回（N回＝getAttemptCount、attemptCount_フィールド優先・無ければhistory.length）も表示する。
+- showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。試験モードのときは recordTestResult() を呼び、最高: X点/N回（N回＝getAttemptCount、lessonAttemptCount_フィールド優先・無ければhistory.length）も表示する。
 - 成績リセット（resetScores）とログアウト（logout）は、いずれも自前モーダル（reset-modal, logout-modal）で確認してから実行する。「📊 成績/設定」ボタン（openScoreModal）から成績履歴・成績リセット・表示サイズ設定を開く。
 
 ### 成績履歴・全クリア・周回機能
-- recordTestResult(id, score) は試験モード完走のたびに `history_<level>_<id>` へ `{no, score, date}` を追記する。no は attemptCount_<level>_<id>（削除されない通し番号）から採番。追記後、配列が11件（初回1件＋直近10件）を超えたら [先頭, ...末尾10件] に間引く。
+- recordTestResult(id, score) は試験モード完走のたびに `lessonHistory_<level>_<id>` へ `{no, score, date}` を追記する。no は lessonAttemptCount_<level>_<id>（削除されない通し番号）から採番。追記後、配列が11件（初回1件＋直近10件）を超えたら [先頭, ...末尾10件] に間引く。
 - getAttemptCount(id, level) は attemptCount フィールドを返す。showScoreHistory() での表示回数は `Math.max(attemptCount, history.length)` を使う（この機能追加前からの古い履歴には attemptCount が無いため）。
-- showScoreHistory() は各レッスンの履歴をチェックボックス付きで表示し、deleteSelectedHistory() でチェックした要素だけ history_ 配列から取り除く（best_やattemptCount_には触れない）。
-- isFullyCleared() は読み込み済み全レベル・全セットの best が100かどうかを判定する（1セットも無ければfalse）。getLap()/advanceLap() が周回数を管理する。advanceLap() は confirmAdvanceLap() の確認モーダル経由で呼ばれ、lesson_・lessonWrongAnswers_ を削除しつつ lap を+1、lapHistory に `{lap, date}` を追記、lapAttemptCount を0にリセットする（history_/fullClearHistoryは消さない）。
+- showScoreHistory() は各レッスンの履歴をチェックボックス付きで表示し、deleteSelectedHistory() でチェックした要素だけ lessonHistory_ 配列から取り除く（lesson_やattemptCount_には触れない）。
+- isFullyCleared() は読み込み済み全レベル・全セットの best が100かどうかを判定する（1セットも無ければfalse）。getLap()/advanceLap() が周回数を管理する。advanceLap() は confirmAdvanceLap() の確認モーダル経由で呼ばれ、lesson_・lessonWrongAnswers_ を削除しつつ lap を+1、lapHistory に `{lap, date}` を追記、lapAttemptCount を0にリセットする（lessonHistory_/fullClearHistoryは消さない）。
 - showHome() は #full-clear-banner に、lap>0なら「🌟 全クリア ×N」バッジ、isFullyCleared()がtrueなら「🎉 全問正解達成！」＋「🏁 次の周へ進む」ボタンを両方とも表示できる（周回を無限に進められる設計）。
 - lapAttemptCount は「今の周回に入ってから試験モードを何回受けたか」を数える通しカウンター。recordTestResult() が試験モード完走のたびに+1し、advanceLap() が0に戻す。
 - recordTestResult() は更新前後で isFullyCleared() を比較し、false→trueに転じた瞬間（＝その周回で初めて全問正解を達成した瞬間）だけ fullClearHistory に `{lap: getLap()+1, date, attempts: その時点のlapAttemptCount}` を追記する。以後同じ周回中に再度全問正解の状態が続いても追記しない（次にlapが進んでリセットされるまで再発火しない）。
-- showScoreHistory() の周回履歴セクションは、最初の挑戦日時（全セットのhistory_から最も古い日付を検索）による「🌟 1周目開始」、lapHistoryの各エントリによる「🌟 (lap+1)周目開始」、fullClearHistoryの各エントリによる「🎉 N周目全問正解（M回挑戦）」を、parseJstDateString()で実際の日時順にソートしてから表示する（push順ではなく日時順）。
-- resetCurrentLevel() は現在パートの lesson_/lessonWrongAnswers_/history_/attemptCount_ を削除するが、lap/lapHistory/lapAttemptCount/fullClearHistoryは触らない（周回トロフィーは維持）。resetAllLevels() はdocument自体を削除するのでlapも含め全部消える。
+- showScoreHistory() の周回履歴セクションは、最初の挑戦日時（全レッスンのlessonHistory_から最も古い日付を検索）による「🌟 1周目開始」、lapHistoryの各エントリによる「🌟 (lap+1)周目開始」、fullClearHistoryの各エントリによる「🎉 N周目全問正解（M回挑戦）」を、parseJstDateString()で実際の日時順にソートしてから表示する（push順ではなく日時順）。
+- resetCurrentLevel() は現在パートの lesson_/lessonWrongAnswers_/lessonHistory_/lessonAttemptCount_ を削除するが、lap/lapHistory/lapAttemptCount/fullClearHistoryは触らない（周回トロフィーは維持）。resetAllLevels() はdocument自体を削除するのでlapも含め全部消える。
 
 ### 管理レビュー ?admin=1
 - docs/{quiz}/?admin=1 で問題一覧を表示する（全クイズ共通）。
@@ -95,21 +95,21 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - メインメニューの教材トグル設定は quiz_menu_prefs（document id は uid、フィールド visible が {quizId: boolean}）。
 - セキュリティルールは `request.auth.uid == userId && (collection == 'scores' || collection.matches('^quiz_.*'))` の形。新規コレクションは `quiz_` プレフィックス必須（`scores` は現状未使用）。
 - document id は currentUser.uid。
-- 最高点は best_<level>_<testId> に保存する。
+- 最高点は lesson_<level>_<testId> に保存する。
 - 間違えた問題番号は lessonWrongAnswers_<level>_<lessonId> に配列で保存する。
-- 挑戦履歴は history_<level>_<testId> に `[{no, score, date}, ...]` で保存する（初回1件＋直近10件まで）。
-- 通しの挑戦回数は attemptCount_<level>_<testId>（履歴が間引かれても減らない）。
+- 挑戦履歴は lessonHistory_<level>_<testId> に `[{no, score, date}, ...]` で保存する（初回1件＋直近10件まで）。
+- 通しの挑戦回数は lessonAttemptCount_<level>_<testId>（履歴が間引かれても減らない）。
 - 全クリア周回数は lap（整数）、周回開始日時は lapHistory（`[{lap, date}, ...]`）。
 - 今の周回に入ってからの試験挑戦回数は lapAttemptCount（整数、advanceLap()で0にリセット）。全問正解を達成した日時は fullClearHistory（`[{lap, date, attempts}, ...]`、周回ごとにfalse→true転換時のみ追記）。
-- 旧キー best_<testId> はメインメニューの集計で後方互換として扱う。
-- resetCurrentLevel() は現在パートの best_*・wrongAnswers_*・history_*・attemptCount_* を FieldValue.delete() で削除する（lap/lapHistoryは触らない）。Firestore document が存在しない場合は update しない。
+- 旧キー lesson_<testId> はメインメニューの集計で後方互換として扱う。
+- resetCurrentLevel() は現在パートの lesson_*・lessonWrongAnswers_*・lessonHistory_*・lessonAttemptCount_* を FieldValue.delete() で削除する（lap/lapHistoryは触らない）。Firestore document が存在しない場合は update しない。
 - resetAllLevels() は現在ユーザーの quiz collection document を削除する（lap/lapHistory含め全部消える）。
 - ログアウトまたは認証ユーザー変更時は currentUser と bestScores/cacheInitialized を更新し、別ユーザーのキャッシュを残さない。
 
 ### 点数と問題数
 - 問題JSONは現在テスト上 1テスト10問を期待している箇所があるが、UI表示は問題数を動的に扱う。
 - クイズ画面の結果スコアは correct * 10 点、満点は currentTest.questions.length * 10 点。
-- Firestoreに保存する best_* も点数として扱う。メニュー集計では Math.round(score / 10) で正答数へ戻す。
+- Firestoreに保存する lesson_* も点数として扱う。メニュー集計では Math.round(score / 10) で正答数へ戻す。
 - 10問以外を読み込むこと自体はできるが、テストや仕様で固定を期待している箇所が残る可能性がある。問題数ルールを変えるときは src/bokiQuestions.test.js と表示仕様も見直す。
 
 ### 問題JSONスキーマ
@@ -175,7 +175,7 @@ calculateCorrectAnswers(percentageScore)
 
 calculateTotalScore(tests, scores)
   // 複数テストのスコア合計を計算
-  // scores: { 'best_testId': percentage, ... }
+  // scores: { 'lesson_testId': percentage, ... }
   // 返り値: 正答数の合計
 
 getCollectionName(quizId)
@@ -489,12 +489,12 @@ quiz1/
 
 **Firestoreキー形式:**
 ```
-best_<level>_<testId>: <percentage>
+lesson_<level>_<testId>: <percentage>
 
 例:
-- パート1テスト1: best_1_1: 80
-- パート2テスト1: best_2_1: 75
-- パート2テスト2: best_2_2: 90
+- パート1テスト1: lesson_1_1: 80
+- パート2テスト1: lesson_2_1: 75
+- パート2テスト2: lesson_2_2: 90
 ```
 
 ### Firebase認証とキャッシュ初期化
@@ -534,7 +534,7 @@ async function getBest(id, level = currentLevel) {
   if (!cacheInitialized) {
     await initializeBestScoresCache();  // 初回のみ初期化
   }
-  return parseInt(bestScores[`best_${level}_${id}`] || '-1', 10);
+  return parseInt(bestScores[`lesson_${level}_${id}`] || '-1', 10);
 }
 ```
 
@@ -571,26 +571,26 @@ for (let level = 1; level <= maxLevel; level++) {
 
 ```
 quiz_<quizId>/{userId}
-  ├─ best_<level>_<testId>: <percentage>
-  ├─ best_1_1: 85
-  ├─ best_1_2: 92
-  ├─ best_2_1: 78
+  ├─ lesson_<level>_<testId>: <percentage>
+  ├─ lesson_1_1: 85
+  ├─ lesson_1_2: 92
+  ├─ lesson_2_1: 78
   │ ...
   │
   ├─ lessonWrongAnswers_<level>_<lessonId>: [<questionIds>]
-  ├─ wrongAnswers_1_1: [1, 3, 5]        // テスト1-1で間違えた問題番号
-  ├─ wrongAnswers_1_2: [2, 7, 9]        // テスト1-2で間違えた問題番号
-  ├─ wrongAnswers_2_1: [4, 6]
+  ├─ lessonWrongAnswers_1_1: [1, 3, 5]        // テスト1-1で間違えた問題番号
+  ├─ lessonWrongAnswers_1_2: [2, 7, 9]        // テスト1-2で間違えた問題番号
+  ├─ lessonWrongAnswers_2_1: [4, 6]
   │ ...
 ```
 
 **フィールド定義：**
 
-- `best_<level>_<testId>`: パーセンテージスコア（0-100）
-  - 例：`best_1_1: 85` （レベル1テスト1の最高得点は85%）
+- `lesson_<level>_<testId>`: パーセンテージスコア（0-100）
+  - 例：`lesson_1_1: 85` （レベル1テスト1の最高得点は85%）
 
 - `lessonWrongAnswers_<level>_<lessonId>`: 不正解だった問題番号の配列（1-indexed）
-  - 例：`wrongAnswers_1_1: [1, 3, 5]` （レベル1テスト1で問題1, 3, 5が不正解）
+  - 例：`lessonWrongAnswers_1_1: [1, 3, 5]` （レベル1テスト1で問題1, 3, 5が不正解）
   - **重要：** 初回完了時点での正解/不正解を記録。復習後の再解答では更新しない
 
 **コレクション名の生成：**
@@ -611,40 +611,40 @@ function getCollectionName(quizId) {
 quiz_devops/{userId}
 {
   // 最高得点（既存）
-  best_1_1: 85,   // 基礎初級-テスト1
-  best_1_2: 92,
-  best_1_3: 78,
-  best_1_4: 88,
-  best_1_5: 95,
-  best_1_6: 82,
-  best_2_1: 75,   // 基礎中級-テスト1
-  best_2_2: 89,
-  best_3_1: 80,   // 基礎上級-テスト1
+  lesson_1_1: 85,   // 基礎初級-テスト1
+  lesson_1_2: 92,
+  lesson_1_3: 78,
+  lesson_1_4: 88,
+  lesson_1_5: 95,
+  lesson_1_6: 82,
+  lesson_2_1: 75,   // 基礎中級-テスト1
+  lesson_2_2: 89,
+  lesson_3_1: 80,   // 基礎上級-テスト1
   // ...
   
   // 間違い問題（新規）
-  wrongAnswers_1_1: [1, 3, 5],
-  wrongAnswers_1_2: [2, 7, 9],
-  wrongAnswers_1_3: [4, 6, 8, 10],
-  wrongAnswers_1_4: [3],
-  wrongAnswers_2_1: [1, 2, 4, 5, 7],
+  lessonWrongAnswers_1_1: [1, 3, 5],
+  lessonWrongAnswers_1_2: [2, 7, 9],
+  lessonWrongAnswers_1_3: [4, 6, 8, 10],
+  lessonWrongAnswers_1_4: [3],
+  lessonWrongAnswers_2_1: [1, 2, 4, 5, 7],
   // ...
 }
 
 // 簿記の例
 quiz_boki1/{userId}
 {
-  best_1_1: 90,   // パート1-テスト1
-  best_1_2: 85,
-  best_1_3: 88,
-  best_2_1: 75,   // パート2-テスト1
-  best_2_2: 92,
-  best_2_3: 80,
-  best_3_1: 87,   // パート3-テスト1
+  lesson_1_1: 90,   // パート1-テスト1
+  lesson_1_2: 85,
+  lesson_1_3: 88,
+  lesson_2_1: 75,   // パート2-テスト1
+  lesson_2_2: 92,
+  lesson_2_3: 80,
+  lesson_3_1: 87,   // パート3-テスト1
   
-  wrongAnswers_1_1: [2, 5],
-  wrongAnswers_1_2: [1, 4, 7],
-  wrongAnswers_2_1: [3, 6, 8, 9],
+  lessonWrongAnswers_1_1: [2, 5],
+  lessonWrongAnswers_1_2: [1, 4, 7],
+  lessonWrongAnswers_2_1: [3, 6, 8, 9],
   // ...
 }
 ```
@@ -663,14 +663,14 @@ quiz_boki1/{userId}
 **スコア記録の詳細：**
 
 1. **通常テスト時の記録**
-   - `best_<level>_<testId>`: スコア（パーセンテージ）を記録
+   - `lesson_<level>_<testId>`: スコア（パーセンテージ）を記録
    - 新スコア > 旧スコア の場合のみ上書き（最高得点を保持）
    - `lessonWrongAnswers_<level>_<lessonId>`: 不正解だった問題IDを配列で記録
 
 2. **復習ボタン時（isReviewMode = true）**
    - スコア保存なし（`setBest()`呼ばない）
    - 誤答記録更新なし（`saveWrongAnswers()`呼ばない）
-   - 何度復習しても `best_<level>_<testId>` と `lessonWrongAnswers_<level>_<lessonId>` は不変
+   - 何度復習しても `lesson_<level>_<testId>` と `lessonWrongAnswers_<level>_<lessonId>` は不変
 
 3. **テスト後復習時（isReviewMode = true）**
    - スコア保存なし
@@ -694,7 +694,7 @@ quiz_boki1/{userId}
 - ボタン上に誤答数が表示される（例：「誤答復習(3問)」）
 
 **練習モードボタン表示条件：**
-- テストの `best_<level>_<testId>` が存在しない（スコア < 0）場合のみ表示
+- テストの `lesson_<level>_<testId>` が存在しない（スコア < 0）場合のみ表示
 - 一度でも通常テストを実行すると、練習ボタンは表示されなくなる
 
 ### デバイスタイプとビルド時刻表示
@@ -793,7 +793,7 @@ quiz_boki1/{userId}
   - キャッシュとFirestoreの整合性を保つ
 
 ### 6. マルチレベルスコア管理
-- **レベル別キー:** `best_<level>_<testId>` 形式でFirestoreに保存
+- **レベル別キー:** `lesson_<level>_<testId>` 形式でFirestoreに保存
 - **getBest() 呼び出しの2つのパターン：**
   1. **全レベルをループで処理する場合** - `level` パラメータ **必須**
      - 例：部分成績表示で複数レベルを計算する時
@@ -812,9 +812,9 @@ quiz_boki1/{userId}
 - **Firestore構造:** ユーザードキュメント内に全レベル全テストのスコアを保存
   ```
   {
-    best_1_1: 80, best_1_2: 90,
-    best_2_1: 75, best_2_2: 70,
-    best_3_1: 85, best_3_2: 88, best_3_3: 92
+    lesson_1_1: 80, lesson_1_2: 90,
+    lesson_2_1: 75, lesson_2_2: 70,
+    lesson_3_1: 85, lesson_3_2: 88, lesson_3_3: 92
   }
   ```
 
@@ -1019,7 +1019,7 @@ correctAnswers = Math.round(percentage / 100 * 10)
 
 ### 総合スコア
 ```javascript
-totalScore = Σ(best_testId別のcorrectAnswers)
+totalScore = Σ(lesson_testId別のcorrectAnswers)
 
 例:
 - テスト1: 80% → 8点

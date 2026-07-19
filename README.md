@@ -11,7 +11,7 @@
 - itpassjr: ITパスポートJr（やさしい版）
 - sapc02: AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)
 - sample: 動作確認・お試し用のミニ教材
-- sample2: 動作確認用の最小構成サンプル（1パート・1セット・1問）
+- sample2: 動作確認用の最小構成サンプル（1パート・1レッスン・1問）
 - sample3: 記述式（自由入力）問題タイプの最小構成サンプル
 - fp3kyuu: FP技能検定3級
 - takken: 宅地建物取引士（宅建士）
@@ -29,11 +29,11 @@
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
 - docs/{quiz}/index.html: 各クイズページ。HTML骨格のみで、見た目・挙動は docs/shared/ を読み込む（21ファイルは同一内容で同期）。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
-- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、全クリア・周回、Firebase連携）。
+- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/レッスン表示、採点、全クリア・周回、Firebase連携）。
 - docs/config.json: クイズごとの表示名、色、説明。
 - docs/{quiz}/questions*.json: 各クイズの問題データ（各ファイルに `id` フィールド必須）。
 - docs/build-info.json: 自動生成されるビルド日時。
-- docs/quiz-meta.json: 自動生成される全クイズのパート数・セット数・問題数（メインメニューが使う）。
+- docs/quiz-meta.json: 自動生成される全クイズのパート数・レッスン数・問題数（メインメニューが使う）。
 
 ## 開発コマンド
 - npm install
