@@ -22,22 +22,32 @@ let cacheInitialized = false;
 
 // ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
 const FONT_SIZE_KEY = 'quizFontSize';
-const FONT_SIZES = { xxs: '70%', xs: '80%', s: '90%', m: '100%', l: '115%' };
-const FONT_SIZE_LEGACY = { small: 's', medium: 'm', large: 'l', xl: 'l' }; // 旧段階からの移行
+const FONT_SIZE_MIN = 70;
+const FONT_SIZE_MAX = 120;
+const FONT_SIZE_LEGACY = { xxs: 70, xs: 80, s: 90, m: 100, l: 115, small: 90, medium: 100, large: 115, xl: 115 }; // 旧段階からの移行
+
+function clampFontSize(size) {
+  size = Math.round(Number(size) / 5) * 5;
+  if (isNaN(size)) size = 100;
+  return Math.min(FONT_SIZE_MAX, Math.max(FONT_SIZE_MIN, size));
+}
 
 function applyFontSizePref() {
-  let size = localStorage.getItem(FONT_SIZE_KEY) || 'm';
-  if (FONT_SIZE_LEGACY[size]) size = FONT_SIZE_LEGACY[size];
-  document.documentElement.style.fontSize = FONT_SIZES[size] || FONT_SIZES.m;
-  Object.keys(FONT_SIZES).forEach(s => {
-    const btn = document.getElementById(`font-size-btn-${s}`);
-    if (btn) btn.style.borderColor = s === size ? '#667eea' : 'transparent';
-  });
+  const stored = localStorage.getItem(FONT_SIZE_KEY);
+  let size = stored !== null && stored !== '' && !isNaN(Number(stored))
+    ? Number(stored)
+    : (FONT_SIZE_LEGACY[stored] ?? 100);
+  size = clampFontSize(size);
+  document.documentElement.style.fontSize = size + '%';
+  const slider = document.getElementById('font-size-slider');
+  if (slider) slider.value = size;
+  const label = document.getElementById('font-size-value');
+  if (label) label.textContent = size + '%';
 }
 
 function setFontSize(size) {
-  if (!FONT_SIZES[size]) return;
-  localStorage.setItem(FONT_SIZE_KEY, size);
+  size = clampFontSize(size);
+  localStorage.setItem(FONT_SIZE_KEY, String(size));
   applyFontSizePref();
   soundClick();
 }
@@ -547,6 +557,11 @@ function closeScoreModal() {
   if (modal) modal.style.display = 'none';
 }
 
+function toggleHistoryPart(level) {
+  const block = document.getElementById(`history-part-block-${level}`);
+  if (block) block.classList.toggle('open');
+}
+
 async function showScoreHistory() {
   closeScoreModal();
   if (!cacheInitialized) await initializeBestScoresCache();
@@ -565,12 +580,21 @@ async function showScoreHistory() {
     const partLabel = getPartLabel(levelData, level);
     const tests = levelData.tests || [];
 
+    let levelCorrect = 0;
+    let levelExamAttempts = 0;
+    const levelQuestions = tests.reduce((sum, test) => (
+      sum + (Array.isArray(test.questions) ? test.questions.length : 0)
+    ), 0);
+
     const setSections = [];
     for (const t of tests) {
       const history = await getHistory(t.id, level);
       const qCount = Array.isArray(t.questions) ? t.questions.length : 10;
       // 機能追加前からの履歴にはattemptCountが無いので、大きい方を採用する
       const attemptCount = Math.max(getAttemptCount(t.id, level), history.length);
+      const best = await getBest(t.id, level);
+      if (best >= 0) levelCorrect += Math.round(best / 100 * qCount);
+      levelExamAttempts += attemptCount;
       history.forEach(h => {
         const ts = parseJstDateString(h.date);
         if (ts !== null && (earliestDate === null || ts < earliestDate.ts)) {
@@ -595,7 +619,14 @@ async function showScoreHistory() {
     }
 
     partSections.push(
-      `<div style="margin-bottom:20px;"><div style="font-size:0.95rem; font-weight:800; color:#7c3a00; background:linear-gradient(135deg, #fff3e0, #ffe8cc); border-radius:8px; padding:8px 12px; margin-bottom:10px;">${escapeHtml(partLabel)}</div>${setSections.join('')}</div>`
+      `<div class="part-block" id="history-part-block-${level}" style="margin-bottom:16px;">
+        <div class="part-score-row" onclick="toggleHistoryPart(${level});">
+          <span class="part-name">${escapeHtml(partLabel)}</span>
+          <span class="part-value">試験 ${levelCorrect}/${levelQuestions}問(${levelExamAttempts}回)</span>
+          <span class="part-arrow">▶</span>
+        </div>
+        <div class="part-set-list" style="padding:10px 12px;">${setSections.join('')}</div>
+      </div>`
     );
   }
 

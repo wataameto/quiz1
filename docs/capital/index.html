@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719202717">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719203909">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -102,14 +102,8 @@
         <button onclick="showScoreHistory()" style="padding:12px; background:#edf2f7; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">📜 成績履歴を見る</button>
         <button onclick="resetScores()" style="padding:12px; background:#fff5f5; border:1.5px solid #e53e3e; border-radius:8px; cursor:pointer; font-weight:700; color:#e53e3e; font-family:inherit;">🗑️ 成績をリセット</button>
         <div style="border-top:1.5px solid #edf2f7; margin-top:6px; padding-top:14px; text-align:left;">
-          <p style="font-size:0.8rem; color:#718096; font-weight:700; margin-bottom:8px;">⚙️ 表示サイズ</p>
-          <div style="display:flex; gap:6px;">
-            <button id="font-size-btn-xxs" onclick="setFontSize('xxs')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">XXS</button>
-            <button id="font-size-btn-xs" onclick="setFontSize('xs')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">XS</button>
-            <button id="font-size-btn-s" onclick="setFontSize('s')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">S</button>
-            <button id="font-size-btn-m" onclick="setFontSize('m')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">M</button>
-            <button id="font-size-btn-l" onclick="setFontSize('l')" style="flex:1; padding:10px 4px; background:#edf2f7; border:2px solid transparent; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit; font-size:0.75rem;">L</button>
-          </div>
+          <p style="font-size:0.8rem; color:#718096; font-weight:700; margin-bottom:8px; display:flex; justify-content:space-between;">⚙️ 表示サイズ <span id="font-size-value">100%</span></p>
+          <input type="range" id="font-size-slider" min="70" max="120" step="5" value="100" oninput="setFontSize(this.value)" style="width:100%; accent-color:#667eea;">
         </div>
         <button onclick="closeScoreModal()" style="padding:12px; background:transparent; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#718096; font-family:inherit;">閉じる</button>
       </div>
@@ -212,7 +206,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260719202717"></script>
+<script src="../shared/quiz-app.js?v=20260719203909"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
