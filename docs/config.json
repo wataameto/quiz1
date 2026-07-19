@@ -38,18 +38,44 @@
     "accentColor": "#38b48b",
     "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
   },
-  "bokinyu": {
-    "title": "📚 簿記超入門レベル",
-    "heading": "簿記超入門レベル",
+  "itpassjr": {
+    "title": "🌱 ITパスポートJr（やさしい版）",
+    "heading": "ITパスポートJr（やさしい版）",
     "genreMajor": "shikaku",
-    "genreMinor": "kaikei_kinyu_shikaku",
-    "description": "簿記（会計）の基礎知識。分記法（商品売買益）レベルの仕訳を扱う",
-    "icon": "📚",
+    "genreMinor": "it_shikaku",
+    "description": "中高生向けのやさしいITパスポート入門。経営戦略・法務、開発・品質管理、コンピュータ・ネットワーク・セキュリティの基本を、専門用語をかみ砕いた言葉で学ぶ",
+    "icon": "🌱",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "topGradient": "linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085)",
-    "accentColor": "#667eea",
-    "accentActive": "linear-gradient(135deg, #f7f8ff, #f5f7ff)"
+    "topGradient": "linear-gradient(90deg, #56ab2f, #a8e063, #43cea2, #185a9d)",
+    "accentColor": "#43cea2",
+    "accentActive": "linear-gradient(135deg, #f0fdf4, #d1fae5)"
+  },
+  "itpass": {
+    "title": "🧭 （IPA）ITパスポート試験",
+    "heading": "（IPA）ITパスポート試験",
+    "genreMajor": "shikaku",
+    "genreMinor": "it_shikaku",
+    "description": "ITパスポート試験対策。ストラテジ系（経営戦略・法務・会計財務）、マネジメント系（開発技術・プロジェクト・サービスマネジメント）、テクノロジ系（基礎理論・ネットワーク・セキュリティ・DB）の3分野をカバー",
+    "icon": "🧭",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #6a11cb, #2575fc, #00c9ff, #92fe9d)",
+    "accentColor": "#6a11cb",
+    "accentActive": "linear-gradient(135deg, #f5f3ff, #ede9fe)"
+  },
+  "sapc02": {
+    "title": "🏛️ AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
+    "heading": "AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
+    "genreMajor": "shikaku",
+    "genreMinor": "it_shikaku",
+    "description": "AWS Solutions Architect Professional（SAP-C02）試験対策。組織の複雑性に対応する設計、新規ソリューション設計、既存ソリューションの継続的改善、ワークロード移行・モダナイゼーションを基礎から模擬試験まで段階的に学べる",
+    "icon": "🏛️",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #ff9a56, #ff6a88, #6a82fb, #17ead9)",
+    "accentColor": "#ff6a88",
+    "accentActive": "linear-gradient(135deg, #fff5f2, #ffeef0)"
   },
   "devops": {
     "title": "☁️ AWS認定DevOpsエンジニア(DOP-C02)",
@@ -64,18 +90,57 @@
     "accentColor": "#f7971e",
     "accentActive": "linear-gradient(135deg, #fff9ed, #fffbea)"
   },
-  "sapc02": {
-    "title": "🏛️ AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
-    "heading": "AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
+  "bokinyu": {
+    "title": "📚 簿記超入門レベル",
+    "heading": "簿記超入門レベル",
     "genreMajor": "shikaku",
-    "genreMinor": "it_shikaku",
-    "description": "AWS Solutions Architect Professional（SAP-C02）試験対策。組織の複雑性に対応する設計、新規ソリューション設計、既存ソリューションの継続的改善、ワークロード移行・モダナイゼーションを基礎から模擬試験まで段階的に学べる",
-    "icon": "🏛️",
+    "genreMinor": "kaikei_kinyu_shikaku",
+    "description": "簿記（会計）の基礎知識。分記法（商品売買益）レベルの仕訳を扱う",
+    "icon": "📚",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "topGradient": "linear-gradient(90deg, #ff9a56, #ff6a88, #6a82fb, #17ead9)",
-    "accentColor": "#ff6a88",
-    "accentActive": "linear-gradient(135deg, #fff5f2, #ffeef0)"
+    "topGradient": "linear-gradient(90deg, #667eea, #f093fb, #f5576c, #fda085)",
+    "accentColor": "#667eea",
+    "accentActive": "linear-gradient(135deg, #f7f8ff, #f5f7ff)"
+  },
+  "fp3kyuu": {
+    "title": "💰 FP技能検定3級",
+    "heading": "FP技能検定3級",
+    "genreMajor": "shikaku",
+    "genreMinor": "kaikei_kinyu_shikaku",
+    "description": "ファイナンシャル・プランニング技能検定3級の基礎知識。ライフプランニング and 資金計画、リスク管理（保険）、金融資産運用、タックスプランニング（税金）、不動産、相続・事業承継の6分野を扱う",
+    "icon": "💰",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #f7b733, #fc4a1a, #16a085, #2c3e50)",
+    "accentColor": "#f7b733",
+    "accentActive": "linear-gradient(135deg, #fffaf0, #fff3e0)"
+  },
+  "gentsuki": {
+    "title": "🛵 原付学科試験",
+    "heading": "原付学科試験",
+    "genreMajor": "shikaku",
+    "genreMinor": "houritsu_sonota_shikaku",
+    "description": "原動機付自転車運転免許の学科試験対策。標識・信号、通行方法・交通ルール、原付特有のルール、安全運転・整備の4分野を実際の試験と同じ○×（正誤）形式で出題",
+    "icon": "🛵",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #ff5f6d, #ffc371, #2c3e50, #4ca1af)",
+    "accentColor": "#ff5f6d",
+    "accentActive": "linear-gradient(135deg, #fff5f5, #ffe8e8)"
+  },
+  "takken": {
+    "title": "🏘️ 宅地建物取引士（宅建士）",
+    "heading": "宅地建物取引士（宅建士）",
+    "genreMajor": "shikaku",
+    "genreMinor": "houritsu_sonota_shikaku",
+    "description": "宅地建物取引士試験（宅建士）の基礎知識。宅建業法、権利関係（民法・借地借家法・区分所有法等）、法令上の制限（都市計画法・建築基準法・農地法等）、税・その他の4分野を扱う",
+    "icon": "🏘️",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #396afc, #2948ff, #c471ed, #f7797d)",
+    "accentColor": "#2948ff",
+    "accentActive": "linear-gradient(135deg, #f0f4ff, #e8ecff)"
   },
   "koukyou1": {
     "title": "⚖️ 公共1 高校１年１学期末考査対策",
@@ -102,58 +167,6 @@
     "topGradient": "linear-gradient(90deg, #00b4db, #0083b0, #3a7bd5, #3a6073)",
     "accentColor": "#00b4db",
     "accentActive": "linear-gradient(135deg, #f0f9ff, #e0f2fe)"
-  },
-  "itpass": {
-    "title": "🧭 （IPA）ITパスポート試験",
-    "heading": "（IPA）ITパスポート試験",
-    "genreMajor": "shikaku",
-    "genreMinor": "it_shikaku",
-    "description": "ITパスポート試験対策。ストラテジ系（経営戦略・法務・会計財務）、マネジメント系（開発技術・プロジェクト・サービスマネジメント）、テクノロジ系（基礎理論・ネットワーク・セキュリティ・DB）の3分野をカバー",
-    "icon": "🧭",
-    "bgColor": "#0f2027",
-    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "topGradient": "linear-gradient(90deg, #6a11cb, #2575fc, #00c9ff, #92fe9d)",
-    "accentColor": "#6a11cb",
-    "accentActive": "linear-gradient(135deg, #f5f3ff, #ede9fe)"
-  },
-  "itpassjr": {
-    "title": "🌱 ITパスポートJr（やさしい版）",
-    "heading": "ITパスポートJr（やさしい版）",
-    "genreMajor": "shikaku",
-    "genreMinor": "it_shikaku",
-    "description": "中高生向けのやさしいITパスポート入門。経営戦略・法務, 開発・品質管理, コンピュータ・ネットワーク・セキュリティの基本を、専門用語をかみ砕いた言葉で学ぶ",
-    "icon": "🌱",
-    "bgColor": "#0f2027",
-    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "topGradient": "linear-gradient(90deg, #56ab2f, #a8e063, #43cea2, #185a9d)",
-    "accentColor": "#43cea2",
-    "accentActive": "linear-gradient(135deg, #f0fdf4, #d1fae5)"
-  },
-  "fp3kyuu": {
-    "title": "💰 FP技能検定3級",
-    "heading": "FP技能検定3級",
-    "genreMajor": "shikaku",
-    "genreMinor": "kaikei_kinyu_shikaku",
-    "description": "ファイナンシャル・プランニング技能検定3級の基礎知識。ライフプランニングと資金計画、リスク管理（保険）、金融資産運用、タックスプランニング（税金）、不動産、相続・事業承継の6分野を扱う",
-    "icon": "💰",
-    "bgColor": "#0f2027",
-    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "topGradient": "linear-gradient(90deg, #f7b733, #fc4a1a, #16a085, #2c3e50)",
-    "accentColor": "#f7b733",
-    "accentActive": "linear-gradient(135deg, #fffaf0, #fff3e0)"
-  },
-  "takken": {
-    "title": "🏘️ 宅地建物取引士（宅建士）",
-    "heading": "宅地建物取引士（宅建士）",
-    "genreMajor": "shikaku",
-    "genreMinor": "houritsu_sonota_shikaku",
-    "description": "宅地建物取引士試験（宅建士）の基礎知識。宅建業法、権利関係（民法・借地借家法・区分所有法等）、法令上の制限（都市計画法・建築基準法・農地法等）、税・その他の4分野を扱う",
-    "icon": "🏘️",
-    "bgColor": "#0f2027",
-    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "topGradient": "linear-gradient(90deg, #396afc, #2948ff, #c471ed, #f7797d)",
-    "accentColor": "#2948ff",
-    "accentActive": "linear-gradient(135deg, #f0f4ff, #e8ecff)"
   },
   "shouwa": {
     "title": "🎏 昭和レトロ雑学",
@@ -193,19 +206,6 @@
     "topGradient": "linear-gradient(90deg, #1cd8d2, #93edc7, #4568dc, #b06ab3)",
     "accentColor": "#1cd8d2",
     "accentActive": "linear-gradient(135deg, #ecfffe, #e0fbf8)"
-  },
-  "gentsuki": {
-    "title": "🛵 原付学科試験",
-    "heading": "原付学科試験",
-    "genreMajor": "shikaku",
-    "genreMinor": "houritsu_sonota_shikaku",
-    "description": "原動機付自転車運転免許の学科試験対策。標識・信号、通行方法・交通ルール、原付特有のルール、安全運転・整備の4分野を実際の試験と同じ○×（正誤）形式で出題",
-    "icon": "🛵",
-    "bgColor": "#0f2027",
-    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
-    "topGradient": "linear-gradient(90deg, #ff5f6d, #ffc371, #2c3e50, #4ca1af)",
-    "accentColor": "#ff5f6d",
-    "accentActive": "linear-gradient(135deg, #fff5f5, #ffe8e8)"
   },
   "eiken5": {
     "title": "📗 英検5級 単語・熟語",
