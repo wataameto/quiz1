@@ -371,7 +371,7 @@
     .score-summary-top {
       display: flex;
       align-items: baseline;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 12px;
       margin-bottom: 2px;
     }
@@ -823,9 +823,9 @@
         <button class="pwa-install-close" onclick="dismissPwaInstallBanner()" aria-label="閉じる">✕</button>
       </span>
     </div>
+    <h3 class="quiz-toggle-heading">あなたの選択教材</h3>
     <div class="score-summary" id="score-summary">
       <div class="score-summary-top">
-        <h3 class="quiz-toggle-heading">あなたの選択教材</h3>
         <span class="score-summary-total">合計：<span id="score-total">0</span>/<span id="score-grand-total">0</span>問正解</span>
       </div>
       <div id="score-summary-rows"></div>
