@@ -63,13 +63,13 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - URLパラメータ admin=1 のときは通常のテスト選択ではなく showAdmin() を表示する。
 - 画面は主に screen-home（「教材トップ」ラベル表示）, screen-quiz, screen-results, screen-admin を切り替える。
 - currentLevel は現在のパート、maxLevel は読み込めた最大パート数、quizData[level] は各パートのJSON、TESTS は現在パートの tests。
-- showHome() はパートごとに `.part-block` を描画する（アコーディオン）。パート行クリックで toggleLevel() が呼ばれ、シングルアコーディオン（1つ開くと他は閉じる）で開閉する。初期状態は全パート閉じている（homeCollapsed = true）。パート行の集計表示（`.part-value`）は「試験 X/Y問(N回)・演習/復習(M回)」の形式で、先頭に「試験」ラベルを明記する（演習/復習の回数と並べたときにどちらの回数か分かるように）。
+- showHome() はパートごとに `.part-block` を描画する（アコーディオン）。パート行クリックで toggleLevel() が呼ばれ、シングルアコーディオン（1つ開くと他は閉じる）で開閉する。初期状態は全パート閉じている（homeCollapsed = true）。パート行の集計表示（`.part-value`）は「試験 X/Y問(N回)・演習/復習(M回)」の形式で、先頭に「試験」ラベルを明記する（演習/復習の回数と並べたときにどちらの回数か分かるように）。`.part-score-row`はPC・スマホともに常時`flex-wrap:wrap`で、パート名の行と集計表示の行（右寄せ、`order:3; flex-basis:100%`）を分ける。
 - 各レッスンは `.part-set-row`（横長のリスト行、Finder風。クラス名はリネーム前の名残でsetのまま）で、行自体はクリック不可。ボタンは「試験」（.set-exam-btn、goToTest → startTest(id, false, false)、常時表示）と、誤答があれば「誤答復習」（.set-review-btn）、なければ「演習」（.set-practice-btn）（どちらも記録なし）の2つ。ボタン内の2行目（成績や回数）は `.btn-sub-score` クラスで1行目より大きいフォントにする。3つのボタンとも文言の長さで幅が揃わないことがあるため `.set-actions button` に min-width（PC 7.8rem / 520px以下 7.0rem）を指定して幅を揃える。
 - goToTest(level, testId, isReview, isPractice) は必要ならパートを切り替えてから startTest() を呼ぶ。
 - startTest(id, isReview, isPracticeMode) は通常テスト（記録あり）、間違い復習、練習モードを兼ねる。記録されるのは isReview も isPracticeMode も false のときだけ（showResults() 内）。
 - renderQuestion() は選択肢を毎問シャッフルし、shuffledChoices に元の選択肢インデックスを保持する。
 - answer() は選択後に正誤表示、効果音、解説、次へ進む操作を出す。
-- showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。試験モードのときは recordTestResult() を呼び、最高: X点/N回（N回＝getAttemptCount、lessonAttemptCount_フィールド優先・無ければhistory.length）も表示する。
+- showResults() は結果、星評価、間違い復習ボタン、回答一覧を表示する。試験モードのときは recordTestResult() を呼び、「🏅 最高: N/M問 (X回)」（NはFirestoreの最高点(0-100)を問題数へ換算した正答数、X回＝getAttemptCount、lessonAttemptCount_フィールド優先・無ければhistory.length）も表示する。スコアバッジ自体は「N点 (正答数/全問数)」の形式（角丸長方形、点数を大きく・分数を小さく表示）。
 - 成績リセット（resetScores）とログアウト（logout）は、いずれも自前モーダル（reset-modal, logout-modal）で確認してから実行する。「📊 成績/設定」ボタン（openScoreModal）から成績履歴・成績リセット・表示サイズ設定を開く。
 
 ### 成績履歴・全クリア・周回機能
