@@ -886,86 +886,16 @@
   </div>
 </div>
 
+<script src="shared/quiz-app.js?v=20260720071525"></script>
 <script>
-// ============================================================
-// 🔥 Firebase 初期化
-// ============================================================
-
-const firebaseConfig = {
-  apiKey: "AIzaSyASXTkFt2cm-lG5zrPL0uygNMpY6u_OWwY",
-  authDomain: "boki1-b66ad.firebaseapp.com",
-  projectId: "boki1-b66ad",
-  storageBucket: "boki1-b66ad.firebasestorage.app",
-  messagingSenderId: "416766529196",
-  appId: "1:416766529196:web:9a451e15d3e1c4057c9909",
-  measurementId: "G-HQKC6V6J1F"
-};
-
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const db = firebase.firestore();
-
-let currentUser = null;
+// Firebase初期化・認証（firebaseConfig/auth/db/currentUser/GOOGLE_CLIENT_ID/
+// loginWithGoogle/logout/confirmLogout/renderAuthStatus/userDataAction）は
+// shared/quiz-app.js側の定義をそのまま使う（メインメニュー固有の変数だけここに残す）。
 const quizMetaCache = {};
 let visiblePrefs = null; // null = not loaded from Firestore yet
 let pendingPrefsSave = null; // in-flight Firestore write, if any
 let pinnedPrefs = null; // null = not loaded from Firestore yet
 let pendingPinnedSave = null; // in-flight Firestore write, if any
-
-// Firebase の signInWithPopup/signInWithRedirect は iPhone Chrome (CriOS)
-// で機能しない（redirect は firebaseapp.com への別ドメインiframeに依存
-// しており、Chrome M115+等のサードパーティストレージ制限でブロックされる）。
-// 代わりに Google Identity Services (GIS) の OAuth トークンクライアントを
-// 直接呼び出し、取得したアクセストークンを Firebase の認証情報に変換する。
-// GIS はGoogle自身が管理するポップアップ機構のため、iPhone Chromeでも動作する。
-const GOOGLE_CLIENT_ID = '416766529196-d28cbbfr864eaahh8o9s5h3mopsa2dpo.apps.googleusercontent.com';
-let gisTokenClient = null;
-
-function getGISTokenClient() {
-  if (gisTokenClient) return gisTokenClient;
-  if (!window.google || !window.google.accounts || !window.google.accounts.oauth2) return null;
-  gisTokenClient = google.accounts.oauth2.initTokenClient({
-    client_id: GOOGLE_CLIENT_ID,
-    scope: 'openid email profile',
-    callback: (tokenResponse) => {
-      if (tokenResponse.error) {
-        console.error('Google sign-in error:', tokenResponse);
-        alert('ログインに失敗しました: ' + tokenResponse.error);
-        return;
-      }
-      const credential = firebase.auth.GoogleAuthProvider.credential(null, tokenResponse.access_token);
-      auth.signInWithCredential(credential).catch(e => {
-        console.error('Firebase sign-in error:', e);
-        alert('ログインに失敗しました: ' + e.message);
-      });
-    },
-  });
-  return gisTokenClient;
-}
-
-function loginWithGoogle() {
-  const client = getGISTokenClient();
-  if (!client) {
-    alert('Googleログインの読み込みに失敗しました。しばらくしてから再度お試しください。');
-    return;
-  }
-  client.requestAccessToken();
-}
-
-function logout() {
-  const modal = document.getElementById('logout-modal');
-  if (modal) modal.style.display = 'flex';
-}
-
-function closeLogoutModal() {
-  const modal = document.getElementById('logout-modal');
-  if (modal) modal.style.display = 'none';
-}
-
-function confirmLogout() {
-  closeLogoutModal();
-  auth.signOut().catch(e => console.error('Logout error:', e));
-}
 
 function showLoginPromptModal() {
   const modal = document.getElementById('login-prompt-modal');
@@ -1036,22 +966,21 @@ async function calculateQuizMeta(quizId, questionsPath) {
   return quizMetaCache[quizId];
 }
 
-async function getQuizScore(collectionName, quizId, questionsPath) {
+async function getQuizScore(quizId, questionsPath) {
   const meta = await calculateQuizMeta(quizId, questionsPath);
   const totalQuestions = meta.total;
   if (!currentUser) return { correct: 0, total: totalQuestions, lap: 0 };
   try {
-    const doc = await db.collection(collectionName).doc(currentUser.uid).get();
-    if (!doc.exists) return { correct: 0, total: totalQuestions, lap: 0 };
+    const data = await userDataAction('getQuizScoreDoc', { quizId });
+    if (!data) return { correct: 0, total: totalQuestions, lap: 0 };
 
-    const data = doc.data();
     const lap = parseInt(data.lap, 10) || 0;
     const setCounts = meta.setCounts || {};
     let totalCorrect = 0;
 
     Object.keys(setCounts).forEach(level => {
       Object.keys(setCounts[level]).forEach(testId => {
-        const score = data[`best_${level}_${testId}`];
+        const score = data[`lesson_${level}_${testId}`];
         if (score > 0) {
           totalCorrect += Math.round(score / 100 * setCounts[level][testId]);
         }
@@ -1061,7 +990,7 @@ async function getQuizScore(collectionName, quizId, questionsPath) {
     // Backward compatibility for older score keys without level prefix.
     if (totalCorrect === 0 && setCounts[1]) {
       Object.keys(setCounts[1]).forEach(testId => {
-        const score = data[`best_${testId}`];
+        const score = data[`lesson_${testId}`];
         if (score > 0) {
           totalCorrect += Math.round(score / 100 * setCounts[1][testId]);
         }
@@ -1070,7 +999,7 @@ async function getQuizScore(collectionName, quizId, questionsPath) {
 
     return { correct: totalCorrect, total: totalQuestions, lap };
   } catch (e) {
-    console.error(`Error fetching ${collectionName} scores:`, e);
+    console.error(`Error fetching quiz_${quizId} scores:`, e);
     return { correct: 0, total: totalQuestions, lap: 0 };
   }
 }
@@ -1116,10 +1045,9 @@ const OLD_TO_NEW_QUIZ_IDS = {
 async function loadVisiblePrefs() {
   if (!currentUser) return null;
   try {
-    const docRef = db.collection('quiz_menu_prefs').doc(currentUser.uid);
-    const doc = await docRef.get();
-    if (!doc.exists || !doc.data().visible) return null;
-    const visible = doc.data().visible;
+    const data = await userDataAction('getMenuPrefs');
+    if (!data.visible) return null;
+    const visible = data.visible;
 
     const migrationUpdates = {};
     let needsMigration = false;
@@ -1137,7 +1065,7 @@ async function loadVisiblePrefs() {
       }
     });
     if (needsMigration) {
-      try { await docRef.update(migrationUpdates); } catch (e) { console.error('Failed to migrate menu prefs:', e); }
+      try { await userDataAction('migrateMenuPrefsIds', { migrationUpdates }); } catch (e) { console.error('Failed to migrate menu prefs:', e); }
     }
     return visible;
   } catch (e) { console.error('Failed to load menu prefs:', e); }
@@ -1147,7 +1075,7 @@ async function loadVisiblePrefs() {
 async function saveVisiblePrefs() {
   if (!currentUser || !visiblePrefs) return;
   try {
-    await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ visible: visiblePrefs }, { merge: true });
+    await userDataAction('setVisiblePrefs', { visible: visiblePrefs });
   } catch (e) { console.error('Failed to save menu prefs:', e); }
 }
 
@@ -1168,9 +1096,9 @@ async function toggleQuizVisibility(id) {
 async function loadPinnedPrefs() {
   if (!currentUser) return null;
   try {
-    const doc = await db.collection('quiz_menu_prefs').doc(currentUser.uid).get();
-    if (doc.exists && doc.data().pinned) {
-      return doc.data().pinned;
+    const data = await userDataAction('getMenuPrefs');
+    if (data.pinned) {
+      return data.pinned;
     }
   } catch (e) { console.error('Failed to load pinned prefs:', e); }
   return null;
@@ -1179,7 +1107,7 @@ async function loadPinnedPrefs() {
 async function savePinnedPrefs() {
   if (!currentUser || !pinnedPrefs) return;
   try {
-    await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ pinned: pinnedPrefs }, { merge: true });
+    await userDataAction('setPinnedPrefs', { pinned: pinnedPrefs });
   } catch (e) { console.error('Failed to save pinned prefs:', e); }
 }
 
@@ -1307,7 +1235,7 @@ async function updateScoreDisplay() {
     const path = `./${id}/`;
     const collection = `quiz_${id}`;
     const meta = await calculateQuizMeta(id, path);
-    const score = await getQuizScore(collection, id, path);
+    const score = await getQuizScore(id, path);
     return { id, path, collection, emoji: cfg.icon || '', name: cfg.heading || id, description: cfg.description || '', genreMajor: cfg.genreMajor || null, genreMinor: cfg.genreMinor || null, meta, score };
   }));
   lastQuizResults = results;
@@ -1491,19 +1419,7 @@ function dismissPwaInstallBanner() {
   if (banner) banner.classList.add('hidden');
 }
 
-function renderAuthStatus() {
-  const el = document.getElementById('auth-status');
-  if (!el) return;
-  if (currentUser) {
-    const name = currentUser.displayName || 'ユーザー';
-    const initial = name.trim().charAt(0).toUpperCase();
-    el.innerHTML = `<span class="user-chip"><span class="user-avatar" id="auth-status-avatar"></span><span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
-    document.getElementById('auth-status-avatar').textContent = initial;
-    document.getElementById('auth-status-name').textContent = name;
-  } else {
-    el.innerHTML = `<button class="btn-login-inline" onclick="loginWithGoogle()">🔐 ログイン</button>`;
-  }
-}
+// renderAuthStatus()はshared/quiz-app.js側の定義を使う（メインメニューとクイズ画面で同じ見た目）。
 
 auth.onAuthStateChanged(user => {
   currentUser = user;

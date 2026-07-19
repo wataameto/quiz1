@@ -34,8 +34,8 @@ describe('Main menu HTML', () => {
   });
 
   test('should count only current question files for menu scores', () => {
-    expect(indexHtml).toContain('data[`best_${level}_${testId}`]');
-    expect(indexHtml).not.toContain("Object.keys(data).filter(k => k.startsWith('best_'))");
+    expect(indexHtml).toContain('data[`lesson_${level}_${testId}`]');
+    expect(indexHtml).not.toContain("Object.keys(data).filter(k => k.startsWith('lesson_'))");
   });
 
   test('should clear current user when auth signs out in quiz pages', () => {

@@ -93,8 +93,12 @@ auth.onAuthStateChanged(user => {
   cacheInitialized = false;
   bestScores = {};
   renderAuthStatus();
-  // 認証状態に関わらず初期化を実行
-  loadAllQuestions();
+  // メインメニュー（docs/index.html）もこのファイルを読み込むため、教材ページ特有の
+  // 初期化（問題データの読み込み）は教材ページにしかないDOM（#screen-quiz）の有無で判定する。
+  if (document.getElementById('screen-quiz')) {
+    // 認証状態に関わらず初期化を実行
+    loadAllQuestions();
+  }
 });
 
 // Firebase の signInWithPopup/signInWithRedirect は iPhone Chrome (CriOS)
@@ -483,9 +487,7 @@ async function initializeBestScoresCache() {
 
   isInitializingCache = (async () => {
     try {
-      const collection = getCollectionName();
-      const doc = await db.collection(collection).doc(currentUser.uid).get();
-      bestScores = doc.exists ? doc.data() : {};
+      bestScores = await userDataAction('getScores');
       cacheInitialized = true;
     } catch (e) {
       console.error(e);
@@ -514,13 +516,8 @@ async function saveWrongAnswers(testId, answers, level) {
       }
     });
 
-    const collection = getCollectionName();
     const key = saveWrongAnswersKey(level, testId);
-
-    await db.collection(collection).doc(currentUser.uid).set(
-      { [key]: wrongQuestionNumbers },
-      { merge: true }
-    );
+    await userDataAction('saveWrongAnswers', { key, wrongQuestionNumbers });
     bestScores[key] = wrongQuestionNumbers;
   } catch (e) {
     console.error('Failed to save wrong answers:', e);
@@ -578,8 +575,7 @@ async function recordPracticeAttempt(id) {
   try {
     const field = practiceCountKey(currentLevel, id);
     const updates = { [field]: getPracticeCount(id) + 1 };
-    const collection = getCollectionName();
-    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
+    await userDataAction('recordPracticeAttempt', { updates });
     Object.assign(bestScores, updates);
   } catch (e) { console.error(e); }
 }
@@ -613,13 +609,27 @@ async function getHistory(id, level = currentLevel) {
   return Array.isArray(h) ? h : [];
 }
 
-// 削除系・履歴/達成記録系の判断ロジックを1箇所に集約する。
-// 現状はクライアントから直接Firestoreへ読み書きするが、Cloud Functions移行時は
-// このswitch各caseの中身をそのままサーバー側（onCall関数）に移す想定で書いてある。
-async function updateUserScores(action, params = {}) {
-  const collection = getCollectionName();
-  const docRef = db.collection(collection).doc(currentUser.uid);
+// このアプリがFirestoreに対して行う読み書き（成績データ・メインメニューの教材設定）を
+// 1箇所に集約する。現状はクライアントから直接Firestoreへ読み書きするが、Cloud Functions
+// 移行時はこのswitch各caseの中身をそのままサーバー側（onCall関数）に移す想定で書いてある。
+// docs/index.html（メインメニュー）もこのquiz-app.jsを読み込んで同じ関数を使う。
+async function userDataAction(action, params = {}) {
+  const docRef = db.collection(getCollectionName()).doc(currentUser.uid);
   switch (action) {
+    case 'getScores': {
+      const doc = await docRef.get();
+      return doc.exists ? doc.data() : {};
+    }
+    case 'saveWrongAnswers': {
+      const { key, wrongQuestionNumbers } = params;
+      await docRef.set({ [key]: wrongQuestionNumbers }, { merge: true });
+      return { [key]: wrongQuestionNumbers };
+    }
+    case 'recordPracticeAttempt': {
+      const { updates } = params;
+      await docRef.set(updates, { merge: true });
+      return updates;
+    }
     case 'recordTestResult': {
       const { id, s } = params;
       const wasFullyCleared = await isFullyCleared();
@@ -730,8 +740,33 @@ async function updateUserScores(action, params = {}) {
       });
       return fieldsToDelete;
     }
+    // ==== ここからメインメニュー（docs/index.html）の教材設定用 ====
+    case 'getMenuPrefs': {
+      const doc = await db.collection('quiz_menu_prefs').doc(currentUser.uid).get();
+      return doc.exists ? doc.data() : {};
+    }
+    case 'setVisiblePrefs': {
+      const { visible } = params;
+      await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ visible }, { merge: true });
+      return { visible };
+    }
+    case 'setPinnedPrefs': {
+      const { pinned } = params;
+      await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ pinned }, { merge: true });
+      return { pinned };
+    }
+    case 'migrateMenuPrefsIds': {
+      const { migrationUpdates } = params;
+      await db.collection('quiz_menu_prefs').doc(currentUser.uid).update(migrationUpdates);
+      return migrationUpdates;
+    }
+    case 'getQuizScoreDoc': {
+      const { quizId: targetQuizId } = params;
+      const doc = await db.collection(`quiz_${targetQuizId}`).doc(currentUser.uid).get();
+      return doc.exists ? doc.data() : null;
+    }
     default:
-      throw new Error(`updateUserScores: unknown action "${action}"`);
+      throw new Error(`userDataAction: unknown action "${action}"`);
   }
 }
 
@@ -742,7 +777,7 @@ async function recordTestResult(id, s) {
     await initializeBestScoresCache();
   }
   try {
-    await updateUserScores('recordTestResult', { id, s });
+    await userDataAction('recordTestResult', { id, s });
   } catch (e) { console.error(e); }
 }
 
@@ -906,7 +941,7 @@ async function deleteSelectedHistory() {
   });
 
   try {
-    await updateUserScores('deleteHistoryEntries', { groups });
+    await userDataAction('deleteHistoryEntries', { groups });
     soundClick();
     showScoreHistory();
   } catch (e) { console.error(e); }
@@ -961,7 +996,7 @@ async function resetCurrentLevel() {
   if (!currentUser) return;
   closeResetModal();
   try {
-    const result = await updateUserScores('resetCurrentLevel', { level: currentLevel });
+    const result = await userDataAction('resetCurrentLevel', { level: currentLevel });
     if (result === null) return;
     soundClick(); showHome();
   } catch (e) { console.error(e); }
@@ -971,7 +1006,7 @@ async function resetAllLevels() {
   if (!currentUser) return;
   closeResetModal();
   try {
-    await updateUserScores('resetAllLevels');
+    await userDataAction('resetAllLevels');
     soundClick(); showHome();
   } catch (e) { console.error(e); }
 }
@@ -1081,7 +1116,7 @@ async function advanceLap() {
   if (!currentUser) return;
   if (!cacheInitialized) await initializeBestScoresCache();
   try {
-    await updateUserScores('advanceLap');
+    await userDataAction('advanceLap');
     soundFanfare();
     launchConfetti(80);
     showHome();

@@ -64,6 +64,18 @@ try {
   });
   console.log(`✅ Bumped shared asset cache-busting version (${version}) in ${quizDirs.length} quiz pages`);
 
+  // docs/index.html（メインメニュー）もshared/quiz-app.jsを読み込むため、同じくバージョンを更新する。
+  const menuHtmlPath = path.join(docsDir, 'index.html');
+  if (fs.existsSync(menuHtmlPath)) {
+    let menuHtml = fs.readFileSync(menuHtmlPath, 'utf-8');
+    menuHtml = menuHtml.replace(
+      /(src="shared\/quiz-app\.js)(\?v=[^"]*)?"/,
+      `$1?v=${version}"`
+    );
+    fs.writeFileSync(menuHtmlPath, menuHtml, 'utf-8');
+    console.log(`✅ Bumped shared asset cache-busting version (${version}) in docs/index.html`);
+  }
+
   // Generate docs/quiz-meta.json: per-quiz part/set/question counts so the
   // main menu can render totals and compute scores without downloading every
   // questions*.json on each load.
