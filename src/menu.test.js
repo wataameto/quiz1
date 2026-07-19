@@ -43,7 +43,7 @@ describe('Main menu HTML', () => {
   });
 
   test('should avoid updating missing Firestore score documents during reset', () => {
-    expect(quizAppJs).toContain('const snapshot = await doc.get();');
+    expect(quizAppJs).toContain('const snapshot = await docRef.get();');
     expect(quizAppJs).toContain('if (snapshot.exists)');
   });
 

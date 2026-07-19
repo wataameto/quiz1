@@ -613,6 +613,128 @@ async function getHistory(id, level = currentLevel) {
   return Array.isArray(h) ? h : [];
 }
 
+// 削除系・履歴/達成記録系の判断ロジックを1箇所に集約する。
+// 現状はクライアントから直接Firestoreへ読み書きするが、Cloud Functions移行時は
+// このswitch各caseの中身をそのままサーバー側（onCall関数）に移す想定で書いてある。
+async function updateUserScores(action, params = {}) {
+  const collection = getCollectionName();
+  const docRef = db.collection(collection).doc(currentUser.uid);
+  switch (action) {
+    case 'recordTestResult': {
+      const { id, s } = params;
+      const wasFullyCleared = await isFullyCleared();
+
+      const bestField = `lesson_${currentLevel}_${id}`;
+      const historyField = historyKey(currentLevel, id);
+      const countField = attemptCountKey(currentLevel, id);
+      const best = await getBest(id);
+      const history = await getHistory(id);
+      // 機能追加前からの履歴（attemptCountが未設定）でも既存件数から番号を続けられるようにする
+      const newCount = Math.max(getAttemptCount(id), history.length) + 1;
+      let updatedHistory = [...history, { no: newCount, score: s, date: nowJstString() }];
+      // 初回1件＋直近10件だけ残す（間の分は間引く）
+      if (updatedHistory.length > HISTORY_KEEP_LATEST + 1) {
+        updatedHistory = [updatedHistory[0], ...updatedHistory.slice(-HISTORY_KEEP_LATEST)];
+      }
+
+      const newLapAttemptCount = getLapAttemptCount() + 1;
+      const updates = { [historyField]: updatedHistory, [countField]: newCount, lapAttemptCount: newLapAttemptCount };
+      if (s > best) updates[bestField] = s;
+
+      // このテストの結果で「初めて」全問正解の状態になるかを、書き込み前に判定する。
+      // すでに全問正解済みならlesson_は上がることはあっても下がらないので、再スキャンせず true とみなせる。
+      // まだFirestoreに書き込んでいないupdatesの値をoverridesとして渡すことで、
+      // fullClearHistoryの更新も同じ1回の書き込みにまとめられる。
+      const nowFullyCleared = wasFullyCleared ? true : await isFullyCleared(updates);
+      if (!wasFullyCleared && nowFullyCleared) {
+        const entry = { lap: getLap() + 1, date: nowJstString(), attempts: newLapAttemptCount };
+        updates.fullClearHistory = [...getFullClearHistory(), entry];
+      }
+
+      await docRef.set(updates, { merge: true });
+      Object.assign(bestScores, updates);
+      return updates;
+    }
+    case 'resetCurrentLevel': {
+      const { level } = params;
+      const snapshot = await docRef.get();
+      if (!quizData[level] || !quizData[level].tests) return null;
+
+      // 全問正解の状態からこのパートをリセットする場合、記録を残しておく。
+      // これにより、次にまた全問正解を達成したときのfullClearHistoryの新しいエントリが
+      // 「バグで重複した」のではなく「リセットして取り直した」ことだと履歴から分かる。
+      const wasFullyCleared = await isFullyCleared();
+      const fieldsToDelete = {};
+      if (wasFullyCleared) {
+        const resetEntry = { lap: getLap() + 1, date: nowJstString() };
+        fieldsToDelete.partialResetHistory = [...getPartialResetHistory(), resetEntry];
+      }
+      for (const t of quizData[level].tests) {
+        fieldsToDelete[`lesson_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+        fieldsToDelete[`lessonWrongAnswers_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+        fieldsToDelete[historyKey(level, t.id)] = firebase.firestore.FieldValue.delete();
+        fieldsToDelete[attemptCountKey(level, t.id)] = firebase.firestore.FieldValue.delete();
+        fieldsToDelete[practiceCountKey(level, t.id)] = firebase.firestore.FieldValue.delete();
+      }
+      if (snapshot.exists) {
+        await docRef.update(fieldsToDelete);
+      }
+      // キャッシュから削除
+      for (const t of quizData[level].tests) {
+        delete bestScores[`lesson_${level}_${t.id}`];
+        delete bestScores[`lessonWrongAnswers_${level}_${t.id}`];
+        delete bestScores[historyKey(level, t.id)];
+        delete bestScores[attemptCountKey(level, t.id)];
+        delete bestScores[practiceCountKey(level, t.id)];
+      }
+      if (wasFullyCleared) {
+        bestScores.partialResetHistory = fieldsToDelete.partialResetHistory;
+      }
+      return fieldsToDelete;
+    }
+    case 'resetAllLevels': {
+      await docRef.delete();
+      bestScores = {};
+      cacheInitialized = false;
+      return {};
+    }
+    case 'deleteHistoryEntries': {
+      const { groups } = params;
+      const updates = {};
+      Object.keys(groups).forEach(field => {
+        const current = Array.isArray(bestScores[field]) ? bestScores[field] : [];
+        updates[field] = current.filter((_, i) => !groups[field].has(i));
+      });
+      await docRef.set(updates, { merge: true });
+      Object.assign(bestScores, updates);
+      return updates;
+    }
+    case 'advanceLap': {
+      const newLap = getLap() + 1;
+      const newLapHistory = [...getLapHistory(), { lap: newLap, date: nowJstString() }];
+      const fieldsToDelete = { lap: newLap, lapHistory: newLapHistory, lapAttemptCount: 0 };
+      for (let level = 1; level <= maxLevel; level++) {
+        if (!quizData[level] || !quizData[level].tests) continue;
+        for (const t of quizData[level].tests) {
+          fieldsToDelete[`lesson_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+          fieldsToDelete[`lessonWrongAnswers_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+        }
+      }
+      await docRef.set(fieldsToDelete, { merge: true });
+      // ローカルキャッシュも同期: lesson_/lessonWrongAnswers_は削除、lap/lapHistory/lapAttemptCountだけ更新
+      Object.keys(fieldsToDelete).forEach(key => {
+        if (key === 'lap') { bestScores.lap = newLap; return; }
+        if (key === 'lapHistory') { bestScores.lapHistory = newLapHistory; return; }
+        if (key === 'lapAttemptCount') { bestScores.lapAttemptCount = 0; return; }
+        delete bestScores[key];
+      });
+      return fieldsToDelete;
+    }
+    default:
+      throw new Error(`updateUserScores: unknown action "${action}"`);
+  }
+}
+
 // 試験モード完走のたびに、日時付きで履歴に積み、必要なら最高得点も更新する
 async function recordTestResult(id, s) {
   if (!currentUser) return;
@@ -620,39 +742,7 @@ async function recordTestResult(id, s) {
     await initializeBestScoresCache();
   }
   try {
-    const wasFullyCleared = await isFullyCleared();
-
-    const bestField = `lesson_${currentLevel}_${id}`;
-    const historyField = historyKey(currentLevel, id);
-    const countField = attemptCountKey(currentLevel, id);
-    const best = await getBest(id);
-    const history = await getHistory(id);
-    // 機能追加前からの履歴（attemptCountが未設定）でも既存件数から番号を続けられるようにする
-    const newCount = Math.max(getAttemptCount(id), history.length) + 1;
-    let updatedHistory = [...history, { no: newCount, score: s, date: nowJstString() }];
-    // 初回1件＋直近10件だけ残す（間の分は間引く）
-    if (updatedHistory.length > HISTORY_KEEP_LATEST + 1) {
-      updatedHistory = [updatedHistory[0], ...updatedHistory.slice(-HISTORY_KEEP_LATEST)];
-    }
-
-    const newLapAttemptCount = getLapAttemptCount() + 1;
-    const updates = { [historyField]: updatedHistory, [countField]: newCount, lapAttemptCount: newLapAttemptCount };
-    if (s > best) updates[bestField] = s;
-
-    // このテストの結果で「初めて」全問正解の状態になるかを、書き込み前に判定する。
-    // すでに全問正解済みならlesson_は上がることはあっても下がらないので、再スキャンせず true とみなせる。
-    // まだFirestoreに書き込んでいないupdatesの値をoverridesとして渡すことで、
-    // fullClearHistoryの更新も同じ1回の書き込みにまとめられる。
-    const nowFullyCleared = wasFullyCleared ? true : await isFullyCleared(updates);
-    if (!wasFullyCleared && nowFullyCleared) {
-      const entry = { lap: getLap() + 1, date: nowJstString(), attempts: newLapAttemptCount };
-      updates.fullClearHistory = [...getFullClearHistory(), entry];
-    }
-
-    const collection = getCollectionName();
-    const docRef = db.collection(collection).doc(currentUser.uid);
-    await docRef.set(updates, { merge: true });
-    Object.assign(bestScores, updates);
+    await updateUserScores('recordTestResult', { id, s });
   } catch (e) { console.error(e); }
 }
 
@@ -815,16 +905,8 @@ async function deleteSelectedHistory() {
     groups[field].add(idx);
   });
 
-  const updates = {};
-  Object.keys(groups).forEach(field => {
-    const current = Array.isArray(bestScores[field]) ? bestScores[field] : [];
-    updates[field] = current.filter((_, i) => !groups[field].has(i));
-  });
-
   try {
-    const collection = getCollectionName();
-    await db.collection(collection).doc(currentUser.uid).set(updates, { merge: true });
-    Object.assign(bestScores, updates);
+    await updateUserScores('deleteHistoryEntries', { groups });
     soundClick();
     showScoreHistory();
   } catch (e) { console.error(e); }
@@ -879,41 +961,8 @@ async function resetCurrentLevel() {
   if (!currentUser) return;
   closeResetModal();
   try {
-    const collection = getCollectionName();
-    const doc = db.collection(collection).doc(currentUser.uid);
-    const snapshot = await doc.get();
-    if (!quizData[currentLevel] || !quizData[currentLevel].tests) return;
-
-    // 全問正解の状態からこのパートをリセットする場合、記録を残しておく。
-    // これにより、次にまた全問正解を達成したときのfullClearHistoryの新しいエントリが
-    // 「バグで重複した」のではなく「リセットして取り直した」ことだと履歴から分かる。
-    const wasFullyCleared = await isFullyCleared();
-    const fieldsToDelete = {};
-    if (wasFullyCleared) {
-      const resetEntry = { lap: getLap() + 1, date: nowJstString() };
-      fieldsToDelete.partialResetHistory = [...getPartialResetHistory(), resetEntry];
-    }
-    for (const t of quizData[currentLevel].tests) {
-      fieldsToDelete[`lesson_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
-      fieldsToDelete[`lessonWrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
-      fieldsToDelete[historyKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
-      fieldsToDelete[attemptCountKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
-      fieldsToDelete[practiceCountKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
-    }
-    if (snapshot.exists) {
-      await doc.update(fieldsToDelete);
-    }
-    // キャッシュから削除
-    for (const t of quizData[currentLevel].tests) {
-      delete bestScores[`lesson_${currentLevel}_${t.id}`];
-      delete bestScores[`lessonWrongAnswers_${currentLevel}_${t.id}`];
-      delete bestScores[historyKey(currentLevel, t.id)];
-      delete bestScores[attemptCountKey(currentLevel, t.id)];
-      delete bestScores[practiceCountKey(currentLevel, t.id)];
-    }
-    if (wasFullyCleared) {
-      bestScores.partialResetHistory = fieldsToDelete.partialResetHistory;
-    }
+    const result = await updateUserScores('resetCurrentLevel', { level: currentLevel });
+    if (result === null) return;
     soundClick(); showHome();
   } catch (e) { console.error(e); }
 }
@@ -922,10 +971,7 @@ async function resetAllLevels() {
   if (!currentUser) return;
   closeResetModal();
   try {
-    const collection = getCollectionName();
-    await db.collection(collection).doc(currentUser.uid).delete();
-    bestScores = {};
-    cacheInitialized = false;
+    await updateUserScores('resetAllLevels');
     soundClick(); showHome();
   } catch (e) { console.error(e); }
 }
@@ -1035,25 +1081,7 @@ async function advanceLap() {
   if (!currentUser) return;
   if (!cacheInitialized) await initializeBestScoresCache();
   try {
-    const newLap = getLap() + 1;
-    const newLapHistory = [...getLapHistory(), { lap: newLap, date: nowJstString() }];
-    const fieldsToDelete = { lap: newLap, lapHistory: newLapHistory, lapAttemptCount: 0 };
-    for (let level = 1; level <= maxLevel; level++) {
-      if (!quizData[level] || !quizData[level].tests) continue;
-      for (const t of quizData[level].tests) {
-        fieldsToDelete[`lesson_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
-        fieldsToDelete[`lessonWrongAnswers_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
-      }
-    }
-    const collection = getCollectionName();
-    await db.collection(collection).doc(currentUser.uid).set(fieldsToDelete, { merge: true });
-    // ローカルキャッシュも同期: lesson_/lessonWrongAnswers_は削除、lap/lapHistory/lapAttemptCountだけ更新
-    Object.keys(fieldsToDelete).forEach(key => {
-      if (key === 'lap') { bestScores.lap = newLap; return; }
-      if (key === 'lapHistory') { bestScores.lapHistory = newLapHistory; return; }
-      if (key === 'lapAttemptCount') { bestScores.lapAttemptCount = 0; return; }
-      delete bestScores[key];
-    });
+    await updateUserScores('advanceLap');
     soundFanfare();
     launchConfetti(80);
     showHome();
