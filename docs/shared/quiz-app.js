@@ -1460,7 +1460,8 @@ async function showResults() {
     const best = await getBest(currentTest.id);
     const history = await getHistory(currentTest.id);
     const attemptCount = Math.max(getAttemptCount(currentTest.id), history.length);
-    document.getElementById('best-msg').textContent = `🏅 最高: ${best}点 / ${attemptCount}回`;
+    const bestCorrect = Math.round(best / 100 * total);
+    document.getElementById('best-msg').textContent = `🏅 最高: ${bestCorrect}/${total}問 (${attemptCount}回)`;
     document.getElementById('best-msg').style.display = '';
   } else {
     document.getElementById('best-msg').style.display = 'none';
