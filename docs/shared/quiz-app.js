@@ -20,36 +20,26 @@ let currentUser = null;
 let bestScores = {};
 let cacheInitialized = false;
 
-// ===== 表示サイズ設定（PC・スマホそれぞれ端末ごとにlocalStorageで保持） =====
+// ===== 表示サイズ設定（PC・スマホそれぞれ独立してlocalStorageで保持、常に両方設定可能） =====
 const FONT_SIZE_KEY_LEGACY = 'quizFontSize'; // PC/スマホ分離前の単一キー（移行用）
-const FONT_SIZE_KEY_MOBILE = 'quizFontSizeMobile';
-const FONT_SIZE_KEY_PC = 'quizFontSizePC';
+const FONT_SIZE_KEYS = { pc: 'quizFontSizePC', mobile: 'quizFontSizeMobile' };
 const FONT_SIZE_MIN = 70;
-const FONT_SIZE_MAX = 150;
-const FONT_SIZE_DEFAULT_MOBILE = 90;
-const FONT_SIZE_DEFAULT_PC = 110;
+const FONT_SIZE_MAX = 200;
+const FONT_SIZE_DEFAULTS = { pc: 110, mobile: 90 };
 const FONT_SIZE_LEGACY_MAP = { xxs: 70, xs: 80, s: 90, m: 100, l: 115, small: 90, medium: 100, large: 115, xl: 115 }; // 旧段階からの移行
 
 function isMobileFontSizeView() {
   return window.matchMedia('(max-width: 520px)').matches;
 }
 
-function fontSizeStorageKey() {
-  return isMobileFontSizeView() ? FONT_SIZE_KEY_MOBILE : FONT_SIZE_KEY_PC;
-}
-
-function fontSizeDefault() {
-  return isMobileFontSizeView() ? FONT_SIZE_DEFAULT_MOBILE : FONT_SIZE_DEFAULT_PC;
-}
-
-function clampFontSize(size) {
+function clampFontSize(size, device) {
   size = Math.round(Number(size) / 5) * 5;
-  if (isNaN(size)) size = fontSizeDefault();
+  if (isNaN(size)) size = FONT_SIZE_DEFAULTS[device];
   return Math.min(FONT_SIZE_MAX, Math.max(FONT_SIZE_MIN, size));
 }
 
-function applyFontSizePref() {
-  const stored = localStorage.getItem(fontSizeStorageKey());
+function getFontSizeFor(device) {
+  const stored = localStorage.getItem(FONT_SIZE_KEYS[device]);
   let size;
   if (stored !== null && stored !== '' && !isNaN(Number(stored))) {
     size = Number(stored);
@@ -60,28 +50,34 @@ function applyFontSizePref() {
     } else if (legacyStored !== null && !isNaN(Number(legacyStored))) {
       size = Number(legacyStored);
     } else {
-      size = fontSizeDefault();
+      size = FONT_SIZE_DEFAULTS[device];
     }
   }
-  size = clampFontSize(size);
-  document.documentElement.style.fontSize = size + '%';
-  const slider = document.getElementById('font-size-slider');
-  if (slider) slider.value = size;
-  const label = document.getElementById('font-size-value');
-  if (label) label.textContent = size + '%';
-  const deviceLabel = document.getElementById('font-size-device-label');
-  if (deviceLabel) deviceLabel.textContent = isMobileFontSizeView() ? 'スマホ' : 'PC';
+  return clampFontSize(size, device);
 }
 
-function setFontSize(size) {
-  size = clampFontSize(size);
-  localStorage.setItem(fontSizeStorageKey(), String(size));
+function applyFontSizePref() {
+  const activeDevice = isMobileFontSizeView() ? 'mobile' : 'pc';
+  document.documentElement.style.fontSize = getFontSizeFor(activeDevice) + '%';
+
+  ['pc', 'mobile'].forEach(device => {
+    const size = getFontSizeFor(device);
+    const slider = document.getElementById(`font-size-slider-${device}`);
+    if (slider) slider.value = size;
+    const label = document.getElementById(`font-size-value-${device}`);
+    if (label) label.textContent = size + '%';
+  });
+}
+
+function setFontSize(device, size) {
+  size = clampFontSize(size, device);
+  localStorage.setItem(FONT_SIZE_KEYS[device], String(size));
   applyFontSizePref();
   soundClick();
 }
 
-function resetFontSizeToDefault() {
-  setFontSize(fontSizeDefault());
+function resetFontSizeToDefault(device) {
+  setFontSize(device, FONT_SIZE_DEFAULTS[device]);
 }
 
 window.addEventListener('resize', applyFontSizePref);
@@ -156,8 +152,11 @@ function renderAuthStatus() {
   const el = document.getElementById('auth-status');
   if (!el) return;
   if (currentUser) {
-    el.innerHTML = `<span class="user-chip">👤 <span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
-    document.getElementById('auth-status-name').textContent = currentUser.displayName || 'ユーザー';
+    const name = currentUser.displayName || 'ユーザー';
+    const initial = name.trim().charAt(0).toUpperCase();
+    el.innerHTML = `<span class="user-chip"><span class="user-avatar" id="auth-status-avatar"></span><span class="user-name" id="auth-status-name"></span><button class="btn-logout-inline" onclick="logout()">ログアウト</button></span>`;
+    document.getElementById('auth-status-avatar').textContent = initial;
+    document.getElementById('auth-status-name').textContent = name;
   } else {
     el.innerHTML = `<button class="btn-login-inline" onclick="loginWithGoogle()">🔐 ログイン</button>`;
   }
@@ -1003,10 +1002,11 @@ async function showHome() {
 
   const fullyCleared = await isFullyCleared();
   const lap = getLap();
+  const badgeSlotEl = document.getElementById('full-clear-badge-slot');
+  if (badgeSlotEl) badgeSlotEl.innerHTML = lap > 0 ? `<span class="full-clear-badge">🌟 全クリア ×${lap}</span>` : '';
   const bannerEl = document.getElementById('full-clear-banner');
   if (bannerEl) {
     let bannerHtml = '';
-    if (lap > 0) bannerHtml += `<div class="full-clear-badge">🌟 全クリア ×${lap}</div>`;
     if (fullyCleared) {
       bannerHtml += `<div class="full-clear-celebrate">
         <p>🎉 全問正解達成！</p>
