@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719213934">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719214257">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -47,7 +47,7 @@
   <div id="screen-quiz" class="hidden">
     <div class="quiz-header">
       <div class="quiz-header-top">
-        <button class="quiz-back" onclick="showHome()">テスト選択へ戻る</button>
+        <button class="quiz-back" onclick="showHome()"><span class="quiz-back-title">テスト選択へ戻る</span><span class="quiz-back-sub">(破棄中断)</span></button>
         <button class="quiz-score-btn" onclick="openScoreModal()">📊 成績/設定</button>
       </div>
       <div class="quiz-title-wrap">
@@ -72,9 +72,9 @@
 
   <div id="screen-results" class="hidden">
     <div class="quiz-header-top">
-      <button class="quiz-back" onclick="showHome()">テスト選択へ戻る</button>
+      <button class="quiz-back" onclick="showHome()"><span class="quiz-back-title">テスト選択へ戻る</span><span class="quiz-back-sub">(結果保存)</span></button>
     </div>
-    <div class="result-header"><h1 id="result-title"></h1></div>
+    <div class="result-header"><p id="result-part-label" class="quiz-part-label"></p><h1 id="result-title"></h1></div>
     <div class="score-area">
       <div class="score-ring">
         <span class="score-num" id="score-num"></span>
@@ -259,7 +259,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260719213934"></script>
+<script src="../shared/quiz-app.js?v=20260719214257"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

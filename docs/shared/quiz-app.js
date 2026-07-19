@@ -1473,6 +1473,7 @@ async function showResults() {
   if (isReviewMode) resultTitle = currentTest.title + ' 復習結果';
   if (isPracticeModeActive) resultTitle = currentTest.title + ' 練習結果';
   document.getElementById('result-title').textContent = resultTitle;
+  document.getElementById('result-part-label').textContent = getPartLabel(quizData[currentLevel], currentLevel);
   document.getElementById('score-num').innerHTML    = `<span class="score-main">${score}</span><span class="score-sub"> / ${maxScore}点</span>`;
 
   const ratio = score / maxScore;
