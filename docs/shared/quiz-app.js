@@ -20,37 +20,71 @@ let currentUser = null;
 let bestScores = {};
 let cacheInitialized = false;
 
-// ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
-const FONT_SIZE_KEY = 'quizFontSize';
+// ===== 表示サイズ設定（PC・スマホそれぞれ端末ごとにlocalStorageで保持） =====
+const FONT_SIZE_KEY_LEGACY = 'quizFontSize'; // PC/スマホ分離前の単一キー（移行用）
+const FONT_SIZE_KEY_MOBILE = 'quizFontSizeMobile';
+const FONT_SIZE_KEY_PC = 'quizFontSizePC';
 const FONT_SIZE_MIN = 70;
-const FONT_SIZE_MAX = 120;
-const FONT_SIZE_LEGACY = { xxs: 70, xs: 80, s: 90, m: 100, l: 115, small: 90, medium: 100, large: 115, xl: 115 }; // 旧段階からの移行
+const FONT_SIZE_MAX = 150;
+const FONT_SIZE_DEFAULT_MOBILE = 90;
+const FONT_SIZE_DEFAULT_PC = 110;
+const FONT_SIZE_LEGACY_MAP = { xxs: 70, xs: 80, s: 90, m: 100, l: 115, small: 90, medium: 100, large: 115, xl: 115 }; // 旧段階からの移行
+
+function isMobileFontSizeView() {
+  return window.matchMedia('(max-width: 520px)').matches;
+}
+
+function fontSizeStorageKey() {
+  return isMobileFontSizeView() ? FONT_SIZE_KEY_MOBILE : FONT_SIZE_KEY_PC;
+}
+
+function fontSizeDefault() {
+  return isMobileFontSizeView() ? FONT_SIZE_DEFAULT_MOBILE : FONT_SIZE_DEFAULT_PC;
+}
 
 function clampFontSize(size) {
   size = Math.round(Number(size) / 5) * 5;
-  if (isNaN(size)) size = 100;
+  if (isNaN(size)) size = fontSizeDefault();
   return Math.min(FONT_SIZE_MAX, Math.max(FONT_SIZE_MIN, size));
 }
 
 function applyFontSizePref() {
-  const stored = localStorage.getItem(FONT_SIZE_KEY);
-  let size = stored !== null && stored !== '' && !isNaN(Number(stored))
-    ? Number(stored)
-    : (FONT_SIZE_LEGACY[stored] ?? 100);
+  const stored = localStorage.getItem(fontSizeStorageKey());
+  let size;
+  if (stored !== null && stored !== '' && !isNaN(Number(stored))) {
+    size = Number(stored);
+  } else {
+    const legacyStored = localStorage.getItem(FONT_SIZE_KEY_LEGACY);
+    if (legacyStored !== null && FONT_SIZE_LEGACY_MAP[legacyStored] !== undefined) {
+      size = FONT_SIZE_LEGACY_MAP[legacyStored];
+    } else if (legacyStored !== null && !isNaN(Number(legacyStored))) {
+      size = Number(legacyStored);
+    } else {
+      size = fontSizeDefault();
+    }
+  }
   size = clampFontSize(size);
   document.documentElement.style.fontSize = size + '%';
   const slider = document.getElementById('font-size-slider');
   if (slider) slider.value = size;
   const label = document.getElementById('font-size-value');
   if (label) label.textContent = size + '%';
+  const deviceLabel = document.getElementById('font-size-device-label');
+  if (deviceLabel) deviceLabel.textContent = isMobileFontSizeView() ? 'スマホ' : 'PC';
 }
 
 function setFontSize(size) {
   size = clampFontSize(size);
-  localStorage.setItem(FONT_SIZE_KEY, String(size));
+  localStorage.setItem(fontSizeStorageKey(), String(size));
   applyFontSizePref();
   soundClick();
 }
+
+function resetFontSizeToDefault() {
+  setFontSize(fontSizeDefault());
+}
+
+window.addEventListener('resize', applyFontSizePref);
 
 applyFontSizePref();
 
