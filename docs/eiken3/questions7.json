@@ -1,8 +1,7 @@
 {
   "id": "eiken3",
   "level": 7,
-  "label": "Part7 熟語編",
-  "description": "Part7 重要熟語のクイズ",
+  "label": "Part7 重要熟語のクイズ",
   "tests": [
     {
       "id": 1,

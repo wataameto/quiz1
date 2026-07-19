@@ -1,8 +1,7 @@
 {
   "id": "sapc02",
   "level": 5,
-  "label": "🟣 Part5 模擬試験2",
-  "description": "Part5 AWS SAP-C02 模擬試験2",
+  "label": "Part5 AWS SAP-C02 模擬試験2",
   "tests": [
     {
       "id": 1,

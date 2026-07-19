@@ -1,8 +1,7 @@
 {
   "id": "sapc02",
   "level": 3,
-  "label": "🔴 Part3 基礎上級",
-  "description": "Part3 基礎上級",
+  "label": "Part3 基礎上級",
   "tests": [
     {
       "id": 1,

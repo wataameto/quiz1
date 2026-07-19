@@ -1,6 +1,6 @@
 {
   "level": 3,
-  "label": "🔴 Part3 基礎上級",
+  "label": "Part3 基礎上級",
   "tests": [
     {
       "id": 1,
@@ -777,6 +777,5 @@
       ]
     }
   ],
-  "id": "devops",
-  "description": "Part3 基礎上級"
+  "id": "devops"
 }

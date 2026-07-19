@@ -1,7 +1,6 @@
 {
   "level": 1,
-  "label": "🌍 Part1 世界の首都クイズ",
-  "description": "Part1 世界の首都クイズ",
+  "label": "Part1 世界の首都クイズ",
   "id": "capital",
   "tests": [
     {

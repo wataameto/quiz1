@@ -1,8 +1,7 @@
 {
   "id": "eiken3",
   "level": 3,
-  "label": "Part3 名詞編",
-  "description": "Part3 重要名詞のクイズ",
+  "label": "Part3 重要名詞のクイズ",
   "tests": [
     {
       "id": 1,

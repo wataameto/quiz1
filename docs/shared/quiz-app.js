@@ -268,7 +268,7 @@ async function loadQuestions(level = 1) {
 }
 
 function getPartLabel(levelData, level) {
-  return levelData.description || levelData.label || `Part${level}`;
+  return levelData.label || `Part${level}`;
 }
 
 function showAdmin() {
@@ -326,7 +326,7 @@ function updatePartBadge() {
   const levelData = quizData[currentLevel];
   const descEl = document.getElementById('part-description');
   if (levelData && descEl) {
-    descEl.textContent = levelData.description || '各10問・100点満点';
+    descEl.textContent = levelData.label || '各10問・100点満点';
   }
 }
 

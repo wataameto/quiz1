@@ -1,8 +1,7 @@
 {
   "id": "eiken2pre",
   "level": 12,
-  "label": "Part12 熟語編①",
-  "description": "Part12 重要熟語のクイズ",
+  "label": "Part12 重要熟語のクイズ",
   "tests": [
     {
       "id": 1,

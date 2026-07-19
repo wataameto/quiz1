@@ -1,6 +1,6 @@
 {
   "level": 3,
-  "label": "📖 Part3",
+  "label": "Part3 - 仕訳・試算表・計算レベル（中間テスト範囲）",
   "tests": [
     {
       "id": 1,
@@ -926,6 +926,5 @@
       ]
     }
   ],
-  "id": "bokinyu",
-  "description": "Part3 - 仕訳・試算表・計算レベル（中間テスト範囲）"
+  "id": "bokinyu"
 }

@@ -1,8 +1,7 @@
 {
   "id": "eiken2",
   "level": 15,
-  "label": "Part15 実戦・総合編②",
-  "description": "Part15 実戦総合問題",
+  "label": "Part15 実戦総合問題",
   "tests": [
     {
       "id": 1,
