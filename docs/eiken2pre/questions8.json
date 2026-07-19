@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "名詞編3セット1",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 701~710",
+      "questions": [
+        {
+          "scenario": "「administrator」の意味として最も適切なものは？",
+          "choices": [
+            "管理者",
+            "大胆さ",
+            "基盤",
+            "かがり火"
+          ],
+          "correct": 0,
+          "explanation": "「administrator」は「管理者」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advisor」の意味として最も適切なものは？",
+          "choices": [
+            "アドバイザー",
+            "花束",
+            "伝記",
+            "贈収賄"
+          ],
+          "correct": 0,
+          "explanation": "「advisor」は「アドバイザー」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aircraft」の意味として最も適切なものは？",
+          "choices": [
+            "動脈",
+            "アドバイザー",
+            "醸造所",
+            "航空機"
+          ],
+          "correct": 3,
+          "explanation": "「aircraft」は「航空機」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alliance」の意味として最も適切なものは？",
+          "choices": [
+            "味方・利益",
+            "背骨・心の支え",
+            "同盟",
+            "帯域幅"
+          ],
+          "correct": 2,
+          "explanation": "「alliance」は「同盟」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alteration」の意味として最も適切なものは？",
+          "choices": [
+            "変更",
+            "枯れ病",
+            "ボンネット",
+            "サイン"
+          ],
+          "correct": 0,
+          "explanation": "「alteration」は「変更」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「altitude」の意味として最も適切なものは？",
+          "choices": [
+            "高度",
+            "ぼやけたもの",
+            "退屈",
+            "評価"
+          ],
+          "correct": 0,
+          "explanation": "「altitude」は「高度」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amateur」の意味として最も適切なものは？",
+          "choices": [
+            "雪崩",
+            "吹雪",
+            "アマチュア",
+            "達成"
+          ],
+          "correct": 2,
+          "explanation": "「amateur」は「アマチュア」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambassador」の意味として最も適切なものは？",
+          "choices": [
+            "航空機",
+            "大使",
+            "勇敢さ",
+            "役員会議室"
+          ],
+          "correct": 1,
+          "explanation": "「ambassador」は「大使」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「analyst」の意味として最も適切なものは？",
+          "choices": [
+            "画期的な発見",
+            "器具・装置",
+            "分析家",
+            "枯れ病"
+          ],
+          "correct": 2,
+          "explanation": "「analyst」は「分析家」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ancestor」の意味として最も適切なものは？",
+          "choices": [
+            "輝き",
+            "戦場",
+            "祖先",
+            "配列・整列"
+          ],
+          "correct": 2,
+          "explanation": "「ancestor」は「祖先」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編3セット2",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 711~720",
+      "questions": [
+        {
+          "scenario": "「apparatus」の意味として最も適切なものは？",
+          "choices": [
+            "器具・装置",
+            "地下室",
+            "二足歩行動物",
+            "管理者"
+          ],
+          "correct": 0,
+          "explanation": "「apparatus」は「器具・装置」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appliance」の意味として最も適切なものは？",
+          "choices": [
+            "家庭用電化製品",
+            "勇敢さ",
+            "大使",
+            "旅団"
+          ],
+          "correct": 0,
+          "explanation": "「appliance」は「家庭用電化製品」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appraisal」の意味として最も適切なものは？",
+          "choices": [
+            "評価",
+            "大使",
+            "雪崩",
+            "アマチュア"
+          ],
+          "correct": 0,
+          "explanation": "「appraisal」は「評価」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「archive」の意味として最も適切なものは？",
+          "choices": [
+            "記録保管所",
+            "花婿",
+            "輝き",
+            "少年時代"
+          ],
+          "correct": 0,
+          "explanation": "「archive」は「記録保管所」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aristocracy」の意味として最も適切なものは？",
+          "choices": [
+            "雪崩",
+            "参考文献目録",
+            "貴族階級",
+            "アマチュア"
+          ],
+          "correct": 2,
+          "explanation": "「aristocracy」は「貴族階級」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「array」の意味として最も適切なものは？",
+          "choices": [
+            "分析家",
+            "野蛮人",
+            "配列・整列",
+            "吹雪"
+          ],
+          "correct": 2,
+          "explanation": "「array」は「配列・整列」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「artery」の意味として最も適切なものは？",
+          "choices": [
+            "味方・利益",
+            "認可",
+            "縁",
+            "動脈"
+          ],
+          "correct": 3,
+          "explanation": "「artery」は「動脈」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aspiration」の意味として最も適切なものは？",
+          "choices": [
+            "天文学者",
+            "抱負",
+            "退屈",
+            "配列・整列"
+          ],
+          "correct": 1,
+          "explanation": "「aspiration」は「抱負」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「astronaut」の意味として最も適切なものは？",
+          "choices": [
+            "宇宙飛行士",
+            "アマチュア",
+            "記録保管所",
+            "監査"
+          ],
+          "correct": 0,
+          "explanation": "「astronaut」は「宇宙飛行士」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「astronomer」の意味として最も適切なものは？",
+          "choices": [
+            "サイン",
+            "画期的な発見",
+            "天文学者",
+            "航空機"
+          ],
+          "correct": 2,
+          "explanation": "「astronomer」は「天文学者」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編3セット3",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 721~730",
+      "questions": [
+        {
+          "scenario": "「astronomy」の意味として最も適切なものは？",
+          "choices": [
+            "冊子",
+            "接客係",
+            "予約",
+            "天文学"
+          ],
+          "correct": 3,
+          "explanation": "「astronomy」は「天文学」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attainment」の意味として最も適切なものは？",
+          "choices": [
+            "役員会議室",
+            "裏切り",
+            "達成",
+            "記録保管所"
+          ],
+          "correct": 2,
+          "explanation": "「attainment」は「達成」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attendant」の意味として最も適切なものは？",
+          "choices": [
+            "接客係",
+            "監査",
+            "利用可能性",
+            "報酬"
+          ],
+          "correct": 0,
+          "explanation": "「attendant」は「接客係」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「audit」の意味として最も適切なものは？",
+          "choices": [
+            "かがり火",
+            "保釈",
+            "監査",
+            "腸"
+          ],
+          "correct": 2,
+          "explanation": "「audit」は「監査」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「auditor」の意味として最も適切なものは？",
+          "choices": [
+            "裏切り",
+            "漂白剤",
+            "監査役",
+            "地下室"
+          ],
+          "correct": 2,
+          "explanation": "「auditor」は「監査役」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「authorization」の意味として最も適切なものは？",
+          "choices": [
+            "記録保管所",
+            "帯域幅",
+            "二足歩行動物",
+            "認可"
+          ],
+          "correct": 3,
+          "explanation": "「authorization」は「認可」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「autograph」の意味として最も適切なものは？",
+          "choices": [
+            "達成",
+            "変更",
+            "花婿",
+            "サイン"
+          ],
+          "correct": 3,
+          "explanation": "「autograph」は「サイン」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「automation」の意味として最も適切なものは？",
+          "choices": [
+            "射手",
+            "自動化",
+            "ボンネット",
+            "伝記"
+          ],
+          "correct": 1,
+          "explanation": "「automation」は「自動化」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「availability」の意味として最も適切なものは？",
+          "choices": [
+            "少年時代",
+            "ぼやけたもの",
+            "利用可能性",
+            "基盤"
+          ],
+          "correct": 2,
+          "explanation": "「availability」は「利用可能性」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「avalanche」の意味として最も適切なものは？",
+          "choices": [
+            "雪崩",
+            "家庭用電化製品",
+            "分析家",
+            "予約"
+          ],
+          "correct": 0,
+          "explanation": "「avalanche」は「雪崩」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編3セット4",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 731~740",
+      "questions": [
+        {
+          "scenario": "「backbone」の意味として最も適切なものは？",
+          "choices": [
+            "背骨・心の支え",
+            "炎",
+            "破産",
+            "帯域幅"
+          ],
+          "correct": 0,
+          "explanation": "「backbone」は「背骨・心の支え」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「backdrop」の意味として最も適切なものは？",
+          "choices": [
+            "貴族階級",
+            "達成",
+            "絶壁",
+            "背景"
+          ],
+          "correct": 3,
+          "explanation": "「backdrop」は「背景」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「backing」の意味として最も適切なものは？",
+          "choices": [
+            "支援",
+            "天文学",
+            "高度",
+            "接客係"
+          ],
+          "correct": 0,
+          "explanation": "「backing」は「支援」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「backup」の意味として最も適切なものは？",
+          "choices": [
+            "説明会",
+            "少年時代",
+            "予備",
+            "同盟"
+          ],
+          "correct": 2,
+          "explanation": "「backup」は「予備」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bail」の意味として最も適切なものは？",
+          "choices": [
+            "サイン",
+            "馬勒",
+            "保釈",
+            "認可"
+          ],
+          "correct": 2,
+          "explanation": "「bail」は「保釈」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bandage」の意味として最も適切なものは？",
+          "choices": [
+            "伝記",
+            "冊子",
+            "包帯",
+            "かがり火"
+          ],
+          "correct": 2,
+          "explanation": "「bandage」は「包帯」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bandwidth」の意味として最も適切なものは？",
+          "choices": [
+            "水ぶくれ",
+            "分析家",
+            "帯域幅",
+            "生体認証"
+          ],
+          "correct": 2,
+          "explanation": "「bandwidth」は「帯域幅」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bankruptcy」の意味として最も適切なものは？",
+          "choices": [
+            "説明会",
+            "破産",
+            "大胆さ",
+            "同盟"
+          ],
+          "correct": 1,
+          "explanation": "「bankruptcy」は「破産」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「barbarian」の意味として最も適切なものは？",
+          "choices": [
+            "ブランデー",
+            "野蛮人",
+            "設計図",
+            "雪崩"
+          ],
+          "correct": 1,
+          "explanation": "「barbarian」は「野蛮人」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「barometer」の意味として最も適切なものは？",
+          "choices": [
+            "ぼやけたもの",
+            "気圧計",
+            "少年時代",
+            "記録保管所"
+          ],
+          "correct": 1,
+          "explanation": "「barometer」は「気圧計」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編3セット5",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 741~750",
+      "questions": [
+        {
+          "scenario": "「basement」の意味として最も適切なものは？",
+          "choices": [
+            "塩水",
+            "接客係",
+            "地下室",
+            "動脈"
+          ],
+          "correct": 2,
+          "explanation": "「basement」は「地下室」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「battalion」の意味として最も適切なものは？",
+          "choices": [
+            "包帯",
+            "ボディーガード",
+            "ボンネット",
+            "大隊"
+          ],
+          "correct": 3,
+          "explanation": "「battalion」は「大隊」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「battlefield」の意味として最も適切なものは？",
+          "choices": [
+            "戦場",
+            "アマチュア",
+            "腸",
+            "吹雪"
+          ],
+          "correct": 0,
+          "explanation": "「battlefield」は「戦場」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beacon」の意味として最も適切なものは？",
+          "choices": [
+            "ブランデー",
+            "花婿",
+            "馬勒",
+            "灯台・ビーコン"
+          ],
+          "correct": 3,
+          "explanation": "「beacon」は「灯台・ビーコン」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bedrock」の意味として最も適切なものは？",
+          "choices": [
+            "監査",
+            "基盤",
+            "絶壁",
+            "恋人"
+          ],
+          "correct": 1,
+          "explanation": "「bedrock」は「基盤」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「behalf」の意味として最も適切なものは？",
+          "choices": [
+            "かがり火",
+            "味方・利益",
+            "動脈",
+            "天文学"
+          ],
+          "correct": 1,
+          "explanation": "「behalf」は「味方・利益」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「betrayal」の意味として最も適切なものは？",
+          "choices": [
+            "本棚",
+            "裏切り",
+            "花束",
+            "基盤"
+          ],
+          "correct": 1,
+          "explanation": "「betrayal」は「裏切り」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bibliography」の意味として最も適切なものは？",
+          "choices": [
+            "縁",
+            "漂白剤",
+            "気圧計",
+            "参考文献目録"
+          ],
+          "correct": 3,
+          "explanation": "「bibliography」は「参考文献目録」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「biography」の意味として最も適切なものは？",
+          "choices": [
+            "接客係",
+            "伝記",
+            "記録保管所",
+            "評価"
+          ],
+          "correct": 1,
+          "explanation": "「biography」は「伝記」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「biometrics」の意味として最も適切なものは？",
+          "choices": [
+            "監査",
+            "かがり火",
+            "醸造所",
+            "生体認証"
+          ],
+          "correct": 3,
+          "explanation": "「biometrics」は「生体認証」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編3セット6",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 751~760",
+      "questions": [
+        {
+          "scenario": "「biped」の意味として最も適切なものは？",
+          "choices": [
+            "馬勒",
+            "航空機",
+            "二足歩行動物",
+            "一勝負"
+          ],
+          "correct": 2,
+          "explanation": "「biped」は「二足歩行動物」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blaze」の意味として最も適切なものは？",
+          "choices": [
+            "宇宙飛行士",
+            "気圧計",
+            "炎",
+            "幅"
+          ],
+          "correct": 2,
+          "explanation": "「blaze」は「炎」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bleach」の意味として最も適切なものは？",
+          "choices": [
+            "ブランデー",
+            "アマチュア",
+            "漂白剤",
+            "至福"
+          ],
+          "correct": 2,
+          "explanation": "「bleach」は「漂白剤」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bleeding」の意味として最も適切なものは？",
+          "choices": [
+            "洗脳",
+            "帯域幅",
+            "画期的な発見",
+            "出血"
+          ],
+          "correct": 3,
+          "explanation": "「bleeding」は「出血」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blight」の意味として最も適切なものは？",
+          "choices": [
+            "醸造所",
+            "枯れ病",
+            "爆撃機",
+            "サイン"
+          ],
+          "correct": 1,
+          "explanation": "「blight」は「枯れ病」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bliss」の意味として最も適切なものは？",
+          "choices": [
+            "ぼやけたもの",
+            "自動化",
+            "至福",
+            "祖先"
+          ],
+          "correct": 2,
+          "explanation": "「bliss」は「至福」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blister」の意味として最も適切なものは？",
+          "choices": [
+            "利用可能性",
+            "水ぶくれ",
+            "ブランデー",
+            "幅"
+          ],
+          "correct": 1,
+          "explanation": "「blister」は「水ぶくれ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blizzard」の意味として最も適切なものは？",
+          "choices": [
+            "配列・整列",
+            "吹雪",
+            "勇敢さ",
+            "ブラケット・括弧"
+          ],
+          "correct": 1,
+          "explanation": "「blizzard」は「吹雪」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blockade」の意味として最も適切なものは？",
+          "choices": [
+            "馬勒",
+            "認可",
+            "封鎖",
+            "爆撃機"
+          ],
+          "correct": 2,
+          "explanation": "「blockade」は「封鎖」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blouse」の意味として最も適切なものは？",
+          "choices": [
+            "ブラウス",
+            "違反",
+            "出血",
+            "接客係"
+          ],
+          "correct": 0,
+          "explanation": "「blouse」は「ブラウス」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "名詞編3セット7",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 761~770",
+      "questions": [
+        {
+          "scenario": "「blueprint」の意味として最も適切なものは？",
+          "choices": [
+            "設計図",
+            "背骨・心の支え",
+            "一勝負",
+            "洗脳"
+          ],
+          "correct": 0,
+          "explanation": "「blueprint」は「設計図」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bluff」の意味として最も適切なものは？",
+          "choices": [
+            "変更",
+            "洗脳",
+            "絶壁",
+            "大隊"
+          ],
+          "correct": 2,
+          "explanation": "「bluff」は「絶壁」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blur」の意味として最も適切なものは？",
+          "choices": [
+            "予約",
+            "背景",
+            "雪崩",
+            "ぼやけたもの"
+          ],
+          "correct": 3,
+          "explanation": "「blur」は「ぼやけたもの」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boardroom」の意味として最も適切なものは？",
+          "choices": [
+            "一勝負",
+            "ボンネット",
+            "役員会議室",
+            "器具・装置"
+          ],
+          "correct": 2,
+          "explanation": "「boardroom」は「役員会議室」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bodyguard」の意味として最も適切なものは？",
+          "choices": [
+            "分析家",
+            "管理者",
+            "ボディーガード",
+            "予備"
+          ],
+          "correct": 2,
+          "explanation": "「bodyguard」は「ボディーガード」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boiler」の意味として最も適切なものは？",
+          "choices": [
+            "利用可能性",
+            "気圧計",
+            "航空機",
+            "ボイラー"
+          ],
+          "correct": 3,
+          "explanation": "「boiler」は「ボイラー」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boldness」の意味として最も適切なものは？",
+          "choices": [
+            "大胆さ",
+            "報酬",
+            "射手",
+            "水ぶくれ"
+          ],
+          "correct": 0,
+          "explanation": "「boldness」は「大胆さ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bomber」の意味として最も適切なものは？",
+          "choices": [
+            "違反",
+            "爆撃機",
+            "自動化",
+            "動脈"
+          ],
+          "correct": 1,
+          "explanation": "「bomber」は「爆撃機」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bonfire」の意味として最も適切なものは？",
+          "choices": [
+            "祖先",
+            "達成",
+            "射手",
+            "かがり火"
+          ],
+          "correct": 3,
+          "explanation": "「bonfire」は「かがり火」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bonnet」の意味として最も適切なものは？",
+          "choices": [
+            "監査",
+            "アマチュア",
+            "勇敢さ",
+            "ボンネット"
+          ],
+          "correct": 3,
+          "explanation": "「bonnet」は「ボンネット」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "名詞編3セット8",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 771~780",
+      "questions": [
+        {
+          "scenario": "「bookcase」の意味として最も適切なものは？",
+          "choices": [
+            "大隊",
+            "吹雪",
+            "参考文献目録",
+            "本棚"
+          ],
+          "correct": 3,
+          "explanation": "「bookcase」は「本棚」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「booking」の意味として最も適切なものは？",
+          "choices": [
+            "予約",
+            "炎",
+            "贈収賄",
+            "設計図"
+          ],
+          "correct": 0,
+          "explanation": "「booking」は「予約」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「booklet」の意味として最も適切なものは？",
+          "choices": [
+            "大胆さ",
+            "かがり火",
+            "冊子",
+            "役員会議室"
+          ],
+          "correct": 2,
+          "explanation": "「booklet」は「冊子」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boredom」の意味として最も適切なものは？",
+          "choices": [
+            "生体認証",
+            "塩水",
+            "家庭用電化製品",
+            "退屈"
+          ],
+          "correct": 3,
+          "explanation": "「boredom」は「退屈」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「borough」の意味として最も適切なものは？",
+          "choices": [
+            "裏切り",
+            "大胆さ",
+            "自治町村",
+            "花婿"
+          ],
+          "correct": 2,
+          "explanation": "「borough」は「自治町村」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boulevard」の意味として最も適切なものは？",
+          "choices": [
+            "旅団",
+            "醸造所",
+            "大通り",
+            "宇宙飛行士"
+          ],
+          "correct": 2,
+          "explanation": "「boulevard」は「大通り」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bounty」の意味として最も適切なものは？",
+          "choices": [
+            "家庭用電化製品",
+            "報酬",
+            "管理者",
+            "二足歩行動物"
+          ],
+          "correct": 1,
+          "explanation": "「bounty」は「報酬」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bouquet」の意味として最も適切なものは？",
+          "choices": [
+            "吹雪",
+            "花束",
+            "予約",
+            "天文学"
+          ],
+          "correct": 1,
+          "explanation": "「bouquet」は「花束」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bout」の意味として最も適切なものは？",
+          "choices": [
+            "絶壁",
+            "伝記",
+            "一勝負",
+            "大胆さ"
+          ],
+          "correct": 2,
+          "explanation": "「bout」は「一勝負」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bowel」の意味として最も適切なものは？",
+          "choices": [
+            "変更",
+            "炎",
+            "腸",
+            "利用可能性"
+          ],
+          "correct": 2,
+          "explanation": "「bowel」は「腸」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "名詞編3セット9",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 781~790",
+      "questions": [
+        {
+          "scenario": "「bowman」の意味として最も適切なものは？",
+          "choices": [
+            "包帯",
+            "旅団",
+            "醸造所",
+            "射手"
+          ],
+          "correct": 3,
+          "explanation": "「bowman」は「射手」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boyfriend」の意味として最も適切なものは？",
+          "choices": [
+            "腸",
+            "恋人",
+            "射手",
+            "監査"
+          ],
+          "correct": 1,
+          "explanation": "「boyfriend」は「恋人」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boyhood」の意味として最も適切なものは？",
+          "choices": [
+            "水ぶくれ",
+            "輝き",
+            "アドバイザー",
+            "少年時代"
+          ],
+          "correct": 3,
+          "explanation": "「boyhood」は「少年時代」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bracket」の意味として最も適切なものは？",
+          "choices": [
+            "役員会議室",
+            "達成",
+            "冊子",
+            "ブラケット・括弧"
+          ],
+          "correct": 3,
+          "explanation": "「bracket」は「ブラケット・括弧」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brainwash」の意味として最も適切なものは？",
+          "choices": [
+            "ブラウス",
+            "洗脳",
+            "出血",
+            "ブラケット・括弧"
+          ],
+          "correct": 1,
+          "explanation": "「brainwash」は「洗脳」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brandy」の意味として最も適切なものは？",
+          "choices": [
+            "ブランデー",
+            "ボンネット",
+            "至福",
+            "気圧計"
+          ],
+          "correct": 0,
+          "explanation": "「brandy」は「ブランデー」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bravery」の意味として最も適切なものは？",
+          "choices": [
+            "勇敢さ",
+            "配列・整列",
+            "腸",
+            "退屈"
+          ],
+          "correct": 0,
+          "explanation": "「bravery」は「勇敢さ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「breach」の意味として最も適切なものは？",
+          "choices": [
+            "同盟",
+            "違反",
+            "旅団",
+            "基盤"
+          ],
+          "correct": 1,
+          "explanation": "「breach」は「違反」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「breadth」の意味として最も適切なものは？",
+          "choices": [
+            "腸",
+            "幅",
+            "封鎖",
+            "家庭用電化製品"
+          ],
+          "correct": 1,
+          "explanation": "「breadth」は「幅」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「breakthrough」の意味として最も適切なものは？",
+          "choices": [
+            "炎",
+            "ブラケット・括弧",
+            "画期的な発見",
+            "航空機"
+          ],
+          "correct": 2,
+          "explanation": "「breakthrough」は「画期的な発見」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "名詞編3セット10",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の名詞 791~800",
+      "questions": [
+        {
+          "scenario": "「brewery」の意味として最も適切なものは？",
+          "choices": [
+            "封鎖",
+            "大通り",
+            "醸造所",
+            "絶壁"
+          ],
+          "correct": 2,
+          "explanation": "「brewery」は「醸造所」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bribe」の意味として最も適切なものは？",
+          "choices": [
+            "一勝負",
+            "吹雪",
+            "賄賂",
+            "祖先"
+          ],
+          "correct": 2,
+          "explanation": "「bribe」は「賄賂」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bribery」の意味として最も適切なものは？",
+          "choices": [
+            "裏切り",
+            "贈収賄",
+            "違反",
+            "記録保管所"
+          ],
+          "correct": 1,
+          "explanation": "「bribery」は「贈収賄」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bridegroom」の意味として最も適切なものは？",
+          "choices": [
+            "予備",
+            "設計図",
+            "花婿",
+            "動脈"
+          ],
+          "correct": 2,
+          "explanation": "「bridegroom」は「花婿」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bridle」の意味として最も適切なものは？",
+          "choices": [
+            "馬勒",
+            "輝き",
+            "二足歩行動物",
+            "予備"
+          ],
+          "correct": 0,
+          "explanation": "「bridle」は「馬勒」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「briefing」の意味として最も適切なものは？",
+          "choices": [
+            "抱負",
+            "大隊",
+            "説明会",
+            "射手"
+          ],
+          "correct": 2,
+          "explanation": "「briefing」は「説明会」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brigade」の意味として最も適切なものは？",
+          "choices": [
+            "旅団",
+            "分析家",
+            "漂白剤",
+            "縁"
+          ],
+          "correct": 0,
+          "explanation": "「brigade」は「旅団」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brightness」の意味として最も適切なものは？",
+          "choices": [
+            "輝き",
+            "恋人",
+            "分析家",
+            "地下室"
+          ],
+          "correct": 0,
+          "explanation": "「brightness」は「輝き」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brim」の意味として最も適切なものは？",
+          "choices": [
+            "天文学",
+            "縁",
+            "配列・整列",
+            "ボディーガード"
+          ],
+          "correct": 1,
+          "explanation": "「brim」は「縁」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brine」の意味として最も適切なものは？",
+          "choices": [
+            "雪崩",
+            "祖先",
+            "吹雪",
+            "塩水"
+          ],
+          "correct": 3,
+          "explanation": "「brine」は「塩水」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "名詞編・抽象概念パート1",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（1〜10）",
+      "questions": [
+        {
+          "scenario": "「abandonment」の意味として最も適切なものは？",
+          "choices": [
+            "義務",
+            "放棄",
+            "権利",
+            "要求"
+          ],
+          "correct": 1,
+          "explanation": "「abandonment」は「放棄」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ability」の意味として最も適切なものは？",
+          "choices": [
+            "能力",
+            "病気",
+            "情報",
+            "偏見"
+          ],
+          "correct": 0,
+          "explanation": "「ability」は「能力」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「absence」の意味として最も適切なものは？",
+          "choices": [
+            "戦争",
+            "発見",
+            "不在",
+            "維持"
+          ],
+          "correct": 2,
+          "explanation": "「absence」は「不在」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「absolute」の意味として最も適切なものは？",
+          "choices": [
+            "絶対の",
+            "命令",
+            "社会",
+            "能力"
+          ],
+          "correct": 0,
+          "explanation": "「absolute」は「絶対の」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abundance」の意味として最も適切なものは？",
+          "choices": [
+            "誤解",
+            "豊富",
+            "平等",
+            "戦術"
+          ],
+          "correct": 1,
+          "explanation": "「abundance」は「豊富」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acceptance」の意味として最も適切なものは？",
+          "choices": [
+            "受け入れ",
+            "技術",
+            "戦略",
+            "組織"
+          ],
+          "correct": 0,
+          "explanation": "「acceptance」は「受け入れ」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accommodation」の意味として最も適切なものは？",
+          "choices": [
+            "治療",
+            "宿泊施設",
+            "方法論",
+            "心理学"
+          ],
+          "correct": 1,
+          "explanation": "「accommodation」は「宿泊施設」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accomplishment」の意味として最も適切なものは？",
+          "choices": [
+            "進化",
+            "評価",
+            "達成",
+            "宗教"
+          ],
+          "correct": 2,
+          "explanation": "「accomplishment」は「達成」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accordance」の意味として最も適切なものは？",
+          "choices": [
+            "一致",
+            "批判",
+            "責任",
+            "真実"
+          ],
+          "correct": 0,
+          "explanation": "「accordance」は「一致」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accuracy」の意味として最も適切なものは？",
+          "choices": [
+            "維持",
+            "正確さ",
+            "平等",
+            "証明"
+          ],
+          "correct": 1,
+          "explanation": "「accuracy」は「正確さ」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編・抽象概念パート2",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（11〜20）",
+      "questions": [
+        {
+          "scenario": "「achievement」の意味として最も適切なものは？",
+          "choices": [
+            "環境",
+            "責任",
+            "才能",
+            "業績"
+          ],
+          "correct": 3,
+          "explanation": "「achievement」は「業績」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acknowledgment」の意味として最も適切なものは？",
+          "choices": [
+            "分析",
+            "承認",
+            "事実",
+            "可能性"
+          ],
+          "correct": 1,
+          "explanation": "「acknowledgment」は「承認」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acquisition」の意味として最も適切なものは？",
+          "choices": [
+            "発明",
+            "獲得",
+            "平和",
+            "規則"
+          ],
+          "correct": 1,
+          "explanation": "「acquisition」は「獲得」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「act」の意味として最も適切なものは？",
+          "choices": [
+            "発展",
+            "禁止",
+            "行為",
+            "証明"
+          ],
+          "correct": 2,
+          "explanation": "「act」は「行為」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「action」の意味として最も適切なものは？",
+          "choices": [
+            "証拠",
+            "行動",
+            "組織",
+            "改善"
+          ],
+          "correct": 1,
+          "explanation": "「action」は「行動」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「addition」の意味として最も適切なものは？",
+          "choices": [
+            "真実",
+            "挑戦",
+            "追加",
+            "文化"
+          ],
+          "correct": 2,
+          "explanation": "「addition」は「追加」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adjustment」の意味として最も適切なものは？",
+          "choices": [
+            "法律",
+            "変化",
+            "調整",
+            "誤解"
+          ],
+          "correct": 2,
+          "explanation": "「adjustment」は「調整」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「administration」の意味として最も適切なものは？",
+          "choices": [
+            "管理",
+            "心理学",
+            "価値",
+            "制度"
+          ],
+          "correct": 0,
+          "explanation": "「administration」は「管理」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「admiration」の意味として最も適切なものは？",
+          "choices": [
+            "賞賛",
+            "誤解",
+            "戦争",
+            "許可"
+          ],
+          "correct": 0,
+          "explanation": "「admiration」は「賞賛」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「admission」の意味として最も適切なものは？",
+          "choices": [
+            "戦争",
+            "維持",
+            "入場",
+            "健康"
+          ],
+          "correct": 2,
+          "explanation": "「admission」は「入場」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編・抽象概念パート3",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（21〜30）",
+      "questions": [
+        {
+          "scenario": "「adoption」の意味として最も適切なものは？",
+          "choices": [
+            "採用",
+            "方法論",
+            "平和",
+            "文化"
+          ],
+          "correct": 0,
+          "explanation": "「adoption」は「採用」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advantage」の意味として最も適切なものは？",
+          "choices": [
+            "影響",
+            "証拠",
+            "有利",
+            "技術"
+          ],
+          "correct": 2,
+          "explanation": "「advantage」は「有利」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「affair」の意味として最も適切なものは？",
+          "choices": [
+            "増加",
+            "減少",
+            "維持",
+            "事柄"
+          ],
+          "correct": 3,
+          "explanation": "「affair」は「事柄」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「affection」の意味として最も適切なものは？",
+          "choices": [
+            "発明",
+            "真実",
+            "戦争",
+            "愛情"
+          ],
+          "correct": 3,
+          "explanation": "「affection」は「愛情」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「age」の意味として最も適切なものは？",
+          "choices": [
+            "可能性",
+            "哲学",
+            "研究",
+            "年齢"
+          ],
+          "correct": 3,
+          "explanation": "「age」は「年齢」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「agriculture」の意味として最も適切なものは？",
+          "choices": [
+            "失敗",
+            "技術",
+            "哲学",
+            "農業"
+          ],
+          "correct": 3,
+          "explanation": "「agriculture」は「農業」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aim」の意味として最も適切なものは？",
+          "choices": [
+            "目的",
+            "文化",
+            "平和",
+            "技術"
+          ],
+          "correct": 0,
+          "explanation": "「aim」は「目的」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「allowance」の意味として最も適切なものは？",
+          "choices": [
+            "環境",
+            "提案",
+            "小遣い",
+            "計画"
+          ],
+          "correct": 2,
+          "explanation": "「allowance」は「小遣い」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alternative」の意味として最も適切なものは？",
+          "choices": [
+            "理論",
+            "代わりの",
+            "制度",
+            "可能性"
+          ],
+          "correct": 1,
+          "explanation": "「alternative」は「代わりの」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambition」の意味として最も適切なものは？",
+          "choices": [
+            "責任",
+            "証明",
+            "戦術",
+            "野心"
+          ],
+          "correct": 3,
+          "explanation": "「ambition」は「野心」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編・抽象概念パート4",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（31〜40）",
+      "questions": [
+        {
+          "scenario": "「amusement」の意味として最も適切なものは？",
+          "choices": [
+            "努力",
+            "娯楽",
+            "理論",
+            "進化"
+          ],
+          "correct": 1,
+          "explanation": "「amusement」は「娯楽」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「analysis」の意味として最も適切なものは？",
+          "choices": [
+            "偏見",
+            "心理学",
+            "政治",
+            "分析"
+          ],
+          "correct": 3,
+          "explanation": "「analysis」は「分析」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anger」の意味として最も適切なものは？",
+          "choices": [
+            "経験",
+            "責任",
+            "怒り",
+            "要求"
+          ],
+          "correct": 2,
+          "explanation": "「anger」は「怒り」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「announcement」の意味として最も適切なものは？",
+          "choices": [
+            "管理",
+            "戦術",
+            "法律",
+            "発表"
+          ],
+          "correct": 3,
+          "explanation": "「announcement」は「発表」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appreciation」の意味として最も適切なものは？",
+          "choices": [
+            "危険",
+            "制限",
+            "感謝",
+            "責任"
+          ],
+          "correct": 2,
+          "explanation": "「appreciation」は「感謝」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「approach」の意味として最も適切なものは？",
+          "choices": [
+            "予防",
+            "接近",
+            "成功",
+            "真実"
+          ],
+          "correct": 1,
+          "explanation": "「approach」は「接近」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「approval」の意味として最も適切なものは？",
+          "choices": [
+            "承認",
+            "病気",
+            "環境",
+            "維持"
+          ],
+          "correct": 0,
+          "explanation": "「approval」は「承認」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arrangement」の意味として最も適切なものは？",
+          "choices": [
+            "手配",
+            "制度",
+            "調査",
+            "証拠"
+          ],
+          "correct": 0,
+          "explanation": "「arrangement」は「手配」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arrival」の意味として最も適切なものは？",
+          "choices": [
+            "責任",
+            "到着",
+            "法律",
+            "教育"
+          ],
+          "correct": 1,
+          "explanation": "「arrival」は「到着」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assessment」の意味として最も適切なものは？",
+          "choices": [
+            "役割",
+            "調査",
+            "失敗",
+            "評価"
+          ],
+          "correct": 3,
+          "explanation": "「assessment」は「評価」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編・抽象概念パート5",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（41〜50）",
+      "questions": [
+        {
+          "scenario": "「assistance」の意味として最も適切なものは？",
+          "choices": [
+            "分析",
+            "命令",
+            "法律",
+            "援助"
+          ],
+          "correct": 3,
+          "explanation": "「assistance」は「援助」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assistant」の意味として最も適切なものは？",
+          "choices": [
+            "重要性",
+            "助手",
+            "発明",
+            "偏見"
+          ],
+          "correct": 1,
+          "explanation": "「assistant」は「助手」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assumption」の意味として最も適切なものは？",
+          "choices": [
+            "組織",
+            "成功",
+            "仮定",
+            "禁止"
+          ],
+          "correct": 2,
+          "explanation": "「assumption」は「仮定」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assurance」の意味として最も適切なものは？",
+          "choices": [
+            "保証",
+            "意味",
+            "誤解",
+            "知識"
+          ],
+          "correct": 0,
+          "explanation": "「assurance」は「保証」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attachment」の意味として最も適切なものは？",
+          "choices": [
+            "危険",
+            "添付",
+            "意味",
+            "制限"
+          ],
+          "correct": 1,
+          "explanation": "「attachment」は「添付」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attention」の意味として最も適切なものは？",
+          "choices": [
+            "理由",
+            "注意",
+            "成功",
+            "心理学"
+          ],
+          "correct": 1,
+          "explanation": "「attention」は「注意」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attitude」の意味として最も適切なものは？",
+          "choices": [
+            "差別",
+            "態度",
+            "文化",
+            "目標"
+          ],
+          "correct": 1,
+          "explanation": "「attitude」は「態度」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attraction」の意味として最も適切なものは？",
+          "choices": [
+            "自由",
+            "魅力",
+            "改善",
+            "管理"
+          ],
+          "correct": 1,
+          "explanation": "「attraction」は「魅力」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「basis」の意味として最も適切なものは？",
+          "choices": [
+            "教育",
+            "病気",
+            "責任",
+            "基準"
+          ],
+          "correct": 3,
+          "explanation": "「basis」は「基準」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「battle」の意味として最も適切なものは？",
+          "choices": [
+            "才能",
+            "誤解",
+            "禁止",
+            "戦闘"
+          ],
+          "correct": 3,
+          "explanation": "「battle」は「戦闘」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編・抽象概念パート6",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（51〜60）",
+      "questions": [
+        {
+          "scenario": "「beginning」の意味として最も適切なものは？",
+          "choices": [
+            "始まり",
+            "制度",
+            "嘘",
+            "治療"
+          ],
+          "correct": 0,
+          "explanation": "「beginning」は「始まり」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bias」の意味として最も適切なものは？",
+          "choices": [
+            "評価",
+            "文化",
+            "偏見",
+            "保護"
+          ],
+          "correct": 2,
+          "explanation": "「bias」は「偏見」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blessing」の意味として最も適切なものは？",
+          "choices": [
+            "効果",
+            "管理",
+            "祝福",
+            "保護"
+          ],
+          "correct": 2,
+          "explanation": "「blessing」は「祝福」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blunder」の意味として最も適切なものは？",
+          "choices": [
+            "大失敗",
+            "増加",
+            "保護",
+            "知識"
+          ],
+          "correct": 0,
+          "explanation": "「blunder」は「大失敗」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bulk」の意味として最も適切なものは？",
+          "choices": [
+            "理由",
+            "才能",
+            "大部分",
+            "問題"
+          ],
+          "correct": 2,
+          "explanation": "「bulk」は「大部分」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「burden」の意味として最も適切なものは？",
+          "choices": [
+            "禁止",
+            "変化",
+            "歴史",
+            "負担"
+          ],
+          "correct": 3,
+          "explanation": "「burden」は「負担」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bureaucracy」の意味として最も適切なものは？",
+          "choices": [
+            "評価",
+            "目標",
+            "可能性",
+            "官僚制度"
+          ],
+          "correct": 3,
+          "explanation": "「bureaucracy」は「官僚制度」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「burn」の意味として最も適切なものは？",
+          "choices": [
+            "制度",
+            "病気",
+            "証明",
+            "火傷"
+          ],
+          "correct": 3,
+          "explanation": "「burn」は「火傷」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「calculation」の意味として最も適切なものは？",
+          "choices": [
+            "心理学",
+            "計算",
+            "権利",
+            "安全"
+          ],
+          "correct": 1,
+          "explanation": "「calculation」は「計算」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「case」の意味として最も適切なものは？",
+          "choices": [
+            "効果",
+            "宗教",
+            "自由",
+            "場合"
+          ],
+          "correct": 3,
+          "explanation": "「case」は「場合」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "名詞編・抽象概念パート7",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（61〜70）",
+      "questions": [
+        {
+          "scenario": "「category」の意味として最も適切なものは？",
+          "choices": [
+            "必要性",
+            "分析",
+            "範疇",
+            "減少"
+          ],
+          "correct": 2,
+          "explanation": "「category」は「範疇」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cause」の意味として最も適切なものは？",
+          "choices": [
+            "争い",
+            "環境",
+            "予防",
+            "原因"
+          ],
+          "correct": 3,
+          "explanation": "「cause」は「原因」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「center」の意味として最も適切なものは？",
+          "choices": [
+            "予防",
+            "理由",
+            "危険",
+            "中心"
+          ],
+          "correct": 3,
+          "explanation": "「center」は「中心」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chaos」の意味として最も適切なものは？",
+          "choices": [
+            "技術",
+            "証拠",
+            "保護",
+            "混乱"
+          ],
+          "correct": 3,
+          "explanation": "「chaos」は「混乱」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「characteristic」の意味として最も適切なものは？",
+          "choices": [
+            "能力",
+            "特有の",
+            "変化",
+            "情報"
+          ],
+          "correct": 1,
+          "explanation": "「characteristic」は「特有の」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charge」の意味として最も適切なものは？",
+          "choices": [
+            "減少",
+            "健康",
+            "料金",
+            "予防"
+          ],
+          "correct": 2,
+          "explanation": "「charge」は「料金」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「choice」の意味として最も適切なものは？",
+          "choices": [
+            "減少",
+            "証明",
+            "真実",
+            "選択"
+          ],
+          "correct": 3,
+          "explanation": "「choice」は「選択」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circulation」の意味として最も適切なものは？",
+          "choices": [
+            "理由",
+            "安全",
+            "循環",
+            "政治"
+          ],
+          "correct": 2,
+          "explanation": "「circulation」は「循環」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circumstance」の意味として最も適切なものは？",
+          "choices": [
+            "予防",
+            "嘘",
+            "状況",
+            "証明"
+          ],
+          "correct": 2,
+          "explanation": "「circumstance」は「状況」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「combination」の意味として最も適切なものは？",
+          "choices": [
+            "価値",
+            "差別",
+            "予防",
+            "組み合わせ"
+          ],
+          "correct": 3,
+          "explanation": "「combination」は「組み合わせ」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "名詞編・抽象概念パート8",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（71〜80）",
+      "questions": [
+        {
+          "scenario": "「comfort」の意味として最も適切なものは？",
+          "choices": [
+            "責任",
+            "経験",
+            "危険",
+            "快適さ"
+          ],
+          "correct": 3,
+          "explanation": "「comfort」は「快適さ」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commerce」の意味として最も適切なものは？",
+          "choices": [
+            "嘘",
+            "法律",
+            "知識",
+            "商業"
+          ],
+          "correct": 3,
+          "explanation": "「commerce」は「商業」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commission」の意味として最も適切なものは？",
+          "choices": [
+            "委員会",
+            "計画",
+            "義務",
+            "誤解"
+          ],
+          "correct": 0,
+          "explanation": "「commission」は「委員会」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「committee」の意味として最も適切なものは？",
+          "choices": [
+            "委員会",
+            "教育",
+            "宗教",
+            "社会"
+          ],
+          "correct": 0,
+          "explanation": "「committee」は「委員会」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commodity」の意味として最も適切なものは？",
+          "choices": [
+            "維持",
+            "商品",
+            "提案",
+            "目標"
+          ],
+          "correct": 1,
+          "explanation": "「commodity」は「商品」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「companion」の意味として最も適切なものは？",
+          "choices": [
+            "仲間",
+            "規則",
+            "価値",
+            "経済"
+          ],
+          "correct": 0,
+          "explanation": "「companion」は「仲間」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comparison」の意味として最も適切なものは？",
+          "choices": [
+            "比較",
+            "能力",
+            "理論",
+            "改善"
+          ],
+          "correct": 0,
+          "explanation": "「comparison」は「比較」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compensation」の意味として最も適切なものは？",
+          "choices": [
+            "補償",
+            "方法",
+            "健康",
+            "解決"
+          ],
+          "correct": 0,
+          "explanation": "「compensation」は「補償」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「competition」の意味として最も適切なものは？",
+          "choices": [
+            "哲学",
+            "組織",
+            "競争",
+            "制度"
+          ],
+          "correct": 2,
+          "explanation": "「competition」は「競争」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complaint」の意味として最も適切なものは？",
+          "choices": [
+            "能力",
+            "教育",
+            "不平",
+            "権利"
+          ],
+          "correct": 2,
+          "explanation": "「complaint」は「不平」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "名詞編・抽象概念パート9",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（81〜90）",
+      "questions": [
+        {
+          "scenario": "「completion」の意味として最も適切なものは？",
+          "choices": [
+            "経験",
+            "完成",
+            "維持",
+            "制限"
+          ],
+          "correct": 1,
+          "explanation": "「completion」は「完成」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complexity」の意味として最も適切なものは？",
+          "choices": [
+            "誤解",
+            "組織",
+            "挑戦",
+            "複雑さ"
+          ],
+          "correct": 3,
+          "explanation": "「complexity」は「複雑さ」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「component」の意味として最も適切なものは？",
+          "choices": [
+            "組織",
+            "理論",
+            "構成要素",
+            "権利"
+          ],
+          "correct": 2,
+          "explanation": "「component」は「構成要素」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「composition」の意味として最も適切なものは？",
+          "choices": [
+            "構成",
+            "役割",
+            "仮説",
+            "変化"
+          ],
+          "correct": 0,
+          "explanation": "「composition」は「構成」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compound」の意味として最も適切なものは？",
+          "choices": [
+            "化合物",
+            "減少",
+            "進化",
+            "心理学"
+          ],
+          "correct": 0,
+          "explanation": "「compound」は「化合物」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compromise」の意味として最も適切なものは？",
+          "choices": [
+            "予防",
+            "可能性",
+            "教育",
+            "妥協"
+          ],
+          "correct": 3,
+          "explanation": "「compromise」は「妥協」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concept」の意味として最も適切なものは？",
+          "choices": [
+            "影響",
+            "可能性",
+            "概念",
+            "哲学"
+          ],
+          "correct": 2,
+          "explanation": "「concept」は「概念」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concern」の意味として最も適切なものは？",
+          "choices": [
+            "懸念",
+            "戦術",
+            "情報",
+            "悪化"
+          ],
+          "correct": 0,
+          "explanation": "「concern」は「懸念」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conclusion」の意味として最も適切なものは？",
+          "choices": [
+            "方法論",
+            "制度",
+            "結論",
+            "増加"
+          ],
+          "correct": 2,
+          "explanation": "「conclusion」は「結論」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「condition」の意味として最も適切なものは？",
+          "choices": [
+            "戦術",
+            "条件",
+            "提案",
+            "平等"
+          ],
+          "correct": 1,
+          "explanation": "「condition」は「条件」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "名詞編・抽象概念パート10",
+      "type": "vocabulary",
+      "emoji": "🧩",
+      "subtitle": "英検準2級の重要名詞（91〜100）",
+      "questions": [
+        {
+          "scenario": "「conference」の意味として最も適切なものは？",
+          "choices": [
+            "会議",
+            "価値",
+            "要求",
+            "争い"
+          ],
+          "correct": 0,
+          "explanation": "「conference」は「会議」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confidence」の意味として最も適切なものは？",
+          "choices": [
+            "研究",
+            "自信",
+            "治療",
+            "影響"
+          ],
+          "correct": 1,
+          "explanation": "「confidence」は「自信」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confusion」の意味として最も適切なものは？",
+          "choices": [
+            "平和",
+            "理由",
+            "混乱",
+            "法律"
+          ],
+          "correct": 2,
+          "explanation": "「confusion」は「混乱」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conscience」の意味として最も適切なものは？",
+          "choices": [
+            "良心",
+            "仮説",
+            "分析",
+            "平等"
+          ],
+          "correct": 0,
+          "explanation": "「conscience」は「良心」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consciousness」の意味として最も適切なものは？",
+          "choices": [
+            "制度",
+            "理論",
+            "責任",
+            "意識"
+          ],
+          "correct": 3,
+          "explanation": "「consciousness」は「意識」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consequence」の意味として最も適切なものは？",
+          "choices": [
+            "争い",
+            "提案",
+            "結果",
+            "影響"
+          ],
+          "correct": 2,
+          "explanation": "「consequence」は「結果」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conservation」の意味として最も適切なものは？",
+          "choices": [
+            "価値",
+            "発見",
+            "歴史",
+            "保護"
+          ],
+          "correct": 3,
+          "explanation": "「conservation」は「保護」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consideration」の意味として最も適切なものは？",
+          "choices": [
+            "効果",
+            "平和",
+            "考慮",
+            "病気"
+          ],
+          "correct": 2,
+          "explanation": "「consideration」は「考慮」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consistency」の意味として最も適切なものは？",
+          "choices": [
+            "争い",
+            "一貫性",
+            "進化",
+            "自由"
+          ],
+          "correct": 1,
+          "explanation": "「consistency」は「一貫性」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constitution」の意味として最も適切なものは？",
+          "choices": [
+            "制度",
+            "憲法",
+            "変化",
+            "維持"
+          ],
+          "correct": 1,
+          "explanation": "「constitution」は「憲法」という意味の名詞（または関連語）です。英検準2級の頻出単語です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

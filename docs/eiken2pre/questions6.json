@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編2セット1",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 501~510",
+      "questions": [
+        {
+          "scenario": "「accumulate」の意味として最も適切なものは？",
+          "choices": [
+            "証明する・実演する",
+            "蓄積する",
+            "だます",
+            "評価する・査定する"
+          ],
+          "correct": 1,
+          "explanation": "「accumulate」は「蓄積する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accustom」の意味として最も適切なものは？",
+          "choices": [
+            "取り消す",
+            "補償する",
+            "信頼して打ち明ける",
+            "慣れさせる"
+          ],
+          "correct": 3,
+          "explanation": "「accustom」は「慣れさせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acknowledge」の意味として最も適切なものは？",
+          "choices": [
+            "証明する・実演する",
+            "認める・謝意を表す",
+            "意気消沈させる",
+            "詰まらせる"
+          ],
+          "correct": 1,
+          "explanation": "「acknowledge」は「認める・謝意を表す」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adore」の意味として最も適切なものは？",
+          "choices": [
+            "憧れる・敬愛する",
+            "調整する",
+            "取り消す",
+            "清潔にする"
+          ],
+          "correct": 0,
+          "explanation": "「adore」は「憧れる・敬愛する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advertise」の意味として最も適切なものは？",
+          "choices": [
+            "意気消沈させる",
+            "広告する",
+            "強いる・抑制する",
+            "待つ"
+          ],
+          "correct": 1,
+          "explanation": "「advertise」は「広告する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advocate」の意味として最も適切なものは？",
+          "choices": [
+            "祝う",
+            "出血する",
+            "信頼して打ち明ける",
+            "主張する・擁護する"
+          ],
+          "correct": 3,
+          "explanation": "「advocate」は「主張する・擁護する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amaze」の意味として最も適切なものは？",
+          "choices": [
+            "委託する",
+            "驚かせる",
+            "意気消沈させる",
+            "統合する・強化する"
+          ],
+          "correct": 1,
+          "explanation": "「amaze」は「驚かせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amend」の意味として最も適切なものは？",
+          "choices": [
+            "改正する",
+            "刺激する・目覚めさせる",
+            "相談する・授与する",
+            "補償する"
+          ],
+          "correct": 0,
+          "explanation": "「amend」は「改正する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「applaud」の意味として最も適切なものは？",
+          "choices": [
+            "拍手喝采する",
+            "混ぜ合わせる",
+            "会話する",
+            "競う・主張する"
+          ],
+          "correct": 0,
+          "explanation": "「applaud」は「拍手喝采する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apply」の意味として最も適切なものは？",
+          "choices": [
+            "適用する・申し込む",
+            "出血する",
+            "調整する",
+            "定義する"
+          ],
+          "correct": 0,
+          "explanation": "「apply」は「適用する・申し込む」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編2セット2",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 511~520",
+      "questions": [
+        {
+          "scenario": "「argue」の意味として最も適切なものは？",
+          "choices": [
+            "議論する・主張する",
+            "ぶつかる",
+            "適用する・申し込む",
+            "握りしめる"
+          ],
+          "correct": 0,
+          "explanation": "「argue」は「議論する・主張する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arise」の意味として最も適切なものは？",
+          "choices": [
+            "共謀する",
+            "強く望む",
+            "主張する",
+            "生じる"
+          ],
+          "correct": 3,
+          "explanation": "「arise」は「生じる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arouse」の意味として最も適切なものは？",
+          "choices": [
+            "刺激する・目覚めさせる",
+            "拍手喝采する",
+            "引き出す・由来する",
+            "意気消沈させる"
+          ],
+          "correct": 0,
+          "explanation": "「arouse」は「刺激する・目覚めさせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ascend」の意味として最も適切なものは？",
+          "choices": [
+            "登る",
+            "宣言する",
+            "非難する",
+            "出血する"
+          ],
+          "correct": 0,
+          "explanation": "「ascend」は「登る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aspire」の意味として最も適切なものは？",
+          "choices": [
+            "集中する・交わる",
+            "検閲する",
+            "熱望する",
+            "心に抱く・大切にする"
+          ],
+          "correct": 2,
+          "explanation": "「aspire」は「熱望する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assert」の意味として最も適切なものは？",
+          "choices": [
+            "主張する",
+            "同意する",
+            "強いる・抑制する",
+            "衝突する"
+          ],
+          "correct": 0,
+          "explanation": "「assert」は「主張する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assess」の意味として最も適切なものは？",
+          "choices": [
+            "達成する",
+            "評価する・査定する",
+            "出血する",
+            "詰まらせる"
+          ],
+          "correct": 1,
+          "explanation": "「assess」は「評価する・査定する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assign」の意味として最も適切なものは？",
+          "choices": [
+            "割り当てる",
+            "憧れる・敬愛する",
+            "検閲する",
+            "統合する・強化する"
+          ],
+          "correct": 0,
+          "explanation": "「assign」は「割り当てる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「astonish」の意味として最も適切なものは？",
+          "choices": [
+            "証明する・実演する",
+            "討論する",
+            "相談する・授与する",
+            "驚かせる"
+          ],
+          "correct": 3,
+          "explanation": "「astonish」は「驚かせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attain」の意味として最も適切なものは？",
+          "choices": [
+            "達成する",
+            "調整する",
+            "預ける・堆積させる",
+            "開始する"
+          ],
+          "correct": 0,
+          "explanation": "「attain」は「達成する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "動詞編2セット3",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 521~530",
+      "questions": [
+        {
+          "scenario": "「await」の意味として最も適切なものは？",
+          "choices": [
+            "共謀する",
+            "証明する",
+            "待つ",
+            "強いる・抑制する"
+          ],
+          "correct": 2,
+          "explanation": "「await」は「待つ」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「belong」の意味として最も適切なものは？",
+          "choices": [
+            "熟考する",
+            "登る",
+            "属する",
+            "衝突する"
+          ],
+          "correct": 2,
+          "explanation": "「belong」は「属する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「betray」の意味として最も適切なものは？",
+          "choices": [
+            "契約する・縮む",
+            "共謀する",
+            "裏切る",
+            "預ける・堆積させる"
+          ],
+          "correct": 2,
+          "explanation": "「betray」は「裏切る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bleed」の意味として最も適切なものは？",
+          "choices": [
+            "驚かせる",
+            "出血する",
+            "相談する・授与する",
+            "清潔にする"
+          ],
+          "correct": 1,
+          "explanation": "「bleed」は「出血する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blend」の意味として最も適切なものは？",
+          "choices": [
+            "ブンブンうなる",
+            "混ぜ合わせる",
+            "高める・促進する",
+            "執着する・しがみつく"
+          ],
+          "correct": 1,
+          "explanation": "「blend」は「混ぜ合わせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boost」の意味として最も適切なものは？",
+          "choices": [
+            "編集する",
+            "達成する",
+            "高める・促進する",
+            "褒める"
+          ],
+          "correct": 2,
+          "explanation": "「boost」は「高める・促進する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bruise」の意味として最も適切なものは？",
+          "choices": [
+            "生じる",
+            "打撲傷を負わせる",
+            "預ける・堆積させる",
+            "主張する"
+          ],
+          "correct": 1,
+          "explanation": "「bruise」は「打撲傷を負わせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bump」の意味として最も適切なものは？",
+          "choices": [
+            "だます",
+            "窒息させる",
+            "ぶつかる",
+            "属する"
+          ],
+          "correct": 2,
+          "explanation": "「bump」は「ぶつかる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bury」の意味として最も適切なものは？",
+          "choices": [
+            "埋める",
+            "競う・主張する",
+            "主張する",
+            "祝う"
+          ],
+          "correct": 0,
+          "explanation": "「bury」は「埋める」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「buzz」の意味として最も適切なものは？",
+          "choices": [
+            "ブンブンうなる",
+            "絶望する",
+            "憧れる・敬愛する",
+            "刺激する・目覚めさせる"
+          ],
+          "correct": 0,
+          "explanation": "「buzz」は「ブンブンうなる」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "動詞編2セット4",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 531~540",
+      "questions": [
+        {
+          "scenario": "「cancel」の意味として最も適切なものは？",
+          "choices": [
+            "計算する",
+            "取り消す",
+            "有罪と宣告する",
+            "握りしめる"
+          ],
+          "correct": 1,
+          "explanation": "「cancel」は「取り消す」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carve」の意味として最も適切なものは？",
+          "choices": [
+            "栽培する・養う",
+            "属する",
+            "議論する・主張する",
+            "彫る"
+          ],
+          "correct": 3,
+          "explanation": "「carve」は「彫る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「censor」の意味として最も適切なものは？",
+          "choices": [
+            "分類する",
+            "編集する",
+            "取り消す",
+            "検閲する"
+          ],
+          "correct": 3,
+          "explanation": "「censor」は「検閲する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「certify」の意味として最も適切なものは？",
+          "choices": [
+            "委託する",
+            "衝突する",
+            "叱る",
+            "証明する"
+          ],
+          "correct": 3,
+          "explanation": "「certify」は「証明する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「characterize」の意味として最も適切なものは？",
+          "choices": [
+            "統合する・強化する",
+            "特徴づける",
+            "文明化する",
+            "集中する・交わる"
+          ],
+          "correct": 1,
+          "explanation": "「characterize」は「特徴づける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cherish」の意味として最も適切なものは？",
+          "choices": [
+            "集中する",
+            "割り当てる",
+            "心に抱く・大切にする",
+            "驚かせる"
+          ],
+          "correct": 2,
+          "explanation": "「cherish」は「心に抱く・大切にする」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chide」の意味として最も適切なものは？",
+          "choices": [
+            "開始する",
+            "叱る",
+            "待つ",
+            "祝う"
+          ],
+          "correct": 1,
+          "explanation": "「chide」は「叱る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chime」の意味として最も適切なものは？",
+          "choices": [
+            "鐘を鳴らす",
+            "衰退する・辞退する",
+            "主張する",
+            "会話する"
+          ],
+          "correct": 0,
+          "explanation": "「chime」は「鐘を鳴らす」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「choke」の意味として最も適切なものは？",
+          "choices": [
+            "集まる",
+            "意気消沈させる",
+            "熱望する",
+            "窒息させる"
+          ],
+          "correct": 3,
+          "explanation": "「choke」は「窒息させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cite」の意味として最も適切なものは？",
+          "choices": [
+            "鐘を鳴らす",
+            "同意する",
+            "契約する・縮む",
+            "引用する"
+          ],
+          "correct": 3,
+          "explanation": "「cite」は「引用する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "動詞編2セット5",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 541~550",
+      "questions": [
+        {
+          "scenario": "「civilize」の意味として最も適切なものは？",
+          "choices": [
+            "分類する",
+            "文明化する",
+            "集中する",
+            "取り消す"
+          ],
+          "correct": 1,
+          "explanation": "「civilize」は「文明化する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「claim」の意味として最も適切なものは？",
+          "choices": [
+            "主張する",
+            "議論する・主張する",
+            "刺激する・目覚めさせる",
+            "彫る"
+          ],
+          "correct": 0,
+          "explanation": "「claim」は「主張する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clasp」の意味として最も適切なものは？",
+          "choices": [
+            "蓄積する",
+            "握りしめる",
+            "宣言する",
+            "ぶつかる"
+          ],
+          "correct": 1,
+          "explanation": "「clasp」は「握りしめる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「classify」の意味として最も適切なものは？",
+          "choices": [
+            "出血する",
+            "委託する",
+            "熱望する",
+            "分類する"
+          ],
+          "correct": 3,
+          "explanation": "「classify」は「分類する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cleanse」の意味として最も適切なものは？",
+          "choices": [
+            "慰める",
+            "清潔にする",
+            "編集する",
+            "腐敗する"
+          ],
+          "correct": 1,
+          "explanation": "「cleanse」は「清潔にする」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cling」の意味として最も適切なものは？",
+          "choices": [
+            "検閲する",
+            "評価する・査定する",
+            "執着する・しがみつく",
+            "集まる"
+          ],
+          "correct": 2,
+          "explanation": "「cling」は「執着する・しがみつく」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clog」の意味として最も適切なものは？",
+          "choices": [
+            "詰まらせる",
+            "集まる",
+            "窒息させる",
+            "信頼して打ち明ける"
+          ],
+          "correct": 0,
+          "explanation": "「clog」は「詰まらせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collide」の意味として最も適切なものは？",
+          "choices": [
+            "彫る",
+            "相談する・授与する",
+            "評価する・査定する",
+            "衝突する"
+          ],
+          "correct": 3,
+          "explanation": "「collide」は「衝突する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commemorate」の意味として最も適切なものは？",
+          "choices": [
+            "計算する",
+            "記念する",
+            "競争する",
+            "出血する"
+          ],
+          "correct": 1,
+          "explanation": "「commemorate」は「記念する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commence」の意味として最も適切なものは？",
+          "choices": [
+            "開始する",
+            "清潔にする",
+            "含む",
+            "競う・主張する"
+          ],
+          "correct": 0,
+          "explanation": "「commence」は「開始する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "動詞編2セット6",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 551~560",
+      "questions": [
+        {
+          "scenario": "「commend」の意味として最も適切なものは？",
+          "choices": [
+            "通勤する",
+            "詰まらせる",
+            "ブンブンうなる",
+            "褒める"
+          ],
+          "correct": 3,
+          "explanation": "「commend」は「褒める」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commute」の意味として最も適切なものは？",
+          "choices": [
+            "証明する・実演する",
+            "高める・促進する",
+            "汚染する",
+            "通勤する"
+          ],
+          "correct": 3,
+          "explanation": "「commute」は「通勤する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compensate」の意味として最も適切なものは？",
+          "choices": [
+            "補償する",
+            "検閲する",
+            "裏切る",
+            "強く望む"
+          ],
+          "correct": 0,
+          "explanation": "「compensate」は「補償する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compete」の意味として最も適切なものは？",
+          "choices": [
+            "驚かせる",
+            "文明化する",
+            "預ける・堆積させる",
+            "競争する"
+          ],
+          "correct": 3,
+          "explanation": "「compete」は「競争する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compile」の意味として最も適切なものは？",
+          "choices": [
+            "編集する",
+            "認める・謝意を表す",
+            "鐘を鳴らす",
+            "引用する"
+          ],
+          "correct": 0,
+          "explanation": "「compile」は「編集する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complicate」の意味として最も適切なものは？",
+          "choices": [
+            "複雑にする",
+            "裏切る",
+            "熟考する",
+            "減少する"
+          ],
+          "correct": 0,
+          "explanation": "「complicate」は「複雑にする」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compliment」の意味として最も適切なものは？",
+          "choices": [
+            "編集する",
+            "意気消沈させる",
+            "褒める",
+            "有罪と宣告する"
+          ],
+          "correct": 2,
+          "explanation": "「compliment」は「褒める」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comply」の意味として最も適切なものは？",
+          "choices": [
+            "預ける・堆積させる",
+            "叱る",
+            "意気消沈させる",
+            "従う"
+          ],
+          "correct": 3,
+          "explanation": "「comply」は「従う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compute」の意味として最も適切なものは？",
+          "choices": [
+            "建設する",
+            "計算する",
+            "統合する・強化する",
+            "憧れる・敬愛する"
+          ],
+          "correct": 1,
+          "explanation": "「compute」は「計算する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concentrate」の意味として最も適切なものは？",
+          "choices": [
+            "集中する",
+            "熟考する",
+            "清潔にする",
+            "鐘を鳴らす"
+          ],
+          "correct": 0,
+          "explanation": "「concentrate」は「集中する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "動詞編2セット7",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 561~570",
+      "questions": [
+        {
+          "scenario": "「concur」の意味として最も適切なものは？",
+          "choices": [
+            "裏切る",
+            "ぶつかる",
+            "同意する",
+            "通勤する"
+          ],
+          "correct": 2,
+          "explanation": "「concur」は「同意する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「condemn」の意味として最も適切なものは？",
+          "choices": [
+            "非難する",
+            "主張する",
+            "刺激する・目覚めさせる",
+            "従う"
+          ],
+          "correct": 0,
+          "explanation": "「condemn」は「非難する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「condense」の意味として最も適切なものは？",
+          "choices": [
+            "預ける・堆積させる",
+            "濃縮する",
+            "会話する",
+            "共謀する"
+          ],
+          "correct": 1,
+          "explanation": "「condense」は「濃縮する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confer」の意味として最も適切なものは？",
+          "choices": [
+            "奪う",
+            "相談する・授与する",
+            "生じる",
+            "意気消沈させる"
+          ],
+          "correct": 1,
+          "explanation": "「confer」は「相談する・授与する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confide」の意味として最も適切なものは？",
+          "choices": [
+            "窒息させる",
+            "信頼して打ち明ける",
+            "執着する・しがみつく",
+            "建設する"
+          ],
+          "correct": 1,
+          "explanation": "「confide」は「信頼して打ち明ける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conform」の意味として最も適切なものは？",
+          "choices": [
+            "腐敗する",
+            "意気消沈させる",
+            "従う・一致する",
+            "特徴づける"
+          ],
+          "correct": 2,
+          "explanation": "「conform」は「従う・一致する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「congratulate」の意味として最も適切なものは？",
+          "choices": [
+            "褒める",
+            "打撲傷を負わせる",
+            "祝う",
+            "討論する"
+          ],
+          "correct": 2,
+          "explanation": "「congratulate」は「祝う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「congregate」の意味として最も適切なものは？",
+          "choices": [
+            "執着する・しがみつく",
+            "奪う",
+            "証明する・実演する",
+            "集まる"
+          ],
+          "correct": 3,
+          "explanation": "「congregate」は「集まる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consign」の意味として最も適切なものは？",
+          "choices": [
+            "従う・一致する",
+            "委託する",
+            "矛盾する・否定する",
+            "計算する"
+          ],
+          "correct": 1,
+          "explanation": "「consign」は「委託する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「console」の意味として最も適切なものは？",
+          "choices": [
+            "慰める",
+            "相談する・授与する",
+            "認める・謝意を表す",
+            "会話する"
+          ],
+          "correct": 0,
+          "explanation": "「console」は「慰める」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "動詞編2セット8",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 571~580",
+      "questions": [
+        {
+          "scenario": "「consolidate」の意味として最も適切なものは？",
+          "choices": [
+            "分類する",
+            "統合する・強化する",
+            "取り消す",
+            "相談する・授与する"
+          ],
+          "correct": 1,
+          "explanation": "「consolidate」は「統合する・強化する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conspire」の意味として最も適切なものは？",
+          "choices": [
+            "共謀する",
+            "熱望する",
+            "証明する",
+            "高める・促進する"
+          ],
+          "correct": 0,
+          "explanation": "「conspire」は「共謀する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constrain」の意味として最も適切なものは？",
+          "choices": [
+            "認める・謝意を表す",
+            "契約する・縮む",
+            "強いる・抑制する",
+            "定義する"
+          ],
+          "correct": 2,
+          "explanation": "「constrain」は「強いる・抑制する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「construct」の意味として最も適切なものは？",
+          "choices": [
+            "建設する",
+            "絶望する",
+            "預ける・堆積させる",
+            "補償する"
+          ],
+          "correct": 0,
+          "explanation": "「construct」は「建設する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contain」の意味として最も適切なものは？",
+          "choices": [
+            "主張する",
+            "慰める",
+            "褒める",
+            "含む"
+          ],
+          "correct": 3,
+          "explanation": "「contain」は「含む」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contaminate」の意味として最も適切なものは？",
+          "choices": [
+            "証明する",
+            "衰退する・辞退する",
+            "汚染する",
+            "清潔にする"
+          ],
+          "correct": 2,
+          "explanation": "「contaminate」は「汚染する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contemplate」の意味として最も適切なものは？",
+          "choices": [
+            "計算する",
+            "熟考する",
+            "会話する",
+            "腐敗する"
+          ],
+          "correct": 1,
+          "explanation": "「contemplate」は「熟考する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contend」の意味として最も適切なものは？",
+          "choices": [
+            "従う・一致する",
+            "競う・主張する",
+            "ブンブンうなる",
+            "競争する"
+          ],
+          "correct": 1,
+          "explanation": "「contend」は「競う・主張する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contract」の意味として最も適切なものは？",
+          "choices": [
+            "握りしめる",
+            "鐘を鳴らす",
+            "主張する",
+            "契約する・縮む"
+          ],
+          "correct": 3,
+          "explanation": "「contract」は「契約する・縮む」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contradict」の意味として最も適切なものは？",
+          "choices": [
+            "通勤する",
+            "詰まらせる",
+            "主張する",
+            "矛盾する・否定する"
+          ],
+          "correct": 3,
+          "explanation": "「contradict」は「矛盾する・否定する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "動詞編2セット9",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 581~590",
+      "questions": [
+        {
+          "scenario": "「convene」の意味として最も適切なものは？",
+          "choices": [
+            "割り当てる",
+            "絶望する",
+            "驚かせる",
+            "召集する"
+          ],
+          "correct": 3,
+          "explanation": "「convene」は「召集する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「converge」の意味として最も適切なものは？",
+          "choices": [
+            "引き出す・由来する",
+            "高める・促進する",
+            "混ぜ合わせる",
+            "集中する・交わる"
+          ],
+          "correct": 3,
+          "explanation": "「converge」は「集中する・交わる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「converse」の意味として最も適切なものは？",
+          "choices": [
+            "拍手喝采する",
+            "清潔にする",
+            "会話する",
+            "汚染する"
+          ],
+          "correct": 2,
+          "explanation": "「converse」は「会話する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convict」の意味として最も適切なものは？",
+          "choices": [
+            "信頼して打ち明ける",
+            "濃縮する",
+            "奪う",
+            "有罪と宣告する"
+          ],
+          "correct": 3,
+          "explanation": "「convict」は「有罪と宣告する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coordinate」の意味として最も適切なものは？",
+          "choices": [
+            "適用する・申し込む",
+            "調整する",
+            "集中する",
+            "心に抱く・大切にする"
+          ],
+          "correct": 1,
+          "explanation": "「coordinate」は「調整する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cultivate」の意味として最も適切なものは？",
+          "choices": [
+            "契約する・縮む",
+            "意気消沈させる",
+            "褒める",
+            "栽培する・養う"
+          ],
+          "correct": 3,
+          "explanation": "「cultivate」は「栽培する・養う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「debate」の意味として最も適切なものは？",
+          "choices": [
+            "討論する",
+            "議論する・主張する",
+            "混ぜ合わせる",
+            "驚かせる"
+          ],
+          "correct": 0,
+          "explanation": "「debate」は「討論する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decay」の意味として最も適切なものは？",
+          "choices": [
+            "契約する・縮む",
+            "腐敗する",
+            "同意する",
+            "矛盾する・否定する"
+          ],
+          "correct": 1,
+          "explanation": "「decay」は「腐敗する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deceive」の意味として最も適切なものは？",
+          "choices": [
+            "強いる・抑制する",
+            "慰める",
+            "だます",
+            "彫る"
+          ],
+          "correct": 2,
+          "explanation": "「deceive」は「だます」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「declare」の意味として最も適切なものは？",
+          "choices": [
+            "待つ",
+            "広告する",
+            "宣言する",
+            "討論する"
+          ],
+          "correct": 2,
+          "explanation": "「declare」は「宣言する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "動詞編2セット10",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級の動詞 591~600",
+      "questions": [
+        {
+          "scenario": "「decline」の意味として最も適切なものは？",
+          "choices": [
+            "衰退する・辞退する",
+            "執着する・しがみつく",
+            "鐘を鳴らす",
+            "拍手喝采する"
+          ],
+          "correct": 0,
+          "explanation": "「decline」は「衰退する・辞退する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decrease」の意味として最も適切なものは？",
+          "choices": [
+            "彫る",
+            "引き出す・由来する",
+            "驚かせる",
+            "減少する"
+          ],
+          "correct": 3,
+          "explanation": "「decrease」は「減少する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「define」の意味として最も適切なものは？",
+          "choices": [
+            "褒める",
+            "定義する",
+            "心に抱く・大切にする",
+            "特徴づける"
+          ],
+          "correct": 1,
+          "explanation": "「define」は「定義する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demonstrate」の意味として最も適切なものは？",
+          "choices": [
+            "証明する・実演する",
+            "同意する",
+            "刺激する・目覚めさせる",
+            "慣れさせる"
+          ],
+          "correct": 0,
+          "explanation": "「demonstrate」は「証明する・実演する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deposit」の意味として最も適切なものは？",
+          "choices": [
+            "宣言する",
+            "複雑にする",
+            "預ける・堆積させる",
+            "統合する・強化する"
+          ],
+          "correct": 2,
+          "explanation": "「deposit」は「預ける・堆積させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depress」の意味として最も適切なものは？",
+          "choices": [
+            "登る",
+            "刺激する・目覚めさせる",
+            "熟考する",
+            "意気消沈させる"
+          ],
+          "correct": 3,
+          "explanation": "「depress」は「意気消沈させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deprive」の意味として最も適切なものは？",
+          "choices": [
+            "奪う",
+            "窒息させる",
+            "減少する",
+            "引き出す・由来する"
+          ],
+          "correct": 0,
+          "explanation": "「deprive」は「奪う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「derive」の意味として最も適切なものは？",
+          "choices": [
+            "清潔にする",
+            "検閲する",
+            "奪う",
+            "引き出す・由来する"
+          ],
+          "correct": 3,
+          "explanation": "「derive」は「引き出す・由来する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「desire」の意味として最も適切なものは？",
+          "choices": [
+            "高める・促進する",
+            "強く望む",
+            "適用する・申し込む",
+            "競う・主張する"
+          ],
+          "correct": 1,
+          "explanation": "「desire」は「強く望む」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「despair」の意味として最も適切なものは？",
+          "choices": [
+            "絶望する",
+            "清潔にする",
+            "複雑にする",
+            "執着する・しがみつく"
+          ],
+          "correct": 0,
+          "explanation": "「despair」は「絶望する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

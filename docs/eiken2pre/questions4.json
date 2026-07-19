@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "形容詞・副詞編1",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（1〜10）",
+      "questions": [
+        {
+          "scenario": "「able」の意味として最も適切なものは？",
+          "choices": [
+            "競争力のある",
+            "離れて",
+            "偶然の",
+            "できる"
+          ],
+          "correct": 3,
+          "explanation": "「able」は「できる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abnormal」の意味として最も適切なものは？",
+          "choices": [
+            "異常な",
+            "縛られた",
+            "実際の",
+            "アクセスできる"
+          ],
+          "correct": 0,
+          "explanation": "「abnormal」は「異常な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aboard」の意味として最も適切なものは？",
+          "choices": [
+            "乗って",
+            "満足して",
+            "曖昧な",
+            "生物学の"
+          ],
+          "correct": 0,
+          "explanation": "「aboard」は「乗って」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「academic」の意味として最も適切なものは？",
+          "choices": [
+            "冷たい",
+            "学問の",
+            "追加の",
+            "色彩豊かな"
+          ],
+          "correct": 1,
+          "explanation": "「academic」は「学問の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acceptable」の意味として最も適切なものは？",
+          "choices": [
+            "色彩豊かな",
+            "古典の",
+            "受け入れられる",
+            "後ろへ"
+          ],
+          "correct": 2,
+          "explanation": "「acceptable」は「受け入れられる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accessible」の意味として最も適切なものは？",
+          "choices": [
+            "驚くべき",
+            "進歩した",
+            "市民の",
+            "アクセスできる"
+          ],
+          "correct": 3,
+          "explanation": "「accessible」は「アクセスできる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accidental」の意味として最も適切なものは？",
+          "choices": [
+            "偶然の",
+            "心配して",
+            "論争の的になる",
+            "能力がある"
+          ],
+          "correct": 0,
+          "explanation": "「accidental」は「偶然の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「actual」の意味として最も適切なものは？",
+          "choices": [
+            "死んだ",
+            "とにかく",
+            "任意の",
+            "実際の"
+          ],
+          "correct": 3,
+          "explanation": "「actual」は「実際の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「additional」の意味として最も適切なものは？",
+          "choices": [
+            "追加の",
+            "機密の",
+            "現代の",
+            "耳が聞こえない"
+          ],
+          "correct": 0,
+          "explanation": "「additional」は「追加の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adequate」の意味として最も適切なものは？",
+          "choices": [
+            "従来の",
+            "ひどい",
+            "十分な",
+            "受け入れられる"
+          ],
+          "correct": 2,
+          "explanation": "「adequate」は「十分な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "形容詞・副詞編2",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（11〜20）",
+      "questions": [
+        {
+          "scenario": "「administrative」の意味として最も適切なものは？",
+          "choices": [
+            "概念の",
+            "恐れて",
+            "能力がある",
+            "管理の"
+          ],
+          "correct": 3,
+          "explanation": "「administrative」は「管理の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advanced」の意味として最も適切なものは？",
+          "choices": [
+            "進歩した",
+            "意識している",
+            "すべての",
+            "適用できる"
+          ],
+          "correct": 0,
+          "explanation": "「advanced」は「進歩した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advantageous」の意味として最も適切なものは？",
+          "choices": [
+            "条件付きの",
+            "〜として",
+            "機密の",
+            "有利な"
+          ],
+          "correct": 3,
+          "explanation": "「advantageous」は「有利な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adverse」の意味として最も適切なものは？",
+          "choices": [
+            "生物学の",
+            "人工の",
+            "不利な",
+            "犯罪の"
+          ],
+          "correct": 2,
+          "explanation": "「adverse」は「不利な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aesthetic」の意味として最も適切なものは？",
+          "choices": [
+            "美的な",
+            "腐敗した",
+            "能力がある",
+            "人工の"
+          ],
+          "correct": 0,
+          "explanation": "「aesthetic」は「美的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「afraid」の意味として最も適切なものは？",
+          "choices": [
+            "文化的な",
+            "恐れて",
+            "心配して",
+            "縛られた"
+          ],
+          "correct": 1,
+          "explanation": "「afraid」は「恐れて」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aggressive」の意味として最も適切なものは？",
+          "choices": [
+            "縛られた",
+            "一人で",
+            "攻撃的な",
+            "市民の"
+          ],
+          "correct": 2,
+          "explanation": "「aggressive」は「攻撃的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「all」の意味として最も適切なものは？",
+          "choices": [
+            "すべての",
+            "残酷な",
+            "混雑した",
+            "進歩した"
+          ],
+          "correct": 0,
+          "explanation": "「all」は「すべての」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alone」の意味として最も適切なものは？",
+          "choices": [
+            "より良い",
+            "一人で",
+            "親愛なる",
+            "かなりの"
+          ],
+          "correct": 1,
+          "explanation": "「alone」は「一人で」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aloud」の意味として最も適切なものは？",
+          "choices": [
+            "曖昧な",
+            "恐れて",
+            "集団の",
+            "声に出して"
+          ],
+          "correct": 3,
+          "explanation": "「aloud」は「声に出して」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "形容詞・副詞編3",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（21〜30）",
+      "questions": [
+        {
+          "scenario": "「amazing」の意味として最も適切なものは？",
+          "choices": [
+            "驚くべき",
+            "不利な",
+            "残酷な",
+            "恐れて"
+          ],
+          "correct": 0,
+          "explanation": "「amazing」は「驚くべき」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambiguous」の意味として最も適切なものは？",
+          "choices": [
+            "より良い",
+            "曖昧な",
+            "壊れた",
+            "離れて"
+          ],
+          "correct": 1,
+          "explanation": "「ambiguous」は「曖昧な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambitious」の意味として最も適切なものは？",
+          "choices": [
+            "耳が聞こえない",
+            "分析的な",
+            "受け入れられる",
+            "野心的な"
+          ],
+          "correct": 3,
+          "explanation": "「ambitious」は「野心的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ample」の意味として最も適切なものは？",
+          "choices": [
+            "声に出して",
+            "美的な",
+            "より良い",
+            "十分な"
+          ],
+          "correct": 3,
+          "explanation": "「ample」は「十分な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「analytical」の意味として最も適切なものは？",
+          "choices": [
+            "分析的な",
+            "条件付きの",
+            "閉じた",
+            "連続的な"
+          ],
+          "correct": 0,
+          "explanation": "「analytical」は「分析的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anonymous」の意味として最も適切なものは？",
+          "choices": [
+            "できる",
+            "連続的な",
+            "匿名の",
+            "親愛なる"
+          ],
+          "correct": 2,
+          "explanation": "「anonymous」は「匿名の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anxious」の意味として最も適切なものは？",
+          "choices": [
+            "心配して",
+            "首尾一貫した",
+            "素晴らしい",
+            "具体的な"
+          ],
+          "correct": 0,
+          "explanation": "「anxious」は「心配して」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anyway」の意味として最も適切なものは？",
+          "choices": [
+            "とにかく",
+            "論争の的になる",
+            "声に出して",
+            "実際の"
+          ],
+          "correct": 0,
+          "explanation": "「anyway」は「とにかく」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apart」の意味として最も適切なものは？",
+          "choices": [
+            "実際の",
+            "離れて",
+            "満足して",
+            "確かな"
+          ],
+          "correct": 1,
+          "explanation": "「apart」は「離れて」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「applicable」の意味として最も適切なものは？",
+          "choices": [
+            "論争の的になる",
+            "適用できる",
+            "総合的な",
+            "義務的な"
+          ],
+          "correct": 1,
+          "explanation": "「applicable」は「適用できる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "形容詞・副詞編4",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（31〜40）",
+      "questions": [
+        {
+          "scenario": "「appropriate」の意味として最も適切なものは？",
+          "choices": [
+            "目の見えない",
+            "適切な",
+            "できる",
+            "市民の"
+          ],
+          "correct": 1,
+          "explanation": "「appropriate」は「適切な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arbitrary」の意味として最も適切なものは？",
+          "choices": [
+            "不利な",
+            "任意の",
+            "有益な",
+            "混雑した"
+          ],
+          "correct": 1,
+          "explanation": "「arbitrary」は「任意の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「artificial」の意味として最も適切なものは？",
+          "choices": [
+            "できる",
+            "人工の",
+            "適用できる",
+            "生物学の"
+          ],
+          "correct": 1,
+          "explanation": "「artificial」は「人工の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as」の意味として最も適切なものは？",
+          "choices": [
+            "親愛なる",
+            "とにかく",
+            "〜として",
+            "一人で"
+          ],
+          "correct": 2,
+          "explanation": "「as」は「〜として」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「asleep」の意味として最も適切なものは？",
+          "choices": [
+            "眠って",
+            "有利な",
+            "湿った",
+            "十分な"
+          ],
+          "correct": 0,
+          "explanation": "「asleep」は「眠って」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「atomic」の意味として最も適切なものは？",
+          "choices": [
+            "条件付きの",
+            "原子の",
+            "アクセスできる",
+            "傑作の"
+          ],
+          "correct": 1,
+          "explanation": "「atomic」は「原子の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attractive」の意味として最も適切なものは？",
+          "choices": [
+            "保守的な",
+            "苦い",
+            "高価な",
+            "魅力的な"
+          ],
+          "correct": 3,
+          "explanation": "「attractive」は「魅力的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「authentic」の意味として最も適切なものは？",
+          "choices": [
+            "とにかく",
+            "狂った",
+            "生物学の",
+            "本物の"
+          ],
+          "correct": 3,
+          "explanation": "「authentic」は「本物の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「available」の意味として最も適切なものは？",
+          "choices": [
+            "憲法の",
+            "比較の",
+            "利用できる",
+            "空白の"
+          ],
+          "correct": 2,
+          "explanation": "「available」は「利用できる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「away」の意味として最も適切なものは？",
+          "choices": [
+            "耳が聞こえない",
+            "離れて",
+            "ひどい",
+            "残酷な"
+          ],
+          "correct": 1,
+          "explanation": "「away」は「離れて」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞・副詞編5",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（41〜50）",
+      "questions": [
+        {
+          "scenario": "「awful」の意味として最も適切なものは？",
+          "choices": [
+            "アクセスできる",
+            "混乱した",
+            "ひどい",
+            "〜として"
+          ],
+          "correct": 2,
+          "explanation": "「awful」は「ひどい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「awkward」の意味として最も適切なものは？",
+          "choices": [
+            "残酷な",
+            "積極的な",
+            "眠って",
+            "気まずい"
+          ],
+          "correct": 3,
+          "explanation": "「awkward」は「気まずい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「backward」の意味として最も適切なものは？",
+          "choices": [
+            "後ろへ",
+            "十分な",
+            "ひどい",
+            "壊れた"
+          ],
+          "correct": 0,
+          "explanation": "「backward」は「後ろへ」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beneficial」の意味として最も適切なものは？",
+          "choices": [
+            "有益な",
+            "魅力的な",
+            "憲法の",
+            "十分な"
+          ],
+          "correct": 0,
+          "explanation": "「beneficial」は「有益な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「best」の意味として最も適切なものは？",
+          "choices": [
+            "最も良い",
+            "できる",
+            "臨床の",
+            "受け入れられる"
+          ],
+          "correct": 0,
+          "explanation": "「best」は「最も良い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「better」の意味として最も適切なものは？",
+          "choices": [
+            "適用できる",
+            "満足して",
+            "より良い",
+            "十分な"
+          ],
+          "correct": 2,
+          "explanation": "「better」は「より良い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「biological」の意味として最も適切なものは？",
+          "choices": [
+            "偶然の",
+            "苦い",
+            "生物学の",
+            "離れて"
+          ],
+          "correct": 2,
+          "explanation": "「biological」は「生物学の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bitter」の意味として最も適切なものは？",
+          "choices": [
+            "空白の",
+            "意識している",
+            "比較の",
+            "苦い"
+          ],
+          "correct": 3,
+          "explanation": "「bitter」は「苦い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blank」の意味として最も適切なものは？",
+          "choices": [
+            "空白の",
+            "利用できる",
+            "従来の",
+            "一人で"
+          ],
+          "correct": 0,
+          "explanation": "「blank」は「空白の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blind」の意味として最も適切なものは？",
+          "choices": [
+            "耳が聞こえない",
+            "原因となる",
+            "狂った",
+            "目の見えない"
+          ],
+          "correct": 3,
+          "explanation": "「blind」は「目の見えない」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞・副詞編6",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（51〜60）",
+      "questions": [
+        {
+          "scenario": "「bold」の意味として最も適切なものは？",
+          "choices": [
+            "十分な",
+            "大胆な",
+            "狂った",
+            "創造的な"
+          ],
+          "correct": 1,
+          "explanation": "「bold」は「大胆な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bound」の意味として最も適切なものは？",
+          "choices": [
+            "すべての",
+            "後ろへ",
+            "耳が聞こえない",
+            "縛られた"
+          ],
+          "correct": 3,
+          "explanation": "「bound」は「縛られた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brilliant」の意味として最も適切なものは？",
+          "choices": [
+            "〜として",
+            "素晴らしい",
+            "狂った",
+            "集団の"
+          ],
+          "correct": 1,
+          "explanation": "「brilliant」は「素晴らしい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「broken」の意味として最も適切なものは？",
+          "choices": [
+            "比較の",
+            "壊れた",
+            "目の見えない",
+            "かなりの"
+          ],
+          "correct": 1,
+          "explanation": "「broken」は「壊れた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brutal」の意味として最も適切なものは？",
+          "choices": [
+            "利用できる",
+            "残酷な",
+            "湿った",
+            "人工の"
+          ],
+          "correct": 1,
+          "explanation": "「brutal」は「残酷な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「capable」の意味として最も適切なものは？",
+          "choices": [
+            "競争力のある",
+            "能力がある",
+            "有利な",
+            "原子の"
+          ],
+          "correct": 1,
+          "explanation": "「capable」は「能力がある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「causal」の意味として最も適切なものは？",
+          "choices": [
+            "条件付きの",
+            "攻撃的な",
+            "耳が聞こえない",
+            "原因となる"
+          ],
+          "correct": 3,
+          "explanation": "「causal」は「原因となる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「certain」の意味として最も適切なものは？",
+          "choices": [
+            "声に出して",
+            "確かな",
+            "高価な",
+            "非常に重要な"
+          ],
+          "correct": 1,
+          "explanation": "「certain」は「確かな」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chill」の意味として最も適切なものは？",
+          "choices": [
+            "色彩豊かな",
+            "冷たい",
+            "満足して",
+            "進歩した"
+          ],
+          "correct": 1,
+          "explanation": "「chill」は「冷たい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circular」の意味として最も適切なものは？",
+          "choices": [
+            "とにかく",
+            "残酷な",
+            "円形の",
+            "臨床の"
+          ],
+          "correct": 2,
+          "explanation": "「circular」は「円形の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "形容詞・副詞編7",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（61〜70）",
+      "questions": [
+        {
+          "scenario": "「civil」の意味として最も適切なものは？",
+          "choices": [
+            "色彩豊かな",
+            "市民の",
+            "具体的な",
+            "目の見えない"
+          ],
+          "correct": 1,
+          "explanation": "「civil」は「市民の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「classic」の意味として最も適切なものは？",
+          "choices": [
+            "傑作の",
+            "乗って",
+            "機密の",
+            "総合的な"
+          ],
+          "correct": 0,
+          "explanation": "「classic」は「傑作の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「classical」の意味として最も適切なものは？",
+          "choices": [
+            "驚くべき",
+            "古典の",
+            "気まずい",
+            "混雑した"
+          ],
+          "correct": 1,
+          "explanation": "「classical」は「古典の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clinical」の意味として最も適切なものは？",
+          "choices": [
+            "臨床の",
+            "十分な",
+            "離れて",
+            "具体的な"
+          ],
+          "correct": 0,
+          "explanation": "「clinical」は「臨床の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「closed」の意味として最も適切なものは？",
+          "choices": [
+            "閉じた",
+            "有益な",
+            "意識している",
+            "匿名の"
+          ],
+          "correct": 0,
+          "explanation": "「closed」は「閉じた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collective」の意味として最も適切なものは？",
+          "choices": [
+            "臨床の",
+            "生物学の",
+            "集団の",
+            "人工の"
+          ],
+          "correct": 2,
+          "explanation": "「collective」は「集団の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「colonial」の意味として最も適切なものは？",
+          "choices": [
+            "植民地の",
+            "曖昧な",
+            "野心的な",
+            "傑作の"
+          ],
+          "correct": 0,
+          "explanation": "「colonial」は「植民地の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「colorful」の意味として最も適切なものは？",
+          "choices": [
+            "縛られた",
+            "乗って",
+            "色彩豊かな",
+            "十分な"
+          ],
+          "correct": 2,
+          "explanation": "「colorful」は「色彩豊かな」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comparative」の意味として最も適切なものは？",
+          "choices": [
+            "適切な",
+            "空白の",
+            "魅力的な",
+            "比較の"
+          ],
+          "correct": 3,
+          "explanation": "「comparative」は「比較の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「competitive」の意味として最も適切なものは？",
+          "choices": [
+            "人工の",
+            "乗って",
+            "原子の",
+            "競争力のある"
+          ],
+          "correct": 3,
+          "explanation": "「competitive」は「競争力のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "形容詞・副詞編8",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（71〜80）",
+      "questions": [
+        {
+          "scenario": "「comprehensive」の意味として最も適切なものは？",
+          "choices": [
+            "総合的な",
+            "保守的な",
+            "死んだ",
+            "人工の"
+          ],
+          "correct": 0,
+          "explanation": "「comprehensive」は「総合的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compulsory」の意味として最も適切なものは？",
+          "choices": [
+            "十分な",
+            "魅力的な",
+            "義務的な",
+            "眠って"
+          ],
+          "correct": 2,
+          "explanation": "「compulsory」は「義務的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conceptual」の意味として最も適切なものは？",
+          "choices": [
+            "具体的な",
+            "概念の",
+            "市民の",
+            "傑作の"
+          ],
+          "correct": 1,
+          "explanation": "「conceptual」は「概念の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concrete」の意味として最も適切なものは？",
+          "choices": [
+            "驚くべき",
+            "美的な",
+            "具体的な",
+            "死んだ"
+          ],
+          "correct": 2,
+          "explanation": "「concrete」は「具体的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conditional」の意味として最も適切なものは？",
+          "choices": [
+            "空白の",
+            "条件付きの",
+            "連続的な",
+            "縛られた"
+          ],
+          "correct": 1,
+          "explanation": "「conditional」は「条件付きの」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confidential」の意味として最も適切なものは？",
+          "choices": [
+            "追加の",
+            "条件付きの",
+            "機密の",
+            "心配して"
+          ],
+          "correct": 2,
+          "explanation": "「confidential」は「機密の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confused」の意味として最も適切なものは？",
+          "choices": [
+            "混乱した",
+            "アクセスできる",
+            "原因となる",
+            "かなりの"
+          ],
+          "correct": 0,
+          "explanation": "「confused」は「混乱した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conscious」の意味として最も適切なものは？",
+          "choices": [
+            "意識している",
+            "匿名の",
+            "偶然の",
+            "色彩豊かな"
+          ],
+          "correct": 0,
+          "explanation": "「conscious」は「意識している」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conservative」の意味として最も適切なものは？",
+          "choices": [
+            "犯罪の",
+            "実際の",
+            "原因となる",
+            "保守的な"
+          ],
+          "correct": 3,
+          "explanation": "「conservative」は「保守的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「considerable」の意味として最も適切なものは？",
+          "choices": [
+            "かなりの",
+            "不利な",
+            "野心的な",
+            "美的な"
+          ],
+          "correct": 0,
+          "explanation": "「considerable」は「かなりの」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "形容詞・副詞編9",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（81〜90）",
+      "questions": [
+        {
+          "scenario": "「consistent」の意味として最も適切なものは？",
+          "choices": [
+            "意識している",
+            "首尾一貫した",
+            "野心的な",
+            "混乱した"
+          ],
+          "correct": 1,
+          "explanation": "「consistent」は「首尾一貫した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constitutional」の意味として最も適切なものは？",
+          "choices": [
+            "憲法の",
+            "苦い",
+            "より良い",
+            "野心的な"
+          ],
+          "correct": 0,
+          "explanation": "「constitutional」は「憲法の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contemporary」の意味として最も適切なものは？",
+          "choices": [
+            "植民地の",
+            "色彩豊かな",
+            "〜として",
+            "現代の"
+          ],
+          "correct": 3,
+          "explanation": "「contemporary」は「現代の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「content」の意味として最も適切なものは？",
+          "choices": [
+            "狂った",
+            "混雑した",
+            "残酷な",
+            "満足して"
+          ],
+          "correct": 3,
+          "explanation": "「content」は「満足して」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「continuous」の意味として最も適切なものは？",
+          "choices": [
+            "親愛なる",
+            "具体的な",
+            "連続的な",
+            "野心的な"
+          ],
+          "correct": 2,
+          "explanation": "「continuous」は「連続的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「controversial」の意味として最も適切なものは？",
+          "choices": [
+            "できる",
+            "論争の的になる",
+            "確かな",
+            "かなりの"
+          ],
+          "correct": 1,
+          "explanation": "「controversial」は「論争の的になる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conventional」の意味として最も適切なものは？",
+          "choices": [
+            "従来の",
+            "偶然の",
+            "声に出して",
+            "腐敗した"
+          ],
+          "correct": 0,
+          "explanation": "「conventional」は「従来の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「corrupt」の意味として最も適切なものは？",
+          "choices": [
+            "円形の",
+            "管理の",
+            "腐敗した",
+            "眠って"
+          ],
+          "correct": 2,
+          "explanation": "「corrupt」は「腐敗した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「costly」の意味として最も適切なものは？",
+          "choices": [
+            "高価な",
+            "アクセスできる",
+            "具体的な",
+            "集団の"
+          ],
+          "correct": 0,
+          "explanation": "「costly」は「高価な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crazy」の意味として最も適切なものは？",
+          "choices": [
+            "概念の",
+            "狂った",
+            "従来の",
+            "眠って"
+          ],
+          "correct": 1,
+          "explanation": "「crazy」は「狂った」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "形容詞・副詞編10",
+      "type": "vocabulary",
+      "emoji": "✨",
+      "subtitle": "頻出の形容詞・副詞（91〜100）",
+      "questions": [
+        {
+          "scenario": "「creative」の意味として最も適切なものは？",
+          "choices": [
+            "腐敗した",
+            "創造的な",
+            "異常な",
+            "古典の"
+          ],
+          "correct": 1,
+          "explanation": "「creative」は「創造的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「criminal」の意味として最も適切なものは？",
+          "choices": [
+            "現代の",
+            "恐れて",
+            "犯罪の",
+            "一人で"
+          ],
+          "correct": 2,
+          "explanation": "「criminal」は「犯罪の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crowded」の意味として最も適切なものは？",
+          "choices": [
+            "混雑した",
+            "匿名の",
+            "概念の",
+            "人工の"
+          ],
+          "correct": 0,
+          "explanation": "「crowded」は「混雑した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crucial」の意味として最も適切なものは？",
+          "choices": [
+            "乗って",
+            "傑作の",
+            "非常に重要な",
+            "縛られた"
+          ],
+          "correct": 2,
+          "explanation": "「crucial」は「非常に重要な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cruel」の意味として最も適切なものは？",
+          "choices": [
+            "競争力のある",
+            "機密の",
+            "憲法の",
+            "残酷な"
+          ],
+          "correct": 3,
+          "explanation": "「cruel」は「残酷な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cultural」の意味として最も適切なものは？",
+          "choices": [
+            "〜として",
+            "満足して",
+            "文化的な",
+            "分析的な"
+          ],
+          "correct": 2,
+          "explanation": "「cultural」は「文化的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「damp」の意味として最も適切なものは？",
+          "choices": [
+            "湿った",
+            "任意の",
+            "偶然の",
+            "乗って"
+          ],
+          "correct": 0,
+          "explanation": "「damp」は「湿った」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dead」の意味として最も適切なものは？",
+          "choices": [
+            "できる",
+            "死んだ",
+            "すべての",
+            "任意の"
+          ],
+          "correct": 1,
+          "explanation": "「dead」は「死んだ」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deaf」の意味として最も適切なものは？",
+          "choices": [
+            "混雑した",
+            "素晴らしい",
+            "耳が聞こえない",
+            "人工の"
+          ],
+          "correct": 2,
+          "explanation": "「deaf」は「耳が聞こえない」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dear」の意味として最も適切なものは？",
+          "choices": [
+            "現代の",
+            "追加の",
+            "親愛なる",
+            "非常に重要な"
+          ],
+          "correct": 2,
+          "explanation": "「dear」は「親愛なる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

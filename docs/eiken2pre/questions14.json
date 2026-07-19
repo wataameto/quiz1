@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "実戦編1セット1",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1301~1310",
+      "questions": [
+        {
+          "scenario": "「extract」の意味として最も適切なものは？",
+          "choices": [
+            "肉",
+            "偉業",
+            "抽出する",
+            "ごちそう"
+          ],
+          "correct": 2,
+          "explanation": "「extract」は「抽出する」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「facilitate」の意味として最も適切なものは？",
+          "choices": [
+            "容易にする",
+            "チラシ",
+            "肥沃な",
+            "眉をひそめる"
+          ],
+          "correct": 0,
+          "explanation": "「facilitate」は「容易にする」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flatter」の意味として最も適切なものは？",
+          "choices": [
+            "羊毛",
+            "お世辞を言う",
+            "炉",
+            "会計の"
+          ],
+          "correct": 1,
+          "explanation": "「flatter」は「お世辞を言う」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flourish」の意味として最も適切なものは？",
+          "choices": [
+            "激怒した",
+            "繊維",
+            "繁栄する",
+            "仲間"
+          ],
+          "correct": 2,
+          "explanation": "「flourish」は「繁栄する」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fluctuate」の意味として最も適切なものは？",
+          "choices": [
+            "葬式",
+            "流体",
+            "変動する",
+            "極端な"
+          ],
+          "correct": 2,
+          "explanation": "「fluctuate」は「変動する」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flutter」の意味として最も適切なものは？",
+          "choices": [
+            "はためく",
+            "チラシ",
+            "自由",
+            "さらに"
+          ],
+          "correct": 0,
+          "explanation": "「flutter」は「はためく」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excursion」の意味として最も適切なものは？",
+          "choices": [
+            "小説",
+            "疲労",
+            "畝・溝",
+            "遠足"
+          ],
+          "correct": 3,
+          "explanation": "「excursion」は「遠足」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expense」の意味として最も適切なものは？",
+          "choices": [
+            "費用",
+            "実りのない",
+            "柔軟性",
+            "容易にする"
+          ],
+          "correct": 0,
+          "explanation": "「expense」は「費用」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explosion」の意味として最も適切なものは？",
+          "choices": [
+            "欲求不満・挫折",
+            "拳",
+            "爆発",
+            "羊毛"
+          ],
+          "correct": 2,
+          "explanation": "「explosion」は「爆発」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exterior」の意味として最も適切なものは？",
+          "choices": [
+            "薄片",
+            "外部",
+            "欠陥",
+            "柔軟性"
+          ],
+          "correct": 1,
+          "explanation": "「exterior」は「外部」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "実戦編1セット2",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1311~1320",
+      "questions": [
+        {
+          "scenario": "「fabric」の意味として最も適切なものは？",
+          "choices": [
+            "薄片",
+            "遠足",
+            "衣服",
+            "織物"
+          ],
+          "correct": 3,
+          "explanation": "「fabric」は「織物」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「facility」の意味として最も適切なものは？",
+          "choices": [
+            "施設・才能",
+            "激しい",
+            "激怒した",
+            "羊毛"
+          ],
+          "correct": 0,
+          "explanation": "「facility」は「施設・才能」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「faculty」の意味として最も適切なものは？",
+          "choices": [
+            "狂乱した",
+            "繊維",
+            "学部・能力",
+            "流暢な"
+          ],
+          "correct": 2,
+          "explanation": "「faculty」は「学部・能力」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「faith」の意味として最も適切なものは？",
+          "choices": [
+            "柔軟性",
+            "ヒューズ",
+            "外部",
+            "信頼"
+          ],
+          "correct": 3,
+          "explanation": "「faith」は「信頼」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fame」の意味として最も適切なものは？",
+          "choices": [
+            "名声",
+            "お世辞を言う",
+            "フェリー",
+            "連邦の"
+          ],
+          "correct": 0,
+          "explanation": "「fame」は「名声」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「famine」の意味として最も適切なものは？",
+          "choices": [
+            "飢饉",
+            "綿毛状の・あいまいな",
+            "会計の",
+            "激しい"
+          ],
+          "correct": 0,
+          "explanation": "「famine」は「飢饉」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fantasy」の意味として最も適切なものは？",
+          "choices": [
+            "詐欺",
+            "欲求不満・挫折",
+            "空想",
+            "きっぱりと"
+          ],
+          "correct": 2,
+          "explanation": "「fantasy」は「空想」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「farewell」の意味として最も適切なものは？",
+          "choices": [
+            "名声",
+            "別れ",
+            "花輪",
+            "駐屯地"
+          ],
+          "correct": 1,
+          "explanation": "「farewell」は「別れ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fatigue」の意味として最も適切なものは？",
+          "choices": [
+            "柔軟な",
+            "偉業",
+            "疲労",
+            "外部"
+          ],
+          "correct": 2,
+          "explanation": "「fatigue」は「疲労」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「feast」の意味として最も適切なものは？",
+          "choices": [
+            "詐欺",
+            "ごちそう",
+            "頻度",
+            "別れ"
+          ],
+          "correct": 1,
+          "explanation": "「feast」は「ごちそう」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "実戦編1セット3",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1321~1330",
+      "questions": [
+        {
+          "scenario": "「feat」の意味として最も適切なものは？",
+          "choices": [
+            "偉業",
+            "施設・才能",
+            "流動",
+            "実り多い"
+          ],
+          "correct": 0,
+          "explanation": "「feat」は「偉業」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「feedback」の意味として最も適切なものは？",
+          "choices": [
+            "実り多い",
+            "過剰な",
+            "きっぱりと",
+            "フィードバック"
+          ],
+          "correct": 3,
+          "explanation": "「feedback」は「フィードバック」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fellow」の意味として最も適切なものは？",
+          "choices": [
+            "仲間",
+            "設備",
+            "空想",
+            "摩擦"
+          ],
+          "correct": 0,
+          "explanation": "「fellow」は「仲間」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ferry」の意味として最も適切なものは？",
+          "choices": [
+            "フェリー",
+            "備え付ける",
+            "駐屯地",
+            "実りのない"
+          ],
+          "correct": 0,
+          "explanation": "「ferry」は「フェリー」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「feud」の意味として最も適切なものは？",
+          "choices": [
+            "賭け事をする",
+            "逃亡者",
+            "確執",
+            "衣服"
+          ],
+          "correct": 2,
+          "explanation": "「feud」は「確執」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fiber」の意味として最も適切なものは？",
+          "choices": [
+            "容易にする",
+            "お世辞を言う",
+            "賭け事をする",
+            "繊維"
+          ],
+          "correct": 3,
+          "explanation": "「fiber」は「繊維」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fiction」の意味として最も適切なものは？",
+          "choices": [
+            "繊維",
+            "家具",
+            "小説",
+            "道具・ガジェット"
+          ],
+          "correct": 2,
+          "explanation": "「fiction」は「小説」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fireplace」の意味として最も適切なものは？",
+          "choices": [
+            "実りのない",
+            "繁栄する",
+            "別れ",
+            "暖炉"
+          ],
+          "correct": 3,
+          "explanation": "「fireplace」は「暖炉」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fisherman」の意味として最も適切なものは？",
+          "choices": [
+            "さらに",
+            "漁師",
+            "狼狽・突風",
+            "漏斗"
+          ],
+          "correct": 1,
+          "explanation": "「fisherman」は「漁師」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fist」の意味として最も適切なものは？",
+          "choices": [
+            "ヒューズ",
+            "狂乱した",
+            "道具・ガジェット",
+            "拳"
+          ],
+          "correct": 3,
+          "explanation": "「fist」は「拳」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "実戦編1セット4",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1331~1340",
+      "questions": [
+        {
+          "scenario": "「fitness」の意味として最も適切なものは？",
+          "choices": [
+            "畝・溝",
+            "健康",
+            "融合",
+            "恐怖"
+          ],
+          "correct": 1,
+          "explanation": "「fitness」は「健康」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fixture」の意味として最も適切なものは？",
+          "choices": [
+            "外部の",
+            "設備",
+            "無駄な",
+            "致命的な"
+          ],
+          "correct": 1,
+          "explanation": "「fixture」は「設備」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flake」の意味として最も適切なものは？",
+          "choices": [
+            "費用",
+            "薄片",
+            "空想",
+            "一味"
+          ],
+          "correct": 1,
+          "explanation": "「flake」は「薄片」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flame」の意味として最も適切なものは？",
+          "choices": [
+            "炎",
+            "流暢な",
+            "ニンニク",
+            "流体"
+          ],
+          "correct": 0,
+          "explanation": "「flame」は「炎」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flare」の意味として最も適切なものは？",
+          "choices": [
+            "暖炉",
+            "フィードバック",
+            "燃え上がり",
+            "肉"
+          ],
+          "correct": 2,
+          "explanation": "「flare」は「燃え上がり」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flaw」の意味として最も適切なものは？",
+          "choices": [
+            "施設・才能",
+            "欠陥",
+            "逃亡者",
+            "遠足"
+          ],
+          "correct": 1,
+          "explanation": "「flaw」は「欠陥」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fleece」の意味として最も適切なものは？",
+          "choices": [
+            "羊毛",
+            "燃え上がり",
+            "繁栄する",
+            "無駄な"
+          ],
+          "correct": 0,
+          "explanation": "「fleece」は「羊毛」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fleet」の意味として最も適切なものは？",
+          "choices": [
+            "余分な",
+            "繁栄する",
+            "疲労",
+            "艦隊"
+          ],
+          "correct": 3,
+          "explanation": "「fleet」は「艦隊」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flesh」の意味として最も適切なものは？",
+          "choices": [
+            "肉",
+            "流暢な",
+            "きっぱりと",
+            "健康"
+          ],
+          "correct": 0,
+          "explanation": "「flesh」は「肉」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flexibility」の意味として最も適切なものは？",
+          "choices": [
+            "狼狽・突風",
+            "無駄な",
+            "ガーター",
+            "柔軟性"
+          ],
+          "correct": 3,
+          "explanation": "「flexibility」は「柔軟性」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "実戦編1セット5",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1341~1350",
+      "questions": [
+        {
+          "scenario": "「flock」の意味として最も適切なものは？",
+          "choices": [
+            "群れ",
+            "チラシ",
+            "過剰な",
+            "ごちそう"
+          ],
+          "correct": 0,
+          "explanation": "「flock」は「群れ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flour」の意味として最も適切なものは？",
+          "choices": [
+            "小麦粉",
+            "隙間・格差",
+            "柔軟な",
+            "ニンニク"
+          ],
+          "correct": 0,
+          "explanation": "「flour」は「小麦粉」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fluid」の意味として最も適切なものは？",
+          "choices": [
+            "流体",
+            "葬式",
+            "学部・能力",
+            "名声"
+          ],
+          "correct": 0,
+          "explanation": "「fluid」は「流体」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flurry」の意味として最も適切なものは？",
+          "choices": [
+            "狼狽・突風",
+            "流暢な",
+            "群れ",
+            "小説"
+          ],
+          "correct": 0,
+          "explanation": "「flurry」は「狼狽・突風」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flux」の意味として最も適切なものは？",
+          "choices": [
+            "好意的な",
+            "暖炉",
+            "流動",
+            "ニンニク"
+          ],
+          "correct": 2,
+          "explanation": "「flux」は「流動」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flyer」の意味として最も適切なものは？",
+          "choices": [
+            "設備",
+            "お世辞を言う",
+            "羊毛",
+            "チラシ"
+          ],
+          "correct": 3,
+          "explanation": "「flyer」は「チラシ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excess」の意味として最も適切なものは？",
+          "choices": [
+            "綿毛状の・あいまいな",
+            "過剰な",
+            "信頼",
+            "施設・才能"
+          ],
+          "correct": 1,
+          "explanation": "「excess」は「過剰な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「external」の意味として最も適切なものは？",
+          "choices": [
+            "外部の",
+            "漏斗",
+            "激怒",
+            "薄片"
+          ],
+          "correct": 0,
+          "explanation": "「external」は「外部の」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extra」の意味として最も適切なものは？",
+          "choices": [
+            "ごちそう",
+            "余分な",
+            "遠足",
+            "狂乱"
+          ],
+          "correct": 1,
+          "explanation": "「extra」は「余分な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extreme」の意味として最も適切なものは？",
+          "choices": [
+            "費用",
+            "極端な",
+            "拳",
+            "好意的な"
+          ],
+          "correct": 1,
+          "explanation": "「extreme」は「極端な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "実戦編1セット6",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1351~1360",
+      "questions": [
+        {
+          "scenario": "「fatal」の意味として最も適切なものは？",
+          "choices": [
+            "致命的な",
+            "摩擦",
+            "繊維",
+            "暖炉"
+          ],
+          "correct": 0,
+          "explanation": "「fatal」は「致命的な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「favorable」の意味として最も適切なものは？",
+          "choices": [
+            "名声",
+            "疲労",
+            "致命的な",
+            "好意的な"
+          ],
+          "correct": 3,
+          "explanation": "「favorable」は「好意的な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「federal」の意味として最も適切なものは？",
+          "choices": [
+            "さらに",
+            "燃え上がり",
+            "お世辞を言う",
+            "連邦の"
+          ],
+          "correct": 3,
+          "explanation": "「federal」は「連邦の」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fertile」の意味として最も適切なものは？",
+          "choices": [
+            "肥沃な",
+            "遠足",
+            "綿毛状の・あいまいな",
+            "炉"
+          ],
+          "correct": 0,
+          "explanation": "「fertile」は「肥沃な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fierce」の意味として最も適切なものは？",
+          "choices": [
+            "激しい",
+            "お世辞を言う",
+            "流動",
+            "欲求不満・挫折"
+          ],
+          "correct": 0,
+          "explanation": "「fierce」は「激しい」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fiscal」の意味として最も適切なものは？",
+          "choices": [
+            "群れ",
+            "会計の",
+            "艦隊",
+            "変動する"
+          ],
+          "correct": 1,
+          "explanation": "「fiscal」は「会計の」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flatly」の意味として最も適切なものは？",
+          "choices": [
+            "綿毛状の・あいまいな",
+            "容易にする",
+            "きっぱりと",
+            "ごちそう"
+          ],
+          "correct": 2,
+          "explanation": "「flatly」は「きっぱりと」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flexible」の意味として最も適切なものは？",
+          "choices": [
+            "抽出する",
+            "繊維",
+            "遠足",
+            "柔軟な"
+          ],
+          "correct": 3,
+          "explanation": "「flexible」は「柔軟な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fluent」の意味として最も適切なものは？",
+          "choices": [
+            "流動",
+            "流暢な",
+            "絞首台",
+            "別れ"
+          ],
+          "correct": 1,
+          "explanation": "「fluent」は「流暢な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frantic」の意味として最も適切なものは？",
+          "choices": [
+            "きっぱりと",
+            "備え付ける",
+            "狂乱した",
+            "実りのない"
+          ],
+          "correct": 2,
+          "explanation": "「frantic」は「狂乱した」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "実戦編1セット7",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1361~1370",
+      "questions": [
+        {
+          "scenario": "「fraud」の意味として最も適切なものは？",
+          "choices": [
+            "融合",
+            "施設・才能",
+            "お世辞を言う",
+            "詐欺"
+          ],
+          "correct": 3,
+          "explanation": "「fraud」は「詐欺」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「freedom」の意味として最も適切なものは？",
+          "choices": [
+            "欲求不満・挫折",
+            "肉",
+            "自由",
+            "国境・辺境"
+          ],
+          "correct": 2,
+          "explanation": "「freedom」は「自由」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「freight」の意味として最も適切なものは？",
+          "choices": [
+            "融合",
+            "会計の",
+            "貨物",
+            "余分な"
+          ],
+          "correct": 2,
+          "explanation": "「freight」は「貨物」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frenzy」の意味として最も適切なものは？",
+          "choices": [
+            "羊毛",
+            "遠足",
+            "施設・才能",
+            "狂乱"
+          ],
+          "correct": 3,
+          "explanation": "「frenzy」は「狂乱」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frequency」の意味として最も適切なものは？",
+          "choices": [
+            "余分な",
+            "流動",
+            "摩擦",
+            "頻度"
+          ],
+          "correct": 3,
+          "explanation": "「frequency」は「頻度」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「friction」の意味として最も適切なものは？",
+          "choices": [
+            "きっぱりと",
+            "艦隊",
+            "フィードバック",
+            "摩擦"
+          ],
+          "correct": 3,
+          "explanation": "「friction」は「摩擦」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fright」の意味として最も適切なものは？",
+          "choices": [
+            "薄片",
+            "貨物",
+            "恐怖",
+            "きっぱりと"
+          ],
+          "correct": 2,
+          "explanation": "「fright」は「恐怖」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frightful」の意味として最も適切なものは？",
+          "choices": [
+            "詐欺",
+            "織物",
+            "恐ろしい",
+            "繊維"
+          ],
+          "correct": 2,
+          "explanation": "「frightful」は「恐ろしい」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fringe」の意味として最も適切なものは？",
+          "choices": [
+            "ふち・周辺",
+            "致命的な",
+            "暖炉",
+            "爆発"
+          ],
+          "correct": 0,
+          "explanation": "「fringe」は「ふち・周辺」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frontier」の意味として最も適切なものは？",
+          "choices": [
+            "ガーター",
+            "余分な",
+            "漁師",
+            "国境・辺境"
+          ],
+          "correct": 3,
+          "explanation": "「frontier」は「国境・辺境」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "実戦編1セット8",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1371~1380",
+      "questions": [
+        {
+          "scenario": "「frown」の意味として最も適切なものは？",
+          "choices": [
+            "眉をひそめる",
+            "仲間",
+            "連邦の",
+            "好意的な"
+          ],
+          "correct": 0,
+          "explanation": "「frown」は「眉をひそめる」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frugal」の意味として最も適切なものは？",
+          "choices": [
+            "繊維",
+            "炎",
+            "実り多い",
+            "質素な"
+          ],
+          "correct": 3,
+          "explanation": "「frugal」は「質素な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fruitful」の意味として最も適切なものは？",
+          "choices": [
+            "実り多い",
+            "貨物",
+            "連邦の",
+            "欲求不満・挫折"
+          ],
+          "correct": 0,
+          "explanation": "「fruitful」は「実り多い」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fruitless」の意味として最も適切なものは？",
+          "choices": [
+            "根本的な",
+            "一味",
+            "爆発",
+            "実りのない"
+          ],
+          "correct": 3,
+          "explanation": "「fruitless」は「実りのない」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frustration」の意味として最も適切なものは？",
+          "choices": [
+            "炎",
+            "外部の",
+            "欲求不満・挫折",
+            "隙間・格差"
+          ],
+          "correct": 2,
+          "explanation": "「frustration」は「欲求不満・挫折」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fugitive」の意味として最も適切なものは？",
+          "choices": [
+            "国境・辺境",
+            "逃亡者",
+            "変動する",
+            "炉"
+          ],
+          "correct": 1,
+          "explanation": "「fugitive」は「逃亡者」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fundamental」の意味として最も適切なものは？",
+          "choices": [
+            "炉",
+            "根本的な",
+            "質素な",
+            "フィードバック"
+          ],
+          "correct": 1,
+          "explanation": "「fundamental」は「根本的な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「funeral」の意味として最も適切なものは？",
+          "choices": [
+            "葬式",
+            "漁師",
+            "費用",
+            "花輪"
+          ],
+          "correct": 0,
+          "explanation": "「funeral」は「葬式」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「funnel」の意味として最も適切なものは？",
+          "choices": [
+            "ニンニク",
+            "艦隊",
+            "遠足",
+            "漏斗"
+          ],
+          "correct": 3,
+          "explanation": "「funnel」は「漏斗」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「furious」の意味として最も適切なものは？",
+          "choices": [
+            "衣服",
+            "会計の",
+            "激怒した",
+            "ニンニク"
+          ],
+          "correct": 2,
+          "explanation": "「furious」は「激怒した」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "実戦編1セット9",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1381~1390",
+      "questions": [
+        {
+          "scenario": "「furnace」の意味として最も適切なものは？",
+          "choices": [
+            "炉",
+            "実りのない",
+            "連邦の",
+            "狼狽・突風"
+          ],
+          "correct": 0,
+          "explanation": "「furnace」は「炉」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「furnish」の意味として最も適切なものは？",
+          "choices": [
+            "外部の",
+            "会計の",
+            "備え付ける",
+            "流動"
+          ],
+          "correct": 2,
+          "explanation": "「furnish」は「備え付ける」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「furniture」の意味として最も適切なものは？",
+          "choices": [
+            "羊毛",
+            "家具",
+            "暖炉",
+            "お世辞を言う"
+          ],
+          "correct": 1,
+          "explanation": "「furniture」は「家具」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「furrow」の意味として最も適切なものは？",
+          "choices": [
+            "激怒した",
+            "恐ろしい",
+            "遠足",
+            "畝・溝"
+          ],
+          "correct": 3,
+          "explanation": "「furrow」は「畝・溝」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「furthermore」の意味として最も適切なものは？",
+          "choices": [
+            "詐欺",
+            "さらに",
+            "余分な",
+            "きっぱりと"
+          ],
+          "correct": 1,
+          "explanation": "「furthermore」は「さらに」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fury」の意味として最も適切なものは？",
+          "choices": [
+            "激怒",
+            "頻度",
+            "漏斗",
+            "艦隊"
+          ],
+          "correct": 0,
+          "explanation": "「fury」は「激怒」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fuse」の意味として最も適切なものは？",
+          "choices": [
+            "恐ろしい",
+            "ガーター",
+            "ヒューズ",
+            "花輪"
+          ],
+          "correct": 2,
+          "explanation": "「fuse」は「ヒューズ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fusion」の意味として最も適切なものは？",
+          "choices": [
+            "融合",
+            "さらに",
+            "極端な",
+            "会計の"
+          ],
+          "correct": 0,
+          "explanation": "「fusion」は「融合」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「futile」の意味として最も適切なものは？",
+          "choices": [
+            "狼狽・突風",
+            "眉をひそめる",
+            "別れ",
+            "無駄な"
+          ],
+          "correct": 3,
+          "explanation": "「futile」は「無駄な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fuzzy」の意味として最も適切なものは？",
+          "choices": [
+            "綿毛状の・あいまいな",
+            "薄片",
+            "実りのない",
+            "絞首台"
+          ],
+          "correct": 0,
+          "explanation": "「fuzzy」は「綿毛状の・あいまいな」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "実戦編1セット10",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検準2級の実戦語彙 1391~1400",
+      "questions": [
+        {
+          "scenario": "「gadget」の意味として最も適切なものは？",
+          "choices": [
+            "一味",
+            "流体",
+            "衣服",
+            "道具・ガジェット"
+          ],
+          "correct": 3,
+          "explanation": "「gadget」は「道具・ガジェット」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gallows」の意味として最も適切なものは？",
+          "choices": [
+            "流体",
+            "根本的な",
+            "絞首台",
+            "設備"
+          ],
+          "correct": 2,
+          "explanation": "「gallows」は「絞首台」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gamble」の意味として最も適切なものは？",
+          "choices": [
+            "賭け事をする",
+            "ごちそう",
+            "ニンニク",
+            "群れ"
+          ],
+          "correct": 0,
+          "explanation": "「gamble」は「賭け事をする」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gang」の意味として最も適切なものは？",
+          "choices": [
+            "貨物",
+            "ニンニク",
+            "一味",
+            "備え付ける"
+          ],
+          "correct": 2,
+          "explanation": "「gang」は「一味」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gap」の意味として最も適切なものは？",
+          "choices": [
+            "隙間・格差",
+            "好意的な",
+            "綿毛状の・あいまいな",
+            "一味"
+          ],
+          "correct": 0,
+          "explanation": "「gap」は「隙間・格差」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「garland」の意味として最も適切なものは？",
+          "choices": [
+            "花輪",
+            "フェリー",
+            "狂乱した",
+            "燃え上がり"
+          ],
+          "correct": 0,
+          "explanation": "「garland」は「花輪」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「garlic」の意味として最も適切なものは？",
+          "choices": [
+            "流体",
+            "ニンニク",
+            "国境・辺境",
+            "薄片"
+          ],
+          "correct": 1,
+          "explanation": "「garlic」は「ニンニク」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「garment」の意味として最も適切なものは？",
+          "choices": [
+            "繊維",
+            "衣服",
+            "絞首台",
+            "名声"
+          ],
+          "correct": 1,
+          "explanation": "「garment」は「衣服」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「garrison」の意味として最も適切なものは？",
+          "choices": [
+            "駐屯地",
+            "詐欺",
+            "欠陥",
+            "確執"
+          ],
+          "correct": 0,
+          "explanation": "「garrison」は「駐屯地」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「garter」の意味として最も適切なものは？",
+          "choices": [
+            "信頼",
+            "ガーター",
+            "綿毛状の・あいまいな",
+            "学部・能力"
+          ],
+          "correct": 1,
+          "explanation": "「garter」は「ガーター」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

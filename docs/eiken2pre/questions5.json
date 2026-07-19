@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "重要熟語①：前置詞・副詞句",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(1〜10)",
+      "questions": [
+        {
+          "scenario": "「along with」の意味として最も適切なものは？",
+          "choices": [
+            "〜に基づいている",
+            "〜と一緒に",
+            "比較の",
+            "対立する"
+          ],
+          "correct": 1,
+          "explanation": "「along with」は「〜と一緒に」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as if」の意味として最も適切なものは？",
+          "choices": [
+            "樽",
+            "確認する",
+            "まるで〜のように",
+            "楽しませる"
+          ],
+          "correct": 2,
+          "explanation": "「as if」は「まるで〜のように」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as long as」の意味として最も適切なものは？",
+          "choices": [
+            "〜と友達になる",
+            "〜する限り",
+            "総合的な",
+            "時々"
+          ],
+          "correct": 1,
+          "explanation": "「as long as」は「〜する限り」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at first」の意味として最も適切なものは？",
+          "choices": [
+            "言い換えると",
+            "能力がある",
+            "記入する",
+            "最初は"
+          ],
+          "correct": 3,
+          "explanation": "「at first」は「最初は」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at last」の意味として最も適切なものは？",
+          "choices": [
+            "ついに",
+            "親愛なる",
+            "〜に責任がある",
+            "調整"
+          ],
+          "correct": 0,
+          "explanation": "「at last」は「ついに」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at present」の意味として最も適切なものは？",
+          "choices": [
+            "保守的な",
+            "制限する",
+            "親愛なる",
+            "現在は"
+          ],
+          "correct": 3,
+          "explanation": "「at present」は「現在は」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be based on」の意味として最も適切なものは？",
+          "choices": [
+            "キャプテン",
+            "〜に基づいている",
+            "態度",
+            "一貫性"
+          ],
+          "correct": 1,
+          "explanation": "「be based on」は「〜に基づいている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be known as」の意味として最も適切なものは？",
+          "choices": [
+            "複雑さ",
+            "基準",
+            "〜として知られている",
+            "試み"
+          ],
+          "correct": 2,
+          "explanation": "「be known as」は「〜として知られている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be known to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に知られている",
+            "勃発する",
+            "出席する",
+            "何度も"
+          ],
+          "correct": 0,
+          "explanation": "「be known to」は「〜に知られている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be made of」の意味として最も適切なものは？",
+          "choices": [
+            "憲法",
+            "現代の",
+            "降ろす",
+            "〜でできている"
+          ],
+          "correct": 3,
+          "explanation": "「be made of」は「〜でできている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "重要熟語②：動詞句(1)",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(11〜20)",
+      "questions": [
+        {
+          "scenario": "「be ready to」の意味として最も適切なものは？",
+          "choices": [
+            "〜と友達になる",
+            "〜する準備ができている",
+            "〜の場合には",
+            "非常に重要な"
+          ],
+          "correct": 1,
+          "explanation": "「be ready to」は「〜する準備ができている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be responsible for」の意味として最も適切なものは？",
+          "choices": [
+            "〜に責任がある",
+            "驚くべき",
+            "その上",
+            "創造的な"
+          ],
+          "correct": 0,
+          "explanation": "「be responsible for」は「〜に責任がある」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be short of」の意味として最も適切なものは？",
+          "choices": [
+            "あごひげ",
+            "怒り",
+            "〜が不足している",
+            "利用できる"
+          ],
+          "correct": 2,
+          "explanation": "「be short of」は「〜が不足している」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be similar to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に似ている",
+            "乗って",
+            "心に留める",
+            "〜と友達になる"
+          ],
+          "correct": 0,
+          "explanation": "「be similar to」は「〜に似ている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be tired of」の意味として最も適切なものは？",
+          "choices": [
+            "後退する",
+            "手がかりを与える",
+            "〜に飽きている",
+            "その上"
+          ],
+          "correct": 2,
+          "explanation": "「be tired of」は「〜に飽きている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be used to」の意味として最も適切なものは？",
+          "choices": [
+            "生物学",
+            "悩ます",
+            "〜に慣れている",
+            "〜から成る"
+          ],
+          "correct": 2,
+          "explanation": "「be used to」は「〜に慣れている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break out」の意味として最も適切なものは？",
+          "choices": [
+            "勃発する",
+            "競争力のある",
+            "冷たい",
+            "官僚制度"
+          ],
+          "correct": 0,
+          "explanation": "「break out」は「勃発する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by mistake」の意味として最も適切なものは？",
+          "choices": [
+            "間違って",
+            "連絡する",
+            "感謝",
+            "比較"
+          ],
+          "correct": 0,
+          "explanation": "「by mistake」は「間違って」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「call for」の意味として最も適切なものは？",
+          "choices": [
+            "ラクダ",
+            "〜を要求する",
+            "〜の場合には",
+            "適用できる"
+          ],
+          "correct": 1,
+          "explanation": "「call for」は「〜を要求する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「close to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に変わる",
+            "〜の担当で",
+            "同意する",
+            "〜の近くに"
+          ],
+          "correct": 3,
+          "explanation": "「close to」は「〜の近くに」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "重要熟語③：動詞句(2)",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(21〜30)",
+      "questions": [
+        {
+          "scenario": "「come about」の意味として最も適切なものは？",
+          "choices": [
+            "保証する",
+            "起こる",
+            "キャンバス",
+            "競争力のある"
+          ],
+          "correct": 1,
+          "explanation": "「come about」は「起こる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come from」の意味として最も適切なものは？",
+          "choices": [
+            "塊",
+            "娯楽",
+            "〜でできている",
+            "〜に由来する"
+          ],
+          "correct": 3,
+          "explanation": "「come from」は「〜に由来する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compared with」の意味として最も適切なものは？",
+          "choices": [
+            "基準",
+            "少し",
+            "進歩した",
+            "〜と比較して"
+          ],
+          "correct": 3,
+          "explanation": "「compared with」は「〜と比較して」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consist of」の意味として最も適切なものは？",
+          "choices": [
+            "〜から成る",
+            "レンガ",
+            "アルファベット",
+            "一団"
+          ],
+          "correct": 0,
+          "explanation": "「consist of」は「〜から成る」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cope with」の意味として最も適切なものは？",
+          "choices": [
+            "アプリ",
+            "レンガ",
+            "偏見",
+            "対処する"
+          ],
+          "correct": 3,
+          "explanation": "「cope with」は「対処する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「die of」の意味として最も適切なものは？",
+          "choices": [
+            "〜で死ぬ",
+            "意識",
+            "中心",
+            "乞食"
+          ],
+          "correct": 0,
+          "explanation": "「die of」は「〜で死ぬ」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「do one's best」の意味として最も適切なものは？",
+          "choices": [
+            "棒・酒場",
+            "最善を尽くす",
+            "追跡",
+            "原因"
+          ],
+          "correct": 1,
+          "explanation": "「do one's best」は「最善を尽くす」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「each other」の意味として最も適切なものは？",
+          "choices": [
+            "〜で死ぬ",
+            "お互いに",
+            "高価な",
+            "故障して"
+          ],
+          "correct": 1,
+          "explanation": "「each other」は「お互いに」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「even if」の意味として最も適切なものは？",
+          "choices": [
+            "離れて",
+            "声に出して",
+            "たとえ〜だとしても",
+            "循環"
+          ],
+          "correct": 2,
+          "explanation": "「even if」は「たとえ〜だとしても」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「feel like ~ing」の意味として最も適切なものは？",
+          "choices": [
+            "妥協",
+            "〜したい気がする",
+            "偏見",
+            "傑作の"
+          ],
+          "correct": 1,
+          "explanation": "「feel like ~ing」は「〜したい気がする」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "重要熟語④：be動詞の熟語",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(31〜40)",
+      "questions": [
+        {
+          "scenario": "「for free」の意味として最も適切なものは？",
+          "choices": [
+            "足首",
+            "仲間",
+            "無料で",
+            "衝突する"
+          ],
+          "correct": 2,
+          "explanation": "「for free」は「無料で」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for sure」の意味として最も適切なものは？",
+          "choices": [
+            "確かに",
+            "残酷な",
+            "確認する",
+            "〜に慣れている"
+          ],
+          "correct": 0,
+          "explanation": "「for sure」は「確かに」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for the first time」の意味として最も適切なものは？",
+          "choices": [
+            "同盟国",
+            "初めて",
+            "〜の埋め合わせをする",
+            "管理"
+          ],
+          "correct": 1,
+          "explanation": "「for the first time」は「初めて」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「from time to time」の意味として最も適切なものは？",
+          "choices": [
+            "意識している",
+            "時々",
+            "応募者",
+            "農業"
+          ],
+          "correct": 1,
+          "explanation": "「from time to time」は「時々」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get in touch with」の意味として最も適切なものは？",
+          "choices": [
+            "〜と連絡を取る",
+            "保護",
+            "空白の",
+            "色彩豊かな"
+          ],
+          "correct": 0,
+          "explanation": "「get in touch with」は「〜と連絡を取る」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get lost」の意味として最も適切なものは？",
+          "choices": [
+            "迷子になる",
+            "〜を笑う",
+            "自信",
+            "〜に由来する"
+          ],
+          "correct": 0,
+          "explanation": "「get lost」は「迷子になる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get rid of」の意味として最も適切なものは？",
+          "choices": [
+            "魅力",
+            "〜を取り除く",
+            "懸念",
+            "雑談する"
+          ],
+          "correct": 1,
+          "explanation": "「get rid of」は「〜を取り除く」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get to」の意味として最も適切なものは？",
+          "choices": [
+            "驚くべき",
+            "本物の",
+            "〜について考える",
+            "〜に到着する"
+          ],
+          "correct": 3,
+          "explanation": "「get to」は「〜に到着する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go on ~ing」の意味として最も適切なものは？",
+          "choices": [
+            "隠す",
+            "任命する",
+            "原因となる",
+            "〜し続ける"
+          ],
+          "correct": 3,
+          "explanation": "「go on ~ing」は「〜し続ける」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grow up」の意味として最も適切なものは？",
+          "choices": [
+            "成長する",
+            "上司",
+            "投げる",
+            "コメントする"
+          ],
+          "correct": 0,
+          "explanation": "「grow up」は「成長する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "重要熟語⑤：基本動詞の熟語",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(41〜50)",
+      "questions": [
+        {
+          "scenario": "「hear from」の意味として最も適切なものは？",
+          "choices": [
+            "〜から便りがある",
+            "言い換えると",
+            "計算する",
+            "退屈な人"
+          ],
+          "correct": 0,
+          "explanation": "「hear from」は「〜から便りがある」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hear of」の意味として最も適切なものは？",
+          "choices": [
+            "残酷な",
+            "鐘",
+            "〜の噂を聞く",
+            "アルファベット"
+          ],
+          "correct": 2,
+          "explanation": "「hear of」は「〜の噂を聞く」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「help oneself to」の意味として最も適切なものは？",
+          "choices": [
+            "共通に",
+            "呼吸する",
+            "〜を自由にとる",
+            "湿った"
+          ],
+          "correct": 2,
+          "explanation": "「help oneself to」は「〜を自由にとる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in addition」の意味として最も適切なものは？",
+          "choices": [
+            "その上",
+            "予期する",
+            "代理人",
+            "底"
+          ],
+          "correct": 0,
+          "explanation": "「in addition」は「その上」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in advance」の意味として最も適切なものは？",
+          "choices": [
+            "〜する傾向がある",
+            "古典の",
+            "前もって",
+            "商業"
+          ],
+          "correct": 2,
+          "explanation": "「in advance」は「前もって」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in case」の意味として最も適切なものは？",
+          "choices": [
+            "到着",
+            "爆弾",
+            "〜の場合には",
+            "時間通りに"
+          ],
+          "correct": 2,
+          "explanation": "「in case」は「〜の場合には」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in charge of」の意味として最も適切なものは？",
+          "choices": [
+            "〜の担当で",
+            "〜の埋め合わせをする",
+            "対比する",
+            "品種"
+          ],
+          "correct": 0,
+          "explanation": "「in charge of」は「〜の担当で」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in common」の意味として最も適切なものは？",
+          "choices": [
+            "共通に",
+            "貨物",
+            "採用する",
+            "行動"
+          ],
+          "correct": 0,
+          "explanation": "「in common」は「共通に」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in detail」の意味として最も適切なものは？",
+          "choices": [
+            "詳細に",
+            "創造的な",
+            "注意",
+            "攻撃的な"
+          ],
+          "correct": 0,
+          "explanation": "「in detail」は「詳細に」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in other words」の意味として最も適切なものは？",
+          "choices": [
+            "自信",
+            "保護する",
+            "意識している",
+            "言い換えると"
+          ],
+          "correct": 3,
+          "explanation": "「in other words」は「言い換えると」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "重要熟語⑥：副詞的表現",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(51〜60)",
+      "questions": [
+        {
+          "scenario": "「in particular」の意味として最も適切なものは？",
+          "choices": [
+            "集会",
+            "実施する",
+            "残酷な",
+            "特に"
+          ],
+          "correct": 3,
+          "explanation": "「in particular」は「特に」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in the end」の意味として最も適切なものは？",
+          "choices": [
+            "乞食",
+            "不在",
+            "調整する",
+            "結局"
+          ],
+          "correct": 3,
+          "explanation": "「in the end」は「結局」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in time」の意味として最も適切なものは？",
+          "choices": [
+            "離れて",
+            "間に合って",
+            "〜する限り",
+            "集会"
+          ],
+          "correct": 1,
+          "explanation": "「in time」は「間に合って」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep in mind」の意味として最も適切なものは？",
+          "choices": [
+            "放棄",
+            "実際の",
+            "起きている",
+            "心に留める"
+          ],
+          "correct": 3,
+          "explanation": "「keep in mind」は「心に留める」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep on ~ing」の意味として最も適切なものは？",
+          "choices": [
+            "任意の",
+            "憲法",
+            "魅力的な",
+            "〜し続ける"
+          ],
+          "correct": 3,
+          "explanation": "「keep on ~ing」は「〜し続ける」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「laugh at」の意味として最も適切なものは？",
+          "choices": [
+            "競技場",
+            "請求書",
+            "呼吸する",
+            "〜を笑う"
+          ],
+          "correct": 3,
+          "explanation": "「laugh at」は「〜を笑う」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「leave behind」の意味として最も適切なものは？",
+          "choices": [
+            "片付ける",
+            "置き忘れる",
+            "構成",
+            "愛情"
+          ],
+          "correct": 1,
+          "explanation": "「leave behind」は「置き忘れる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「listen to」の意味として最も適切なものは？",
+          "choices": [
+            "初めて",
+            "構成する",
+            "同意する",
+            "〜を聴く"
+          ],
+          "correct": 3,
+          "explanation": "「listen to」は「〜を聴く」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look at」の意味として最も適切なものは？",
+          "choices": [
+            "貨物",
+            "結合する",
+            "横断幕",
+            "〜を見る"
+          ],
+          "correct": 3,
+          "explanation": "「look at」は「〜を見る」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look up」の意味として最も適切なものは？",
+          "choices": [
+            "最初は",
+            "噛む",
+            "見上げる・調べる",
+            "〜の場合には"
+          ],
+          "correct": 2,
+          "explanation": "「look up」は「見上げる・調べる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "重要熟語⑦：接続詞的表現",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(61〜70)",
+      "questions": [
+        {
+          "scenario": "「make a decision」の意味として最も適切なものは？",
+          "choices": [
+            "決定する",
+            "理髪師",
+            "総合的な",
+            "〜の場合には"
+          ],
+          "correct": 0,
+          "explanation": "「make a decision」は「決定する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make an effort」の意味として最も適切なものは？",
+          "choices": [
+            "十分な",
+            "ビール",
+            "進歩した",
+            "努力する"
+          ],
+          "correct": 3,
+          "explanation": "「make an effort」は「努力する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make friends with」の意味として最も適切なものは？",
+          "choices": [
+            "〜で死ぬ",
+            "感謝",
+            "注意",
+            "〜と友達になる"
+          ],
+          "correct": 3,
+          "explanation": "「make friends with」は「〜と友達になる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make sense」の意味として最も適切なものは？",
+          "choices": [
+            "認識",
+            "意味をなす",
+            "獣",
+            "条件"
+          ],
+          "correct": 1,
+          "explanation": "「make sense」は「意味をなす」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make sure」の意味として最も適切なものは？",
+          "choices": [
+            "意識している",
+            "懸念",
+            "実際の",
+            "確かめる"
+          ],
+          "correct": 3,
+          "explanation": "「make sure」は「確かめる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make up」の意味として最も適切なものは？",
+          "choices": [
+            "状況",
+            "構成する",
+            "試み",
+            "攻撃する"
+          ],
+          "correct": 1,
+          "explanation": "「make up」は「構成する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make up for」の意味として最も適切なものは？",
+          "choices": [
+            "〜に成功する",
+            "〜の埋め合わせをする",
+            "納得させる",
+            "バクテリア"
+          ],
+          "correct": 1,
+          "explanation": "「make up for」は「〜の埋め合わせをする」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「not at all」の意味として最も適切なものは？",
+          "choices": [
+            "業績",
+            "すべての",
+            "全く〜ない",
+            "〜を誇りに思う"
+          ],
+          "correct": 2,
+          "explanation": "「not at all」は「全く〜ない」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「nothing but」の意味として最も適切なものは？",
+          "choices": [
+            "廃止する",
+            "灰",
+            "機密の",
+            "〜にすぎない"
+          ],
+          "correct": 3,
+          "explanation": "「nothing but」は「〜にすぎない」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on board」の意味として最も適切なものは？",
+          "choices": [
+            "同盟国",
+            "搭乗して",
+            "耳が聞こえない",
+            "かなりの"
+          ],
+          "correct": 1,
+          "explanation": "「on board」は「搭乗して」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "重要熟語⑧：頻出イディオム(1)",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(71〜80)",
+      "questions": [
+        {
+          "scenario": "「on time」の意味として最も適切なものは？",
+          "choices": [
+            "時間通りに",
+            "出席する",
+            "〜したい気がする",
+            "品種"
+          ],
+          "correct": 0,
+          "explanation": "「on time」は「時間通りに」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「out of order」の意味として最も適切なものは？",
+          "choices": [
+            "記入する",
+            "変える",
+            "エプロン",
+            "故障して"
+          ],
+          "correct": 3,
+          "explanation": "「out of order」は「故障して」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「over and over」の意味として最も適切なものは？",
+          "choices": [
+            "何度も",
+            "警報",
+            "犯す",
+            "空白の"
+          ],
+          "correct": 0,
+          "explanation": "「over and over」は「何度も」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「prevent from」の意味として最も適切なものは？",
+          "choices": [
+            "〜するのを妨げる",
+            "前もって",
+            "腐敗した",
+            "片付ける"
+          ],
+          "correct": 0,
+          "explanation": "「prevent from」は「〜するのを妨げる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「remind of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を思い出させる",
+            "十分な",
+            "憲法の",
+            "賞賛"
+          ],
+          "correct": 0,
+          "explanation": "「remind of」は「〜を思い出させる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「result from」の意味として最も適切なものは？",
+          "choices": [
+            "納得させる",
+            "〜に到着する",
+            "すべての",
+            "〜から生じる"
+          ],
+          "correct": 3,
+          "explanation": "「result from」は「〜から生じる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「speak well of」の意味として最も適切なものは？",
+          "choices": [
+            "一致する",
+            "条件",
+            "〜を褒める",
+            "司教"
+          ],
+          "correct": 2,
+          "explanation": "「speak well of」は「〜を褒める」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stay up」の意味として最も適切なものは？",
+          "choices": [
+            "同盟国",
+            "起きている",
+            "吸収する",
+            "アルファベット"
+          ],
+          "correct": 1,
+          "explanation": "「stay up」は「起きている」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「succeed in」の意味として最も適切なものは？",
+          "choices": [
+            "事柄",
+            "同意する",
+            "攻撃的な",
+            "〜に成功する"
+          ],
+          "correct": 3,
+          "explanation": "「succeed in」は「〜に成功する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「suffer from」の意味として最も適切なものは？",
+          "choices": [
+            "〜で苦しむ",
+            "置き忘れる",
+            "前もって",
+            "構成する"
+          ],
+          "correct": 0,
+          "explanation": "「suffer from」は「〜で苦しむ」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "重要熟語⑨：頻出イディオム(2)",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(81〜90)",
+      "questions": [
+        {
+          "scenario": "「take pride in」の意味として最も適切なものは？",
+          "choices": [
+            "〜する傾向がある",
+            "農業",
+            "〜を誇りに思う",
+            "傑作の"
+          ],
+          "correct": 2,
+          "explanation": "「take pride in」は「〜を誇りに思う」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take turns」の意味として最も適切なものは？",
+          "choices": [
+            "対比する",
+            "混乱",
+            "交代でする",
+            "オークション"
+          ],
+          "correct": 2,
+          "explanation": "「take turns」は「交代でする」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tell from」の意味として最も適切なものは？",
+          "choices": [
+            "耳が聞こえない",
+            "〜から区別する",
+            "考慮",
+            "不利な"
+          ],
+          "correct": 1,
+          "explanation": "「tell from」は「〜から区別する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「tend to」の意味として最も適切なものは？",
+          "choices": [
+            "〜から区別する",
+            "樽",
+            "〜する傾向がある",
+            "祝福する"
+          ],
+          "correct": 2,
+          "explanation": "「tend to」は「〜する傾向がある」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「think of」の意味として最も適切なものは？",
+          "choices": [
+            "〜について考える",
+            "追加",
+            "具体的な",
+            "意識"
+          ],
+          "correct": 0,
+          "explanation": "「think of」は「〜について考える」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「try on」の意味として最も適切なものは？",
+          "choices": [
+            "偏見",
+            "変える",
+            "試着する",
+            "ひどい"
+          ],
+          "correct": 2,
+          "explanation": "「try on」は「試着する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn into」の意味として最も適切なものは？",
+          "choices": [
+            "結論",
+            "実施する",
+            "能力",
+            "〜に変わる"
+          ],
+          "correct": 3,
+          "explanation": "「turn into」は「〜に変わる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「back up」の意味として最も適切なものは？",
+          "choices": [
+            "絶対の",
+            "〜に飽きている",
+            "後退する",
+            "中心"
+          ],
+          "correct": 2,
+          "explanation": "「back up」は「後退する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bring in」の意味として最も適切なものは？",
+          "choices": [
+            "正確さ",
+            "見捨てる",
+            "納屋",
+            "持ち込む"
+          ],
+          "correct": 3,
+          "explanation": "「bring in」は「持ち込む」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clear up」の意味として最も適切なものは？",
+          "choices": [
+            "正しい",
+            "委員会",
+            "片付ける",
+            "とにかく"
+          ],
+          "correct": 2,
+          "explanation": "「clear up」は「片付ける」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "重要熟語⑩：総まとめ",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検準2級レベルの重要熟語・表現(91〜100)",
+      "questions": [
+        {
+          "scenario": "「come along」の意味として最も適切なものは？",
+          "choices": [
+            "気まずい",
+            "やってくる",
+            "噛む",
+            "義務的な"
+          ],
+          "correct": 1,
+          "explanation": "「come along」は「やってくる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come back」の意味として最も適切なものは？",
+          "choices": [
+            "非常に重要な",
+            "戻る",
+            "発表",
+            "最善を尽くす"
+          ],
+          "correct": 1,
+          "explanation": "「come back」は「戻る」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drop by」の意味として最も適切なものは？",
+          "choices": [
+            "進歩した",
+            "従来の",
+            "立ち寄る",
+            "盆地"
+          ],
+          "correct": 2,
+          "explanation": "「drop by」は「立ち寄る」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drop in」の意味として最も適切なものは？",
+          "choices": [
+            "確かめる",
+            "放棄",
+            "〜から成る",
+            "立ち寄る"
+          ],
+          "correct": 3,
+          "explanation": "「drop in」は「立ち寄る」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drop off」の意味として最も適切なものは？",
+          "choices": [
+            "起こる",
+            "結論",
+            "降ろす",
+            "構成"
+          ],
+          "correct": 2,
+          "explanation": "「drop off」は「降ろす」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fall in love」の意味として最も適切なものは？",
+          "choices": [
+            "ベルト",
+            "恋に落ちる",
+            "良心",
+            "不平"
+          ],
+          "correct": 1,
+          "explanation": "「fall in love」は「恋に落ちる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fill in」の意味として最も適切なものは？",
+          "choices": [
+            "記入する",
+            "混乱した",
+            "退屈な人",
+            "悩ます"
+          ],
+          "correct": 0,
+          "explanation": "「fill in」は「記入する」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get away」の意味として最も適切なものは？",
+          "choices": [
+            "立ち寄る",
+            "応募者",
+            "盆地",
+            "逃げる"
+          ],
+          "correct": 3,
+          "explanation": "「get away」は「逃げる」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get back」の意味として最も適切なものは？",
+          "choices": [
+            "原因となる",
+            "分析",
+            "戻る",
+            "隠す"
+          ],
+          "correct": 2,
+          "explanation": "「get back」は「戻る」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give back」の意味として最も適切なものは？",
+          "choices": [
+            "片付ける",
+            "返す",
+            "不正行為",
+            "眠って"
+          ],
+          "correct": 1,
+          "explanation": "「give back」は「返す」という意味の重要熟語です。文脈に合わせて正しく訳せるようにしましょう。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

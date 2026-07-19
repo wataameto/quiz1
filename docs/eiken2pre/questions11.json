@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "形容詞・副詞編3セット1",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1001~1010",
+      "questions": [
+        {
+          "scenario": "「convex」の意味として最も適切なものは？",
+          "choices": [
+            "凸状の",
+            "議論の余地のある",
+            "荒涼とした",
+            "装飾的な"
+          ],
+          "correct": 0,
+          "explanation": "「convex」は「凸状の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convincing」の意味として最も適切なものは？",
+          "choices": [
+            "国内の・家庭の",
+            "説得力のある",
+            "荒涼とした",
+            "愉快な"
+          ],
+          "correct": 1,
+          "explanation": "「convincing」は「説得力のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convivial」の意味として最も適切なものは？",
+          "choices": [
+            "落胆した",
+            "陽気な",
+            "評判の悪い",
+            "失礼な"
+          ],
+          "correct": 1,
+          "explanation": "「convivial」は「陽気な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cooperative」の意味として最も適切なものは？",
+          "choices": [
+            "協力的な",
+            "国内の・家庭の",
+            "恐ろしい",
+            "まったくの"
+          ],
+          "correct": 0,
+          "explanation": "「cooperative」は「協力的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crude」の意味として最も適切なものは？",
+          "choices": [
+            "愉快な",
+            "明確な",
+            "生の・大雑把な",
+            "著名な"
+          ],
+          "correct": 2,
+          "explanation": "「crude」は「生の・大雑把な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「customary」の意味として最も適切なものは？",
+          "choices": [
+            "嘆かわしい",
+            "公平な・無関心な",
+            "慣習的な",
+            "著名な"
+          ],
+          "correct": 2,
+          "explanation": "「customary」は「慣習的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decent」の意味として最も適切なものは？",
+          "choices": [
+            "落胆した",
+            "不釣り合いな",
+            "まったくの",
+            "まともな・上品な"
+          ],
+          "correct": 3,
+          "explanation": "「decent」は「まともな・上品な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deceptive」の意味として最も適切なものは？",
+          "choices": [
+            "人をだますような",
+            "気を取られた",
+            "荒涼とした",
+            "破壊的な"
+          ],
+          "correct": 0,
+          "explanation": "「deceptive」は「人をだますような」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decisive」の意味として最も適切なものは？",
+          "choices": [
+            "類似していない",
+            "離婚した",
+            "決定的な",
+            "めまいがする"
+          ],
+          "correct": 2,
+          "explanation": "「decisive」は「決定的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decorative」の意味として最も適切なものは？",
+          "choices": [
+            "意気消沈した",
+            "離婚した",
+            "装飾的な",
+            "鬱にさせるような"
+          ],
+          "correct": 2,
+          "explanation": "「decorative」は「装飾的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "形容詞・副詞編3セット2",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1011~1020",
+      "questions": [
+        {
+          "scenario": "「dedicated」の意味として最も適切なものは？",
+          "choices": [
+            "発展した",
+            "退屈な",
+            "献身的な",
+            "協力的な"
+          ],
+          "correct": 2,
+          "explanation": "「dedicated」は「献身的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「defective」の意味として最も適切なものは？",
+          "choices": [
+            "不釣り合いな",
+            "欠陥のある",
+            "不従順な",
+            "悲惨な"
+          ],
+          "correct": 1,
+          "explanation": "「defective」は「欠陥のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「defensive」の意味として最も適切なものは？",
+          "choices": [
+            "独断的な",
+            "まともな・上品な",
+            "気が進まない",
+            "防御的な"
+          ],
+          "correct": 3,
+          "explanation": "「defensive」は「防御的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deficient」の意味として最も適切なものは？",
+          "choices": [
+            "不足している",
+            "説得力のある",
+            "破壊的な",
+            "憂鬱な"
+          ],
+          "correct": 0,
+          "explanation": "「deficient」は「不足している」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「definite」の意味として最も適切なものは？",
+          "choices": [
+            "明確な",
+            "失礼な",
+            "信頼できる",
+            "要求の厳しい"
+          ],
+          "correct": 0,
+          "explanation": "「definite」は「明確な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「definitive」の意味として最も適切なものは？",
+          "choices": [
+            "落胆した",
+            "決定的な",
+            "慎重な",
+            "外交的な"
+          ],
+          "correct": 1,
+          "explanation": "「definitive」は「決定的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deliberate」の意味として最も適切なものは？",
+          "choices": [
+            "破壊的な",
+            "意気消沈した",
+            "意図的な・慎重な",
+            "悲痛な"
+          ],
+          "correct": 2,
+          "explanation": "「deliberate」は「意図的な・慎重な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delicate」の意味として最も適切なものは？",
+          "choices": [
+            "分離した・公平な",
+            "劇的な",
+            "悲惨な",
+            "繊細な"
+          ],
+          "correct": 3,
+          "explanation": "「delicate」は「繊細な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delightful」の意味として最も適切なものは？",
+          "choices": [
+            "粘り強い",
+            "歪んだ",
+            "愉快な",
+            "実におぞましい"
+          ],
+          "correct": 2,
+          "explanation": "「delightful」は「愉快な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demanding」の意味として最も適切なものは？",
+          "choices": [
+            "不足している",
+            "まったくの",
+            "めまいがする",
+            "要求の厳しい"
+          ],
+          "correct": 3,
+          "explanation": "「demanding」は「要求の厳しい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "形容詞・副詞編3セット3",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1021~1030",
+      "questions": [
+        {
+          "scenario": "「democratic」の意味として最も適切なものは？",
+          "choices": [
+            "分離した・公平な",
+            "独特の",
+            "差別的な・眼識のある",
+            "民主的な"
+          ],
+          "correct": 3,
+          "explanation": "「democratic」は「民主的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dense」の意味として最も適切なものは？",
+          "choices": [
+            "慣習的な",
+            "不忠実な",
+            "独特の",
+            "密集した"
+          ],
+          "correct": 3,
+          "explanation": "「dense」は「密集した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dental」の意味として最も適切なものは？",
+          "choices": [
+            "献身的な",
+            "差別的な・眼識のある",
+            "歯の",
+            "防御的な"
+          ],
+          "correct": 2,
+          "explanation": "「dental」は「歯の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dependable」の意味として最も適切なものは？",
+          "choices": [
+            "信頼できる",
+            "議論の余地のある",
+            "憂鬱な",
+            "慎重な"
+          ],
+          "correct": 0,
+          "explanation": "「dependable」は「信頼できる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dependent」の意味として最も適切なものは？",
+          "choices": [
+            "欠陥のある",
+            "依存している",
+            "断固とした",
+            "多様な"
+          ],
+          "correct": 1,
+          "explanation": "「dependent」は「依存している」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deplorable」の意味として最も適切なものは？",
+          "choices": [
+            "鬱にさせるような",
+            "愉快な",
+            "当然の",
+            "嘆かわしい"
+          ],
+          "correct": 3,
+          "explanation": "「deplorable」は「嘆かわしい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depressed」の意味として最も適切なものは？",
+          "choices": [
+            "破壊的な",
+            "意気消沈した",
+            "うろたえた",
+            "劇的な"
+          ],
+          "correct": 1,
+          "explanation": "「depressed」は「意気消沈した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depressing」の意味として最も適切なものは？",
+          "choices": [
+            "防御的な",
+            "憂鬱な",
+            "鬱にさせるような",
+            "運命づけられた"
+          ],
+          "correct": 2,
+          "explanation": "「depressing」は「鬱にさせるような」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deprived」の意味として最も適切なものは？",
+          "choices": [
+            "恵まれない",
+            "明確な",
+            "欠陥のある",
+            "個々の"
+          ],
+          "correct": 0,
+          "explanation": "「deprived」は「恵まれない」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「descriptive」の意味として最も適切なものは？",
+          "choices": [
+            "描写的な",
+            "悲惨な",
+            "不釣り合いな",
+            "慎重な"
+          ],
+          "correct": 0,
+          "explanation": "「descriptive」は「描写的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "形容詞・副詞編3セット4",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1031~1040",
+      "questions": [
+        {
+          "scenario": "「deserved」の意味として最も適切なものは？",
+          "choices": [
+            "当然の",
+            "要求の厳しい",
+            "分離した・公平な",
+            "慎重な"
+          ],
+          "correct": 0,
+          "explanation": "「deserved」は「当然の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「desolate」の意味として最も適切なものは？",
+          "choices": [
+            "不従順な",
+            "荒涼とした",
+            "愉快な",
+            "人をだますような"
+          ],
+          "correct": 1,
+          "explanation": "「desolate」は「荒涼とした」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「desperate」の意味として最も適切なものは？",
+          "choices": [
+            "鬱にさせるような",
+            "防御的な",
+            "独特の",
+            "絶望的な"
+          ],
+          "correct": 3,
+          "explanation": "「desperate」は「絶望的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「destructive」の意味として最も適切なものは？",
+          "choices": [
+            "凸状の",
+            "恵まれない",
+            "愉快な",
+            "破壊的な"
+          ],
+          "correct": 3,
+          "explanation": "「destructive」は「破壊的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「detached」の意味として最も適切なものは？",
+          "choices": [
+            "不釣り合いな",
+            "分離した・公平な",
+            "公平な・無関心な",
+            "悲痛な"
+          ],
+          "correct": 1,
+          "explanation": "「detached」は「分離した・公平な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「detailed」の意味として最も適切なものは？",
+          "choices": [
+            "詳細な",
+            "不忠実な",
+            "悲惨な",
+            "眠い"
+          ],
+          "correct": 0,
+          "explanation": "「detailed」は「詳細な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「determined」の意味として最も適切なものは？",
+          "choices": [
+            "不穏な",
+            "断固とした",
+            "協力的な",
+            "民主的な"
+          ],
+          "correct": 1,
+          "explanation": "「determined」は「断固とした」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「devastating」の意味として最も適切なものは？",
+          "choices": [
+            "壊滅的な",
+            "説得力のある",
+            "失望させる",
+            "荒涼とした"
+          ],
+          "correct": 0,
+          "explanation": "「devastating」は「壊滅的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「developed」の意味として最も適切なものは？",
+          "choices": [
+            "慎重な",
+            "憂鬱な",
+            "方向感覚を失った",
+            "発展した"
+          ],
+          "correct": 3,
+          "explanation": "「developed」は「発展した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「developing」の意味として最も適切なものは？",
+          "choices": [
+            "気を取られた",
+            "障害のある",
+            "分離した・公平な",
+            "発展途上の"
+          ],
+          "correct": 3,
+          "explanation": "「developing」は「発展途上の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞・副詞編3セット5",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1041~1050",
+      "questions": [
+        {
+          "scenario": "「devoted」の意味として最も適切なものは？",
+          "choices": [
+            "分離した・公平な",
+            "国内の・家庭の",
+            "不愉快な",
+            "献身的な"
+          ],
+          "correct": 3,
+          "explanation": "「devoted」は「献身的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「diligent」の意味として最も適切なものは？",
+          "choices": [
+            "繊細な",
+            "勤勉な",
+            "発展途上の",
+            "うつむいた"
+          ],
+          "correct": 1,
+          "explanation": "「diligent」は「勤勉な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「diplomatic」の意味として最も適切なものは？",
+          "choices": [
+            "うつむいた",
+            "意気消沈した",
+            "分離した・公平な",
+            "外交的な"
+          ],
+          "correct": 3,
+          "explanation": "「diplomatic」は「外交的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dire」の意味として最も適切なものは？",
+          "choices": [
+            "荒涼とした",
+            "国内の・家庭の",
+            "神聖な",
+            "悲惨な"
+          ],
+          "correct": 3,
+          "explanation": "「dire」は「悲惨な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disabled」の意味として最も適切なものは？",
+          "choices": [
+            "装飾的な",
+            "当然の",
+            "障害のある",
+            "従順な"
+          ],
+          "correct": 2,
+          "explanation": "「disabled」は「障害のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disagreeable」の意味として最も適切なものは？",
+          "choices": [
+            "不愉快な",
+            "独断的な",
+            "うろたえた",
+            "破壊的な"
+          ],
+          "correct": 0,
+          "explanation": "「disagreeable」は「不愉快な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disappointing」の意味として最も適切なものは？",
+          "choices": [
+            "壊滅的な",
+            "憂鬱な",
+            "失望させる",
+            "説得力のある"
+          ],
+          "correct": 2,
+          "explanation": "「disappointing」は「失望させる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disastrous」の意味として最も適切なものは？",
+          "choices": [
+            "協力的な",
+            "悲惨な",
+            "評判の悪い",
+            "鬱にさせるような"
+          ],
+          "correct": 1,
+          "explanation": "「disastrous」は「悲惨な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discouraged」の意味として最も適切なものは？",
+          "choices": [
+            "詳細な",
+            "個々の",
+            "うつむいた",
+            "落胆した"
+          ],
+          "correct": 3,
+          "explanation": "「discouraged」は「落胆した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discreet」の意味として最も適切なものは？",
+          "choices": [
+            "発展した",
+            "うつむいた",
+            "失望させる",
+            "慎重な"
+          ],
+          "correct": 3,
+          "explanation": "「discreet」は「慎重な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞・副詞編3セット6",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1051~1060",
+      "questions": [
+        {
+          "scenario": "「discrete」の意味として最も適切なものは？",
+          "choices": [
+            "信頼できる",
+            "個々の",
+            "繊細な",
+            "決定的な"
+          ],
+          "correct": 1,
+          "explanation": "「discrete」は「個々の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discriminating」の意味として最も適切なものは？",
+          "choices": [
+            "嘆かわしい",
+            "評判の悪い",
+            "要求の厳しい",
+            "差別的な・眼識のある"
+          ],
+          "correct": 3,
+          "explanation": "「discriminating」は「差別的な・眼識のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disgusted」の意味として最も適切なものは？",
+          "choices": [
+            "分離した・公平な",
+            "嫌悪感を抱いた",
+            "劇的な",
+            "信頼できる"
+          ],
+          "correct": 1,
+          "explanation": "「disgusted」は「嫌悪感を抱いた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disgusting」の意味として最も適切なものは？",
+          "choices": [
+            "めまいがする",
+            "国内の・家庭の",
+            "実におぞましい",
+            "不愉快な"
+          ],
+          "correct": 2,
+          "explanation": "「disgusting」は「実におぞましい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dishonest」の意味として最も適切なものは？",
+          "choices": [
+            "めまいがする",
+            "人をだますような",
+            "不正直な",
+            "個々の"
+          ],
+          "correct": 2,
+          "explanation": "「dishonest」は「不正直な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disillusioned」の意味として最も適切なものは？",
+          "choices": [
+            "不満な",
+            "幻滅した",
+            "公平な・無関心な",
+            "うろたえた"
+          ],
+          "correct": 1,
+          "explanation": "「disillusioned」は「幻滅した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disinclined」の意味として最も適切なものは？",
+          "choices": [
+            "気が進まない",
+            "不穏な",
+            "嫌悪感を抱いた",
+            "発展した"
+          ],
+          "correct": 0,
+          "explanation": "「disinclined」は「気が進まない」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disinterested」の意味として最も適切なものは？",
+          "choices": [
+            "公平な・無関心な",
+            "荒涼とした",
+            "嘆かわしい",
+            "幻滅した"
+          ],
+          "correct": 0,
+          "explanation": "「disinterested」は「公平な・無関心な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disloyal」の意味として最も適切なものは？",
+          "choices": [
+            "不忠実な",
+            "破壊的な",
+            "評判の悪い",
+            "障害のある"
+          ],
+          "correct": 0,
+          "explanation": "「disloyal」は「不忠実な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dismal」の意味として最も適切なものは？",
+          "choices": [
+            "憂鬱な",
+            "装飾的な",
+            "国内の・家庭の",
+            "恵まれない"
+          ],
+          "correct": 0,
+          "explanation": "「dismal」は「憂鬱な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "形容詞・副詞編3セット7",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1061~1070",
+      "questions": [
+        {
+          "scenario": "「dismayed」の意味として最も適切なものは？",
+          "choices": [
+            "悲惨な",
+            "従順な",
+            "劇的な",
+            "うろたえた"
+          ],
+          "correct": 3,
+          "explanation": "「dismayed」は「うろたえた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disobedient」の意味として最も適切なものは？",
+          "choices": [
+            "不従順な",
+            "協力的な",
+            "従順な",
+            "勤勉な"
+          ],
+          "correct": 0,
+          "explanation": "「disobedient」は「不従順な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disorderly」の意味として最も適切なものは？",
+          "choices": [
+            "憂鬱な",
+            "発展した",
+            "不正直な",
+            "無秩序な"
+          ],
+          "correct": 3,
+          "explanation": "「disorderly」は「無秩序な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disorganized」の意味として最も適切なものは？",
+          "choices": [
+            "不愉快な",
+            "装飾的な",
+            "無秩序な",
+            "人をだますような"
+          ],
+          "correct": 2,
+          "explanation": "「disorganized」は「無秩序な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disoriented」の意味として最も適切なものは？",
+          "choices": [
+            "めまいがする",
+            "方向感覚を失った",
+            "多様な",
+            "悲惨な"
+          ],
+          "correct": 1,
+          "explanation": "「disoriented」は「方向感覚を失った」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disposable」の意味として最も適切なものは？",
+          "choices": [
+            "献身的な",
+            "使い捨ての",
+            "繊細な",
+            "依存している"
+          ],
+          "correct": 1,
+          "explanation": "「disposable」は「使い捨ての」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disproportionate」の意味として最も適切なものは？",
+          "choices": [
+            "不釣り合いな",
+            "防御的な",
+            "信頼できる",
+            "離婚した"
+          ],
+          "correct": 0,
+          "explanation": "「disproportionate」は「不釣り合いな」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disputable」の意味として最も適切なものは？",
+          "choices": [
+            "著名な",
+            "劇的な",
+            "粘り強い",
+            "議論の余地のある"
+          ],
+          "correct": 3,
+          "explanation": "「disputable」は「議論の余地のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disreputable」の意味として最も適切なものは？",
+          "choices": [
+            "繊細な",
+            "悲痛な",
+            "使い捨ての",
+            "評判の悪い"
+          ],
+          "correct": 3,
+          "explanation": "「disreputable」は「評判の悪い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disrespectful」の意味として最も適切なものは？",
+          "choices": [
+            "神聖な",
+            "失礼な",
+            "陽気な",
+            "めまいがする"
+          ],
+          "correct": 1,
+          "explanation": "「disrespectful」は「失礼な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "形容詞・副詞編3セット8",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1071~1080",
+      "questions": [
+        {
+          "scenario": "「disruptive」の意味として最も適切なものは？",
+          "choices": [
+            "愉快な",
+            "信頼できる",
+            "破壊的な",
+            "国内の・家庭の"
+          ],
+          "correct": 2,
+          "explanation": "「disruptive」は「破壊的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dissatisfied」の意味として最も適切なものは？",
+          "choices": [
+            "不満な",
+            "絶望的な",
+            "不釣り合いな",
+            "無秩序な"
+          ],
+          "correct": 0,
+          "explanation": "「dissatisfied」は「不満な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dissimilar」の意味として最も適切なものは？",
+          "choices": [
+            "外交的な",
+            "類似していない",
+            "装飾的な",
+            "人をだますような"
+          ],
+          "correct": 1,
+          "explanation": "「dissimilar」は「類似していない」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distinct」の意味として最も適切なものは？",
+          "choices": [
+            "離婚した",
+            "独断的な",
+            "説得力のある",
+            "明確な"
+          ],
+          "correct": 3,
+          "explanation": "「distinct」は「明確な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distinctive」の意味として最も適切なものは？",
+          "choices": [
+            "独特の",
+            "うろたえた",
+            "慣習的な",
+            "決定的な"
+          ],
+          "correct": 0,
+          "explanation": "「distinctive」は「独特の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distinguished」の意味として最も適切なものは？",
+          "choices": [
+            "断固とした",
+            "著名な",
+            "壊滅的な",
+            "慎重な"
+          ],
+          "correct": 1,
+          "explanation": "「distinguished」は「著名な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distorted」の意味として最も適切なものは？",
+          "choices": [
+            "悲惨な",
+            "密集した",
+            "気を取られた",
+            "歪んだ"
+          ],
+          "correct": 3,
+          "explanation": "「distorted」は「歪んだ」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distracted」の意味として最も適切なものは？",
+          "choices": [
+            "繊細な",
+            "気を取られた",
+            "無秩序な",
+            "要求の厳しい"
+          ],
+          "correct": 1,
+          "explanation": "「distracted」は「気を取られた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distressing」の意味として最も適切なものは？",
+          "choices": [
+            "失望させる",
+            "悲痛な",
+            "要求の厳しい",
+            "分離した・公平な"
+          ],
+          "correct": 1,
+          "explanation": "「distressing」は「悲痛な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disturbed」の意味として最も適切なものは？",
+          "choices": [
+            "恵まれない",
+            "議論の余地のある",
+            "失望させる",
+            "動揺した"
+          ],
+          "correct": 3,
+          "explanation": "「disturbed」は「動揺した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "形容詞・副詞編3セット9",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1081~1090",
+      "questions": [
+        {
+          "scenario": "「disturbing」の意味として最も適切なものは？",
+          "choices": [
+            "無秩序な",
+            "当然の",
+            "まったくの",
+            "不穏な"
+          ],
+          "correct": 3,
+          "explanation": "「disturbing」は「不穏な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「diverse」の意味として最も適切なものは？",
+          "choices": [
+            "多様な",
+            "人をだますような",
+            "無秩序な",
+            "鬱にさせるような"
+          ],
+          "correct": 0,
+          "explanation": "「diverse」は「多様な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「divine」の意味として最も適切なものは？",
+          "choices": [
+            "気が進まない",
+            "神聖な",
+            "意図的な・慎重な",
+            "破壊的な"
+          ],
+          "correct": 1,
+          "explanation": "「divine」は「神聖な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「divorced」の意味として最も適切なものは？",
+          "choices": [
+            "不満な",
+            "要求の厳しい",
+            "外交的な",
+            "離婚した"
+          ],
+          "correct": 3,
+          "explanation": "「divorced」は「離婚した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dizzy」の意味として最も適切なものは？",
+          "choices": [
+            "粘り強い",
+            "気が進まない",
+            "めまいがする",
+            "悲惨な"
+          ],
+          "correct": 2,
+          "explanation": "「dizzy」は「めまいがする」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「docile」の意味として最も適切なものは？",
+          "choices": [
+            "意気消沈した",
+            "決定的な",
+            "不穏な",
+            "従順な"
+          ],
+          "correct": 3,
+          "explanation": "「docile」は「従順な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dogged」の意味として最も適切なものは？",
+          "choices": [
+            "説得力のある",
+            "無秩序な",
+            "悲惨な",
+            "粘り強い"
+          ],
+          "correct": 3,
+          "explanation": "「dogged」は「粘り強い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dogmatic」の意味として最も適切なものは？",
+          "choices": [
+            "絶望的な",
+            "独断的な",
+            "方向感覚を失った",
+            "明確な"
+          ],
+          "correct": 1,
+          "explanation": "「dogmatic」は「独断的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「domestic」の意味として最も適切なものは？",
+          "choices": [
+            "装飾的な",
+            "国内の・家庭の",
+            "勤勉な",
+            "発展した"
+          ],
+          "correct": 1,
+          "explanation": "「domestic」は「国内の・家庭の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dominant」の意味として最も適切なものは？",
+          "choices": [
+            "議論の余地のある",
+            "公平な・無関心な",
+            "支配的な",
+            "まったくの"
+          ],
+          "correct": 2,
+          "explanation": "「dominant」は「支配的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "形容詞・副詞編3セット10",
+      "type": "vocabulary",
+      "emoji": "📐",
+      "subtitle": "英検準2級の形容詞・副詞 1091~1100",
+      "questions": [
+        {
+          "scenario": "「doomed」の意味として最も適切なものは？",
+          "choices": [
+            "運命づけられた",
+            "不忠実な",
+            "幻滅した",
+            "不従順な"
+          ],
+          "correct": 0,
+          "explanation": "「doomed」は「運命づけられた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「doubtful」の意味として最も適切なものは？",
+          "choices": [
+            "眠い",
+            "疑わしい",
+            "陽気な",
+            "うつむいた"
+          ],
+          "correct": 1,
+          "explanation": "「doubtful」は「疑わしい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「downcast」の意味として最も適切なものは？",
+          "choices": [
+            "劇的な",
+            "欠陥のある",
+            "独断的な",
+            "うつむいた"
+          ],
+          "correct": 3,
+          "explanation": "「downcast」は「うつむいた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「downright」の意味として最も適切なものは？",
+          "choices": [
+            "差別的な・眼識のある",
+            "悲惨な",
+            "まったくの",
+            "評判の悪い"
+          ],
+          "correct": 2,
+          "explanation": "「downright」は「まったくの」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「downward」の意味として最も適切なものは？",
+          "choices": [
+            "信頼できる",
+            "眠い",
+            "下方の",
+            "壊滅的な"
+          ],
+          "correct": 2,
+          "explanation": "「downward」は「下方の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dramatic」の意味として最も適切なものは？",
+          "choices": [
+            "劇的な",
+            "嘆かわしい",
+            "詳細な",
+            "下方の"
+          ],
+          "correct": 0,
+          "explanation": "「dramatic」は「劇的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drastic」の意味として最も適切なものは？",
+          "choices": [
+            "人をだますような",
+            "不足している",
+            "当然の",
+            "劇的な"
+          ],
+          "correct": 3,
+          "explanation": "「drastic」は「劇的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dreadful」の意味として最も適切なものは？",
+          "choices": [
+            "慎重な",
+            "人をだますような",
+            "不穏な",
+            "恐ろしい"
+          ],
+          "correct": 3,
+          "explanation": "「dreadful」は「恐ろしい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dreary」の意味として最も適切なものは？",
+          "choices": [
+            "疑わしい",
+            "議論の余地のある",
+            "退屈な",
+            "明確な"
+          ],
+          "correct": 2,
+          "explanation": "「dreary」は「退屈な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drowsy」の意味として最も適切なものは？",
+          "choices": [
+            "眠い",
+            "荒涼とした",
+            "慎重な",
+            "失望させる"
+          ],
+          "correct": 0,
+          "explanation": "「drowsy」は「眠い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

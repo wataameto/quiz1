@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "名詞編4セット1",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 801~810",
+      "questions": [
+        {
+          "scenario": "「brink」の意味として最も適切なものは？",
+          "choices": [
+            "円周",
+            "文明",
+            "瀬戸際",
+            "一貫性"
+          ],
+          "correct": 2,
+          "explanation": "「brink」は「瀬戸際」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「briskness」の意味として最も適切なものは？",
+          "choices": [
+            "共存",
+            "閉鎖",
+            "連合",
+            "活発さ"
+          ],
+          "correct": 3,
+          "explanation": "「briskness」は「活発さ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bristle」の意味として最も適切なものは？",
+          "choices": [
+            "認知",
+            "結合",
+            "コード・和音",
+            "剛毛"
+          ],
+          "correct": 3,
+          "explanation": "「bristle」は「剛毛」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「broadband」の意味として最も適切なものは？",
+          "choices": [
+            "空洞・虫歯",
+            "煙突",
+            "ブロードバンド",
+            "衣類"
+          ],
+          "correct": 2,
+          "explanation": "「broadband」は「ブロードバンド」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brochure」の意味として最も適切なものは？",
+          "choices": [
+            "分類",
+            "民間人",
+            "収集",
+            "パンフレット"
+          ],
+          "correct": 3,
+          "explanation": "「brochure」は「パンフレット」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「broker」の意味として最も適切なものは？",
+          "choices": [
+            "コロイド",
+            "解明",
+            "仲介業者",
+            "一族"
+          ],
+          "correct": 2,
+          "explanation": "「broker」は「仲介業者」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bronze」の意味として最も適切なものは？",
+          "choices": [
+            "カタログ",
+            "引用",
+            "聖職者",
+            "青銅"
+          ],
+          "correct": 3,
+          "explanation": "「bronze」は「青銅」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brooch」の意味として最も適切なものは？",
+          "choices": [
+            "礼拝堂",
+            "眉・額",
+            "ブローチ",
+            "一貫性"
+          ],
+          "correct": 2,
+          "explanation": "「brooch」は「ブローチ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brood」の意味として最も適切なものは？",
+          "choices": [
+            "礼拝堂",
+            "ひな",
+            "墓地",
+            "剛毛"
+          ],
+          "correct": 1,
+          "explanation": "「brood」は「ひな」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brook」の意味として最も適切なものは？",
+          "choices": [
+            "繭",
+            "摂氏",
+            "小川",
+            "煙突"
+          ],
+          "correct": 2,
+          "explanation": "「brook」は「小川」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編4セット2",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 811~820",
+      "questions": [
+        {
+          "scenario": "「broom」の意味として最も適切なものは？",
+          "choices": [
+            "学術討論会",
+            "認知",
+            "ほうき",
+            "大学"
+          ],
+          "correct": 2,
+          "explanation": "「broom」は「ほうき」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「broth」の意味として最も適切なものは？",
+          "choices": [
+            "スープ",
+            "大臣・学長",
+            "文明",
+            "閉鎖"
+          ],
+          "correct": 0,
+          "explanation": "「broth」は「スープ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brow」の意味として最も適切なものは？",
+          "choices": [
+            "礼拝堂",
+            "残虐行為",
+            "携帯品預かり所",
+            "眉・額"
+          ],
+          "correct": 3,
+          "explanation": "「brow」は「眉・額」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brutality」の意味として最も適切なものは？",
+          "choices": [
+            "衣類",
+            "年代記",
+            "キャッシュフロー",
+            "残虐行為"
+          ],
+          "correct": 3,
+          "explanation": "「brutality」は「残虐行為」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「capability」の意味として最も適切なものは？",
+          "choices": [
+            "有名人",
+            "能力",
+            "学術討論会",
+            "登山家"
+          ],
+          "correct": 1,
+          "explanation": "「capability」は「能力」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「capsule」の意味として最も適切なものは？",
+          "choices": [
+            "民間人",
+            "カプセル",
+            "明瞭さ",
+            "カタログ"
+          ],
+          "correct": 1,
+          "explanation": "「capsule」は「カプセル」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cartoon」の意味として最も適切なものは？",
+          "choices": [
+            "空洞・虫歯",
+            "サーカス",
+            "共同研究",
+            "漫画"
+          ],
+          "correct": 3,
+          "explanation": "「cartoon」は「漫画」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cashflow」の意味として最も適切なものは？",
+          "choices": [
+            "墓地",
+            "キャッシュフロー",
+            "ひな",
+            "クローン"
+          ],
+          "correct": 1,
+          "explanation": "「cashflow」は「キャッシュフロー」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「catalog」の意味として最も適切なものは？",
+          "choices": [
+            "議長",
+            "礼拝堂",
+            "カタログ",
+            "除去・整理"
+          ],
+          "correct": 2,
+          "explanation": "「catalog」は「カタログ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「catastrophe」の意味として最も適切なものは？",
+          "choices": [
+            "残虐行為",
+            "大惨事",
+            "パンフレット",
+            "キャッシュフロー"
+          ],
+          "correct": 1,
+          "explanation": "「catastrophe」は「大惨事」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編4セット3",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 821~830",
+      "questions": [
+        {
+          "scenario": "「cavity」の意味として最も適切なものは？",
+          "choices": [
+            "空洞・虫歯",
+            "円周",
+            "議長",
+            "聖歌隊"
+          ],
+          "correct": 0,
+          "explanation": "「cavity」は「空洞・虫歯」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「celebrity」の意味として最も適切なものは？",
+          "choices": [
+            "除去・整理",
+            "塊",
+            "有名人",
+            "ブロードバンド"
+          ],
+          "correct": 2,
+          "explanation": "「celebrity」は「有名人」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cello」の意味として最も適切なものは？",
+          "choices": [
+            "キャッシュフロー",
+            "サクラ",
+            "携帯品預かり所",
+            "チェロ"
+          ],
+          "correct": 3,
+          "explanation": "「cello」は「チェロ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cemetery」の意味として最も適切なものは？",
+          "choices": [
+            "爪",
+            "会議場・部屋",
+            "墓地",
+            "ブロードバンド"
+          ],
+          "correct": 2,
+          "explanation": "「cemetery」は「墓地」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「census」の意味として最も適切なものは？",
+          "choices": [
+            "爪",
+            "聖職者",
+            "国勢調査",
+            "衣類"
+          ],
+          "correct": 2,
+          "explanation": "「census」は「国勢調査」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「centigrade」の意味として最も適切なものは？",
+          "choices": [
+            "一貫性",
+            "摂氏",
+            "眉・額",
+            "仲介業者"
+          ],
+          "correct": 1,
+          "explanation": "「centigrade」は「摂氏」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「certification」の意味として最も適切なものは？",
+          "choices": [
+            "ほうき",
+            "掃除機",
+            "証明",
+            "結合"
+          ],
+          "correct": 2,
+          "explanation": "「certification」は「証明」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chairman」の意味として最も適切なものは？",
+          "choices": [
+            "議長",
+            "カタログ",
+            "聖歌隊",
+            "石炭"
+          ],
+          "correct": 0,
+          "explanation": "「chairman」は「議長」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chamber」の意味として最も適切なものは？",
+          "choices": [
+            "収集",
+            "会議場・部屋",
+            "クローゼット",
+            "聖歌隊"
+          ],
+          "correct": 1,
+          "explanation": "「chamber」は「会議場・部屋」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chancellor」の意味として最も適切なものは？",
+          "choices": [
+            "大惨事",
+            "大臣・学長",
+            "青銅",
+            "合唱"
+          ],
+          "correct": 1,
+          "explanation": "「chancellor」は「大臣・学長」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編4セット4",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 831~840",
+      "questions": [
+        {
+          "scenario": "「chapel」の意味として最も適切なものは？",
+          "choices": [
+            "集団",
+            "礼拝堂",
+            "民間人",
+            "眉・額"
+          ],
+          "correct": 1,
+          "explanation": "「chapel」は「礼拝堂」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charter」の意味として最も適切なものは？",
+          "choices": [
+            "海岸線",
+            "カタログ",
+            "クラッチ・つかむこと",
+            "憲章・貸切"
+          ],
+          "correct": 3,
+          "explanation": "「charter」は「憲章・貸切」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cherry」の意味として最も適切なものは？",
+          "choices": [
+            "サクラ",
+            "収集家",
+            "礼拝堂",
+            "ココア"
+          ],
+          "correct": 0,
+          "explanation": "「cherry」は「サクラ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chess」の意味として最も適切なものは？",
+          "choices": [
+            "チェス",
+            "スープ",
+            "カプセル",
+            "裂け目"
+          ],
+          "correct": 0,
+          "explanation": "「chess」は「チェス」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「childhood」の意味として最も適切なものは？",
+          "choices": [
+            "スープ",
+            "衝突",
+            "漫画",
+            "子供時代"
+          ],
+          "correct": 3,
+          "explanation": "「childhood」は「子供時代」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chimney」の意味として最も適切なものは？",
+          "choices": [
+            "サーカス",
+            "空洞・虫歯",
+            "煙突",
+            "解明"
+          ],
+          "correct": 2,
+          "explanation": "「chimney」は「煙突」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chimpanzee」の意味として最も適切なものは？",
+          "choices": [
+            "ほうき",
+            "チンパンジー",
+            "国勢調査",
+            "瀬戸際"
+          ],
+          "correct": 1,
+          "explanation": "「chimpanzee」は「チンパンジー」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chip」の意味として最も適切なものは？",
+          "choices": [
+            "証明",
+            "かけら・チップ",
+            "剛毛",
+            "ブロードバンド"
+          ],
+          "correct": 1,
+          "explanation": "「chip」は「かけら・チップ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「choir」の意味として最も適切なものは？",
+          "choices": [
+            "冷たさ",
+            "証明",
+            "聖歌隊",
+            "眉・額"
+          ],
+          "correct": 2,
+          "explanation": "「choir」は「聖歌隊」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cholesterol」の意味として最も適切なものは？",
+          "choices": [
+            "コレステロール",
+            "同僚",
+            "裂け目",
+            "クモの巣"
+          ],
+          "correct": 0,
+          "explanation": "「cholesterol」は「コレステロール」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編4セット5",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 841~850",
+      "questions": [
+        {
+          "scenario": "「chord」の意味として最も適切なものは？",
+          "choices": [
+            "共同研究",
+            "クラッチ・つかむこと",
+            "コード・和音",
+            "石炭"
+          ],
+          "correct": 2,
+          "explanation": "「chord」は「コード・和音」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chore」の意味として最も適切なものは？",
+          "choices": [
+            "有名人",
+            "一貫性",
+            "雑用",
+            "ココナッツ"
+          ],
+          "correct": 2,
+          "explanation": "「chore」は「雑用」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chorus」の意味として最も適切なものは？",
+          "choices": [
+            "会議場・部屋",
+            "合唱",
+            "コレステロール",
+            "煙突"
+          ],
+          "correct": 1,
+          "explanation": "「chorus」は「合唱」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chronicle」の意味として最も適切なものは？",
+          "choices": [
+            "年代記",
+            "瀬戸際",
+            "カプセル",
+            "雑用"
+          ],
+          "correct": 0,
+          "explanation": "「chronicle」は「年代記」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chunk」の意味として最も適切なものは？",
+          "choices": [
+            "サクラ",
+            "塊",
+            "子供時代",
+            "明瞭さ"
+          ],
+          "correct": 1,
+          "explanation": "「chunk」は「塊」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circuit」の意味として最も適切なものは？",
+          "choices": [
+            "サーカス",
+            "集団",
+            "回路",
+            "爪"
+          ],
+          "correct": 2,
+          "explanation": "「circuit」は「回路」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circumference」の意味として最も適切なものは？",
+          "choices": [
+            "冷たさ",
+            "円周",
+            "石炭",
+            "認知"
+          ],
+          "correct": 1,
+          "explanation": "「circumference」は「円周」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circus」の意味として最も適切なものは？",
+          "choices": [
+            "礼拝堂",
+            "襟",
+            "チェロ",
+            "サーカス"
+          ],
+          "correct": 3,
+          "explanation": "「circus」は「サーカス」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「citation」の意味として最も適切なものは？",
+          "choices": [
+            "コレステロール",
+            "引用",
+            "認知",
+            "二枚貝"
+          ],
+          "correct": 1,
+          "explanation": "「citation」は「引用」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「citizenship」の意味として最も適切なものは？",
+          "choices": [
+            "最高潮",
+            "爪",
+            "円周",
+            "市民権"
+          ],
+          "correct": 3,
+          "explanation": "「citizenship」は「市民権」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編4セット6",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 851~860",
+      "questions": [
+        {
+          "scenario": "「civilian」の意味として最も適切なものは？",
+          "choices": [
+            "コレステロール",
+            "民間人",
+            "墓地",
+            "かけら・チップ"
+          ],
+          "correct": 1,
+          "explanation": "「civilian」は「民間人」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「civilization」の意味として最も適切なものは？",
+          "choices": [
+            "共同研究",
+            "パンフレット",
+            "クモの巣",
+            "文明"
+          ],
+          "correct": 3,
+          "explanation": "「civilization」は「文明」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clam」の意味として最も適切なものは？",
+          "choices": [
+            "憲章・貸切",
+            "聖職者",
+            "操縦席",
+            "二枚貝"
+          ],
+          "correct": 3,
+          "explanation": "「clam」は「二枚貝」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clan」の意味として最も適切なものは？",
+          "choices": [
+            "共同研究",
+            "一族",
+            "民間人",
+            "チェロ"
+          ],
+          "correct": 1,
+          "explanation": "「clan」は「一族」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clarification」の意味として最も適切なものは？",
+          "choices": [
+            "裂け目",
+            "摂氏",
+            "年代記",
+            "解明"
+          ],
+          "correct": 3,
+          "explanation": "「clarification」は「解明」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clarity」の意味として最も適切なものは？",
+          "choices": [
+            "年代記",
+            "聖歌隊",
+            "証明",
+            "明瞭さ"
+          ],
+          "correct": 3,
+          "explanation": "「clarity」は「明瞭さ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「classification」の意味として最も適切なものは？",
+          "choices": [
+            "煙突",
+            "分類",
+            "衝突",
+            "布"
+          ],
+          "correct": 1,
+          "explanation": "「classification」は「分類」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「classmate」の意味として最も適切なものは？",
+          "choices": [
+            "同級生",
+            "ブロードバンド",
+            "チェロ",
+            "小川"
+          ],
+          "correct": 0,
+          "explanation": "「classmate」は「同級生」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「claw」の意味として最も適切なものは？",
+          "choices": [
+            "民間人",
+            "クラッチ・つかむこと",
+            "残虐行為",
+            "爪"
+          ],
+          "correct": 3,
+          "explanation": "「claw」は「爪」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clay」の意味として最も適切なものは？",
+          "choices": [
+            "ブローチ",
+            "粘土",
+            "青銅",
+            "布"
+          ],
+          "correct": 1,
+          "explanation": "「clay」は「粘土」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "名詞編4セット7",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 861~870",
+      "questions": [
+        {
+          "scenario": "「cleaner」の意味として最も適切なものは？",
+          "choices": [
+            "青銅",
+            "能力",
+            "掃除機",
+            "文明"
+          ],
+          "correct": 2,
+          "explanation": "「cleaner」は「掃除機」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cleaning」の意味として最も適切なものは？",
+          "choices": [
+            "サーカス",
+            "摂氏",
+            "掃除",
+            "携帯品預かり所"
+          ],
+          "correct": 2,
+          "explanation": "「cleaning」は「掃除」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clearance」の意味として最も適切なものは？",
+          "choices": [
+            "サーカス",
+            "瀬戸際",
+            "除去・整理",
+            "登山家"
+          ],
+          "correct": 2,
+          "explanation": "「clearance」は「除去・整理」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cleavage」の意味として最も適切なものは？",
+          "choices": [
+            "閉鎖",
+            "大臣・学長",
+            "裂け目",
+            "コード・和音"
+          ],
+          "correct": 2,
+          "explanation": "「cleavage」は「裂け目」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clergy」の意味として最も適切なものは？",
+          "choices": [
+            "一族",
+            "サクラ",
+            "聖職者",
+            "憲章・貸切"
+          ],
+          "correct": 2,
+          "explanation": "「clergy」は「聖職者」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「climax」の意味として最も適切なものは？",
+          "choices": [
+            "聖歌隊",
+            "大臣・学長",
+            "最高潮",
+            "掃除機"
+          ],
+          "correct": 2,
+          "explanation": "「climax」は「最高潮」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「climber」の意味として最も適切なものは？",
+          "choices": [
+            "登山家",
+            "会議場・部屋",
+            "年代記",
+            "剛毛"
+          ],
+          "correct": 0,
+          "explanation": "「climber」は「登山家」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cloakroom」の意味として最も適切なものは？",
+          "choices": [
+            "摂氏",
+            "二枚貝",
+            "携帯品預かり所",
+            "ほうき"
+          ],
+          "correct": 2,
+          "explanation": "「cloakroom」は「携帯品預かり所」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clone」の意味として最も適切なものは？",
+          "choices": [
+            "結合",
+            "円周",
+            "ココナッツ",
+            "クローン"
+          ],
+          "correct": 3,
+          "explanation": "「clone」は「クローン」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「closet」の意味として最も適切なものは？",
+          "choices": [
+            "子供時代",
+            "かけら・チップ",
+            "クローゼット",
+            "大学"
+          ],
+          "correct": 2,
+          "explanation": "「closet」は「クローゼット」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "名詞編4セット8",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 871~880",
+      "questions": [
+        {
+          "scenario": "「closure」の意味として最も適切なものは？",
+          "choices": [
+            "剛毛",
+            "憲章・貸切",
+            "明瞭さ",
+            "閉鎖"
+          ],
+          "correct": 3,
+          "explanation": "「closure」は「閉鎖」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cloth」の意味として最も適切なものは？",
+          "choices": [
+            "円周",
+            "掃除",
+            "能力",
+            "布"
+          ],
+          "correct": 3,
+          "explanation": "「cloth」は「布」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clothing」の意味として最も適切なものは？",
+          "choices": [
+            "スープ",
+            "チンパンジー",
+            "衣類",
+            "除去・整理"
+          ],
+          "correct": 2,
+          "explanation": "「clothing」は「衣類」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clump」の意味として最も適切なものは？",
+          "choices": [
+            "塊",
+            "最高潮",
+            "除去・整理",
+            "議長"
+          ],
+          "correct": 0,
+          "explanation": "「clump」は「塊」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cluster」の意味として最も適切なものは？",
+          "choices": [
+            "コード・和音",
+            "活発さ",
+            "集団",
+            "年代記"
+          ],
+          "correct": 2,
+          "explanation": "「cluster」は「集団」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clutch」の意味として最も適切なものは？",
+          "choices": [
+            "剛毛",
+            "クラッチ・つかむこと",
+            "登山家",
+            "かけら・チップ"
+          ],
+          "correct": 1,
+          "explanation": "「clutch」は「クラッチ・つかむこと」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coal」の意味として最も適切なものは？",
+          "choices": [
+            "小川",
+            "石炭",
+            "引用",
+            "回路"
+          ],
+          "correct": 1,
+          "explanation": "「coal」は「石炭」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coalition」の意味として最も適切なものは？",
+          "choices": [
+            "引用",
+            "塊",
+            "連合",
+            "偶然の一致"
+          ],
+          "correct": 2,
+          "explanation": "「coalition」は「連合」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coastline」の意味として最も適切なものは？",
+          "choices": [
+            "礼拝堂",
+            "海岸線",
+            "偶然の一致",
+            "爪"
+          ],
+          "correct": 1,
+          "explanation": "「coastline」は「海岸線」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cobweb」の意味として最も適切なものは？",
+          "choices": [
+            "チェロ",
+            "ブローチ",
+            "分類",
+            "クモの巣"
+          ],
+          "correct": 3,
+          "explanation": "「cobweb」は「クモの巣」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "名詞編4セット9",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 881~890",
+      "questions": [
+        {
+          "scenario": "「cockpit」の意味として最も適切なものは？",
+          "choices": [
+            "合唱",
+            "チェロ",
+            "操縦席",
+            "衝突"
+          ],
+          "correct": 2,
+          "explanation": "「cockpit」は「操縦席」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cocoa」の意味として最も適切なものは？",
+          "choices": [
+            "ブローチ",
+            "ココア",
+            "衝突",
+            "仲介業者"
+          ],
+          "correct": 1,
+          "explanation": "「cocoa」は「ココア」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coconut」の意味として最も適切なものは？",
+          "choices": [
+            "クモの巣",
+            "ココナッツ",
+            "海岸線",
+            "除去・整理"
+          ],
+          "correct": 1,
+          "explanation": "「coconut」は「ココナッツ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cocoon」の意味として最も適切なものは？",
+          "choices": [
+            "煙突",
+            "活発さ",
+            "繭",
+            "議長"
+          ],
+          "correct": 2,
+          "explanation": "「cocoon」は「繭」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coexistence」の意味として最も適切なものは？",
+          "choices": [
+            "収集家",
+            "共存",
+            "小川",
+            "閉鎖"
+          ],
+          "correct": 1,
+          "explanation": "「coexistence」は「共存」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coffin」の意味として最も適切なものは？",
+          "choices": [
+            "棺",
+            "繭",
+            "ブロードバンド",
+            "海岸線"
+          ],
+          "correct": 0,
+          "explanation": "「coffin」は「棺」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cognition」の意味として最も適切なものは？",
+          "choices": [
+            "認知",
+            "粘土",
+            "能力",
+            "証明"
+          ],
+          "correct": 0,
+          "explanation": "「cognition」は「認知」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coherence」の意味として最も適切なものは？",
+          "choices": [
+            "文明",
+            "市民権",
+            "一貫性",
+            "礼拝堂"
+          ],
+          "correct": 2,
+          "explanation": "「coherence」は「一貫性」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cohesion」の意味として最も適切なものは？",
+          "choices": [
+            "連合",
+            "裂け目",
+            "学術討論会",
+            "結合"
+          ],
+          "correct": 3,
+          "explanation": "「cohesion」は「結合」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coincidence」の意味として最も適切なものは？",
+          "choices": [
+            "円周",
+            "会議場・部屋",
+            "偶然の一致",
+            "結合"
+          ],
+          "correct": 2,
+          "explanation": "「coincidence」は「偶然の一致」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "名詞編4セット10",
+      "type": "vocabulary",
+      "emoji": "📦",
+      "subtitle": "英検準2級の名詞 891~900",
+      "questions": [
+        {
+          "scenario": "「coldness」の意味として最も適切なものは？",
+          "choices": [
+            "冷たさ",
+            "塊",
+            "小川",
+            "大臣・学長"
+          ],
+          "correct": 0,
+          "explanation": "「coldness」は「冷たさ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collaboration」の意味として最も適切なものは？",
+          "choices": [
+            "共同研究",
+            "引用",
+            "共存",
+            "能力"
+          ],
+          "correct": 0,
+          "explanation": "「collaboration」は「共同研究」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collar」の意味として最も適切なものは？",
+          "choices": [
+            "ココナッツ",
+            "煙突",
+            "瀬戸際",
+            "襟"
+          ],
+          "correct": 3,
+          "explanation": "「collar」は「襟」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「colleague」の意味として最も適切なものは？",
+          "choices": [
+            "結合",
+            "同僚",
+            "眉・額",
+            "パンフレット"
+          ],
+          "correct": 1,
+          "explanation": "「colleague」は「同僚」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collection」の意味として最も適切なものは？",
+          "choices": [
+            "連合",
+            "大惨事",
+            "裂け目",
+            "収集"
+          ],
+          "correct": 3,
+          "explanation": "「collection」は「収集」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collector」の意味として最も適切なものは？",
+          "choices": [
+            "残虐行為",
+            "棺",
+            "収集家",
+            "認知"
+          ],
+          "correct": 2,
+          "explanation": "「collector」は「収集家」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「college」の意味として最も適切なものは？",
+          "choices": [
+            "雑用",
+            "塊",
+            "大学",
+            "明瞭さ"
+          ],
+          "correct": 2,
+          "explanation": "「college」は「大学」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collision」の意味として最も適切なものは？",
+          "choices": [
+            "集団",
+            "冷たさ",
+            "ココア",
+            "衝突"
+          ],
+          "correct": 3,
+          "explanation": "「collision」は「衝突」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「colloid」の意味として最も適切なものは？",
+          "choices": [
+            "コロイド",
+            "引用",
+            "ひな",
+            "冷たさ"
+          ],
+          "correct": 0,
+          "explanation": "「colloid」は「コロイド」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「colloquium」の意味として最も適切なものは？",
+          "choices": [
+            "学術討論会",
+            "除去・整理",
+            "会議場・部屋",
+            "コード・和音"
+          ],
+          "correct": 0,
+          "explanation": "「colloquium」は「学術討論会」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

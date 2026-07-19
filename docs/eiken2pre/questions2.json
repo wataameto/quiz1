@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "名詞編①：生活・身近な物",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（1〜10）",
+      "questions": [
+        {
+          "scenario": "「acid」の意味として最も適切なものは？",
+          "choices": [
+            "アルファベット",
+            "原子",
+            "理髪師",
+            "酸"
+          ],
+          "correct": 3,
+          "explanation": "「acid」は「酸」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「agent」の意味として最も適切なものは？",
+          "choices": [
+            "鐘",
+            "エプロン",
+            "代理人",
+            "横断幕"
+          ],
+          "correct": 2,
+          "explanation": "「agent」は「代理人」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alcohol」の意味として最も適切なものは？",
+          "choices": [
+            "キャンプ",
+            "資産",
+            "アルコール",
+            "ビスケット"
+          ],
+          "correct": 2,
+          "explanation": "「alcohol」は「アルコール」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alien」の意味として最も適切なものは？",
+          "choices": [
+            "宇宙人",
+            "アーチ",
+            "ベンチ",
+            "オークション"
+          ],
+          "correct": 0,
+          "explanation": "「alien」は「宇宙人」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ally」の意味として最も適切なものは？",
+          "choices": [
+            "同盟国",
+            "鐘",
+            "レンガ",
+            "生物学"
+          ],
+          "correct": 0,
+          "explanation": "「ally」は「同盟国」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alphabet」の意味として最も適切なものは？",
+          "choices": [
+            "競技場",
+            "アルファベット",
+            "暴行",
+            "生物学"
+          ],
+          "correct": 1,
+          "explanation": "「alphabet」は「アルファベット」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ambulance」の意味として最も適切なものは？",
+          "choices": [
+            "ブレーキ",
+            "競技場",
+            "救急車",
+            "認識"
+          ],
+          "correct": 2,
+          "explanation": "「ambulance」は「救急車」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anchor」の意味として最も適切なものは？",
+          "choices": [
+            "かご",
+            "錨",
+            "矢",
+            "底"
+          ],
+          "correct": 1,
+          "explanation": "「anchor」は「錨」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ankle」の意味として最も適切なものは？",
+          "choices": [
+            "アルコール",
+            "バルコニー",
+            "足首",
+            "ベリー"
+          ],
+          "correct": 2,
+          "explanation": "「ankle」は「足首」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ape」の意味として最も適切なものは？",
+          "choices": [
+            "司教",
+            "救急車",
+            "類人猿",
+            "ボーナス"
+          ],
+          "correct": 2,
+          "explanation": "「ape」は「類人猿」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "名詞編②：自然・環境",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（11〜20）",
+      "questions": [
+        {
+          "scenario": "「app」の意味として最も適切なものは？",
+          "choices": [
+            "宇宙人",
+            "樽",
+            "酸",
+            "アプリ"
+          ],
+          "correct": 3,
+          "explanation": "「app」は「アプリ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「applicant」の意味として最も適切なものは？",
+          "choices": [
+            "炭素",
+            "竹",
+            "応募者",
+            "コウモリ・バット"
+          ],
+          "correct": 2,
+          "explanation": "「applicant」は「応募者」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apron」の意味として最も適切なものは？",
+          "choices": [
+            "エプロン",
+            "ボーナス",
+            "子牛",
+            "水族館"
+          ],
+          "correct": 0,
+          "explanation": "「apron」は「エプロン」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aquarium」の意味として最も適切なものは？",
+          "choices": [
+            "自転車",
+            "レンガ",
+            "水族館",
+            "酸"
+          ],
+          "correct": 2,
+          "explanation": "「aquarium」は「水族館」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arch」の意味として最も適切なものは？",
+          "choices": [
+            "アプリ",
+            "灰",
+            "子牛",
+            "アーチ"
+          ],
+          "correct": 3,
+          "explanation": "「arch」は「アーチ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「architecture」の意味として最も適切なものは？",
+          "choices": [
+            "鐘",
+            "救急車",
+            "建築",
+            "算数"
+          ],
+          "correct": 2,
+          "explanation": "「architecture」は「建築」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arena」の意味として最も適切なものは？",
+          "choices": [
+            "体",
+            "競技場",
+            "類人猿",
+            "レンガ"
+          ],
+          "correct": 1,
+          "explanation": "「arena」は「競技場」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arithmetic」の意味として最も適切なものは？",
+          "choices": [
+            "炭素",
+            "オークション",
+            "算数",
+            "大通り"
+          ],
+          "correct": 2,
+          "explanation": "「arithmetic」は「算数」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arrow」の意味として最も適切なものは？",
+          "choices": [
+            "矢",
+            "類人猿",
+            "横断幕",
+            "光線"
+          ],
+          "correct": 0,
+          "explanation": "「arrow」は「矢」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「artifact」の意味として最も適切なものは？",
+          "choices": [
+            "軸",
+            "運動選手",
+            "体",
+            "遺物"
+          ],
+          "correct": 3,
+          "explanation": "「artifact」は「遺物」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "名詞編③：社会・文化",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（21〜30）",
+      "questions": [
+        {
+          "scenario": "「ash」の意味として最も適切なものは？",
+          "choices": [
+            "代理人",
+            "灰",
+            "暴行",
+            "炭素"
+          ],
+          "correct": 1,
+          "explanation": "「ash」は「灰」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assault」の意味として最も適切なものは？",
+          "choices": [
+            "暴行",
+            "あごひげ",
+            "納屋",
+            "餌"
+          ],
+          "correct": 0,
+          "explanation": "「assault」は「暴行」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assembly」の意味として最も適切なものは？",
+          "choices": [
+            "建築",
+            "集会",
+            "運動選手",
+            "救急車"
+          ],
+          "correct": 1,
+          "explanation": "「assembly」は「集会」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「asset」の意味として最も適切なものは？",
+          "choices": [
+            "アルファベット",
+            "アプリ",
+            "資産",
+            "応募者"
+          ],
+          "correct": 2,
+          "explanation": "「asset」は「資産」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「athlete」の意味として最も適切なものは？",
+          "choices": [
+            "運動選手",
+            "酸",
+            "請求書",
+            "ラクダ"
+          ],
+          "correct": 0,
+          "explanation": "「athlete」は「運動選手」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「atom」の意味として最も適切なものは？",
+          "choices": [
+            "獣",
+            "アルファベット",
+            "植物学",
+            "原子"
+          ],
+          "correct": 3,
+          "explanation": "「atom」は「原子」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attribute」の意味として最も適切なものは？",
+          "choices": [
+            "ベリー",
+            "爆発",
+            "属性",
+            "音声"
+          ],
+          "correct": 2,
+          "explanation": "「attribute」は「属性」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「auction」の意味として最も適切なものは？",
+          "choices": [
+            "遺物",
+            "オークション",
+            "乞食",
+            "子牛"
+          ],
+          "correct": 1,
+          "explanation": "「auction」は「オークション」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「audio」の意味として最も適切なものは？",
+          "choices": [
+            "樹皮",
+            "キャプテン",
+            "遺物",
+            "音声"
+          ],
+          "correct": 3,
+          "explanation": "「audio」は「音声」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「auto」の意味として最も適切なものは？",
+          "choices": [
+            "休憩",
+            "自動車",
+            "オークション",
+            "ベルト"
+          ],
+          "correct": 1,
+          "explanation": "「auto」は「自動車」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "名詞編④：身体・健康",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（31〜40）",
+      "questions": [
+        {
+          "scenario": "「autonomy」の意味として最も適切なものは？",
+          "choices": [
+            "矢",
+            "集会",
+            "原子",
+            "自治"
+          ],
+          "correct": 3,
+          "explanation": "「autonomy」は「自治」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「avenue」の意味として最も適切なものは？",
+          "choices": [
+            "矢",
+            "大通り",
+            "容器",
+            "樹皮"
+          ],
+          "correct": 1,
+          "explanation": "「avenue」は「大通り」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「awareness」の意味として最も適切なものは？",
+          "choices": [
+            "植物学",
+            "コウモリ・バット",
+            "カーペット",
+            "認識"
+          ],
+          "correct": 3,
+          "explanation": "「awareness」は「認識」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「axis」の意味として最も適切なものは？",
+          "choices": [
+            "樹皮",
+            "アルコール",
+            "ビスケット",
+            "軸"
+          ],
+          "correct": 3,
+          "explanation": "「axis」は「軸」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bachelor」の意味として最も適切なものは？",
+          "choices": [
+            "競技場",
+            "独身男性",
+            "樹皮",
+            "花嫁"
+          ],
+          "correct": 1,
+          "explanation": "「bachelor」は「独身男性」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bacteria」の意味として最も適切なものは？",
+          "choices": [
+            "鐘",
+            "杖",
+            "投票",
+            "バクテリア"
+          ],
+          "correct": 3,
+          "explanation": "「bacteria」は「バクテリア」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「badge」の意味として最も適切なものは？",
+          "choices": [
+            "花嫁",
+            "バッジ",
+            "ラクダ",
+            "灰"
+          ],
+          "correct": 1,
+          "explanation": "「badge」は「バッジ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bait」の意味として最も適切なものは？",
+          "choices": [
+            "杖",
+            "あごひげ",
+            "餌",
+            "バックル"
+          ],
+          "correct": 2,
+          "explanation": "「bait」は「餌」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「baker」の意味として最も適切なものは？",
+          "choices": [
+            "樹皮",
+            "パン屋",
+            "上司",
+            "横断幕"
+          ],
+          "correct": 1,
+          "explanation": "「baker」は「パン屋」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「balcony」の意味として最も適切なものは？",
+          "choices": [
+            "バッジ",
+            "バルコニー",
+            "ビスケット",
+            "植物学"
+          ],
+          "correct": 1,
+          "explanation": "「balcony」は「バルコニー」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "名詞編⑤：科学・技術",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（41〜50）",
+      "questions": [
+        {
+          "scenario": "「ballot」の意味として最も適切なものは？",
+          "choices": [
+            "容器",
+            "応募者",
+            "投票",
+            "体"
+          ],
+          "correct": 2,
+          "explanation": "「ballot」は「投票」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bamboo」の意味として最も適切なものは？",
+          "choices": [
+            "コウモリ・バット",
+            "竹",
+            "ボーナス",
+            "集会"
+          ],
+          "correct": 1,
+          "explanation": "「bamboo」は「竹」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「banner」の意味として最も適切なものは？",
+          "choices": [
+            "軸",
+            "宇宙人",
+            "竹",
+            "横断幕"
+          ],
+          "correct": 3,
+          "explanation": "「banner」は「横断幕」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「banquet」の意味として最も適切なものは？",
+          "choices": [
+            "代理人",
+            "宴会",
+            "一団",
+            "花嫁"
+          ],
+          "correct": 1,
+          "explanation": "「banquet」は「宴会」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bar」の意味として最も適切なものは？",
+          "choices": [
+            "獣",
+            "アプリ",
+            "棒・酒場",
+            "エプロン"
+          ],
+          "correct": 2,
+          "explanation": "「bar」は「棒・酒場」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「barber」の意味として最も適切なものは？",
+          "choices": [
+            "樹皮",
+            "理髪師",
+            "キャプテン",
+            "水族館"
+          ],
+          "correct": 1,
+          "explanation": "「barber」は「理髪師」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bark」の意味として最も適切なものは？",
+          "choices": [
+            "樹皮",
+            "キャプテン",
+            "生物学",
+            "矢"
+          ],
+          "correct": 0,
+          "explanation": "「bark」は「樹皮」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「barn」の意味として最も適切なものは？",
+          "choices": [
+            "納屋",
+            "バルコニー",
+            "錨",
+            "宴会"
+          ],
+          "correct": 0,
+          "explanation": "「barn」は「納屋」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「barrel」の意味として最も適切なものは？",
+          "choices": [
+            "樽",
+            "音声",
+            "灰",
+            "独身男性"
+          ],
+          "correct": 0,
+          "explanation": "「barrel」は「樽」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「base」の意味として最も適切なものは？",
+          "choices": [
+            "基礎",
+            "かご",
+            "暴行",
+            "自治"
+          ],
+          "correct": 0,
+          "explanation": "「base」は「基礎」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "名詞編⑥：ビジネス・経済",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（51〜60）",
+      "questions": [
+        {
+          "scenario": "「basin」の意味として最も適切なものは？",
+          "choices": [
+            "あごひげ",
+            "カーペット",
+            "灰",
+            "盆地"
+          ],
+          "correct": 3,
+          "explanation": "「basin」は「盆地」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「basket」の意味として最も適切なものは？",
+          "choices": [
+            "容器",
+            "かご",
+            "キャンバス",
+            "パン屋"
+          ],
+          "correct": 1,
+          "explanation": "「basket」は「かご」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bat」の意味として最も適切なものは？",
+          "choices": [
+            "コウモリ・バット",
+            "塊",
+            "横断幕",
+            "アプリ"
+          ],
+          "correct": 0,
+          "explanation": "「bat」は「コウモリ・バット」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「batch」の意味として最も適切なものは？",
+          "choices": [
+            "体",
+            "一団",
+            "真鍮",
+            "光線"
+          ],
+          "correct": 1,
+          "explanation": "「batch」は「一団」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beam」の意味として最も適切なものは？",
+          "choices": [
+            "炭素",
+            "宴会",
+            "鐘",
+            "光線"
+          ],
+          "correct": 3,
+          "explanation": "「beam」は「光線」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bean」の意味として最も適切なものは？",
+          "choices": [
+            "自動車",
+            "アルコール",
+            "類人猿",
+            "豆"
+          ],
+          "correct": 3,
+          "explanation": "「bean」は「豆」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beard」の意味として最も適切なものは？",
+          "choices": [
+            "独身男性",
+            "あごひげ",
+            "甲虫",
+            "樽"
+          ],
+          "correct": 1,
+          "explanation": "「beard」は「あごひげ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beast」の意味として最も適切なものは？",
+          "choices": [
+            "アプリ",
+            "容器",
+            "基礎",
+            "獣"
+          ],
+          "correct": 3,
+          "explanation": "「beast」は「獣」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beer」の意味として最も適切なものは？",
+          "choices": [
+            "ビール",
+            "エプロン",
+            "自動車",
+            "ベリー"
+          ],
+          "correct": 0,
+          "explanation": "「beer」は「ビール」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beetle」の意味として最も適切なものは？",
+          "choices": [
+            "アルコール",
+            "光線",
+            "樹皮",
+            "甲虫"
+          ],
+          "correct": 3,
+          "explanation": "「beetle」は「甲虫」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "名詞編⑦：乗り物・交通",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（61〜70）",
+      "questions": [
+        {
+          "scenario": "「beggar」の意味として最も適切なものは？",
+          "choices": [
+            "ビール",
+            "生物学",
+            "真鍮",
+            "乞食"
+          ],
+          "correct": 3,
+          "explanation": "「beggar」は「乞食」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bell」の意味として最も適切なものは？",
+          "choices": [
+            "少し",
+            "ベンチ",
+            "応募者",
+            "鐘"
+          ],
+          "correct": 3,
+          "explanation": "「bell」は「鐘」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「belly」の意味として最も適切なものは？",
+          "choices": [
+            "一団",
+            "上司",
+            "パン屋",
+            "腹"
+          ],
+          "correct": 3,
+          "explanation": "「belly」は「腹」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「belt」の意味として最も適切なものは？",
+          "choices": [
+            "刃",
+            "キャプテン",
+            "ベルト",
+            "一団"
+          ],
+          "correct": 2,
+          "explanation": "「belt」は「ベルト」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bench」の意味として最も適切なものは？",
+          "choices": [
+            "杖",
+            "炭素",
+            "ベンチ",
+            "キャンプ"
+          ],
+          "correct": 2,
+          "explanation": "「bench」は「ベンチ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「berry」の意味として最も適切なものは？",
+          "choices": [
+            "パン屋",
+            "キャプテン",
+            "ベリー",
+            "ボーナス"
+          ],
+          "correct": 2,
+          "explanation": "「berry」は「ベリー」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bicycle」の意味として最も適切なものは？",
+          "choices": [
+            "乞食",
+            "自転車",
+            "属性",
+            "あごひげ"
+          ],
+          "correct": 1,
+          "explanation": "「bicycle」は「自転車」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bill」の意味として最も適切なものは？",
+          "choices": [
+            "理髪師",
+            "代理人",
+            "請求書",
+            "豆"
+          ],
+          "correct": 2,
+          "explanation": "「bill」は「請求書」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bin」の意味として最も適切なものは？",
+          "choices": [
+            "花嫁",
+            "生物学",
+            "容器",
+            "算数"
+          ],
+          "correct": 2,
+          "explanation": "「bin」は「容器」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「biology」の意味として最も適切なものは？",
+          "choices": [
+            "救急車",
+            "コウモリ・バット",
+            "生物学",
+            "竹"
+          ],
+          "correct": 2,
+          "explanation": "「biology」は「生物学」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "名詞編⑧：動物・植物",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（71〜80）",
+      "questions": [
+        {
+          "scenario": "「biscuit」の意味として最も適切なものは？",
+          "choices": [
+            "容器",
+            "代理人",
+            "アルファベット",
+            "ビスケット"
+          ],
+          "correct": 3,
+          "explanation": "「biscuit」は「ビスケット」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bishop」の意味として最も適切なものは？",
+          "choices": [
+            "運動選手",
+            "司教",
+            "獣",
+            "バルコニー"
+          ],
+          "correct": 1,
+          "explanation": "「bishop」は「司教」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bit」の意味として最も適切なものは？",
+          "choices": [
+            "樹皮",
+            "一団",
+            "アルファベット",
+            "少し"
+          ],
+          "correct": 3,
+          "explanation": "「bit」は「少し」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blade」の意味として最も適切なものは？",
+          "choices": [
+            "司教",
+            "遺物",
+            "刃",
+            "ラクダ"
+          ],
+          "correct": 2,
+          "explanation": "「blade」は「刃」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blast」の意味として最も適切なものは？",
+          "choices": [
+            "爆発",
+            "キャンバス",
+            "応募者",
+            "遺物"
+          ],
+          "correct": 0,
+          "explanation": "「blast」は「爆発」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「block」の意味として最も適切なものは？",
+          "choices": [
+            "ラクダ",
+            "塊",
+            "宴会",
+            "獣"
+          ],
+          "correct": 1,
+          "explanation": "「block」は「塊」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「body」の意味として最も適切なものは？",
+          "choices": [
+            "アルコール",
+            "体",
+            "かご",
+            "ブーツ"
+          ],
+          "correct": 1,
+          "explanation": "「body」は「体」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bomb」の意味として最も適切なものは？",
+          "choices": [
+            "ベリー",
+            "棒・酒場",
+            "資産",
+            "爆弾"
+          ],
+          "correct": 3,
+          "explanation": "「bomb」は「爆弾」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bond」の意味として最も適切なものは？",
+          "choices": [
+            "腹",
+            "矢",
+            "絆",
+            "軸"
+          ],
+          "correct": 2,
+          "explanation": "「bond」は「絆」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bonus」の意味として最も適切なものは？",
+          "choices": [
+            "ボーナス",
+            "容器",
+            "錨",
+            "甲虫"
+          ],
+          "correct": 0,
+          "explanation": "「bonus」は「ボーナス」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "名詞編⑨：場所・建物",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（81〜90）",
+      "questions": [
+        {
+          "scenario": "「boot」の意味として最も適切なものは？",
+          "choices": [
+            "キャプテン",
+            "請求書",
+            "ブーツ",
+            "司教"
+          ],
+          "correct": 2,
+          "explanation": "「boot」は「ブーツ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「booth」の意味として最も適切なものは？",
+          "choices": [
+            "ブース",
+            "キャプテン",
+            "オークション",
+            "ラクダ"
+          ],
+          "correct": 0,
+          "explanation": "「booth」は「ブース」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boss」の意味として最も適切なものは？",
+          "choices": [
+            "上司",
+            "光線",
+            "竹",
+            "ビール"
+          ],
+          "correct": 0,
+          "explanation": "「boss」は「上司」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「botany」の意味として最も適切なものは？",
+          "choices": [
+            "バクテリア",
+            "体",
+            "植物学",
+            "宴会"
+          ],
+          "correct": 2,
+          "explanation": "「botany」は「植物学」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bottom」の意味として最も適切なものは？",
+          "choices": [
+            "ベンチ",
+            "餌",
+            "底",
+            "アルコール"
+          ],
+          "correct": 2,
+          "explanation": "「bottom」は「底」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brake」の意味として最も適切なものは？",
+          "choices": [
+            "大通り",
+            "請求書",
+            "ブレーキ",
+            "自治"
+          ],
+          "correct": 2,
+          "explanation": "「brake」は「ブレーキ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brass」の意味として最も適切なものは？",
+          "choices": [
+            "アーチ",
+            "矢",
+            "真鍮",
+            "竹"
+          ],
+          "correct": 2,
+          "explanation": "「brass」は「真鍮」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break」の意味として最も適切なものは？",
+          "choices": [
+            "炭素",
+            "休憩",
+            "請求書",
+            "大通り"
+          ],
+          "correct": 1,
+          "explanation": "「break」は「休憩」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brick」の意味として最も適切なものは？",
+          "choices": [
+            "レンガ",
+            "請求書",
+            "算数",
+            "炭素"
+          ],
+          "correct": 0,
+          "explanation": "「brick」は「レンガ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bride」の意味として最も適切なものは？",
+          "choices": [
+            "バッジ",
+            "盆地",
+            "餌",
+            "花嫁"
+          ],
+          "correct": 3,
+          "explanation": "「bride」は「花嫁」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "名詞編⑩：抽象概念",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検準2級の頻出名詞（91〜100）",
+      "questions": [
+        {
+          "scenario": "「buckle」の意味として最も適切なものは？",
+          "choices": [
+            "アルファベット",
+            "納屋",
+            "バックル",
+            "ボーナス"
+          ],
+          "correct": 2,
+          "explanation": "「buckle」は「バックル」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「calf」の意味として最も適切なものは？",
+          "choices": [
+            "子牛",
+            "ブレーキ",
+            "投票",
+            "キャンバス"
+          ],
+          "correct": 0,
+          "explanation": "「calf」は「子牛」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「camel」の意味として最も適切なものは？",
+          "choices": [
+            "エプロン",
+            "足首",
+            "建築",
+            "ラクダ"
+          ],
+          "correct": 3,
+          "explanation": "「camel」は「ラクダ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「camp」の意味として最も適切なものは？",
+          "choices": [
+            "コウモリ・バット",
+            "樽",
+            "竹",
+            "キャンプ"
+          ],
+          "correct": 3,
+          "explanation": "「camp」は「キャンプ」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cane」の意味として最も適切なものは？",
+          "choices": [
+            "爆弾",
+            "パン屋",
+            "音声",
+            "杖"
+          ],
+          "correct": 3,
+          "explanation": "「cane」は「杖」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「canvas」の意味として最も適切なものは？",
+          "choices": [
+            "キャンバス",
+            "請求書",
+            "子牛",
+            "かご"
+          ],
+          "correct": 0,
+          "explanation": "「canvas」は「キャンバス」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「captain」の意味として最も適切なものは？",
+          "choices": [
+            "自治",
+            "キャプテン",
+            "宴会",
+            "エプロン"
+          ],
+          "correct": 1,
+          "explanation": "「captain」は「キャプテン」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carbon」の意味として最も適切なものは？",
+          "choices": [
+            "竹",
+            "炭素",
+            "算数",
+            "代理人"
+          ],
+          "correct": 1,
+          "explanation": "「carbon」は「炭素」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cargo」の意味として最も適切なものは？",
+          "choices": [
+            "建築",
+            "遺物",
+            "貨物",
+            "爆弾"
+          ],
+          "correct": 2,
+          "explanation": "「cargo」は「貨物」という意味の名詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carpet」の意味として最も適切なものは？",
+          "choices": [
+            "錨",
+            "ベンチ",
+            "一団",
+            "カーペット"
+          ],
+          "correct": 3,
+          "explanation": "「carpet」は「カーペット」という意味の名詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "動詞編3セット1",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 601~610",
+      "questions": [
+        {
+          "scenario": "「destroy」の意味として最も適切なものは？",
+          "choices": [
+            "気が遠くなる",
+            "破壊する",
+            "言い訳する・許す",
+            "統合する"
+          ],
+          "correct": 1,
+          "explanation": "「destroy」は「破壊する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「devote」の意味として最も適切なものは？",
+          "choices": [
+            "権利を与える",
+            "急がせる",
+            "果たす・満たす",
+            "捧げる"
+          ],
+          "correct": 3,
+          "explanation": "「devote」は「捧げる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「digest」の意味として最も適切なものは？",
+          "choices": [
+            "漂う",
+            "強調する・目立たせる",
+            "消化する",
+            "意見が異なる"
+          ],
+          "correct": 2,
+          "explanation": "「digest」は「消化する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「diminish」の意味として最も適切なものは？",
+          "choices": [
+            "装備する",
+            "禁じる",
+            "侵入する",
+            "減少する"
+          ],
+          "correct": 3,
+          "explanation": "「diminish」は「減少する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disagree」の意味として最も適切なものは？",
+          "choices": [
+            "深く悲しむ",
+            "消える",
+            "意見が異なる",
+            "可能にする"
+          ],
+          "correct": 2,
+          "explanation": "「disagree」は「意見が異なる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disappear」の意味として最も適切なものは？",
+          "choices": [
+            "指示する",
+            "捧げる",
+            "分配する",
+            "消える"
+          ],
+          "correct": 3,
+          "explanation": "「disappear」は「消える」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disappoint」の意味として最も適切なものは？",
+          "choices": [
+            "握る・理解する",
+            "統合する",
+            "興奮させる",
+            "失望させる"
+          ],
+          "correct": 3,
+          "explanation": "「disappoint」は「失望させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discharge」の意味として最も適切なものは？",
+          "choices": [
+            "放出する・解雇する",
+            "消化する",
+            "ひったくる・つかむ",
+            "甘やかす・ふける"
+          ],
+          "correct": 0,
+          "explanation": "「discharge」は「放出する・解雇する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discourage」の意味として最も適切なものは？",
+          "choices": [
+            "誘発する",
+            "落胆させる",
+            "課す・押しつける",
+            "調査する"
+          ],
+          "correct": 1,
+          "explanation": "「discourage」は「落胆させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dismiss」の意味として最も適切なものは？",
+          "choices": [
+            "解雇する・退ける",
+            "急ぐ",
+            "超える",
+            "積み上げる"
+          ],
+          "correct": 0,
+          "explanation": "「dismiss」は「解雇する・退ける」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "動詞編3セット2",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 611~620",
+      "questions": [
+        {
+          "scenario": "「dissolve」の意味として最も適切なものは？",
+          "choices": [
+            "破壊する",
+            "恥をかかせる",
+            "溶かす・解散する",
+            "推論する"
+          ],
+          "correct": 2,
+          "explanation": "「dissolve」は「溶かす・解散する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distinguish」の意味として最も適切なものは？",
+          "choices": [
+            "設立する",
+            "装備する",
+            "区別する",
+            "感染させる"
+          ],
+          "correct": 2,
+          "explanation": "「distinguish」は「区別する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distribute」の意味として最も適切なものは？",
+          "choices": [
+            "分配する",
+            "保険をかける",
+            "従事する・引く",
+            "滑る"
+          ],
+          "correct": 0,
+          "explanation": "「distribute」は「分配する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disturb」の意味として最も適切なものは？",
+          "choices": [
+            "ちらりと見る",
+            "進化する",
+            "排除する",
+            "邪魔する"
+          ],
+          "correct": 3,
+          "explanation": "「disturb」は「邪魔する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dominate」の意味として最も適切なものは？",
+          "choices": [
+            "放出する・解雇する",
+            "減少する",
+            "支配する",
+            "除外する"
+          ],
+          "correct": 2,
+          "explanation": "「dominate」は「支配する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「doubt」の意味として最も適切なものは？",
+          "choices": [
+            "疑う",
+            "高める",
+            "消す",
+            "形づくる"
+          ],
+          "correct": 0,
+          "explanation": "「doubt」は「疑う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dread」の意味として最も適切なものは？",
+          "choices": [
+            "予見する",
+            "恐れる",
+            "従事する・引く",
+            "破壊する"
+          ],
+          "correct": 1,
+          "explanation": "「dread」は「恐れる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drift」の意味として最も適切なものは？",
+          "choices": [
+            "挿入する",
+            "推論する",
+            "漂う",
+            "禁じる"
+          ],
+          "correct": 2,
+          "explanation": "「drift」は「漂う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drown」の意味として最も適切なものは？",
+          "choices": [
+            "強調する",
+            "氾濫させる",
+            "急ぐ",
+            "溺れる"
+          ],
+          "correct": 3,
+          "explanation": "「drown」は「溺れる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ease」の意味として最も適切なものは？",
+          "choices": [
+            "和らげる",
+            "与える・認める",
+            "疲れ果てさせる",
+            "可能にする"
+          ],
+          "correct": 0,
+          "explanation": "「ease」は「和らげる」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "動詞編3セット3",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 621~630",
+      "questions": [
+        {
+          "scenario": "「edit」の意味として最も適切なものは？",
+          "choices": [
+            "強調する",
+            "ひらめく・輝く",
+            "挿入する",
+            "編集する"
+          ],
+          "correct": 3,
+          "explanation": "「edit」は「編集する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eliminate」の意味として最も適切なものは？",
+          "choices": [
+            "排除する",
+            "注射する",
+            "課す・押しつける",
+            "抑制する"
+          ],
+          "correct": 0,
+          "explanation": "「eliminate」は「排除する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emphasize」の意味として最も適切なものは？",
+          "choices": [
+            "消す",
+            "ちらりと見る",
+            "にらみつける",
+            "強調する"
+          ],
+          "correct": 3,
+          "explanation": "「emphasize」は「強調する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enable」の意味として最も適切なものは？",
+          "choices": [
+            "疲れ果てさせる",
+            "表現する",
+            "可能にする",
+            "にらみつける"
+          ],
+          "correct": 2,
+          "explanation": "「enable」は「可能にする」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「engage」の意味として最も適切なものは？",
+          "choices": [
+            "進化する",
+            "支配する",
+            "従事する・引く",
+            "感染させる"
+          ],
+          "correct": 2,
+          "explanation": "「engage」は「従事する・引く」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enhance」の意味として最も適切なものは？",
+          "choices": [
+            "高める",
+            "相互作用する",
+            "ジェスチャーをする",
+            "和らげる"
+          ],
+          "correct": 0,
+          "explanation": "「enhance」は「高める」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enlarge」の意味として最も適切なものは？",
+          "choices": [
+            "拡大する",
+            "開発する・搾取する",
+            "誇張する",
+            "積み上げる"
+          ],
+          "correct": 0,
+          "explanation": "「enlarge」は「拡大する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entitle」の意味として最も適切なものは？",
+          "choices": [
+            "イライラさせる・挫折させる",
+            "権利を与える",
+            "にやっと笑う",
+            "延長する・広げる"
+          ],
+          "correct": 1,
+          "explanation": "「entitle」は「権利を与える」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equip」の意味として最も適切なものは？",
+          "choices": [
+            "捧げる",
+            "装備する",
+            "排除する",
+            "滑る"
+          ],
+          "correct": 1,
+          "explanation": "「equip」は「装備する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「erase」の意味として最も適切なものは？",
+          "choices": [
+            "消す",
+            "消える",
+            "排除する",
+            "さらす"
+          ],
+          "correct": 0,
+          "explanation": "「erase」は「消す」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "動詞編3セット4",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 631~640",
+      "questions": [
+        {
+          "scenario": "「evolve」の意味として最も適切なものは？",
+          "choices": [
+            "にやっと笑う",
+            "誘発する",
+            "生み出す",
+            "進化する"
+          ],
+          "correct": 3,
+          "explanation": "「evolve」は「進化する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exaggerate」の意味として最も適切なものは？",
+          "choices": [
+            "ひらめく・輝く",
+            "禁じる",
+            "誇張する",
+            "保険をかける"
+          ],
+          "correct": 2,
+          "explanation": "「exaggerate」は「誇張する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exceed」の意味として最も適切なものは？",
+          "choices": [
+            "装備する",
+            "超える",
+            "しっかり握る",
+            "ジェスチャーをする"
+          ],
+          "correct": 1,
+          "explanation": "「exceed」は「超える」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excite」の意味として最も適切なものは？",
+          "choices": [
+            "減少する",
+            "興奮させる",
+            "課す・押しつける",
+            "イライラさせる・挫折させる"
+          ],
+          "correct": 1,
+          "explanation": "「excite」は「興奮させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exclaim」の意味として最も適切なものは？",
+          "choices": [
+            "高める",
+            "注射する",
+            "叫ぶ",
+            "深く悲しむ"
+          ],
+          "correct": 2,
+          "explanation": "「exclaim」は「叫ぶ」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exclude」の意味として最も適切なものは？",
+          "choices": [
+            "調査する",
+            "捧げる",
+            "除外する",
+            "延長する・広げる"
+          ],
+          "correct": 2,
+          "explanation": "「exclude」は「除外する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excuse」の意味として最も適切なものは？",
+          "choices": [
+            "解雇する・退ける",
+            "輝く",
+            "言い訳する・許す",
+            "装備する"
+          ],
+          "correct": 2,
+          "explanation": "「excuse」は「言い訳する・許す」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exhaust」の意味として最も適切なものは？",
+          "choices": [
+            "注射する",
+            "疲れ果てさせる",
+            "疑う",
+            "権利を与える"
+          ],
+          "correct": 1,
+          "explanation": "「exhaust」は「疲れ果てさせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explode」の意味として最も適切なものは？",
+          "choices": [
+            "滑る",
+            "傷つける",
+            "爆発する",
+            "放出する・解雇する"
+          ],
+          "correct": 2,
+          "explanation": "「explode」は「爆発する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exploit」の意味として最も適切なものは？",
+          "choices": [
+            "恥をかかせる",
+            "邪魔する",
+            "開発する・搾取する",
+            "注射する"
+          ],
+          "correct": 2,
+          "explanation": "「exploit」は「開発する・搾取する」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "動詞編3セット5",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 641~650",
+      "questions": [
+        {
+          "scenario": "「explore」の意味として最も適切なものは？",
+          "choices": [
+            "探検する",
+            "恐れる",
+            "輸出する",
+            "分配する"
+          ],
+          "correct": 0,
+          "explanation": "「explore」は「探検する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「export」の意味として最も適切なものは？",
+          "choices": [
+            "傷つける",
+            "輸出する",
+            "和らげる",
+            "形づくる"
+          ],
+          "correct": 1,
+          "explanation": "「export」は「輸出する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expose」の意味として最も適切なものは？",
+          "choices": [
+            "輝く",
+            "抑制する",
+            "さらす",
+            "逃げる"
+          ],
+          "correct": 2,
+          "explanation": "「expose」は「さらす」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「express」の意味として最も適切なものは？",
+          "choices": [
+            "強調する・目立たせる",
+            "表現する",
+            "強める",
+            "落胆させる"
+          ],
+          "correct": 1,
+          "explanation": "「express」は「表現する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extend」の意味として最も適切なものは？",
+          "choices": [
+            "意見が異なる",
+            "興奮させる",
+            "延長する・広げる",
+            "分配する"
+          ],
+          "correct": 2,
+          "explanation": "「extend」は「延長する・広げる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extinguish」の意味として最も適切なものは？",
+          "choices": [
+            "統治する",
+            "消す",
+            "立ち止まる・中止する",
+            "爆発する"
+          ],
+          "correct": 1,
+          "explanation": "「extinguish」は「消す」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「faint」の意味として最も適切なものは？",
+          "choices": [
+            "消化する",
+            "育成する",
+            "気が遠くなる",
+            "予見する"
+          ],
+          "correct": 2,
+          "explanation": "「faint」は「気が遠くなる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flash」の意味として最も適切なものは？",
+          "choices": [
+            "開始する",
+            "支配する",
+            "深く悲しむ",
+            "ひらめく・輝く"
+          ],
+          "correct": 3,
+          "explanation": "「flash」は「ひらめく・輝く」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flee」の意味として最も適切なものは？",
+          "choices": [
+            "生み出す",
+            "強める",
+            "逃げる",
+            "与える・認める"
+          ],
+          "correct": 2,
+          "explanation": "「flee」は「逃げる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「flood」の意味として最も適切なものは？",
+          "choices": [
+            "失望させる",
+            "育成する",
+            "氾濫させる",
+            "設置する"
+          ],
+          "correct": 2,
+          "explanation": "「flood」は「氾濫させる」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "動詞編3セット6",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 651~660",
+      "questions": [
+        {
+          "scenario": "「forbid」の意味として最も適切なものは？",
+          "choices": [
+            "握る・理解する",
+            "禁じる",
+            "イライラさせる・挫折させる",
+            "保険をかける"
+          ],
+          "correct": 1,
+          "explanation": "「forbid」は「禁じる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「foresee」の意味として最も適切なものは？",
+          "choices": [
+            "表現する",
+            "予見する",
+            "除外する",
+            "禁じる"
+          ],
+          "correct": 1,
+          "explanation": "「foresee」は「予見する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「form」の意味として最も適切なものは？",
+          "choices": [
+            "形づくる",
+            "保険をかける",
+            "急ぐ",
+            "感染させる"
+          ],
+          "correct": 0,
+          "explanation": "「form」は「形づくる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「formulate」の意味として最も適切なものは？",
+          "choices": [
+            "課す・押しつける",
+            "公式化する",
+            "しっかり握る",
+            "立ち止まる・中止する"
+          ],
+          "correct": 1,
+          "explanation": "「formulate」は「公式化する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「foster」の意味として最も適切なものは？",
+          "choices": [
+            "調査する",
+            "育成する",
+            "探検する",
+            "ひらめく・輝く"
+          ],
+          "correct": 1,
+          "explanation": "「foster」は「育成する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「found」の意味として最も適切なものは？",
+          "choices": [
+            "ひらめく・輝く",
+            "与える・認める",
+            "握る・理解する",
+            "設立する"
+          ],
+          "correct": 3,
+          "explanation": "「found」は「設立する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「frustrate」の意味として最も適切なものは？",
+          "choices": [
+            "急がせる",
+            "イライラさせる・挫折させる",
+            "消す",
+            "溺れる"
+          ],
+          "correct": 1,
+          "explanation": "「frustrate」は「イライラさせる・挫折させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fulfill」の意味として最も適切なものは？",
+          "choices": [
+            "立ち止まる・中止する",
+            "果たす・満たす",
+            "しっかり握る",
+            "侵入する"
+          ],
+          "correct": 1,
+          "explanation": "「fulfill」は「果たす・満たす」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「generate」の意味として最も適切なものは？",
+          "choices": [
+            "生み出す",
+            "消す",
+            "設置する",
+            "超える"
+          ],
+          "correct": 0,
+          "explanation": "「generate」は「生み出す」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gesture」の意味として最も適切なものは？",
+          "choices": [
+            "統合する",
+            "高める",
+            "強める",
+            "ジェスチャーをする"
+          ],
+          "correct": 3,
+          "explanation": "「gesture」は「ジェスチャーをする」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "動詞編3セット7",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 661~670",
+      "questions": [
+        {
+          "scenario": "「glance」の意味として最も適切なものは？",
+          "choices": [
+            "ちらりと見る",
+            "巻き込む",
+            "育成する",
+            "除外する"
+          ],
+          "correct": 0,
+          "explanation": "「glance」は「ちらりと見る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glare」の意味として最も適切なものは？",
+          "choices": [
+            "分配する",
+            "設立する",
+            "にらみつける",
+            "感染させる"
+          ],
+          "correct": 2,
+          "explanation": "「glare」は「にらみつける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glide」の意味として最も適切なものは？",
+          "choices": [
+            "感染させる",
+            "滑る",
+            "進化する",
+            "気が遠くなる"
+          ],
+          "correct": 1,
+          "explanation": "「glide」は「滑る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glimpse」の意味として最も適切なものは？",
+          "choices": [
+            "減少する",
+            "課す・押しつける",
+            "ちらりと見る",
+            "言い訳する・許す"
+          ],
+          "correct": 2,
+          "explanation": "「glimpse」は「ちらりと見る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glow」の意味として最も適切なものは？",
+          "choices": [
+            "輝く",
+            "相互作用する",
+            "生み出す",
+            "消える"
+          ],
+          "correct": 0,
+          "explanation": "「glow」は「輝く」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「govern」の意味として最も適切なものは？",
+          "choices": [
+            "気が遠くなる",
+            "表現する",
+            "統治する",
+            "開発する・搾取する"
+          ],
+          "correct": 2,
+          "explanation": "「govern」は「統治する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grab」の意味として最も適切なものは？",
+          "choices": [
+            "積み上げる",
+            "設置する",
+            "ひったくる・つかむ",
+            "進化する"
+          ],
+          "correct": 2,
+          "explanation": "「grab」は「ひったくる・つかむ」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grant」の意味として最も適切なものは？",
+          "choices": [
+            "与える・認める",
+            "予見する",
+            "消える",
+            "拡大する"
+          ],
+          "correct": 0,
+          "explanation": "「grant」は「与える・認める」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grasp」の意味として最も適切なものは？",
+          "choices": [
+            "ちらりと見る",
+            "握る・理解する",
+            "課す・押しつける",
+            "破壊する"
+          ],
+          "correct": 1,
+          "explanation": "「grasp」は「握る・理解する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grieve」の意味として最も適切なものは？",
+          "choices": [
+            "ジェスチャーをする",
+            "消える",
+            "深く悲しむ",
+            "叫ぶ"
+          ],
+          "correct": 2,
+          "explanation": "「grieve」は「深く悲しむ」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "動詞編3セット8",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 671~680",
+      "questions": [
+        {
+          "scenario": "「grin」の意味として最も適切なものは？",
+          "choices": [
+            "にやっと笑う",
+            "握る・理解する",
+            "指示する",
+            "拡大する"
+          ],
+          "correct": 0,
+          "explanation": "「grin」は「にやっと笑う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grip」の意味として最も適切なものは？",
+          "choices": [
+            "しっかり握る",
+            "巻き込む",
+            "言い訳する・許す",
+            "積み上げる"
+          ],
+          "correct": 0,
+          "explanation": "「grip」は「しっかり握る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「halt」の意味として最も適切なものは？",
+          "choices": [
+            "立ち止まる・中止する",
+            "深く悲しむ",
+            "解雇する・退ける",
+            "興奮させる"
+          ],
+          "correct": 0,
+          "explanation": "「halt」は「立ち止まる・中止する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hasten」の意味として最も適切なものは？",
+          "choices": [
+            "急がせる",
+            "イライラさせる・挫折させる",
+            "高める",
+            "拡大する"
+          ],
+          "correct": 0,
+          "explanation": "「hasten」は「急がせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「heap」の意味として最も適切なものは？",
+          "choices": [
+            "にやっと笑う",
+            "積み上げる",
+            "育成する",
+            "急ぐ"
+          ],
+          "correct": 1,
+          "explanation": "「heap」は「積み上げる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hint」の意味として最も適切なものは？",
+          "choices": [
+            "従事する・引く",
+            "ほのめかす",
+            "開発する・搾取する",
+            "失望させる"
+          ],
+          "correct": 1,
+          "explanation": "「hint」は「ほのめかす」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「humiliate」の意味として最も適切なものは？",
+          "choices": [
+            "恥をかかせる",
+            "にやっと笑う",
+            "輝く",
+            "高める"
+          ],
+          "correct": 0,
+          "explanation": "「humiliate」は「恥をかかせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hurry」の意味として最も適切なものは？",
+          "choices": [
+            "漂う",
+            "興奮させる",
+            "急ぐ",
+            "ひらめく・輝く"
+          ],
+          "correct": 2,
+          "explanation": "「hurry」は「急ぐ」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「highlight」の意味として最も適切なものは？",
+          "choices": [
+            "強調する・目立たせる",
+            "和らげる",
+            "輸出する",
+            "誇張する"
+          ],
+          "correct": 0,
+          "explanation": "「highlight」は「強調する・目立たせる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「impose」の意味として最も適切なものは？",
+          "choices": [
+            "育成する",
+            "課す・押しつける",
+            "疲れ果てさせる",
+            "破壊する"
+          ],
+          "correct": 1,
+          "explanation": "「impose」は「課す・押しつける」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "動詞編3セット9",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 681~690",
+      "questions": [
+        {
+          "scenario": "「incorporate」の意味として最も適切なものは？",
+          "choices": [
+            "区別する",
+            "開始する",
+            "漂う",
+            "組み込む"
+          ],
+          "correct": 3,
+          "explanation": "「incorporate」は「組み込む」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「induce」の意味として最も適切なものは？",
+          "choices": [
+            "意見が異なる",
+            "侵入する",
+            "誘発する",
+            "排除する"
+          ],
+          "correct": 2,
+          "explanation": "「induce」は「誘発する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「indulge」の意味として最も適切なものは？",
+          "choices": [
+            "禁じる",
+            "失望させる",
+            "溶かす・解散する",
+            "甘やかす・ふける"
+          ],
+          "correct": 3,
+          "explanation": "「indulge」は「甘やかす・ふける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「infect」の意味として最も適切なものは？",
+          "choices": [
+            "邪魔する",
+            "感染させる",
+            "探検する",
+            "にやっと笑う"
+          ],
+          "correct": 1,
+          "explanation": "「infect」は「感染させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「infer」の意味として最も適切なものは？",
+          "choices": [
+            "恥をかかせる",
+            "推論する",
+            "傷つける",
+            "解雇する・退ける"
+          ],
+          "correct": 1,
+          "explanation": "「infer」は「推論する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inherit」の意味として最も適切なものは？",
+          "choices": [
+            "捧げる",
+            "相続する",
+            "恥をかかせる",
+            "消す"
+          ],
+          "correct": 1,
+          "explanation": "「inherit」は「相続する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inhibit」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する",
+            "相続する",
+            "強調する・目立たせる",
+            "高める"
+          ],
+          "correct": 0,
+          "explanation": "「inhibit」は「抑制する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「initiate」の意味として最も適切なものは？",
+          "choices": [
+            "和らげる",
+            "開始する",
+            "相互作用する",
+            "積み上げる"
+          ],
+          "correct": 1,
+          "explanation": "「initiate」は「開始する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inject」の意味として最も適切なものは？",
+          "choices": [
+            "気が遠くなる",
+            "注射する",
+            "ジェスチャーをする",
+            "果たす・満たす"
+          ],
+          "correct": 1,
+          "explanation": "「inject」は「注射する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「injure」の意味として最も適切なものは？",
+          "choices": [
+            "甘やかす・ふける",
+            "傷つける",
+            "誇張する",
+            "破壊する"
+          ],
+          "correct": 1,
+          "explanation": "「injure」は「傷つける」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "動詞編3セット10",
+      "type": "vocabulary",
+      "emoji": "⚡",
+      "subtitle": "英検準2級の動詞 691~700",
+      "questions": [
+        {
+          "scenario": "「insert」の意味として最も適切なものは？",
+          "choices": [
+            "挿入する",
+            "にやっと笑う",
+            "ちらりと見る",
+            "分配する"
+          ],
+          "correct": 0,
+          "explanation": "「insert」は「挿入する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「install」の意味として最も適切なものは？",
+          "choices": [
+            "甘やかす・ふける",
+            "設置する",
+            "装備する",
+            "消す"
+          ],
+          "correct": 1,
+          "explanation": "「install」は「設置する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「instruct」の意味として最も適切なものは？",
+          "choices": [
+            "指示する",
+            "傷つける",
+            "消す",
+            "統治する"
+          ],
+          "correct": 0,
+          "explanation": "「instruct」は「指示する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「insure」の意味として最も適切なものは？",
+          "choices": [
+            "甘やかす・ふける",
+            "保険をかける",
+            "言い訳する・許す",
+            "消化する"
+          ],
+          "correct": 1,
+          "explanation": "「insure」は「保険をかける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「integrate」の意味として最も適切なものは？",
+          "choices": [
+            "可能にする",
+            "統合する",
+            "除外する",
+            "保険をかける"
+          ],
+          "correct": 1,
+          "explanation": "「integrate」は「統合する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「intensify」の意味として最も適切なものは？",
+          "choices": [
+            "編集する",
+            "排除する",
+            "強める",
+            "保険をかける"
+          ],
+          "correct": 2,
+          "explanation": "「intensify」は「強める」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「interact」の意味として最も適切なものは？",
+          "choices": [
+            "相互作用する",
+            "注射する",
+            "装備する",
+            "禁じる"
+          ],
+          "correct": 0,
+          "explanation": "「interact」は「相互作用する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「invade」の意味として最も適切なものは？",
+          "choices": [
+            "溺れる",
+            "抑制する",
+            "設置する",
+            "侵入する"
+          ],
+          "correct": 3,
+          "explanation": "「invade」は「侵入する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「investigate」の意味として最も適切なものは？",
+          "choices": [
+            "落胆させる",
+            "調査する",
+            "恐れる",
+            "公式化する"
+          ],
+          "correct": 1,
+          "explanation": "「investigate」は「調査する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「involve」の意味として最も適切なものは？",
+          "choices": [
+            "邪魔する",
+            "装備する",
+            "失望させる",
+            "巻き込む"
+          ],
+          "correct": 3,
+          "explanation": "「involve」は「巻き込む」という意味の動詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

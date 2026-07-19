@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "熟語編2セット1",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1101~1110",
+      "questions": [
+        {
+          "scenario": "「look over」の意味として最も適切なものは？",
+          "choices": [
+            "仲違いする",
+            "車を止める・引き上げる",
+            "今のところ",
+            "目を通す"
+          ],
+          "correct": 3,
+          "explanation": "「look over」は「目を通す」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take up」の意味として最も適切なものは？",
+          "choices": [
+            "見送る",
+            "照合する・調べる",
+            "爆発する・立ち去る",
+            "始める・占める"
+          ],
+          "correct": 3,
+          "explanation": "「take up」は「始める・占める」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「get used to」の意味として最も適切なものは？",
+          "choices": [
+            "慣れる",
+            "仲違いする",
+            "破産する・沈む",
+            "賛同する"
+          ],
+          "correct": 0,
+          "explanation": "「get used to」は「慣れる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put out」の意味として最も適切なものは？",
+          "choices": [
+            "消す",
+            "とにかく",
+            "せいぜい",
+            "差し出す・持ちこたえる"
+          ],
+          "correct": 0,
+          "explanation": "「put out」は「消す」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put aside」の意味として最も適切なものは？",
+          "choices": [
+            "追いかける",
+            "解放する",
+            "取っておく",
+            "立ち向かう"
+          ],
+          "correct": 2,
+          "explanation": "「put aside」は「取っておく」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bring out」の意味として最も適切なものは？",
+          "choices": [
+            "引き出す・発売する",
+            "気絶する・配る",
+            "押し入る",
+            "追いかける"
+          ],
+          "correct": 0,
+          "explanation": "「bring out」は「引き出す・発売する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「turn in」の意味として最も適切なものは？",
+          "choices": [
+            "着手する",
+            "提出する・寝る",
+            "ランダムに",
+            "解放する"
+          ],
+          "correct": 1,
+          "explanation": "「turn in」は「提出する・寝る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run over」の意味として最も適切なものは？",
+          "choices": [
+            "なしで済ます",
+            "轢く",
+            "指し示す",
+            "よく調べる・復習する"
+          ],
+          "correct": 1,
+          "explanation": "「run over」は「轢く」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run across」の意味として最も適切なものは？",
+          "choices": [
+            "悪くなる",
+            "せいぜい",
+            "偶然見つける",
+            "提出する・寝る"
+          ],
+          "correct": 2,
+          "explanation": "「run across」は「偶然見つける」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run after」の意味として最も適切なものは？",
+          "choices": [
+            "追いかける",
+            "慣れる",
+            "爆発する・立ち去る",
+            "譲歩する・屈する"
+          ],
+          "correct": 0,
+          "explanation": "「run after」は「追いかける」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "熟語編2セット2",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1111~1120",
+      "questions": [
+        {
+          "scenario": "「keep in touch with」の意味として最も適切なものは？",
+          "choices": [
+            "支える・遅らせる・強盗に入る",
+            "連絡を保つ",
+            "手渡す・引き渡す",
+            "通り抜ける"
+          ],
+          "correct": 1,
+          "explanation": "「keep in touch with」は「連絡を保つ」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep from」の意味として最も適切なものは？",
+          "choices": [
+            "全体として",
+            "やってのける",
+            "〜させない",
+            "待機する・支持する"
+          ],
+          "correct": 2,
+          "explanation": "「keep from」は「〜させない」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep off」の意味として最も適切なものは？",
+          "choices": [
+            "突破する",
+            "今のところ",
+            "途方に暮れて",
+            "立ち入らない"
+          ],
+          "correct": 3,
+          "explanation": "「keep off」は「立ち入らない」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give off」の意味として最も適切なものは？",
+          "choices": [
+            "なしで済ます",
+            "発する",
+            "片付ける・立ち去る",
+            "引き延ばす・近づけない"
+          ],
+          "correct": 1,
+          "explanation": "「give off」は「発する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give out」の意味として最も適切なものは？",
+          "choices": [
+            "引き延ばす・近づけない",
+            "配る・尽きる",
+            "せいぜい",
+            "追いかける"
+          ],
+          "correct": 1,
+          "explanation": "「give out」は「配る・尽きる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「give way to」の意味として最も適切なものは？",
+          "choices": [
+            "譲歩する・屈する",
+            "私に関する限り",
+            "火がつく",
+            "指し示す"
+          ],
+          "correct": 0,
+          "explanation": "「give way to」は「譲歩する・屈する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break into」の意味として最も適切なものは？",
+          "choices": [
+            "平和に",
+            "なしで済ます",
+            "せいぜい",
+            "押し入る"
+          ],
+          "correct": 3,
+          "explanation": "「break into」は「押し入る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break through」の意味として最も適切なものは？",
+          "choices": [
+            "突破する",
+            "始める・占める",
+            "落ちる・減少する",
+            "待機する・支持する"
+          ],
+          "correct": 0,
+          "explanation": "「break through」は「突破する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break off」の意味として最も適切なものは？",
+          "choices": [
+            "急にやめる・関係を切る",
+            "仲違いする",
+            "気をつける",
+            "発する"
+          ],
+          "correct": 0,
+          "explanation": "「break off」は「急にやめる・関係を切る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「break in」の意味として最も適切なものは？",
+          "choices": [
+            "私に関する限り",
+            "押し入る・割り込む",
+            "失望させる・降ろす",
+            "見送る"
+          ],
+          "correct": 1,
+          "explanation": "「break in」は「押し入る・割り込む」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "熟語編2セット3",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1121~1130",
+      "questions": [
+        {
+          "scenario": "「set about」の意味として最も適切なものは？",
+          "choices": [
+            "立ち入らない",
+            "爆破する・激怒する",
+            "流行する・理解する",
+            "着手する"
+          ],
+          "correct": 3,
+          "explanation": "「set about」は「着手する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「set aside」の意味として最も適切なものは？",
+          "choices": [
+            "失望させる・降ろす",
+            "流行する・理解する",
+            "取っておく",
+            "破産する・沈む"
+          ],
+          "correct": 2,
+          "explanation": "「set aside」は「取っておく」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「set free」の意味として最も適切なものは？",
+          "choices": [
+            "通り過ぎる・無視する",
+            "通り過ぎる・収まる",
+            "解放する",
+            "近くに"
+          ],
+          "correct": 2,
+          "explanation": "「set free」は「解放する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「carry away」の意味として最も適切なものは？",
+          "choices": [
+            "今のところ",
+            "夢中にさせる",
+            "やってのける",
+            "平和に"
+          ],
+          "correct": 1,
+          "explanation": "「carry away」は「夢中にさせる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go on」の意味として最も適切なものは？",
+          "choices": [
+            "悪くなる",
+            "手放す",
+            "続ける",
+            "夢中にさせる"
+          ],
+          "correct": 2,
+          "explanation": "「go on」は「続ける」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go after」の意味として最も適切なものは？",
+          "choices": [
+            "擁護する",
+            "目を通す",
+            "追いかける",
+            "選ぶ"
+          ],
+          "correct": 2,
+          "explanation": "「go after」は「追いかける」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go along with」の意味として最も適切なものは？",
+          "choices": [
+            "途方に暮れて",
+            "擁護する",
+            "配る・尽きる",
+            "賛同する"
+          ],
+          "correct": 3,
+          "explanation": "「go along with」は「賛同する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go off」の意味として最も適切なものは？",
+          "choices": [
+            "落ち着く・定住する",
+            "支える・遅らせる・強盗に入る",
+            "私に関する限り",
+            "爆発する・立ち去る"
+          ],
+          "correct": 3,
+          "explanation": "「go off」は「爆発する・立ち去る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go over」の意味として最も適切なものは？",
+          "choices": [
+            "落ちる・減少する",
+            "よく調べる・復習する",
+            "差し出す・持ちこたえる",
+            "支える・遅らせる・強盗に入る"
+          ],
+          "correct": 1,
+          "explanation": "「go over」は「よく調べる・復習する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go without」の意味として最も適切なものは？",
+          "choices": [
+            "手渡す・引き渡す",
+            "一般の・逃亡中で",
+            "始める・占める",
+            "なしで済ます"
+          ],
+          "correct": 3,
+          "explanation": "「go without」は「なしで済ます」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "熟語編2セット4",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1131~1140",
+      "questions": [
+        {
+          "scenario": "「go for」の意味として最も適切なものは？",
+          "choices": [
+            "〜を目指す・〜を好む",
+            "とにかく",
+            "やってのける",
+            "落ちる・減少する"
+          ],
+          "correct": 0,
+          "explanation": "「go for」は「〜を目指す・〜を好む」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go into」の意味として最も適切なものは？",
+          "choices": [
+            "一般の・逃亡中で",
+            "〜に入る・〜を調査する",
+            "立ち向かう",
+            "解放する"
+          ],
+          "correct": 1,
+          "explanation": "「go into」は「〜に入る・〜を調査する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go under」の意味として最も適切なものは？",
+          "choices": [
+            "落ちる・減少する",
+            "破産する・沈む",
+            "有効である",
+            "待機する・支持する"
+          ],
+          "correct": 1,
+          "explanation": "「go under」は「破産する・沈む」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「go bad」の意味として最も適切なものは？",
+          "choices": [
+            "流行する・理解する",
+            "すり減らす・疲れ果てさせる",
+            "悪くなる",
+            "よく調べる・復習する"
+          ],
+          "correct": 2,
+          "explanation": "「go bad」は「悪くなる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fall off」の意味として最も適切なものは？",
+          "choices": [
+            "引き倒す・取り壊す",
+            "すり減らす・弱らせる",
+            "取っておく",
+            "落ちる・減少する"
+          ],
+          "correct": 3,
+          "explanation": "「fall off」は「落ちる・減少する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fall out」の意味として最も適切なものは？",
+          "choices": [
+            "片付ける・立ち去る",
+            "支える・遅らせる・強盗に入る",
+            "仲違いする",
+            "徐々に消えていく"
+          ],
+          "correct": 2,
+          "explanation": "「fall out」は「仲違いする」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fall through」の意味として最も適切なものは？",
+          "choices": [
+            "計画が潰れる",
+            "押し入る",
+            "目を通す",
+            "〜を目指す・〜を好む"
+          ],
+          "correct": 0,
+          "explanation": "「fall through」は「計画が潰れる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「fall in love with」の意味として最も適切なものは？",
+          "choices": [
+            "恋に落ちる",
+            "夢中にさせる",
+            "やってのける",
+            "〜させない"
+          ],
+          "correct": 0,
+          "explanation": "「fall in love with」は「恋に落ちる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「catch on」の意味として最も適切なものは？",
+          "choices": [
+            "連絡を保つ",
+            "提出する・寝る",
+            "ランダムに",
+            "流行する・理解する"
+          ],
+          "correct": 3,
+          "explanation": "「catch on」は「流行する・理解する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「catch fire」の意味として最も適切なものは？",
+          "choices": [
+            "爆発する・立ち去る",
+            "抑制する・差し控える",
+            "照合する・調べる",
+            "火がつく"
+          ],
+          "correct": 3,
+          "explanation": "「catch fire」は「火がつく」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "熟語編2セット5",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1141~1150",
+      "questions": [
+        {
+          "scenario": "「hold back」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する・差し控える",
+            "やってのける",
+            "指し示す",
+            "〜に入る・〜を調査する"
+          ],
+          "correct": 0,
+          "explanation": "「hold back」は「抑制する・差し控える」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold up」の意味として最も適切なものは？",
+          "choices": [
+            "支える・遅らせる・強盗に入る",
+            "やってのける",
+            "頼って生きる・〜を食べて生きる",
+            "口外する・外に出す"
+          ],
+          "correct": 0,
+          "explanation": "「hold up」は「支える・遅らせる・強盗に入る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold off」の意味として最も適切なものは？",
+          "choices": [
+            "擁護する",
+            "徐々に消えていく",
+            "途方に暮れて",
+            "引き延ばす・近づけない"
+          ],
+          "correct": 3,
+          "explanation": "「hold off」は「引き延ばす・近づけない」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold out」の意味として最も適切なものは？",
+          "choices": [
+            "消す",
+            "差し出す・持ちこたえる",
+            "今のところ",
+            "通り過ぎる・無視する"
+          ],
+          "correct": 1,
+          "explanation": "「hold out」は「差し出す・持ちこたえる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hold good」の意味として最も適切なものは？",
+          "choices": [
+            "徐々に消えていく",
+            "有効である",
+            "ランダムに",
+            "解放する"
+          ],
+          "correct": 1,
+          "explanation": "「hold good」は「有効である」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「point to」の意味として最も適切なものは？",
+          "choices": [
+            "慣れる",
+            "発する",
+            "指し示す",
+            "徐々に消えていく"
+          ],
+          "correct": 2,
+          "explanation": "「point to」は「指し示す」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pull over」の意味として最も適切なものは？",
+          "choices": [
+            "車を路肩に寄せる",
+            "賛同する",
+            "徐々に消えていく",
+            "目を通す"
+          ],
+          "correct": 0,
+          "explanation": "「pull over」は「車を路肩に寄せる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pull down」の意味として最も適切なものは？",
+          "choices": [
+            "引き倒す・取り壊す",
+            "轢く",
+            "解放する",
+            "伝える・次に回す"
+          ],
+          "correct": 0,
+          "explanation": "「pull down」は「引き倒す・取り壊す」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pull up」の意味として最も適切なものは？",
+          "choices": [
+            "気をつける",
+            "車を止める・引き上げる",
+            "平和に",
+            "悪くなる"
+          ],
+          "correct": 1,
+          "explanation": "「pull up」は「車を止める・引き上げる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pull off」の意味として最も適切なものは？",
+          "choices": [
+            "発する",
+            "やってのける",
+            "火がつく",
+            "案内する"
+          ],
+          "correct": 1,
+          "explanation": "「pull off」は「やってのける」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "熟語編2セット6",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1151~1160",
+      "questions": [
+        {
+          "scenario": "「pull through」の意味として最も適切なものは？",
+          "choices": [
+            "ランダムに",
+            "着手する",
+            "切り抜ける・回復する",
+            "通り抜ける"
+          ],
+          "correct": 2,
+          "explanation": "「pull through」は「切り抜ける・回復する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pass out」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する・差し控える",
+            "徐々に消えていく",
+            "気絶する・配る",
+            "私に関する限り"
+          ],
+          "correct": 2,
+          "explanation": "「pass out」は「気絶する・配る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pass by」の意味として最も適切なものは？",
+          "choices": [
+            "通り過ぎる・無視する",
+            "片付ける・立ち去る",
+            "口外する・外に出す",
+            "手放す"
+          ],
+          "correct": 0,
+          "explanation": "「pass by」は「通り過ぎる・無視する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pass on」の意味として最も適切なものは？",
+          "choices": [
+            "伝える",
+            "伝える・次に回す",
+            "高く評価する",
+            "押し入る"
+          ],
+          "correct": 1,
+          "explanation": "「pass on」は「伝える・次に回す」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pass through」の意味として最も適切なものは？",
+          "choices": [
+            "通り抜ける",
+            "追いかける",
+            "押し入る",
+            "火がつく"
+          ],
+          "correct": 0,
+          "explanation": "「pass through」は「通り抜ける」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pick out」の意味として最も適切なものは？",
+          "choices": [
+            "一見して",
+            "賛同する",
+            "選ぶ",
+            "慣れる"
+          ],
+          "correct": 2,
+          "explanation": "「pick out」は「選ぶ」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「show around」の意味として最も適切なものは？",
+          "choices": [
+            "有効である",
+            "近くに",
+            "慣れる",
+            "案内する"
+          ],
+          "correct": 3,
+          "explanation": "「show around」は「案内する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blow up」の意味として最も適切なものは？",
+          "choices": [
+            "爆破する・激怒する",
+            "落ちる・減少する",
+            "立ち入らない",
+            "待機する・支持する"
+          ],
+          "correct": 0,
+          "explanation": "「blow up」は「爆破する・激怒する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hand down」の意味として最も適切なものは？",
+          "choices": [
+            "援助の手を差し延べる・連絡を取る",
+            "途方に暮れて",
+            "伝える",
+            "徐々に消えていく"
+          ],
+          "correct": 2,
+          "explanation": "「hand down」は「伝える」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hand over」の意味として最も適切なものは？",
+          "choices": [
+            "有効である",
+            "落ち着く・定住する",
+            "手渡す・引き渡す",
+            "片付ける・立ち去る"
+          ],
+          "correct": 2,
+          "explanation": "「hand over」は「手渡す・引き渡す」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "熟語編2セット7",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1161~1170",
+      "questions": [
+        {
+          "scenario": "「hand out」の意味として最も適切なものは？",
+          "choices": [
+            "続ける",
+            "配る",
+            "全体として",
+            "恋に落ちる"
+          ],
+          "correct": 1,
+          "explanation": "「hand out」は「配る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stand by」の意味として最も適切なものは？",
+          "choices": [
+            "伝える",
+            "悪くなる",
+            "通り過ぎる・収まる",
+            "待機する・支持する"
+          ],
+          "correct": 3,
+          "explanation": "「stand by」は「待機する・支持する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stand up for」の意味として最も適切なものは？",
+          "choices": [
+            "切り抜ける・回復する",
+            "援助の手を差し延べる・連絡を取る",
+            "擁護する",
+            "伝える・次に回す"
+          ],
+          "correct": 2,
+          "explanation": "「stand up for」は「擁護する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「stand up to」の意味として最も適切なものは？",
+          "choices": [
+            "案内する",
+            "立ち向かう",
+            "爆破する・激怒する",
+            "手渡す・引き渡す"
+          ],
+          "correct": 1,
+          "explanation": "「stand up to」は「立ち向かう」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wear out」の意味として最も適切なものは？",
+          "choices": [
+            "私に関する限り",
+            "せいぜい",
+            "すり減らす・疲れ果てさせる",
+            "照合する・調べる"
+          ],
+          "correct": 2,
+          "explanation": "「wear out」は「すり減らす・疲れ果てさせる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wear off」の意味として最も適切なものは？",
+          "choices": [
+            "徐々に消えていく",
+            "発する",
+            "頼って生きる・〜を食べて生きる",
+            "とにかく"
+          ],
+          "correct": 0,
+          "explanation": "「wear off」は「徐々に消えていく」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「wear down」の意味として最も適切なものは？",
+          "choices": [
+            "すり減らす・弱らせる",
+            "破産する・沈む",
+            "切り抜ける・回復する",
+            "やってのける"
+          ],
+          "correct": 0,
+          "explanation": "「wear down」は「すり減らす・弱らせる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「work on」の意味として最も適切なものは？",
+          "choices": [
+            "流行する・理解する",
+            "切り抜ける・回復する",
+            "取り組む",
+            "よく調べる・復習する"
+          ],
+          "correct": 2,
+          "explanation": "「work on」は「取り組む」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clear out」の意味として最も適切なものは？",
+          "choices": [
+            "一見して",
+            "差し出す・持ちこたえる",
+            "片付ける・立ち去る",
+            "連絡を保つ"
+          ],
+          "correct": 2,
+          "explanation": "「clear out」は「片付ける・立ち去る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「check up on」の意味として最も適切なものは？",
+          "choices": [
+            "火がつく",
+            "指し示す",
+            "向かう",
+            "照合する・調べる"
+          ],
+          "correct": 3,
+          "explanation": "「check up on」は「照合する・調べる」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "熟語編2セット8",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1171~1180",
+      "questions": [
+        {
+          "scenario": "「blow over」の意味として最も適切なものは？",
+          "choices": [
+            "私の考えでは",
+            "配る・尽きる",
+            "通り過ぎる・収まる",
+            "急にやめる・関係を切る"
+          ],
+          "correct": 2,
+          "explanation": "「blow over」は「通り過ぎる・収まる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「head for」の意味として最も適切なものは？",
+          "choices": [
+            "向かう",
+            "気をつける",
+            "近くに",
+            "すり減らす・疲れ果てさせる"
+          ],
+          "correct": 0,
+          "explanation": "「head for」は「向かう」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「let down」の意味として最も適切なものは？",
+          "choices": [
+            "悪くなる",
+            "手渡す・引き渡す",
+            "車を路肩に寄せる",
+            "失望させる・降ろす"
+          ],
+          "correct": 3,
+          "explanation": "「let down」は「失望させる・降ろす」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「let go of」の意味として最も適切なものは？",
+          "choices": [
+            "悪くなる",
+            "手放す",
+            "破産する・沈む",
+            "提出する・寝る"
+          ],
+          "correct": 1,
+          "explanation": "「let go of」は「手放す」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「let off」の意味として最も適切なものは？",
+          "choices": [
+            "差し出す・持ちこたえる",
+            "追いかける",
+            "高く評価する",
+            "放免する・発射する"
+          ],
+          "correct": 3,
+          "explanation": "「let off」は「放免する・発射する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「let out」の意味として最も適切なものは？",
+          "choices": [
+            "破産する・沈む",
+            "追いかける",
+            "取り組む",
+            "口外する・外に出す"
+          ],
+          "correct": 3,
+          "explanation": "「let out」は「口外する・外に出す」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「live on」の意味として最も適切なものは？",
+          "choices": [
+            "一見して",
+            "頼って生きる・〜を食べて生きる",
+            "近くに",
+            "抑制する・差し控える"
+          ],
+          "correct": 1,
+          "explanation": "「live on」は「頼って生きる・〜を食べて生きる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「live up to」の意味として最も適切なものは？",
+          "choices": [
+            "期待に応える",
+            "口外する・外に出す",
+            "引き倒す・取り壊す",
+            "途方に暮れて"
+          ],
+          "correct": 0,
+          "explanation": "「live up to」は「期待に応える」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「reach out to」の意味として最も適切なものは？",
+          "choices": [
+            "援助の手を差し延べる・連絡を取る",
+            "やってのける",
+            "今のところ",
+            "始める・占める"
+          ],
+          "correct": 0,
+          "explanation": "「reach out to」は「援助の手を差し延べる・連絡を取る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「rule out」の意味として最も適切なものは？",
+          "choices": [
+            "すり減らす・疲れ果てさせる",
+            "気をつける",
+            "慣れる",
+            "除外する"
+          ],
+          "correct": 3,
+          "explanation": "「rule out」は「除外する」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "熟語編2セット9",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1181~1190",
+      "questions": [
+        {
+          "scenario": "「see off」の意味として最も適切なものは？",
+          "choices": [
+            "続ける",
+            "落ちる・減少する",
+            "見送る",
+            "失望させる・降ろす"
+          ],
+          "correct": 2,
+          "explanation": "「see off」は「見送る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「settle down」の意味として最も適切なものは？",
+          "choices": [
+            "落ち着く・定住する",
+            "有効である",
+            "案内する",
+            "通り抜ける"
+          ],
+          "correct": 0,
+          "explanation": "「settle down」は「落ち着く・定住する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「think highly of」の意味として最も適切なものは？",
+          "choices": [
+            "私の考えでは",
+            "配る・尽きる",
+            "高く評価する",
+            "追いかける"
+          ],
+          "correct": 2,
+          "explanation": "「think highly of」は「高く評価する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「watch out for」の意味として最も適切なものは？",
+          "choices": [
+            "計画が潰れる",
+            "押し入る",
+            "気をつける",
+            "気絶する・配る"
+          ],
+          "correct": 2,
+          "explanation": "「watch out for」は「気をつける」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as for me」の意味として最も適切なものは？",
+          "choices": [
+            "私に関する限り",
+            "追いかける",
+            "照合する・調べる",
+            "案内する"
+          ],
+          "correct": 0,
+          "explanation": "「as for me」は「私に関する限り」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as far as I'm concerned」の意味として最も適切なものは？",
+          "choices": [
+            "見送る",
+            "なしで済ます",
+            "落ちる・減少する",
+            "私の考えでは"
+          ],
+          "correct": 3,
+          "explanation": "「as far as I'm concerned」は「私の考えでは」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as follows」の意味として最も適切なものは？",
+          "choices": [
+            "片付ける・立ち去る",
+            "譲歩する・屈する",
+            "次の通り",
+            "差し出す・持ちこたえる"
+          ],
+          "correct": 2,
+          "explanation": "「as follows」は「次の通り」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as to」の意味として最も適切なものは？",
+          "choices": [
+            "発する",
+            "取っておく",
+            "片付ける・立ち去る",
+            "〜に関して"
+          ],
+          "correct": 3,
+          "explanation": "「as to」は「〜に関して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as a whole」の意味として最も適切なものは？",
+          "choices": [
+            "全体として",
+            "抑制する・差し控える",
+            "私に関する限り",
+            "落ちる・減少する"
+          ],
+          "correct": 0,
+          "explanation": "「as a whole」は「全体として」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at a loss」の意味として最も適切なものは？",
+          "choices": [
+            "途方に暮れて",
+            "着手する",
+            "よく調べる・復習する",
+            "通り過ぎる・無視する"
+          ],
+          "correct": 0,
+          "explanation": "「at a loss」は「途方に暮れて」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "熟語編2セット10",
+      "type": "vocabulary",
+      "emoji": "📖",
+      "subtitle": "英検準2級の熟語 1191~1200",
+      "questions": [
+        {
+          "scenario": "「at any rate」の意味として最も適切なものは？",
+          "choices": [
+            "ランダムに",
+            "配る・尽きる",
+            "とにかく",
+            "選ぶ"
+          ],
+          "correct": 2,
+          "explanation": "「at any rate」は「とにかく」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at best」の意味として最も適切なものは？",
+          "choices": [
+            "せいぜい",
+            "〜させない",
+            "伝える",
+            "破産する・沈む"
+          ],
+          "correct": 0,
+          "explanation": "「at best」は「せいぜい」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at first sight」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する・差し控える",
+            "一見して",
+            "消す",
+            "譲歩する・屈する"
+          ],
+          "correct": 1,
+          "explanation": "「at first sight」は「一見して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at hand」の意味として最も適切なものは？",
+          "choices": [
+            "なしで済ます",
+            "引き出す・発売する",
+            "車を路肩に寄せる",
+            "近くに"
+          ],
+          "correct": 3,
+          "explanation": "「at hand」は「近くに」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at large」の意味として最も適切なものは？",
+          "choices": [
+            "爆発する・立ち去る",
+            "取っておく",
+            "今のところ",
+            "一般の・逃亡中で"
+          ],
+          "correct": 3,
+          "explanation": "「at large」は「一般の・逃亡中で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at peace」の意味として最も適切なものは？",
+          "choices": [
+            "夢中にさせる",
+            "平和に",
+            "気絶する・配る",
+            "伝える・次に回す"
+          ],
+          "correct": 1,
+          "explanation": "「at peace」は「平和に」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at random」の意味として最も適切なものは？",
+          "choices": [
+            "一見して",
+            "落ち着く・定住する",
+            "引き出す・発売する",
+            "ランダムに"
+          ],
+          "correct": 3,
+          "explanation": "「at random」は「ランダムに」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at short notice」の意味として最も適切なものは？",
+          "choices": [
+            "押し入る",
+            "提出する・寝る",
+            "案内する",
+            "急な通知で"
+          ],
+          "correct": 3,
+          "explanation": "「at short notice」は「急な通知で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at the mercy of」の意味として最も適切なものは？",
+          "choices": [
+            "追いかける",
+            "選ぶ",
+            "〜のなすがままに",
+            "轢く"
+          ],
+          "correct": 2,
+          "explanation": "「at the mercy of」は「〜のなすがままに」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at the moment」の意味として最も適切なものは？",
+          "choices": [
+            "今のところ",
+            "続ける",
+            "平和に",
+            "始める・占める"
+          ],
+          "correct": 0,
+          "explanation": "「at the moment」は「今のところ」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

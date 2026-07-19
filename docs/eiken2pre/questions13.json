@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "熟語編3セット1",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1201~1210",
+      "questions": [
+        {
+          "scenario": "「by chance」の意味として最も適切なものは？",
+          "choices": [
+            "〜と一致している",
+            "偶然に",
+            "〜によく知られている",
+            "〜に感謝している"
+          ],
+          "correct": 1,
+          "explanation": "「by chance」は「偶然に」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by degrees」の意味として最も適切なものは？",
+          "choices": [
+            "徐々に",
+            "〜に夢中になっている",
+            "その場で",
+            "気分転換に"
+          ],
+          "correct": 0,
+          "explanation": "「by degrees」は「徐々に」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by turns」の意味として最も適切なものは？",
+          "choices": [
+            "〜から独立している",
+            "交互に",
+            "ある程度まで",
+            "〜に固有である"
+          ],
+          "correct": 1,
+          "explanation": "「by turns」は「交互に」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by way of」の意味として最も適切なものは？",
+          "choices": [
+            "〜経由で",
+            "問題外で",
+            "〜に関して",
+            "〜を接続する・〜をやり遂げる"
+          ],
+          "correct": 0,
+          "explanation": "「by way of」は「〜経由で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for a change」の意味として最も適切なものは？",
+          "choices": [
+            "〜より劣っている",
+            "〜という条件で",
+            "気分転換に",
+            "〜に夢中になっている"
+          ],
+          "correct": 2,
+          "explanation": "「for a change」は「気分転換に」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for all I know」の意味として最も適切なものは？",
+          "choices": [
+            "手に入れる",
+            "〜がない",
+            "私の知る限り",
+            "〜と対照的に"
+          ],
+          "correct": 2,
+          "explanation": "「for all I know」は「私の知る限り」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for good」の意味として最も適切なものは？",
+          "choices": [
+            "時代遅れで",
+            "一歩一歩",
+            "〜に不可欠である",
+            "永久に"
+          ],
+          "correct": 3,
+          "explanation": "「for good」は「永久に」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for lack of」の意味として最も適切なものは？",
+          "choices": [
+            "裏返しに",
+            "〜に夢中になっている",
+            "平均して",
+            "〜の不足のために"
+          ],
+          "correct": 3,
+          "explanation": "「for lack of」は「〜の不足のために」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for the most part」の意味として最も適切なものは？",
+          "choices": [
+            "大部分は",
+            "〜を記念して",
+            "〜に向いている",
+            "〜に直面して・〜にもかかわらず"
+          ],
+          "correct": 0,
+          "explanation": "「for the most part」は「大部分は」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「for the time being」の意味として最も適切なものは？",
+          "choices": [
+            "たまに",
+            "〜に当てはまる",
+            "当分の間",
+            "〜に不可欠である"
+          ],
+          "correct": 2,
+          "explanation": "「for the time being」は「当分の間」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "熟語編3セット2",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1211~1220",
+      "questions": [
+        {
+          "scenario": "「from now on」の意味として最も適切なものは？",
+          "choices": [
+            "〜から独立している",
+            "〜に代わって",
+            "長期的に見れば",
+            "今後は"
+          ],
+          "correct": 3,
+          "explanation": "「from now on」は「今後は」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in a sense」の意味として最も適切なものは？",
+          "choices": [
+            "時代遅れで",
+            "〜を追求して",
+            "長期的に見れば",
+            "ある意味で"
+          ],
+          "correct": 3,
+          "explanation": "「in a sense」は「ある意味で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in a word」の意味として最も適切なものは？",
+          "choices": [
+            "一言で言えば",
+            "〜の過程で",
+            "間違いなく",
+            "今後は"
+          ],
+          "correct": 0,
+          "explanation": "「in a word」は「一言で言えば」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in all」の意味として最も適切なものは？",
+          "choices": [
+            "その場で",
+            "〜経由で",
+            "当分の間",
+            "全部で"
+          ],
+          "correct": 3,
+          "explanation": "「in all」は「全部で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in any case」の意味として最も適切なものは？",
+          "choices": [
+            "ある意味で",
+            "〜に熱心である",
+            "とにかく",
+            "徐々に"
+          ],
+          "correct": 2,
+          "explanation": "「in any case」は「とにかく」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in behalf of」の意味として最も適切なものは？",
+          "choices": [
+            "〜に感謝している",
+            "〜に関連して",
+            "制御不能で",
+            "〜に代わって"
+          ],
+          "correct": 3,
+          "explanation": "「in behalf of」は「〜に代わって」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in comparison with」の意味として最も適切なものは？",
+          "choices": [
+            "考え直してみると",
+            "〜に当てはまる",
+            "〜の結果として",
+            "〜と比較して"
+          ],
+          "correct": 3,
+          "explanation": "「in comparison with」は「〜と比較して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in connection with」の意味として最も適切なものは？",
+          "choices": [
+            "手を携えて",
+            "〜を商う",
+            "〜をよく知っている",
+            "〜に関連して"
+          ],
+          "correct": 3,
+          "explanation": "「in connection with」は「〜に関連して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in consequence of」の意味として最も適切なものは？",
+          "choices": [
+            "概して",
+            "〜に熱心である",
+            "〜の結果として",
+            "〜に極めて重要である"
+          ],
+          "correct": 2,
+          "explanation": "「in consequence of」は「〜の結果として」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in contrast with」の意味として最も適切なものは？",
+          "choices": [
+            "〜に当てはまる",
+            "概して",
+            "〜から構成されている",
+            "〜と対照的に"
+          ],
+          "correct": 3,
+          "explanation": "「in contrast with」は「〜と対照的に」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "熟語編3セット3",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1221~1230",
+      "questions": [
+        {
+          "scenario": "「in course of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を追求して",
+            "〜を記念して",
+            "〜の過程で",
+            "〜という条件で"
+          ],
+          "correct": 2,
+          "explanation": "「in course of」は「〜の過程で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in honor of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を探して",
+            "〜によって特徴づけられる",
+            "〜として通用する",
+            "〜を記念して"
+          ],
+          "correct": 3,
+          "explanation": "「in honor of」は「〜を記念して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in memory of」の意味として最も適切なものは？",
+          "choices": [
+            "〜に支配されやすい",
+            "〜という条件で",
+            "〜に不可欠である",
+            "〜を記念して"
+          ],
+          "correct": 3,
+          "explanation": "「in memory of」は「〜を記念して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in no time」の意味として最も適切なものは？",
+          "choices": [
+            "すぐさま",
+            "〜を確信している",
+            "〜に関与している",
+            "〜に直面して・〜にもかかわらず"
+          ],
+          "correct": 0,
+          "explanation": "「in no time」は「すぐさま」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in pursuit of」の意味として最も適切なものは？",
+          "choices": [
+            "〜を追求して",
+            "ある意味で",
+            "私の知る限り",
+            "考え直してみると"
+          ],
+          "correct": 0,
+          "explanation": "「in pursuit of」は「〜を追求して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in regard to」の意味として最も適切なものは？",
+          "choices": [
+            "気楽にやる",
+            "〜と一致している",
+            "〜に関して",
+            "〜を記念して"
+          ],
+          "correct": 2,
+          "explanation": "「in regard to」は「〜に関して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in search of」の意味として最も適切なものは？",
+          "choices": [
+            "ある程度まで",
+            "〜の面前で",
+            "たまに",
+            "〜を探して"
+          ],
+          "correct": 3,
+          "explanation": "「in search of」は「〜を探して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in the face of」の意味として最も適切なものは？",
+          "choices": [
+            "〜の不足のために",
+            "〜に直面して・〜にもかかわらず",
+            "〜を接続する・〜をやり遂げる",
+            "〜で間に合わせる"
+          ],
+          "correct": 1,
+          "explanation": "「in the face of」は「〜に直面して・〜にもかかわらず」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in the long run」の意味として最も適切なものは？",
+          "choices": [
+            "〜の過程で",
+            "無料で",
+            "長期的に見れば",
+            "交互に"
+          ],
+          "correct": 2,
+          "explanation": "「in the long run」は「長期的に見れば」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in the meantime」の意味として最も適切なものは？",
+          "choices": [
+            "〜に従事している",
+            "〜を知らない",
+            "〜に固有である",
+            "その間に"
+          ],
+          "correct": 3,
+          "explanation": "「in the meantime」は「その間に」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "熟語編3セット4",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1231~1240",
+      "questions": [
+        {
+          "scenario": "「in the presence of」の意味として最も適切なものは？",
+          "choices": [
+            "〜より優れている",
+            "〜から独立している",
+            "〜の面前で",
+            "時代遅れで"
+          ],
+          "correct": 2,
+          "explanation": "「in the presence of」は「〜の面前で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in view of」の意味として最も適切なものは？",
+          "choices": [
+            "〜に向いている",
+            "〜の過程で",
+            "〜に従事している",
+            "〜を考慮して"
+          ],
+          "correct": 3,
+          "explanation": "「in view of」は「〜を考慮して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on average」の意味として最も適切なものは？",
+          "choices": [
+            "平均して",
+            "〜から構成されている",
+            "〜をひょっこり訪ねる",
+            "〜に熱心である"
+          ],
+          "correct": 0,
+          "explanation": "「on average」は「平均して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on condition that」の意味として最も適切なものは？",
+          "choices": [
+            "〜に固有である",
+            "交互に",
+            "たまに",
+            "〜という条件で"
+          ],
+          "correct": 3,
+          "explanation": "「on condition that」は「〜という条件で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on earth」の意味として最も適切なものは？",
+          "choices": [
+            "当分の間",
+            "〜の結果として",
+            "一体全体",
+            "ある程度まで"
+          ],
+          "correct": 2,
+          "explanation": "「on earth」は「一体全体」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on second thoughts」の意味として最も適切なものは？",
+          "choices": [
+            "考え直してみると",
+            "〜を確信している",
+            "〜にうんざりしている",
+            "来る日も来る日も"
+          ],
+          "correct": 0,
+          "explanation": "「on second thoughts」は「考え直してみると」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on the spot」の意味として最も適切なものは？",
+          "choices": [
+            "〜に関与している",
+            "〜で間に合わせる",
+            "〜を確信している",
+            "その場で"
+          ],
+          "correct": 3,
+          "explanation": "「on the spot」は「その場で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「on the whole」の意味として最も適切なものは？",
+          "choices": [
+            "〜によって特徴づけられる",
+            "概して",
+            "一歩一歩",
+            "〜を考慮して"
+          ],
+          "correct": 1,
+          "explanation": "「on the whole」は「概して」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「out of breath」の意味として最も適切なものは？",
+          "choices": [
+            "息を切らして",
+            "少しずつ",
+            "問題外で",
+            "裏返しに"
+          ],
+          "correct": 0,
+          "explanation": "「out of breath」は「息を切らして」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「out of control」の意味として最も適切なものは？",
+          "choices": [
+            "大部分は",
+            "問題外で",
+            "〜にうんざりしている",
+            "制御不能で"
+          ],
+          "correct": 3,
+          "explanation": "「out of control」は「制御不能で」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "熟語編3セット5",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1241~1250",
+      "questions": [
+        {
+          "scenario": "「out of date」の意味として最も適切なものは？",
+          "choices": [
+            "〜と一致している",
+            "〜の不足のために",
+            "時代遅れで",
+            "〜として通用する"
+          ],
+          "correct": 2,
+          "explanation": "「out of date」は「時代遅れで」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「out of focus」の意味として最も適切なものは？",
+          "choices": [
+            "〜に感謝している",
+            "来る日も来る日も",
+            "〜に向いている",
+            "ピントが外れて"
+          ],
+          "correct": 3,
+          "explanation": "「out of focus」は「ピントが外れて」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「out of hand」の意味として最も適切なものは？",
+          "choices": [
+            "すぐさま",
+            "〜行きである",
+            "〜を記念して",
+            "手に負えない"
+          ],
+          "correct": 3,
+          "explanation": "「out of hand」は「手に負えない」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「out of the question」の意味として最も適切なものは？",
+          "choices": [
+            "〜するのを嫌がる",
+            "問題外で",
+            "ピントが外れて",
+            "息を切らして"
+          ],
+          "correct": 1,
+          "explanation": "「out of the question」は「問題外で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「to a certain degree」の意味として最も適切なものは？",
+          "choices": [
+            "平均して",
+            "〜に関連して",
+            "来る日も来る日も",
+            "ある程度まで"
+          ],
+          "correct": 3,
+          "explanation": "「to a certain degree」は「ある程度まで」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「without fail」の意味として最も適切なものは？",
+          "choices": [
+            "〜経由で",
+            "間違いなく",
+            "〜と対照的に",
+            "制御不能で"
+          ],
+          "correct": 1,
+          "explanation": "「without fail」は「間違いなく」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apply for」の意味として最も適切なものは？",
+          "choices": [
+            "ピントが外れて",
+            "〜するのを嫌がる",
+            "〜に申し込む",
+            "〜に従事している"
+          ],
+          "correct": 2,
+          "explanation": "「apply for」は「〜に申し込む」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「basic to」の意味として最も適切なものは？",
+          "choices": [
+            "一歩一歩",
+            "〜に不可欠な",
+            "〜を記念して",
+            "〜に感謝している"
+          ],
+          "correct": 1,
+          "explanation": "「basic to」は「〜に不可欠な」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be bent on」の意味として最も適切なものは？",
+          "choices": [
+            "〜に直面して・〜にもかかわらず",
+            "〜より優れている",
+            "〜に熱中している",
+            "〜と比較して"
+          ],
+          "correct": 2,
+          "explanation": "「be bent on」は「〜に熱中している」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be bound for」の意味として最も適切なものは？",
+          "choices": [
+            "〜行きである",
+            "〜するのを嫌がる",
+            "〜を考慮に入れる",
+            "〜を追求して"
+          ],
+          "correct": 0,
+          "explanation": "「be bound for」は「〜行きである」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "熟語編3セット6",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1251~1260",
+      "questions": [
+        {
+          "scenario": "「be characterized by」の意味として最も適切なものは？",
+          "choices": [
+            "今後は",
+            "〜に関与している",
+            "〜によって特徴づけられる",
+            "〜に不可欠である"
+          ],
+          "correct": 2,
+          "explanation": "「be characterized by」は「〜によって特徴づけられる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be composed of」の意味として最も適切なものは？",
+          "choices": [
+            "一体全体",
+            "〜から構成されている",
+            "〜に夢中になっている",
+            "〜に代わって"
+          ],
+          "correct": 1,
+          "explanation": "「be composed of」は「〜から構成されている」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be consistent with」の意味として最も適切なものは？",
+          "choices": [
+            "〜に関連して",
+            "〜に熱心である",
+            "〜に特有である",
+            "〜と一致している"
+          ],
+          "correct": 3,
+          "explanation": "「be consistent with」は「〜と一致している」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be cut out for」の意味として最も適切なものは？",
+          "choices": [
+            "〜に向いている",
+            "概して",
+            "〜に関連して",
+            "たまに"
+          ],
+          "correct": 0,
+          "explanation": "「be cut out for」は「〜に向いている」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be derived from」の意味として最も適切なものは？",
+          "choices": [
+            "〜行きである",
+            "交互に",
+            "〜に由来する",
+            "時代遅れで"
+          ],
+          "correct": 2,
+          "explanation": "「be derived from」は「〜に由来する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be destined to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に不可欠である",
+            "偶然に",
+            "無料で",
+            "〜する運命にある"
+          ],
+          "correct": 3,
+          "explanation": "「be destined to」は「〜する運命にある」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be engaged in」の意味として最も適切なものは？",
+          "choices": [
+            "大部分は",
+            "〜に従事している",
+            "〜の過程で",
+            "手に負えない"
+          ],
+          "correct": 1,
+          "explanation": "「be engaged in」は「〜に従事している」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be equal to」の意味として最も適切なものは？",
+          "choices": [
+            "大部分は",
+            "〜に耐えられる・〜と等しい",
+            "〜する運命にある",
+            "標準として"
+          ],
+          "correct": 1,
+          "explanation": "「be equal to」は「〜に耐えられる・〜と等しい」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be essential to」の意味として最も適切なものは？",
+          "choices": [
+            "〜をひょっこり訪ねる",
+            "〜に不可欠である",
+            "〜に由来する",
+            "〜がない"
+          ],
+          "correct": 1,
+          "explanation": "「be essential to」は「〜に不可欠である」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be familiar to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に夢中になっている",
+            "一歩一歩",
+            "〜によく知られている",
+            "〜を確信している"
+          ],
+          "correct": 2,
+          "explanation": "「be familiar to」は「〜によく知られている」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "熟語編3セット7",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1261~1270",
+      "questions": [
+        {
+          "scenario": "「be familiar with」の意味として最も適切なものは？",
+          "choices": [
+            "〜をよく知っている",
+            "当分の間",
+            "手に入れる",
+            "〜する運命にある"
+          ],
+          "correct": 0,
+          "explanation": "「be familiar with」は「〜をよく知っている」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be fed up with」の意味として最も適切なものは？",
+          "choices": [
+            "手を携えて",
+            "〜を接続する・〜をやり遂げる",
+            "気楽にやる",
+            "〜にうんざりしている"
+          ],
+          "correct": 3,
+          "explanation": "「be fed up with」は「〜にうんざりしている」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be free from」の意味として最も適切なものは？",
+          "choices": [
+            "〜に屈する",
+            "ある程度まで",
+            "その間に",
+            "〜がない"
+          ],
+          "correct": 3,
+          "explanation": "「be free from」は「〜がない」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be grateful for」の意味として最も適切なものは？",
+          "choices": [
+            "〜に感謝している",
+            "〜を廃止する",
+            "〜を記念して",
+            "時代遅れで"
+          ],
+          "correct": 0,
+          "explanation": "「be grateful for」は「〜に感謝している」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be ignorant of」の意味として最も適切なものは？",
+          "choices": [
+            "〜に支配されやすい",
+            "一言で言えば",
+            "〜を知らない",
+            "概して"
+          ],
+          "correct": 2,
+          "explanation": "「be ignorant of」は「〜を知らない」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be independent of」の意味として最も適切なものは？",
+          "choices": [
+            "〜がない",
+            "とにかく",
+            "〜から独立している",
+            "大部分は"
+          ],
+          "correct": 2,
+          "explanation": "「be independent of」は「〜から独立している」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be indispensable to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に不可欠である",
+            "〜を探して",
+            "〜に関して",
+            "〜として通用する"
+          ],
+          "correct": 0,
+          "explanation": "「be indispensable to」は「〜に不可欠である」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be inherent in」の意味として最も適切なものは？",
+          "choices": [
+            "間違いなく",
+            "〜行きである",
+            "〜に固有である",
+            "〜を記念して"
+          ],
+          "correct": 2,
+          "explanation": "「be inherent in」は「〜に固有である」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be involved in」の意味として最も適切なものは？",
+          "choices": [
+            "〜の過程で",
+            "気楽にやる",
+            "〜に関与している",
+            "〜に耐えられる・〜と等しい"
+          ],
+          "correct": 2,
+          "explanation": "「be involved in」は「〜に関与している」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be keen on」の意味として最も適切なものは？",
+          "choices": [
+            "〜に熱心である",
+            "〜の過程で",
+            "〜に向いている",
+            "息を切らして"
+          ],
+          "correct": 0,
+          "explanation": "「be keen on」は「〜に熱心である」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "熟語編3セット8",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1271~1280",
+      "questions": [
+        {
+          "scenario": "「be lost in」の意味として最も適切なものは？",
+          "choices": [
+            "〜に屈する",
+            "〜を知らない",
+            "〜に夢中になっている",
+            "〜の過程で"
+          ],
+          "correct": 2,
+          "explanation": "「be lost in」は「〜に夢中になっている」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be reluctant to」の意味として最も適切なものは？",
+          "choices": [
+            "手を携えて",
+            "〜をよく知っている",
+            "〜するのを嫌がる",
+            "〜より劣っている"
+          ],
+          "correct": 2,
+          "explanation": "「be reluctant to」は「〜するのを嫌がる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be subject to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に不可欠である",
+            "裏返しに",
+            "〜に支配されやすい",
+            "〜に関連して"
+          ],
+          "correct": 2,
+          "explanation": "「be subject to」は「〜に支配されやすい」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be superior to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に関与している",
+            "〜に極めて重要である",
+            "〜を探して",
+            "〜より優れている"
+          ],
+          "correct": 3,
+          "explanation": "「be superior to」は「〜より優れている」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be inferior to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に関して",
+            "一体全体",
+            "〜より劣っている",
+            "来る日も来る日も"
+          ],
+          "correct": 2,
+          "explanation": "「be inferior to」は「〜より劣っている」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be sure of」の意味として最も適切なものは？",
+          "choices": [
+            "〜に直面して・〜にもかかわらず",
+            "〜を確信している",
+            "息を切らして",
+            "〜に極めて重要である"
+          ],
+          "correct": 1,
+          "explanation": "「be sure of」は「〜を確信している」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be true of」の意味として最も適切なものは？",
+          "choices": [
+            "制御不能で",
+            "一言で言えば",
+            "交互に",
+            "〜に当てはまる"
+          ],
+          "correct": 3,
+          "explanation": "「be true of」は「〜に当てはまる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be unique to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に屈する",
+            "無料で",
+            "〜に特有である",
+            "一体全体"
+          ],
+          "correct": 2,
+          "explanation": "「be unique to」は「〜に特有である」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be vital to」の意味として最も適切なものは？",
+          "choices": [
+            "〜に極めて重要である",
+            "ピントが外れて",
+            "〜に当てはまる",
+            "〜で間に合わせる"
+          ],
+          "correct": 0,
+          "explanation": "「be vital to」は「〜に極めて重要である」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be worthy of」の意味として最も適切なものは？",
+          "choices": [
+            "〜に値する",
+            "〜に熱中している",
+            "逆さまに",
+            "私の知る限り"
+          ],
+          "correct": 0,
+          "explanation": "「be worthy of」は「〜に値する」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "熟語編3セット9",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1281~1290",
+      "questions": [
+        {
+          "scenario": "「come by」の意味として最も適切なものは？",
+          "choices": [
+            "〜経由で",
+            "〜に支配されやすい",
+            "〜するのを嫌がる",
+            "手に入れる"
+          ],
+          "correct": 3,
+          "explanation": "「come by」は「手に入れる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come to light」の意味として最も適切なものは？",
+          "choices": [
+            "交互に",
+            "平均して",
+            "気分転換に",
+            "明るみに出る"
+          ],
+          "correct": 3,
+          "explanation": "「come to light」は「明るみに出る」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deal in」の意味として最も適切なものは？",
+          "choices": [
+            "息を切らして",
+            "すぐさま",
+            "〜がない",
+            "〜を商う"
+          ],
+          "correct": 3,
+          "explanation": "「deal in」は「〜を商う」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「do away with」の意味として最も適切なものは？",
+          "choices": [
+            "〜を廃止する",
+            "〜に熱心である",
+            "〜に固有である",
+            "〜を接続する・〜をやり遂げる"
+          ],
+          "correct": 0,
+          "explanation": "「do away with」は「〜を廃止する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drop in on」の意味として最も適切なものは？",
+          "choices": [
+            "〜をひょっこり訪ねる",
+            "手を携えて",
+            "大部分は",
+            "〜がない"
+          ],
+          "correct": 0,
+          "explanation": "「drop in on」は「〜をひょっこり訪ねる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「free of charge」の意味として最も適切なものは？",
+          "choices": [
+            "〜に直面して・〜にもかかわらず",
+            "無料で",
+            "その間に",
+            "〜に不可欠な"
+          ],
+          "correct": 1,
+          "explanation": "「free of charge」は「無料で」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make do with」の意味として最も適切なものは？",
+          "choices": [
+            "〜をひょっこり訪ねる",
+            "〜で間に合わせる",
+            "一言で言えば",
+            "問題外で"
+          ],
+          "correct": 1,
+          "explanation": "「make do with」は「〜で間に合わせる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「pass for」の意味として最も適切なものは？",
+          "choices": [
+            "〜として通用する",
+            "〜に屈する",
+            "全部で",
+            "〜に感謝している"
+          ],
+          "correct": 0,
+          "explanation": "「pass for」は「〜として通用する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put through」の意味として最も適切なものは？",
+          "choices": [
+            "〜に代わって",
+            "〜で間に合わせる",
+            "〜を接続する・〜をやり遂げる",
+            "偶然に"
+          ],
+          "correct": 2,
+          "explanation": "「put through」は「〜を接続する・〜をやり遂げる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take account of」の意味として最も適切なものは？",
+          "choices": [
+            "〜に夢中になっている",
+            "〜を考慮に入れる",
+            "〜するのを嫌がる",
+            "〜する運命にある"
+          ],
+          "correct": 1,
+          "explanation": "「take account of」は「〜を考慮に入れる」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "熟語編3セット10",
+      "type": "vocabulary",
+      "emoji": "🖇️",
+      "subtitle": "英検準2級の熟語 1291~1300",
+      "questions": [
+        {
+          "scenario": "「yield to」の意味として最も適切なものは？",
+          "choices": [
+            "ある意味で",
+            "〜に不可欠である",
+            "〜に屈する",
+            "標準として"
+          ],
+          "correct": 2,
+          "explanation": "「yield to」は「〜に屈する」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as standard」の意味として最も適切なものは？",
+          "choices": [
+            "〜行きである",
+            "標準として",
+            "〜に申し込む",
+            "概して"
+          ],
+          "correct": 1,
+          "explanation": "「as standard」は「標準として」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「once in a while」の意味として最も適切なものは？",
+          "choices": [
+            "〜の過程で",
+            "裏返しに",
+            "たまに",
+            "〜を考慮に入れる"
+          ],
+          "correct": 2,
+          "explanation": "「once in a while」は「たまに」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take it easy」の意味として最も適切なものは？",
+          "choices": [
+            "ある意味で",
+            "息を切らして",
+            "気楽にやる",
+            "〜の過程で"
+          ],
+          "correct": 2,
+          "explanation": "「take it easy」は「気楽にやる」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「inside out」の意味として最も適切なものは？",
+          "choices": [
+            "裏返しに",
+            "私の知る限り",
+            "〜を考慮して",
+            "〜がない"
+          ],
+          "correct": 0,
+          "explanation": "「inside out」は「裏返しに」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「upside down」の意味として最も適切なものは？",
+          "choices": [
+            "逆さまに",
+            "〜に感謝している",
+            "手に負えない",
+            "〜と比較して"
+          ],
+          "correct": 0,
+          "explanation": "「upside down」は「逆さまに」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「day after day」の意味として最も適切なものは？",
+          "choices": [
+            "〜を確信している",
+            "私の知る限り",
+            "来る日も来る日も",
+            "制御不能で"
+          ],
+          "correct": 2,
+          "explanation": "「day after day」は「来る日も来る日も」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「little by little」の意味として最も適切なものは？",
+          "choices": [
+            "たまに",
+            "徐々に",
+            "少しずつ",
+            "ある程度まで"
+          ],
+          "correct": 2,
+          "explanation": "「little by little」は「少しずつ」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hand in hand」の意味として最も適切なものは？",
+          "choices": [
+            "手を携えて",
+            "〜に不可欠である",
+            "その間に",
+            "〜を廃止する"
+          ],
+          "correct": 0,
+          "explanation": "「hand in hand」は「手を携えて」という意味の重要熟語です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「step by step」の意味として最も適切なものは？",
+          "choices": [
+            "一歩一歩",
+            "〜に由来する",
+            "〜を確信している",
+            "〜に不可欠である"
+          ],
+          "correct": 0,
+          "explanation": "「step by step」は「一歩一歩」という意味の重要熟語です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

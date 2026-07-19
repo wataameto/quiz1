@@ -2,196 +2,1296 @@
   "id": "eiken2pre",
   "level": 1,
   "label": "📚 英検準2級 単語・熟語",
-  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の10セット（100語）で高校中級程度の頻出語彙を反復練習できる",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
   "tests": [
     {
       "id": 1,
-      "title": "動詞編①：基本動作・日常行動",
-      "type": "Basic Verbs 1",
-      "emoji": "🏃",
-      "subtitle": "準2級頻出の基本動詞をマスターしよう",
+      "title": "動詞編1",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト1",
       "questions": [
-        {"scenario": "「accept」の意味として最も適切なものは？", "choices": ["受け入れる、受け取る", "拒絶する", "無視する", "手放す"], "correct": 0, "explanation": "acceptは「受け入れる、受け取る」という意味の動詞です。例: accept an invitation（招待を受ける）", "type": "choice"},
-        {"scenario": "「advise」の意味として最も適切なものは？", "choices": ["忠告する、アドバイスする", "命令する", "禁止する", "質問する"], "correct": 0, "explanation": "adviseは「忠告する、アドバイスする」という意味の動詞です。名詞形はadviceです。例: advise him to study（彼に勉強するよう忠告する）", "type": "choice"},
-        {"scenario": "「affect」の意味として最も適切なものは？", "choices": ["影響を与える、作用する", "効果がある", "改善する", "悪化させる"], "correct": 0, "explanation": "affectは「〜に影響を与える、作用する」という意味の動詞です。例: Climate affects our health.（気候は健康に影響を与える。）", "type": "choice"},
-        {"scenario": "「allow」の意味として最も適切なものは？", "choices": ["許す、許可する、可能にする", "禁止する", "止める", "罰する"], "correct": 0, "explanation": "allowは「（人が〜するのを）許す、許可する」または「可能にする」という意味の動詞です。例: allow children to play（子供たちが遊ぶのを許す）", "type": "choice"},
-        {"scenario": "「appear」の意味として最も適切なものは？", "choices": ["現れる、出現する、〜のように見える", "消える", "隠す", "去る"], "correct": 0, "explanation": "appearは「現れる、出現する」または「〜のように見える」という意味の動詞です。例: appear on stage（舞台に現れる）", "type": "choice"},
-        {"scenario": "「avoid」の意味として最も適切なものは？", "choices": ["避ける、回避する", "立ち向かう", "引き受ける", "楽しむ"], "correct": 0, "explanation": "avoidは「（嫌なことや危険を）避ける、回避する」という意味の動詞です。後ろには動名詞（〜ing）が来ます。例: avoid traffic jams（交通渋滞を避ける）", "type": "choice"},
-        {"scenario": "「cause」の意味として最も適切なものは？", "choices": ["引き起こす、原因となる、原因", "解決する", "防ぐ", "結果"], "correct": 0, "explanation": "causeは「（悪いことを）引き起こす、原因となる」という動詞、また「原因」という名詞の意味もあります。例: cause an accident（事故を引き起こす）", "type": "choice"},
-        {"scenario": "「complain」の意味として最も適切なものは？", "choices": ["不平を言う、不満を漏らす", "褒める", "同意する", "感謝する"], "correct": 0, "explanation": "complainは「不平を言う、不満を漏らす、苦情を言う」という意味の動詞です。名詞形はcomplaintです。例: complain about the food（食事に文句を言う）", "type": "choice"},
-        {"scenario": "「confirm」の意味として最も適切なものは？", "choices": ["確認する、確かめる", "疑う", "否定する", "変更する"], "correct": 0, "explanation": "confirmは「（事実であることを）確認する、確かめる、確定する」という意味の動詞です。例: confirm the reservation（予約を確認する）", "type": "choice"},
-        {"scenario": "「consider」の意味として最も適切なものは？", "choices": ["よく考える、検討する、考慮する", "無視する", "決める", "忘れる"], "correct": 0, "explanation": "considerは「（決断する前に）よく考える、検討する、考慮する」という意味の動詞です。例: consider a new plan（新しい計画を検討する）", "type": "choice"}
+        {
+          "scenario": "「abandon」の意味として最も適切なものは？",
+          "choices": [
+            "数える",
+            "投げる",
+            "同行する",
+            "見捨てる"
+          ],
+          "correct": 3,
+          "explanation": "「abandon」は「見捨てる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abolish」の意味として最も適切なものは？",
+          "choices": [
+            "承認する",
+            "廃止する",
+            "打撃",
+            "貢献する"
+          ],
+          "correct": 1,
+          "explanation": "「abolish」は「廃止する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「absorb」の意味として最も適切なものは？",
+          "choices": [
+            "廃止する",
+            "吸収する",
+            "破裂",
+            "手がかりを与える"
+          ],
+          "correct": 1,
+          "explanation": "「absorb」は「吸収する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abuse」の意味として最も適切なものは？",
+          "choices": [
+            "制限する",
+            "〜から成る",
+            "縛る",
+            "乱用"
+          ],
+          "correct": 3,
+          "explanation": "「abuse」は「乱用」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accommodate」の意味として最も適切なものは？",
+          "choices": [
+            "告発する",
+            "達成する",
+            "連絡する",
+            "収容する"
+          ],
+          "correct": 3,
+          "explanation": "「accommodate」は「収容する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accompany」の意味として最も適切なものは？",
+          "choices": [
+            "攻撃する",
+            "同行する",
+            "一致する",
+            "採用する"
+          ],
+          "correct": 1,
+          "explanation": "「accompany」は「同行する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accomplish」の意味として最も適切なものは？",
+          "choices": [
+            "分析する",
+            "乞う",
+            "結合する",
+            "達成する"
+          ],
+          "correct": 3,
+          "explanation": "「accomplish」は「達成する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「account」の意味として最も適切なものは？",
+          "choices": [
+            "構成する",
+            "報告",
+            "正しい",
+            "達成する"
+          ],
+          "correct": 1,
+          "explanation": "「account」は「報告」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accuse」の意味として最も適切なものは？",
+          "choices": [
+            "告発する",
+            "関連づける",
+            "構成される",
+            "投げる"
+          ],
+          "correct": 0,
+          "explanation": "「accuse」は「告発する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adapt」の意味として最も適切なものは？",
+          "choices": [
+            "対比する",
+            "循環する",
+            "噛む",
+            "適応させる"
+          ],
+          "correct": 3,
+          "explanation": "「adapt」は「適応させる」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "動詞編②：社会・ビジネス・思考",
-      "type": "Basic Verbs 2",
-      "emoji": "💼",
-      "subtitle": "社会生活やビジネス、抽象的な思考に関わる動詞",
+      "title": "動詞編2",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト2",
       "questions": [
-        {"scenario": "「deal」の意味として最も適切なものは？", "choices": ["扱う、処理する、取引、量", "放置する", "集める", "配る"], "correct": 0, "explanation": "dealは「（問題などを）扱う、処理する」という動詞、また「取引」や「量」を表す名詞でもあります。例: deal with a problem（問題を処理する）", "type": "choice"},
-        {"scenario": "「demand」の意味として最も適切なものは？", "choices": ["要求する、強く求める、需要", "提供する", "受け入れる", "拒絶する"], "correct": 0, "explanation": "demandは「強く要求する、求める」という動詞、また「需要、要求」という名詞の意味もあります。対義語はsupply（供給）です。例: demand an explanation（説明を求める）", "type": "choice"},
-        {"scenario": "「depend」の意味として最も適切なものは？", "choices": ["依存する、頼る、〜次第である", "自立する", "反対する", "疑う"], "correct": 0, "explanation": "dependは depend on 〜 の形で「〜に依存する、頼る」「〜次第である」という意味の動詞です。例: It depends on the weather.（それは天気次第です。）", "type": "choice"},
-        {"scenario": "「describe」の意味として最も適切なものは？", "choices": ["言葉で説明する、描写する", "描く", "隠す", "誤解する"], "correct": 0, "explanation": "describeは「（特徴などを）言葉で説明する、描写する」という意味の動詞です。名詞形はdescriptionです。例: describe the suspect（容疑者の特徴を説明する）", "type": "choice"},
-        {"scenario": "「disappear」の意味として最も適切なものは？", "choices": ["消える、見えなくなる", "現れる", "隠れる", "探す"], "correct": 0, "explanation": "disappearは「消える、見えなくなる」という意味の動詞です。appear（現れる）に否定のdis-がついた言葉です。例: The cloud disappeared.（雲が消えた。）", "type": "choice"},
-        {"scenario": "「encourage」の意味として最も適切なものは？", "choices": ["励ます、勇気づける、勧める", "怒る", "落胆させる", "無視する"], "correct": 0, "explanation": "encourageは「（人を）励ます、勇気づける」または「〜することを勧める」という意味の動詞です。対義語はdiscourageです。", "type": "choice"},
-        {"scenario": "「expect」の意味として最も適切なものは？", "choices": ["期待する、予期する、予想する", "諦める", "驚く", "拒否する"], "correct": 0, "explanation": "expectは「（ある事が起こるのを）期待する、予期する、予想する」という意味の動詞です。例: expect a rain（雨を予想する）", "type": "choice"},
-        {"scenario": "「express」の意味として最も適切なものは？", "choices": ["表現する、表す、急行の", "隠す", "抑える", "各駅停車の"], "correct": 0, "explanation": "expressは「（言葉や態度で感情などを）表現する、表す」という動詞、また「急行の」という形容詞・名詞の意味もあります。例: express my feelings（感情を表現する）", "type": "choice"},
-        {"scenario": "「focus」の意味として最も適切なものは？", "choices": ["焦点を合わせる、集中する、焦点", "ぼやける", "分散する", "避ける"], "correct": 0, "explanation": "focusは「焦点を合わせる、集中する」という動詞、また「焦点、中心」という名詞の意味もあります。例: focus on study（勉強に集中する）", "type": "choice"},
-        {"scenario": "「ignore」の意味として最も適切なものは？", "choices": ["無視する、知らないふりをする", "注意する", "認める", "歓迎する"], "correct": 0, "explanation": "ignoreは「（意図的に）無視する、知らないふりをする」という意味の動詞です。形容詞形はignorant（無知な）です。例: ignore his advice（彼の忠告を無視する）", "type": "choice"}
+        {
+          "scenario": "「add」の意味として最も適切なものは？",
+          "choices": [
+            "加える",
+            "思いつく",
+            "悩ます",
+            "取り付ける"
+          ],
+          "correct": 0,
+          "explanation": "「add」は「加える」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adjust」の意味として最も適切なものは？",
+          "choices": [
+            "楽しませる",
+            "崩壊する",
+            "調整する",
+            "禁止"
+          ],
+          "correct": 2,
+          "explanation": "「adjust」は「調整する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adopt」の意味として最も適切なものは？",
+          "choices": [
+            "関連づける",
+            "採用する",
+            "構成される",
+            "変える"
+          ],
+          "correct": 1,
+          "explanation": "「adopt」は「採用する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「advance」の意味として最も適切なものは？",
+          "choices": [
+            "前進",
+            "採用する",
+            "報告",
+            "承認する"
+          ],
+          "correct": 0,
+          "explanation": "「advance」は「前進」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alarm」の意味として最も適切なものは？",
+          "choices": [
+            "縛る",
+            "警報",
+            "逮捕",
+            "自慢"
+          ],
+          "correct": 1,
+          "explanation": "「alarm」は「警報」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alter」の意味として最も適切なものは？",
+          "choices": [
+            "変える",
+            "収容する",
+            "分析する",
+            "構成される"
+          ],
+          "correct": 0,
+          "explanation": "「alter」は「変える」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amuse」の意味として最も適切なものは？",
+          "choices": [
+            "楽しませる",
+            "品種",
+            "貢献する",
+            "犯す"
+          ],
+          "correct": 0,
+          "explanation": "「amuse」は「楽しませる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「analyze」の意味として最も適切なものは？",
+          "choices": [
+            "感謝する",
+            "縛る",
+            "祝福する",
+            "分析する"
+          ],
+          "correct": 3,
+          "explanation": "「analyze」は「分析する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「annoy」の意味として最も適切なものは？",
+          "choices": [
+            "納得させる",
+            "強いる",
+            "分析する",
+            "悩ます"
+          ],
+          "correct": 3,
+          "explanation": "「annoy」は「悩ます」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「anticipate」の意味として最も適切なものは？",
+          "choices": [
+            "手がかりを与える",
+            "予期する",
+            "魅力",
+            "構成される"
+          ],
+          "correct": 1,
+          "explanation": "「anticipate」は「予期する」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 3,
-      "title": "名詞編①：社会・自然・環境",
-      "type": "Nouns: Society & Nature",
-      "emoji": "🌏",
-      "subtitle": "ニュースや一般常識でよく使われる社会・自然に関する名詞",
+      "title": "動詞編3",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト3",
       "questions": [
-        {"scenario": "「ability」の意味として最も適切なものは？", "choices": ["能力、才能", "障害", "努力", "結果"], "correct": 0, "explanation": "abilityは「（何かを行う）能力、才能」を表す名詞です。able（できる）の名詞形です。例: linguistic ability（語学力）", "type": "choice"},
-        {"scenario": "「accident」の意味として最も適切なものは？", "choices": ["事故、偶然の出来事", "事件", "災害", "故障"], "correct": 0, "explanation": "accidentは「（不慮の）事故」または「偶然の出来事」を表す名詞です。例: traffic accident（交通事故）", "type": "choice"},
-        {"scenario": "「activity」の意味として最も適切なものは？", "choices": ["活動、行動、アクティビティ", "休息", "計画", "思考"], "correct": 0, "explanation": "activityは「活動、活発な行動」を表す名詞です。active（活動的な）の名詞形です。例: outdoor activities（アウトドア活動）", "type": "choice"},
-        {"scenario": "「advertising」の意味として最も適切なものは？", "choices": ["広告、宣伝活動", "商品", "店", "販売員"], "correct": 0, "explanation": "advertisingは「広告、宣伝活動（全体）」を表す名詞です。個々の広告は advertisement と言います。例: advertising agency（広告代理店）", "type": "choice"},
-        {"scenario": "「agriculture」の意味として最も適切なものは？", "choices": ["農業、農学", "工業", "水産業", "林業"], "correct": 0, "explanation": "agricultureは「農業、農学」を表す名詞です。形容詞形はagricultural（農業の）です。例: modern agriculture（近代農業）", "type": "choice"},
-        {"scenario": "「amount」の意味として最も適切なものは？", "choices": ["量、総額、合計〜になる", "数", "割合", "大きさ"], "correct": 0, "explanation": "amountは「（あるまとまった）量」または「総額」を表す名詞です。動詞で「合計が〜に達する」という意味もあります。例: a large amount of money（多額のお金）", "type": "choice"},
-        {"scenario": "「attitude」の意味として最も適切なものは？", "choices": ["態度、心構え、考え方", "適性", "高度", "性格"], "correct": 0, "explanation": "attitudeは「（物事に対する）態度、心構え、考え方」を表す名詞です。例: positive attitude（前向きな態度）", "type": "choice"},
-        {"scenario": "「audience」の意味として最も適切なものは？", "choices": ["観客、聴衆、視聴者", "出演者", "主催者", "関係者"], "correct": 0, "explanation": "audienceはコンサートや劇場、テレビなどの「観客、聴衆、視聴者（全体）」を表す名詞です。集合的に扱われます。", "type": "choice"},
-        {"scenario": "「authority」の意味として最も適切なものは？", "choices": ["権威、権限、当局", "服従", "無力", "一般市民"], "correct": 0, "explanation": "authorityは「権威、権限」または「（公の）当局、政府機関」を表す名詞です。例: government authorities（政府当局）", "type": "choice"},
-        {"scenario": "「benefit」の意味として最も適切なものは？", "choices": ["利益、恩恵、給付金", "損失", "不利益", "負担"], "correct": 0, "explanation": "benefitは「（良い影響を与える）利益、恩恵」または「（公的な）手当、給付金」を表す名詞です。例: health benefits（健康上の利益）", "type": "choice"}
+        {
+          "scenario": "「appeal」の意味として最も適切なものは？",
+          "choices": [
+            "構成する",
+            "破裂",
+            "魅力",
+            "計算する"
+          ],
+          "correct": 2,
+          "explanation": "「appeal」は「魅力」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appoint」の意味として最も適切なものは？",
+          "choices": [
+            "禁止",
+            "告発する",
+            "構成される",
+            "任命する"
+          ],
+          "correct": 3,
+          "explanation": "「appoint」は「任命する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appreciate」の意味として最も適切なものは？",
+          "choices": [
+            "確認する",
+            "感謝する",
+            "切り取る",
+            "吸収する"
+          ],
+          "correct": 1,
+          "explanation": "「appreciate」は「感謝する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「approve」の意味として最も適切なものは？",
+          "choices": [
+            "承認する",
+            "衝突する",
+            "確認する",
+            "噛む"
+          ],
+          "correct": 0,
+          "explanation": "「approve」は「承認する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arrest」の意味として最も適切なものは？",
+          "choices": [
+            "逮捕",
+            "お買い得品",
+            "好況",
+            "採用する"
+          ],
+          "correct": 0,
+          "explanation": "「arrest」は「逮捕」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「associate」の意味として最も適切なものは？",
+          "choices": [
+            "貢献する",
+            "試み",
+            "連絡する",
+            "関連づける"
+          ],
+          "correct": 3,
+          "explanation": "「associate」は「関連づける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assure」の意味として最も適切なものは？",
+          "choices": [
+            "取り付ける",
+            "雑談する",
+            "保証する",
+            "魅力"
+          ],
+          "correct": 2,
+          "explanation": "「assure」は「保証する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attach」の意味として最も適切なものは？",
+          "choices": [
+            "投げる",
+            "試み",
+            "取り付ける",
+            "自慢"
+          ],
+          "correct": 2,
+          "explanation": "「attach」は「取り付ける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attack」の意味として最も適切なものは？",
+          "choices": [
+            "告白する",
+            "認める",
+            "攻撃する",
+            "吸収する"
+          ],
+          "correct": 2,
+          "explanation": "「attack」は「攻撃する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attempt」の意味として最も適切なものは？",
+          "choices": [
+            "廃止する",
+            "適応させる",
+            "試み",
+            "思いつく"
+          ],
+          "correct": 2,
+          "explanation": "「attempt」は「試み」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 4,
-      "title": "名詞編②：生活・ビジネス・IT",
-      "type": "Nouns: Life & Business",
-      "emoji": "💻",
-      "subtitle": "日常生活や仕事、テクノロジーに関連する名詞",
+      "title": "動詞編4",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト4",
       "questions": [
-        {"scenario": "「consumer」の意味として最も適切なものは？", "choices": ["消費者", "生産者", "販売者", "労働者"], "correct": 0, "explanation": "consumerは「消費者」を表す名詞です。consume（消費する）の名詞形です。対義語はproducer（生産者）です。", "type": "choice"},
-        {"scenario": "「custom」の意味として最も適切なものは？", "choices": ["習慣、社会的な風習、税関", "規則", "法律", "個人的な癖"], "correct": 0, "explanation": "customは社会や地域特有の「習慣、風習」を表す名詞です。複数形の customs には「税関」という意味もあります。個人の習慣は habit です。", "type": "choice"},
-        {"scenario": "「decade」の意味として最も適切なものは？", "choices": ["10年間", "1年間", "100年間", "1000年間", "10年"], "correct": 0, "explanation": "decadeは「10年間」を表す名詞です。例: for a decade（10年間にわたって）", "type": "choice"},
-        {"scenario": "「device」の意味として最も適切なものは？", "choices": ["装置、機器、工夫、デバイス", "部品", "素材", "プログラム"], "correct": 0, "explanation": "deviceは特定の目的のために作られた「装置、機器」または「工夫、企て」を表す名詞です。例: electronic device（電子機器）", "type": "choice"},
-        {"scenario": "「diploma」の意味として最も適切なものは？", "choices": ["卒業証書、学位記", "教科書", "証明書", "成績表"], "correct": 0, "explanation": "diplomaは学校や大学などの課程を終えた際に与えられる「卒業証書、学位記」を表す名詞です。", "type": "choice"},
-        {"scenario": "「disease」の意味として最も適切なものは？", "choices": ["病気、疾患、疾病", "健康", "治療", "怪我"], "correct": 0, "explanation": "diseaseは生物に害を与える特定の「病気、疾患、疾病」を表す名詞です。風邪などの一時的な不調は illness です。例: heart disease（心臓病）", "type": "choice"},
-        {"scenario": "「economy」の意味として最も適切なものは？", "choices": ["経済、景気、節約", "政治", "社会", "貿易"], "correct": 0, "explanation": "economyは「経済、景気」または「節約」を表す名詞です。形容詞形はeconomic（経済の）またはeconomical（経済的な、節約になる）です。", "type": "choice"},
-        {"scenario": "「employee」の意味として最も適切なものは？", "choices": ["従業員、社員、雇用される人", "雇い主、社長", "役員", "顧客"], "correct": 0, "explanation": "employeeは「従業員、社員」を表す名詞です。employ（雇う）に -ee が付いて「雇われる人」となります。対義語はemployer（雇い主）です。", "type": "choice"},
-        {"scenario": "「employer」の意味として最も適切なものは？", "choices": ["雇い主、雇用者、社長", "従業員", "労働者", "取引先"], "correct": 0, "explanation": "employerは「雇い主、雇用者、社長」を表す名詞です。employ（雇う）に -er が付いて「雇う人」となります。対義語はemployee（従業員）です。", "type": "choice"},
-        {"scenario": "「equipment」の意味として最も適切なものは？", "choices": ["装備、設備、備品、機器", "衣類", "工具", "家具"], "correct": 0, "explanation": "equipmentは特定の活動や業務に必要な「装備、設備、機器（全体）」を表す名詞です。不可算名詞（数えられない名詞）です。例: office equipment（事務機器）", "type": "choice"}
+        {
+          "scenario": "「attend」の意味として最も適切なものは？",
+          "choices": [
+            "出席する",
+            "正しい",
+            "追跡",
+            "切り取る"
+          ],
+          "correct": 0,
+          "explanation": "「attend」は「出席する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「award」の意味として最も適切なものは？",
+          "choices": [
+            "消費する",
+            "やめる",
+            "賞",
+            "乞う"
+          ],
+          "correct": 2,
+          "explanation": "「award」は「賞」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ban」の意味として最も適切なものは？",
+          "choices": [
+            "告発する",
+            "禁止",
+            "吸収する",
+            "予期する"
+          ],
+          "correct": 1,
+          "explanation": "「ban」は「禁止」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bare」の意味として最も適切なものは？",
+          "choices": [
+            "調整する",
+            "楽しませる",
+            "警報",
+            "裸の"
+          ],
+          "correct": 3,
+          "explanation": "「bare」は「裸の」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bargain」の意味として最も適切なものは？",
+          "choices": [
+            "品種",
+            "お買い得品",
+            "治療する",
+            "納得させる"
+          ],
+          "correct": 1,
+          "explanation": "「bargain」は「お買い得品」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beg」の意味として最も適切なものは？",
+          "choices": [
+            "制限する",
+            "感謝する",
+            "構成する",
+            "乞う"
+          ],
+          "correct": 3,
+          "explanation": "「beg」は「乞う」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bet」の意味として最も適切なものは？",
+          "choices": [
+            "縛る",
+            "退屈な人",
+            "逮捕",
+            "賭け"
+          ],
+          "correct": 3,
+          "explanation": "「bet」は「賭け」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bid」の意味として最も適切なものは？",
+          "choices": [
+            "攻撃する",
+            "入札",
+            "実施する",
+            "逮捕"
+          ],
+          "correct": 1,
+          "explanation": "「bid」は「入札」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bind」の意味として最も適切なものは？",
+          "choices": [
+            "犯す",
+            "構成する",
+            "分析する",
+            "縛る"
+          ],
+          "correct": 3,
+          "explanation": "「bind」は「縛る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bless」の意味として最も適切なものは？",
+          "choices": [
+            "保証する",
+            "逮捕",
+            "祝福する",
+            "調整する"
+          ],
+          "correct": 2,
+          "explanation": "「bless」は「祝福する」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 5,
-      "title": "形容詞編①：性質・状態",
-      "type": "Adjectives 1",
-      "emoji": "🎨",
-      "subtitle": "物事の物理的な特徴や状態を表す形容詞",
+      "title": "動詞編5",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト5",
       "questions": [
-        {"scenario": "「ancient」の意味として最も適切なものは？", "choices": ["古代の、大昔の、極めて古い", "近代の", "未来の", "流行の"], "correct": 0, "explanation": "ancientは「古代の、大昔の」または「極めて古い」という意味の形容詞です。対義語はmodern（近代の、現代の）です。例: ancient history（古代史）", "type": "choice"},
-        {"scenario": "「anxious」の意味として最も適切なものは？", "choices": ["心配して、不安な、切望して", "安心した", "怒った", "満足した"], "correct": 0, "explanation": "anxiousは「（悪いことを）心配して、不安な」または be anxious to do の形で「〜することを切望して」という意味の形容詞です。名詞形はanxietyです。", "type": "choice"},
-        {"scenario": "「available」の意味として最も適切なものは？", "choices": ["利用可能な、手に入る、時間がある", "使用中の", "壊れた", "無駄な"], "correct": 0, "explanation": "availableは「（物が）利用できる、手に入る」または「（人が）時間がある、手が空いている」という意味の形容詞です。例: Available seat（空席）", "type": "choice"},
-        {"scenario": "「blind」の意味として最も適切なものは？", "choices": ["目の見えない、盲目の", "耳の聞こえない", "口のきけない", "目が見える"], "correct": 0, "explanation": "blindは「目の見えない、盲目の」または「気づかない」という意味の形容詞です。例: blind spots（死角、弱点）", "type": "choice"},
-        {"scenario": "「certain」の意味として最も適切なものは？", "choices": ["確信して、確かな、特定の", "疑わしい", "不確定な", "一般的な"], "correct": 0, "explanation": "certainは be certain that/of 〜 の形で「〜を確信して、確かに思っている」または名詞の前で「特定の、ある〜」という意味の形容詞です。", "type": "choice"},
-        {"scenario": "「comfortable」の意味として最も適切なものは？", "choices": ["快適な、心地よい、気楽な", "不快な", "狭い", "高価な"], "correct": 0, "explanation": "comfortableは「（家具や部屋、衣服などが）快適な、心地よい」または「（精神的に）気楽な」という意味の形容詞です。対義語はuncomfortableです。", "type": "choice"},
-        {"scenario": "「common」の意味として最も適切なものは？", "choices": ["共通の、一般的な、普通の、よくある", "珍しい", "個別の", "特別な"], "correct": 0, "explanation": "commonは「共通の」または「一般的な、普通の、よくある」という意味の形容詞です。例: common language（共通言語）、common sense（常識）", "type": "choice"},
-        {"scenario": "「creative」の意味として最も適切なものは？", "choices": ["創造的な、独創的な", "模倣した", "ありふれた", "破壊的な"], "correct": 0, "explanation": "creativeは「創造的な、独創的な、クリエイティブな」という意味の形容詞です。create（創造する）の形容詞形です。例: creative work（創造的な仕事）", "type": "choice"},
-        {"scenario": "「crucial」の意味として最も適切なものは？", "choices": ["極めて重要な、決定的な", "些細な", "不要な", "簡単な"], "correct": 0, "explanation": "crucialは「（物事の成否に関わるほど）極めて重要な、決定的な」という意味の形容詞です。importantよりも重要度が高いニュアンスです。", "type": "choice"},
-        {"scenario": "「curious」の意味として最も適切なものは？", "choices": ["好奇心が強い、知りたがっている、奇妙な", "無関心な", "退屈な", "賢い"], "correct": 0, "explanation": "curiousは「好奇心が強い、知りたがっている」または「奇妙な、珍しい」という意味の形容詞です。名詞形はcuriosityです。例: a curious child（好奇心旺盛な子供）", "type": "choice"}
+        {
+          "scenario": "「blow」の意味として最も適切なものは？",
+          "choices": [
+            "打撃",
+            "報告",
+            "はう",
+            "お買い得品"
+          ],
+          "correct": 0,
+          "explanation": "「blow」は「打撃」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boast」の意味として最も適切なものは？",
+          "choices": [
+            "自慢",
+            "貢献する",
+            "好況",
+            "乞う"
+          ],
+          "correct": 0,
+          "explanation": "「boast」は「自慢」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boil」の意味として最も適切なものは？",
+          "choices": [
+            "楽しませる",
+            "沸騰",
+            "裸の",
+            "直面する"
+          ],
+          "correct": 1,
+          "explanation": "「boil」は「沸騰」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boom」の意味として最も適切なものは？",
+          "choices": [
+            "賞",
+            "好況",
+            "呼吸する",
+            "貢献する"
+          ],
+          "correct": 1,
+          "explanation": "「boom」は「好況」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bore」の意味として最も適切なものは？",
+          "choices": [
+            "廃止する",
+            "出席する",
+            "達成する",
+            "退屈な人"
+          ],
+          "correct": 3,
+          "explanation": "「bore」は「退屈な人」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「breathe」の意味として最も適切なものは？",
+          "choices": [
+            "取り付ける",
+            "呼吸する",
+            "試み",
+            "ひび割れた"
+          ],
+          "correct": 1,
+          "explanation": "「breathe」は「呼吸する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「breed」の意味として最も適切なものは？",
+          "choices": [
+            "品種",
+            "感謝する",
+            "確認する",
+            "隠す"
+          ],
+          "correct": 0,
+          "explanation": "「breed」は「品種」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「burst」の意味として最も適切なものは？",
+          "choices": [
+            "分析する",
+            "犯す",
+            "破裂",
+            "隠す"
+          ],
+          "correct": 2,
+          "explanation": "「burst」は「破裂」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「calculate」の意味として最も適切なものは？",
+          "choices": [
+            "悩ます",
+            "やめる",
+            "計算する",
+            "乱用"
+          ],
+          "correct": 2,
+          "explanation": "「calculate」は「計算する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cast」の意味として最も適切なものは？",
+          "choices": [
+            "征服する",
+            "保証する",
+            "投げる",
+            "制限する"
+          ],
+          "correct": 2,
+          "explanation": "「cast」は「投げる」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 6,
-      "title": "形容詞編②：社会・態度・評価",
-      "type": "Adjectives 2",
-      "emoji": "🗣️",
-      "subtitle": "社会的な価値観や人の態度を表す形容詞",
+      "title": "動詞編6",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト6",
       "questions": [
-        {"scenario": "「different」の意味として最も適切なものは？", "choices": ["異なった、違った、様々な", "同じ", "似ている", "珍しい"], "correct": 0, "explanation": "differentは「〜と違った、異なった」または複数名詞の前で「様々な」という意味の形容詞です。名詞形はdifferenceです。対義語はsame（同じ）です。", "type": "choice"},
-        {"scenario": "「eager」の意味として最も適切なものは？", "choices": ["熱望して、熱心な", "嫌がって", "無関心な", "怠惰な"], "correct": 0, "explanation": "eagerは be eager to do の形で「〜することを熱望している」、または「（仕事や勉強に）熱心な」という意味の形容詞です。例: eager students（熱心な学生）", "type": "choice"},
-        {"scenario": "「economic」の意味として最も適切なものは？", "choices": ["経済の、経済学の", "経済的な、安い", "社会の", "政治の"], "correct": 0, "explanation": "economicは「経済の、景気の、経済学の」という意味の形容詞です。安価で節約になるという意味の「経済的な」は economical なので区別しましょう。", "type": "choice"},
-        {"scenario": "「entire」の意味として最も適切なものは？", "choices": ["全体の、全部の、完全な", "一部の", "不完全な", "半分の"], "correct": 0, "explanation": "entireは「全体の、全部の」という意味の形容詞で、wholeとほぼ同義です。例: the entire world（全世界）", "type": "choice"},
-        {"scenario": "「essential」の意味として最も適切なものは？", "choices": ["不可欠な、最も重要な、本質的な", "不要な", "些細な", "最新の"], "correct": 0, "explanation": "essentialは「（何かを行う上で絶対的に）不可欠な、必要不可欠な」という意味の形容詞です。例: essential items（必需品）", "type": "choice"},
-        {"scenario": "「familiar」の意味として最も適切なものは？", "choices": ["よく知っている、馴染みのある", "未知の", "珍しい", "難しい"], "correct": 0, "explanation": "familiarは be familiar with 〜 の形で「〜をよく知っている、〜に馴染みがある」という意味の形容詞です。例: a familiar face（見慣れた顔）", "type": "choice"},
-        {"scenario": "「foreign」の意味として最も適切なものは？", "choices": ["外国の、異質の", "国内の", "友好国の", "歴史的な"], "correct": 0, "explanation": "foreignは「外国の、海外の」または「異質な、馴染まない」という意味の形容詞です。名詞形はforeigner（外国人）です。対義語はdomestic（国内の）です。", "type": "choice"},
-        {"scenario": "「formal」の意味として最も適切なものは？", "choices": ["公式の、正式な、改まった、フォーマルな", "非公式の", "カジュアルな", "簡単な"], "correct": 0, "explanation": "formalは「公式の、正式な」または「改まった、堅苦しい」という意味の形容詞です。対義語はinformal（非公式の、略式の）やcasual（日常的な）です。", "type": "choice"},
-        {"scenario": "「generous」の意味として最も適切なものは？", "choices": ["寛大な、気前の良い、惜しみない", "けちな", "厳しい", "冷淡な"], "correct": 0, "explanation": "generousは「（他人に対して）寛大な、気前の良い」または「（量などが）惜しみない、たっぷりした」という意味の形容詞です。例: a generous offer（寛大な申し出）", "type": "choice"},
-        {"scenario": "「global」の意味として最も適切なものは？", "choices": ["地球全体の、世界的な、グローバルな", "一部の", "地元の", "宇宙の"], "correct": 0, "explanation": "globalは「地球全体の、世界的な、グローバルな」という意味の形容詞です。globe（地球、球体）から来ています。例: global warming（地球温暖化）", "type": "choice"}
+        {
+          "scenario": "「caution」の意味として最も適切なものは？",
+          "choices": [
+            "手がかりを与える",
+            "入札",
+            "注意",
+            "賞"
+          ],
+          "correct": 2,
+          "explanation": "「caution」は「注意」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cease」の意味として最も適切なものは？",
+          "choices": [
+            "沸騰",
+            "構成する",
+            "出席する",
+            "やめる"
+          ],
+          "correct": 3,
+          "explanation": "「cease」は「やめる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charm」の意味として最も適切なものは？",
+          "choices": [
+            "変える",
+            "衝突する",
+            "ひび割れた",
+            "魅力"
+          ],
+          "correct": 3,
+          "explanation": "「charm」は「魅力」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chase」の意味として最も適切なものは？",
+          "choices": [
+            "衝突する",
+            "乱用",
+            "同意する",
+            "追跡"
+          ],
+          "correct": 3,
+          "explanation": "「chase」は「追跡」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chat」の意味として最も適切なものは？",
+          "choices": [
+            "手がかりを与える",
+            "同意する",
+            "攻撃する",
+            "雑談する"
+          ],
+          "correct": 3,
+          "explanation": "「chat」は「雑談する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cheat」の意味として最も適切なものは？",
+          "choices": [
+            "計算する",
+            "禁止",
+            "不正行為",
+            "感謝する"
+          ],
+          "correct": 2,
+          "explanation": "「cheat」は「不正行為」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chew」の意味として最も適切なものは？",
+          "choices": [
+            "お買い得品",
+            "出席する",
+            "制限する",
+            "噛む"
+          ],
+          "correct": 3,
+          "explanation": "「chew」は「噛む」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chop」の意味として最も適切なものは？",
+          "choices": [
+            "好況",
+            "賞",
+            "打撃",
+            "切り刻む"
+          ],
+          "correct": 3,
+          "explanation": "「chop」は「切り刻む」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「circulate」の意味として最も適切なものは？",
+          "choices": [
+            "循環する",
+            "追跡",
+            "自慢",
+            "楽しませる"
+          ],
+          "correct": 0,
+          "explanation": "「circulate」は「循環する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clarify」の意味として最も適切なものは？",
+          "choices": [
+            "賞",
+            "明らかにする",
+            "沸騰",
+            "楽しませる"
+          ],
+          "correct": 1,
+          "explanation": "「clarify」は「明らかにする」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 7,
-      "title": "副詞・前置詞編③：程度・頻度・関係",
-      "type": "Adverbs & Connections",
-      "emoji": "📍",
-      "subtitle": "文と文をつなぐ、または状況を詳しく説明する副詞など",
+      "title": "動詞編7",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト7",
       "questions": [
-        {"scenario": "「actually」の意味として最も適切なものは？", "choices": ["実際には、実は、本当に", "偶然に", "おそらく", "一般的に"], "correct": 0, "explanation": "actuallyは「実際には、実は（話者の予想に反して）」または「本当に」と事実を強調する副詞です。例: What actually happened?（実際何が起きたの？）", "type": "choice"},
-        {"scenario": "「already」の意味として最も適切なものは？", "choices": ["すでに、もう", "まだ", "以前に", "今すぐに"], "correct": 0, "explanation": "alreadyは「すでに、もう（予想より早く完了していること）」を表す副詞です。肯定文で使われることが多いです。例: I have already eaten.（もう食べました。）", "type": "choice"},
-        {"scenario": "「especially」の意味として最も適切なものは？", "choices": ["特に、とりわけ", "一般的に", "偶然に", "次第に"], "correct": 0, "explanation": "especiallyは「（他と比べて）特に、とりわけ」という意味の副詞です。particularlyとほぼ同じ意味です。例: I like sports, especially soccer.（スポーツ、特にサッカーが好きです。）", "type": "choice"},
-        {"scenario": "「exactly」の意味として最も適切なものは？", "choices": ["正確に、ちょうど、まさにその通り", "大まかに", "約", "おそらく"], "correct": 0, "explanation": "exactlyは「正確に、ちょうど、まさに」という意味の副詞です。返答で「その通り！」と強く同意するときにも使われます。例: exactly at noon（正午ぴったりに）", "type": "choice"},
-        {"scenario": "「finally」の意味として最も適切なものは？", "choices": ["ついに、最終的に、やっと", "最初に", "途中で", "一時的に"], "correct": 0, "explanation": "finallyは「ついに、最終的に、やっと（長いプロセスや待ち時間の後に）」という意味の副詞です。例: Finally, I passed the exam.（ついに試験に合格した。）", "type": "choice"},
-        {"scenario": "「instead」の意味として最も適切なものは？", "choices": ["代わりに、そうせずに", "一緒に", "その後で", "確かに"], "correct": 0, "explanation": "insteadは「その代わりに、そうせずに」という意味の副詞です。instead of 〜 の形で「〜の代わりに」という前置詞のようにも使われます。例: Stay home instead.（代わりに家にいなさい。）", "type": "choice"},
-        {"scenario": "「maybe」の意味として最も適切なものは？", "choices": ["もしかすると、たぶん、あるいは", "確実に", "決して〜ない", "もちろん"], "correct": 0, "explanation": "maybeは「もしかすると、たぶん（確信度が50%程度）」という意味の副詞です。perhapsと似ていますが、より口語的です。例: Maybe it will rain.（もしかすると雨が降るかも。）", "type": "choice"},
-        {"scenario": "「probably」の意味として最も適切なものは？", "choices": ["おそらく、たぶん、十中八九", "確実に", "絶対に〜ない", "偶然に"], "correct": 0, "explanation": "probablyは「おそらく、たぶん（確信度が80%以上と高い）」という意味の副詞です。maybe（50%程度）より確信度が高いです。例: He will probably come.（彼はおそらく来るだろう。）", "type": "choice"},
-        {"scenario": "「recently」の意味として最も適切なものは？", "choices": ["最近、近頃、少し前に", "将来", "過去に", "すぐに"], "correct": 0, "explanation": "recentlyは「最近、近頃、少し前に（過去形や現在完了形と共に使う）」を表す副詞です。例: I saw him recently.（最近彼に会った。）", "type": "choice"},
-        {"scenario": "「therefore」の意味として最も適切なものは？", "choices": ["したがって、それゆえに、だから", "しかしながら", "さらに", "例えば"], "correct": 0, "explanation": "thereforeは「したがって、それゆえに、だから」と論理的な結論を導く副詞です。書き言葉でよく使われます。例: Therefore, we must act.（したがって、私たちは行動しなければならない。）", "type": "choice"}
+        {
+          "scenario": "「clash」の意味として最も適切なものは？",
+          "choices": [
+            "ひび割れた",
+            "同行する",
+            "循環する",
+            "衝突する"
+          ],
+          "correct": 3,
+          "explanation": "「clash」は「衝突する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clip」の意味として最も適切なものは？",
+          "choices": [
+            "切り取る",
+            "切り刻む",
+            "一致する",
+            "計算する"
+          ],
+          "correct": 0,
+          "explanation": "「clip」は「切り取る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clue」の意味として最も適切なものは？",
+          "choices": [
+            "制限する",
+            "追跡",
+            "警報",
+            "手がかりを与える"
+          ],
+          "correct": 3,
+          "explanation": "「clue」は「手がかりを与える」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collapse」の意味として最も適切なものは？",
+          "choices": [
+            "はう",
+            "一致する",
+            "結合する",
+            "崩壊する"
+          ],
+          "correct": 3,
+          "explanation": "「collapse」は「崩壊する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「combine」の意味として最も適切なものは？",
+          "choices": [
+            "結合する",
+            "確認する",
+            "保証する",
+            "ひび割れた"
+          ],
+          "correct": 0,
+          "explanation": "「combine」は「結合する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comment」の意味として最も適切なものは？",
+          "choices": [
+            "変える",
+            "投げる",
+            "コメントする",
+            "ひび割れた"
+          ],
+          "correct": 2,
+          "explanation": "「comment」は「コメントする」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commit」の意味として最も適切なものは？",
+          "choices": [
+            "呼吸する",
+            "犯す",
+            "採用する",
+            "不正行為"
+          ],
+          "correct": 1,
+          "explanation": "「commit」は「犯す」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compel」の意味として最も適切なものは？",
+          "choices": [
+            "実施する",
+            "強いる",
+            "吸収する",
+            "採用する"
+          ],
+          "correct": 1,
+          "explanation": "「compel」は「強いる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compose」の意味として最も適切なものは？",
+          "choices": [
+            "思いつく",
+            "構成する",
+            "切り刻む",
+            "裸の"
+          ],
+          "correct": 1,
+          "explanation": "「compose」は「構成する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comprehend」の意味として最も適切なものは？",
+          "choices": [
+            "理解する",
+            "同意する",
+            "結論づける",
+            "攻撃する"
+          ],
+          "correct": 0,
+          "explanation": "「comprehend」は「理解する」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 8,
-      "title": "重要熟語①：動詞・形容詞ベース",
-      "type": "Phrasal Verbs 1",
-      "emoji": "🔗",
-      "subtitle": "動詞や形容詞と前置詞が結びついた重要イディオム",
+      "title": "動詞編8",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト8",
       "questions": [
-        {"scenario": "「agree with」の意味として最も適切なものは？", "choices": ["〜に同意する、意見が一致する", "〜に反対する", "〜を言い争う", "〜を避ける"], "correct": 0, "explanation": "agree with (人・意見) は「〜に同意する、意見が一致する」という意味の熟語です。例: I agree with your idea.（あなたの考えに同意します。）", "type": "choice"},
-        {"scenario": "「apply for」の意味として最も適切なものは？", "choices": ["〜に応募する、申請する", "〜を断る", "〜を提供する", "〜を説明する"], "correct": 0, "explanation": "apply for (仕事・許可など) は「〜に応募する、申請する、申し込む」という意味の熟語です。例: apply for a passport（パスポートを申請する）", "type": "choice"},
-        {"scenario": "「belong to」の意味として最も適切なものは？", "choices": ["〜に所属している、〜のものである", "〜から離れる", "〜を所有する", "〜に参加する"], "correct": 0, "explanation": "belong to 〜は「〜に所属している、〜のメンバーである」または「〜のものである」という意味の熟語です。例: This book belongs to me.（この本は私のです。）", "type": "choice"},
-        {"scenario": "「care about」の意味として最も適切なものは？", "choices": ["〜を気にする、心配する、関心がある", "〜の世話をする", "〜を無視する", "〜を軽蔑する"], "correct": 0, "explanation": "care about 〜は「〜を気にする、心配する、〜に関心がある」という意味の熟語です。世話をするは take care of や look after です。例: I don't care about the score.（点数は気にしない。）", "type": "choice"},
-        {"scenario": "「consist of」の意味として最も適切なものは？", "choices": ["〜から成り立っている、構成される", "〜を含む", "〜を除外する", "〜を構築する"], "correct": 0, "explanation": "consist of 〜は「〜から成り立っている、構成される」という意味の熟語です。例: Water consists of hydrogen and oxygen.（水は水素と酸素から成り立っている。）", "type": "choice"},
-        {"scenario": "「depend on」の意味として最も適切なものは？", "choices": ["〜に依存する、頼る、〜次第である", "〜から独立する", "〜を拒否する", "〜を疑う"], "correct": 0, "explanation": "depend on 〜は「〜に依存する、頼る」または「〜次第である」という意味の重要熟語です。例: Depend on yourself.（自分自身を頼りにしなさい。）", "type": "choice"},
-        {"scenario": "「hear of」の意味として最も適切なものは？", "choices": ["〜の噂を聞く、〜のことを耳にする", "〜から直接手紙をもらう", "〜を聞き流す", "〜を聞き間違える"], "correct": 0, "explanation": "hear of 〜は「〜の噂を聞く、〜の存在について耳にする（知っている）」という意味の熟語です。直接話を聞く場合は hear from です。", "type": "choice"},
-        {"scenario": "「look after」の意味として最も適切なものは？", "choices": ["〜の世話をする、面倒を見る", "〜を探す", "〜を調査する", "〜を軽視する"], "correct": 0, "explanation": "look after 〜は「〜の世話をする、面倒を見る」という意味の熟語で、take care of とほぼ同じです。例: look after a pet（ペットの世話をする）", "type": "choice"},
-        {"scenario": "「participate in」の意味として最も適切なものは？", "choices": ["〜に参加する、加わる", "〜から去る", "〜を主催する", "〜を計画する"], "correct": 0, "explanation": "participate in 〜は「〜に参加する、加わる」という意味の重要熟語で、take part in や join とほぼ同じです。例: participate in the game（試合に参加する）", "type": "choice"},
-        {"scenario": "「succeed in」の意味として最も適切なものは？", "choices": ["〜に成功する", "〜に失敗する", "〜を諦める", "〜を継承する"], "correct": 0, "explanation": "succeed in 〜は「〜に成功する」という意味の熟語です。succeedには「継承する、後を継ぐ」という意味もあります。例: succeed in business（ビジネスで成功する）", "type": "choice"}
+        {
+          "scenario": "「comprise」の意味として最も適切なものは？",
+          "choices": [
+            "廃止する",
+            "構成される",
+            "告白する",
+            "関連づける"
+          ],
+          "correct": 1,
+          "explanation": "「comprise」は「構成される」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conceal」の意味として最も適切なものは？",
+          "choices": [
+            "任命する",
+            "収容する",
+            "隠す",
+            "噛む"
+          ],
+          "correct": 2,
+          "explanation": "「conceal」は「隠す」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concede」の意味として最も適切なものは？",
+          "choices": [
+            "貢献する",
+            "認める",
+            "自慢",
+            "対立する"
+          ],
+          "correct": 1,
+          "explanation": "「concede」は「認める」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conceive」の意味として最も適切なものは？",
+          "choices": [
+            "収容する",
+            "〜から成る",
+            "認める",
+            "思いつく"
+          ],
+          "correct": 3,
+          "explanation": "「conceive」は「思いつく」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conclude」の意味として最も適切なものは？",
+          "choices": [
+            "構成する",
+            "結論づける",
+            "実施する",
+            "循環する"
+          ],
+          "correct": 1,
+          "explanation": "「conclude」は「結論づける」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conduct」の意味として最も適切なものは？",
+          "choices": [
+            "祝福する",
+            "実施する",
+            "承認する",
+            "達成する"
+          ],
+          "correct": 1,
+          "explanation": "「conduct」は「実施する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confess」の意味として最も適切なものは？",
+          "choices": [
+            "投げる",
+            "調整する",
+            "告白する",
+            "実施する"
+          ],
+          "correct": 2,
+          "explanation": "「confess」は「告白する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confine」の意味として最も適切なものは？",
+          "choices": [
+            "ひび割れた",
+            "制限する",
+            "見捨てる",
+            "採用する"
+          ],
+          "correct": 1,
+          "explanation": "「confine」は「制限する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confirm」の意味として最も適切なものは？",
+          "choices": [
+            "攻撃する",
+            "数える",
+            "賭け",
+            "確認する"
+          ],
+          "correct": 3,
+          "explanation": "「confirm」は「確認する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conflict」の意味として最も適切なものは？",
+          "choices": [
+            "沸騰",
+            "魅力",
+            "悩ます",
+            "対立する"
+          ],
+          "correct": 3,
+          "explanation": "「conflict」は「対立する」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 9,
-      "title": "重要熟語②：イディオム・その他",
-      "type": "Phrasal Verbs 2",
-      "emoji": "💬",
-      "subtitle": "前置詞や接続詞を含む定番の熟語・イディオム表現",
+      "title": "動詞編9",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト9",
       "questions": [
-        {"scenario": "「as well as」の意味として最も適切なものは？", "choices": ["〜と同様に、〜だけでなく〜も", "〜の代わりに", "〜するために", "〜の前に"], "correct": 0, "explanation": "A as well as B は「Bと同様にAも、BだけでなくAも」という意味の重要表現です。not only B but also A とほぼ同義です。", "type": "choice"},
-        {"scenario": "「because of」の意味として最も適切なものは？", "choices": ["〜のために、〜の理由で、〜のせいで", "〜にもかかわらず", "〜の代わりに", "〜の直後に"], "correct": 0, "explanation": "because of (名詞句) は「〜のために、〜のせいで」と原因や理由を表します。because単体では後ろに節（主語＋動詞）が続きます。", "type": "choice"},
-        {"scenario": "「by chance」の意味として最も適切なものは？", "choices": ["偶然に、たまたま", "故意に、わざと", "突然に", "将来的に"], "correct": 0, "explanation": "by chanceは「偶然に、たまたま」という意味の熟語です。by accidentとほぼ同じです。例: meet him by chance（彼に偶然出会う）", "type": "choice"},
-        {"scenario": "「in order to」の意味として最も適切なものは？", "choices": ["〜するために（目的）", "〜した結果として", "〜する代わりに", "〜の前に"], "correct": 0, "explanation": "in order to (動詞の原形) は「〜するために」と目的を明確に示す重要熟語です。単に to do でも同じ意味ですが、目的であることが強調されます。", "type": "choice"},
-        {"scenario": "「instead of」の意味として最も適切なものは？", "choices": ["〜の代わりに、〜しないで", "〜に加えて", "〜の後で", "〜と一緒に"], "correct": 0, "explanation": "instead of (名詞・動名詞) は「〜の代わりに、〜をしないで」という意味の熟語です。例: have tea instead of coffee（コーヒーの代わりにお茶を飲む）", "type": "choice"},
-        {"scenario": "「on time」の意味として最も適切なものは？", "choices": ["時間通りに、定刻に", "遅れて", "早く", "時間内に"], "correct": 0, "explanation": "on timeは「時間通りに、定刻に（遅れず時間ぴったりに）」という意味です。余裕を持って時間内にする場合は in time です。", "type": "choice"},
-        {"scenario": "「so far」の意味として最も適切なものは？", "choices": ["これまでのところ、今までは", "遠すぎて", "その結果", "将来"], "correct": 0, "explanation": "so farは「これまでのところ、今までは（現在完了形などとよく使われる）」という意味の熟語です。例: So far, so good.（これまでは順調だ。）", "type": "choice"},
-        {"scenario": "「thanks to」の意味として最も適切なものは？", "choices": ["〜のおかげで、〜のせいで", "〜に感謝して", "〜の代わりに", "〜に反対して"], "correct": 0, "explanation": "thanks to 〜は「〜のおかげで」と感謝を伴う原因・理由、または皮肉的に「〜のせいで」という意味で使われる熟語です。", "type": "choice"},
-        {"scenario": "「with the help of」の意味として最も適切なものは？", "choices": ["〜の助けを借りて、〜の援助で", "〜を助けるために", "〜の助けなしで", "〜と一緒に"], "correct": 0, "explanation": "with the help of 〜は「〜の助けを借りて、〜の援助を受けて」という意味の熟語です。例: with the help of a dictionary（辞書の助けを借りて）", "type": "choice"},
-        {"scenario": "「on the other hand」の意味として最も適切なものは？", "choices": ["他方では、一方で", "この手の上に", "別の方法で", "その代わりに"], "correct": 0, "explanation": "on the other handは対比を表す「他方では、一方で」という意味の重要接続表現です。on the one hand（一方では）と対でよく使われます。", "type": "choice"}
+        {
+          "scenario": "「confront」の意味として最も適切なものは？",
+          "choices": [
+            "思いつく",
+            "直面する",
+            "変える",
+            "同行する"
+          ],
+          "correct": 1,
+          "explanation": "「confront」は「直面する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conquer」の意味として最も適切なものは？",
+          "choices": [
+            "認める",
+            "征服する",
+            "警報",
+            "一致する"
+          ],
+          "correct": 1,
+          "explanation": "「conquer」は「征服する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consent」の意味として最も適切なものは？",
+          "choices": [
+            "同意する",
+            "告白する",
+            "加える",
+            "採用する"
+          ],
+          "correct": 0,
+          "explanation": "「consent」は「同意する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conserve」の意味として最も適切なものは？",
+          "choices": [
+            "破裂",
+            "保護する",
+            "収容する",
+            "計算する"
+          ],
+          "correct": 1,
+          "explanation": "「conserve」は「保護する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consist」の意味として最も適切なものは？",
+          "choices": [
+            "コピーする",
+            "実施する",
+            "〜から成る",
+            "崩壊する"
+          ],
+          "correct": 2,
+          "explanation": "「consist」は「〜から成る」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constitute」の意味として最も適切なものは？",
+          "choices": [
+            "出席する",
+            "構成する",
+            "確認する",
+            "賞"
+          ],
+          "correct": 1,
+          "explanation": "「constitute」は「構成する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consult」の意味として最も適切なものは？",
+          "choices": [
+            "相談する",
+            "実施する",
+            "攻撃する",
+            "噛む"
+          ],
+          "correct": 0,
+          "explanation": "「consult」は「相談する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consume」の意味として最も適切なものは？",
+          "choices": [
+            "任命する",
+            "確認する",
+            "消費する",
+            "取り付ける"
+          ],
+          "correct": 2,
+          "explanation": "「consume」は「消費する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contact」の意味として最も適切なものは？",
+          "choices": [
+            "保護する",
+            "連絡する",
+            "感謝する",
+            "保証する"
+          ],
+          "correct": 1,
+          "explanation": "「contact」は「連絡する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contrast」の意味として最も適切なものは？",
+          "choices": [
+            "禁止",
+            "楽しませる",
+            "悩ます",
+            "対比する"
+          ],
+          "correct": 3,
+          "explanation": "「contrast」は「対比する」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 10,
-      "title": "会話表現・実用フレーズ編",
-      "type": "Conversational Phrases",
-      "emoji": "🗣️",
-      "subtitle": "日常の会話やメールで非常によく使われる実用表現",
+      "title": "動詞編10",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検準2級レベルの動詞テスト10",
       "questions": [
-        {"scenario": "「Would you mind 〜ing?」の意味として最も適切なものは？", "choices": ["〜していただけませんか？、〜するのは嫌ですか？", "〜したいですか？", "〜してはいけません", "〜したことがありますか？"], "correct": 0, "explanation": "Would you mind 〜ing? は「〜していただけませんか？」という丁寧な依頼表現です。直訳は「〜することを気にしますか？」なので、承諾するときは No と答えます。", "type": "choice"},
-        {"scenario": "「How about 〜ing?」の意味として最も適切なものは？", "choices": ["〜するのはどうですか？（提案）", "どうやって〜するのですか？", "なぜ〜しないのですか？", "〜するつもりですか？"], "correct": 0, "explanation": "How about 〜ing? (または名詞) は「〜するのはどうですか？」と相手に提案や勧誘をする定番の会話表現です。What about 〜? も同じです。", "type": "choice"},
-        {"scenario": "「look forward to 〜ing」の意味として最も適切なものは？", "choices": ["〜するのを楽しみに待つ", "〜を予測する", "〜を避ける", "〜を諦める"], "correct": 0, "explanation": "look forward to 〜ing は「〜するのを楽しみに待つ、期待する」という意味の重要表現です。to の後ろは名詞または動名詞が来ます。", "type": "choice"},
-        {"scenario": "「May I help you?」の意味として最も適切なものは？", "choices": ["いらっしゃいませ、何かお手伝いしましょうか？", "手伝ってくれますか？", "入ってもいいですか？", "どういたしまして"], "correct": 0, "explanation": "May I help you? は店員が客に対して「いらっしゃいませ、何かご用でしょうか？」と声をかける、または困っている人を助けるときの表現です。", "type": "choice"},
-        {"scenario": "「It takes (人) time to do」の意味として最も適切なものは？", "choices": ["（人が）〜するのに時間がかかる", "（人が）〜する時間がある", "（人が）〜するのを止める", "（人が）〜する時間がない"], "correct": 0, "explanation": "It takes (人) 時間 to 〜 は「（人が）〜するのに（時間）がかかる」という頻出の構文です。例: It takes me one hour to cook.（料理に1時間かかる。）", "type": "choice"},
-        {"scenario": "「No problem.」の意味として最も適切なものは？", "choices": ["どういたしまして、大丈夫です、問題ありません", "問題がありません", "間違っていません", "それは大変ですね"], "correct": 0, "explanation": "No problem. は、お礼に対する「どういたしまして」や、謝罪に対する「気にしないで、大丈夫」という意味の口語表現です。", "type": "choice"},
-        {"scenario": "「Never mind.」の意味として最も適切なものは？", "choices": ["気にしないで、心配ご無用、なんでもない", "絶対に忘れないで", "考え直して", "どういたしまして"], "correct": 0, "explanation": "Never mind. は「気にしないで、心配しなくていいよ」または「今言ったことは忘れて（何でもない）」という意味の会話表現です。", "type": "choice"},
-        {"scenario": "「Sounds good.」の意味として最も適切なものは？", "choices": ["いいですね、面白そうですね", "静かにしてください", "よく聞こえます", "問題ありません"], "correct": 0, "explanation": "Sounds good.（または That sounds good.）は、相手の提案に対して「いいですね、そうしましょう」と賛同するときの定番フレーズです。", "type": "choice"},
-        {"scenario": "「I'd love to.」の意味として最も適切なものは？", "choices": ["喜んで、ぜひそうしたいです", "それは嫌です", "好きになりたいです", "どういたしまして"], "correct": 0, "explanation": "I'd love to.（I would love to.）は、誘いに対して「ぜひそうしたいです、喜んで」と快く受けるときの表現です。後ろには動詞の原形が省略されています。", "type": "choice"},
-        {"scenario": "「Congratulations!」の意味として最も適切なものは？", "choices": ["おめでとう！、おめでとうございます", "がんばって！", "ようこそ！", "さようなら！"], "correct": 0, "explanation": "Congratulations! は結婚、卒業、昇進など本人の努力によるお祝いに対して「おめでとう！」と言う言葉です。誕生日や新年には Happy 〜 を使います。末尾の s を忘れずに。", "type": "choice"}
+        {
+          "scenario": "「contribute」の意味として最も適切なものは？",
+          "choices": [
+            "貢献する",
+            "制限する",
+            "理解する",
+            "告発する"
+          ],
+          "correct": 0,
+          "explanation": "「contribute」は「貢献する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convince」の意味として最も適切なものは？",
+          "choices": [
+            "納得させる",
+            "裸の",
+            "制限する",
+            "退屈な人"
+          ],
+          "correct": 0,
+          "explanation": "「convince」は「納得させる」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「copy」の意味として最も適切なものは？",
+          "choices": [
+            "コピーする",
+            "結論づける",
+            "出席する",
+            "〜から成る"
+          ],
+          "correct": 0,
+          "explanation": "「copy」は「コピーする」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「correct」の意味として最も適切なものは？",
+          "choices": [
+            "はう",
+            "前進",
+            "魅力",
+            "正しい"
+          ],
+          "correct": 3,
+          "explanation": "「correct」は「正しい」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「correspond」の意味として最も適切なものは？",
+          "choices": [
+            "採用する",
+            "一致する",
+            "結論づける",
+            "衝突する"
+          ],
+          "correct": 1,
+          "explanation": "「correspond」は「一致する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「count」の意味として最も適切なものは？",
+          "choices": [
+            "禁止",
+            "調整する",
+            "加える",
+            "数える"
+          ],
+          "correct": 3,
+          "explanation": "「count」は「数える」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crack」の意味として最も適切なものは？",
+          "choices": [
+            "好況",
+            "ひび割れた",
+            "見捨てる",
+            "任命する"
+          ],
+          "correct": 1,
+          "explanation": "「crack」は「ひび割れた」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crash」の意味として最も適切なものは？",
+          "choices": [
+            "同意する",
+            "乱用",
+            "投げる",
+            "衝突する"
+          ],
+          "correct": 3,
+          "explanation": "「crash」は「衝突する」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crawl」の意味として最も適切なものは？",
+          "choices": [
+            "品種",
+            "関連づける",
+            "征服する",
+            "はう"
+          ],
+          "correct": 3,
+          "explanation": "「crawl」は「はう」という意味の動詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cure」の意味として最も適切なものは？",
+          "choices": [
+            "治療する",
+            "楽しませる",
+            "収容する",
+            "採用する"
+          ],
+          "correct": 0,
+          "explanation": "「cure」は「治療する」という意味の動詞です。",
+          "type": "choice"
+        }
       ]
     }
   ]

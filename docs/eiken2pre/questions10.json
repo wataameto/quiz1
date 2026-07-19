@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "形容詞・副詞編2セット1",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 901~910",
+      "questions": [
+        {
+          "scenario": "「abstract」の意味として最も適切なものは？",
+          "choices": [
+            "抽象的な",
+            "軽蔑的な",
+            "滑稽な",
+            "破滅的な"
+          ],
+          "correct": 0,
+          "explanation": "「abstract」は「抽象的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acute」の意味として最も適切なものは？",
+          "choices": [
+            "認知の",
+            "ありふれた",
+            "慢性の",
+            "鋭い・急性の"
+          ],
+          "correct": 3,
+          "explanation": "「acute」は「鋭い・急性の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adjacent」の意味として最も適切なものは？",
+          "choices": [
+            "収束する",
+            "鋭い・急性の",
+            "子供っぽい",
+            "隣接した"
+          ],
+          "correct": 3,
+          "explanation": "「adjacent」は「隣接した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「affordable」の意味として最も適切なものは？",
+          "choices": [
+            "巨大な",
+            "変換された",
+            "手頃な価格の",
+            "共同の"
+          ],
+          "correct": 2,
+          "explanation": "「affordable」は「手頃な価格の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alert」の意味として最も適切なものは？",
+          "choices": [
+            "破滅的な",
+            "闘争的な",
+            "活発な",
+            "警戒している"
+          ],
+          "correct": 3,
+          "explanation": "「alert」は「警戒している」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amiable」の意味として最も適切なものは？",
+          "choices": [
+            "従順な",
+            "愛想の良い",
+            "荒涼とした",
+            "結合された"
+          ],
+          "correct": 1,
+          "explanation": "「amiable」は「愛想の良い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appealing」の意味として最も適切なものは？",
+          "choices": [
+            "一貫した",
+            "魅力的な",
+            "一致する",
+            "バイナリの"
+          ],
+          "correct": 1,
+          "explanation": "「appealing」は「魅力的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「approximate」の意味として最も適切なものは？",
+          "choices": [
+            "記念の",
+            "おおよその",
+            "建設的な",
+            "芸術的な"
+          ],
+          "correct": 1,
+          "explanation": "「approximate」は「おおよその」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「artistic」の意味として最も適切なものは？",
+          "choices": [
+            "芸術的な",
+            "聞こえる",
+            "慰めとなる",
+            "運動の"
+          ],
+          "correct": 0,
+          "explanation": "「artistic」は「芸術的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「athletic」の意味として最も適切なものは？",
+          "choices": [
+            "限られた",
+            "慰めとなる",
+            "運動の",
+            "献身的な"
+          ],
+          "correct": 2,
+          "explanation": "「athletic」は「運動の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "形容詞・副詞編2セット2",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 911~920",
+      "questions": [
+        {
+          "scenario": "「attached」の意味として最も適切なものは？",
+          "choices": [
+            "隣接した",
+            "一致する",
+            "破滅的な",
+            "添付された・愛着のある"
+          ],
+          "correct": 3,
+          "explanation": "「attached」は「添付された・愛着のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「audible」の意味として最も適切なものは？",
+          "choices": [
+            "燃えやすい",
+            "手頃な価格の",
+            "一貫した",
+            "聞こえる"
+          ],
+          "correct": 3,
+          "explanation": "「audible」は「聞こえる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「automatic」の意味として最も適切なものは？",
+          "choices": [
+            "計算の",
+            "隣接した",
+            "自動の",
+            "慢性の"
+          ],
+          "correct": 2,
+          "explanation": "「automatic」は「自動の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「babyish」の意味として最も適切なものは？",
+          "choices": [
+            "継続的に",
+            "共同の",
+            "子供っぽい",
+            "先天的な"
+          ],
+          "correct": 2,
+          "explanation": "「babyish」は「子供っぽい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bacterial」の意味として最も適切なものは？",
+          "choices": [
+            "無料の・賛辞の",
+            "献身的な",
+            "継続的に",
+            "細菌の"
+          ],
+          "correct": 3,
+          "explanation": "「bacterial」は「細菌の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「balanced」の意味として最も適切なものは？",
+          "choices": [
+            "バランスの取れた",
+            "市民の",
+            "子供っぽい",
+            "芸術的な"
+          ],
+          "correct": 0,
+          "explanation": "「balanced」は「バランスの取れた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beforehand」の意味として最も適切なものは？",
+          "choices": [
+            "鋭い・急性の",
+            "対照的な",
+            "前もって",
+            "限られた"
+          ],
+          "correct": 2,
+          "explanation": "「beforehand」は「前もって」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「benign」の意味として最も適切なものは？",
+          "choices": [
+            "計算の",
+            "共同の",
+            "良性の",
+            "偏見のある"
+          ],
+          "correct": 2,
+          "explanation": "「benign」は「良性の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「biased」の意味として最も適切なものは？",
+          "choices": [
+            "子供っぽい",
+            "反対の",
+            "偏見のある",
+            "バイガルな"
+          ],
+          "correct": 2,
+          "explanation": "「biased」は「偏見のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bilateral」の意味として最も適切なものは？",
+          "choices": [
+            "隣接した",
+            "良性の",
+            "収束する",
+            "二国間の"
+          ],
+          "correct": 3,
+          "explanation": "「bilateral」は「二国間の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "形容詞・副詞編2セット3",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 921~930",
+      "questions": [
+        {
+          "scenario": "「bilingual」の意味として最も適切なものは？",
+          "choices": [
+            "認知の",
+            "バイガルな",
+            "一致する",
+            "軽蔑的な"
+          ],
+          "correct": 1,
+          "explanation": "「bilingual」は「バイガルな」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「binary」の意味として最も適切なものは？",
+          "choices": [
+            "一致する",
+            "バイナリの",
+            "気まぐれな",
+            "文明化された"
+          ],
+          "correct": 1,
+          "explanation": "「binary」は「バイナリの」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「biographical」の意味として最も適切なものは？",
+          "choices": [
+            "市民の",
+            "良性の",
+            "伝記の",
+            "大まかに"
+          ],
+          "correct": 2,
+          "explanation": "「biographical」は「伝記の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bleak」の意味として最も適切なものは？",
+          "choices": [
+            "先天的な",
+            "魅力的な",
+            "荒涼とした",
+            "精通している"
+          ],
+          "correct": 2,
+          "explanation": "「bleak」は「荒涼とした」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「blissful」の意味として最も適切なものは？",
+          "choices": [
+            "精通している",
+            "至福の",
+            "適合する",
+            "不器用な"
+          ],
+          "correct": 1,
+          "explanation": "「blissful」は「至福の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「botanical」の意味として最も適切なものは？",
+          "choices": [
+            "植物の",
+            "合成の",
+            "魅力的な",
+            "偶然の"
+          ],
+          "correct": 0,
+          "explanation": "「botanical」は「植物の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「boundless」の意味として最も適切なものは？",
+          "choices": [
+            "無限の",
+            "適合する",
+            "複雑な",
+            "警戒している"
+          ],
+          "correct": 0,
+          "explanation": "「boundless」は「無限の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「brisk」の意味として最も適切なものは？",
+          "choices": [
+            "前もって",
+            "添付された・愛着のある",
+            "無料の・賛辞の",
+            "活発な"
+          ],
+          "correct": 3,
+          "explanation": "「brisk」は「活発な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「broadly」の意味として最も適切なものは？",
+          "choices": [
+            "気まぐれな",
+            "有能な",
+            "圧縮された",
+            "大まかに"
+          ],
+          "correct": 3,
+          "explanation": "「broadly」は「大まかに」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「candid」の意味として最も適切なものは？",
+          "choices": [
+            "率率な",
+            "確認された",
+            "子供っぽい",
+            "称賛に値する"
+          ],
+          "correct": 0,
+          "explanation": "「candid」は「率率な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "形容詞・副詞編2セット4",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 931~940",
+      "questions": [
+        {
+          "scenario": "「capricious」の意味として最も適切なものは？",
+          "choices": [
+            "自動の",
+            "合意による",
+            "気まぐれな",
+            "好意的な"
+          ],
+          "correct": 2,
+          "explanation": "「capricious」は「気まぐれな」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「catastrophic」の意味として最も適切なものは？",
+          "choices": [
+            "破滅的な",
+            "共同の",
+            "連続して",
+            "鋭い・急性の"
+          ],
+          "correct": 0,
+          "explanation": "「catastrophic」は「破滅的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chaotic」の意味として最も適切なものは？",
+          "choices": [
+            "無秩序な",
+            "精通している",
+            "慈悲深い",
+            "子供っぽい"
+          ],
+          "correct": 0,
+          "explanation": "「chaotic」は「無秩序な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charitable」の意味として最も適切なものは？",
+          "choices": [
+            "燃えやすい",
+            "慈悲深い",
+            "先天的な",
+            "精通している"
+          ],
+          "correct": 1,
+          "explanation": "「charitable」は「慈悲深い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「charming」の意味として最も適切なものは？",
+          "choices": [
+            "魅力的な",
+            "子供っぽい",
+            "対照的な",
+            "合意による"
+          ],
+          "correct": 0,
+          "explanation": "「charming」は「魅力的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「childish」の意味として最も適切なものは？",
+          "choices": [
+            "慈悲深い",
+            "思いやりのある",
+            "文明化された",
+            "子供っぽい"
+          ],
+          "correct": 3,
+          "explanation": "「childish」は「子供っぽい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「chronic」の意味として最も適切なものは？",
+          "choices": [
+            "滑稽な",
+            "自己満足の",
+            "魅力的な",
+            "慢性の"
+          ],
+          "correct": 3,
+          "explanation": "「chronic」は「慢性の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「civic」の意味として最も適切なものは？",
+          "choices": [
+            "滑稽な",
+            "市民の",
+            "一致する",
+            "喜劇の"
+          ],
+          "correct": 1,
+          "explanation": "「civic」は「市民の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「civilized」の意味として最も適切なものは？",
+          "choices": [
+            "圧縮された",
+            "気まぐれな",
+            "文明化された",
+            "大まかに"
+          ],
+          "correct": 2,
+          "explanation": "「civilized」は「文明化された」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「clumsy」の意味として最も適切なものは？",
+          "choices": [
+            "継続的に",
+            "率率な",
+            "不器用な",
+            "結合された"
+          ],
+          "correct": 2,
+          "explanation": "「clumsy」は「不器用な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞・副詞編2セット5",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 941~950",
+      "questions": [
+        {
+          "scenario": "「coarse」の意味として最も適切なものは？",
+          "choices": [
+            "自己満足の",
+            "偏見のある",
+            "粗い",
+            "好意的な"
+          ],
+          "correct": 2,
+          "explanation": "「coarse」は「粗い」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cognitive」の意味として最も適切なものは？",
+          "choices": [
+            "闘争的な",
+            "自己満足の",
+            "強制的な・魅力的な",
+            "認知の"
+          ],
+          "correct": 3,
+          "explanation": "「cognitive」は「認知の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coherent」の意味として最も適切なものは？",
+          "choices": [
+            "計算の",
+            "破滅的な",
+            "一貫した",
+            "結合された"
+          ],
+          "correct": 2,
+          "explanation": "「coherent」は「一貫した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cohesive」の意味として最も適切なものは？",
+          "choices": [
+            "先天的な",
+            "バイガルな",
+            "結合力のある",
+            "愛想の良い"
+          ],
+          "correct": 2,
+          "explanation": "「cohesive」は「結合力のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coincidental」の意味として最も適切なものは？",
+          "choices": [
+            "偶然の",
+            "大陸の",
+            "偏見のある",
+            "対照的な"
+          ],
+          "correct": 0,
+          "explanation": "「coincidental」は「偶然の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collaborative」の意味として最も適切なものは？",
+          "choices": [
+            "無料の・賛辞の",
+            "先天的な",
+            "子供っぽい",
+            "共同の"
+          ],
+          "correct": 3,
+          "explanation": "「collaborative」は「共同の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「colossal」の意味として最も適切なものは？",
+          "choices": [
+            "巨大な",
+            "バランスの取れた",
+            "計算の",
+            "一貫した"
+          ],
+          "correct": 0,
+          "explanation": "「colossal」は「巨大な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「combative」の意味として最も適切なものは？",
+          "choices": [
+            "滑稽な",
+            "共同の",
+            "大陸の",
+            "闘争的な"
+          ],
+          "correct": 3,
+          "explanation": "「combative」は「闘争的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「combined」の意味として最も適切なものは？",
+          "choices": [
+            "伝記の",
+            "バランスの取れた",
+            "結合された",
+            "共同の"
+          ],
+          "correct": 2,
+          "explanation": "「combined」は「結合された」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「combustible」の意味として最も適切なものは？",
+          "choices": [
+            "かなり",
+            "燃えやすい",
+            "警戒している",
+            "一致する"
+          ],
+          "correct": 1,
+          "explanation": "「combustible」は「燃えやすい」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞・副詞編2セット6",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 951~960",
+      "questions": [
+        {
+          "scenario": "「comedic」の意味として最も適切なものは？",
+          "choices": [
+            "伝記の",
+            "結合力のある",
+            "確認された",
+            "喜劇の"
+          ],
+          "correct": 3,
+          "explanation": "「comedic」は「喜劇の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comical」の意味として最も適切なものは？",
+          "choices": [
+            "滑稽な",
+            "簡潔な",
+            "手頃な価格の",
+            "直面する"
+          ],
+          "correct": 0,
+          "explanation": "「comical」は「滑稽な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comic」の意味として最も適切なものは？",
+          "choices": [
+            "自己満足の",
+            "バイガルな",
+            "運動の",
+            "滑稽な"
+          ],
+          "correct": 3,
+          "explanation": "「comic」は「滑稽な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commanding」の意味として最も適切なものは？",
+          "choices": [
+            "建設的な",
+            "威風堂々たる",
+            "比較的",
+            "細菌の"
+          ],
+          "correct": 1,
+          "explanation": "「commanding」は「威風堂々たる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commemorative」の意味として最も適切なものは？",
+          "choices": [
+            "破滅的な",
+            "対立する",
+            "記念の",
+            "植物の"
+          ],
+          "correct": 2,
+          "explanation": "「commemorative」は「記念の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commendable」の意味として最も適切なものは？",
+          "choices": [
+            "称賛に値する",
+            "慰めとなる",
+            "比較的",
+            "無限の"
+          ],
+          "correct": 0,
+          "explanation": "「commendable」は「称賛に値する」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「committed」の意味として最も適切なものは？",
+          "choices": [
+            "ありふれた",
+            "自動の",
+            "巨大な",
+            "献身的な"
+          ],
+          "correct": 3,
+          "explanation": "「committed」は「献身的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「commonplace」の意味として最も適切なものは？",
+          "choices": [
+            "ありふれた",
+            "記念の",
+            "鋭い・急性の",
+            "共同の"
+          ],
+          "correct": 0,
+          "explanation": "「commonplace」は「ありふれた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「communal」の意味として最も適切なものは？",
+          "choices": [
+            "滑稽な",
+            "細菌の",
+            "共同の",
+            "魅力的な"
+          ],
+          "correct": 2,
+          "explanation": "「communal」は「共同の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「communist」の意味として最も適切なものは？",
+          "choices": [
+            "混乱させるような",
+            "手頃な価格の",
+            "自己満足の",
+            "共産主義の"
+          ],
+          "correct": 3,
+          "explanation": "「communist」は「共産主義の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "形容詞・副詞編2セット7",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 961~970",
+      "questions": [
+        {
+          "scenario": "「comparatively」の意味として最も適切なものは？",
+          "choices": [
+            "収束する",
+            "慰めとなる",
+            "連続する",
+            "比較的"
+          ],
+          "correct": 3,
+          "explanation": "「comparatively」は「比較的」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compatible」の意味として最も適切なものは？",
+          "choices": [
+            "互換性のある",
+            "変換された",
+            "抽象的な",
+            "軽蔑的な"
+          ],
+          "correct": 0,
+          "explanation": "「compatible」は「互換性のある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compelling」の意味として最も適切なものは？",
+          "choices": [
+            "強制的な・魅力的な",
+            "細菌の",
+            "慰めとなる",
+            "魅力的な"
+          ],
+          "correct": 0,
+          "explanation": "「compelling」は「強制的な・魅力的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「competent」の意味として最も適切なものは？",
+          "choices": [
+            "有能な",
+            "建設的な",
+            "複雑な",
+            "偶然の"
+          ],
+          "correct": 0,
+          "explanation": "「competent」は「有能な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complacent」の意味として最も適切なものは？",
+          "choices": [
+            "圧縮された",
+            "合成の",
+            "自己満足の",
+            "結合力のある"
+          ],
+          "correct": 2,
+          "explanation": "「complacent」は「自己満足の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compliant」の意味として最も適切なものは？",
+          "choices": [
+            "大まかに",
+            "粗い",
+            "結合された",
+            "従順な"
+          ],
+          "correct": 3,
+          "explanation": "「compliant」は「従順な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complicated」の意味として最も適切なものは？",
+          "choices": [
+            "複雑な",
+            "変換された",
+            "バランスの取れた",
+            "芸術的な"
+          ],
+          "correct": 0,
+          "explanation": "「complicated」は「複雑な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complimentary」の意味として最も適切なものは？",
+          "choices": [
+            "簡潔な",
+            "共産主義の",
+            "先天的な",
+            "無料の・賛辞の"
+          ],
+          "correct": 3,
+          "explanation": "「complimentary」は「無料の・賛辞の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「composite」の意味として最も適切なものは？",
+          "choices": [
+            "変換された",
+            "簡潔な",
+            "合成の",
+            "警戒している"
+          ],
+          "correct": 2,
+          "explanation": "「composite」は「合成の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compressed」の意味として最も適切なものは？",
+          "choices": [
+            "精通している",
+            "燃えやすい",
+            "圧縮された",
+            "対立する"
+          ],
+          "correct": 2,
+          "explanation": "「compressed」は「圧縮された」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "形容詞・副詞編2セット8",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 971~980",
+      "questions": [
+        {
+          "scenario": "「computational」の意味として最も適切なものは？",
+          "choices": [
+            "伝記の",
+            "運動の",
+            "計算の",
+            "従順な"
+          ],
+          "correct": 2,
+          "explanation": "「computational」は「計算の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concise」の意味として最も適切なものは？",
+          "choices": [
+            "圧縮された",
+            "簡潔な",
+            "芸術的な",
+            "魅力的な"
+          ],
+          "correct": 1,
+          "explanation": "「concise」は「簡潔な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confined」の意味として最も適切なものは？",
+          "choices": [
+            "二国間の",
+            "限られた",
+            "慰めとなる",
+            "継続的に"
+          ],
+          "correct": 1,
+          "explanation": "「confined」は「限られた」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confirmed」の意味として最も適切なものは？",
+          "choices": [
+            "気まぐれな",
+            "有能な",
+            "確認された",
+            "精通している"
+          ],
+          "correct": 2,
+          "explanation": "「confirmed」は「確認された」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conflicting」の意味として最も適切なものは？",
+          "choices": [
+            "隣接した",
+            "共同の",
+            "対立する",
+            "粗い"
+          ],
+          "correct": 2,
+          "explanation": "「conflicting」は「対立する」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conforming」の意味として最も適切なものは？",
+          "choices": [
+            "巨大な",
+            "良性の",
+            "細菌の",
+            "適合する"
+          ],
+          "correct": 3,
+          "explanation": "「conforming」は「適合する」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confronting」の意味として最も適切なものは？",
+          "choices": [
+            "直面する",
+            "ありふれた",
+            "燃えやすい",
+            "計算の"
+          ],
+          "correct": 0,
+          "explanation": "「confronting」は「直面する」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confusing」の意味として最も適切なものは？",
+          "choices": [
+            "混乱させるような",
+            "闘争的な",
+            "二国間の",
+            "比較的"
+          ],
+          "correct": 0,
+          "explanation": "「confusing」は「混乱させるような」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「congenial」の意味として最も適切なものは？",
+          "choices": [
+            "前もって",
+            "二国間の",
+            "細菌の",
+            "好意的な"
+          ],
+          "correct": 3,
+          "explanation": "「congenial」は「好意的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「congenital」の意味として最も適切なものは？",
+          "choices": [
+            "添付された・愛着のある",
+            "おおよその",
+            "対照的な",
+            "先天的な"
+          ],
+          "correct": 3,
+          "explanation": "「congenital」は「先天的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "形容詞・副詞編2セット9",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 981~990",
+      "questions": [
+        {
+          "scenario": "「congested」の意味として最も適切なものは？",
+          "choices": [
+            "混雑した",
+            "滑稽な",
+            "認知の",
+            "連続する"
+          ],
+          "correct": 0,
+          "explanation": "「congested」は「混雑した」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「congruent」の意味として最も適切なものは？",
+          "choices": [
+            "警戒している",
+            "不自然な",
+            "喜劇の",
+            "一致する"
+          ],
+          "correct": 3,
+          "explanation": "「congruent」は「一致する」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consecutive」の意味として最も適切なものは？",
+          "choices": [
+            "連続する",
+            "圧縮された",
+            "滑稽な",
+            "連結された"
+          ],
+          "correct": 0,
+          "explanation": "「consecutive」は「連続する」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consensual」の意味として最も適切なものは？",
+          "choices": [
+            "バイガルな",
+            "合意による",
+            "反対の",
+            "収束する"
+          ],
+          "correct": 1,
+          "explanation": "「consensual」は「合意による」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「considerably」の意味として最も適切なものは？",
+          "choices": [
+            "連続する",
+            "前もって",
+            "かなり",
+            "思いやりのある"
+          ],
+          "correct": 2,
+          "explanation": "「considerably」は「かなり」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「considerate」の意味として最も適切なものは？",
+          "choices": [
+            "強制的な・魅力的な",
+            "無限の",
+            "思いやりのある",
+            "喜劇の"
+          ],
+          "correct": 2,
+          "explanation": "「considerate」は「思いやりのある」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consoling」の意味として最も適切なものは？",
+          "choices": [
+            "無限の",
+            "結合された",
+            "粗い",
+            "慰めとなる"
+          ],
+          "correct": 3,
+          "explanation": "「consoling」は「慰めとなる」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consolidated」の意味として最も適切なものは？",
+          "choices": [
+            "連結された",
+            "連続する",
+            "一致する",
+            "添付された・愛着のある"
+          ],
+          "correct": 0,
+          "explanation": "「consolidated」は「連結された」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constrained」の意味として最も適切なものは？",
+          "choices": [
+            "植物の",
+            "変換された",
+            "不自然な",
+            "称賛に値する"
+          ],
+          "correct": 2,
+          "explanation": "「constrained」は「不自然な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constructive」の意味として最も適切なものは？",
+          "choices": [
+            "荒涼とした",
+            "建設的な",
+            "互換性のある",
+            "植物の"
+          ],
+          "correct": 1,
+          "explanation": "「constructive」は「建設的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "形容詞・副詞編2セット10",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検準2級の形容詞・副詞 991~1000",
+      "questions": [
+        {
+          "scenario": "「contemptuous」の意味として最も適切なものは？",
+          "choices": [
+            "収束する",
+            "適合する",
+            "軽蔑的な",
+            "無限の"
+          ],
+          "correct": 2,
+          "explanation": "「contemptuous」は「軽蔑的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「continental」の意味として最も適切なものは？",
+          "choices": [
+            "認知の",
+            "合意による",
+            "強制的な・魅力的な",
+            "大陸の"
+          ],
+          "correct": 3,
+          "explanation": "「continental」は「大陸の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「continual」の意味として最も適切なものは？",
+          "choices": [
+            "継続的な",
+            "大陸の",
+            "聞こえる",
+            "精通している"
+          ],
+          "correct": 0,
+          "explanation": "「continual」は「継続的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「continually」の意味として最も適切なものは？",
+          "choices": [
+            "子供っぽい",
+            "燃えやすい",
+            "継続的に",
+            "慢性の"
+          ],
+          "correct": 2,
+          "explanation": "「continually」は「継続的に」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「continuously」の意味として最も適切なものは？",
+          "choices": [
+            "連続して",
+            "至福の",
+            "燃えやすい",
+            "認知の"
+          ],
+          "correct": 0,
+          "explanation": "「continuously」は「連続して」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contrary」の意味として最も適切なものは？",
+          "choices": [
+            "反対の",
+            "建設的な",
+            "確認された",
+            "従順な"
+          ],
+          "correct": 0,
+          "explanation": "「contrary」は「反対の」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contrasting」の意味として最も適切なものは？",
+          "choices": [
+            "対照的な",
+            "警戒している",
+            "伝記の",
+            "偶然の"
+          ],
+          "correct": 0,
+          "explanation": "「contrasting」は「対照的な」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convergent」の意味として最も適切なものは？",
+          "choices": [
+            "細菌の",
+            "破滅的な",
+            "収束する",
+            "闘争的な"
+          ],
+          "correct": 2,
+          "explanation": "「convergent」は「収束する」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conversant」の意味として最も適切なものは？",
+          "choices": [
+            "率率な",
+            "威風堂々たる",
+            "精通している",
+            "限られた"
+          ],
+          "correct": 2,
+          "explanation": "「conversant」は「精通している」という意味の形容詞または副詞です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「converted」の意味として最も適切なものは？",
+          "choices": [
+            "市民の",
+            "燃えやすい",
+            "限られた",
+            "変換された"
+          ],
+          "correct": 3,
+          "explanation": "「converted」は「変換された」という意味の形容詞または副詞です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

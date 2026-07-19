@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2pre",
+  "level": 1,
+  "label": "📚 英検準2級 単語・熟語",
+  "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校中級程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "実戦編2セット1",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1401~1410",
+      "questions": [
+        {
+          "scenario": "「gasoline」の意味として最も適切なものは？",
+          "choices": [
+            "ガソリン",
+            "用語集",
+            "系図",
+            "ゴブレット"
+          ],
+          "correct": 0,
+          "explanation": "「gasoline」は「ガソリン」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gasp」の意味として最も適切なものは？",
+          "choices": [
+            "不具合",
+            "駆り立てる",
+            "息をのむ",
+            "遺伝学"
+          ],
+          "correct": 2,
+          "explanation": "「gasp」は「息をのむ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gateway」の意味として最も適切なものは？",
+          "choices": [
+            "文法",
+            "好意・親善",
+            "グリセリン",
+            "出入り口"
+          ],
+          "correct": 3,
+          "explanation": "「gateway」は「出入り口」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gauge」の意味として最も適切なものは？",
+          "choices": [
+            "優しい",
+            "計器",
+            "文法的な",
+            "めまいがする"
+          ],
+          "correct": 1,
+          "explanation": "「gauge」は「計器」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gear」の意味として最も適切なものは？",
+          "choices": [
+            "優しい",
+            "腺",
+            "ギア・用具",
+            "巨大な"
+          ],
+          "correct": 2,
+          "explanation": "「gear」は「ギア・用具」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gelatin」の意味として最も適切なものは？",
+          "choices": [
+            "ゼラチン",
+            "一般化する",
+            "ガチョウ",
+            "金魚"
+          ],
+          "correct": 0,
+          "explanation": "「gelatin」は「ゼラチン」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gem」の意味として最も適切なものは？",
+          "choices": [
+            "才能のある",
+            "一般化する",
+            "金魚",
+            "宝石"
+          ],
+          "correct": 3,
+          "explanation": "「gem」は「宝石」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genealogy」の意味として最も適切なものは？",
+          "choices": [
+            "渓谷",
+            "紳士",
+            "系図",
+            "憂鬱な"
+          ],
+          "correct": 2,
+          "explanation": "「genealogy」は「系図」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「generalize」の意味として最も適切なものは？",
+          "choices": [
+            "家庭教師",
+            "グリセリン",
+            "一般化する",
+            "ドラ・どら"
+          ],
+          "correct": 2,
+          "explanation": "「generalize」は「一般化する」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「generation」の意味として最も適切なものは？",
+          "choices": [
+            "かじる",
+            "起源",
+            "世代",
+            "グルメ"
+          ],
+          "correct": 2,
+          "explanation": "「generation」は「世代」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "実戦編2セット2",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1411~1420",
+      "questions": [
+        {
+          "scenario": "「generosity」の意味として最も適切なものは？",
+          "choices": [
+            "美化する",
+            "不具合",
+            "ガソリン",
+            "気前の良さ"
+          ],
+          "correct": 3,
+          "explanation": "「generosity」は「気前の良さ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genesis」の意味として最も適切なものは？",
+          "choices": [
+            "小バエ",
+            "光沢のある",
+            "起源",
+            "微光"
+          ],
+          "correct": 2,
+          "explanation": "「genesis」は「起源」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genetics」の意味として最も適切なものは？",
+          "choices": [
+            "美化する",
+            "剣闘士",
+            "遺伝学",
+            "グリセリン"
+          ],
+          "correct": 2,
+          "explanation": "「genetics」は「遺伝学」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genius」の意味として最も適切なものは？",
+          "choices": [
+            "微光",
+            "天才",
+            "美化する",
+            "豪華な"
+          ],
+          "correct": 1,
+          "explanation": "「genius」は「天才」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genre」の意味として最も適切なものは？",
+          "choices": [
+            "ジャンル",
+            "輝く",
+            "穀物",
+            "ガラス製品"
+          ],
+          "correct": 0,
+          "explanation": "「genre」は「ジャンル」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gentility」の意味として最も適切なものは？",
+          "choices": [
+            "世代",
+            "用語集",
+            "上品さ",
+            "憂鬱"
+          ],
+          "correct": 2,
+          "explanation": "「gentility」は「上品さ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gentle」の意味として最も適切なものは？",
+          "choices": [
+            "本物の",
+            "優しい",
+            "金魚",
+            "家庭教師"
+          ],
+          "correct": 1,
+          "explanation": "「gentle」は「優しい」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gentleman」の意味として最も適切なものは？",
+          "choices": [
+            "紳士",
+            "気前の良さ",
+            "女神",
+            "地理学"
+          ],
+          "correct": 0,
+          "explanation": "「gentleman」は「紳士」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genuine」の意味として最も適切なものは？",
+          "choices": [
+            "ドラ・どら",
+            "めまいがする",
+            "釉薬をかける",
+            "本物の"
+          ],
+          "correct": 3,
+          "explanation": "「genuine」は「本物の」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「genuinely」の意味として最も適切なものは？",
+          "choices": [
+            "きらめき",
+            "本当に",
+            "喜んで",
+            "丁寧な・慈悲深い"
+          ],
+          "correct": 1,
+          "explanation": "「genuinely」は「本当に」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "実戦編2セット3",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1421~1430",
+      "questions": [
+        {
+          "scenario": "「geography」の意味として最も適切なものは？",
+          "choices": [
+            "喜んで",
+            "金メッキする",
+            "地理学",
+            "薄いクモの巣"
+          ],
+          "correct": 2,
+          "explanation": "「geography」は「地理学」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「geology」の意味として最も適切なものは？",
+          "choices": [
+            "喜んで",
+            "ヒョウタン",
+            "かすかな光",
+            "地質学"
+          ],
+          "correct": 3,
+          "explanation": "「geology」は「地質学」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「geometry」の意味として最も適切なものは？",
+          "choices": [
+            "幾何学",
+            "手袋",
+            "かじる",
+            "駆り立てる"
+          ],
+          "correct": 0,
+          "explanation": "「geometry」は「幾何学」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「germ」の意味として最も適切なものは？",
+          "choices": [
+            "細菌",
+            "ガラス製品",
+            "巨大な",
+            "ゴブリン"
+          ],
+          "correct": 0,
+          "explanation": "「germ」は「細菌」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ghost」の意味として最も適切なものは？",
+          "choices": [
+            "めまいがする",
+            "遺伝学",
+            "幽霊",
+            "かすかな光"
+          ],
+          "correct": 2,
+          "explanation": "「ghost」は「幽霊」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「giant」の意味として最も適切なものは？",
+          "choices": [
+            "ほくそ笑む",
+            "段階的変化",
+            "巨大な",
+            "栄光"
+          ],
+          "correct": 2,
+          "explanation": "「giant」は「巨大な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「giddy」の意味として最も適切なものは？",
+          "choices": [
+            "本物の",
+            "供給過剰",
+            "女神",
+            "めまいがする"
+          ],
+          "correct": 3,
+          "explanation": "「giddy」は「めまいがする」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gifted」の意味として最も適切なものは？",
+          "choices": [
+            "大喜び",
+            "口達者な",
+            "才能のある",
+            "段階的変化"
+          ],
+          "correct": 2,
+          "explanation": "「gifted」は「才能のある」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gigantic」の意味として最も適切なものは？",
+          "choices": [
+            "ゴリラ",
+            "巨大な",
+            "一般化する",
+            "世代"
+          ],
+          "correct": 1,
+          "explanation": "「gigantic」は「巨大な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「giggle」の意味として最も適切なものは？",
+          "choices": [
+            "憂鬱な",
+            "喜んで",
+            "系図",
+            "くすくす笑う"
+          ],
+          "correct": 3,
+          "explanation": "「giggle」は「くすくす笑う」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "実戦編2セット4",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1431~1440",
+      "questions": [
+        {
+          "scenario": "「gild」の意味として最も適切なものは？",
+          "choices": [
+            "駆り立てる",
+            "金メッキする",
+            "幾何学",
+            "ガチョウ"
+          ],
+          "correct": 1,
+          "explanation": "「gild」は「金メッキする」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ginger」の意味として最も適切なものは？",
+          "choices": [
+            "栄光ある",
+            "用語集",
+            "駆り立てる",
+            "ショウガ"
+          ],
+          "correct": 3,
+          "explanation": "「ginger」は「ショウガ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「girdle」の意味として最も適切なものは？",
+          "choices": [
+            "帯・コルセット",
+            "地質学",
+            "要点",
+            "地理学"
+          ],
+          "correct": 0,
+          "explanation": "「girdle」は「帯・コルセット」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「girlhood」の意味として最も適切なものは？",
+          "choices": [
+            "少女時代",
+            "計器",
+            "魅力",
+            "小バエ"
+          ],
+          "correct": 0,
+          "explanation": "「girlhood」は「少女時代」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「girth」の意味として最も適切なものは？",
+          "choices": [
+            "噂話",
+            "栄光",
+            "ガラス製品",
+            "胴回り"
+          ],
+          "correct": 3,
+          "explanation": "「girth」は「胴回り」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gist」の意味として最も適切なものは？",
+          "choices": [
+            "要点",
+            "金メッキする",
+            "移植",
+            "ゴリラ"
+          ],
+          "correct": 0,
+          "explanation": "「gist」は「要点」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gladiator」の意味として最も適切なものは？",
+          "choices": [
+            "剣闘士",
+            "穀物",
+            "金メッキする",
+            "用語集"
+          ],
+          "correct": 0,
+          "explanation": "「gladiator」は「剣闘士」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gladly」の意味として最も適切なものは？",
+          "choices": [
+            "系図",
+            "喜んで",
+            "手袋",
+            "巨大な"
+          ],
+          "correct": 1,
+          "explanation": "「gladly」は「喜んで」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glamour」の意味として最も適切なものは？",
+          "choices": [
+            "グルメ",
+            "ゴリラ",
+            "魅力",
+            "供給過剰"
+          ],
+          "correct": 2,
+          "explanation": "「glamour」は「魅力」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gland」の意味として最も適切なものは？",
+          "choices": [
+            "腺",
+            "優雅な",
+            "グローバル化",
+            "移植"
+          ],
+          "correct": 0,
+          "explanation": "「gland」は「腺」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "実戦編2セット5",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1441~1450",
+      "questions": [
+        {
+          "scenario": "「glassware」の意味として最も適切なものは？",
+          "choices": [
+            "輝く",
+            "美化する",
+            "段階的変化",
+            "ガラス製品"
+          ],
+          "correct": 3,
+          "explanation": "「glassware」は「ガラス製品」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glaze」の意味として最も適切なものは？",
+          "choices": [
+            "文法的な",
+            "口達者な",
+            "谷",
+            "釉薬をかける"
+          ],
+          "correct": 3,
+          "explanation": "「glaze」は「釉薬をかける」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gleam」の意味として最も適切なものは？",
+          "choices": [
+            "微光",
+            "優雅さ",
+            "歯ぎしりする",
+            "薄いクモの巣"
+          ],
+          "correct": 0,
+          "explanation": "「gleam」は「微光」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glee」の意味として最も適切なものは？",
+          "choices": [
+            "暴飲暴食",
+            "大喜び",
+            "女神",
+            "計器"
+          ],
+          "correct": 1,
+          "explanation": "「glee」は「大喜び」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glen」の意味として最も適切なものは？",
+          "choices": [
+            "ゴブリン",
+            "谷",
+            "金魚",
+            "腺"
+          ],
+          "correct": 1,
+          "explanation": "「glen」は「谷」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glib」の意味として最も適切なものは？",
+          "choices": [
+            "才能のある",
+            "大喜び",
+            "地質学",
+            "口達者な"
+          ],
+          "correct": 3,
+          "explanation": "「glib」は「口達者な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glimmer」の意味として最も適切なものは？",
+          "choices": [
+            "微光",
+            "栄光",
+            "かすかな光",
+            "優雅な"
+          ],
+          "correct": 2,
+          "explanation": "「glimmer」は「かすかな光」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glint」の意味として最も適切なものは？",
+          "choices": [
+            "女神",
+            "きらめき",
+            "薄暮",
+            "ゴリラ"
+          ],
+          "correct": 1,
+          "explanation": "「glint」は「きらめき」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glisten」の意味として最も適切なものは？",
+          "choices": [
+            "上品さ",
+            "福音",
+            "輝く",
+            "グローバル化"
+          ],
+          "correct": 2,
+          "explanation": "「glisten」は「輝く」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glitch」の意味として最も適切なものは？",
+          "choices": [
+            "不具合",
+            "優しい",
+            "噂話",
+            "ヒョウタン"
+          ],
+          "correct": 0,
+          "explanation": "「glitch」は「不具合」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "実戦編2セット6",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1451~1460",
+      "questions": [
+        {
+          "scenario": "「glitter」の意味として最も適切なものは？",
+          "choices": [
+            "輝き",
+            "口達者な",
+            "文法的な",
+            "くすくす笑う"
+          ],
+          "correct": 0,
+          "explanation": "「glitter」は「輝き」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gloaming」の意味として最も適切なものは？",
+          "choices": [
+            "本物の",
+            "金メッキする",
+            "薄暮",
+            "美化する"
+          ],
+          "correct": 2,
+          "explanation": "「gloaming」は「薄暮」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gloat」の意味として最も適切なものは？",
+          "choices": [
+            "ほくそ笑む",
+            "かじる",
+            "ゴブレット",
+            "ヒョウタン"
+          ],
+          "correct": 0,
+          "explanation": "「gloat」は「ほくそ笑む」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「globalization」の意味として最も適切なものは？",
+          "choices": [
+            "ゴブレット",
+            "グローバル化",
+            "かすかな光",
+            "ゼラチン"
+          ],
+          "correct": 1,
+          "explanation": "「globalization」は「グローバル化」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gloom」の意味として最も適切なものは？",
+          "choices": [
+            "金魚",
+            "きらめき",
+            "ゴブリン",
+            "憂鬱"
+          ],
+          "correct": 3,
+          "explanation": "「gloom」は「憂鬱」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gloomy」の意味として最も適切なものは？",
+          "choices": [
+            "丁寧な・慈悲深い",
+            "憂鬱な",
+            "美化する",
+            "ゴリラ"
+          ],
+          "correct": 1,
+          "explanation": "「gloomy」は「憂鬱な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glorify」の意味として最も適切なものは？",
+          "choices": [
+            "ガチョウ",
+            "段階的変化",
+            "美化する",
+            "不機嫌な"
+          ],
+          "correct": 2,
+          "explanation": "「glorify」は「美化する」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glorious」の意味として最も適切なものは？",
+          "choices": [
+            "栄光ある",
+            "地質学",
+            "ヒョウタン",
+            "女神"
+          ],
+          "correct": 0,
+          "explanation": "「glorious」は「栄光ある」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glory」の意味として最も適切なものは？",
+          "choices": [
+            "小バエ",
+            "才能のある",
+            "天才",
+            "栄光"
+          ],
+          "correct": 3,
+          "explanation": "「glory」は「栄光」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glossary」の意味として最も適切なものは？",
+          "choices": [
+            "ガチョウ",
+            "憂鬱な",
+            "薄暮",
+            "用語集"
+          ],
+          "correct": 3,
+          "explanation": "「glossary」は「用語集」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "実戦編2セット7",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1461~1470",
+      "questions": [
+        {
+          "scenario": "「glossy」の意味として最も適切なものは？",
+          "choices": [
+            "系図",
+            "ゼラチン",
+            "くすくす笑う",
+            "光沢のある"
+          ],
+          "correct": 3,
+          "explanation": "「glossy」は「光沢のある」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glove」の意味として最も適切なものは？",
+          "choices": [
+            "かなりの",
+            "ジャンル",
+            "金メッキする",
+            "手袋"
+          ],
+          "correct": 3,
+          "explanation": "「glove」は「手袋」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glum」の意味として最も適切なものは？",
+          "choices": [
+            "グローバル化",
+            "不機嫌な",
+            "優雅な",
+            "段階的変化"
+          ],
+          "correct": 1,
+          "explanation": "「glum」は「不機嫌な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glut」の意味として最も適切なものは？",
+          "choices": [
+            "天才",
+            "美化する",
+            "供給過剰",
+            "口達者な"
+          ],
+          "correct": 2,
+          "explanation": "「glut」は「供給過剰」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gluttony」の意味として最も適切なものは？",
+          "choices": [
+            "傾斜度",
+            "要点",
+            "巨大な",
+            "暴飲暴食"
+          ],
+          "correct": 3,
+          "explanation": "「gluttony」は「暴飲暴食」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「glycerin」の意味として最も適切なものは？",
+          "choices": [
+            "気前の良さ",
+            "グリセリン",
+            "ほくそ笑む",
+            "口達者な"
+          ],
+          "correct": 1,
+          "explanation": "「glycerin」は「グリセリン」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gnash」の意味として最も適切なものは？",
+          "choices": [
+            "家庭教師",
+            "卒業",
+            "ゴリラ",
+            "歯ぎしりする"
+          ],
+          "correct": 3,
+          "explanation": "「gnash」は「歯ぎしりする」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gnat」の意味として最も適切なものは？",
+          "choices": [
+            "起源",
+            "小バエ",
+            "段階的な",
+            "用語集"
+          ],
+          "correct": 1,
+          "explanation": "「gnat」は「小バエ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gnaw」の意味として最も適切なものは？",
+          "choices": [
+            "細菌",
+            "起源",
+            "幾何学",
+            "かじる"
+          ],
+          "correct": 3,
+          "explanation": "「gnaw」は「かじる」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「goad」の意味として最も適切なものは？",
+          "choices": [
+            "めまいがする",
+            "優しい",
+            "巨大な",
+            "駆り立てる"
+          ],
+          "correct": 3,
+          "explanation": "「goad」は「駆り立てる」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "実戦編2セット8",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1471~1480",
+      "questions": [
+        {
+          "scenario": "「goblet」の意味として最も適切なものは？",
+          "choices": [
+            "ゴブレット",
+            "福音",
+            "大喜び",
+            "ガソリン"
+          ],
+          "correct": 0,
+          "explanation": "「goblet」は「ゴブレット」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「goblin」の意味として最も適切なものは？",
+          "choices": [
+            "天才",
+            "幾何学",
+            "地理学",
+            "ゴブリン"
+          ],
+          "correct": 3,
+          "explanation": "「goblin」は「ゴブリン」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「goddess」の意味として最も適切なものは？",
+          "choices": [
+            "移植",
+            "噂話",
+            "女神",
+            "グローバル化"
+          ],
+          "correct": 2,
+          "explanation": "「goddess」は「女神」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「goldfish」の意味として最も適切なものは？",
+          "choices": [
+            "金魚",
+            "ゴリラ",
+            "グリセリン",
+            "細菌"
+          ],
+          "correct": 0,
+          "explanation": "「goldfish」は「金魚」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gong」の意味として最も適切なものは？",
+          "choices": [
+            "薄いクモの巣",
+            "金メッキする",
+            "ドラ・どら",
+            "グリセリン"
+          ],
+          "correct": 2,
+          "explanation": "「gong」は「ドラ・どら」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「goodly」の意味として最も適切なものは？",
+          "choices": [
+            "帯・コルセット",
+            "優雅な",
+            "かなりの",
+            "不具合"
+          ],
+          "correct": 2,
+          "explanation": "「goodly」は「かなりの」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「goodwill」の意味として最も適切なものは？",
+          "choices": [
+            "好意・親善",
+            "噂話",
+            "小バエ",
+            "ゴリラ"
+          ],
+          "correct": 0,
+          "explanation": "「goodwill」は「好意・親善」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「goose」の意味として最も適切なものは？",
+          "choices": [
+            "不具合",
+            "穀物",
+            "ガチョウ",
+            "系図"
+          ],
+          "correct": 2,
+          "explanation": "「goose」は「ガチョウ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gorge」の意味として最も適切なものは？",
+          "choices": [
+            "ガウン",
+            "出入り口",
+            "渓谷",
+            "用語集"
+          ],
+          "correct": 2,
+          "explanation": "「gorge」は「渓谷」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gorgeous」の意味として最も適切なものは？",
+          "choices": [
+            "豪華な",
+            "上品さ",
+            "紳士",
+            "かすかな光"
+          ],
+          "correct": 0,
+          "explanation": "「gorgeous」は「豪華な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "実戦編2セット9",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1481~1490",
+      "questions": [
+        {
+          "scenario": "「gorilla」の意味として最も適切なものは？",
+          "choices": [
+            "ゴリラ",
+            "系図",
+            "遺伝学",
+            "女神"
+          ],
+          "correct": 0,
+          "explanation": "「gorilla」は「ゴリラ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gospel」の意味として最も適切なものは？",
+          "choices": [
+            "かなりの",
+            "豪華な",
+            "大喜び",
+            "福音"
+          ],
+          "correct": 3,
+          "explanation": "「gospel」は「福音」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gossamer」の意味として最も適切なものは？",
+          "choices": [
+            "薄いクモの巣",
+            "出入り口",
+            "釉薬をかける",
+            "天才"
+          ],
+          "correct": 0,
+          "explanation": "「gossamer」は「薄いクモの巣」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gossip」の意味として最も適切なものは？",
+          "choices": [
+            "ガソリン",
+            "噂話",
+            "優雅さ",
+            "光沢のある"
+          ],
+          "correct": 1,
+          "explanation": "「gossip」は「噂話」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gourd」の意味として最も適切なものは？",
+          "choices": [
+            "福音",
+            "世代",
+            "本物の",
+            "ヒョウタン"
+          ],
+          "correct": 3,
+          "explanation": "「gourd」は「ヒョウタン」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gourmet」の意味として最も適切なものは？",
+          "choices": [
+            "栄光",
+            "ゴブリン",
+            "グルメ",
+            "要点"
+          ],
+          "correct": 2,
+          "explanation": "「gourmet」は「グルメ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「governess」の意味として最も適切なものは？",
+          "choices": [
+            "光沢のある",
+            "起源",
+            "用語集",
+            "家庭教師"
+          ],
+          "correct": 3,
+          "explanation": "「governess」は「家庭教師」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「governor」の意味として最も適切なものは？",
+          "choices": [
+            "グルメ",
+            "不具合",
+            "知事",
+            "ほくそ笑む"
+          ],
+          "correct": 2,
+          "explanation": "「governor」は「知事」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gown」の意味として最も適切なものは？",
+          "choices": [
+            "ゴリラ",
+            "ガウン",
+            "渓谷",
+            "歯ぎしりする"
+          ],
+          "correct": 1,
+          "explanation": "「gown」は「ガウン」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grace」の意味として最も適切なものは？",
+          "choices": [
+            "優雅さ",
+            "薄いクモの巣",
+            "釉薬をかける",
+            "穀物"
+          ],
+          "correct": 0,
+          "explanation": "「grace」は「優雅さ」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "実戦編2セット10",
+      "type": "vocabulary",
+      "emoji": "🏅",
+      "subtitle": "英検準2級の実戦語彙 1491~1500",
+      "questions": [
+        {
+          "scenario": "「graceful」の意味として最も適切なものは？",
+          "choices": [
+            "ギア・用具",
+            "優雅な",
+            "地理学",
+            "文法的な"
+          ],
+          "correct": 1,
+          "explanation": "「graceful」は「優雅な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gracious」の意味として最も適切なものは？",
+          "choices": [
+            "巨大な",
+            "地理学",
+            "輝く",
+            "丁寧な・慈悲深い"
+          ],
+          "correct": 3,
+          "explanation": "「gracious」は「丁寧な・慈悲深い」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gradation」の意味として最も適切なものは？",
+          "choices": [
+            "段階的変化",
+            "かすかな光",
+            "輝き",
+            "優しい"
+          ],
+          "correct": 0,
+          "explanation": "「gradation」は「段階的変化」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gradient」の意味として最も適切なものは？",
+          "choices": [
+            "美化する",
+            "系図",
+            "傾斜度",
+            "本当に"
+          ],
+          "correct": 2,
+          "explanation": "「gradient」は「傾斜度」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「gradual」の意味として最も適切なものは？",
+          "choices": [
+            "卒業",
+            "金メッキする",
+            "段階的な",
+            "魅力"
+          ],
+          "correct": 2,
+          "explanation": "「gradual」は「段階的な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「graduation」の意味として最も適切なものは？",
+          "choices": [
+            "渓谷",
+            "卒業",
+            "薄いクモの巣",
+            "計器"
+          ],
+          "correct": 1,
+          "explanation": "「graduation」は「卒業」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「graft」の意味として最も適切なものは？",
+          "choices": [
+            "移植",
+            "ヒョウタン",
+            "少女時代",
+            "くすくす笑う"
+          ],
+          "correct": 0,
+          "explanation": "「graft」は「移植」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grain」の意味として最も適切なものは？",
+          "choices": [
+            "豪華な",
+            "女神",
+            "計器",
+            "穀物"
+          ],
+          "correct": 3,
+          "explanation": "「grain」は「穀物」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grammar」の意味として最も適切なものは？",
+          "choices": [
+            "文法",
+            "遺伝学",
+            "剣闘士",
+            "巨大な"
+          ],
+          "correct": 0,
+          "explanation": "「grammar」は「文法」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「grammatical」の意味として最も適切なものは？",
+          "choices": [
+            "卒業",
+            "幾何学",
+            "文法的な",
+            "めまいがする"
+          ],
+          "correct": 2,
+          "explanation": "「grammatical」は「文法的な」という意味の単語です。英検準2級の実戦的な語彙です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}
