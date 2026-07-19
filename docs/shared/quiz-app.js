@@ -1475,7 +1475,7 @@ async function showResults() {
   if (isPracticeModeActive) resultTitle = currentTest.title + ' 練習結果';
   document.getElementById('result-title').textContent = resultTitle;
   document.getElementById('result-part-label').textContent = getPartLabel(quizData[currentLevel], currentLevel);
-  document.getElementById('score-num').innerHTML    = `<span class="score-main">${score}</span><span class="score-sub"> / ${maxScore}点</span>`;
+  document.getElementById('score-num').innerHTML    = `<span class="score-main">${score}点</span> <span class="score-sub">(${correct}/${total})</span>`;
 
   const ratio = score / maxScore;
   const stars = ratio === 1 ? '⭐⭐⭐' : ratio >= 0.7 ? '⭐⭐' : ratio >= 0.4 ? '⭐' : '　';
