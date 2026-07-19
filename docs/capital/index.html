@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719232552">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719233353">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -79,8 +79,7 @@
       <div class="score-ring">
         <span class="score-num" id="score-num"></span>
       </div>
-      <div class="score-stars" id="score-stars"></div>
-      <p class="score-msg" id="score-msg"></p>
+      <div class="score-line"><span class="score-stars" id="score-stars"></span>　<span class="score-msg" id="score-msg"></span></div>
       <p class="best-msg" id="best-msg"></p>
     </div>
     <div class="result-list">
@@ -259,7 +258,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260719232552"></script>
+<script src="../shared/quiz-app.js?v=20260719233353"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
