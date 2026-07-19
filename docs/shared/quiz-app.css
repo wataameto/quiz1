@@ -106,10 +106,10 @@
       .set-actions .btn-title { font-size: 0.68rem; }
       .set-actions .btn-sub { font-size: 0.54rem; }
       .set-actions .btn-sub-score { font-size: 0.66rem; }
-      .scenario { min-height: 80px; }
+      .scenario { min-height: 60px; }
       .choices { min-height: 220px; }
-      .feedback { min-height: 50px; }
-      .explanation { min-height: 80px; }
+      .feedback { min-height: 40px; }
+      .explanation { min-height: 60px; }
       #quiz-subtitle { display: none; }
     }
     .quiz-header { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
