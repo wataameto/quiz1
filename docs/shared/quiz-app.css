@@ -32,7 +32,7 @@
       cursor: pointer;
     }
     .part-score-row .part-name { font-weight: 700; color: #2d3748; flex: 1; min-width: 0; }
-    .part-score-row .part-value { color: #0f2027; font-weight: 800; white-space: nowrap; text-align: left; order: 3; flex-basis: 100%; flex-shrink: 0; }
+    .part-score-row .part-value { color: #0f2027; font-weight: 800; white-space: nowrap; text-align: right; order: 3; flex-basis: 100%; flex-shrink: 0; }
     .part-score-row .part-arrow { color: #a0aec0; font-size: 0.72rem; flex-shrink: 0; transition: transform 0.2s ease; }
     .part-block.open .part-score-row .part-arrow { transform: rotate(90deg); }
 
