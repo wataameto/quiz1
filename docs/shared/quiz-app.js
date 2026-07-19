@@ -192,7 +192,7 @@ function soundWrong()   { tone(330,'sawtooth',0,0.10,0.20); tone(220,'sawtooth',
 function soundClick()   { tone(1000,'sine',0,0.05,0.10); }
 function soundFanfare() { [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => tone(f,'sine',t,0.18,0.28)); }
 function soundGood()    { tone(784,'sine',0,0.15,0.25); tone(1047,'sine',0.14,0.20,0.25); }
-function soundShine()   { tone(1319,'sine',0,0.35,0.18); tone(1976,'sine',0.04,0.32,0.15); tone(2637,'sine',0.08,0.30,0.12); tone(3520,'sine',0.12,0.26,0.08); }
+function soundShine()   { tone(1319,'sine',0,0.65,0.18); tone(1976,'sine',0.06,0.60,0.15); tone(2637,'sine',0.12,0.55,0.12); tone(3520,'sine',0.18,0.50,0.09); tone(4699,'sine',0.24,0.45,0.06); }
 
 function launchSparkles(x, y, count = 28) {
   const wrap = document.getElementById('confetti-wrap');
