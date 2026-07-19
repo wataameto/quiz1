@@ -20,12 +20,6 @@ let currentUser = null;
 let bestScores = {};
 let cacheInitialized = false;
 
-const UNIT_NAME = 'レッスン';
-
-function getLessonName(t) {
-  return `${UNIT_NAME}${t.id}　${t.title || ''}`;
-}
-
 // ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
 const FONT_SIZE_KEY = 'quizFontSize';
 const FONT_SIZES = { xxs: '70%', xs: '80%', s: '90%', m: '100%', l: '115%' };
@@ -1034,7 +1028,7 @@ async function buildSetRowsHtml(tests, level, partLabel) {
     html += `<div class="part-set-row">
       <span class="set-icon">${t.emoji}</span>
       <div class="set-main">
-        <div class="set-name"><span class="set-icon-inline">${t.emoji}</span>${getLessonName(t)}</div>
+        <div class="set-name"><span class="set-icon-inline">${t.emoji}</span>${t.title}</div>
         <div class="set-sub">${escapeHtml(t.subtitle || partLabel)} ${questionCount}問</div>
       </div>
       <div class="set-meta">
@@ -1239,7 +1233,7 @@ function renderQuestion() {
   const pct = Math.round((currentQ / total) * 100);
 
   document.getElementById('quiz-part-label').textContent = getPartLabel(quizData[currentLevel], currentLevel);
-  document.getElementById('quiz-title').textContent    = getLessonName(currentTest);
+  document.getElementById('quiz-title').textContent    = currentTest.title;
   document.getElementById('quiz-subtitle').textContent = currentTest.subtitle;
   document.getElementById('progress-bar').style.width  = pct + '%';
   document.getElementById('progress-label').textContent = `第 ${currentQ + 1} 問 ／ ${total} 問`;

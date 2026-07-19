@@ -4,7 +4,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "SDLC Automation",
+      "title": "レッスン1 SDLC Automation",
       "emoji": "📦",
       "subtitle": "CI/CD・デプロイメント自動化の問題！",
       "questions": [
@@ -132,7 +132,7 @@
     },
     {
       "id": 2,
-      "title": "IaC & 構成管理",
+      "title": "レッスン2 IaC & 構成管理",
       "emoji": "🏗️",
       "subtitle": "Infrastructure as Code の問題！",
       "questions": [
@@ -260,7 +260,7 @@
     },
     {
       "id": 3,
-      "title": "Resilient Cloud Solutions",
+      "title": "レッスン3 Resilient Cloud Solutions",
       "emoji": "⚡",
       "subtitle": "高可用性・耐障害性の問題！",
       "questions": [
@@ -388,7 +388,7 @@
     },
     {
       "id": 4,
-      "title": "Monitoring & Logging",
+      "title": "レッスン4 Monitoring & Logging",
       "emoji": "📊",
       "subtitle": "モニタリング・ログ管理の問題！",
       "questions": [
@@ -516,7 +516,7 @@
     },
     {
       "id": 5,
-      "title": "Incident & Event Response",
+      "title": "レッスン5 Incident & Event Response",
       "emoji": "🚨",
       "subtitle": "インシデント対応・イベント管理の問題！",
       "questions": [
@@ -644,7 +644,7 @@
     },
     {
       "id": 6,
-      "title": "Security & Compliance",
+      "title": "レッスン6 Security & Compliance",
       "emoji": "🔒",
       "subtitle": "セキュリティ・コンプライアンスの問題！",
       "questions": [

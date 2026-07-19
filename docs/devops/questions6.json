@@ -4,7 +4,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "SDLC Automation",
+      "title": "レッスン1 SDLC Automation",
       "emoji": "📦",
       "subtitle": "本番レベルのSDLC自動化問題！",
       "questions": [
@@ -132,7 +132,7 @@
     },
     {
       "id": 2,
-      "title": "Configuration Management and IaC",
+      "title": "レッスン2 Configuration Management and IaC",
       "emoji": "📦",
       "subtitle": "本番レベルの構成管理とIaC問題！",
       "questions": [
@@ -260,7 +260,7 @@
     },
     {
       "id": 3,
-      "title": "Monitoring, Logging, and Incident Response",
+      "title": "レッスン3 Monitoring, Logging, and Incident Response",
       "emoji": "📦",
       "subtitle": "本番レベルの監視・ログ・障害対応問題！",
       "questions": [

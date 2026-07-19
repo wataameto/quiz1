@@ -5,7 +5,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "🌱 ITパスポートJrパート1-1",
+      "title": "レッスン1 🌱 ITパスポートJrパート1-1",
       "emoji": "🌱",
       "subtitle": "会社や経営の基本を選んでね！",
       "questions": [
@@ -133,7 +133,7 @@
     },
     {
       "id": 2,
-      "title": "🛡️ ITパスポートJrパート1-2",
+      "title": "レッスン2 🛡️ ITパスポートJrパート1-2",
       "emoji": "🛡️",
       "subtitle": "情報モラル・法律の基本を選んでね！",
       "questions": [
@@ -261,7 +261,7 @@
     },
     {
       "id": 3,
-      "title": "📱 ITパスポートJrパート1-3",
+      "title": "レッスン3 📱 ITパスポートJrパート1-3",
       "emoji": "📱",
       "subtitle": "身近なITの仕組みを選んでね！",
       "questions": [

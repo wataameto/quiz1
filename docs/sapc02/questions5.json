@@ -5,7 +5,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "Organizational Complexity & Multi-Account Governance",
+      "title": "レッスン1 Organizational Complexity & Multi-Account Governance",
       "emoji": "📦",
       "subtitle": "マルチアカウント統治とガバナンスの問題！",
       "questions": [
@@ -133,7 +133,7 @@
     },
     {
       "id": 2,
-      "title": "Networking & Hybrid Connectivity",
+      "title": "レッスン2 Networking & Hybrid Connectivity",
       "emoji": "🌐",
       "subtitle": "ネットワーク・ハイブリッド接続の問題！",
       "questions": [
@@ -261,7 +261,7 @@
     },
     {
       "id": 3,
-      "title": "High Availability, Resilience & DR",
+      "title": "レッスン3 High Availability, Resilience & DR",
       "emoji": "⚡",
       "subtitle": "高可用性・レジリエンス・DR設計の問題！",
       "questions": [
@@ -389,7 +389,7 @@
     },
     {
       "id": 4,
-      "title": "Cost Optimization & Migration Strategy",
+      "title": "レッスン4 Cost Optimization & Migration Strategy",
       "emoji": "💰",
       "subtitle": "コスト最適化・移行戦略の問題！",
       "questions": [
@@ -517,7 +517,7 @@
     },
     {
       "id": 5,
-      "title": "Data & Storage Architecture",
+      "title": "レッスン5 Data & Storage Architecture",
       "emoji": "🗄️",
       "subtitle": "データ・ストレージアーキテクチャの問題！",
       "questions": [
@@ -645,7 +645,7 @@
     },
     {
       "id": 6,
-      "title": "Security & Compliance at Scale",
+      "title": "レッスン6 Security & Compliance at Scale",
       "emoji": "🔒",
       "subtitle": "大規模セキュリティ・コンプライアンスの問題！",
       "questions": [
