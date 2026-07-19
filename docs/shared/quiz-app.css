@@ -170,11 +170,14 @@
     .full-clear-celebrate button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(247,151,30,0.35); }
     .result-list { border-top: 2px solid #edf2f7; margin-top: 12px; padding-top: 12px; }
     .result-list h3 { font-size: 0.95rem; color: #718096; margin-bottom: 14px; font-weight: 700; }
-    .answer-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 0; border-bottom: 1px solid #f7fafc; font-size: 0.84rem; }
+    .answer-row-wrap { padding: 12px 0; border-bottom: 1px solid #f7fafc; font-size: 0.84rem; }
+    .answer-row { display: flex; align-items: flex-start; gap: 10px; }
     .q-num { min-width: 32px; font-weight: 800; color: #a0aec0; }
     .mark { font-size: 1.2rem; min-width: 24px; }
     .answer-detail { color: #2d3748; line-height: 1.7; flex: 1; }
-    .answer-detail .exp { margin-top: 4px; font-size: 0.8rem; color: #718096; border-left: 2px solid #e2e8f0; padding-left: 8px; }
+    .answer-correct { margin-top: 6px; color: #555; font-size: 0.82rem; }
+    .answer-wrong { margin-top: 2px; color: #e53e3e; font-size: 0.82rem; }
+    .exp { margin-top: 4px; font-size: 0.8rem; color: #718096; border-left: 2px solid #e2e8f0; padding-left: 8px; }
     .btn-review { margin-top: 16px; width: 100%; padding: 15px; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; border-radius: 12px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; }
     .btn-review:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(102,126,234,0.4); }
     .confetti-wrap { position: fixed; top: 0; left: 0; right: 0; pointer-events: none; overflow: hidden; height: 100vh; z-index: 9999; }
@@ -290,6 +293,7 @@
       .score-msg { margin-bottom: 2px; }
       .result-list { margin-top: 6px; padding-top: 6px; }
       .result-list h3 { margin-bottom: 6px; }
-      .answer-row { padding: 6px 0; gap: 6px; }
+      .answer-row-wrap { padding: 6px 0; }
+      .answer-row { gap: 6px; }
       .btn-review { margin-top: 8px; padding: 10px; }
     }

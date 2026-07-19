@@ -1499,10 +1499,13 @@ async function showResults() {
     const ans = answers[i];
     const correctText = escapeHtml(isTextQuestion(q) ? q.correctText : (isJournalQuestion(q) ? journalText(q.choices[q.correct]) : q.choices[q.correct]));
     const chosenText = escapeHtml(isTextQuestion(q) ? (ans.typedAnswer || '(空欄)') : (isJournalQuestion(q) ? journalText(q.choices[ans.chosenOrigIdx]) : q.choices[ans.chosenOrigIdx]));
-    let detail = `<span>${escapeHtml(q.scenario)}</span>${searchIconHtml(q.scenario)}<br><span style="color:#555;font-size:0.82rem">正解: ${correctText}</span>`;
-    if (!ans.correct) detail += `<br><span style="color:#e53e3e;font-size:0.82rem">あなた: ${chosenText}</span>`;
-    if (q.explanation) detail += `<div class="exp">💡 ${escapeHtml(q.explanation)}${searchIconHtml(q.explanation)}</div>`;
-    return `<div class="answer-row"><span class="q-num">Q${i + 1}</span><span class="mark">${ans.correct ? '✅' : '❌'}</span><div class="answer-detail">${detail}</div></div>`;
+    let extra = `<div class="answer-correct">正解: ${correctText}</div>`;
+    if (!ans.correct) extra += `<div class="answer-wrong">あなた: ${chosenText}</div>`;
+    if (q.explanation) extra += `<div class="exp">💡 ${escapeHtml(q.explanation)}${searchIconHtml(q.explanation)}</div>`;
+    return `<div class="answer-row-wrap">
+      <div class="answer-row"><span class="q-num">Q${i + 1}</span><span class="mark">${ans.correct ? '✅' : '❌'}</span><div class="answer-detail"><span>${escapeHtml(q.scenario)}</span>${searchIconHtml(q.scenario)}</div></div>
+      ${extra}
+    </div>`;
   }).join('');
 }
 
