@@ -637,11 +637,11 @@ async function showScoreHistory() {
       const historyField = historyKey(level, t.id);
       const entriesHtml = decorated.length
         ? [...decorated].reverse().map(h =>
-            `<div style="display:flex; align-items:center; gap:8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
+            `<div style="display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
               <input type="checkbox" class="history-check" data-field="${historyField}" data-idx="${h.idx}">
-              <span style="flex-shrink:0; color:#a0aec0; font-size:0.76rem; min-width:2.6em;">${h.no ? h.no + '回目' : ''}</span>
-              <span style="flex:1; min-width:0;">${escapeHtml(h.date)}</span>
-              <span style="font-weight:700; flex-shrink:0;">${Math.round(h.score / 100 * qCount)}/${qCount}問</span>
+              <span style="flex-shrink:0; color:#a0aec0; font-size:0.76rem; min-width:2.6em; white-space:nowrap;">${h.no ? h.no + '回目' : ''}</span>
+              <span style="white-space:nowrap;">${escapeHtml(h.date)}</span>
+              <span style="font-weight:700; margin-left:auto; white-space:nowrap;">${Math.round(h.score / 100 * qCount)}/${qCount}問</span>
             </div>`
           ).join('')
         : `<p style="font-size:0.82rem; color:#a0aec0; padding:4px 0; margin:0;">まだ記録がありません</p>`;
