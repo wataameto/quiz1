@@ -60,7 +60,7 @@ describe('Main menu HTML', () => {
     // メインメニューのジャンル別グループ表示（docs/index.htmlのGENRE_ORDER）と対になる集合。
     // 新しい教材を追加したときに分類を書き忘れると失敗する（quiz_undefined事故の再発防止と同じ考え方）。
     const KNOWN_MAJORS = ['sample', 'shikaku', 'gakkou', 'zatsugaku'];
-    const KNOWN_MINORS = ['it_shikaku', 'kaikei_kinyu_shikaku', 'houritsu_sonota_shikaku'];
+    const KNOWN_MINORS = ['it_shikaku', 'kaikei_kinyu_shikaku', 'language_shikaku', 'houritsu_sonota_shikaku'];
 
     Object.entries(config).forEach(([id, cfg]) => {
       expect(KNOWN_MAJORS).toContain(cfg.genreMajor);
