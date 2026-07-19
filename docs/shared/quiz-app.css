@@ -111,7 +111,7 @@
     .scenario { background: linear-gradient(135deg, #f7f8ff, #fffbea); border-left: 5px solid #f7971e; border-radius: 12px; padding: 18px 20px; font-size: 1.05rem; color: #2d3748; line-height: 1.7; margin-bottom: 15px; font-weight: 600; min-height: 140px; }
     .choices { display: flex; flex-direction: column; gap: 10px; min-height: 220px; }
     .choice-row { display: flex; }
-    .search-icon-btn { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 2.2em; height: 2.2em; border: 2px solid #e2e8f0; border-radius: 10px; background: #fff; cursor: pointer; font-size: 0.85rem; padding: 0; color: #718096; transition: all 0.15s; font-family: inherit; }
+    .search-icon-btn { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 1.7em; height: 1.7em; border: 2px solid #e2e8f0; border-radius: 8px; background: #fff; cursor: pointer; font-size: 0.7rem; padding: 0; color: #718096; transition: all 0.15s; font-family: inherit; }
     .search-icon-btn:hover { border-color: #667eea; background: #f5f7ff; color: #667eea; }
     @media (hover: none) {
       .search-icon-btn { -webkit-tap-highlight-color: transparent; }
