@@ -192,6 +192,35 @@ function soundWrong()   { tone(330,'sawtooth',0,0.10,0.20); tone(220,'sawtooth',
 function soundClick()   { tone(1000,'sine',0,0.05,0.10); }
 function soundFanfare() { [[523,0],[659,0.15],[784,0.30],[1047,0.45],[1047,0.60],[784,0.70],[1047,0.82]].forEach(([f,t]) => tone(f,'sine',t,0.18,0.28)); }
 function soundGood()    { tone(784,'sine',0,0.15,0.25); tone(1047,'sine',0.14,0.20,0.25); }
+function soundShine()   { tone(1568,'sine',0,0.10,0.22); tone(2093,'sine',0.06,0.16,0.18); }
+
+function launchSparkles(x, y, count = 14) {
+  const wrap = document.getElementById('confetti-wrap');
+  if (!wrap) return;
+  wrap.setAttribute('aria-hidden', 'true');
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    el.className = 'sparkle-piece';
+    el.setAttribute('aria-hidden', 'true');
+    el.textContent = '✨';
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
+    const angle = Math.random() * Math.PI * 2;
+    const dist = 40 + Math.random() * 60;
+    el.style.setProperty('--sx', Math.cos(angle) * dist + 'px');
+    el.style.setProperty('--sy', Math.sin(angle) * dist + 'px');
+    el.style.fontSize = (14 + Math.random() * 14) + 'px';
+    el.style.animationDelay = (Math.random() * 0.1) + 's';
+    wrap.appendChild(el);
+    el.addEventListener('animationend', () => el.remove());
+  }
+}
+
+function playFullClearSparkle(event) {
+  soundShine();
+  const rect = event.currentTarget.getBoundingClientRect();
+  launchSparkles(rect.left + rect.width / 2, rect.top + rect.height / 2);
+}
 
 function launchConfetti(count = 60) {
   const wrap = document.getElementById('confetti-wrap');
@@ -1149,7 +1178,7 @@ async function showHome() {
   const fullyCleared = await isFullyCleared();
   const lap = getLap();
   const badgeSlotEl = document.getElementById('full-clear-badge-slot');
-  if (badgeSlotEl) badgeSlotEl.innerHTML = lap > 0 ? `<span class="full-clear-badge">🌟 全クリア ×${lap}</span>` : '';
+  if (badgeSlotEl) badgeSlotEl.innerHTML = lap > 0 ? `<span class="full-clear-badge" onclick="playFullClearSparkle(event)">🌟 全クリア ×${lap}</span>` : '';
   const bannerEl = document.getElementById('full-clear-banner');
   if (bannerEl) {
     let bannerHtml = '';
@@ -1720,15 +1749,20 @@ document.addEventListener('keydown', (e) => {
   const deviceType = isTouchDevice() ? '📱 Touch' : '🖥️ PC';
 
   // Load build info from JSON
-  let buildTime = 'Loading...';
+  // ?t=でキャッシュを避けているため、Service Workerのキャッシュフォールバックが
+  // 効かない（毎回URLが変わりcaches.match()が一致しない）。通信が一瞬失敗しただけで
+  // 「Unknown」と表示されないよう、前回成功した値をlocalStorageに残しておく。
+  const BUILD_TIME_CACHE_KEY = 'lastKnownBuildTime';
+  let buildTime = localStorage.getItem(BUILD_TIME_CACHE_KEY) || 'Loading...';
   fetch('../build-info.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       buildTime = data.buildTime;
+      localStorage.setItem(BUILD_TIME_CACHE_KEY, buildTime);
       updateBuildTimeDisplay();
     })
     .catch(err => {
-      buildTime = 'Unknown';
+      buildTime = localStorage.getItem(BUILD_TIME_CACHE_KEY) || 'Unknown';
       updateBuildTimeDisplay();
     });
 
