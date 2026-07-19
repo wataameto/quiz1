@@ -640,7 +640,7 @@ async function showScoreHistory() {
             `<div style="display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
               <input type="checkbox" class="history-check" data-field="${historyField}" data-idx="${h.idx}">
               <span style="flex-shrink:0; color:#a0aec0; font-size:0.76rem; min-width:2.6em; white-space:nowrap;">${h.no ? h.no + '回目' : ''}</span>
-              <span style="white-space:nowrap;">${escapeHtml(h.date)}</span>
+              <span style="white-space:nowrap; font-size:0.72rem;">${escapeHtml(h.date)}</span>
               <span style="font-weight:700; margin-left:auto; white-space:nowrap;">${Math.round(h.score / 100 * qCount)}/${qCount}問</span>
             </div>`
           ).join('')
@@ -684,7 +684,7 @@ async function showScoreHistory() {
     const lapEntriesHtml = [...lapEntries].reverse().map(e =>
       `<div style="display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px; padding:4px 0; font-size:0.85rem; color:#4a5568;">
         ${e.field ? `<input type="checkbox" class="history-check" data-field="${e.field}" data-idx="${e.idx}">` : '<span style="width:16px; flex-shrink:0; display:inline-block;"></span>'}
-        <span style="white-space:nowrap;">${escapeHtml(e.date)}</span>
+        <span style="white-space:nowrap; font-size:0.72rem;">${escapeHtml(e.date)}</span>
         <span style="font-weight:700; margin-left:auto; white-space:nowrap;">${e.label}</span>
       </div>`
     ).join('');
