@@ -261,6 +261,11 @@ async function loadQuestions(level = 1) {
   }
 }
 
+function getPartLabel(levelData, level) {
+  const base = levelData.description || levelData.label;
+  return base ? `Part${level} ${base}` : `Part${level}`;
+}
+
 function showAdmin() {
   document.getElementById('screen-home').classList.add('hidden');
   document.getElementById('screen-quiz').classList.add('hidden');
@@ -275,7 +280,7 @@ function showAdmin() {
   for (let level = 1; level <= maxLevel; level++) {
     const levelData = quizData[level];
     if (!levelData || !Array.isArray(levelData.tests)) continue;
-    const partLabel = levelData.description || levelData.label || `パート ${level}`;
+    const partLabel = getPartLabel(levelData, level);
     lines.push(`## ${partLabel}`);
 
     for (const test of levelData.tests) {
@@ -558,7 +563,7 @@ async function showScoreHistory() {
   for (let level = 1; level <= maxLevel; level++) {
     const levelData = quizData[level];
     if (!levelData) continue;
-    const partLabel = levelData.description || levelData.label || `パート ${level}`;
+    const partLabel = getPartLabel(levelData, level);
     const tests = levelData.tests || [];
 
     const setSections = [];
@@ -978,7 +983,7 @@ async function showHome() {
       levelPracticeAttempts += getPracticeCount(t.id, level);
     }
 
-    const levelLabel = levelData.description || levelData.label || `レベル ${level}`;
+    const levelLabel = getPartLabel(levelData, level);
     const isOpen = level === currentLevel && !homeCollapsed;
     const blockClass = `part-block${isOpen ? ' open' : ''}${level === currentLevel ? ' active' : ''}`;
     const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel, unitName);
