@@ -368,10 +368,52 @@ async function initializeBestScoresCache() {
     const collection = getCollectionName();
     const doc = await db.collection(collection).doc(currentUser.uid).get();
     const scores = doc.exists ? doc.data() : {};
+
+    // ===== 旧キー → 新キー マイグレーション =====
+    // best_/history_/wrongAnswers_/attemptCount_/practiceCount_ を
+    // lesson_/lessonHistory_/lessonWrongAnswers_/lessonAttemptCount_/lessonPracticeCount_ へ移行する。
+    // 旧キーが1件でも存在したら移行処理を実行し、完了後に旧キーをFirestoreから削除する。
+    const prefixMap = [
+      ['best_',         'lesson_'],
+      ['history_',      'lessonHistory_'],
+      ['wrongAnswers_', 'lessonWrongAnswers_'],
+      ['attemptCount_', 'lessonAttemptCount_'],
+      ['practiceCount_','lessonPracticeCount_'],
+    ];
+    const toWrite = {};
+    const toDelete = {};
+    for (const [oldPrefix, newPrefix] of prefixMap) {
+      for (const [key, val] of Object.entries(scores)) {
+        if (key.startsWith(oldPrefix)) {
+          const newKey = newPrefix + key.slice(oldPrefix.length);
+          // 新キーがまだ無い場合だけコピー（上書きしない）
+          if (!(newKey in scores)) {
+            toWrite[newKey] = val;
+            scores[newKey] = val; // ローカルキャッシュにも反映
+          }
+          toDelete[key] = firebase.firestore.FieldValue.delete();
+          delete scores[key]; // ローカルキャッシュから旧キーを削除
+        }
+      }
+    }
+    if (Object.keys(toWrite).length > 0 || Object.keys(toDelete).length > 0) {
+      try {
+        await db.collection(collection).doc(currentUser.uid).set(
+          { ...toWrite, ...toDelete },
+          { merge: true }
+        );
+        console.log('[Migration] 旧キーから新キーへの移行完了', Object.keys(toWrite));
+      } catch (e) {
+        console.error('[Migration] 移行に失敗しました', e);
+      }
+    }
+    // ===== マイグレーション終了 =====
+
     bestScores = scores;
     cacheInitialized = true;
   } catch (e) { console.error(e); }
 }
+
 
 // ===== 解答記録と復習機能 =====
 
