@@ -24,7 +24,7 @@ let cacheInitialized = false;
 const FONT_SIZE_KEY_LEGACY = 'quizFontSize'; // PC/スマホ分離前の単一キー（移行用）
 const FONT_SIZE_KEYS = { pc: 'quizFontSizePC', mobile: 'quizFontSizeMobile' };
 const FONT_SIZE_MIN = 70;
-const FONT_SIZE_MAX = 200;
+const FONT_SIZE_MAX = { pc: 200, mobile: 120 };
 const FONT_SIZE_DEFAULTS = { pc: 110, mobile: 90 };
 const FONT_SIZE_LEGACY_MAP = { xxs: 70, xs: 80, s: 90, m: 100, l: 115, small: 90, medium: 100, large: 115, xl: 115 }; // 旧段階からの移行
 
@@ -35,7 +35,7 @@ function isMobileFontSizeView() {
 function clampFontSize(size, device) {
   size = Math.round(Number(size) / 5) * 5;
   if (isNaN(size)) size = FONT_SIZE_DEFAULTS[device];
-  return Math.min(FONT_SIZE_MAX, Math.max(FONT_SIZE_MIN, size));
+  return Math.min(FONT_SIZE_MAX[device], Math.max(FONT_SIZE_MIN, size));
 }
 
 function getFontSizeFor(device) {

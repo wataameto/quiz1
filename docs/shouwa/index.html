@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719211738">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719213518">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -23,10 +23,11 @@
   <div id="screen-home">
     <div class="home-top">
       <p class="screen-label" style="position:absolute; top:6px; left:0; right:0; text-align:center; margin:0;">教材トップ</p>
-      <a href="../" onclick="backToMainMenu(event)" style="position:absolute; top:0; left:0; background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
-      <button class="btn-reset-corner" onclick="openScoreModal()">📊 成績/設定</button>
+      <div class="home-top-row">
+        <a href="../" onclick="backToMainMenu(event)" style="background:transparent; color:#f7971e; border:2px solid #f7971e; border-radius:10px; padding:6px 12px; font-size:0.78rem; font-weight:700; cursor:pointer; text-decoration:none; white-space:nowrap; transition:all 0.2s;" onmouseover="this.style.background='#fffbea'" onmouseout="this.style.background='transparent'">🏠 メインメニュー</a>
+        <button class="btn-reset-corner" onclick="openScoreModal()">📊 成績/設定</button>
+      </div>
       <div class="auth-status" id="auth-status"></div>
-      <div style="height: 80px;"></div>
       <div class="home-header">
         <h1 id="quiz-heading"></h1>
         <p id="quiz-description"></p>
@@ -123,10 +124,10 @@
               <span>📱 スマホ</span>
               <span id="font-size-value-mobile">90%</span>
             </div>
-            <input type="range" id="font-size-slider-mobile" min="70" max="200" step="5" value="90" list="font-size-ticks" oninput="setFontSize('mobile', this.value)" style="width:100%; accent-color:#667eea;">
+            <input type="range" id="font-size-slider-mobile" min="70" max="120" step="5" value="90" list="font-size-ticks-mobile" oninput="setFontSize('mobile', this.value)" style="width:100%; accent-color:#667eea;">
             <div style="display:flex; justify-content:space-between; font-size:0.64rem; color:#a0aec0; margin-top:2px;">
               <span>70%</span>
-              <span>200%</span>
+              <span>120%</span>
             </div>
             <button onclick="resetFontSizeToDefault('mobile')" style="margin-top:6px; padding:5px 10px; background:#edf2f7; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#4a5568; font-family:inherit; font-size:0.7rem;">↺ スマホをデフォルトに戻す</button>
           </div>
@@ -145,6 +146,14 @@
             <option value="180"></option>
             <option value="190"></option>
             <option value="200"></option>
+          </datalist>
+          <datalist id="font-size-ticks-mobile">
+            <option value="70"></option>
+            <option value="80"></option>
+            <option value="90"></option>
+            <option value="100"></option>
+            <option value="110"></option>
+            <option value="120"></option>
           </datalist>
         </div>
         <button onclick="closeScoreModal()" style="padding:12px; background:transparent; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#718096; font-family:inherit;">閉じる</button>
@@ -248,7 +257,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260719211738"></script>
+<script src="../shared/quiz-app.js?v=20260719213518"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
