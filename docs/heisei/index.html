@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260720075143">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260720075542">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -87,6 +87,9 @@
       <div id="answer-list"></div>
     </div>
     <button id="review-btn" class="btn-review" onclick="startReview()" style="display:none"></button>
+    <div style="text-align:center; margin-top:16px;">
+      <button class="quiz-back quiz-back-blue" onclick="showHome()"><span class="quiz-back-title">テスト選択へ戻る</span><span class="quiz-back-sub">(結果保存)</span></button>
+    </div>
   </div>
 
   <div id="screen-admin" class="hidden">
@@ -258,7 +261,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260720075143"></script>
+<script src="../shared/quiz-app.js?v=20260720075542"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
