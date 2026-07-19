@@ -2,101 +2,156 @@
   "id": "eiken4",
   "level": 5,
   "label": "🔤 基礎単語編⑤",
-  "description": "英検4級レベルの基本英単語⑤（自然・食事・形容詞・副詞・会話）",
+  "description": "英検4級レベルの基本英単語⑤（宇宙・自然・社会・旅行・食事など）",
   "tests": [
     {
       "id": 1,
-      "title": "動詞編⑧：自然・環境",
-      "type": "Basic Verbs 8",
-      "emoji": "🌿",
-      "subtitle": "自然や環境に関わる動詞",
       "questions": [
-        {"scenario": "「bloom」の意味として最も適切なものは？", "choices": ["花が咲く、開く", "枯れる", "散る", "実る"], "correct": 0, "explanation": "bloomは『花が咲く、開く』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「drain」の意味として最も適切なものは？", "choices": ["流す、排水する", "注ぐ", "溜める", "飲む"], "correct": 0, "explanation": "drainは『流す、排水する』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「freeze」の意味として最も適切なものは？", "choices": ["凍らせる、凍る", "溶かす", "暖める", "乾かす"], "correct": 0, "explanation": "freezeは『凍らせる、凍る』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「grow」「植物」", "choices": ["育てる、成長させる", "切る", "植える", "摘む"], "correct": 0, "explanation": "growは『育てる、成長させる』という意味です。", "type": "choice"},
-        {"scenario": "「harvest」の意味として最も適切なものは？", "choices": ["収穫する、取り入れる", "植える", "捨てる", "保存する"], "correct": 0, "explanation": "harvestは『収穫する』という意味の動詞です。", "type": "choice"},
-        {"scenario": "「melt」の意味として最も適切なものは？", "choices": ["溶かす、溶ける", "凍る", "乾く", "燃える"], "correct": 0, "explanation": "meltは『溶かす、溶ける』という意味です。", "type": "choice"},
-        {"scenario": "「protect」の意味として最も適切なものは？", "choices": ["保護する、守る", "攻撃する", "破壊する", "無視する"], "correct": 0, "explanation": "protectは『保護する、守る』という意味です。", "type": "choice"},
-        {"scenario": "「preserve」の意味として最も適切なものは？", "choices": ["保存する、保護する", "捨てる", "破壊する", "販売する"], "correct": 0, "explanation": "preserveは『保存する、保護する』という意味です。", "type": "choice"},
-        {"scenario": "「recycle」の意味として最も適切なものは？", "choices": ["再利用する、リサイクルする", "廃棄する", "購入する", "修理する"], "correct": 0, "explanation": "recycleは『再利用する、リサイクルする』という意味です。", "type": "choice"},
-        {"scenario": "「water」の意味として最も適切なものは？", "choices": ["水やりする、潤す", "乾かす", "汚す", "燃やす"], "correct": 0, "explanation": "waterは『水やりする、潤す』という意味の動詞です。", "type": "choice"}
+        {"scenario": "「orbit」の意味として最も適切なものは？", "choices": ["軌道","星","光","音"], "correct": 0, "explanation": "orbitは軌道を表す名詞です。"},
+        {"scenario": "「gravity」の意味として最も適切なものは？", "choices": ["重力","速度","温度","圧力"], "correct": 0, "explanation": "gravityは重力を指す名詞です。"},
+        {"scenario": "「telescope」の意味として最も適切なものは？", "choices": ["望遠鏡","顕微鏡","カメラ","時計"], "correct": 0, "explanation": "telescopeは望遠鏡です。"},
+        {"scenario": "「universe」の意味として最も適切なものは？", "choices": ["宇宙、万物","銀河","太陽系","星雲"], "correct": 0, "explanation": "universeは全ての存在を含む「宇宙、万物」を表す名詞です。"},
+        {"scenario": "「comet」の意味として最も適切なものは？", "choices": ["彗星","流星","隕石","衛星"], "correct": 0, "explanation": "cometは彗星です。"},
+        {"scenario": "「asteroid」の意味として最も適切なものは？", "choices": ["小惑星","隕石","衛星","流星"], "correct": 0, "explanation": "asteroidは小惑星です。"},
+        {"scenario": "「satellite」の意味として最も適切なものは？", "choices": ["衛星","惑星","星","月"], "correct": 0, "explanation": "satelliteは衛星です。"},
+        {"scenario": "「rocket」の意味として最も適切なものは？", "choices": ["ロケット","飛行機","船","車"], "correct": 0, "explanation": "rocketはロケットです。"},
+        {"scenario": "「launch」の意味として最も適切なものは？", "choices": ["打ち上げ","落下","上昇","下降"], "correct": 0, "explanation": "launchは打ち上げを意味します。"},
+        {"scenario": "「mission」の意味として最も適切なものは？", "choices": ["任務","目的","計画","結果"], "correct": 0, "explanation": "missionは任務です。"}
       ]
     },
     {
       "id": 2,
-      "title": "名詞編⑫：食事・飲み物",
-      "type": "Nouns: Food & Drink",
-      "emoji": "🍽️",
-      "subtitle": "食事や飲み物に関する名詞",
       "questions": [
-        {"scenario": "「bread」の意味として最も適切なものは？", "choices": ["パン、食パン", "ケーキ", "クッキー", "クラッカー"], "correct": 0, "explanation": "breadは『パン』を表す名詞です。", "type": "choice"},
-        {"scenario": "「cheese」の意味として最も適切なものは？", "choices": ["チーズ、乳製品", "バター", "ヨーグルト", "ミルク"], "correct": 0, "explanation": "cheeseは『チーズ』です。", "type": "choice"},
-        {"scenario": "「coffee」の意味として最も適切なものは？", "choices": ["コーヒー、飲み物", "紅茶", "ジュース", "水"], "correct": 0, "explanation": "coffeeは『コーヒー』です。", "type": "choice"},
-        {"scenario": "「fruit」の意味として最も適切なものは？", "choices": ["果物、フルーツ", "野菜", "肉", "魚"], "correct": 0, "explanation": "fruitは『果物』です。", "type": "choice"},
-        {"scenario": "「meat」の意味として最も適切なものは？", "choices": ["肉、ミート", "魚", "野菜", "豆"], "correct": 0, "explanation": "meatは『肉』です。", "type": "choice"},
-        {"scenario": "「soup」の意味として最も適切なものは？", "choices": ["スープ、汁物", "サラダ", "パン", "チーズ"], "correct": 0, "explanation": "soupは『スープ』です。", "type": "choice"},
-        {"scenario": "「tea」の意味として最も適切なものは？", "choices": ["お茶、飲み物", "コーヒー", "ジュース", "水"], "correct": 0, "explanation": "teaは『お茶』です。", "type": "choice"},
-        {"scenario": "「vegetable」の意味として最も適切なものは？", "choices": ["野菜", "果物", "肉", "魚"], "correct": 0, "explanation": "vegetableは『野菜』です。", "type": "choice"},
-        {"scenario": "「water (飲み物)」", "choices": ["水、飲み物", "ジュース", "コーヒー", "ミルク"], "correct": 0, "explanation": "waterは『水』です。", "type": "choice"},
-        {"scenario": "「rice」の意味として最も適切なものは？", "choices": ["ご飯、米", "パスタ", "パン", "シリアル"], "correct": 0, "explanation": "riceは『ご飯、米』です。", "type": "choice"}
+        {"scenario": "「galaxy」の意味として最も適切なものは？", "choices": ["銀河","星","惑星","衛星"], "correct": 0, "explanation": "galaxyは銀河です。"},
+        {"scenario": "「nebula」の意味として最も適切なものは？", "choices": ["星雲","惑星","彗星","衛星"], "correct": 0, "explanation": "nebulaは星雲です。"},
+        {"scenario": "「meteor」の意味として最も適切なものは？", "choices": ["流星","彗星","小惑星","衛星"], "correct": 0, "explanation": "meteorは流星です。"},
+        {"scenario": "「constellation」の意味として最も適切なものは？", "choices": ["星座","銀河","星雲","惑星"], "correct": 0, "explanation": "constellationは星座です。"},
+        {"scenario": "「planetarium」の意味として最も適切なものは？", "choices": ["天文館","博物館","図書館","美術館"], "correct": 0, "explanation": "planetariumは天文館です。"},
+        {"scenario": "「eclipse」の意味として最も適切なものは？", "choices": ["食","光","影","星"], "correct": 0, "explanation": "eclipseは食（太陽食・月食）です。"},
+        {"scenario": "「solar」の意味として最も適切なものは？", "choices": ["太陽の","月の","星の","地球の"], "correct": 0, "explanation": "solarは太陽のという意味です。"},
+        {"scenario": "「lunar」の意味として最も適切なものは？", "choices": ["月の","太陽の","星の","地球の"], "correct": 0, "explanation": "lunarは月のという意味です。"},
+        {"scenario": "「crater」の意味として最も適切なものは？", "choices": ["クレーター","山","谷","川"], "correct": 0, "explanation": "craterはクレーターです。"},
+        {"scenario": "「peak」の意味として最も適切なものは？", "choices": ["山頂、頂点","谷","麓","丘"], "correct": 0, "explanation": "peakは山頂、頂点です。"}
       ]
     },
     {
       "id": 3,
-      "title": "形容詞編⑧：感情・状態",
-      "type": "Adjectives 8",
-      "emoji": "🙂",
-      "subtitle": "感情や状態を表す形容詞",
       "questions": [
-        {"scenario": "「angry」の意味として最も適切なものは？", "choices": ["怒っている、腹立たしい", "嬉しい", "悲しい", "眠い"], "correct": 0, "explanation": "angryは『怒っている』という形容詞です。", "type": "choice"},
-        {"scenario": "「bored」の意味として最も適切なものは？", "choices": ["退屈な、飽き飽きした", "楽しい", "興奮した", "驚いた"], "correct": 0, "explanation": "boredは『退屈な』です。", "type": "choice"},
-        {"scenario": "「curious」の意味として最も適切なものは？", "choices": ["好奇心が強い、知りたがりの", "怠惰な", "無関心な", "恥ずかしい"], "correct": 0, "explanation": "curiousは『好奇心が強い』です。", "type": "choice"},
-        {"scenario": "「delighted」の意味として最も適切なものは？", "choices": ["とても喜んでいる、満足している", "悲しい", "驚いた", "疲れた"], "correct": 0, "explanation": "delightedは『とても喜んでいる』という形容詞です。", "type": "choice"},
-        {"scenario": "「embarrassed」の意味として最も適切なものは？", "choices": ["恥ずかしい、照れくさい", "自信がある", "怒っている", "驚いた"], "correct": 0, "explanation": "embarrassedは『恥ずかしい』です。", "type": "choice"},
-        {"scenario": "「frustrated」の意味として最も適切なものは？", "choices": ["欲求不満な、イライラした", "リラックスした", "喜んだ", "驚いた"], "correct": 0, "explanation": "frustratedは『欲求不満な、イライラした』です。", "type": "choice"},
-        {"scenario": "「nervous」の意味として最も適切なものは？", "choices": ["緊張した、不安な", "幸せな", "疲れた", "驚いた"], "correct": 0, "explanation": "nervousは『緊張した、不安な』です。", "type": "choice"},
-        {"scenario": "「proud」の意味として最も適切なものは？", "choices": ["誇りに思う、自慢げな", "恥ずかしい", "不安な", "悲しい"], "correct": 0, "explanation": "proudは『誇りに思う』です。", "type": "choice"},
-        {"scenario": "「relieved」の意味として最も適切なものは？", "choices": ["安心した、ホッとした", "怖がった", "驚いた", "怒った"], "correct": 0, "explanation": "relievedは『安心した』です。", "type": "choice"},
-        {"scenario": "「sad」の意味として最も適切なものは？", "choices": ["悲しい、寂しい", "楽しい", "興奮した", "驚いた"], "correct": 0, "explanation": "sadは『悲しい』です。", "type": "choice"}
+        {"scenario": "「coast」の意味として最も適切なものは？", "choices": ["海岸、沿岸","山","川","森"], "correct": 0, "explanation": "coastは海岸、沿岸です。"},
+        {"scenario": "「cliff」の意味として最も適切なものは？", "choices": ["崖、絶壁","谷","山","丘"], "correct": 0, "explanation": "cliffは崖、絶壁です。"},
+        {"scenario": "「desert」の意味として最も適切なものは？", "choices": ["砂漠","森","山","川"], "correct": 0, "explanation": "desertは砂漠です。"},
+        {"scenario": "「ocean」の意味として最も適切なものは？", "choices": ["海","湖","川","池"], "correct": 0, "explanation": "oceanは海です。"},
+        {"scenario": "「valley」の意味として最も適切なものは？", "choices": ["谷","山","川","森"], "correct": 0, "explanation": "valleyは谷です。"},
+        {"scenario": "「canyon」の意味として最も適切なものは？", "choices": ["峡谷","山","川","湖"], "correct": 0, "explanation": "canyonは峡谷です。"},
+        {"scenario": "「cave」の意味として最も適切なものは？", "choices": ["洞窟","岩","山","丘"], "correct": 0, "explanation": "caveは洞窟です。"},
+        {"scenario": "「peninsula」の意味として最も適切なものは？", "choices": ["半島","島","岬","海峡"], "correct": 0, "explanation": "peninsulaは三方を水に囲まれた「半島」です。例: Korean Peninsula（朝鮮半島）"},
+        {"scenario": "「volcano」の意味として最も適切なものは？", "choices": ["火山","山","川","森"], "correct": 0, "explanation": "volcanoは火山です。"},
+        {"scenario": "「glacier」の意味として最も適切なものは？", "choices": ["氷河","山","川","湖"], "correct": 0, "explanation": "glacier is a large body of ice moving slowly down a slope or valley."}
       ]
     },
     {
       "id": 4,
-      "title": "副詞・前置詞編⑤",
-      "type": "Adverbs & Prepositions 5",
-      "emoji": "⏰",
-      "subtitle": "頻度・程度・時間を示す副詞・前置詞",
       "questions": [
-        {"scenario": "「always」の意味として最も適切なものは？", "choices": ["いつも、常に", "たまに", "ほとんどない", "決して"], "correct": 0, "explanation": "alwaysは『いつも、常に』です。", "type": "choice"},
-        {"scenario": "「sometimes」の意味として最も適切なものは？", "choices": ["時々、たまに", "常に", "決して", "必ず"], "correct": 0, "explanation": "sometimesは『時々、たまに』です。", "type": "choice"},
-        {"scenario": "「hardly」の意味として最も適切なものは？", "choices": ["ほとんど…ない、全然…ない", "十分に", "完全に", "すぐに"], "correct": 0, "explanation": "hardlyは『ほとんど…ない』です。", "type": "choice"},
-        {"scenario": "「throughout」の意味として最も適切なものは？", "choices": ["…の間ずっと、全体にわたって", "…の一部だけ", "…の外側に", "…の前に"], "correct": 0, "explanation": "throughoutは『…の間ずっと、全体にわたって』です。", "type": "choice"},
-        {"scenario": "「besides」の意味として最も適切なものは？", "choices": ["…のほかに、…以外に", "…の前に", "…の後で", "…の代わりに"], "correct": 0, "explanation": "besidesは『…のほかに、…以外に』です。", "type": "choice"},
-        {"scenario": "「among」の意味として最も適切なものは？", "choices": ["…の中で、…の間に", "…の外に", "…の後で", "…の前に"], "correct": 0, "explanation": "amongは『…の中で、…の間に』です。", "type": "choice"},
-        {"scenario": "「during」の意味として最も適切なものは？", "choices": ["…の間に、…の期間中に", "…の後で", "…の前に", "…の代わりに"], "correct": 0, "explanation": "duringは『…の間に、…の期間中に』です。", "type": "choice"},
-        {"scenario": "「until」の意味として最も適切なものは？", "choices": ["…まで（ずっと続く）", "…までに（期限）", "…以来", "…の間に"], "correct": 0, "explanation": "untilは『…まで（ずっと続く）』です。", "type": "choice"},
-        {"scenario": "「against」の意味として最も適切なものは？", "choices": ["…に反対して、対抗して", "…の上に", "…の中に", "…の隣に"], "correct": 0, "explanation": "againstは『…に反対して、対抗して』です。", "type": "choice"},
-        {"scenario": "「through」の意味として最も適切なものは？", "choices": ["…を通って、…を通しで", "…の上に", "…の中に", "…の中へ"], "correct": 0, "explanation": "throughは『…を通って、…を通しで』です。", "type": "choice"}
+        {"scenario": "「typhoon」の意味として最も適切なものは？", "choices": ["台風","嵐","竜巻","大雨"], "correct": 0, "explanation": "typhoonは「台風」を表す名詞です。"},
+        {"scenario": "「drought」の意味として最も適切なものは？", "choices": ["干ばつ","洪水","台風","嵐"], "correct": 0, "explanation": "droughtは干ばつです。"},
+        {"scenario": "「hail」の意味として最も適切なものは？", "choices": ["ひょう、あられ","雪","雨","霧"], "correct": 0, "explanation": "hailはひょう、あられです。"},
+        {"scenario": "「storm」の意味として最も適切なものは？", "choices": ["嵐","雨","雪","風"], "correct": 0, "explanation": "stormは嵐です。"},
+        {"scenario": "「thunder」の意味として最も適切なものは？", "choices": ["雷","雨","風","雪"], "correct": 0, "explanation": "thunderは雷です。"},
+        {"scenario": "「lightning」の意味として最も適切なものは？", "choices": ["稲妻","雷","雨","風"], "correct": 0, "explanation": "lightningは稲妻です。"},
+        {"scenario": "「frost」の意味として最も適切なものは？", "choices": ["霜","雪","氷","露"], "correct": 0, "explanation": "frostは霜です。"},
+        {"scenario": "「breeze」の意味として最も適切なものは？", "choices": ["そよ風、微風","嵐","竜巻","台風"], "correct": 0, "explanation": "breezeはそよ風、微風です。"},
+        {"scenario": "「shower」の意味として最も適切なものは？", "choices": ["にわか雨、シャワー","台風","雪","霧"], "correct": 0, "explanation": "showerはにわか雨、シャワーです。"},
+        {"scenario": "「fog」の意味として最も適切なものは？", "choices": ["霧","雨","雪","雲"], "correct": 0, "explanation": "fogは霧です。"}
       ]
     },
     {
       "id": 5,
-      "title": "会話表現・重要熟語編⑤",
-      "type": "Everyday Phrases 5",
-      "emoji": "🗨️",
-      "subtitle": "日常会話でよく使う熟語・フレーズ",
       "questions": [
-        {"scenario": "「ask out」の意味として最も適切なものは？", "choices": ["デートに誘う、申し込む", "質問する", "逃げる", "注文する"], "correct": 0, "explanation": "ask outは『デートに誘う』という熟語です。", "type": "choice"},
-        {"scenario": "「bring up」の意味として最も適切なものは？", "choices": ["持ち出す、話題にする", "持ち上げる", "持ち帰る", "持ち込む"], "correct": 0, "explanation": "bring upは『持ち出す、話題にする』です。", "type": "choice"},
-        {"scenario": "「call off」の意味として最も適切なものは？", "choices": ["中止する、キャンセルする", "呼び出す", "電話する", "呼びかける"], "correct": 0, "explanation": "call offは『中止する、キャンセルする』です。", "type": "choice"},
-        {"scenario": "「come across」の意味として最も適切なものは？", "choices": ["偶然出会う、見つける", "来る", "過ぎる", "通りかかる"], "correct": 0, "explanation": "come acrossは『偶然出会う、見つける』です。", "type": "choice"},
-        {"scenario": "「figure out」の意味として最も適切なものは？", "choices": ["解決する、分かる、考えつく", "描く", "測る", "計算する"], "correct": 0, "explanation": "figure outは『解決する、分かる、考えつく』です。", "type": "choice"},
-        {"scenario": "「look forward to」の意味として最も適切なものは？", "choices": ["楽しみに待つ", "見つめる", "探す", "無視する"], "correct": 0, "explanation": "look forward toは『楽しみに待つ』です。", "type": "choice"},
-        {"scenario": "「pick up": "", "choices": ["拾う、受け取る、習得する", "置く", "落とす", "削除する"], "correct": 0, "explanation": "pick upは『拾う、受け取る、習得する』です。", "type": "choice"},
-        {"scenario": "「turn down」の意味として最も適切なものは？", "choices": ["断る、下げる", "回す", "上げる", "開く"], "correct": 0, "explanation": "turn downは『断る、下げる』です。", "type": "choice"},
-        {"scenario": "「work out」の意味として最も適切なものは？", "choices": ["運動する、解決する", "働く", "試す", "破る"], "correct": 0, "explanation": "work outは『運動する、解決する』です。", "type": "choice"},
-        {"scenario": "「show up」の意味として最も適切なものは？", "choices": ["現れる、姿を見せる", "隠れる", "逃げる", "閉じる"], "correct": 0, "explanation": "show upは『現れる、姿を見せる』です。", "type": "choice"}
+        {"scenario": "「sunrise」の意味として最も適切なものは？", "choices": ["日の出","日の入り","朝","夜"], "correct": 0, "explanation": "sunriseは日の出です。"},
+        {"scenario": "「sunset」の意味として最も適切なものは？", "choices": ["日の入り","日の出","夕方","夜"], "correct": 0, "explanation": "sunsetは日の入りです。"},
+        {"scenario": "「horizon」の意味として最も適切なものは？", "choices": ["地平線","山","海","空"], "correct": 0, "explanation": "horizonは地平線です。"},
+        {"scenario": "「dew」の意味として最も適切なものは？", "choices": ["露","霜","霧","雨"], "correct": 0, "explanation": "dewは露です。"},
+        {"scenario": "「twilight」の意味として最も適切なものは？", "choices": ["たそがれ、薄暮","夜明け","真夜中","正午"], "correct": 0, "explanation": "twilightはたそがれ、薄暮（日没後のうす暗い時間）です。"},
+        {"scenario": "「atmosphere」の意味として最も適切なものは？", "choices": ["大気","空気","雲","風"], "correct": 0, "explanation": "atmosphereは大気です。"},
+        {"scenario": "「pressure」の意味として最も適切なものは？", "choices": ["圧力","温度","湿度","速度"], "correct": 0, "explanation": "pressureは圧力です。"},
+        {"scenario": "「temperature」の意味として最も適切なものは？", "choices": ["温度","圧力","湿度","速さ"], "correct": 0, "explanation": "temperatureは温度です。"},
+        {"scenario": "「humidity」の意味として最も適切なものは？", "choices": ["湿度","温度","圧力","速さ"], "correct": 0, "explanation": "humidityは湿度です。"},
+        {"scenario": "「weathering」の意味として最も適切なものは？", "choices": ["風化","雨","雪","風"], "correct": 0, "explanation": "weatheringは風化です。"}
+      ]
+    },
+    {
+      "id": 6,
+      "questions": [
+        {"scenario": "「heritage」の意味として最も適切なものは？", "choices": ["遺産、文化的遺産","伝統","芸術","歴史"], "correct": 0, "explanation": "heritageは「遺産、文化的遺産」を表す名詞です。例: World Heritage（世界遺産）"},
+        {"scenario": "「folklore」の意味として最も適切なものは？", "choices": ["民間伝承、民俗", "習慣", "伝統", "歴史"], "correct": 0, "explanation": "folkloreは口承で伝わる「民間伝承、民俗」を表す名詞です。"},
+        {"scenario": "「legend」の意味として最も適切なものは？", "choices": ["伝説、伝承","歴史","神話","物語"], "correct": 0, "explanation": "legendは昔から語り継がれる「伝説、伝承」を表す名詞です。"},
+        {"scenario": "「craft」の意味として最も適切なものは？", "choices": ["工芸、クラフト、技術","芸術","絵画","音楽"], "correct": 0, "explanation": "craftは手作りの「工芸」や「技術、職人技」を表す名詞です。例: traditional crafts（伝統工芸）"},
+        {"scenario": "「literature」の意味として最も適切なものは？", "choices": ["文学","音楽","美術","歴史"], "correct": 0, "explanation": "literatureは文学です。"},
+        {"scenario": "「language」の意味として最も適切なものは？", "choices": ["言語","文字","声","音"], "correct": 0, "explanation": "languageは言語です。"},
+        {"scenario": "「communication」の意味として最も適切なものは？", "choices": ["コミュニケーション","会話","伝達","交流"], "correct": 0, "explanation": "communicationはコミュニケーションです。"},
+        {"scenario": "「education」の意味として最も適切なものは？", "choices": ["教育","学習","訓練","研究"], "correct": 0, "explanation": "educationは教育です。"},
+        {"scenario": "「research」の意味として最も適切なものは？", "choices": ["研究、調査","科学","実験","発見"], "correct": 0, "explanation": "researchは「研究、調査」を表す名詞・動詞です。例: scientific research（科学研究）"},
+        {"scenario": "「technology」の意味として最も適切なものは？", "choices": ["技術","科学","実験","研究"], "correct": 0, "explanation": "technologyは技術です。"}
+      ]
+    },
+    {
+      "id": 7,
+      "questions": [
+        {"scenario": "「friendship」の意味として最も適切なものは？", "choices": ["友情","友好","友人","仲間"], "correct": 0, "explanation": "friendshipは「友情、友好関係」を表す名詞です。friend（友人）の名詞形です。"},
+        {"scenario": "「family」の意味として最も適切なものは？", "choices": ["家族","親戚","友人","仲間"], "correct": 0, "explanation": "familyは家族です。"},
+        {"scenario": "「community」の意味として最も適切なものは？", "choices": ["地域社会","コミュニティ","社会","団体"], "correct": 0, "explanation": "communityは地域社会です。"},
+        {"scenario": "「society」の意味として最も適切なものは？", "choices": ["社会","コミュニティ","団体","会社"], "correct": 0, "explanation": "societyは社会です。"},
+        {"scenario": "「government」の意味として最も適切なものは？", "choices": ["政府","国","州","県"], "correct": 0, "explanation": "governmentは政府です。"},
+        {"scenario": "「economy」の意味として最も適切なものは？", "choices": ["経済","市場","金融","貿易"], "correct": 0, "explanation": "economyは経済です。"},
+        {"scenario": "「politics」の意味として最も適切なものは？", "choices": ["政治","政府","国会","政策"], "correct": 0, "explanation": "politicsは政治です。"},
+        {"scenario": "「law」の意味として最も適切なものは？", "choices": ["法律","規則","制度","政策"], "correct": 0, "explanation": "lawは法律です。"},
+        {"scenario": "「justice」の意味として最も適切なものは？", "choices": ["正義","公平","裁判","法"], "correct": 0, "explanation": "justiceは正義です。"},
+        {"scenario": "「peace」の意味として最も適切なものは？", "choices": ["平和","戦争","対立","紛争"], "correct": 0, "explanation": "peaceは平和です。"}
+      ]
+    },
+    {
+      "id": 8,
+      "questions": [
+        {"scenario": "「adventure」の意味として最も適切なものは？", "choices": ["冒険、アドベンチャー","旅行","探検","遠足"], "correct": 0, "explanation": "adventureは「冒険、アドベンチャー」を表す名詞です。"},
+        {"scenario": "「transportation」の意味として最も適切なものは？", "choices": ["交通","輸送","運搬","旅行"], "correct": 0, "explanation": "transportationは交通です。"},
+        {"scenario": "「vehicle」の意味として最も適切なものは？", "choices": ["乗り物","車","自転車","バス"], "correct": 0, "explanation": "vehicleは乗り物です。"},
+        {"scenario": "「journey」の意味として最も適切なものは？", "choices": ["旅路","旅行","冒険","道"], "correct": 0, "explanation": "journeyは旅路です。"},
+        {"scenario": "「destination」の意味として最も適切なものは？", "choices": ["目的地","場所","地点","ゴール"], "correct": 0, "explanation": "destinationは目的地です。"},
+        {"scenario": "「passport」の意味として最も適切なものは？", "choices": ["パスポート","証明書","身分証明書","ビザ"], "correct": 0, "explanation": "passportはパスポートです。"},
+        {"scenario": "「visa」の意味として最も適切なものは？", "choices": ["ビザ","パスポート","証明書","許可証"], "correct": 0, "explanation": "visaはビザです。"},
+        {"scenario": "「tourist」の意味として最も適切なものは？", "choices": ["観光客","旅行者","添乗員","ツアー"], "correct": 0, "explanation": "touristは観光目的で旅する「観光客」を表す名詞です。"},
+        {"scenario": "「guide」の意味として最も適切なものは？", "choices": ["案内人","ガイド","指導者","教師"], "correct": 0, "explanation": "guideは案内人です。"},
+        {"scenario": "「compass」の意味として最も適切なものは？", "choices": ["コンパス、方位磁針","地図","案内板","望遠鏡"], "correct": 0, "explanation": "compassは方角を示す「コンパス、方位磁針」を表す名詞です。"}
+      ]
+    },
+    {
+      "id": 9,
+      "questions": [
+        {"scenario": "「nutrition」の意味として最も適切なものは？", "choices": ["栄養、栄養学","健康","運動","体力"], "correct": 0, "explanation": "nutritionは「栄養、栄養学」を表す名詞です。例: balanced nutrition（バランスのとれた栄養）"},
+        {"scenario": "「pharmacy」の意味として最も適切なものは？", "choices": ["薬局、薬店","病院","診療所","クリニック"], "correct": 0, "explanation": "pharmacyは薬を販売する「薬局、薬店」を表す名詞です。"},
+        {"scenario": "「clinic」の意味として最も適切なものは？", "choices": ["診療所、クリニック","病院","薬局","保健所"], "correct": 0, "explanation": "clinicは比較的小規模な「診療所、クリニック」です。"},
+        {"scenario": "「vaccine」の意味として最も適切なものは？", "choices": ["ワクチン","薬","注射器","治療"], "correct": 0, "explanation": "vaccineはワクチンです。"},
+        {"scenario": "「surgeon」の意味として最も適切なものは？", "choices": ["外科医","内科医","看護師","薬剤師"], "correct": 0, "explanation": "surgeonは手術を行う「外科医」を表す名詞です。"},
+        {"scenario": "「treatment」の意味として最も適切なものは？", "choices": ["治療","手術","手当","ケア"], "correct": 0, "explanation": "treatmentは治療です。"},
+        {"scenario": "「symptom」の意味として最も適切なものは？", "choices": ["症状","兆候","病状","サイン"], "correct": 0, "explanation": "symptomは症状です。"},
+        {"scenario": "「diagnosis」の意味として最も適切なものは？", "choices": ["診断","診断結果","診察","判断"], "correct": 0, "explanation": "diagnosisは診断です。"},
+        {"scenario": "「prevention」の意味として最も適切なものは？", "choices": ["予防","防止","抑制","回避"], "correct": 0, "explanation": "preventionは予防です。"},
+        {"scenario": "「recovery」の意味として最も適切なものは？", "choices": ["回復","復帰","再生","修復"], "correct": 0, "explanation": "recoveryは回復です。"}
+      ]
+    },
+    {
+      "id": 10,
+      "questions": [
+        {"scenario": "「beverage」の意味として最も適切なものは？", "choices": ["飲み物、飲料","食べ物","おやつ","調味料"], "correct": 0, "explanation": "beverageは飲み物、飲料です。"},
+        {"scenario": "「flavor」の意味として最も適切なものは？", "choices": ["風味、味わい","香り","色","匂い"], "correct": 0, "explanation": "flavorは風味、味わいです。"},
+        {"scenario": "「meal」の意味として最も適切なものは？", "choices": ["食事","食事時間","食事会","給食"], "correct": 0, "explanation": "mealは食事です。"},
+        {"scenario": "「breakfast」の意味として最も適切なものは？", "choices": ["朝食","朝ごはん","ブレックファスト","食事"], "correct": 0, "explanation": "breakfastは朝食です。"},
+        {"scenario": "「recipe」の意味として最も適切なものは？", "choices": ["レシピ、調理法","メニュー","材料","調味料"], "correct": 0, "explanation": "recipeはレシピ、調理法です。"},
+        {"scenario": "「appetite」の意味として最も適切なものは？", "choices": ["食欲","満腹感","空腹","味覚"], "correct": 0, "explanation": "appetiteは食欲です。"},
+        {"scenario": "「snack」の意味として最も適切なものは？", "choices": ["軽食","おやつ","スナック","間食"], "correct": 0, "explanation": "snackは軽食です。"},
+        {"scenario": "「ingredient」の意味として最も適切なものは？", "choices": ["材料、食材、成分","果物","野菜","調味料"], "correct": 0, "explanation": "ingredientは料理の「材料、食材」を表す名詞です。"},
+        {"scenario": "「spice」の意味として最も適切なものは？", "choices": ["スパイス、香辛料","塩","砂糖","野菜"], "correct": 0, "explanation": "spiceは料理に香りや辛さを加える「スパイス、香辛料」を表す名詞です。"},
+        {"scenario": "「dessert」の意味として最も適切なものは？", "choices": ["デザート","甘いもの","お菓子","甘味"], "correct": 0, "explanation": "dessertはデザートです。"}
       ]
     }
   ]

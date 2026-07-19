@@ -57,7 +57,8 @@
         {"scenario": "「traffic」の意味として最も適切なものは？", "choices": ["交通、交通量", "道路", "信号", "事故"], "correct": 0, "explanation": "trafficは道路を走る車などの「交通、交通量」を表す名詞です。例: heavy traffic（交通渋滞、激しい交通量）", "type": "choice"},
         {"scenario": "「signal」の意味として最も適切なものは？", "choices": ["信号、合図、サイン", "道路", "標識", "警察官"], "correct": 0, "explanation": "signalは「信号、合図、サイン」を表す名詞です。例: traffic signal（交通信号機）", "type": "choice"},
         {"scenario": "「ticket」の意味として最も適切なものは？", "choices": ["切符、乗車券、チケット", "パンフレット", "カード", "切手"], "correct": 0, "explanation": "ticketは電車などの「切符、乗車券」、または入場用の「チケット」を表す名詞です。例: train ticket（電車の切符）", "type": "choice"},
-        {"scenario": "「address」の意味として最も適切なものは？", "choices": ["住所、あて先、演説", "電話番号", "氏名", "年齢"], "correct": 0, "explanation": "addressは手紙の送付先や住んでいる「住所、あて先」、または「演説」という意味の名詞です。", "type": "choice"}
+        {"scenario": "「address」の意味として最も適切なものは？", "choices": ["住所、あて先、演説", "電話番号", "氏名", "年齢"], "correct": 0, "explanation": "addressは手紙の送付先や住んでいる「住所、あて先」、または「演説」という意味の名詞です。", "type": "choice"},
+        {"scenario": "「passenger」の意味として最も適切なものは？", "choices": ["乗客、旅客", "運転手", "歩行者", "乗組員"], "correct": 0, "explanation": "passengerは電車や飛行機などの「乗客、旅客」を表す名詞です。例: train passengers（電車の乗客）", "type": "choice"}
       ]
     },
     {
@@ -94,7 +95,8 @@
         {"scenario": "「magazine」の意味として最も適切なものは？", "choices": ["雑誌", "新聞", "小説", "コミック"], "correct": 0, "explanation": "magazineは定期刊行される「雑誌」を表す名詞です。例: fashion magazine（ファッション誌）", "type": "choice"},
         {"scenario": "「hobby」の意味として最も適切なものは？", "choices": ["趣味", "仕事", "特技", "遊び"], "correct": 0, "explanation": "hobbyは余暇に楽しむ「趣味」を表す名詞です。複数形は hobbies です。", "type": "choice"},
         {"scenario": "「photo」の意味として最も適切なものは？", "choices": ["写真", "カメラ", "絵画", "映画"], "correct": 0, "explanation": "photoはphotographの略語で、「写真」を表す名詞です。例: take a photo（写真を撮る）", "type": "choice"},
-        {"scenario": "「album」の意味として最も適切なものは？", "choices": ["アルバム、音楽アルバム", "写真", "本", "ノート"], "correct": 0, "explanation": "albumは写真や切手を入れる「アルバム」、または音楽の「アルバムCD」を表す名詞です。", "type": "choice"}
+        {"scenario": "「album」の意味として最も適切なものは？", "choices": ["アルバム、音楽アルバム", "写真", "本", "ノート"], "correct": 0, "explanation": "albumは写真や切手を入れる「アルバム」、または音楽の「アルバムCD」を表す名詞です。", "type": "choice"},
+        {"scenario": "「novel」の意味として最も適切なものは？", "choices": ["小説", "雑誌", "新聞", "漫画"], "correct": 0, "explanation": "novelは長編の「小説」を表す名詞です。例: read a novel（小説を読む）", "type": "choice"}
       ]
     },
     {
@@ -167,7 +169,7 @@
         {"scenario": "「culture」の意味として最も適切なものは？", "choices": ["文化、教養", "自然", "歴史", "技術"], "correct": 0, "explanation": "cultureは「文化、教養」を表す名詞です。例: Japanese culture（日本文化）", "type": "choice"},
         {"scenario": "「tradition」の意味として最も適切なものは？", "choices": ["伝統、慣習", "流行", "新しいもの", "規則"], "correct": 0, "explanation": "traditionは古くから伝わる「伝統、しきたり、慣習」を表す名詞です。例: traditional music（伝統音楽）", "type": "choice"},
         {"scenario": "「memory」の意味として最も適切なものは？", "choices": ["記憶、思い出、記念", "忘却", "未来", "夢"], "correct": 0, "explanation": "memoryは「記憶、記憶力」または「思い出」を表す名詞です。例: happy memories（幸せな思い出）", "type": "choice"},
-        {"scenario": "「dream」を名詞として使うとどんな意味か？", "choices": ["夢、願い", "現実", "睡眠", "仕事"], "correct": 0, "explanation": "dreamは「夢、願い」を表す名詞です。動詞で「夢を見る」という意味もあります。例: my future dream（私の将来の夢）", "type": "choice"},
+        {"scenario": "「anniversary」の意味として最も適切なものは？", "choices": ["記念日、周年", "誕生日", "休日", "祭り"], "correct": 0, "explanation": "anniversaryは結婚記念日などの「記念日、周年」を表す名詞です。例: wedding anniversary（結婚記念日）", "type": "choice"},
         {"scenario": "「plan」の意味として最も適切なものは？", "choices": ["計画、予定、プラン、計画する", "結果", "過去", "目標"], "correct": 0, "explanation": "planは「計画、予定」という名詞、また「計画する」という動詞の意味もあります。例: make a plan（計画を立てる）", "type": "choice"},
         {"scenario": "「activity」の意味として最も適切なものは？", "choices": ["活動、行動", "休息", "計画", "思考"], "correct": 0, "explanation": "activityは「活動、活発な行動」を表す名詞です。例: club activities（部活動）", "type": "choice"},
         {"scenario": "「project」の意味として最も適切なものは？", "choices": ["プロジェクト、計画、企画", "結果", "報告書", "課題"], "correct": 0, "explanation": "projectは、目標を持って行う大規模な「プロジェクト、計画、研究企画」を表す名詞です。", "type": "choice"}

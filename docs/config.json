@@ -225,7 +225,7 @@
     "heading": "英検4級 単語・熟語",
     "genreMajor": "shikaku",
     "genreMinor": "houritsu_sonota_shikaku",
-    "description": "実用英語技能検定4級レベルの重要単語・熟語クイズ。意思表現の動詞、人間関係、地形、感情の形容詞などの10セット（100語）で合格へ！",
+    "description": "実用英語技能検定4級レベルの重要単語・熟語クイズ。5級で出た語は除いた4級の新出語彙のみを収録。意思表現の動詞、人間関係、地形、感情の形容詞などの60セット（600語）で合格へ！",
     "icon": "📙",
     "bgColor": "#0f2027",
     "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
@@ -258,5 +258,18 @@
     "topGradient": "linear-gradient(90deg, #2193b0, #6dd5ed, #f093fb, #f5576c)",
     "accentColor": "#2193b0",
     "accentActive": "linear-gradient(135deg, #e0f7fa, #e8f5e9)"
+  },
+  "eiken2pre": {
+    "title": "📖 英検準2級 単語・熟語",
+    "heading": "英検準2級 単語・熟語",
+    "genreMajor": "shikaku",
+    "genreMinor": "houritsu_sonota_shikaku",
+    "description": "実用英語技能検定準2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の10セット（100語）で高校中級程度の頻出語彙を反復練習できる",
+    "icon": "📖",
+    "bgColor": "#0f2027",
+    "bgGradient": "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    "topGradient": "linear-gradient(90deg, #11998e 0%, #38ef7d 100%)",
+    "accentColor": "#11998e",
+    "accentActive": "linear-gradient(135deg, #e8fcf4, #dcfce7)"
   }
 }

@@ -71,7 +71,7 @@
         {"scenario": "「blood」の意味として最も適切なものは？", "choices": ["血、血液", "骨", "脳", "肉"], "correct": 0, "explanation": "bloodは「血、血液」を表す名詞です。例: blood type（血液型）", "type": "choice"},
         {"scenario": "「bone」の意味として最も適切なものは？", "choices": ["骨", "筋肉", "関節", "皮膚"], "correct": 0, "explanation": "boneは「骨（ほね）」を表す名詞です。例: break a bone（骨折する）", "type": "choice"},
         {"scenario": "「brain」の意味として最も適切なものは？", "choices": ["脳、頭脳", "心臓", "胃", "肺"], "correct": 0, "explanation": "brainは「脳、頭脳」を表す名詞です。例: brain power（頭脳パワー）", "type": "choice"},
-        {"scenario": "「cold」を健康状態の名詞として使うとどんな意味か？", "choices": ["風邪（かぜ）", "熱", "頭痛", "腹痛"], "correct": 0, "explanation": "coldは「冷たい」という形容詞のほかに、「風邪」という名詞の意味があります。例: catch a cold（風邪をひく）", "type": "choice"},
+        {"scenario": "「fever」の意味として最も適切なものは？", "choices": ["熱、発熱", "風邪", "めまい", "貧血"], "correct": 0, "explanation": "feverは体温が上がる「熱、発熱」を表す名詞です。例: have a fever（熱がある）", "type": "choice"},
         {"scenario": "「disease」の意味として最も適切なものは？", "choices": ["病気、疾患", "健康", "けが", "薬"], "correct": 0, "explanation": "diseaseは「病気、疾患」を表す名詞です。illnessやsicknessよりも特定の病気や重い病気に使われることが多いです。", "type": "choice"},
         {"scenario": "「headache」の意味として最も適切なものは？", "choices": ["頭痛", "腹痛", "歯痛", "熱"], "correct": 0, "explanation": "headacheは「頭痛」を表す名詞です。head（頭）とache（痛み）が合わさった言葉です。例: have a headache（頭痛がする）", "type": "choice"},
         {"scenario": "「health」の意味として最も適切なものは？", "choices": ["健康、健康状態", "病気", "薬", "体力"], "correct": 0, "explanation": "healthは「健康、健康状態」を表す名詞です。形容詞形はhealthy（健康な）です。例: good health（良い健康状態）", "type": "choice"},
@@ -172,7 +172,7 @@
         {"scenario": "「quarter」の意味として最も適切なものは？", "choices": ["4分の1、15分、25セント", "半分", "3分の1", "4倍"], "correct": 0, "explanation": "quarterは「4分の1」、時間の「15分」、またはアメリカの「25セント硬貨」を表す名詞です。", "type": "choice"},
         {"scenario": "「dollar」の意味として最も適切なものは？", "choices": ["ドル（通貨の単位）", "円", "ポンド", "ユーロ"], "correct": 0, "explanation": "dollarはアメリカやカナダなどで使われる「ドル（通貨単位）」を表す名詞です。記号は $ です。", "type": "choice"},
         {"scenario": "「percent」の意味として最も適切なものは？", "choices": ["パーセント、パーセンテージ", "割合", "得点", "単位"], "correct": 0, "explanation": "percentは割合の単位の「パーセント」を表す名詞・副詞です。記号は % です。", "type": "choice"},
-        {"scenario": "「double」を数量・倍数の意味で使うとどんな意味か？", "choices": ["2倍、二重", "3倍", "半分", "4倍"], "correct": 0, "explanation": "doubleは「2倍」や「二重」を表す名詞・形容詞・動詞です。例: double the price（価格を2倍にする）", "type": "choice"}
+        {"scenario": "「triple」の意味として最も適切なものは？", "choices": ["3倍の、3重の", "2倍の", "半分の", "4倍の"], "correct": 0, "explanation": "tripleは「3倍の、3重の」という意味の形容詞・動詞です。例: triple the amount（量を3倍にする）", "type": "choice"}
       ]
     },
     {
