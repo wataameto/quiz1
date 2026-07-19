@@ -80,7 +80,11 @@ function resetFontSizeToDefault(device) {
   setFontSize(device, FONT_SIZE_DEFAULTS[device]);
 }
 
-window.addEventListener('resize', applyFontSizePref);
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(applyFontSizePref, 100);
+});
 
 applyFontSizePref();
 
@@ -187,18 +191,22 @@ function soundGood()    { tone(784,'sine',0,0.15,0.25); tone(1047,'sine',0.14,0.
 
 function launchConfetti(count = 60) {
   const wrap = document.getElementById('confetti-wrap');
-  wrap.innerHTML = '';
+  if (wrap) {
+    wrap.setAttribute('aria-hidden', 'true');
+    wrap.innerHTML = '';
+  }
   const colors = ['#f7971e','#ffd200','#21d4fd','#b721ff','#0f2027','#38a169','#f5576c'];
   for (let i = 0; i < count; i++) {
     const el = document.createElement('div');
     el.className = 'confetti-piece';
+    el.setAttribute('aria-hidden', 'true');
     el.style.left = Math.random() * 100 + 'vw';
     el.style.background = colors[Math.floor(Math.random() * colors.length)];
     el.style.animationDuration = (1.5 + Math.random() * 2) + 's';
     el.style.animationDelay = (Math.random() * 0.8) + 's';
     el.style.width = el.style.height = (6 + Math.random() * 8) + 'px';
     el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-    wrap.appendChild(el);
+    if (wrap) wrap.appendChild(el);
     el.addEventListener('animationend', () => el.remove());
   }
 }
@@ -213,63 +221,99 @@ const isAdminMode = new URLSearchParams(location.search).get('admin') === '1';
 
 async function loadAllQuestions() {
   try {
-    // config.json を読み込む
-    const configRes = await fetch('../config.json?t=' + Date.now());
-    const configData = await configRes.json();
+    const tQuery = '?t=' + Date.now();
+    // config.json と questions1.json, ../quiz-meta.json を並行して fetch する
+    const configPromise = fetch('../config.json' + tQuery).then(r => r.json());
+    const q1Promise = fetch('questions1.json' + tQuery).then(async r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    });
+    const metaPromise = fetch('../quiz-meta.json' + tQuery).then(r => r.ok ? r.json() : null).catch(() => null);
 
-    // 各レベルを1回のfetchで読み込みつつ、次のレベルの有無を検出する
-    // （レベル1は必須。レベル2以降は存在しなければそこで打ち切り）
-    maxLevel = 0;
-    for (let level = 1; ; level++) {
-      let res;
-      if (level === 1) {
-        res = await fetch(`questions${level}.json?t=${Date.now()}`);
-      } else {
+    const [configData, q1Data, metaData] = await Promise.all([configPromise, q1Promise, metaPromise]);
+
+    if (!q1Data || !q1Data.tests || !Array.isArray(q1Data.tests)) {
+      throw new Error('Invalid data at level 1');
+    }
+
+    quizData[1] = q1Data;
+    maxLevel = 1;
+    quizId = q1Data.id;
+
+    // config から title, colors などを動的に設定
+    if (quizId && configData[quizId]) {
+      const cfg = configData[quizId];
+      document.title = cfg.title;
+      document.body.style.background = cfg.bgGradient;
+      document.getElementById('quiz-heading').textContent = cfg.heading;
+      document.getElementById('quiz-description').textContent = cfg.description;
+
+      // 動的CSSを注入
+      const dynamicStyle = document.getElementById('dynamic-colors');
+      dynamicStyle.textContent = `
+        .container::before { background: ${cfg.topGradient}; }
+        .level-btn.active { border-color: ${cfg.accentColor}; background: ${cfg.accentActive}; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .progress-bar-fill { background: ${cfg.topGradient}; }
+        .quiz-back { background: ${cfg.accentColor}; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.16); }
+        .quiz-back:hover { filter: brightness(0.92); }
+        .next-btn { background: ${cfg.topGradient}; color: #2d3748; }
+      `;
+
+      // メインメニューボタンの色を更新
+      const menuBtn = document.querySelector('a[href="../"]');
+      if (menuBtn) {
+        menuBtn.style.color = cfg.accentColor;
+        menuBtn.style.borderColor = cfg.accentColor;
+        menuBtn.onmouseover = function() { this.style.background = cfg.accentActive; };
+        menuBtn.onmouseout = function() { this.style.background = 'transparent'; };
+      }
+    }
+
+    // パート数を特定する（metaDataから、またはフォールバック）
+    let expectedParts = 0;
+    if (metaData && metaData[quizId] && typeof metaData[quizId].parts === 'number') {
+      expectedParts = metaData[quizId].parts;
+    }
+
+    if (expectedParts > 1) {
+      // 判明しているパーツを一括並列フェッチ
+      const fetchPromises = [];
+      for (let level = 2; level <= expectedParts; level++) {
+        fetchPromises.push(
+          fetch(`questions${level}.json` + tQuery)
+            .then(async r => {
+              if (!r.ok) throw new Error(`HTTP ${r.status}`);
+              const data = await r.json();
+              if (!data || !data.tests || !Array.isArray(data.tests)) {
+                throw new Error(`Invalid data at level ${level}`);
+              }
+              return { level, data };
+            })
+        );
+      }
+      
+      const loadedLevels = await Promise.all(fetchPromises);
+      loadedLevels.forEach(({ level, data }) => {
+        quizData[level] = data;
+        if (level > maxLevel) maxLevel = level;
+      });
+    } else {
+      // フォールバック: メタデータがない場合などは直列フェッチで検出
+      for (let level = 2; ; level++) {
+        let res;
         try {
-          res = await fetch(`questions${level}.json?t=${Date.now()}`);
+          res = await fetch(`questions${level}.json` + tQuery);
         } catch (e) {
           break; // 次のレベルが存在しない
         }
         if (!res.ok) break; // 次のレベルが存在しない
-      }
-      if (level === 1 && !res.ok) throw new Error(`HTTP ${res.status}`);
 
-      const data = await res.json();
-      if (!data || !data.tests || !Array.isArray(data.tests)) {
-        throw new Error(`Invalid data at level ${level}`);
-      }
-      quizData[level] = data;
-      maxLevel = level;
-      if (!quizId) {
-        quizId = data.id; // 最初のデータから quizId を取得
-        // config から title, colors などを動的に設定
-        if (configData[quizId]) {
-          const cfg = configData[quizId];
-          document.title = cfg.title;
-          document.body.style.background = cfg.bgGradient;
-          document.getElementById('quiz-heading').textContent = cfg.heading;
-          document.getElementById('quiz-description').textContent = cfg.description;
-
-          // 動的CSSを注入
-          const dynamicStyle = document.getElementById('dynamic-colors');
-          dynamicStyle.textContent = `
-            .container::before { background: ${cfg.topGradient}; }
-            .level-btn.active { border-color: ${cfg.accentColor}; background: ${cfg.accentActive}; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-            .progress-bar-fill { background: ${cfg.topGradient}; }
-            .quiz-back { background: ${cfg.accentColor}; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.16); }
-            .quiz-back:hover { filter: brightness(0.92); }
-            .next-btn { background: ${cfg.topGradient}; color: #2d3748; }
-          `;
-
-          // メインメニューボタンの色を更新
-          const menuBtn = document.querySelector('a[href="../"]');
-          if (menuBtn) {
-            menuBtn.style.color = cfg.accentColor;
-            menuBtn.style.borderColor = cfg.accentColor;
-            menuBtn.onmouseover = function() { this.style.background = cfg.accentActive; };
-            menuBtn.onmouseout = function() { this.style.background = 'transparent'; };
-          }
+        const data = await res.json();
+        if (!data || !data.tests || !Array.isArray(data.tests)) {
+          throw new Error(`Invalid data at level ${level}`);
         }
+        quizData[level] = data;
+        maxLevel = level;
       }
     }
 
@@ -286,7 +330,15 @@ async function loadAllQuestions() {
     document.getElementById('screen-quiz').classList.add('hidden');
     document.getElementById('screen-results').classList.add('hidden');
     document.getElementById('screen-admin').classList.add('hidden');
-    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:15px;text-align:center;">問題ファイルの読み込みに失敗: ' + e.message + '</p>';
+    
+    const testGrid = document.getElementById('test-grid');
+    if (testGrid) {
+      testGrid.innerHTML = '';
+      const errorP = document.createElement('p');
+      errorP.style.cssText = 'color:#e53e3e;padding:15px;text-align:center;';
+      errorP.textContent = '問題ファイルの読み込みに失敗: ' + e.message;
+      testGrid.appendChild(errorP);
+    }
   }
 }
 
@@ -299,7 +351,14 @@ async function loadQuestions(level = 1) {
   } catch (e) {
     console.error('Failed to load questions:', e);
     TESTS = [];
-    document.getElementById('test-grid').innerHTML = '<p style="color:#e53e3e;padding:15px;text-align:center;">問題の読み込みに失敗しました</p>';
+    const testGrid = document.getElementById('test-grid');
+    if (testGrid) {
+      testGrid.innerHTML = '';
+      const errorP = document.createElement('p');
+      errorP.style.cssText = 'color:#e53e3e;padding:15px;text-align:center;';
+      errorP.textContent = '問題の読み込みに失敗しました';
+      testGrid.appendChild(errorP);
+    }
   }
 }
 
@@ -408,15 +467,29 @@ function getCollectionName() {
   return `quiz_${quizId}`;
 }
 
+let isInitializingCache = null;
+
 async function initializeBestScoresCache() {
   if (cacheInitialized || !currentUser) return;
-  try {
-    const collection = getCollectionName();
-    const doc = await db.collection(collection).doc(currentUser.uid).get();
-    const scores = doc.exists ? doc.data() : {};
-    bestScores = scores;
-    cacheInitialized = true;
-  } catch (e) { console.error(e); }
+  if (isInitializingCache) {
+    await isInitializingCache;
+    return;
+  }
+
+  isInitializingCache = (async () => {
+    try {
+      const collection = getCollectionName();
+      const doc = await db.collection(collection).doc(currentUser.uid).get();
+      bestScores = doc.exists ? doc.data() : {};
+      cacheInitialized = true;
+    } catch (e) {
+      console.error(e);
+    } finally {
+      isInitializingCache = null;
+    }
+  })();
+
+  await isInitializingCache;
 }
 
 // ===== 解答記録と復習機能 =====
@@ -591,7 +664,14 @@ function closeScoreModal() {
 
 function toggleHistoryPart(level) {
   const block = document.getElementById(`history-part-block-${level}`);
-  if (block) block.classList.toggle('open');
+  if (block) {
+    block.classList.toggle('open');
+    const row = block.querySelector('.part-score-row');
+    if (row) {
+      const isOpen = block.classList.contains('open');
+      row.setAttribute('aria-expanded', String(isOpen));
+    }
+  }
 }
 
 async function showScoreHistory() {
@@ -652,7 +732,7 @@ async function showScoreHistory() {
 
     partSections.push(
       `<div class="part-block" id="history-part-block-${level}" style="margin-bottom:16px;">
-        <div class="part-score-row" onclick="toggleHistoryPart(${level});">
+        <div class="part-score-row" role="button" tabindex="0" aria-expanded="false" onclick="toggleHistoryPart(${level});" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleHistoryPart(${level});}">
           <span class="part-name">${escapeHtml(partLabel)}</span>
           <span class="part-value">試験 ${levelCorrect}/${levelQuestions}問(${levelExamAttempts}回)</span>
           <span class="part-arrow">▶</span>
@@ -1050,7 +1130,7 @@ async function showHome() {
     const setRowsHtml = await buildSetRowsHtml(levelData.tests, level, levelLabel);
 
     partScoresHtml += `<div class="${blockClass}">
-        <div class="part-score-row" onclick="toggleLevel(${level});">
+        <div class="part-score-row" role="button" tabindex="0" aria-expanded="${isOpen}" onclick="toggleLevel(${level});" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleLevel(${level});}">
           <span class="part-name">${levelLabel}</span>
           <span class="part-value">試験 ${levelCorrect}/${levelQuestions}問(${levelExamAttempts}回)・演習/復習(${levelPracticeAttempts}回)</span>
           <span class="part-arrow">▶</span>
