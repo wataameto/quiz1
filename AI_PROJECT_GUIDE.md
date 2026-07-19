@@ -13,10 +13,10 @@
 - docs/index.html: メインメニュー、認証判定、クイズ選択。
 - docs/{quiz}/index.html: 各クイズページ（sample, sample2, sample3, bokinyu, devops, sapc02, koukyou1, jouhou1, itpass, itpassjr, fp3kyuu, takken, shouwa, heisei, capital, eiken2, eiken3, eiken2pre, eiken4, eiken5, gentsuki の21種）。HTML骨格のみで、見た目・挙動は docs/shared/ の共通ファイルを読み込む。sample3は記述式（自由入力）問題タイプの最小構成サンプル。
 - docs/shared/quiz-app.css: 全クイズページ共通のスタイル。
-- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/セット表示、採点、Firebase連携など）。
+- docs/shared/quiz-app.js: 全クイズページ共通のロジック（パート/レッスン表示、採点、Firebase連携など）。
 - docs/config.json: 各クイズの表示メタデータ。
 - docs/build-info.json: 自動生成されるビルド日時。
-- docs/quiz-meta.json: 自動生成される全クイズのパート数・セット数・問題数（メインメニューが questions*.json を全部読まずに済むように使う）。
+- docs/quiz-meta.json: 自動生成される全クイズのパート数・レッスン数・問題数（メインメニューが questions*.json を全部読まずに済むように使う）。
 - docs/manifest.json・docs/sw.js・docs/icon-*.svg: PWA化用のファイル。メインメニューと各教材ページの両方から参照される（`<link rel="manifest">`・Service Worker登録）。
 
 ## コマンド
@@ -39,13 +39,13 @@
 - クイズごとのラベル、見出し、色、説明文は docs/config.json に置く。共通JSが起動時に config.json を読んで適用する。メインメニューの教材一覧・検索でも同じ config.json の description を使うので、内容を充実させると両方に反映される。
 - 各クイズは docs/config.json に `genreMajor`（大分類: sample/shikaku/gakkou/zatsugaku）と `genreMinor`（小分類、shikaku配下のみ it_shikaku/kaikei_kinyu_shikaku/houritsu_sonota_shikaku のいずれか、それ以外はnull）を持つ。メインメニューはこの階層でジャンル別グループ表示になる（📌ピン留め教材は別枠で先頭）。ジャンルのラベル・並び順はdocs/index.htmlの`GENRE_ORDER`定数で管理し、config.json自体はジャンルidのみ持つ（表示上の関心事とデータを分離するため）。新しい教材を追加するときはgenreMajor/genreMinorを書き忘れないこと（src/menu.test.jsで検証）。
 - メインメニューの「教材ジャンル」欄は大分類・小分類とも選択式のフィルターボタンになっている（`toggleGenreFilter()`/`groupByGenre()`）。選んだジャンルの教材だけ下の「教材一覧」に絞り込まれ、何も選んでいなければ全件表示、「✖️ リセット」ボタンで選択をクリアできる。ボタン全体は枠線で囲ったボックス（`#quiz-genre-nav`）にまとめてある。
-- 「あなたの選択教材」の各行は、教材名の直後にスペース1つ空けて「Xパート・Yセット」を続け、行末の「✅ X/Y問正解」の右隣に「入る」ボタンを置く（旧デザインの「›」矢印は廃止）。
+- 「あなたの選択教材」の各行は、教材名の直後にスペース1つ空けて「Xパート・Yレッスン」を続け、行末の「✅ X/Y問正解」の右隣に「入る」ボタンを置く（旧デザインの「›」矢印は廃止）。
 - 新しいクイズを追加するときは、`docs/{quiz}/questions*.json` の各ファイルに必ず `"id": "<quizId>"` フィールドを含める。共通JSがこの `id` を最初に読み込んだ questions1.json から拾って Firestore コレクション名（`quiz_<quizId>`）を決めるため、これが無いと成績が `quiz_undefined` という誤ったコレクションに保存されてしまう（実際に起きた事故）。
 - 各クイズページでは ?admin=1 で問題レビュー画面を表示できる。
 - 各クイズの「教材トップ」画面（旧クイズトップ）は、パートの行をクリックするとその場でセット一覧がアコーディオン展開する。初期表示ではどのパートも閉じた状態で表示する（現在パートも含めて自動的には開かない）。パート行の集計表示は「試験 X/Y問(N回)・演習/復習(M回)」の形式で表示する。セットは横長のリスト行（Finder風）で、行クリックではなく「試験」ボタンと「演習」または「誤答復習」（どちらも記録なし）ボタンの2択で開始する。3つのボタンとも最低幅（min-width）を揃えてあるので、文言が短いボタンだけ狭く見えることはない。各セット行のサブテキストにはそのセットの `subtitle` フィールドと問題数を表示する（パート名は1つ上のアコーディオン見出しに既に出ているため重複させない）。
 - 「📊 成績/設定」ボタン（教材トップとクイズ画面の両方にある）を押すと成績・設定モーダルが開き、「成績履歴を見る」「成績をリセット」「表示サイズ（XXS/XS/S/M/L、`<html>`のfont-sizeを70〜115%で切り替え、localStorageに保存）」を選べる。
-- 成績履歴モーダルは、セットごとの挑戦履歴（日時・正答数・通し番号）をチェックボックス付きで一覧表示し、「選択した履歴を削除」（確認モーダルdelete-history-modalを挟む）でまとめて削除できる。一番上には周回履歴（後述の全クリア機能）も表示する。
-- 教材を全パート・全セットとも100点（best）にすると、教材トップに「🎉全問正解達成！」バナーと「🏁次の周へ進む」ボタンが出る。ボタンは押す前に確認モーダル（advance-lap-modal）を挟む。押すと各セットの最高点・誤答記録だけがリセットされ（挑戦履歴・周回数・達成記録は消えない）、周回数（`lap`フィールド）が+1、その周回の試験挑戦回数（`lapAttemptCount`）が0にリセットされる。ボタンは全問正解している限り何度でも押せる（何周でも積み上げられる）。メインメニューの成績行にも、周回数がある場合は `⭐×N`、全問正解済みでまだ次の周へ進んでいない場合は `+⭐` を追記表示する。全問正解を初めて達成した日時と、その周回での試験挑戦回数は `fullClearHistory` に記録され、成績履歴モーダルの周回履歴セクションに「N周目全問正解（M回挑戦）」として表示される。
+- 成績履歴モーダルは、レッスンごとの挑戦履歴（日時・正答数・通し番号）をチェックボックス付きで一覧表示し、「選択した履歴を削除」（確認モーダルdelete-history-modalを挟む）でまとめて削除できる。一番上には周回履歴（後述の全クリア機能）も表示する。
+- 教材を全パート・全レッスンとも100点（lesson）にすると、教材トップに「🎉全問正解達成！」バナーと「🏁次の周へ進む」ボタンが出る。ボタンは押す前に確認モーダル（advance-lap-modal）を挟む。押すと各レッスンの最高点・誤答記録だけがリセットされ（挑戦履歴・周回数・達成記録は消えない）、周回数（`lap`フィールド）が+1、その周回の試験挑戦回数（`lapAttemptCount`）が0にリセットされる。ボタンは全問正解している限り何度でも押せる（何周でも積み上げられる）。メインメニューの成績行にも、周回数がある場合は `⭐×N`、全問正解済みでまだ次の周へ進んでいない場合は `+⭐` を追記表示する。全問正解を初めて達成した日時と、その周回での試験挑戦回数は `fullClearHistory` に記録され、成績履歴モーダルの周回履歴セクションに「N周目全問正解（M回挑戦）」として表示される。
 - ログアウトは `confirm()`/`alert()` を使わず、既存の `logout-modal` と同じ自前モーダルパターンを使う。iOS Safari（Chrome for iOSも含む）は繰り返しダイアログを出すページで「今後表示しない」を選べてしまい、選ばれると以降の `confirm()`/`alert()` が無言で失敗するため。
 - クイズ画面の問題文・選択肢・解説（結果画面の解答一覧も含む）には🔍アイコンが付いており、クリックすると `search-modal` が開いてその全文が選択可能なテキストとして表示される。テキストの一部をドラッグ選択してから「Googleで検索」を押すとその選択範囲だけを、何も選択しなければ全文をGoogle検索する（`searchIconHtml()` / `openSearchModal()` / `runTermSearch()` in quiz-app.js）。日本語の自動キーワード抽出は精度が低いため意図的に採用していない。選択肢の中の🔍は`<button>`の入れ子を避けるため`<span role="button">`で実装している。
 - メインメニューにはPWAインストールの案内が2種類ある（`renderPwaInstallUI()` in docs/index.html）。上のバナー（`#pwa-install-banner`）は×で閉じると`localStorage`の`pwaInstallBannerDismissed`フラグで二度と出なくなる。教材一覧の最下部の常設ヒント（`#pwa-install-footer-hint`）は×の対象外で常に表示される（iOSはSafariの共有ボタン経由の案内文、それ以外はブラウザのインストールボタンの案内文）。`isRunningStandalone()`がtrue（すでにホーム画面から起動済み）のときは両方とも表示しない。
@@ -57,10 +57,10 @@
 
 ## スコアと認証の注意
 - スコアは quiz id から決まる Firestore collection（`quiz_<quizId>`）に、クイズ別・ユーザー別で保存する。ドキュメントIDは uid。
-- 保存フィールド: `best_<level>_<setId>`（最高点0-100）、`history_<level>_<setId>`（挑戦履歴、初回1件＋直近10件を保持、各要素は`{no, score, date}`）、`wrongAnswers_<level>_<setId>`（誤答問題番号）、`attemptCount_<level>_<setId>`（履歴が間引かれても減らない通しの挑戦回数）、`lap`（全クリア周回数）、`lapHistory`（周回開始日時の配列 `[{lap, date}, ...]`）、`lapAttemptCount`（今の周回に入ってからの試験挑戦回数、周回が進むたびに0にリセット）、`fullClearHistory`（全問正解を達成した日時の記録 `[{lap, date, attempts}, ...]`、周回ごとに初めて達成した瞬間だけ追記）。
+- 保存フィールド: `lesson_<level>_<lessonId>`（最高点0-100）、`lessonHistory_<level>_<lessonId>`（挑戦履歴、初回1件＋直近10件を保持、各要素は`{no, score, date}`）、`lessonWrongAnswers_<level>_<lessonId>`（誤答問題番号）、`lessonAttemptCount_<level>_<lessonId>`（履歴が間引かれても減らない通しの挑戦回数）、`lap`（全クリア周回数）、`lapHistory`（周回開始日時の配列 `[{lap, date}, ...]`）、`lapAttemptCount`（今の周回に入ってからの試験挑戦回数、周回が進むたびに0にリセット）、`fullClearHistory`（全問正解を達成した日時の記録 `[{lap, date, attempts}, ...]`、周回ごとに初めて達成した瞬間だけ追記）。
 - メインメニュー（docs/index.html）は認証状態に関わらず常にホーム画面（教材一覧・検索・成績枠）を表示する。専用のログイン画面はない。ログインしていない状態で成績に関わる操作（教材トグルのON/OFFなど）をしようとしたときだけ、その場でログインを促す。
 - 教材トグルのON/OFF状態は Firestore の `quiz_menu_prefs/{uid}` に保存する。Firestoreのセキュリティルールが `scores` または `^quiz_.*` にマッチするコレクションだけを許可しているため、新しいコレクションを追加するときは必ず `quiz_` プレフィックスを付ける。
-- スコア表示は現在の問題データから計算し、古い固定値に依存しない。メインメニューは docs/quiz-meta.json（ビルド時生成、パート数・セット数・セットごとの問題数）を読んで計算するため、questions*.json 自体はメインメニューからは読み込まない。
+- スコア表示は現在の問題データから計算し、古い固定値に依存しない。メインメニューは docs/quiz-meta.json（ビルド時生成、パート数・レッスン数・レッスンごとの問題数）を読んで計算するため、questions*.json 自体はメインメニューからは読み込まない。
 
 ### ログイン方式（重要・Firebase の signInWithPopup/signInWithRedirect は使わない）
 - Googleログインは Firebase Auth の `signInWithPopup`/`signInWithRedirect` を使わず、**Google Identity Services (GIS)** の OAuth トークンクライアントを直接呼び出す方式にしている（`docs/index.html` と `docs/shared/quiz-app.js` の `loginWithGoogle()` / `getGISTokenClient()`）。

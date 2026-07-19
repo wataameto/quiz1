@@ -6,7 +6,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "名詞編セット1",
+      "title": "名詞編レッスン1",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 501~510",
@@ -135,7 +135,7 @@
     },
     {
       "id": 2,
-      "title": "名詞編セット2",
+      "title": "名詞編レッスン2",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 511~520",
@@ -264,7 +264,7 @@
     },
     {
       "id": 3,
-      "title": "名詞編セット3",
+      "title": "名詞編レッスン3",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 521~530",
@@ -393,7 +393,7 @@
     },
     {
       "id": 4,
-      "title": "名詞編セット4",
+      "title": "名詞編レッスン4",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 531~540",
@@ -522,7 +522,7 @@
     },
     {
       "id": 5,
-      "title": "名詞編セット5",
+      "title": "名詞編レッスン5",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 541~550",
@@ -651,7 +651,7 @@
     },
     {
       "id": 6,
-      "title": "名詞編セット6",
+      "title": "名詞編レッスン6",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 551~560",
@@ -780,7 +780,7 @@
     },
     {
       "id": 7,
-      "title": "名詞編セット7",
+      "title": "名詞編レッスン7",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 561~570",
@@ -909,7 +909,7 @@
     },
     {
       "id": 8,
-      "title": "名詞編セット8",
+      "title": "名詞編レッスン8",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 571~580",
@@ -1038,7 +1038,7 @@
     },
     {
       "id": 9,
-      "title": "名詞編セット9",
+      "title": "名詞編レッスン9",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 581~590",
@@ -1167,7 +1167,7 @@
     },
     {
       "id": 10,
-      "title": "名詞編セット10",
+      "title": "名詞編レッスン10",
       "type": "vocabulary",
       "emoji": "📝",
       "subtitle": "名詞 591~600",

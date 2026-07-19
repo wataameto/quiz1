@@ -6,7 +6,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "実戦編2セット1",
+      "title": "実戦編2レッスン1",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1401~1410",
@@ -135,7 +135,7 @@
     },
     {
       "id": 2,
-      "title": "実戦編2セット2",
+      "title": "実戦編2レッスン2",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1411~1420",
@@ -264,7 +264,7 @@
     },
     {
       "id": 3,
-      "title": "実戦編2セット3",
+      "title": "実戦編2レッスン3",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1421~1430",
@@ -393,7 +393,7 @@
     },
     {
       "id": 4,
-      "title": "実戦編2セット4",
+      "title": "実戦編2レッスン4",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1431~1440",
@@ -522,7 +522,7 @@
     },
     {
       "id": 5,
-      "title": "実戦編2セット5",
+      "title": "実戦編2レッスン5",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1441~1450",
@@ -651,7 +651,7 @@
     },
     {
       "id": 6,
-      "title": "実戦編2セット6",
+      "title": "実戦編2レッスン6",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1451~1460",
@@ -780,7 +780,7 @@
     },
     {
       "id": 7,
-      "title": "実戦編2セット7",
+      "title": "実戦編2レッスン7",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1461~1470",
@@ -909,7 +909,7 @@
     },
     {
       "id": 8,
-      "title": "実戦編2セット8",
+      "title": "実戦編2レッスン8",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1471~1480",
@@ -1038,7 +1038,7 @@
     },
     {
       "id": 9,
-      "title": "実戦編2セット9",
+      "title": "実戦編2レッスン9",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1481~1490",
@@ -1167,7 +1167,7 @@
     },
     {
       "id": 10,
-      "title": "実戦編2セット10",
+      "title": "実戦編2レッスン10",
       "type": "vocabulary",
       "emoji": "🏅",
       "subtitle": "実戦語彙 1491~1500",

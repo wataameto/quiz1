@@ -327,7 +327,7 @@ function switchLevel(level) {
   loadQuestions(level);
 }
 
-let homeCollapsed = true; // 現在パートのセット一覧を閉じているか
+let homeCollapsed = true; // 現在パートのレッスン一覧を閉じているか
 
 function toggleLevel(level) {
   soundClick();
@@ -376,7 +376,7 @@ async function initializeBestScoresCache() {
 // ===== 解答記録と復習機能 =====
 
 function saveWrongAnswersKey(level, testId) {
-  return `wrongAnswers_${level}_${testId}`;
+  return `lessonWrongAnswers_${level}_${testId}`;
 }
 
 async function saveWrongAnswers(testId, answers, level) {
@@ -426,20 +426,20 @@ async function getBest(id, level = currentLevel) {
   if (!cacheInitialized) {
     await initializeBestScoresCache();
   }
-  const v = bestScores[`best_${level}_${id}`];
+  const v = bestScores[`lesson_${level}_${id}`];
   return (v === undefined || v === null) ? -1 : parseInt(v, 10);
 }
 
 function historyKey(level, id) {
-  return `history_${level}_${id}`;
+  return `lessonHistory_${level}_${id}`;
 }
 
 function attemptCountKey(level, id) {
-  return `attemptCount_${level}_${id}`;
+  return `lessonAttemptCount_${level}_${id}`;
 }
 
 function practiceCountKey(level, id) {
-  return `practiceCount_${level}_${id}`;
+  return `lessonPracticeCount_${level}_${id}`;
 }
 
 function getPracticeCount(id, level = currentLevel) {
@@ -498,7 +498,7 @@ async function recordTestResult(id, s) {
   try {
     const wasFullyCleared = await isFullyCleared();
 
-    const bestField = `best_${currentLevel}_${id}`;
+    const bestField = `lesson_${currentLevel}_${id}`;
     const historyField = historyKey(currentLevel, id);
     const countField = attemptCountKey(currentLevel, id);
     const best = await getBest(id);
@@ -516,7 +516,7 @@ async function recordTestResult(id, s) {
     if (s > best) updates[bestField] = s;
 
     // このテストの結果で「初めて」全問正解の状態になるかを、書き込み前に判定する。
-    // すでに全問正解済みならbest_は上がることはあっても下がらないので、再スキャンせず true とみなせる。
+    // すでに全問正解済みならlesson_は上がることはあっても下がらないので、再スキャンせず true とみなせる。
     // まだFirestoreに書き込んでいないupdatesの値をoverridesとして渡すことで、
     // fullClearHistoryの更新も同じ1回の書き込みにまとめられる。
     const nowFullyCleared = wasFullyCleared ? true : await isFullyCleared(updates);
@@ -553,7 +553,7 @@ async function showScoreHistory() {
   if (listEl) listEl.innerHTML = '<p style="text-align:center; color:#a0aec0;">読み込み中…</p>';
 
   const partSections = [];
-  let earliestDate = null; // 初めてどれか1セットを終えた日時＝1周目開始日時
+  let earliestDate = null; // 初めてどれか1レッスンを終えた日時＝1周目開始日時
 
   for (let level = 1; level <= maxLevel; level++) {
     const levelData = quizData[level];
@@ -649,7 +649,7 @@ function closeDeleteHistoryModal() {
 }
 
 // チェックした履歴だけまとめて削除する（history_配列からその要素を取り除くだけで、
-// best_やattemptCount_、周回数などには触れない）
+// lesson_やlessonAttemptCount_、周回数などには触れない）
 async function deleteSelectedHistory() {
   closeDeleteHistoryModal();
   if (!currentUser) return;
@@ -743,8 +743,8 @@ async function resetCurrentLevel() {
       fieldsToDelete.partialResetHistory = [...getPartialResetHistory(), resetEntry];
     }
     for (const t of quizData[currentLevel].tests) {
-      fieldsToDelete[`best_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
-      fieldsToDelete[`wrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+      fieldsToDelete[`lesson_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
+      fieldsToDelete[`lessonWrongAnswers_${currentLevel}_${t.id}`] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[historyKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[attemptCountKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
       fieldsToDelete[practiceCountKey(currentLevel, t.id)] = firebase.firestore.FieldValue.delete();
@@ -754,8 +754,8 @@ async function resetCurrentLevel() {
     }
     // キャッシュから削除
     for (const t of quizData[currentLevel].tests) {
-      delete bestScores[`best_${currentLevel}_${t.id}`];
-      delete bestScores[`wrongAnswers_${currentLevel}_${t.id}`];
+      delete bestScores[`lesson_${currentLevel}_${t.id}`];
+      delete bestScores[`lessonWrongAnswers_${currentLevel}_${t.id}`];
       delete bestScores[historyKey(currentLevel, t.id)];
       delete bestScores[attemptCountKey(currentLevel, t.id)];
       delete bestScores[practiceCountKey(currentLevel, t.id)];
@@ -816,7 +816,7 @@ function calculateTotalQuestionsAllLevels() {
   return totalQuestions;
 }
 
-// overridesに { best_<level>_<id>: 100 } のような「まだFirestoreに書き込んでいない
+// overridesに { lesson_<level>_<id>: 100 } のような「まだFirestoreに書き込んでいない
 // 予定の値」を渡すと、キャッシュより優先してその値で判定する。書き込み前に
 // 「この更新で全問正解になるか」を判定し、1回の書き込みにまとめるために使う。
 async function isFullyCleared(overrides) {
@@ -827,7 +827,7 @@ async function isFullyCleared(overrides) {
     if (!quizData[level] || !quizData[level].tests) continue;
     for (const t of quizData[level].tests) {
       sawAnyTest = true;
-      const key = `best_${level}_${t.id}`;
+      const key = `lesson_${level}_${t.id}`;
       const v = (overrides && overrides[key] !== undefined) ? overrides[key] : bestScores[key];
       const best = (v === undefined || v === null) ? -1 : parseInt(v, 10);
       if (best !== 100) return false;
@@ -841,9 +841,9 @@ function getLap() {
   return (v === undefined || v === null) ? 0 : parseInt(v, 10);
 }
 
-// 全問正解を達成した状態で呼ばれる。既存のbest/history/wrongAnswersは一切変更せず、
-// 周回数(lap)だけを加算する。best_が消えない限り何度でも呼べる設計。
-// 2周目に入る＝各セットの最高点・誤答記録を振り出しに戻す（挑戦履歴histoy_だけは残す）。
+// 全問正解を達成した状態で呼ばれる。既存のlesson/lessonHistory/lessonWrongAnswersは一切変更せず、
+// 周回数(lap)だけを加算する。lesson_が消えない限り何度でも呼べる設計。
+// 2周目に入る＝各レッスンの最高点・誤答記録を振り出しに戻す（挑戦履歴histoy_だけは残す）。
 // これで「もう一度全問正解を取り直す」という周回の実感が出る。
 function getLapHistory() {
   const h = bestScores['lapHistory'];
@@ -890,13 +890,13 @@ async function advanceLap() {
     for (let level = 1; level <= maxLevel; level++) {
       if (!quizData[level] || !quizData[level].tests) continue;
       for (const t of quizData[level].tests) {
-        fieldsToDelete[`best_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
-        fieldsToDelete[`wrongAnswers_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+        fieldsToDelete[`lesson_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
+        fieldsToDelete[`lessonWrongAnswers_${level}_${t.id}`] = firebase.firestore.FieldValue.delete();
       }
     }
     const collection = getCollectionName();
     await db.collection(collection).doc(currentUser.uid).set(fieldsToDelete, { merge: true });
-    // ローカルキャッシュも同期: best_/wrongAnswers_は削除、lap/lapHistory/lapAttemptCountだけ更新
+    // ローカルキャッシュも同期: lesson_/lessonWrongAnswers_は削除、lap/lapHistory/lapAttemptCountだけ更新
     Object.keys(fieldsToDelete).forEach(key => {
       if (key === 'lap') { bestScores.lap = newLap; return; }
       if (key === 'lapHistory') { bestScores.lapHistory = newLapHistory; return; }
@@ -948,7 +948,7 @@ async function showHome() {
     bannerEl.style.display = bannerHtml ? 'block' : 'none';
   }
 
-  const unitName = 'セット';
+  const unitName = 'レッスン';
 
   // レベル別スコアを計算・表示（パートが1個だけの教材も同じアコーディオン表示に統一する）
   const partScoresSection = document.getElementById('part-scores-section');

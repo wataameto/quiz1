@@ -6,7 +6,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "熟語編3セット1",
+      "title": "熟語編3レッスン1",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1201~1210",
@@ -135,7 +135,7 @@
     },
     {
       "id": 2,
-      "title": "熟語編3セット2",
+      "title": "熟語編3レッスン2",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1211~1220",
@@ -264,7 +264,7 @@
     },
     {
       "id": 3,
-      "title": "熟語編3セット3",
+      "title": "熟語編3レッスン3",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1221~1230",
@@ -393,7 +393,7 @@
     },
     {
       "id": 4,
-      "title": "熟語編3セット4",
+      "title": "熟語編3レッスン4",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1231~1240",
@@ -522,7 +522,7 @@
     },
     {
       "id": 5,
-      "title": "熟語編3セット5",
+      "title": "熟語編3レッスン5",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1241~1250",
@@ -651,7 +651,7 @@
     },
     {
       "id": 6,
-      "title": "熟語編3セット6",
+      "title": "熟語編3レッスン6",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1251~1260",
@@ -780,7 +780,7 @@
     },
     {
       "id": 7,
-      "title": "熟語編3セット7",
+      "title": "熟語編3レッスン7",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1261~1270",
@@ -909,7 +909,7 @@
     },
     {
       "id": 8,
-      "title": "熟語編3セット8",
+      "title": "熟語編3レッスン8",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1271~1280",
@@ -1038,7 +1038,7 @@
     },
     {
       "id": 9,
-      "title": "熟語編3セット9",
+      "title": "熟語編3レッスン9",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1281~1290",
@@ -1167,7 +1167,7 @@
     },
     {
       "id": 10,
-      "title": "熟語編3セット10",
+      "title": "熟語編3レッスン10",
       "type": "vocabulary",
       "emoji": "🖇️",
       "subtitle": "熟語 1291~1300",

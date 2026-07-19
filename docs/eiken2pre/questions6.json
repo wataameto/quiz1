@@ -6,7 +6,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "動詞編2セット1",
+      "title": "動詞編2レッスン1",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 501~510",
@@ -135,7 +135,7 @@
     },
     {
       "id": 2,
-      "title": "動詞編2セット2",
+      "title": "動詞編2レッスン2",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 511~520",
@@ -264,7 +264,7 @@
     },
     {
       "id": 3,
-      "title": "動詞編2セット3",
+      "title": "動詞編2レッスン3",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 521~530",
@@ -393,7 +393,7 @@
     },
     {
       "id": 4,
-      "title": "動詞編2セット4",
+      "title": "動詞編2レッスン4",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 531~540",
@@ -522,7 +522,7 @@
     },
     {
       "id": 5,
-      "title": "動詞編2セット5",
+      "title": "動詞編2レッスン5",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 541~550",
@@ -651,7 +651,7 @@
     },
     {
       "id": 6,
-      "title": "動詞編2セット6",
+      "title": "動詞編2レッスン6",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 551~560",
@@ -780,7 +780,7 @@
     },
     {
       "id": 7,
-      "title": "動詞編2セット7",
+      "title": "動詞編2レッスン7",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 561~570",
@@ -909,7 +909,7 @@
     },
     {
       "id": 8,
-      "title": "動詞編2セット8",
+      "title": "動詞編2レッスン8",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 571~580",
@@ -1038,7 +1038,7 @@
     },
     {
       "id": 9,
-      "title": "動詞編2セット9",
+      "title": "動詞編2レッスン9",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 581~590",
@@ -1167,7 +1167,7 @@
     },
     {
       "id": 10,
-      "title": "動詞編2セット10",
+      "title": "動詞編2レッスン10",
       "type": "vocabulary",
       "emoji": "🏃‍♂️",
       "subtitle": "動詞 591~600",

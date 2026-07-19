@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719145709">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260719151505">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -145,7 +145,7 @@
   <div id="advance-lap-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10001;">
     <div style="background:#fff; border-radius:16px; padding:18px; box-shadow:0 20px 60px rgba(0,0,0,0.3); max-width:400px; width:90%; text-align:center;">
       <h2 style="font-size:1.2rem; color:#2d3748; margin-bottom:16px; font-weight:800;">次の周へ進みますか？</h2>
-      <p style="color:#718096; margin-bottom:24px; font-size:0.95rem;">各セットの最高点・誤答記録がリセットされます（挑戦履歴と周回数は消えません）。</p>
+      <p style="color:#718096; margin-bottom:24px; font-size:0.95rem;">各レッスンの最高点・誤答記録がリセットされます（挑戦履歴と周回数は消えません）。</p>
       <div style="display:flex; gap:12px; justify-content:center;">
         <button onclick="closeAdvanceLapModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
         <button onclick="advanceLap()" style="flex:1; padding:12px; background:#f7971e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit;">🏁 進む</button>
@@ -211,7 +211,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260719145709"></script>
+<script src="../shared/quiz-app.js?v=20260719151505"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
