@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "実戦編セット1",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1401~1410",
+      "questions": [
+        {
+          "scenario": "「menagerie」の意味として最も適切なものは？",
+          "choices": [
+            "言及",
+            "動物園",
+            "真冬",
+            "尖塔"
+          ],
+          "correct": 1,
+          "explanation": "「menagerie」は「動物園」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mendacity」の意味として最も適切なものは？",
+          "choices": [
+            "ミヌエット",
+            "虚偽",
+            "画期的な出来事・マイル標",
+            "水銀"
+          ],
+          "correct": 1,
+          "explanation": "「mendacity」は「虚偽」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mentality」の意味として最も適切なものは？",
+          "choices": [
+            "助産師",
+            "呉服商",
+            "知性・精神構造",
+            "メリット・長所"
+          ],
+          "correct": 2,
+          "explanation": "「mentality」は「知性・精神構造」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mention」の意味として最も適切なものは？",
+          "choices": [
+            "呉服商",
+            "言及",
+            "大都市",
+            "暗喩"
+          ],
+          "correct": 1,
+          "explanation": "「mention」は「言及」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mentor」の意味として最も適切なものは？",
+          "choices": [
+            "強大さ",
+            "気象学",
+            "指導者",
+            "呉服商"
+          ],
+          "correct": 2,
+          "explanation": "「mentor」は「指導者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mercenary」の意味として最も適切なものは？",
+          "choices": [
+            "呉服商",
+            "メリット・長所",
+            "強大さ",
+            "傭兵"
+          ],
+          "correct": 3,
+          "explanation": "「mercenary」は「傭兵」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mercer」の意味として最も適切なものは？",
+          "choices": [
+            "キビ",
+            "気象学",
+            "呉服商",
+            "ひき肉"
+          ],
+          "correct": 2,
+          "explanation": "「mercer」は「呉服商」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merchandise」の意味として最も適切なものは？",
+          "choices": [
+            "真夏",
+            "水銀",
+            "商品",
+            "ミリグラム"
+          ],
+          "correct": 2,
+          "explanation": "「merchandise」は「商品」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merchant」の意味として最も適切なものは？",
+          "choices": [
+            "商人",
+            "闘争性",
+            "態度",
+            "勇気"
+          ],
+          "correct": 0,
+          "explanation": "「merchant」は「商人」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mercury」の意味として最も適切なものは？",
+          "choices": [
+            "慈悲",
+            "鉱夫",
+            "軍隊",
+            "水銀"
+          ],
+          "correct": 3,
+          "explanation": "「mercury」は「水銀」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "実戦編セット2",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1411~1420",
+      "questions": [
+        {
+          "scenario": "「mercy」の意味として最も適切なものは？",
+          "choices": [
+            "粉ひき職人",
+            "ミンク",
+            "片頭痛",
+            "慈悲"
+          ],
+          "correct": 3,
+          "explanation": "「mercy」は「慈悲」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merger」の意味として最も適切なものは？",
+          "choices": [
+            "人魚",
+            "合併",
+            "冶金学",
+            "鉱夫"
+          ],
+          "correct": 1,
+          "explanation": "「merger」は「合併」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meridian」の意味として最も適切なものは？",
+          "choices": [
+            "気象学",
+            "力",
+            "慈悲",
+            "子午線"
+          ],
+          "correct": 3,
+          "explanation": "「meridian」は「子午線」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merit」の意味として最も適切なものは？",
+          "choices": [
+            "石臼",
+            "メリット・長所",
+            "ノコギリソウ",
+            "鉱業"
+          ],
+          "correct": 1,
+          "explanation": "「merit」は「メリット・長所」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mermaid」の意味として最も適切なものは？",
+          "choices": [
+            "人魚",
+            "メリット・長所",
+            "ミント・鋳造所",
+            "商人"
+          ],
+          "correct": 0,
+          "explanation": "「mermaid」は「人魚」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merriment」の意味として最も適切なものは？",
+          "choices": [
+            "省・内閣",
+            "民兵",
+            "助産師",
+            "歓楽"
+          ],
+          "correct": 3,
+          "explanation": "「merriment」は「歓楽」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merry-go-round」の意味として最も適切なものは？",
+          "choices": [
+            "微生物学",
+            "メリーゴーランド",
+            "商人",
+            "形而上学"
+          ],
+          "correct": 1,
+          "explanation": "「merry-go-round」は「メリーゴーランド」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mesh」の意味として最も適切なものは？",
+          "choices": [
+            "知性・精神構造",
+            "微生物",
+            "網の目",
+            "形而上学"
+          ],
+          "correct": 2,
+          "explanation": "「mesh」は「網の目」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mesmerism」の意味として最も適切なものは？",
+          "choices": [
+            "千年王国の",
+            "マイクロプロセッサ",
+            "催眠術",
+            "婦人帽子屋"
+          ],
+          "correct": 2,
+          "explanation": "「mesmerism」は「催眠術」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mess」の意味として最も適切なものは？",
+          "choices": [
+            "混乱",
+            "マイク",
+            "ひき肉",
+            "顕微鏡"
+          ],
+          "correct": 0,
+          "explanation": "「mess」は「混乱」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "実戦編セット3",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1421~1430",
+      "questions": [
+        {
+          "scenario": "「messenger」の意味として最も適切なものは？",
+          "choices": [
+            "メリーゴーランド",
+            "ひき肉",
+            "マイクロプロセッサ",
+            "使者"
+          ],
+          "correct": 3,
+          "explanation": "「messenger」は「使者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「Messiah」の意味として最も適切なものは？",
+          "choices": [
+            "網の目",
+            "歓楽",
+            "ミント・鋳造所",
+            "救世主"
+          ],
+          "correct": 3,
+          "explanation": "「Messiah」は「救世主」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「metallurgy」の意味として最も適切なものは？",
+          "choices": [
+            "変態・変容",
+            "歓楽",
+            "軍隊",
+            "冶金学"
+          ],
+          "correct": 3,
+          "explanation": "「metallurgy」は「冶金学」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「metamorphosis」の意味として最も適切なものは？",
+          "choices": [
+            "変態・変容",
+            "催眠術",
+            "ミノタウロス",
+            "最小化"
+          ],
+          "correct": 0,
+          "explanation": "「metamorphosis」は「変態・変容」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「metaphor」の意味として最も適切なものは？",
+          "choices": [
+            "暗喩",
+            "大都市",
+            "正午",
+            "千年王国の"
+          ],
+          "correct": 0,
+          "explanation": "「metaphor」は「暗喩」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「metaphysics」の意味として最も適切なものは？",
+          "choices": [
+            "大臣・牧師",
+            "形而上学",
+            "強大さ",
+            "冶金学"
+          ],
+          "correct": 1,
+          "explanation": "「metaphysics」は「形而上学」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meteorite」の意味として最も適切なものは？",
+          "choices": [
+            "隕石",
+            "虚偽",
+            "人魚",
+            "手下"
+          ],
+          "correct": 0,
+          "explanation": "「meteorite」は「隕石」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meteorology」の意味として最も適切なものは？",
+          "choices": [
+            "暗喩",
+            "大都市",
+            "ミンク",
+            "気象学"
+          ],
+          "correct": 3,
+          "explanation": "「meteorology」は「気象学」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meter」の意味として最も適切なものは？",
+          "choices": [
+            "メーター・計器",
+            "片頭痛",
+            "石臼",
+            "最中"
+          ],
+          "correct": 0,
+          "explanation": "「meter」は「メーター・計器」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「method」の意味として最も適切なものは？",
+          "choices": [
+            "助産術",
+            "人魚",
+            "方法",
+            "微生物学"
+          ],
+          "correct": 2,
+          "explanation": "「method」は「方法」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "実戦編セット4",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1431~1440",
+      "questions": [
+        {
+          "scenario": "「methodology」の意味として最も適切なものは？",
+          "choices": [
+            "千年王国の",
+            "画期的な出来事・マイル標",
+            "百万長者",
+            "方法論"
+          ],
+          "correct": 3,
+          "explanation": "「methodology」は「方法論」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「metropolis」の意味として最も適切なものは？",
+          "choices": [
+            "少数派",
+            "商品",
+            "大都市",
+            "網の目"
+          ],
+          "correct": 2,
+          "explanation": "「metropolis」は「大都市」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mettle」の意味として最も適切なものは？",
+          "choices": [
+            "方法",
+            "使者",
+            "ひき肉",
+            "勇気"
+          ],
+          "correct": 3,
+          "explanation": "「mettle」は「勇気」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mezzanine」の意味として最も適切なものは？",
+          "choices": [
+            "慈悲",
+            "呉服商",
+            "鉱夫",
+            "中二階"
+          ],
+          "correct": 3,
+          "explanation": "「mezzanine」は「中二階」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microbe」の意味として最も適切なものは？",
+          "choices": [
+            "婦人帽子屋",
+            "言及",
+            "微生物",
+            "闘争性"
+          ],
+          "correct": 2,
+          "explanation": "「microbe」は「微生物」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microbiology」の意味として最も適切なものは？",
+          "choices": [
+            "微生物学",
+            "ひき肉",
+            "ミリメートル",
+            "鉱物学"
+          ],
+          "correct": 0,
+          "explanation": "「microbiology」は「微生物学」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microchip」の意味として最も適切なものは？",
+          "choices": [
+            "冶金学",
+            "合併",
+            "知性・精神構造",
+            "マイクロチップ"
+          ],
+          "correct": 3,
+          "explanation": "「microchip」は「マイクロチップ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microcosm」の意味として最も適切なものは？",
+          "choices": [
+            "メリーゴーランド",
+            "気象学",
+            "十億",
+            "小宇宙"
+          ],
+          "correct": 3,
+          "explanation": "「microcosm」は「小宇宙」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microphone」の意味として最も適切なものは？",
+          "choices": [
+            "鉱物",
+            "マイク",
+            "小宇宙",
+            "大臣・牧師"
+          ],
+          "correct": 1,
+          "explanation": "「microphone」は「マイク」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microprocessor」の意味として最も適切なものは？",
+          "choices": [
+            "吟遊詩人",
+            "使者",
+            "マイクロプロセッサ",
+            "虚偽"
+          ],
+          "correct": 2,
+          "explanation": "「microprocessor」は「マイクロプロセッサ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "実戦編セット5",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1441~1450",
+      "questions": [
+        {
+          "scenario": "「microscope」の意味として最も適切なものは？",
+          "choices": [
+            "顕微鏡",
+            "千年紀",
+            "ミモザ",
+            "鉱業"
+          ],
+          "correct": 0,
+          "explanation": "「microscope」は「顕微鏡」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microscopy」の意味として最も適切なものは？",
+          "choices": [
+            "コイ科の小魚",
+            "合併",
+            "顕微鏡検査",
+            "省・内閣"
+          ],
+          "correct": 2,
+          "explanation": "「microscopy」は「顕微鏡検査」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microwave」の意味として最も適切なものは？",
+          "choices": [
+            "真冬",
+            "指導者",
+            "人魚",
+            "電子レンジ"
+          ],
+          "correct": 3,
+          "explanation": "「microwave」は「電子レンジ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midday」の意味として最も適切なものは？",
+          "choices": [
+            "正午",
+            "隕石",
+            "呉服商",
+            "方法"
+          ],
+          "correct": 0,
+          "explanation": "「midday」は「正午」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「middleman」の意味として最も適切なものは？",
+          "choices": [
+            "マイクロチップ",
+            "仲介業者",
+            "大臣・牧師",
+            "方法論"
+          ],
+          "correct": 1,
+          "explanation": "「middleman」は「仲介業者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midge」の意味として最も適切なものは？",
+          "choices": [
+            "ミンク",
+            "ブヨ",
+            "鉱夫",
+            "助産師"
+          ],
+          "correct": 1,
+          "explanation": "「midge」は「ブヨ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midget」の意味として最も適切なものは？",
+          "choices": [
+            "力",
+            "慈悲",
+            "極小の人",
+            "冶金学"
+          ],
+          "correct": 2,
+          "explanation": "「midget」は「極小の人」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midriff」の意味として最も適切なものは？",
+          "choices": [
+            "横隔膜",
+            "片頭痛",
+            "民兵",
+            "虚偽"
+          ],
+          "correct": 0,
+          "explanation": "「midriff」は「横隔膜」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midshipman」の意味として最も適切なものは？",
+          "choices": [
+            "海軍兵学校生徒",
+            "鉱業",
+            "少数派",
+            "千年王国の"
+          ],
+          "correct": 0,
+          "explanation": "「midshipman」は「海軍兵学校生徒」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midst」の意味として最も適切なものは？",
+          "choices": [
+            "最中",
+            "ブヨ",
+            "尖塔",
+            "天の川"
+          ],
+          "correct": 0,
+          "explanation": "「midst」は「最中」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "実戦編セット6",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1451~1460",
+      "questions": [
+        {
+          "scenario": "「midsummer」の意味として最も適切なものは？",
+          "choices": [
+            "マイクロプロセッサ",
+            "歓楽",
+            "ミリメートル",
+            "真夏"
+          ],
+          "correct": 3,
+          "explanation": "「midsummer」は「真夏」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midwife」の意味として最も適切なものは？",
+          "choices": [
+            "助産師",
+            "移住・移行",
+            "吟遊詩人",
+            "傭兵"
+          ],
+          "correct": 0,
+          "explanation": "「midwife」は「助産師」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midwifery」の意味として最も適切なものは？",
+          "choices": [
+            "微生物",
+            "暗喩",
+            "最中",
+            "助産術"
+          ],
+          "correct": 3,
+          "explanation": "「midwifery」は「助産術」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「midwinter」の意味として最も適切なものは？",
+          "choices": [
+            "気象学",
+            "真冬",
+            "天の川",
+            "模倣"
+          ],
+          "correct": 1,
+          "explanation": "「midwinter」は「真冬」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mien」の意味として最も適切なものは？",
+          "choices": [
+            "態度",
+            "片頭痛",
+            "仲介業者",
+            "人魚"
+          ],
+          "correct": 0,
+          "explanation": "「mien」は「態度」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「might」の意味として最も適切なものは？",
+          "choices": [
+            "闘争性",
+            "軍隊",
+            "千年王国の",
+            "力"
+          ],
+          "correct": 3,
+          "explanation": "「might」は「力」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mightiness」の意味として最も適切なものは？",
+          "choices": [
+            "冶金学",
+            "強大さ",
+            "形而上学",
+            "助産師"
+          ],
+          "correct": 1,
+          "explanation": "「mightiness」は「強大さ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「migraine」の意味として最も適切なものは？",
+          "choices": [
+            "十億",
+            "網の目",
+            "鉱物",
+            "片頭痛"
+          ],
+          "correct": 3,
+          "explanation": "「migraine」は「片頭痛」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「migrant」の意味として最も適切なものは？",
+          "choices": [
+            "移住者",
+            "水銀",
+            "言及",
+            "ミンク"
+          ],
+          "correct": 0,
+          "explanation": "「migrant」は「移住者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「migration」の意味として最も適切なものは？",
+          "choices": [
+            "キビ",
+            "混乱",
+            "助産師",
+            "移住・移行"
+          ],
+          "correct": 3,
+          "explanation": "「migration」は「移住・移行」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "実戦編セット7",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1461~1470",
+      "questions": [
+        {
+          "scenario": "「milestone」の意味として最も適切なものは？",
+          "choices": [
+            "画期的な出来事・マイル標",
+            "小宇宙",
+            "闘争性",
+            "使者"
+          ],
+          "correct": 0,
+          "explanation": "「milestone」は「画期的な出来事・マイル標」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「milfoil」の意味として最も適切なものは？",
+          "choices": [
+            "電子レンジ",
+            "正午",
+            "ノコギリソウ",
+            "鉱業"
+          ],
+          "correct": 2,
+          "explanation": "「milfoil」は「ノコギリソウ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「militancy」の意味として最も適切なものは？",
+          "choices": [
+            "方法",
+            "片頭痛",
+            "催眠術",
+            "闘争性"
+          ],
+          "correct": 3,
+          "explanation": "「militancy」は「闘争性」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「militarism」の意味として最も適切なものは？",
+          "choices": [
+            "軍国主義",
+            "大臣・牧師",
+            "ブヨ",
+            "仲介業者"
+          ],
+          "correct": 0,
+          "explanation": "「militarism」は「軍国主義」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「military」の意味として最も適切なものは？",
+          "choices": [
+            "網の目",
+            "メリット・長所",
+            "軍隊",
+            "手下"
+          ],
+          "correct": 2,
+          "explanation": "「military」は「軍隊」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「militia」の意味として最も適切なものは？",
+          "choices": [
+            "真冬",
+            "顕微鏡",
+            "民兵",
+            "勇気"
+          ],
+          "correct": 2,
+          "explanation": "「militia」は「民兵」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「Milky Way」の意味として最も適切なものは？",
+          "choices": [
+            "吟遊詩人",
+            "コイ科の小魚",
+            "天の川",
+            "商人"
+          ],
+          "correct": 2,
+          "explanation": "「Milky Way」は「天の川」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「millenarian」の意味として最も適切なものは？",
+          "choices": [
+            "方法",
+            "千年王国の",
+            "片頭痛",
+            "最中"
+          ],
+          "correct": 1,
+          "explanation": "「millenarian」は「千年王国の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「millennium」の意味として最も適切なものは？",
+          "choices": [
+            "千年紀",
+            "省・内閣",
+            "変態・変容",
+            "言及"
+          ],
+          "correct": 0,
+          "explanation": "「millennium」は「千年紀」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「miller」の意味として最も適切なものは？",
+          "choices": [
+            "顕微鏡",
+            "冶金学",
+            "粉ひき職人",
+            "正午"
+          ],
+          "correct": 2,
+          "explanation": "「miller」は「粉ひき職人」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "実戦編セット8",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1471~1480",
+      "questions": [
+        {
+          "scenario": "「millet」の意味として最も適切なものは？",
+          "choices": [
+            "呉服商",
+            "強大さ",
+            "使者",
+            "キビ"
+          ],
+          "correct": 3,
+          "explanation": "「millet」は「キビ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「milliard」の意味として最も適切なものは？",
+          "choices": [
+            "十億",
+            "移住者",
+            "画期的な出来事・マイル標",
+            "千年王国の"
+          ],
+          "correct": 0,
+          "explanation": "「milliard」は「十億」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「milligram」の意味として最も適切なものは？",
+          "choices": [
+            "力",
+            "千年王国の",
+            "マイク",
+            "ミリグラム"
+          ],
+          "correct": 3,
+          "explanation": "「milligram」は「ミリグラム」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「millimeter」の意味として最も適切なものは？",
+          "choices": [
+            "形而上学",
+            "ミリメートル",
+            "マイク",
+            "ミント・鋳造所"
+          ],
+          "correct": 1,
+          "explanation": "「millimeter」は「ミリメートル」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「milliner」の意味として最も適切なものは？",
+          "choices": [
+            "動物園",
+            "千年王国の",
+            "マイク",
+            "婦人帽子屋"
+          ],
+          "correct": 3,
+          "explanation": "「milliner」は「婦人帽子屋」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「millionaire」の意味として最も適切なものは？",
+          "choices": [
+            "冶金学",
+            "ミンク",
+            "百万長者",
+            "知性・精神構造"
+          ],
+          "correct": 2,
+          "explanation": "「millionaire」は「百万長者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「millstone」の意味として最も適切なものは？",
+          "choices": [
+            "勇気",
+            "石臼",
+            "ミント・鋳造所",
+            "メリット・長所"
+          ],
+          "correct": 1,
+          "explanation": "「millstone」は「石臼」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mimicry」の意味として最も適切なものは？",
+          "choices": [
+            "ノコギリソウ",
+            "模倣",
+            "網の目",
+            "気象学"
+          ],
+          "correct": 1,
+          "explanation": "「mimicry」は「模倣」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mimosa」の意味として最も適切なものは？",
+          "choices": [
+            "ミヌエット",
+            "極小の人",
+            "移住者",
+            "ミモザ"
+          ],
+          "correct": 3,
+          "explanation": "「mimosa」は「ミモザ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minaret」の意味として最も適切なものは？",
+          "choices": [
+            "尖塔",
+            "婦人帽子屋",
+            "勇気",
+            "ミンク"
+          ],
+          "correct": 0,
+          "explanation": "「minaret」は「尖塔」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "実戦編セット9",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1481~1490",
+      "questions": [
+        {
+          "scenario": "「mince」の意味として最も適切なものは？",
+          "choices": [
+            "メーター・計器",
+            "ひき肉",
+            "正午",
+            "微生物"
+          ],
+          "correct": 1,
+          "explanation": "「mince」は「ひき肉」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mind reader」の意味として最も適切なものは？",
+          "choices": [
+            "方法論",
+            "読心術者",
+            "ひき肉",
+            "省・内閣"
+          ],
+          "correct": 1,
+          "explanation": "「mind reader」は「読心術者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minefield」の意味として最も適切なものは？",
+          "choices": [
+            "メリーゴーランド",
+            "人魚",
+            "地雷原",
+            "十億"
+          ],
+          "correct": 2,
+          "explanation": "「minefield」は「地雷原」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「miner」の意味として最も適切なものは？",
+          "choices": [
+            "移住・移行",
+            "鉱夫",
+            "隕石",
+            "真夏"
+          ],
+          "correct": 1,
+          "explanation": "「miner」は「鉱夫」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mineral」の意味として最も適切なものは？",
+          "choices": [
+            "鉱夫",
+            "知性・精神構造",
+            "人魚",
+            "鉱物"
+          ],
+          "correct": 3,
+          "explanation": "「mineral」は「鉱物」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mineralogy」の意味として最も適切なものは？",
+          "choices": [
+            "最小化",
+            "言及",
+            "鉱物学",
+            "千年王国の"
+          ],
+          "correct": 2,
+          "explanation": "「mineralogy」は「鉱物学」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「miniature」の意味として最も適切なものは？",
+          "choices": [
+            "軍隊",
+            "婦人帽子屋",
+            "動物園",
+            "ミニチュア"
+          ],
+          "correct": 3,
+          "explanation": "「miniature」は「ミニチュア」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minimization」の意味として最も適切なものは？",
+          "choices": [
+            "顕微鏡検査",
+            "網の目",
+            "鉱物",
+            "最小化"
+          ],
+          "correct": 3,
+          "explanation": "「minimization」は「最小化」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minimum」の意味として最も適切なものは？",
+          "choices": [
+            "暗喩",
+            "知性・精神構造",
+            "ブヨ",
+            "最小限"
+          ],
+          "correct": 3,
+          "explanation": "「minimum」は「最小限」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mining」の意味として最も適切なものは？",
+          "choices": [
+            "読心術者",
+            "マイク",
+            "鉱業",
+            "電子レンジ"
+          ],
+          "correct": 2,
+          "explanation": "「mining」は「鉱業」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "実戦編セット10",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1491~1500",
+      "questions": [
+        {
+          "scenario": "「minion」の意味として最も適切なものは？",
+          "choices": [
+            "顕微鏡検査",
+            "軍国主義",
+            "地雷原",
+            "手下"
+          ],
+          "correct": 3,
+          "explanation": "「minion」は「手下」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minister」の意味として最も適切なものは？",
+          "choices": [
+            "軍隊",
+            "民兵",
+            "メリット・長所",
+            "大臣・牧師"
+          ],
+          "correct": 3,
+          "explanation": "「minister」は「大臣・牧師」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ministry」の意味として最も適切なものは？",
+          "choices": [
+            "大臣・牧師",
+            "大都市",
+            "小宇宙",
+            "省・内閣"
+          ],
+          "correct": 3,
+          "explanation": "「ministry」は「省・内閣」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mink」の意味として最も適切なものは？",
+          "choices": [
+            "知性・精神構造",
+            "ミンク",
+            "方法",
+            "地雷原"
+          ],
+          "correct": 1,
+          "explanation": "「mink」は「ミンク」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minnow」の意味として最も適切なものは？",
+          "choices": [
+            "正午",
+            "移住者",
+            "海軍兵学校生徒",
+            "コイ科の小魚"
+          ],
+          "correct": 3,
+          "explanation": "「minnow」は「コイ科の小魚」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minority」の意味として最も適切なものは？",
+          "choices": [
+            "石臼",
+            "粉ひき職人",
+            "強大さ",
+            "少数派"
+          ],
+          "correct": 3,
+          "explanation": "「minority」は「少数派」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minotaur」の意味として最も適切なものは？",
+          "choices": [
+            "慈悲",
+            "少数派",
+            "知性・精神構造",
+            "ミノタウロス"
+          ],
+          "correct": 3,
+          "explanation": "「minotaur」は「ミノタウロス」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minstrel」の意味として最も適切なものは？",
+          "choices": [
+            "吟遊詩人",
+            "最小限",
+            "百万長者",
+            "ひき肉"
+          ],
+          "correct": 0,
+          "explanation": "「minstrel」は「吟遊詩人」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mint」の意味として最も適切なものは？",
+          "choices": [
+            "最中",
+            "千年紀",
+            "地雷原",
+            "ミント・鋳造所"
+          ],
+          "correct": 3,
+          "explanation": "「mint」は「ミント・鋳造所」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minuet」の意味として最も適切なものは？",
+          "choices": [
+            "最小限",
+            "小宇宙",
+            "ミヌエット",
+            "電子レンジ"
+          ],
+          "correct": 2,
+          "explanation": "「minuet」は「ミヌエット」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

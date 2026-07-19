@@ -1,795 +1,1295 @@
 {
   "id": "eiken2",
-  "level": 2,
-  "label": "🔤 動詞編2",
-  "description": "応用動詞・句動詞（phrasal verbs）",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
   "tests": [
     {
       "id": 1,
-      "title": "動詞編2-1",
-      "type": "Verbs Group A: put",
-      "emoji": "📥",
-      "subtitle": "putを使った句動詞をマスターしよう！",
+      "title": "動詞編セット1",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 101~110",
       "questions": [
         {
-          "scenario": "「put off」の意味として最も適切なものは？",
-          "choices": ["延期する", "急いで行う", "取り消す", "強く勧める"],
-          "correct": 0,
-          "explanation": "put off は「(予定などを)延期する」という意味。例: put off the meeting（会議を延期する）。postponeとほぼ同義。",
+          "scenario": "「begrudge」の意味として最も適切なものは？",
+          "choices": [
+            "磨く",
+            "婚約させる",
+            "うらやむ・出し惜しむ",
+            "鈍くする"
+          ],
+          "correct": 2,
+          "explanation": "「begrudge」は「うらやむ・出し惜しむ」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put up with」の意味として最も適切なものは？",
-          "choices": ["我慢する", "褒める", "支払う", "紹介する"],
+          "scenario": "「beguile」の意味として最も適切なものは？",
+          "choices": [
+            "だます・魅了する",
+            "魅了する",
+            "酷評する",
+            "音を立てる"
+          ],
           "correct": 0,
-          "explanation": "put up with ~ で「~を我慢する」。endureやtolerateと同義。例: I can't put up with his rudeness.",
+          "explanation": "「beguile」は「だます・魅了する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put down」の意味として最も適切なものは？",
-          "choices": ["書き留める、けなす", "持ち上げる", "許可する", "支持する"],
+          "scenario": "「behead」の意味として最も適切なものは？",
+          "choices": [
+            "斬首する",
+            "非難する",
+            "風刺画を描く",
+            "料理をまかなう"
+          ],
           "correct": 0,
-          "explanation": "put down は「(メモなどに)書き留める」または「けなす、けなして自信を失わせる」という意味がある。",
+          "explanation": "「behead」は「斬首する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put out」の意味として最も適切なものは？",
-          "choices": ["(火・明かりを)消す", "点火する", "拡大する", "取り戻す"],
-          "correct": 0,
-          "explanation": "put out a fire で「火を消す」。extinguishと同義で使われる。",
+          "scenario": "「behold」の意味として最も適切なものは？",
+          "choices": [
+            "決着をつける",
+            "安っぽくする",
+            "見つめる",
+            "擦れて痛む"
+          ],
+          "correct": 2,
+          "explanation": "「behold」は「見つめる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put away」の意味として最も適切なものは？",
-          "choices": ["片付ける", "散らかす", "投げ捨てる", "貸し出す"],
-          "correct": 0,
-          "explanation": "put away は「(使った物を)しまう、片付ける」という意味。例: put away the toys.",
+          "scenario": "「belittle」の意味として最も適切なものは？",
+          "choices": [
+            "支える・身構える",
+            "軽んじる",
+            "膨らむ",
+            "くすくす笑う"
+          ],
+          "correct": 1,
+          "explanation": "「belittle」は「軽んじる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put on」の意味として最も適切なものは？",
-          "choices": ["(服などを)身につける、装う", "脱ぐ", "捨てる", "壊す"],
-          "correct": 0,
-          "explanation": "put on は「服・靴などを身につける」「ふりをする」という意味。反対語はtake off。",
+          "scenario": "「bellow」の意味として最も適切なものは？",
+          "choices": [
+            "握りしめる",
+            "婚約させる",
+            "愛撫する",
+            "大声で吼える"
+          ],
+          "correct": 3,
+          "explanation": "「bellow」は「大声で吼える」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put forward」の意味として最も適切なものは？",
-          "choices": ["(意見・案を)提案する", "却下する", "隠す", "延期する"],
-          "correct": 0,
-          "explanation": "put forward は「提案する、(候補として)推薦する」という意味。例: put forward a proposal.",
+          "scenario": "「bemoan」の意味として最も適切なものは？",
+          "choices": [
+            "穴を掘る",
+            "凝固する",
+            "建てる",
+            "嘆く"
+          ],
+          "correct": 3,
+          "explanation": "「bemoan」は「嘆く」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put together」の意味として最も適切なものは？",
-          "choices": ["組み立てる、まとめる", "分解する", "捨てる", "配布する"],
-          "correct": 0,
-          "explanation": "put together は「部品などを組み立てる」「情報などをまとめる」という意味。assembleに近い。",
+          "scenario": "「bequeath」の意味として最も適切なものは？",
+          "choices": [
+            "非難する",
+            "嘆く",
+            "遺言で譲る",
+            "喧嘩する"
+          ],
+          "correct": 2,
+          "explanation": "「bequeath」は「遺言で譲る」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put across」の意味として最も適切なものは？",
-          "choices": ["(考えなどを)理解させる、伝える", "隠す", "破棄する", "延期する"],
+          "scenario": "「bereave」の意味として最も適切なものは？",
+          "choices": [
+            "奪う・遺族にする",
+            "料理をまかなう",
+            "さえずる",
+            "握りしめる"
+          ],
           "correct": 0,
-          "explanation": "put across は「自分の考えを相手にわかりやすく伝える」という意味。例: put an idea across clearly.",
+          "explanation": "「bereave」は「奪う・遺族にする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「put back」の意味として最も適切なものは？",
-          "choices": ["元の場所に戻す", "取り除く", "前倒しにする", "壊す"],
-          "correct": 0,
-          "explanation": "put back は「物を元の場所に戻す」という意味。また時計の針を遅らせる意味もある。",
+          "scenario": "「beseech」の意味として最も適切なものは？",
+          "choices": [
+            "忙しく動き回る",
+            "待つ",
+            "哀願する",
+            "喧嘩する"
+          ],
+          "correct": 2,
+          "explanation": "「beseech」は「哀願する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 2,
-      "title": "動詞編2-2",
-      "type": "Verbs Group B: take",
-      "emoji": "🛫",
-      "subtitle": "takeを使った句動詞をマスターしよう！",
+      "title": "動詞編セット2",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 111~120",
       "questions": [
         {
-          "scenario": "「take off」の意味として最も適切なものは？",
-          "choices": ["離陸する、(服を)脱ぐ", "着陸する", "延期する", "隠す"],
-          "correct": 0,
-          "explanation": "take off は飛行機が「離陸する」、または服・靴などを「脱ぐ」という意味。",
+          "scenario": "「beset」の意味として最も適切なものは？",
+          "choices": [
+            "浴びせる・爆撃する",
+            "見つめる",
+            "悩ませる・包囲する",
+            "荒れ狂う・怒鳴り散らす"
+          ],
+          "correct": 2,
+          "explanation": "「beset」は「悩ませる・包囲する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take over」の意味として最も適切なものは？",
-          "choices": ["引き継ぐ、(会社などを)買収する", "放棄する", "延期する", "紹介する"],
+          "scenario": "「besiege」の意味として最も適切なものは？",
+          "choices": [
+            "包囲する",
+            "降伏する",
+            "前兆となる",
+            "愛撫する"
+          ],
           "correct": 0,
-          "explanation": "take over は「(仕事・地位・会社などを)引き継ぐ、買収する」という意味。",
+          "explanation": "「besiege」は「包囲する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take up」の意味として最も適切なものは？",
-          "choices": ["(趣味などを)始める、(時間・space を)取る", "やめる", "拒否する", "軽視する"],
-          "correct": 0,
-          "explanation": "take up は「新しい趣味・活動を始める」または「時間・場所を占める」という意味。",
+          "scenario": "「bestow」の意味として最も適切なものは？",
+          "choices": [
+            "膨らむ",
+            "音を立てる",
+            "授ける",
+            "荒れ狂う・怒鳴り散らす"
+          ],
+          "correct": 2,
+          "explanation": "「bestow」は「授ける」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take in」の意味として最も適切なものは？",
-          "choices": ["理解する、だます", "追い出す", "拒絶する", "捨てる"],
+          "scenario": "「betroth」の意味として最も適切なものは？",
+          "choices": [
+            "婚約させる",
+            "威きつける",
+            "悩ませる・包囲する",
+            "鈍くする"
+          ],
           "correct": 0,
-          "explanation": "take in は「情報を理解する、吸収する」または「人をだます」という意味がある。",
+          "explanation": "「betroth」は「婚約させる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take after」の意味として最も適切なものは？",
-          "choices": ["(親などに)似ている", "追いかける", "無視する", "反抗する"],
+          "scenario": "「bewail」の意味として最も適切なものは？",
+          "choices": [
+            "嘆き悲しむ",
+            "命名する",
+            "固定する",
+            "魅了する"
+          ],
           "correct": 0,
-          "explanation": "take after ~ で「(容姿・性格が)~に似ている」という意味。例: She takes after her mother.",
+          "explanation": "「bewail」は「嘆き悲しむ」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take back」の意味として最も適切なものは？",
-          "choices": ["(発言を)撤回する", "強調する", "書き留める", "拡大する"],
-          "correct": 0,
-          "explanation": "take back は「発言を取り消す、撤回する」という意味。例: I take back what I said.",
+          "scenario": "「beware」の意味として最も適切なものは？",
+          "choices": [
+            "風刺画を描く",
+            "注意する",
+            "酷評する",
+            "鈍くする"
+          ],
+          "correct": 1,
+          "explanation": "「beware」は「注意する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take on」の意味として最も適切なものは？",
-          "choices": ["(仕事・責任を)引き受ける", "断る", "無視する", "延期する"],
-          "correct": 0,
-          "explanation": "take on は「新しい仕事・責任・従業員などを引き受ける」という意味。",
+          "scenario": "「bewilder」の意味として最も適切なものは？",
+          "choices": [
+            "奪う・遺族にする",
+            "当惑させる",
+            "固める",
+            "測定基準を調整する"
+          ],
+          "correct": 1,
+          "explanation": "「bewilder」は「当惑させる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take apart」の意味として最も適切なものは？",
-          "choices": ["分解する", "組み立てる", "修理する", "隠す"],
-          "correct": 0,
-          "explanation": "take apart は「機械などを分解する」という意味。比喩的に「厳しく批判する」にも使う。",
+          "scenario": "「bewitch」の意味として最も適切なものは？",
+          "choices": [
+            "開花する",
+            "凝固する",
+            "かき混ぜる",
+            "魅了する"
+          ],
+          "correct": 3,
+          "explanation": "「bewitch」は「魅了する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take down」の意味として最も適切なものは？",
-          "choices": ["取り壊す、書き留める", "組み立てる", "持ち上げる", "配布する"],
-          "correct": 0,
-          "explanation": "take down は「建物などを取り壊す」または「メモを書き留める」という意味。",
+          "scenario": "「bide」の意味として最も適切なものは？",
+          "choices": [
+            "うらやむ・出し惜しむ",
+            "待つ",
+            "命名する",
+            "黒くする・中傷する"
+          ],
+          "correct": 1,
+          "explanation": "「bide」は「待つ」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「take out」の意味として最も適切なものは？",
-          "choices": ["取り出す、連れ出す", "しまい込む", "隠す", "延期する"],
+          "scenario": "「billow」の意味として最も適切なものは？",
+          "choices": [
+            "うねる",
+            "うらやむ・出し惜しむ",
+            "閉じ込める",
+            "いななく"
+          ],
           "correct": 0,
-          "explanation": "take out は「物を取り出す」「人を(食事などに)連れ出す」という意味。",
+          "explanation": "「billow」は「うねる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 3,
-      "title": "動詞編2-3",
-      "type": "Verbs Group C: come",
-      "emoji": "🚶",
-      "subtitle": "comeを使った句動詞をマスターしよう！",
+      "title": "動詞編セット3",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 121~130",
       "questions": [
         {
-          "scenario": "「come across」の意味として最も適切なものは？",
-          "choices": ["偶然出会う、見つける", "避ける", "計画する", "反対する"],
-          "correct": 0,
-          "explanation": "come across ~ で「~に偶然出会う、見つける」という意味。例: I came across an old photo.",
+          "scenario": "「blacken」の意味として最も適切なものは？",
+          "choices": [
+            "振り付けをする",
+            "おどける",
+            "穴を掘る",
+            "黒くする・中傷する"
+          ],
+          "correct": 3,
+          "explanation": "「blacken」は「黒くする・中傷する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come up with」の意味として最も適切なものは？",
-          "choices": ["(アイデアなどを)思いつく", "捨てる", "反論する", "遅れる"],
-          "correct": 0,
-          "explanation": "come up with ~ で「~を思いつく、考え出す」という意味。例: come up with a solution.",
+          "scenario": "「blanch」の意味として最も適切なものは？",
+          "choices": [
+            "触媒作用を及ぼす",
+            "いななく",
+            "開花する",
+            "白くする"
+          ],
+          "correct": 3,
+          "explanation": "「blanch」は「白くする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come about」の意味として最も適切なものは？",
-          "choices": ["起こる、生じる", "終わる", "消える", "戻る"],
-          "correct": 0,
-          "explanation": "come about は「(出来事が)起こる、生じる」という意味。happenと同義。",
+          "scenario": "「blaspheme」の意味として最も適切なものは？",
+          "choices": [
+            "虐殺する・肉をさばく",
+            "冒涜する",
+            "カモフラージュする",
+            "だます・魅了する"
+          ],
+          "correct": 1,
+          "explanation": "「blaspheme」は「冒涜する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come along」の意味として最も適切なものは？",
-          "choices": ["一緒に来る、進展する", "拒否する", "遅刻する", "諦める"],
-          "correct": 0,
-          "explanation": "come along は「一緒について来る」または「物事が順調に進む」という意味。",
+          "scenario": "「bleat」の意味として最も適切なものは？",
+          "choices": [
+            "うらやむ・出し惜しむ",
+            "メーメー鳴く",
+            "しくじる",
+            "ぺちゃくちゃしゃべる"
+          ],
+          "correct": 1,
+          "explanation": "「bleat」は「メーメー鳴く」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come down with」の意味として最も適切なものは？",
-          "choices": ["(病気に)かかる", "回復する", "予防する", "無視する"],
-          "correct": 0,
-          "explanation": "come down with ~ で「(比較的軽い病気に)かかる」という意味。例: come down with a cold.",
+          "scenario": "「blemish」の意味として最も適切なものは？",
+          "choices": [
+            "集中する",
+            "損なう",
+            "握りしめる",
+            "風刺画を描く"
+          ],
+          "correct": 1,
+          "explanation": "「blemish」は「損なう」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come into」の意味として最も適切なものは？",
-          "choices": ["(財産などを)相続する", "手放す", "拒絶する", "隠す"],
-          "correct": 0,
-          "explanation": "come into money/a fortune のように使い、「(財産などを)相続する、手に入れる」という意味。",
+          "scenario": "「blindfold」の意味として最も適切なものは？",
+          "choices": [
+            "黒くする・中傷する",
+            "命名する",
+            "支える・身構える",
+            "目隠しする"
+          ],
+          "correct": 3,
+          "explanation": "「blindfold」は「目隠しする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come round」の意味として最も適切なものは？",
-          "choices": ["意識を取り戻す、考えを変える", "気絶する", "怒る", "去る"],
-          "correct": 0,
-          "explanation": "come round(米: come around)は「意識を取り戻す」または「(反対していた)意見を変えて賛成する」という意味。",
+          "scenario": "「blink」の意味として最も適切なものは？",
+          "choices": [
+            "握りしめる",
+            "膨張する",
+            "まばたきする",
+            "クリックする"
+          ],
+          "correct": 2,
+          "explanation": "「blink」は「まばたきする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come through」の意味として最も適切なものは？",
-          "choices": ["(困難などを)切り抜ける", "失敗する", "拒否する", "延期する"],
-          "correct": 0,
-          "explanation": "come through は「困難な状況を無事に切り抜ける」という意味。例: come through the crisis.",
+          "scenario": "「bloat」の意味として最も適切なものは？",
+          "choices": [
+            "触媒作用を及ぼす",
+            "開花する",
+            "膨張する",
+            "斬首する"
+          ],
+          "correct": 2,
+          "explanation": "「bloat」は「膨張する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come up against」の意味として最も適切なものは？",
-          "choices": ["(問題・困難に)直面する", "避ける", "解決する", "無視する"],
-          "correct": 0,
-          "explanation": "come up against ~ で「~に直面する、対峙する」という意味。例: come up against opposition.",
+          "scenario": "「blossom」の意味として最も適切なものは？",
+          "choices": [
+            "おどける",
+            "開花する",
+            "待つ",
+            "回避する"
+          ],
+          "correct": 1,
+          "explanation": "「blossom」は「開花する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「come off」の意味として最も適切なものは？",
-          "choices": ["取れる、(計画などが)成功する", "取り付ける", "失敗が確定する", "延期される"],
+          "scenario": "「blot」の意味として最も適切なものは？",
+          "choices": [
+            "汚す・拭き取る",
+            "当惑させる",
+            "赤面する",
+            "固める"
+          ],
           "correct": 0,
-          "explanation": "come off は「(ボタンなどが)取れる」または「(計画などが)うまくいく、成功する」という意味。",
+          "explanation": "「blot」は「汚す・拭き取る」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 4,
-      "title": "動詞編2-4",
-      "type": "Verbs Group D: go",
-      "emoji": "🚦",
-      "subtitle": "goを使った句動詞をマスターしよう！",
+      "title": "動詞編セット4",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 131~140",
       "questions": [
         {
-          "scenario": "「go through」の意味として最も適切なものは？",
-          "choices": ["経験する、詳しく調べる", "無視する", "省略する", "拒否する"],
-          "correct": 0,
-          "explanation": "go through は「(つらい経験などを)経験する」または「(書類などを)詳しく調べる」という意味。",
+          "scenario": "「blubber」の意味として最も適切なものは？",
+          "choices": [
+            "円を描く",
+            "忙しく動き回る",
+            "泣きじゃくる",
+            "ボタンを留める"
+          ],
+          "correct": 2,
+          "explanation": "「blubber」は「泣きじゃくる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go over」の意味として最も適切なものは？",
-          "choices": ["見直す、復習する", "見逃す", "捨てる", "秘密にする"],
-          "correct": 0,
-          "explanation": "go over ~ で「~を見直す、復習する、確認する」という意味。例: go over the notes before the exam.",
+          "scenario": "「blunt」の意味として最も適切なものは？",
+          "choices": [
+            "凝固する",
+            "白くする",
+            "魅了する",
+            "鈍くする"
+          ],
+          "correct": 3,
+          "explanation": "「blunt」は「鈍くする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go without」の意味として最も適切なものは？",
-          "choices": ["(~が)なしで済ます", "十分に得る", "求める", "浪費する"],
-          "correct": 0,
-          "explanation": "go without ~ で「~なしで済ませる、我慢する」という意味。例: go without sleep.",
+          "scenario": "「blush」の意味として最も適切なものは？",
+          "choices": [
+            "磨く",
+            "凝固する",
+            "赤面する",
+            "閉じ込める"
+          ],
+          "correct": 2,
+          "explanation": "「blush」は「赤面する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go off」の意味として最も適切なものは？",
-          "choices": ["爆発する、(アラームが)鳴る", "組み立てられる", "解決する", "止まる"],
-          "correct": 0,
-          "explanation": "go off は「爆弾が爆発する」「アラームが鳴る」という意味。食品が「腐る」の意味でも使う。",
+          "scenario": "「bluster」の意味として最も適切なものは？",
+          "choices": [
+            "飽きさせる",
+            "料理をまかなう",
+            "荒れ狂う・怒鳴り散らす",
+            "命名する"
+          ],
+          "correct": 2,
+          "explanation": "「bluster」は「荒れ狂う・怒鳴り散らす」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go along with」の意味として最も適切なものは？",
-          "choices": ["(意見・提案に)賛成する", "反対する", "分解する", "延期する"],
+          "scenario": "「bode」の意味として最も適切なものは？",
+          "choices": [
+            "前兆となる",
+            "かき混ぜる",
+            "集中する",
+            "大声で要求する"
+          ],
           "correct": 0,
-          "explanation": "go along with ~ で「~に賛成する、同意して従う」という意味。",
+          "explanation": "「bode」は「前兆となる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go back on」の意味として最も適切なものは？",
-          "choices": ["(約束などを)破る", "守る", "延長する", "強調する"],
-          "correct": 0,
-          "explanation": "go back on a promise で「約束を破る」という意味。break a promiseとほぼ同義。",
+          "scenario": "「bombard」の意味として最も適切なものは？",
+          "choices": [
+            "メーメー鳴く",
+            "かき混ぜる",
+            "浴びせる・爆撃する",
+            "鈍くする"
+          ],
+          "correct": 2,
+          "explanation": "「bombard」は「浴びせる・爆撃する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go under」の意味として最も適切なものは？",
-          "choices": ["(会社などが)倒産する、沈む", "成長する", "上場する", "拡大する"],
+          "scenario": "「boycott」の意味として最も適切なものは？",
+          "choices": [
+            "ボイコットする",
+            "測定基準を調整する",
+            "婚約させる",
+            "奪う・遺族にする"
+          ],
           "correct": 0,
-          "explanation": "go under は「(会社が)倒産する」または「(船などが)沈む」という意味。",
+          "explanation": "「boycott」は「ボイコットする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go for」の意味として最も適切なものは？",
-          "choices": ["選ぶ、挑戦する", "避ける", "拒否する", "延期する"],
-          "correct": 0,
-          "explanation": "go for ~ で「~を選ぶ」「~に挑戦する、目指す」という意味。例: go for the safer option.",
+          "scenario": "「brace」の意味として最も適切なものは？",
+          "choices": [
+            "魅了する",
+            "安っぽくする",
+            "メーメー鳴く",
+            "支える・身構える"
+          ],
+          "correct": 3,
+          "explanation": "「brace」は「支える・身構える」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go beyond」の意味として最も適切なものは？",
-          "choices": ["(範囲・限度を)超える", "下回る", "一致する", "近づく"],
-          "correct": 0,
-          "explanation": "go beyond ~ で「~を超える、上回る」という意味。例: go beyond expectations.",
+          "scenario": "「braid」の意味として最も適切なものは？",
+          "choices": [
+            "決着をつける",
+            "編み込む",
+            "大声で要求する",
+            "支える・身構える"
+          ],
+          "correct": 1,
+          "explanation": "「braid」は「編み込む」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「go with」の意味として最も適切なものは？",
-          "choices": ["(~と)調和する、~を選ぶ", "対立する", "無視する", "壊す"],
-          "correct": 0,
-          "explanation": "go with ~ で「~と合う、調和する」または「(提案などを)選ぶ、採用する」という意味。",
+          "scenario": "「brandish」の意味として最も適切なものは？",
+          "choices": [
+            "ボタンを留める",
+            "擦れて痛む",
+            "振り回す",
+            "彫刻刀で彫る"
+          ],
+          "correct": 2,
+          "explanation": "「brandish」は「振り回す」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 5,
-      "title": "動詞編2-5",
-      "type": "Verbs Group E: get",
-      "emoji": "🏃",
-      "subtitle": "getを使った句動詞をマスターしよう！",
+      "title": "動詞編セット5",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 141~150",
       "questions": [
         {
-          "scenario": "「get over」の意味として最も適切なものは？",
-          "choices": ["(病気・困難を)乗り越える", "始める", "遅らせる", "拡大する"],
-          "correct": 0,
-          "explanation": "get over ~ で「~を乗り越える、克服する」という意味。例: get over an illness.",
+          "scenario": "「brawl」の意味として最も適切なものは？",
+          "choices": [
+            "酷評する",
+            "回避する",
+            "喧嘩する",
+            "悩ませる・包囲する"
+          ],
+          "correct": 2,
+          "explanation": "「brawl」は「喧嘩する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get through」の意味として最も適切なものは？",
-          "choices": ["やり遂げる、連絡がつく", "失敗する", "拒否する", "延期する"],
-          "correct": 0,
-          "explanation": "get through は「困難をやり遂げる」または電話などで「連絡がつく」という意味。",
+          "scenario": "「bray」の意味として最も適切なものは？",
+          "choices": [
+            "だます・魅了する",
+            "いななく",
+            "泣きじゃくる",
+            "酷評する"
+          ],
+          "correct": 1,
+          "explanation": "「bray」は「いななく」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get along with」の意味として最も適切なものは？",
-          "choices": ["(人と)仲良くやっていく", "対立する", "無視する", "監視する"],
-          "correct": 0,
-          "explanation": "get along with ~ で「~と仲良くやっていく、うまくやる」という意味。",
+          "scenario": "「brew」の意味として最も適切なものは？",
+          "choices": [
+            "大声で吼える",
+            "しくじる",
+            "虐殺する・肉をさばく",
+            "醸造する"
+          ],
+          "correct": 3,
+          "explanation": "「brew」は「醸造する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get away with」の意味として最も適切なものは？",
-          "choices": ["(悪いことをして)うまく逃れる", "罰せられる", "自首する", "謝罪する"],
-          "correct": 0,
-          "explanation": "get away with ~ で「(悪事などが)ばれずに済む、うまく逃れる」という意味。",
+          "scenario": "「brighten」の意味として最も適切なものは？",
+          "choices": [
+            "降伏する",
+            "輝かせる",
+            "冒涜する",
+            "滝のように落ちる"
+          ],
+          "correct": 1,
+          "explanation": "「brighten」は「輝かせる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get down to」の意味として最も適切なものは？",
-          "choices": ["(仕事などに)本腰を入れる", "先延ばしにする", "諦める", "無視する"],
-          "correct": 0,
-          "explanation": "get down to ~ で「~に本格的に取り組み始める」という意味。例: get down to work.",
+          "scenario": "「broaden」の意味として最も適切なものは？",
+          "choices": [
+            "擦れて痛む",
+            "醸造する",
+            "威きつける",
+            "広げる"
+          ],
+          "correct": 3,
+          "explanation": "「broaden」は「広げる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get by」の意味として最も適切なものは？",
-          "choices": ["何とかやっていく", "豊かに暮らす", "失敗する", "拒否する"],
-          "correct": 0,
-          "explanation": "get by は「限られた資源などで何とかやっていく、暮らしていく」という意味。",
+          "scenario": "「broil」の意味として最も適切なものは？",
+          "choices": [
+            "振り付けをする",
+            "クリックする",
+            "固める",
+            "焼く"
+          ],
+          "correct": 3,
+          "explanation": "「broil」は「焼く」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get across」の意味として最も適切なものは？",
-          "choices": ["(意味などが)伝わる、伝える", "隠れる", "遮る", "破棄する"],
-          "correct": 0,
-          "explanation": "get across は「(考え・メッセージが)相手に伝わる、伝える」という意味。",
+          "scenario": "「browbeat」の意味として最も適切なものは？",
+          "choices": [
+            "授ける",
+            "喧嘩する",
+            "集中する",
+            "威きつける"
+          ],
+          "correct": 3,
+          "explanation": "「browbeat」は「威きつける」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get rid of」の意味として最も適切なものは？",
-          "choices": ["取り除く、処分する", "手に入れる", "保管する", "修理する"],
-          "correct": 0,
-          "explanation": "get rid of ~ で「~を取り除く、処分する」という意味。例: get rid of old clothes.",
+          "scenario": "「brutalize」の意味として最も適切なものは？",
+          "choices": [
+            "焼く",
+            "残忍にする",
+            "輝かせる",
+            "うねる"
+          ],
+          "correct": 1,
+          "explanation": "「brutalize」は「残忍にする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get around」の意味として最も適切なものは？",
-          "choices": ["(噂などが)広まる、(規則を)回避する", "隠す", "禁止する", "定着する"],
-          "correct": 0,
-          "explanation": "get around は「情報や噂が広まる」または「規則・問題をうまく回避する」という意味。",
+          "scenario": "「bud」の意味として最も適切なものは？",
+          "choices": [
+            "浴びせる・爆撃する",
+            "芽吹く",
+            "うねる",
+            "開花する"
+          ],
+          "correct": 1,
+          "explanation": "「bud」は「芽吹く」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「get ahead」の意味として最も適切なものは？",
-          "choices": ["出世する、成功する", "後退する", "失敗する", "遅刻する"],
+          "scenario": "「build」の意味として最も適切なものは？",
+          "choices": [
+            "建てる",
+            "虐殺する・肉をさばく",
+            "威きつける",
+            "嘆き悲しむ"
+          ],
           "correct": 0,
-          "explanation": "get ahead は「仕事などで出世する、成功を収める」という意味。",
+          "explanation": "「build」は「建てる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 6,
-      "title": "動詞編2-6",
-      "type": "Verbs Group F: make / turn",
-      "emoji": "🔄",
-      "subtitle": "make・turnを使った句動詞をマスターしよう！",
+      "title": "動詞編セット6",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 151~160",
       "questions": [
         {
-          "scenario": "「make up for」の意味として最も適切なものは？",
-          "choices": ["埋め合わせをする", "無視する", "非難する", "拒否する"],
-          "correct": 0,
-          "explanation": "make up for ~ で「~の埋め合わせをする、補う」という意味。例: make up for lost time.",
+          "scenario": "「bulge」の意味として最も適切なものは？",
+          "choices": [
+            "しくじる",
+            "大声で吼える",
+            "膨らむ",
+            "聖人に列する"
+          ],
+          "correct": 2,
+          "explanation": "「bulge」は「膨らむ」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「make out」の意味として最も適切なものは？",
-          "choices": ["理解する、何とか見分ける", "誤解する", "隠す", "破棄する"],
+          "scenario": "「bully」の意味として最も適切なものは？",
+          "choices": [
+            "いじめる",
+            "哀願する",
+            "残忍にする",
+            "嘆き悲しむ"
+          ],
           "correct": 0,
-          "explanation": "make out は「かろうじて理解する、見分ける」という意味。例: I can't make out what he said.",
+          "explanation": "「bully」は「いじめる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「make do with」の意味として最も適切なものは？",
-          "choices": ["(不十分なもので)済ませる", "十分に満足する", "拒否する", "交換する"],
-          "correct": 0,
-          "explanation": "make do with ~ で「(理想的でなくても)~で間に合わせる、済ませる」という意味。",
+          "scenario": "「bungle」の意味として最も適切なものは？",
+          "choices": [
+            "赤面する",
+            "降伏する",
+            "注意する",
+            "しくじる"
+          ],
+          "correct": 3,
+          "explanation": "「bungle」は「しくじる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「turn down」の意味として最も適切なものは？",
-          "choices": ["断る、却下する", "承諾する", "強調する", "延期する"],
-          "correct": 0,
-          "explanation": "turn down は「申し出や依頼を断る、却下する」という意味。例: turn down a job offer.",
+          "scenario": "「buoy」の意味として最も適切なものは？",
+          "choices": [
+            "擦れて痛む",
+            "命名する",
+            "いじめる",
+            "浮きで支える・支える"
+          ],
+          "correct": 3,
+          "explanation": "「buoy」は「浮きで支える・支える」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「turn out」の意味として最も適切なものは？",
-          "choices": ["(結果的に)判明する", "拒否する", "隠れる", "延期する"],
-          "correct": 0,
-          "explanation": "turn out は「結局~だと判明する」という意味。例: It turned out to be true.",
+          "scenario": "「burnish」の意味として最も適切なものは？",
+          "choices": [
+            "嘆く",
+            "降伏する",
+            "メーメー鳴く",
+            "磨く"
+          ],
+          "correct": 3,
+          "explanation": "「burnish」は「磨く」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「turn into」の意味として最も適切なものは？",
-          "choices": ["(~に)変わる", "元に戻る", "拒絶する", "無視する"],
+          "scenario": "「burrow」の意味として最も適切なものは？",
+          "choices": [
+            "穴を掘る",
+            "服を着せる",
+            "カモフラージュする",
+            "遺言で譲る"
+          ],
           "correct": 0,
-          "explanation": "turn into ~ で「~に変化する」という意味。例: The caterpillar turned into a butterfly.",
+          "explanation": "「burrow」は「穴を掘る」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「turn up」の意味として最も適切なものは？",
-          "choices": ["(予期せず)現れる", "消える", "拒否する", "延期する"],
-          "correct": 0,
-          "explanation": "turn up は「(人や物が)ひょっこり現れる、姿を見せる」という意味。",
+          "scenario": "「bustle」の意味として最も適切なものは？",
+          "choices": [
+            "くすくす笑う",
+            "しくじる",
+            "忙しく動き回る",
+            "残忍にする"
+          ],
+          "correct": 2,
+          "explanation": "「bustle」は「忙しく動き回る」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「turn away」の意味として最も適切なものは？",
-          "choices": ["(人を)追い返す、断る", "迎え入れる", "紹介する", "励ます"],
+          "scenario": "「butcher」の意味として最も適切なものは？",
+          "choices": [
+            "虐殺する・肉をさばく",
+            "浴びせる・爆撃する",
+            "婚約させる",
+            "目隠しする"
+          ],
           "correct": 0,
-          "explanation": "turn away は「人の入場や依頼を拒否して追い返す」という意味。",
+          "explanation": "「butcher」は「虐殺する・肉をさばく」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「turn over」の意味として最も適切なものは？",
-          "choices": ["ひっくり返す、(権限などを)委ねる", "組み立てる", "無視する", "拒否する"],
+          "scenario": "「button」の意味として最も適切なものは？",
+          "choices": [
+            "ボタンを留める",
+            "決着をつける",
+            "嘆き悲しむ",
+            "奪う・遺族にする"
+          ],
           "correct": 0,
-          "explanation": "turn over は「物をひっくり返す」または「(任務・権限を)人に委ねる、引き渡す」という意味。",
+          "explanation": "「button」は「ボタンを留める」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「turn against」の意味として最も適切なものは？",
-          "choices": ["(味方などが)敵対するようになる", "味方になる", "無視する", "従う"],
-          "correct": 0,
-          "explanation": "turn against ~ で「(それまで味方だった人が)~に敵対するようになる」という意味。",
+          "scenario": "「cackle」の意味として最も適切なものは？",
+          "choices": [
+            "虐殺する・肉をさばく",
+            "残忍にする",
+            "くすくす笑う",
+            "見つめる"
+          ],
+          "correct": 2,
+          "explanation": "「cackle」は「くすくす笑う」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 7,
-      "title": "動詞編2-7",
-      "type": "Verbs Group G: bring / break",
-      "emoji": "💥",
-      "subtitle": "bring・breakを使った句動詞をマスターしよう！",
+      "title": "動詞編セット7",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 161~170",
       "questions": [
         {
-          "scenario": "「bring about」の意味として最も適切なものは？",
-          "choices": ["引き起こす", "防止する", "延期する", "無視する"],
-          "correct": 0,
-          "explanation": "bring about ~ で「(変化・出来事を)引き起こす」という意味。causeとほぼ同義。",
+          "scenario": "「calibrate」の意味として最も適切なものは？",
+          "choices": [
+            "遺言で譲る",
+            "制限する",
+            "測定基準を調整する",
+            "前兆となる"
+          ],
+          "correct": 2,
+          "explanation": "「calibrate」は「測定基準を調整する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「bring up」の意味として最も適切なものは？",
-          "choices": ["(子供を)育てる、(話題を)持ち出す", "見捨てる", "無視する", "隠す"],
-          "correct": 0,
-          "explanation": "bring up は「子供を育てる」または「話題を持ち出す、提起する」という意味。",
+          "scenario": "「camouflage」の意味として最も適切なものは？",
+          "choices": [
+            "メーメー鳴く",
+            "覆い隠す",
+            "魅了する",
+            "カモフラージュする"
+          ],
+          "correct": 3,
+          "explanation": "「camouflage」は「カモフラージュする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「bring back」の意味として最も適切なものは？",
-          "choices": ["(記憶などを)呼び戻す、持ち帰る", "忘れさせる", "破壊する", "隠す"],
-          "correct": 0,
-          "explanation": "bring back は「昔のことを思い出させる」または単に「持ち帰る」という意味。",
+          "scenario": "「canonize」の意味として最も適切なものは？",
+          "choices": [
+            "斬首する",
+            "聖人に列する",
+            "前兆となる",
+            "回避する"
+          ],
+          "correct": 1,
+          "explanation": "「canonize」は「聖人に列する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「bring in」の意味として最も適切なものは？",
-          "choices": ["導入する、(収入を)もたらす", "撤去する", "拒否する", "延期する"],
-          "correct": 0,
-          "explanation": "bring in は「新しい制度・人材を導入する」または「(利益・収入を)もたらす」という意味。",
+          "scenario": "「canvass」の意味として最も適切なものは？",
+          "choices": [
+            "荒れ狂う・怒鳴り散らす",
+            "回避する",
+            "ボイコットする",
+            "世論調査をする・勧誘する"
+          ],
+          "correct": 3,
+          "explanation": "「canvass」は「世論調査をする・勧誘する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「break down」の意味として最も適切なものは？",
-          "choices": ["故障する、精神的に参る", "修理する", "成功する", "拡大する"],
-          "correct": 0,
-          "explanation": "break down は「機械が故障する」または「人が精神的に打ちのめされる」という意味。",
+          "scenario": "「capitulate」の意味として最も適切なものは？",
+          "choices": [
+            "かき混ぜる",
+            "建てる",
+            "降伏する",
+            "くすくす笑う"
+          ],
+          "correct": 2,
+          "explanation": "「capitulate」は「降伏する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「break out」の意味として最も適切なものは？",
-          "choices": ["(戦争・火事などが)勃発する", "終息する", "予防される", "延期される"],
-          "correct": 0,
-          "explanation": "break out は「戦争・火災・伝染病などが突然発生する」という意味。",
+          "scenario": "「captivate」の意味として最も適切なものは？",
+          "choices": [
+            "しくじる",
+            "魅了する",
+            "滝のように落ちる",
+            "くすくす笑う"
+          ],
+          "correct": 1,
+          "explanation": "「captivate」は「魅了する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「break up」の意味として最も適切なものは？",
-          "choices": ["(関係が)終わる、別れる", "結婚する", "和解する", "強化する"],
+          "scenario": "「caress」の意味として最も適切なものは？",
+          "choices": [
+            "愛撫する",
+            "非難する",
+            "回避する",
+            "穴を掘る"
+          ],
           "correct": 0,
-          "explanation": "break up は「恋人・夫婦などが別れる」または「集団が解散する」という意味。",
+          "explanation": "「caress」は「愛撫する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「break away」の意味として最も適切なものは？",
-          "choices": ["(組織などから)離脱する", "加入する", "従う", "統合する"],
+          "scenario": "「caricature」の意味として最も適切なものは？",
+          "choices": [
+            "風刺画を描く",
+            "覆い隠す",
+            "虐殺する・肉をさばく",
+            "焼く"
+          ],
           "correct": 0,
-          "explanation": "break away は「グループ・組織から離脱する、逃げ出す」という意味。",
+          "explanation": "「caricature」は「風刺画を描く」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「break into」の意味として最も適切なものは？",
-          "choices": ["(建物などに)侵入する", "退去する", "修理する", "守る"],
-          "correct": 0,
-          "explanation": "break into ~ で「(家などに)不法に侵入する」という意味。例: break into a house.",
+          "scenario": "「cascade」の意味として最も適切なものは？",
+          "choices": [
+            "擦れて痛む",
+            "編み込む",
+            "滝のように落ちる",
+            "目隠しする"
+          ],
+          "correct": 2,
+          "explanation": "「cascade」は「滝のように落ちる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「break through」の意味として最も適切なものは？",
-          "choices": ["(障壁などを)突破する", "諦める", "後退する", "無視する"],
+          "scenario": "「castigate」の意味として最も適切なものは？",
+          "choices": [
+            "酷評する",
+            "くすくす笑う",
+            "だます・魅了する",
+            "世論調査をする・勧誘する"
+          ],
           "correct": 0,
-          "explanation": "break through は「障害・防御などを突破する」という意味。名詞形breakthroughは「大発見」。",
+          "explanation": "「castigate」は「酷評する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 8,
-      "title": "動詞編2-8",
-      "type": "Verbs Group H: look / carry / hand",
-      "emoji": "👀",
-      "subtitle": "look・carry・handを使った句動詞をマスターしよう！",
+      "title": "動詞編セット8",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 171~180",
       "questions": [
         {
-          "scenario": "「look after」の意味として最も適切なものは？",
-          "choices": ["世話をする", "無視する", "追い出す", "疑う"],
+          "scenario": "「catalyze」の意味として最も適切なものは？",
+          "choices": [
+            "触媒作用を及ぼす",
+            "泣きじゃくる",
+            "愛撫する",
+            "膨らむ"
+          ],
           "correct": 0,
-          "explanation": "look after ~ で「~の世話をする、面倒を見る」という意味。takes care ofと同義。",
+          "explanation": "「catalyze」は「触媒作用を及ぼす」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「look into」の意味として最も適切なものは？",
-          "choices": ["調査する", "無視する", "隠す", "承認する"],
-          "correct": 0,
-          "explanation": "look into ~ で「~を調査する、詳しく調べる」という意味。investigateに近い。",
+          "scenario": "「cater」の意味として最も適切なものは？",
+          "choices": [
+            "ぺちゃくちゃしゃべる",
+            "酷評する",
+            "料理をまかなう",
+            "哀願する"
+          ],
+          "correct": 2,
+          "explanation": "「cater」は「料理をまかなう」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「look up to」の意味として最も適切なものは？",
-          "choices": ["尊敬する", "見下す", "疑う", "無視する"],
-          "correct": 0,
-          "explanation": "look up to ~ で「~を尊敬する」という意味。respectとほぼ同義。",
+          "scenario": "「cement」の意味として最も適切なものは？",
+          "choices": [
+            "醸造する",
+            "だます・魅了する",
+            "固める",
+            "まばたきする"
+          ],
+          "correct": 2,
+          "explanation": "「cement」は「固める」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「look down on」の意味として最も適切なものは？",
-          "choices": ["見下す、軽蔑する", "尊敬する", "見習う", "励ます"],
-          "correct": 0,
-          "explanation": "look down on ~ で「~を見下す、軽蔑する」という意味。look up toの反対。",
+          "scenario": "「censure」の意味として最も適切なものは？",
+          "choices": [
+            "建てる",
+            "うらやむ・出し惜しむ",
+            "非難する",
+            "遺言で譲る"
+          ],
+          "correct": 2,
+          "explanation": "「censure」は「非難する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「look forward to」の意味として最も適切なものは？",
-          "choices": ["楽しみに待つ", "恐れる", "忘れる", "拒否する"],
-          "correct": 0,
-          "explanation": "look forward to ~ で「~を楽しみに待つ」という意味。後ろに名詞または動名詞が続く。",
+          "scenario": "「centralize」の意味として最も適切なものは？",
+          "choices": [
+            "閉じ込める",
+            "赤面する",
+            "集中する",
+            "輝かせる"
+          ],
+          "correct": 2,
+          "explanation": "「centralize」は「集中する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「carry out」の意味として最も適切なものは？",
-          "choices": ["(計画などを)実行する", "中止する", "延期する", "無視する"],
+          "scenario": "「chafe」の意味として最も適切なものは？",
+          "choices": [
+            "擦れて痛む",
+            "しくじる",
+            "焼く",
+            "くすくす笑う"
+          ],
           "correct": 0,
-          "explanation": "carry out ~ で「計画・実験・命令などを実行する」という意味。",
+          "explanation": "「chafe」は「擦れて痛む」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「carry on」の意味として最も適切なものは？",
-          "choices": ["続ける", "やめる", "中断する", "拒否する"],
-          "correct": 0,
-          "explanation": "carry on は「(活動などを)続ける」という意味。continueとほぼ同義。",
+          "scenario": "「chatter」の意味として最も適切なものは？",
+          "choices": [
+            "決着をつける",
+            "振り回す",
+            "目隠しする",
+            "ぺちゃくちゃしゃべる"
+          ],
+          "correct": 3,
+          "explanation": "「chatter」は「ぺちゃくちゃしゃべる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「carry away」の意味として最も適切なものは？",
-          "choices": ["(感情などが)我を忘れさせる", "落ち着かせる", "無視させる", "冷静にさせる"],
-          "correct": 0,
-          "explanation": "be carried away で「興奮して我を忘れる」という意味。carry away自体は「運び去る」が原義。",
+          "scenario": "「cheapen」の意味として最も適切なものは？",
+          "choices": [
+            "固める",
+            "哀願する",
+            "喧嘩する",
+            "安っぽくする"
+          ],
+          "correct": 3,
+          "explanation": "「cheapen」は「安っぽくする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hand in」の意味として最も適切なものは？",
-          "choices": ["(書類などを)提出する", "受け取る", "破棄する", "隠す"],
+          "scenario": "「chirp」の意味として最も適切なものは？",
+          "choices": [
+            "さえずる",
+            "測定基準を調整する",
+            "損なう",
+            "かき混ぜる"
+          ],
           "correct": 0,
-          "explanation": "hand in ~ で「宿題やレポートなどを提出する」という意味。submitに近い。",
+          "explanation": "「chirp」は「さえずる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hand out」の意味として最も適切なものは？",
-          "choices": ["配る", "回収する", "隠す", "破棄する"],
+          "scenario": "「chisel」の意味として最も適切なものは？",
+          "choices": [
+            "彫刻刀で彫る",
+            "しくじる",
+            "奪う・遺族にする",
+            "虐殺する・肉をさばく"
+          ],
           "correct": 0,
-          "explanation": "hand out ~ で「プリントなどを配布する」という意味。distributeに近い。",
+          "explanation": "「chisel」は「彫刻刀で彫る」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 9,
-      "title": "動詞編2-9",
-      "type": "Verbs Group I: give / hold / keep",
-      "emoji": "🤲",
-      "subtitle": "give・hold・keepを使った句動詞をマスターしよう！",
+      "title": "動詞編セット9",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 181~190",
       "questions": [
         {
-          "scenario": "「give up」の意味として最も適切なものは？",
-          "choices": ["あきらめる", "続ける", "達成する", "始める"],
-          "correct": 0,
-          "explanation": "give up は「あきらめる、断念する」という意味。give up smokingのように使う。",
+          "scenario": "「choreograph」の意味として最も適切なものは？",
+          "choices": [
+            "滝のように落ちる",
+            "振り付けをする",
+            "包囲する",
+            "穴を掘る"
+          ],
+          "correct": 1,
+          "explanation": "「choreograph」は「振り付けをする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「give in」の意味として最も適切なものは？",
-          "choices": ["屈する、降参する", "反抗する", "拒否する", "勝利する"],
+          "scenario": "「christen」の意味として最も適切なものは？",
+          "choices": [
+            "命名する",
+            "赤面する",
+            "残忍にする",
+            "円を描く"
+          ],
           "correct": 0,
-          "explanation": "give in は「圧力や要求に屈する、降参する」という意味。",
+          "explanation": "「christen」は「命名する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「give away」の意味として最も適切なものは？",
-          "choices": ["無料で譲る、(秘密を)漏らす", "高値で売る", "隠し通す", "購入する"],
-          "correct": 0,
-          "explanation": "give away は「物をただで人にあげる」または「秘密をうっかり漏らす」という意味。",
+          "scenario": "「chuckle」の意味として最も適切なものは？",
+          "choices": [
+            "嘆き悲しむ",
+            "くすくす笑う",
+            "擦れて痛む",
+            "うらやむ・出し惜しむ"
+          ],
+          "correct": 1,
+          "explanation": "「chuckle」は「くすくす笑う」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「give off」の意味として最も適切なものは？",
-          "choices": ["(においや熱などを)発する", "吸収する", "取り除く", "冷やす"],
-          "correct": 0,
-          "explanation": "give off ~ で「(におい・光・熱などを)発する、放出する」という意味。例: give off a strong smell.",
+          "scenario": "「churn」の意味として最も適切なものは？",
+          "choices": [
+            "目隠しする",
+            "包囲する",
+            "斬首する",
+            "かき混ぜる"
+          ],
+          "correct": 3,
+          "explanation": "「churn」は「かき混ぜる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hold on」の意味として最も適切なものは？",
-          "choices": ["(電話などで)待つ、持ちこたえる", "切る", "諦める", "急ぐ"],
+          "scenario": "「circle」の意味として最も適切なものは？",
+          "choices": [
+            "円を描く",
+            "まばたきする",
+            "おどける",
+            "開花する"
+          ],
           "correct": 0,
-          "explanation": "hold on は「(電話を切らずに)待つ」または「持ちこたえる」という意味。",
+          "explanation": "「circle」は「円を描く」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hold up」の意味として最も適切なものは？",
-          "choices": ["遅らせる、持ちこたえる", "早める", "壊す", "解放する"],
-          "correct": 0,
-          "explanation": "hold up は「(交通渋滞などが)人を遅らせる」または「(圧力の下で)持ちこたえる」という意味。",
+          "scenario": "「circumscribe」の意味として最も適切なものは？",
+          "choices": [
+            "目隠しする",
+            "制限する",
+            "悩ませる・包囲する",
+            "擦れて痛む"
+          ],
+          "correct": 1,
+          "explanation": "「circumscribe」は「制限する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hold back」の意味として最も適切なものは？",
-          "choices": ["(感情などを)抑える、ためらう", "解放する", "促進する", "公表する"],
-          "correct": 0,
-          "explanation": "hold back は「涙・怒りなどの感情を抑える」または「ためらって行動しない」という意味。",
+          "scenario": "「circumvent」の意味として最も適切なものは？",
+          "choices": [
+            "非難する",
+            "包囲する",
+            "風刺画を描く",
+            "回避する"
+          ],
+          "correct": 3,
+          "explanation": "「circumvent」は「回避する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hold off」の意味として最も適切なものは？",
-          "choices": ["延期する、寄せ付けない", "急いで行う", "許可する", "促進する"],
-          "correct": 0,
-          "explanation": "hold off は「(行動を)先延ばしにする」または「(相手を)寄せ付けない」という意味。",
+          "scenario": "「clamor」の意味として最も適切なものは？",
+          "choices": [
+            "凝固する",
+            "聖人に列する",
+            "大声で要求する",
+            "軽んじる"
+          ],
+          "correct": 2,
+          "explanation": "「clamor」は「大声で要求する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「keep up with」の意味として最も適切なものは？",
-          "choices": ["(進度などに)遅れずについていく", "追い越す", "無視する", "見捨てる"],
+          "scenario": "「clamp」の意味として最も適切なものは？",
+          "choices": [
+            "固定する",
+            "開花する",
+            "測定基準を調整する",
+            "命名する"
+          ],
           "correct": 0,
-          "explanation": "keep up with ~ で「~のペースに遅れずについていく」という意味。例: keep up with the news.",
+          "explanation": "「clamp」は「固定する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「keep on」の意味として最も適切なものは？",
-          "choices": ["し続ける", "やめる", "中断する", "拒否する"],
-          "correct": 0,
-          "explanation": "keep on ~ing で「~し続ける」という意味。continueとほぼ同義。",
+          "scenario": "「clatter」の意味として最も適切なものは？",
+          "choices": [
+            "悩ませる・包囲する",
+            "包囲する",
+            "膨張する",
+            "音を立てる"
+          ],
+          "correct": 3,
+          "explanation": "「clatter」は「音を立てる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 10,
-      "title": "動詞編2-10",
-      "type": "Verbs Group J: set / call / work など",
-      "emoji": "⚙️",
-      "subtitle": "応用の句動詞で総仕上げ！",
+      "title": "動詞編セット10",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 191~200",
       "questions": [
         {
-          "scenario": "「set up」の意味として最も適切なものは？",
-          "choices": ["設立する、設置する", "解散する", "撤去する", "延期する"],
-          "correct": 0,
-          "explanation": "set up ~ で「会社などを設立する」「機材などを設置する」という意味。establishに近い。",
+          "scenario": "「cleave」の意味として最も適切なものは？",
+          "choices": [
+            "包囲する",
+            "割る",
+            "いななく",
+            "飽きさせる"
+          ],
+          "correct": 1,
+          "explanation": "「cleave」は「割る」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「set off」の意味として最も適切なものは？",
-          "choices": ["出発する、引き起こす", "到着する", "中止する", "延期する"],
-          "correct": 0,
-          "explanation": "set off は「旅などに出発する」または「(反応・警報などを)引き起こす」という意味。",
+          "scenario": "「clench」の意味として最も適切なものは？",
+          "choices": [
+            "広げる",
+            "覆い隠す",
+            "握りしめる",
+            "制限する"
+          ],
+          "correct": 2,
+          "explanation": "「clench」は「握りしめる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「set out」の意味として最も適切なものは？",
-          "choices": ["(目的を持って)出発する、着手する", "到着する", "諦める", "延期する"],
-          "correct": 0,
-          "explanation": "set out は「(旅・計画などに)出発する、乗り出す」という意味。set out to do ~の形もよく使う。",
+          "scenario": "「click」の意味として最も適切なものは？",
+          "choices": [
+            "虐殺する・肉をさばく",
+            "服を着せる",
+            "クリックする",
+            "円を描く"
+          ],
+          "correct": 2,
+          "explanation": "「click」は「クリックする」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「call off」の意味として最も適切なものは？",
-          "choices": ["中止する", "開催する", "延長する", "承認する"],
+          "scenario": "「clinch」の意味として最も適切なものは？",
+          "choices": [
+            "決着をつける",
+            "醸造する",
+            "芽吹く",
+            "待つ"
+          ],
           "correct": 0,
-          "explanation": "call off ~ で「予定されていたイベントなどを中止する」という意味。cancelとほぼ同義。",
+          "explanation": "「clinch」は「決着をつける」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「call for」の意味として最も適切なものは？",
-          "choices": ["必要とする、要求する", "拒否する", "延期する", "禁止する"],
-          "correct": 0,
-          "explanation": "call for ~ で「~を必要とする、要求する」という意味。例: The situation calls for immediate action.",
+          "scenario": "「cloak」の意味として最も適切なものは？",
+          "choices": [
+            "まばたきする",
+            "覆い隠す",
+            "メーメー鳴く",
+            "測定基準を調整する"
+          ],
+          "correct": 1,
+          "explanation": "「cloak」は「覆い隠す」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「figure out」の意味として最も適切なものは？",
-          "choices": ["理解する、解決する", "誤解する", "無視する", "隠す"],
+          "scenario": "「cloister」の意味として最も適切なものは？",
+          "choices": [
+            "閉じ込める",
+            "大声で吼える",
+            "ボイコットする",
+            "斬首する"
+          ],
           "correct": 0,
-          "explanation": "figure out ~ で「~を理解する、答えを見つけ出す」という意味。understandに近い。",
+          "explanation": "「cloister」は「閉じ込める」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「work out」の意味として最も適切なものは？",
-          "choices": ["うまくいく、運動する", "失敗する", "中止する", "隠す"],
-          "correct": 0,
-          "explanation": "work out は「物事がうまく解決する」または「運動する、トレーニングする」という意味。",
+          "scenario": "「clothe」の意味として最も適切なものは？",
+          "choices": [
+            "支える・身構える",
+            "赤面する",
+            "芽吹く",
+            "服を着せる"
+          ],
+          "correct": 3,
+          "explanation": "「clothe」は「服を着せる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「run into」の意味として最も適切なものは？",
-          "choices": ["偶然出会う、(問題に)ぶつかる", "避ける", "解決する", "予測する"],
+          "scenario": "「clot」の意味として最も適切なものは？",
+          "choices": [
+            "凝固する",
+            "うねる",
+            "聖人に列する",
+            "白くする"
+          ],
           "correct": 0,
-          "explanation": "run into ~ で「人に偶然出会う」または「問題・困難にぶつかる」という意味。",
+          "explanation": "「clot」は「凝固する」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「wear out」の意味として最も適切なものは？",
-          "choices": ["使い古す、疲れさせる", "新品にする", "修理する", "保存する"],
-          "correct": 0,
-          "explanation": "wear out は「衣類や靴などが使い古されてすり減る」または「人をひどく疲れさせる」という意味。",
+          "scenario": "「clown」の意味として最も適切なものは？",
+          "choices": [
+            "うらやむ・出し惜しむ",
+            "前兆となる",
+            "おどける",
+            "白くする"
+          ],
+          "correct": 2,
+          "explanation": "「clown」は「おどける」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「pull off」の意味として最も適切なものは？",
-          "choices": ["(困難なことを)成し遂げる", "失敗する", "延期する", "拒否する"],
-          "correct": 0,
-          "explanation": "pull off ~ で「難しいことをうまくやり遂げる、成功させる」という意味。",
+          "scenario": "「cloy」の意味として最も適切なものは？",
+          "choices": [
+            "愛撫する",
+            "醸造する",
+            "安っぽくする",
+            "飽きさせる"
+          ],
+          "correct": 3,
+          "explanation": "「cloy」は「飽きさせる」という意味の動詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]

@@ -1,795 +1,1295 @@
 {
   "id": "eiken2",
-  "level": 9,
-  "label": "🧩 副詞・前置詞編",
-  "description": "副詞・前置詞・接続詞",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
   "tests": [
     {
       "id": 1,
-      "title": "副詞・前置詞編-1",
-      "type": "Adverbs of Degree & Manner",
-      "emoji": "🎯",
-      "subtitle": "程度・様態を表す副詞をマスターしよう！",
+      "title": "形容詞・副詞編セット1",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 801~810",
       "questions": [
         {
-          "scenario": "「thoroughly」の意味として最も適切なものは？",
-          "choices": ["徹底的に", "たまに", "うっすらと", "急に"],
-          "correct": 0,
-          "explanation": "thoroughlyは「徹底的に、完全に」という意味の副詞。例：She thoroughly cleaned the house.（彼女は家を徹底的に掃除した）",
+          "scenario": "「abrupt」の意味として最も適切なものは？",
+          "choices": [
+            "驚くべき",
+            "豊富な",
+            "もろい",
+            "唐突な"
+          ],
+          "correct": 3,
+          "explanation": "「abrupt」は「唐突な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「gradually」の意味として最も適切なものは？",
-          "choices": ["徐々に", "突然", "一時的に", "同時に"],
+          "scenario": "「abundant」の意味として最も適切なものは？",
+          "choices": [
+            "豊富な",
+            "驚くべき",
+            "傲慢な",
+            "騎士道精神の"
+          ],
           "correct": 0,
-          "explanation": "graduallyは「徐々に、段階的に」という意味。graduate（段階）と語源が近い。",
+          "explanation": "「abundant」は「豊富な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「deliberately」の意味として最も適切なものは？",
-          "choices": ["故意に", "偶然に", "急いで", "控えめに"],
-          "correct": 0,
-          "explanation": "deliberatelyは「故意に、わざと」という意味。on purposeとほぼ同義。",
+          "scenario": "「alkaline」の意味として最も適切なものは？",
+          "choices": [
+            "騎士道精神の",
+            "はげた",
+            "アルカリ性の",
+            "熱心な"
+          ],
+          "correct": 2,
+          "explanation": "「alkaline」は「アルカリ性の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「reluctantly」の意味として最も適切なものは？",
-          "choices": ["嫌々ながら", "喜んで", "堂々と", "冷静に"],
-          "correct": 0,
-          "explanation": "reluctantlyは「嫌々ながら、気が進まずに」という意味。形容詞reluctant（気が進まない）の副詞形。",
+          "scenario": "「alleged」の意味として最も適切なものは？",
+          "choices": [
+            "膨張した",
+            "腐食性の",
+            "申し立てられた・疑わしい",
+            "天体の"
+          ],
+          "correct": 2,
+          "explanation": "「alleged」は「申し立てられた・疑わしい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「unexpectedly」の意味として最も適切なものは？",
-          "choices": ["予期せず", "予定通りに", "頻繁に", "遠慮がちに"],
-          "correct": 0,
-          "explanation": "unexpectedlyは「予期せず、思いがけなく」という意味。expect（予期する）の否定形+副詞語尾。",
+          "scenario": "「amicable」の意味として最も適切なものは？",
+          "choices": [
+            "あからさまな",
+            "慈悲深い",
+            "友好的な",
+            "権威ある"
+          ],
+          "correct": 2,
+          "explanation": "「amicable」は「友好的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「vaguely」の意味として最も適切なものは？",
-          "choices": ["漠然と", "明確に", "強く", "速やかに"],
-          "correct": 0,
-          "explanation": "vaguelyは「漠然と、あいまいに」という意味。I vaguely remember his name.（彼の名前をぼんやり覚えている）",
+          "scenario": "「antarctic」の意味として最も適切なものは？",
+          "choices": [
+            "貴族の",
+            "びっくり仰天した",
+            "南極の",
+            "豊富な"
+          ],
+          "correct": 2,
+          "explanation": "「antarctic」は「南極の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「remarkably」の意味として最も適切なものは？",
-          "choices": ["著しく、驚くほど", "わずかに", "静かに", "簡単に"],
-          "correct": 0,
-          "explanation": "remarkablyは「著しく、驚くほど」という意味。remark（注目すべき点）に由来。",
+          "scenario": "「dynamic」の意味として最も適切なものは？",
+          "choices": [
+            "一致する",
+            "丸々と太った",
+            "活動的な・動的な",
+            "血まみれの"
+          ],
+          "correct": 2,
+          "explanation": "「dynamic」は「活動的な・動的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「considerably」の意味として最も適切なものは？",
-          "choices": ["かなり、相当に", "ほとんど〜ない", "同様に", "たまたま"],
-          "correct": 0,
-          "explanation": "considerablyは「かなり、相当に」という意味。程度が大きいことを強調する副詞。",
+          "scenario": "「appreciative」の意味として最も適切なものは？",
+          "choices": [
+            "婚姻の",
+            "一致する",
+            "法人の",
+            "感謝している"
+          ],
+          "correct": 3,
+          "explanation": "「appreciative」は「感謝している」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「drastically」の意味として最も適切なものは？",
-          "choices": ["劇的に、大幅に", "わずかに", "慎重に", "静かに"],
-          "correct": 0,
-          "explanation": "drasticallyは「劇的に、大幅に」という意味。Prices dropped drastically.（価格が大幅に下がった）",
+          "scenario": "「arctic」の意味として最も適切なものは？",
+          "choices": [
+            "慈悲深い",
+            "北極の",
+            "丸々と太った",
+            "当惑した"
+          ],
+          "correct": 1,
+          "explanation": "「arctic」は「北極の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「tentatively」の意味として最も適切なものは？",
-          "choices": ["仮に、試験的に", "永久に", "強引に", "同時に"],
-          "correct": 0,
-          "explanation": "tentativelyは「仮に、試験的に」という意味。The meeting is tentatively set for Friday.（会議は仮に金曜に設定されている）",
+          "scenario": "「ardent」の意味として最も適切なものは？",
+          "choices": [
+            "熱望している",
+            "感謝している",
+            "熱心な",
+            "接続された"
+          ],
+          "correct": 2,
+          "explanation": "「ardent」は「熱心な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 2,
-      "title": "副詞・前置詞編-2",
-      "type": "Adverbs of Time & Frequency",
-      "emoji": "⏰",
-      "subtitle": "時・頻度を表す副詞を押さえよう！",
+      "title": "形容詞・副詞編セット2",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 811~820",
       "questions": [
         {
-          "scenario": "「occasionally」の意味として最も適切なものは？",
-          "choices": ["時々", "常に", "決して〜ない", "すぐに"],
-          "correct": 0,
-          "explanation": "occasionallyは「時々、たまに」という意味。sometimesと近いがやや頻度が低いニュアンス。",
+          "scenario": "「arid」の意味として最も適切なものは？",
+          "choices": [
+            "重荷となる",
+            "友好的な",
+            "乾燥した",
+            "熱望している"
+          ],
+          "correct": 2,
+          "explanation": "「arid」は「乾燥した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「eventually」の意味として最も適切なものは？",
-          "choices": ["結局は、最終的に", "最初に", "たびたび", "偶然"],
-          "correct": 0,
-          "explanation": "eventuallyは「結局は、最終的に」という意味。in the endに近い。",
+          "scenario": "「aristocratic」の意味として最も適切なものは？",
+          "choices": [
+            "自己主張する・断定的な",
+            "居心地のよい",
+            "年二回の",
+            "貴族の"
+          ],
+          "correct": 3,
+          "explanation": "「aristocratic」は「貴族の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「simultaneously」の意味として最も適切なものは？",
-          "choices": ["同時に", "順番に", "後で", "以前に"],
-          "correct": 0,
-          "explanation": "simultaneouslyは「同時に」という意味。simultaneous（同時の）の副詞形。",
+          "scenario": "「aromatic」の意味として最も適切なものは？",
+          "choices": [
+            "一致する",
+            "慰められる",
+            "心配して・関係して",
+            "香りの良い"
+          ],
+          "correct": 3,
+          "explanation": "「aromatic」は「香りの良い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「previously」の意味として最も適切なものは？",
-          "choices": ["以前に", "その後", "現在", "永遠に"],
-          "correct": 0,
-          "explanation": "previouslyは「以前に、それより前に」という意味。beforeよりやや形式的。",
+          "scenario": "「arrogant」の意味として最も適切なものは？",
+          "choices": [
+            "かさばる",
+            "傲慢な",
+            "大気の",
+            "同時の"
+          ],
+          "correct": 1,
+          "explanation": "「arrogant」は「傲慢な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「subsequently」の意味として最も適切なものは？",
-          "choices": ["その後、続いて", "その前に", "同時に", "まれに"],
-          "correct": 0,
-          "explanation": "subsequentlyは「その後、続いて」という意味。laterよりフォーマルな表現。",
+          "scenario": "「askew」の意味として最も適切なものは？",
+          "choices": [
+            "賞賛に値する",
+            "曲がった",
+            "状況による",
+            "傾いた"
+          ],
+          "correct": 3,
+          "explanation": "「askew」は「傾いた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「promptly」の意味として最も適切なものは？",
-          "choices": ["時間通りに、即座に", "遅れて", "だらだらと", "静かに"],
-          "correct": 0,
-          "explanation": "promptlyは「時間通りに、即座に」という意味。The meeting started promptly at 9.（会議は9時ぴったりに始まった）",
+          "scenario": "「aspiring」の意味として最も適切なものは？",
+          "choices": [
+            "伝染性の",
+            "唐突な",
+            "立方体の",
+            "熱望している"
+          ],
+          "correct": 3,
+          "explanation": "「aspiring」は「熱望している」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「immediately」の意味として最も適切なものは？",
-          "choices": ["直ちに", "後ほど", "たまに", "長期的に"],
-          "correct": 0,
-          "explanation": "immediatelyは「直ちに、すぐに」という意味。at onceとほぼ同義。",
+          "scenario": "「assertive」の意味として最も適切なものは？",
+          "choices": [
+            "無邪気な",
+            "自己主張する・断定的な",
+            "並行した・副次的な",
+            "法人の"
+          ],
+          "correct": 1,
+          "explanation": "「assertive」は「自己主張する・断定的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「temporarily」の意味として最も適切なものは？",
-          "choices": ["一時的に", "永久に", "定期的に", "頻繁に"],
-          "correct": 0,
-          "explanation": "temporarilyは「一時的に」という意味。反意語はpermanently（永久に）。",
+          "scenario": "「associated」の意味として最も適切なものは？",
+          "choices": [
+            "コロイドの",
+            "曲がった",
+            "慈悲深い",
+            "連合した・関連した"
+          ],
+          "correct": 3,
+          "explanation": "「associated」は「連合した・関連した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「periodically」の意味として最も適切なものは？",
-          "choices": ["定期的に", "不規則に", "一度だけ", "急に"],
+          "scenario": "「assorted」の意味として最も適切なものは？",
+          "choices": [
+            "詰め合わせた・各種の",
+            "賞賛に値する",
+            "自己主張する・断定的な",
+            "状況による"
+          ],
           "correct": 0,
-          "explanation": "periodicallyは「定期的に、周期的に」という意味。periodには「期間、周期」の意味がある。",
+          "explanation": "「assorted」は「詰め合わせた・各種の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「momentarily」の意味として最も適切なものは？",
-          "choices": ["ほんの一瞬、間もなく", "永遠に", "頻繁に", "以前から"],
+          "scenario": "「assuring」の意味として最も適切なものは？",
+          "choices": [
+            "心強い・安心させる",
+            "相関した",
+            "重荷となる",
+            "宇宙の"
+          ],
           "correct": 0,
-          "explanation": "momentarilyは「ほんの一瞬、（米）間もなく」という意味。moment（瞬間）に由来。",
+          "explanation": "「assuring」は「心強い・安心させる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 3,
-      "title": "副詞・前置詞編-3",
-      "type": "Prepositions of Place & Direction",
-      "emoji": "🧭",
-      "subtitle": "場所・方向を表す前置詞をチェック！",
+      "title": "形容詞・副詞編セット3",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 821~830",
       "questions": [
         {
-          "scenario": "「throughout」の意味として最も適切なものは？",
-          "choices": ["〜の至る所に、〜の間ずっと", "〜を除いて", "〜にもかかわらず", "〜の代わりに"],
-          "correct": 0,
-          "explanation": "throughoutは「〜の至る所に」「〜の間ずっと」という意味の前置詞。throughout the countryなど。",
+          "scenario": "「astonishing」の意味として最も適切なものは？",
+          "choices": [
+            "香りの良い",
+            "非難された",
+            "豊富な",
+            "驚くべき"
+          ],
+          "correct": 3,
+          "explanation": "「astonishing」は「驚くべき」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「beyond」の意味として最も適切なものは？",
-          "choices": ["〜の向こうに、〜を超えて", "〜の内側に", "〜に沿って", "〜の下に"],
+          "scenario": "「astounded」の意味として最も適切なものは？",
+          "choices": [
+            "びっくり仰天した",
+            "大気の",
+            "宇宙の",
+            "集中した"
+          ],
           "correct": 0,
-          "explanation": "beyondは「〜の向こうに、〜を超えて」という意味。beyond my expectationsなど比喩的にも使う。",
+          "explanation": "「astounded」は「びっくり仰天した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「amid」の意味として最も適切なものは？",
-          "choices": ["〜の真っただ中に", "〜の外側に", "〜より前に", "〜と比べて"],
-          "correct": 0,
-          "explanation": "amidは「〜の真っただ中に、〜に囲まれて」という意味。amid the crisis（危機の真っただ中で）のように使う。",
+          "scenario": "「atmospheric」の意味として最も適切なものは？",
+          "choices": [
+            "乾燥した",
+            "丸々と太った",
+            "大気の",
+            "重荷となる"
+          ],
+          "correct": 2,
+          "explanation": "「atmospheric」は「大気の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「alongside」の意味として最も適切なものは？",
-          "choices": ["〜と並んで、〜のそばに", "〜を越えて", "〜がなければ", "〜に反対して"],
-          "correct": 0,
-          "explanation": "alongsideは「〜と並んで、〜のそばに」という意味。alongside the riverなど。",
+          "scenario": "「authoritative」の意味として最も適切なものは？",
+          "choices": [
+            "血まみれの",
+            "驚くべき",
+            "身の毛のよだつ",
+            "権威ある"
+          ],
+          "correct": 3,
+          "explanation": "「authoritative」は「権威ある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「underneath」の意味として最も適切なものは？",
-          "choices": ["〜の真下に", "〜の上方に", "〜の周りに", "〜を通り抜けて"],
+          "scenario": "「autonomous」の意味として最も適切なものは？",
+          "choices": [
+            "自律的な",
+            "婚姻の",
+            "豊満な",
+            "決定的な"
+          ],
           "correct": 0,
-          "explanation": "underneathは「〜の真下に」という意味。underよりも「覆われて隠れている」ニュアンスが強い。",
+          "explanation": "「autonomous」は「自律的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「opposite」の意味として最も適切なものは？",
-          "choices": ["〜の向かい側に", "〜の内部に", "〜に沿って", "〜の間に"],
-          "correct": 0,
-          "explanation": "oppositeは前置詞として「〜の向かい側に」という意味。The bank is opposite the station.",
+          "scenario": "「auxiliary」の意味として最も適切なものは？",
+          "choices": [
+            "慰められる",
+            "補助の",
+            "年二回の",
+            "骨ばった"
+          ],
+          "correct": 1,
+          "explanation": "「auxiliary」は「補助の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「via」の意味として最も適切なものは？",
-          "choices": ["〜を経由して", "〜にもかかわらず", "〜のために", "〜を除いて"],
-          "correct": 0,
-          "explanation": "viaは「〜を経由して」という意味。We flew to Paris via London.（ロンドン経由でパリへ飛んだ）",
+          "scenario": "「awesome」の意味として最も適切なものは？",
+          "choices": [
+            "南極の",
+            "すばらしい・荘厳な",
+            "コロイドの",
+            "活動的な・動的な"
+          ],
+          "correct": 1,
+          "explanation": "「awesome」は「すばらしい・荘厳な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「toward」の意味として最も適切なものは？",
-          "choices": ["〜の方へ", "〜から離れて", "〜の中で", "〜と一緒に"],
+          "scenario": "「bald」の意味として最も適切なものは？",
+          "choices": [
+            "はげた",
+            "アルカリ性の",
+            "悲惨な",
+            "伝染性の"
+          ],
           "correct": 0,
-          "explanation": "towardは「〜の方へ、〜に向かって」という意味。方向を示す前置詞。",
+          "explanation": "「bald」は「はげた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「beneath」の意味として最も適切なものは？",
-          "choices": ["〜の下に", "〜の上に", "〜の前に", "〜の後ろに"],
+          "scenario": "「banal」の意味として最も適切なものは？",
+          "choices": [
+            "平凡な",
+            "集中した",
+            "相関した",
+            "儀式用の"
+          ],
           "correct": 0,
-          "explanation": "beneathは「〜の下に」という意味でunderのやや文語的な同義語。",
+          "explanation": "「banal」は「平凡な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「among」の意味として最も適切なものは？",
-          "choices": ["（3つ以上）の間に", "（2つ）の間に", "〜を通して", "〜に対して"],
-          "correct": 0,
-          "explanation": "amongは3つ以上のものの「間に」という意味。2者の間はbetweenを使う。",
+          "scenario": "「benevolent」の意味として最も適切なものは？",
+          "choices": [
+            "血まみれの",
+            "痛烈な",
+            "婚姻の",
+            "慈悲深い"
+          ],
+          "correct": 3,
+          "explanation": "「benevolent」は「慈悲深い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 4,
-      "title": "副詞・前置詞編-4",
-      "type": "Prepositions of Manner & Cause",
-      "emoji": "🔗",
-      "subtitle": "様態・理由を表す前置詞句を攻略！",
+      "title": "形容詞・副詞編セット4",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 831~840",
       "questions": [
         {
-          "scenario": "「despite」の意味として最も適切なものは？",
-          "choices": ["〜にもかかわらず", "〜のおかげで", "〜に関して", "〜の代わりに"],
+          "scenario": "「bent」の意味として最も適切なものは？",
+          "choices": [
+            "曲がった",
+            "豊富な",
+            "凝縮された",
+            "香りの良い"
+          ],
           "correct": 0,
-          "explanation": "despiteは「〜にもかかわらず」という意味の前置詞。despite the rain（雨にもかかわらず）",
+          "explanation": "「bent」は「曲がった」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「regarding」の意味として最も適切なものは？",
-          "choices": ["〜に関して", "〜にもかかわらず", "〜を除いて", "〜のために"],
+          "scenario": "「bewildered」の意味として最も適切なものは？",
+          "choices": [
+            "当惑した",
+            "心強い・安心させる",
+            "補助の",
+            "熱望している"
+          ],
           "correct": 0,
-          "explanation": "regardingは「〜に関して」という意味。concerningとほぼ同義でビジネス文書でよく使われる。",
+          "explanation": "「bewildered」は「当惑した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「concerning」の意味として最も適切なものは？",
-          "choices": ["〜に関する", "〜がなければ", "〜より前に", "〜を通じて"],
-          "correct": 0,
-          "explanation": "concerningは前置詞として「〜に関する、〜について」という意味。文書で用件を述べる際によく使う。",
+          "scenario": "「biannual」の意味として最も適切なものは？",
+          "choices": [
+            "構成する",
+            "騒々しい",
+            "婚姻の",
+            "年二回の"
+          ],
+          "correct": 3,
+          "explanation": "「biannual」は「年二回の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「given」の意味として最も適切なものは？",
-          "choices": ["〜を考慮すると", "〜にもかかわらず", "〜の代わりに", "〜を除いて"],
-          "correct": 0,
-          "explanation": "givenは前置詞的に「〜を考慮すると、〜を踏まえると」という意味。Given the circumstances,（状況を考えると）",
+          "scenario": "「binding」の意味として最も適切なものは？",
+          "choices": [
+            "小粋な",
+            "伝染性の",
+            "天体の",
+            "拘束力のある"
+          ],
+          "correct": 3,
+          "explanation": "「binding」は「拘束力のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「due to」の意味として最も適切なものは？",
-          "choices": ["〜が原因で", "〜にもかかわらず", "〜に加えて", "〜を除いて"],
-          "correct": 0,
-          "explanation": "due toは「〜が原因で、〜のせいで」という意味。because ofとほぼ同義。",
+          "scenario": "「bizarre」の意味として最も適切なものは？",
+          "choices": [
+            "同時の",
+            "集中した",
+            "心配して・関係して",
+            "奇妙な"
+          ],
+          "correct": 3,
+          "explanation": "「bizarre」は「奇妙な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「owing to」の意味として最も適切なものは？",
-          "choices": ["〜のために、〜が原因で", "〜と引き換えに", "〜を除いては", "〜に反して"],
-          "correct": 0,
-          "explanation": "owing toは「〜のために、〜が原因で」という意味。due toとほぼ同義のやや硬い表現。",
+          "scenario": "「blatant」の意味として最も適切なものは？",
+          "choices": [
+            "快活な",
+            "丸々と太った",
+            "あからさまな",
+            "構成する"
+          ],
+          "correct": 2,
+          "explanation": "「blatant」は「あからさまな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「in line with」の意味として最も適切なものは？",
-          "choices": ["〜に一致して、〜に沿って", "〜の理由で", "〜に応じて", "〜と比べて"],
+          "scenario": "「blithe」の意味として最も適切なものは？",
+          "choices": [
+            "快活な",
+            "心強い・安心させる",
+            "考えられる",
+            "凝縮された"
+          ],
           "correct": 0,
-          "explanation": "in line withは「〜に一致して、〜に沿って」という意味。in line with expectationsで「予想通りに」。",
+          "explanation": "「blithe」は「快活な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「according to」の意味として最も適切なものは？",
-          "choices": ["〜によれば", "〜にもかかわらず", "〜の代わりに", "〜と違って"],
+          "scenario": "「bloated」の意味として最も適切なものは？",
+          "choices": [
+            "膨張した",
+            "びっくり仰天した",
+            "状況による",
+            "傲慢な"
+          ],
           "correct": 0,
-          "explanation": "according toは「〜によれば」という意味。情報の出典を示す際に使う。",
+          "explanation": "「bloated」は「膨張した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「at odds with」の意味として最も適切なものは？",
-          "choices": ["〜と対立して、〜と食い違って", "〜に反対して", "〜と一緒に", "〜を超えて"],
-          "correct": 0,
-          "explanation": "at odds withは「〜と対立して、〜と食い違って」という意味。be at odds with a colleagueで「同僚と対立している」。",
+          "scenario": "「bloody」の意味として最も適切なものは？",
+          "choices": [
+            "構成する",
+            "非難された",
+            "落ち着いた",
+            "血まみれの"
+          ],
+          "correct": 3,
+          "explanation": "「bloody」は「血まみれの」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「in light of」の意味として最も適切なものは？",
-          "choices": ["〜を考慮すると", "〜にもかかわらず", "〜を除いて", "〜より先に"],
-          "correct": 0,
-          "explanation": "in light ofは「〜を考慮すると、〜を踏まえて」という意味。特定の情報を踏まえて判断・行動する際に使う表現。",
+          "scenario": "「blurred」の意味として最も適切なものは？",
+          "choices": [
+            "連合した・関連した",
+            "丸々と太った",
+            "曲がった・不誠実な",
+            "ぼやけた"
+          ],
+          "correct": 3,
+          "explanation": "「blurred」は「ぼやけた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 5,
-      "title": "副詞・前置詞編-5",
-      "type": "Subordinating Conjunctions",
-      "emoji": "🪢",
-      "subtitle": "節をつなぐ接続詞をマスター！",
+      "title": "形容詞・副詞編セット5",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 841~850",
       "questions": [
         {
-          "scenario": "「although」の意味として最も適切なものは？",
-          "choices": ["〜だけれども", "〜なので", "〜する限り", "〜する前に"],
+          "scenario": "「boistrous」の意味として最も適切なものは？",
+          "choices": [
+            "騒々しい",
+            "心強い・安心させる",
+            "婚姻の",
+            "拘束力のある"
+          ],
           "correct": 0,
-          "explanation": "althoughは「〜だけれども」という譲歩を表す接続詞。thoughとほぼ同義でやや形式的。",
+          "explanation": "「boistrous」は「騒々しい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「whereas」の意味として最も適切なものは？",
-          "choices": ["一方で（対比）", "〜なので", "〜するために", "〜と同時に"],
-          "correct": 0,
-          "explanation": "whereasは「一方で」という対比を表す接続詞。二つの事柄の違いを述べる際に使う。",
+          "scenario": "「bony」の意味として最も適切なものは？",
+          "choices": [
+            "是正する",
+            "身の毛のよだつ",
+            "連合した・関連した",
+            "骨ばった"
+          ],
+          "correct": 3,
+          "explanation": "「bony」は「骨ばった」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「unless」の意味として最も適切なものは？",
-          "choices": ["〜しない限り", "〜する限り", "〜する間", "〜する前に"],
-          "correct": 0,
-          "explanation": "unlessは「〜しない限り」という意味。if...notに近い条件を表す接続詞。",
+          "scenario": "「bountiful」の意味として最も適切なものは？",
+          "choices": [
+            "活動的な・動的な",
+            "重荷となる",
+            "権威ある",
+            "豊富な"
+          ],
+          "correct": 3,
+          "explanation": "「bountiful」は「豊富な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「provided that」の意味として最も適切なものは？",
-          "choices": ["〜という条件で", "〜にもかかわらず", "〜であるかのように", "〜する代わりに"],
-          "correct": 0,
-          "explanation": "provided thatは「〜という条件で、もし〜ならば」という意味。ifとほぼ同義の条件節を導く。",
+          "scenario": "「brittle」の意味として最も適切なものは？",
+          "choices": [
+            "血まみれの",
+            "騎士道精神の",
+            "詰め合わせた・各種の",
+            "もろい"
+          ],
+          "correct": 3,
+          "explanation": "「brittle」は「もろい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「even though」の意味として最も適切なものは？",
-          "choices": ["たとえ〜でも", "〜なので", "〜する時", "〜する前に"],
-          "correct": 0,
-          "explanation": "even thoughは「たとえ〜でも」という強い譲歩を表す接続詞。althoughより口語的で強調される。",
+          "scenario": "「bulky」の意味として最も適切なものは？",
+          "choices": [
+            "論争好きな",
+            "宇宙の",
+            "かさばる",
+            "並行した・副次的な"
+          ],
+          "correct": 2,
+          "explanation": "「bulky」は「かさばる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「in case」の意味として最も適切なものは？",
-          "choices": ["〜する場合に備えて", "〜する限り", "〜であろうとも", "〜した後で"],
-          "correct": 0,
-          "explanation": "in caseは「〜する場合に備えて」という意味。Take an umbrella in case it rains.（雨が降る場合に備えて傘を持って行きなさい）",
+          "scenario": "「buoyant」の意味として最も適切なものは？",
+          "choices": [
+            "凝縮された",
+            "浮力のある・陽気な",
+            "信頼できる",
+            "傲慢な"
+          ],
+          "correct": 1,
+          "explanation": "「buoyant」は「浮力のある・陽気な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「as long as」の意味として最も適切なものは？",
-          "choices": ["〜する限りは", "〜にもかかわらず", "〜する前に", "〜であるかのように"],
+          "scenario": "「burden-some」の意味として最も適切なものは？",
+          "choices": [
+            "重荷となる",
+            "騎士道精神の",
+            "傲慢な",
+            "顧問の"
+          ],
           "correct": 0,
-          "explanation": "as long asは「〜する限りは」という条件を表す接続詞。providedと似た用法。",
+          "explanation": "「burden-some」は「重荷となる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「so that」の意味として最も適切なものは？",
-          "choices": ["〜するために（目的）", "〜だけれども", "〜する代わりに", "〜する前に"],
-          "correct": 0,
-          "explanation": "so thatは「〜するために」という目的を表す接続詞。She studied hard so that she could pass.",
+          "scenario": "「burly」の意味として最も適切なものは？",
+          "choices": [
+            "年代順の",
+            "丸々と太った",
+            "傲慢な",
+            "たくましい"
+          ],
+          "correct": 3,
+          "explanation": "「burly」は「たくましい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「now that」の意味として最も適切なものは？",
-          "choices": ["今や〜なので", "〜する前に", "〜であるにもかかわらず", "〜する限り"],
-          "correct": 0,
-          "explanation": "now thatは「今や〜なので」という理由を表す接続詞。Now that you're here, let's start.",
+          "scenario": "「buxom」の意味として最も適切なものは？",
+          "choices": [
+            "是正する",
+            "自己主張する・断定的な",
+            "豊満な",
+            "傾いた"
+          ],
+          "correct": 2,
+          "explanation": "「buxom」は「豊満な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「once」の接続詞としての意味に最も適切なものは？",
-          "choices": ["いったん〜すると", "〜にもかかわらず", "〜する代わりに", "〜と比べて"],
-          "correct": 0,
-          "explanation": "onceは接続詞として「いったん〜すると」という意味。Once you start, you can't stop.",
+          "scenario": "「calamitous」の意味として最も適切なものは？",
+          "choices": [
+            "傾いた",
+            "悲惨な",
+            "自律的な",
+            "無邪気な"
+          ],
+          "correct": 1,
+          "explanation": "「calamitous」は「悲惨な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 6,
-      "title": "副詞・前置詞編-6",
-      "type": "Connective Adverbs (Transition Words)",
-      "emoji": "🌉",
-      "subtitle": "文をつなぐ接続副詞を覚えよう！",
+      "title": "形容詞・副詞編セット6",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 851~860",
       "questions": [
         {
-          "scenario": "「however」の意味として最も適切なものは？",
-          "choices": ["しかしながら", "その結果", "さらに", "同様に"],
+          "scenario": "「caustic」の意味として最も適切なものは？",
+          "choices": [
+            "痛烈な",
+            "奇妙な",
+            "良心的な",
+            "豊富な"
+          ],
           "correct": 0,
-          "explanation": "howeverは「しかしながら」という逆接を表す接続副詞。butより文語的で文頭・文中に置ける。",
+          "explanation": "「caustic」は「痛烈な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「moreover」の意味として最も適切なものは？",
-          "choices": ["その上、さらに", "それにもかかわらず", "その代わりに", "したがって"],
-          "correct": 0,
-          "explanation": "moreoverは「その上、さらに」という追加の情報を導く接続副詞。furthermoreと近い。",
+          "scenario": "「celestial」の意味として最も適切なものは？",
+          "choices": [
+            "腐食性の",
+            "奇妙な",
+            "友好的な",
+            "天体の"
+          ],
+          "correct": 3,
+          "explanation": "「celestial」は「天体の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「nevertheless」の意味として最も適切なものは？",
-          "choices": ["それにもかかわらず", "その結果として", "同様に", "その代わりに"],
-          "correct": 0,
-          "explanation": "neverthelessは「それにもかかわらず」という逆接を表す。neverthelessはhoweverよりやや硬い表現。",
+          "scenario": "「ceremonial」の意味として最も適切なものは？",
+          "choices": [
+            "活動的な・動的な",
+            "儀式用の",
+            "感謝している",
+            "豊富な"
+          ],
+          "correct": 1,
+          "explanation": "「ceremonial」は「儀式用の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「furthermore」の意味として最も適切なものは？",
-          "choices": ["さらに、その上", "しかしながら", "その代わりに", "要するに"],
-          "correct": 0,
-          "explanation": "furthermoreは「さらに、その上」という追加を表す接続副詞。moreoverと同義。",
+          "scenario": "「chic」の意味として最も適切なものは？",
+          "choices": [
+            "すばらしい・荘厳な",
+            "小粋な",
+            "伝染性の",
+            "傾いた"
+          ],
+          "correct": 1,
+          "explanation": "「chic」は「小粋な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「therefore」の意味として最も適切なものは？",
-          "choices": ["それゆえに、したがって", "それにもかかわらず", "その代わりに", "同様に"],
+          "scenario": "「childlike」の意味として最も適切なものは？",
+          "choices": [
+            "無邪気な",
+            "凹面の",
+            "うぬぼれた",
+            "豊富な"
+          ],
           "correct": 0,
-          "explanation": "thereforeは「それゆえに、したがって」という結果・結論を表す接続副詞。",
+          "explanation": "「childlike」は「無邪気な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「consequently」の意味として最も適切なものは？",
-          "choices": ["その結果として", "その反面", "それにもかかわらず", "要するに"],
-          "correct": 0,
-          "explanation": "consequentlyは「その結果として」という意味。asa resultとほぼ同義の接続副詞。",
+          "scenario": "「chivalrous」の意味として最も適切なものは？",
+          "choices": [
+            "相関した",
+            "儀式用の",
+            "騎士道精神の",
+            "もろい"
+          ],
+          "correct": 2,
+          "explanation": "「chivalrous」は「騎士道精神の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「otherwise」の意味として最も適切なものは？",
-          "choices": ["さもなければ", "その上", "同様に", "したがって"],
-          "correct": 0,
-          "explanation": "otherwiseは「さもなければ」という意味。Hurry up, otherwise you'll be late.（急ぎなさい、さもないと遅れるよ）",
+          "scenario": "「chronological」の意味として最も適切なものは？",
+          "choices": [
+            "信頼できる",
+            "豊富な",
+            "年代順の",
+            "すばらしい・荘厳な"
+          ],
+          "correct": 2,
+          "explanation": "「chronological」は「年代順の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「meanwhile」の意味として最も適切なものは？",
-          "choices": ["その間に、一方で", "その結果として", "それにもかかわらず", "要するに"],
-          "correct": 0,
-          "explanation": "meanwhileは「その間に、一方で」という意味。同時進行の出来事を対比する時に使う。",
+          "scenario": "「chubby」の意味として最も適切なものは？",
+          "choices": [
+            "慰められる",
+            "申し立てられた・疑わしい",
+            "自律的な",
+            "丸々と太った"
+          ],
+          "correct": 3,
+          "explanation": "「chubby」は「丸々と太った」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「likewise」の意味として最も適切なものは？",
-          "choices": ["同様に", "それにもかかわらず", "その代わりに", "結局のところ"],
-          "correct": 0,
-          "explanation": "likewiseは「同様に、同じように」という意味。similarlyとほぼ同義。",
+          "scenario": "「circumstantial」の意味として最も適切なものは？",
+          "choices": [
+            "補助の",
+            "貴族の",
+            "状況による",
+            "騎士道精神の"
+          ],
+          "correct": 2,
+          "explanation": "「circumstantial」は「状況による」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「instead」の意味として最も適切なものは？",
-          "choices": ["その代わりに", "その上に", "それにもかかわらず", "したがって"],
-          "correct": 0,
-          "explanation": "insteadは「その代わりに」という意味の副詞。instead ofは前置詞句として使う。",
+          "scenario": "「collateral」の意味として最も適切なものは？",
+          "choices": [
+            "連合した・関連した",
+            "変換できる",
+            "たくましい",
+            "並行した・副次的な"
+          ],
+          "correct": 3,
+          "explanation": "「collateral」は「並行した・副次的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 7,
-      "title": "副詞・前置詞編-7",
-      "type": "Sentence Adverbs (Opinion & Certainty)",
-      "emoji": "💭",
-      "subtitle": "話し手の判断を表す副詞をマスター！",
+      "title": "形容詞・副詞編セット7",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 861~870",
       "questions": [
         {
-          "scenario": "「apparently」の意味として最も適切なものは？",
-          "choices": ["どうやら〜らしい", "明らかに間違って", "決して〜ない", "同時に"],
+          "scenario": "「colloidal」の意味として最も適切なものは？",
+          "choices": [
+            "コロイドの",
+            "変換できる",
+            "貴族の",
+            "落ち着いた"
+          ],
           "correct": 0,
-          "explanation": "apparentlyは「どうやら〜らしい」という伝聞・推測を表す副詞。Apparently, she moved abroad.",
+          "explanation": "「colloidal」は「コロイドの」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「presumably」の意味として最も適切なものは？",
-          "choices": ["おそらく、たぶん", "確実に", "決して〜ない", "皮肉にも"],
-          "correct": 0,
-          "explanation": "presumablyは「おそらく、たぶん」という推測を表す副詞。presume（推定する）に由来。",
+          "scenario": "「comparable」の意味として最も適切なものは？",
+          "choices": [
+            "誠意ある",
+            "拘束力のある",
+            "比較できる",
+            "同時の"
+          ],
+          "correct": 2,
+          "explanation": "「comparable」は「比較できる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「undoubtedly」の意味として最も適切なものは？",
-          "choices": ["疑いなく、確実に", "おそらく", "まれに", "偶然にも"],
-          "correct": 0,
-          "explanation": "undoubtedlyは「疑いなく、確実に」という意味。doubt（疑い）の否定形+副詞語尾。",
+          "scenario": "「composed」の意味として最も適切なものは？",
+          "choices": [
+            "アルカリ性の",
+            "同時の",
+            "落ち着いた",
+            "凹面の"
+          ],
+          "correct": 2,
+          "explanation": "「composed」は「落ち着いた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「arguably」の意味として最も適切なものは？",
-          "choices": ["ほぼ間違いなく、議論の余地はあるが", "明らかに誤って", "偶然", "一時的に"],
+          "scenario": "「concave」の意味として最も適切なものは？",
+          "choices": [
+            "凹面の",
+            "あからさまな",
+            "集中した",
+            "重荷となる"
+          ],
           "correct": 0,
-          "explanation": "arguablyは「ほぼ間違いなく（〜と主張できる）」という意味。断定を和らげつつ強調する副詞。",
+          "explanation": "「concave」は「凹面の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「ideally」の意味として最も適切なものは？",
-          "choices": ["理想を言えば", "実際には", "残念ながら", "とりわけ"],
-          "correct": 0,
-          "explanation": "ideallyは「理想を言えば、理想的には」という意味。Ideally, we would finish by Friday.",
+          "scenario": "「conceited」の意味として最も適切なものは？",
+          "choices": [
+            "並行した・副次的な",
+            "うぬぼれた",
+            "ぼやけた",
+            "権威ある"
+          ],
+          "correct": 1,
+          "explanation": "「conceited」は「うぬぼれた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「frankly」の意味として最も適切なものは？",
-          "choices": ["率直に言って", "遠回しに言うと", "おそらく", "驚いたことに"],
+          "scenario": "「conceivable」の意味として最も適切なものは？",
+          "choices": [
+            "考えられる",
+            "国際的な",
+            "良心的な",
+            "誠意ある"
+          ],
           "correct": 0,
-          "explanation": "franklyは「率直に言って」という意味。Frankly, I don't agree.のように前置きで使う。",
+          "explanation": "「conceivable」は「考えられる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「honestly」の意味として最も適切なものは？",
-          "choices": ["正直に言うと", "厳密に言えば", "皮肉にも", "驚くべきことに"],
+          "scenario": "「concentrated」の意味として最も適切なものは？",
+          "choices": [
+            "集中した",
+            "矛盾する",
+            "騒々しい",
+            "論争好きな"
+          ],
           "correct": 0,
-          "explanation": "honestlyは「正直に言うと」という意味。会話の前置きとして本音を述べる時に使う。",
+          "explanation": "「concentrated」は「集中した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「surprisingly」の意味として最も適切なものは？",
-          "choices": ["驚いたことに", "予想通りに", "残念ながら", "おおむね"],
-          "correct": 0,
-          "explanation": "surprisinglyは「驚いたことに」という意味。予想外の結果を述べる際に文頭で使うことが多い。",
+          "scenario": "「concerned」の意味として最も適切なものは？",
+          "choices": [
+            "目立つ",
+            "心配して・関係して",
+            "一致する",
+            "びっくり仰天した"
+          ],
+          "correct": 1,
+          "explanation": "「concerned」は「心配して・関係して」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「admittedly」の意味として最も適切なものは？",
-          "choices": ["認めるところによれば、確かに", "驚くべきことに", "幸運にも", "厳密には"],
-          "correct": 0,
-          "explanation": "admittedlyは「確かに（認めざるを得ないが）」という意味。譲歩しつつ話を進める副詞。",
+          "scenario": "「conclusive」の意味として最も適切なものは？",
+          "choices": [
+            "一致する",
+            "同時の",
+            "決定的な",
+            "乾燥した"
+          ],
+          "correct": 2,
+          "explanation": "「conclusive」は「決定的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「essentially」の意味として最も適切なものは？",
-          "choices": ["本質的には、要するに", "偶然にも", "皮肉にも", "一時的に"],
-          "correct": 0,
-          "explanation": "essentiallyは「本質的には、要するに」という意味。essence（本質）に由来する副詞。",
+          "scenario": "「concurrent」の意味として最も適切なものは？",
+          "choices": [
+            "骨ばった",
+            "同時の",
+            "曲がった",
+            "友好的な"
+          ],
+          "correct": 1,
+          "explanation": "「concurrent」は「同時の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 8,
-      "title": "副詞・前置詞編-8",
-      "type": "Prepositional Idioms",
-      "emoji": "🧩",
-      "subtitle": "前置詞を含む熟語表現をチェック！",
+      "title": "形容詞・副詞編セット8",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 871~880",
       "questions": [
         {
-          "scenario": "「except for」の意味として最も適切なものは？",
-          "choices": ["〜を除いては", "〜に加えて", "〜に応じて", "〜と引き換えに"],
-          "correct": 0,
-          "explanation": "except forは「〜を除いては」という意味。Except for John, everyone attended.",
+          "scenario": "「condemned」の意味として最も適切なものは？",
+          "choices": [
+            "うぬぼれた",
+            "非難された",
+            "権威ある",
+            "平凡な"
+          ],
+          "correct": 1,
+          "explanation": "「condemned」は「非難された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「other than」の意味として最も適切なものは？",
-          "choices": ["〜を除いて、〜以外に", "〜に加えて", "〜と比べて", "〜のおかげで"],
-          "correct": 0,
-          "explanation": "other thanは「〜を除いて、〜以外に」という意味。exceptとほぼ同義。",
+          "scenario": "「condensed」の意味として最も適切なものは？",
+          "choices": [
+            "うぬぼれた",
+            "凝縮された",
+            "考えられる",
+            "香りの良い"
+          ],
+          "correct": 1,
+          "explanation": "「condensed」は「凝縮された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「as for」の意味として最も適切なものは？",
-          "choices": ["〜については、〜に関する限り", "〜のために", "〜にもかかわらず", "〜と引き換えに"],
-          "correct": 0,
-          "explanation": "as forは「〜については」という意味。話題を転換して個別の話をする時に使う。",
+          "scenario": "「conjugal」の意味として最も適切なものは？",
+          "choices": [
+            "騎士道精神の",
+            "慈悲深い",
+            "年二回の",
+            "婚姻の"
+          ],
+          "correct": 3,
+          "explanation": "「conjugal」は「婚姻の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「as to」の意味として最も適切なものは？",
-          "choices": ["〜に関して", "〜にもかかわらず", "〜の代わりに", "〜と一緒に"],
-          "correct": 0,
-          "explanation": "as toは「〜に関して」という意味。regardingやconcerningに近いフォーマルな表現。",
+          "scenario": "「connected」の意味として最も適切なものは？",
+          "choices": [
+            "快活な",
+            "豊富な",
+            "びっくり仰天した",
+            "接続された"
+          ],
+          "correct": 3,
+          "explanation": "「connected」は「接続された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「on the brink of」の意味として最も適切なものは？",
-          "choices": ["〜の瀬戸際に", "〜に反して", "〜を除いて", "〜に加えて"],
-          "correct": 0,
-          "explanation": "on the brink ofは「〜の瀬戸際に」という意味。on the brink of warで「戦争の瀬戸際で」のように使う。",
+          "scenario": "「conscientious」の意味として最も適切なものは？",
+          "choices": [
+            "痛烈な",
+            "ぼやけた",
+            "良心的な",
+            "膨張した"
+          ],
+          "correct": 2,
+          "explanation": "「conscientious」は「良心的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「in relation to」の意味として最も適切なものは？",
-          "choices": ["〜に関連して", "〜にもかかわらず", "〜を除いて", "〜と引き換えに"],
-          "correct": 0,
-          "explanation": "in relation toは「〜に関連して、〜と比べて」という意味。",
+          "scenario": "「consolable」の意味として最も適切なものは？",
+          "choices": [
+            "傲慢な",
+            "はげた",
+            "慰められる",
+            "論争好きな"
+          ],
+          "correct": 2,
+          "explanation": "「consolable」は「慰められる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「on the verge of」の意味として最も適切なものは？",
-          "choices": ["〜の瀬戸際で、今にも〜しそうで", "〜にもかかわらず", "〜の代わりに", "〜のために"],
-          "correct": 0,
-          "explanation": "on the verge ofは「〜の瀬戸際で、今にも〜しそうで」という意味。on the verge of tearsで「今にも泣き出しそうで」。",
+          "scenario": "「conspicuous」の意味として最も適切なものは？",
+          "choices": [
+            "うぬぼれた",
+            "申し立てられた・疑わしい",
+            "目立つ",
+            "腐食性の"
+          ],
+          "correct": 2,
+          "explanation": "「conspicuous」は「目立つ」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「for lack of」の意味として最も適切なものは？",
-          "choices": ["〜が不足しているために", "〜にもかかわらず", "〜を除いて", "〜と比べて"],
+          "scenario": "「constituent」の意味として最も適切なものは？",
+          "choices": [
+            "構成する",
+            "慈悲深い",
+            "熱望している",
+            "平凡な"
+          ],
           "correct": 0,
-          "explanation": "for lack ofは「〜が不足しているために」という意味。for lack of evidenceで「証拠不足のために」。",
+          "explanation": "「constituent」は「構成する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「in return for」の意味として最も適切なものは？",
-          "choices": ["〜の見返りとして", "〜のおかげで", "〜に加えて", "〜と一緒に"],
-          "correct": 0,
-          "explanation": "in return forは「〜の見返りとして」という意味。in return for his helpで「彼の助けの見返りとして」。",
+          "scenario": "「consultative」の意味として最も適切なものは？",
+          "choices": [
+            "構成する",
+            "顧問の",
+            "快活な",
+            "豊富な"
+          ],
+          "correct": 1,
+          "explanation": "「consultative」は「顧問の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「at the hands of」の意味として最も適切なものは？",
-          "choices": ["（人）の手によって、〜のせいで", "〜のおかげで", "〜を除いて", "〜と引き換えに"],
-          "correct": 0,
-          "explanation": "at the hands ofは「（人）の手によって」という意味。suffer at the hands of ~で「~によって苦しめられる」。",
+          "scenario": "「contagious」の意味として最も適切なものは？",
+          "choices": [
+            "権威ある",
+            "信頼できる",
+            "もろい",
+            "伝染性の"
+          ],
+          "correct": 3,
+          "explanation": "「contagious」は「伝染性の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 9,
-      "title": "副詞・前置詞編-9",
-      "type": "Formal Connectors & Conjunctions",
-      "emoji": "📜",
-      "subtitle": "フォーマルな接続表現に挑戦！",
+      "title": "形容詞・副詞編セット9",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 881~890",
       "questions": [
         {
-          "scenario": "「nonetheless」の意味として最も適切なものは？",
-          "choices": ["それにもかかわらず", "その結果", "同様に", "その代わりに"],
-          "correct": 0,
-          "explanation": "nonethelessは「それにもかかわらず」という意味。neverthelessとほぼ同義。",
+          "scenario": "「contentious」の意味として最も適切なものは？",
+          "choices": [
+            "接続された",
+            "論争好きな",
+            "平凡な",
+            "豊富な"
+          ],
+          "correct": 1,
+          "explanation": "「contentious」は「論争好きな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「notwithstanding」の意味として最も適切なものは？",
-          "choices": ["〜にもかかわらず", "〜のおかげで", "〜を除いて", "〜と一緒に"],
-          "correct": 0,
-          "explanation": "notwithstandingは「〜にもかかわらず」という意味の前置詞・副詞。despiteの硬い同義語。",
+          "scenario": "「contradictory」の意味として最も適切なものは？",
+          "choices": [
+            "良心的な",
+            "心強い・安心させる",
+            "居心地のよい",
+            "矛盾する"
+          ],
+          "correct": 3,
+          "explanation": "「contradictory」は「矛盾する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hence」の意味として最も適切なものは？",
-          "choices": ["それゆえに", "それにもかかわらず", "その代わりに", "同時に"],
-          "correct": 0,
-          "explanation": "henceは「それゆえに、したがって」という意味。thereforeと似た結論を表す副詞。",
+          "scenario": "「convertible」の意味として最も適切なものは？",
+          "choices": [
+            "詰め合わせた・各種の",
+            "膨張した",
+            "変換できる",
+            "もろい"
+          ],
+          "correct": 2,
+          "explanation": "「convertible」は「変換できる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「thus」の意味として最も適切なものは？",
-          "choices": ["このように、それゆえ", "その反面", "さらに", "それにもかかわらず"],
-          "correct": 0,
-          "explanation": "thusは「このように、それゆえ」という意味。結果や方法を示す接続副詞。",
+          "scenario": "「copious」の意味として最も適切なものは？",
+          "choices": [
+            "法人の",
+            "豊富な",
+            "補助の",
+            "権威ある"
+          ],
+          "correct": 1,
+          "explanation": "「copious」は「豊富な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「accordingly」の意味として最も適切なものは？",
-          "choices": ["それに応じて、したがって", "それにもかかわらず", "その代わりに", "同様に"],
+          "scenario": "「cordial」の意味として最も適切なものは？",
+          "choices": [
+            "誠意ある",
+            "慈悲深い",
+            "信頼できる",
+            "豊富な"
+          ],
           "correct": 0,
-          "explanation": "accordinglyは「それに応じて、したがって」という意味。前述の状況に合わせて行動する際に使う。",
+          "explanation": "「cordial」は「誠意ある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「whereby」の意味として最も適切なものは？",
-          "choices": ["それによって（〜する）", "それにもかかわらず", "その代わりに", "同時に"],
-          "correct": 0,
-          "explanation": "wherebyは「それによって（〜する）」という意味の関係副詞的表現。契約書などの硬い文書でよく使われる。",
+          "scenario": "「corporate」の意味として最も適切なものは？",
+          "choices": [
+            "決定的な",
+            "法人の",
+            "伝染性の",
+            "びっくり仰天した"
+          ],
+          "correct": 1,
+          "explanation": "「corporate」は「法人の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「insofar as」の意味として最も適切なものは？",
-          "choices": ["〜する限りにおいて", "〜にもかかわらず", "〜する代わりに", "〜する前に"],
-          "correct": 0,
-          "explanation": "insofar asは「〜する限りにおいて」という意味。to the extent thatに近い硬い接続表現。",
+          "scenario": "「corrective」の意味として最も適切なものは？",
+          "choices": [
+            "非難された",
+            "是正する",
+            "骨ばった",
+            "腐食性の"
+          ],
+          "correct": 1,
+          "explanation": "「corrective」は「是正する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「inasmuch as」の意味として最も適切なものは？",
-          "choices": ["〜という点において、〜なので", "〜にもかかわらず", "〜する代わりに", "〜する前に"],
-          "correct": 0,
-          "explanation": "inasmuch asは「〜という点において、〜なので」という意味の硬い接続詞。sinceに近い。",
+          "scenario": "「correlated」の意味として最も適切なものは？",
+          "choices": [
+            "宇宙の",
+            "決定的な",
+            "慈悲深い",
+            "相関した"
+          ],
+          "correct": 3,
+          "explanation": "「correlated」は「相関した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「lest」の意味として最も適切なものは？",
-          "choices": ["〜しないように", "〜する限り", "〜にもかかわらず", "〜する代わりに"],
-          "correct": 0,
-          "explanation": "lestは「〜しないように」という意味の古風・文語的な接続詞。so that...notに近い。",
+          "scenario": "「corresponding」の意味として最も適切なものは？",
+          "choices": [
+            "自己主張する・断定的な",
+            "一致する",
+            "年二回の",
+            "アルカリ性の"
+          ],
+          "correct": 1,
+          "explanation": "「corresponding」は「一致する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「whereupon」の意味として最も適切なものは？",
-          "choices": ["すると、その結果", "それにもかかわらず", "その代わりに", "〜する限り"],
-          "correct": 0,
-          "explanation": "whereuponは「すると、その結果として」という意味。前の出来事に続いて何かが起こる様子を表す文語的表現。",
+          "scenario": "「corrosive」の意味として最も適切なものは？",
+          "choices": [
+            "補助の",
+            "骨ばった",
+            "腐食性の",
+            "感謝している"
+          ],
+          "correct": 2,
+          "explanation": "「corrosive」は「腐食性の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 10,
-      "title": "副詞・前置詞編-10",
-      "type": "Adverbs of Extent & Emphasis",
-      "emoji": "⚡",
-      "subtitle": "程度・強調の副詞で総仕上げ！",
+      "title": "形容詞・副詞編セット10",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 891~900",
       "questions": [
         {
-          "scenario": "「barely」の意味として最も適切なものは？",
-          "choices": ["かろうじて、ほとんど〜ない", "十分に", "頻繁に", "確実に"],
+          "scenario": "「cosmic」の意味として最も適切なものは？",
+          "choices": [
+            "宇宙の",
+            "痛烈な",
+            "伝染性の",
+            "詰め合わせた・各種の"
+          ],
           "correct": 0,
-          "explanation": "barelyは「かろうじて、ほとんど〜ない」という意味。He barely passed the exam.（かろうじて試験に受かった）",
+          "explanation": "「cosmic」は「宇宙の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hardly」の意味として最も適切なものは？",
-          "choices": ["ほとんど〜ない", "非常に、とても", "確実に", "頻繁に"],
-          "correct": 0,
-          "explanation": "hardlyは「ほとんど〜ない」という否定に近い意味を持つ副詞。hard（一生懸命に）と混同しないよう注意。",
+          "scenario": "「cosmopolitan」の意味として最も適切なものは？",
+          "choices": [
+            "非難された",
+            "賞賛に値する",
+            "立方体の",
+            "国際的な"
+          ],
+          "correct": 3,
+          "explanation": "「cosmopolitan」は「国際的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「scarcely」の意味として最も適切なものは？",
-          "choices": ["ほとんど〜ない、かろうじて", "十分すぎるほど", "しばしば", "はっきりと"],
-          "correct": 0,
-          "explanation": "scarcelyは「ほとんど〜ない、かろうじて」という意味。scarce（乏しい）に由来する。",
+          "scenario": "「cozy」の意味として最も適切なものは？",
+          "choices": [
+            "無邪気な",
+            "かさばる",
+            "居心地のよい",
+            "凝縮された"
+          ],
+          "correct": 2,
+          "explanation": "「cozy」は「居心地のよい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「seemingly」の意味として最も適切なものは？",
-          "choices": ["見たところ〜のようだ", "確実に", "決して〜ない", "頻繁に"],
-          "correct": 0,
-          "explanation": "seeminglyは「見たところ〜のようだ」という意味。外見上の印象を述べる副詞。",
+          "scenario": "「credible」の意味として最も適切なものは？",
+          "choices": [
+            "豊富な",
+            "信頼できる",
+            "血まみれの",
+            "香りの良い"
+          ],
+          "correct": 1,
+          "explanation": "「credible」は「信頼できる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「virtually」の意味として最も適切なものは？",
-          "choices": ["事実上、ほとんど", "決して〜ない", "偶然に", "一時的に"],
+          "scenario": "「creditable」の意味として最も適切なものは？",
+          "choices": [
+            "賞賛に値する",
+            "決定的な",
+            "宇宙の",
+            "唐突な"
+          ],
           "correct": 0,
-          "explanation": "virtuallyは「事実上、ほとんど」という意味。almostに近いニュアンスで用いられる。",
+          "explanation": "「creditable」は「賞賛に値する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「literally」の意味として最も適切なものは？",
-          "choices": ["文字通りに", "比喩的に", "おおよそ", "皮肉にも"],
-          "correct": 0,
-          "explanation": "literallyは「文字通りに」という意味。比喩ではなく実際にそうであることを強調する。",
+          "scenario": "「credulous」の意味として最も適切なものは？",
+          "choices": [
+            "接続された",
+            "自己主張する・断定的な",
+            "だまされやすい",
+            "感謝している"
+          ],
+          "correct": 2,
+          "explanation": "「credulous」は「だまされやすい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「strictly」の意味として最も適切なものは？",
-          "choices": ["厳密に、厳格に", "おおまかに", "偶然に", "頻繁に"],
-          "correct": 0,
-          "explanation": "strictlyは「厳密に、厳格に」という意味。strictly speaking（厳密に言えば）はよく使われる表現。",
+          "scenario": "「creepy」の意味として最も適切なものは？",
+          "choices": [
+            "たくましい",
+            "年代順の",
+            "身の毛のよだつ",
+            "集中した"
+          ],
+          "correct": 2,
+          "explanation": "「creepy」は「身の毛のよだつ」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「ultimately」の意味として最も適切なものは？",
-          "choices": ["最終的には", "最初は", "一時的に", "頻繁に"],
-          "correct": 0,
-          "explanation": "ultimatelyは「最終的には」という意味。eventuallyに近いが、最終結論を強調するニュアンスがある。",
+          "scenario": "「crooked」の意味として最も適切なものは？",
+          "choices": [
+            "誠意ある",
+            "相関した",
+            "曲がった・不誠実な",
+            "連合した・関連した"
+          ],
+          "correct": 2,
+          "explanation": "「crooked」は「曲がった・不誠実な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「inevitably」の意味として最も適切なものは？",
-          "choices": ["必然的に、避けられずに", "偶然に", "まれに", "一時的に"],
-          "correct": 0,
-          "explanation": "inevitablyは「必然的に、避けられずに」という意味。inevitable（避けられない）の副詞形。",
+          "scenario": "「crystalline」の意味として最も適切なものは？",
+          "choices": [
+            "騒々しい",
+            "結晶のような",
+            "唐突な",
+            "あからさまな"
+          ],
+          "correct": 1,
+          "explanation": "「crystalline」は「結晶のような」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「invariably」の意味として最も適切なものは？",
-          "choices": ["常に、例外なく", "まれに", "偶然に", "一時的に"],
-          "correct": 0,
-          "explanation": "invariablyは「常に、例外なく」という意味。alwaysのフォーマルな言い換えとして使われる。",
+          "scenario": "「cubic」の意味として最も適切なものは？",
+          "choices": [
+            "唐突な",
+            "宇宙の",
+            "立方体の",
+            "論争好きな"
+          ],
+          "correct": 2,
+          "explanation": "「cubic」は「立方体の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]

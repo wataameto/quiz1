@@ -1,197 +1,1297 @@
 {
   "id": "eiken2",
   "level": 1,
-  "label": "🔤 動詞編1",
-  "description": "基本動詞（頻出動詞・語法）",
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
   "tests": [
     {
       "id": 1,
-      "title": "動詞編1-1",
-      "type": "Basic Verbs",
-      "emoji": "🎯",
-      "subtitle": "英検2級レベルの語彙クイズ！基本動詞をマスターしよう",
+      "title": "動詞編セット1",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 1~10",
       "questions": [
-        {"scenario": "「achieve」の意味として最も適切なものは？", "choices": ["達成する", "放棄する", "延期する", "妨害する"], "correct": 0, "explanation": "目標や結果を努力の末に成し遂げること。", "type": "choice"},
-        {"scenario": "「acquire」の意味として最も適切なものは？", "choices": ["習得する、獲得する", "失う", "無視する", "破壊する"], "correct": 0, "explanation": "知識や技能、財産などを徐々に身につけること。", "type": "choice"},
-        {"scenario": "「adopt」の意味として最も適切なものは？", "choices": ["採用する", "拒否する", "批判する", "延期する"], "correct": 0, "explanation": "意見・方法・子供などを自分のものとして受け入れること。", "type": "choice"},
-        {"scenario": "「advise」の意味として最も適切なものは？", "choices": ["助言する", "命令する", "禁止する", "無視する"], "correct": 0, "explanation": "相手にとって良いと思うことを勧めること。", "type": "choice"},
-        {"scenario": "「afford」の意味として最も適切なものは？", "choices": ["〜する余裕がある", "〜を拒む", "〜を延期する", "〜を疑う"], "correct": 0, "explanation": "主に can/could とともに用い、金銭的・時間的余裕を表す。", "type": "choice"},
-        {"scenario": "「alert」の意味として最も適切なものは？", "choices": ["警告する", "賞賛する", "説得する", "慰める"], "correct": 0, "explanation": "危険などを知らせて注意を促すこと。", "type": "choice"},
-        {"scenario": "「alter」の意味として最も適切なものは？", "choices": ["変える", "維持する", "修理する", "複製する"], "correct": 0, "explanation": "形や性質などを部分的に変化させること。changeよりやや形式的。", "type": "choice"},
-        {"scenario": "「appeal」の意味として最も適切なものは？", "choices": ["訴える、懇願する", "反論する", "無視する", "禁止する"], "correct": 0, "explanation": "人の心に訴えかけたり、強く求めたりすること。", "type": "choice"},
-        {"scenario": "「applaud」の意味として最も適切なものは？", "choices": ["拍手する、称賛する", "非難する", "妨害する", "脅す"], "correct": 0, "explanation": "良い行いやパフォーマンスを称えて拍手すること。", "type": "choice"},
-        {"scenario": "「appoint」の意味として最も適切なものは？", "choices": ["任命する", "解雇する", "昇進を拒む", "罰する"], "correct": 0, "explanation": "特定の役職や地位に人を選び指名すること。", "type": "choice"}
+        {
+          "scenario": "「abbreviate」の意味として最も適切なものは？",
+          "choices": [
+            "飾る",
+            "暗殺する",
+            "ぞっとさせる",
+            "省略する・短縮する"
+          ],
+          "correct": 3,
+          "explanation": "「abbreviate」は「省略する・短縮する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abdicate」の意味として最も適切なものは？",
+          "choices": [
+            "退位する・放棄する",
+            "魅了する",
+            "知らせる・慣れ親しませる",
+            "権限を与える"
+          ],
+          "correct": 0,
+          "explanation": "「abdicate」は「退位する・放棄する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abort」の意味として最も適切なものは？",
+          "choices": [
+            "整列させる・提携する",
+            "苦しめる",
+            "無効にする",
+            "中止する・流産する"
+          ],
+          "correct": 3,
+          "explanation": "「abort」は「中止する・流産する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abound」の意味として最も適切なものは？",
+          "choices": [
+            "詐取する・勝手に引き受ける",
+            "豊かである・たくさんある",
+            "要約する・短縮する",
+            "獲得する・習得する"
+          ],
+          "correct": 1,
+          "explanation": "「abound」は「豊かである・たくさんある」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abridge」の意味として最も適切なものは？",
+          "choices": [
+            "要約する・短縮する",
+            "ほのめかす・言及する",
+            "降りかかる",
+            "退位する・放棄する"
+          ],
+          "correct": 0,
+          "explanation": "「abridge」は「要約する・短縮する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abrogate」の意味として最も適切なものは？",
+          "choices": [
+            "評価する・鑑定する",
+            "権限を与える",
+            "黙認する・従う",
+            "廃止する・撤廃する"
+          ],
+          "correct": 3,
+          "explanation": "「abrogate」は「廃止する・撤廃する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abscond」の意味として最も適切なものは？",
+          "choices": [
+            "整列させる・提携する",
+            "割り当てる",
+            "逃亡する・失踪する",
+            "中止する・流産する"
+          ],
+          "correct": 2,
+          "explanation": "「abscond」は「逃亡する・失踪する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「absolve」の意味として最も適切なものは？",
+          "choices": [
+            "権限を与える",
+            "免除する・許す",
+            "遠ざける・疎外する",
+            "割り当てる"
+          ],
+          "correct": 1,
+          "explanation": "「absolve」は「免除する・許す」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abstain」の意味として最も適切なものは？",
+          "choices": [
+            "びっくり仰天させる",
+            "同化する・吸収する",
+            "棄権する・控える",
+            "合併する"
+          ],
+          "correct": 2,
+          "explanation": "「abstain」は「棄権する・控える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accelerate」の意味として最も適切なものは？",
+          "choices": [
+            "強調する・目立たせる",
+            "調和させる",
+            "肉汁をかける",
+            "加速する"
+          ],
+          "correct": 3,
+          "explanation": "「accelerate」は「加速する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "動詞編1-2",
-      "type": "Basic Verbs",
-      "emoji": "🛠️",
-      "subtitle": "英検2級レベルの語彙クイズ！手配・依頼系の動詞に注目",
+      "title": "動詞編セット2",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 11~20",
       "questions": [
-        {"scenario": "「approve」の意味として最も適切なものは？", "choices": ["承認する", "拒否する", "延期する", "無視する"], "correct": 0, "explanation": "提案や計画などを正式に認めること。", "type": "choice"},
-        {"scenario": "「arrange」の意味として最も適切なものは？", "choices": ["手配する、整える", "中止する", "破壊する", "隠す"], "correct": 0, "explanation": "物事の準備を整えたり、順序よく並べたりすること。", "type": "choice"},
-        {"scenario": "「assemble」の意味として最も適切なものは？", "choices": ["組み立てる、集める", "分解する", "破棄する", "隠す"], "correct": 0, "explanation": "部品を組み合わせて何かを作る、または人を集めること。", "type": "choice"},
-        {"scenario": "「assign」の意味として最も適切なものは？", "choices": ["割り当てる", "取り消す", "拒否する", "隠す"], "correct": 0, "explanation": "仕事や役割を特定の人に振り分けること。", "type": "choice"},
-        {"scenario": "「assist」の意味として最も適切なものは？", "choices": ["手伝う", "妨げる", "無視する", "拒む"], "correct": 0, "explanation": "helpよりやや形式的に、人の手助けをすること。", "type": "choice"},
-        {"scenario": "「assure」の意味として最も適切なものは？", "choices": ["保証する、確信させる", "疑わせる", "脅す", "誤解させる"], "correct": 0, "explanation": "相手を安心させるために断言すること。", "type": "choice"},
-        {"scenario": "「attach」の意味として最も適切なものは？", "choices": ["取り付ける、添付する", "取り外す", "破壊する", "隠す"], "correct": 0, "explanation": "物を他の物に結び付けたり付属させたりすること。", "type": "choice"},
-        {"scenario": "「attain」の意味として最も適切なものは？", "choices": ["達成する、獲得する", "放棄する", "妨げる", "失う"], "correct": 0, "explanation": "努力して目標や地位を手に入れること。achieveと似た意味を持つ。", "type": "choice"},
-        {"scenario": "「attempt」の意味として最も適切なものは？", "choices": ["試みる", "成功する", "諦める", "拒否する"], "correct": 0, "explanation": "何かを成し遂げようと努力すること。名詞としても使われる。", "type": "choice"},
-        {"scenario": "「attend」の意味として最も適切なものは？", "choices": ["出席する", "欠席する", "中止する", "延期する"], "correct": 0, "explanation": "会議や授業などに参加すること。", "type": "choice"}
+        {
+          "scenario": "「accentuate」の意味として最も適切なものは？",
+          "choices": [
+            "訓戒する・警告する",
+            "くだらないおしゃべりをする",
+            "強調する・目立たせる",
+            "始める"
+          ],
+          "correct": 2,
+          "explanation": "「accentuate」は「強調する・目立たせる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acclaim」の意味として最も適切なものは？",
+          "choices": [
+            "喝采を送る・賞賛する",
+            "分配する",
+            "省略する・短縮する",
+            "一致する・与える"
+          ],
+          "correct": 0,
+          "explanation": "「acclaim」は「喝采を送る・賞賛する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acclimate」の意味として最も適切なものは？",
+          "choices": [
+            "順応させる",
+            "廃止する・撤廃する",
+            "権限を与える",
+            "合図する・招き寄せる"
+          ],
+          "correct": 0,
+          "explanation": "「acclimate」は「順応させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accord」の意味として最も適切なものは？",
+          "choices": [
+            "乱打する",
+            "一致する・与える",
+            "（利息などが）生じる",
+            "くだらないおしゃべりをする"
+          ],
+          "correct": 1,
+          "explanation": "「accord」は「一致する・与える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accost」の意味として最も適切なものは？",
+          "choices": [
+            "〜になる",
+            "話しかける",
+            "黙認する・従う",
+            "ほのめかす・言及する"
+          ],
+          "correct": 1,
+          "explanation": "「accost」は「話しかける」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accredit」の意味として最も適切なものは？",
+          "choices": [
+            "大声で叫ぶ",
+            "降りかかる",
+            "調停する",
+            "認可する・信用する"
+          ],
+          "correct": 3,
+          "explanation": "「accredit」は「認可する・信用する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「accrue」の意味として最も適切なものは？",
+          "choices": [
+            "要約する・短縮する",
+            "物々交換する",
+            "（利息などが）生じる",
+            "棄権する・控える"
+          ],
+          "correct": 2,
+          "explanation": "「accrue」は「（利息などが）生じる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acquaint」の意味として最も適切なものは？",
+          "choices": [
+            "知らせる・慣れ親しませる",
+            "増幅する",
+            "黙認する・従う",
+            "順応させる"
+          ],
+          "correct": 0,
+          "explanation": "「acquaint」は「知らせる・慣れ親しませる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acquiesce」の意味として最も適切なものは？",
+          "choices": [
+            "増幅する",
+            "要約する・短縮する",
+            "黙認する・従う",
+            "管理する・執行する"
+          ],
+          "correct": 2,
+          "explanation": "「acquiesce」は「黙認する・従う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「acquire」の意味として最も適切なものは？",
+          "choices": [
+            "当惑させる",
+            "ぞっとさせる",
+            "獲得する・習得する",
+            "中毒にさせる"
+          ],
+          "correct": 2,
+          "explanation": "「acquire」は「獲得する・習得する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 3,
-      "title": "動詞編1-3",
-      "type": "Basic Verbs",
-      "emoji": "📦",
-      "subtitle": "英検2級レベルの語彙クイズ！日常でよく使う動詞編",
+      "title": "動詞編セット3",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 21~30",
       "questions": [
-        {"scenario": "「avoid」の意味として最も適切なものは？", "choices": ["避ける", "求める", "招く", "促進する"], "correct": 0, "explanation": "危険や不快なことを意図的に回避すること。", "type": "choice"},
-        {"scenario": "「blame」の意味として最も適切なものは？", "choices": ["非難する、〜のせいにする", "称賛する", "許す", "励ます"], "correct": 0, "explanation": "悪い結果の責任を人や物に負わせること。", "type": "choice"},
-        {"scenario": "「blend」の意味として最も適切なものは？", "choices": ["混ぜ合わせる", "分離する", "破壊する", "冷やす"], "correct": 0, "explanation": "複数のものを均一に混合すること。", "type": "choice"},
-        {"scenario": "「boost」の意味として最も適切なものは？", "choices": ["高める、押し上げる", "下げる", "止める", "無視する"], "correct": 0, "explanation": "数値や士気などを増加させること。", "type": "choice"},
-        {"scenario": "「borrow」の意味として最も適切なものは？", "choices": ["借りる", "貸す", "返す", "盗む"], "correct": 0, "explanation": "他人から一時的に物やお金を借り受けること。", "type": "choice"},
-        {"scenario": "「breed」の意味として最も適切なものは？", "choices": ["繁殖させる、育てる", "駆除する", "捕らえる", "放す"], "correct": 0, "explanation": "動物を育てて子孫を増やすこと。状況を生み出す意味でも使う。", "type": "choice"},
-        {"scenario": "「browse」の意味として最も適切なものは？", "choices": ["ざっと見る、閲覧する", "詳細に分析する", "購入する", "削除する"], "correct": 0, "explanation": "商品やウェブサイトなどを気軽に見て回ること。", "type": "choice"},
-        {"scenario": "「calculate」の意味として最も適切なものは？", "choices": ["計算する", "推測する", "無視する", "忘れる"], "correct": 0, "explanation": "数値を用いて答えを導き出すこと。", "type": "choice"},
-        {"scenario": "「cancel」の意味として最も適切なものは？", "choices": ["中止する、取り消す", "開始する", "延長する", "承認する"], "correct": 0, "explanation": "予定されていたことを行わないと決定すること。", "type": "choice"},
-        {"scenario": "「capture」の意味として最も適切なものは？", "choices": ["捕らえる", "逃がす", "隠す", "破壊する"], "correct": 0, "explanation": "人や動物を捕まえること。注意や興味を引く意味でも使う。", "type": "choice"}
+        {
+          "scenario": "「acquit」の意味として最も適切なものは？",
+          "choices": [
+            "無罪にする・放免する",
+            "ほのめかす・言及する",
+            "罪状認否を行う",
+            "作動させる・促す"
+          ],
+          "correct": 0,
+          "explanation": "「acquit」は「無罪にする・放免する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「activate」の意味として最も適切なものは？",
+          "choices": [
+            "管理する・執行する",
+            "有効にする・活性化する",
+            "始める",
+            "詐取する・勝手に引き受ける"
+          ],
+          "correct": 1,
+          "explanation": "「activate」は「有効にする・活性化する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「actuate」の意味として最も適切なものは？",
+          "choices": [
+            "確かめる",
+            "黙認する・従う",
+            "くだらないおしゃべりをする",
+            "作動させる・促す"
+          ],
+          "correct": 3,
+          "explanation": "「actuate」は「作動させる・促す」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「addict」の意味として最も適切なものは？",
+          "choices": [
+            "訓戒する・警告する",
+            "話しかける",
+            "中毒にさせる",
+            "同意する"
+          ],
+          "correct": 2,
+          "explanation": "「addict」は「中毒にさせる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adduce」の意味として最も適切なものは？",
+          "choices": [
+            "整列させる・提携する",
+            "躊躇する・妨げる",
+            "交互に行う",
+            "提示する・挙げる"
+          ],
+          "correct": 3,
+          "explanation": "「adduce」は「提示する・挙げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adhere」の意味として最も適切なものは？",
+          "choices": [
+            "交互に行う",
+            "固執する・付着する",
+            "省略する・短縮する",
+            "避ける・そらす"
+          ],
+          "correct": 1,
+          "explanation": "「adhere」は「固執する・付着する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adjourn」の意味として最も適切なものは？",
+          "choices": [
+            "襲撃する",
+            "追加する",
+            "加速する",
+            "休会する・延期する"
+          ],
+          "correct": 3,
+          "explanation": "「adjourn」は「休会する・延期する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「administer」の意味として最も適切なものは？",
+          "choices": [
+            "管理する・執行する",
+            "無効にする",
+            "強調する・目立たせる",
+            "大声で叫ぶ"
+          ],
+          "correct": 0,
+          "explanation": "「administer」は「管理する・執行する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「admonish」の意味として最も適切なものは？",
+          "choices": [
+            "当惑させる",
+            "始める",
+            "訓戒する・警告する",
+            "廃止する・撤廃する"
+          ],
+          "correct": 2,
+          "explanation": "「admonish」は「訓戒する・警告する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adorn」の意味として最も適切なものは？",
+          "choices": [
+            "飾る",
+            "獲得する・習得する",
+            "苦しめる",
+            "なだめる"
+          ],
+          "correct": 0,
+          "explanation": "「adorn」は「飾る」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 4,
-      "title": "動詞編1-4",
-      "type": "Basic Verbs",
-      "emoji": "🎉",
-      "subtitle": "英検2級レベルの語彙クイズ！感情・行動を表す動詞編",
+      "title": "動詞編セット4",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 31~40",
       "questions": [
-        {"scenario": "「celebrate」の意味として最も適切なものは？", "choices": ["祝う", "悲しむ", "中止する", "無視する"], "correct": 0, "explanation": "特別な出来事を祝って喜ぶこと。", "type": "choice"},
-        {"scenario": "「challenge」の意味として最も適切なものは？", "choices": ["異議を唱える、挑む", "同意する", "無視する", "降参する"], "correct": 0, "explanation": "相手の意見に疑問を投げかけたり、困難な課題に挑むこと。", "type": "choice"},
-        {"scenario": "「chase」の意味として最も適切なものは？", "choices": ["追いかける", "避ける", "隠れる", "止まる"], "correct": 0, "explanation": "人や物を捕まえようと追跡すること。", "type": "choice"},
-        {"scenario": "「cheat」の意味として最も適切なものは？", "choices": ["不正をする、だます", "正直に話す", "助ける", "許す"], "correct": 0, "explanation": "規則を破ったり人を欺いたりすること。", "type": "choice"},
-        {"scenario": "「clarify」の意味として最も適切なものは？", "choices": ["明確にする", "曖昧にする", "隠す", "無視する"], "correct": 0, "explanation": "分かりにくい点をはっきりさせること。", "type": "choice"},
-        {"scenario": "「classify」の意味として最も適切なものは？", "choices": ["分類する", "混同する", "破棄する", "無視する"], "correct": 0, "explanation": "物事を種類ごとに分けて整理すること。", "type": "choice"},
-        {"scenario": "「collapse」の意味として最も適切なものは？", "choices": ["崩壊する、倒れる", "建設する", "強化する", "修理する"], "correct": 0, "explanation": "建物や体制などが突然壊れる、または人が倒れること。", "type": "choice"},
-        {"scenario": "「collide」の意味として最も適切なものは？", "choices": ["衝突する", "避ける", "停止する", "加速する"], "correct": 0, "explanation": "物や乗り物などが激しくぶつかること。", "type": "choice"},
-        {"scenario": "「combine」の意味として最も適切なものは？", "choices": ["組み合わせる", "分ける", "除去する", "隠す"], "correct": 0, "explanation": "二つ以上のものを一つにまとめること。", "type": "choice"},
-        {"scenario": "「compare」の意味として最も適切なものは？", "choices": ["比較する", "無視する", "混同する", "隠す"], "correct": 0, "explanation": "二つ以上の物事の類似点や相違点を調べること。", "type": "choice"}
+        {
+          "scenario": "「adulate」の意味として最も適切なものは？",
+          "choices": [
+            "お世辞を言う",
+            "話しかける",
+            "襲撃する",
+            "自動化する"
+          ],
+          "correct": 0,
+          "explanation": "「adulate」は「お世辞を言う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「affiliate」の意味として最も適切なものは？",
+          "choices": [
+            "分配する",
+            "活気を与える",
+            "合図する・招き寄せる",
+            "提携する・加入する"
+          ],
+          "correct": 3,
+          "explanation": "「affiliate」は「提携する・加入する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「affirm」の意味として最も適切なものは？",
+          "choices": [
+            "詐取する・勝手に引き受ける",
+            "無罪にする・放免する",
+            "断言する・肯定する",
+            "一致する・与える"
+          ],
+          "correct": 2,
+          "explanation": "「affirm」は「断言する・肯定する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「afflict」の意味として最も適切なものは？",
+          "choices": [
+            "減衰させる",
+            "併合する",
+            "苦しめる",
+            "断言する・肯定する"
+          ],
+          "correct": 2,
+          "explanation": "「afflict」は「苦しめる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「affront」の意味として最も適切なものは？",
+          "choices": [
+            "切断する",
+            "同意する",
+            "侮辱する",
+            "敵に回す"
+          ],
+          "correct": 2,
+          "explanation": "「affront」は「侮辱する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aggravate」の意味として最も適切なものは？",
+          "choices": [
+            "喝采を送る・賞賛する",
+            "豊かである・たくさんある",
+            "悪化させる",
+            "主張する"
+          ],
+          "correct": 2,
+          "explanation": "「aggravate」は「悪化させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aggregate」の意味として最も適切なものは？",
+          "choices": [
+            "退位する・放棄する",
+            "集計する・集める",
+            "廃止する・撤廃する",
+            "免除する・許す"
+          ],
+          "correct": 1,
+          "explanation": "「aggregate」は「集計する・集める」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aggress」の意味として最も適切なものは？",
+          "choices": [
+            "苦しめる",
+            "攻撃する",
+            "獲得する・習得する",
+            "主張する"
+          ],
+          "correct": 1,
+          "explanation": "「aggress」は「攻撃する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aggrieve」の意味として最も適切なものは？",
+          "choices": [
+            "苦しめる",
+            "獲得する・習得する",
+            "（利息などが）生じる",
+            "合併する"
+          ],
+          "correct": 0,
+          "explanation": "「aggrieve」は「苦しめる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「agitate」の意味として最も適切なものは？",
+          "choices": [
+            "苦しめる",
+            "交互に行う",
+            "逮捕する・理解する",
+            "扇動する・動揺させる"
+          ],
+          "correct": 3,
+          "explanation": "「agitate」は「扇動する・動揺させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 5,
-      "title": "動詞編1-5",
-      "type": "Basic Verbs",
-      "emoji": "🗣️",
-      "subtitle": "英検2級レベルの語彙クイズ！議論・思考系の動詞編",
+      "title": "動詞編セット5",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 41~50",
       "questions": [
-        {"scenario": "「compete」の意味として最も適切なものは？", "choices": ["競争する", "協力する", "降参する", "無視する"], "correct": 0, "explanation": "勝利や賞などを目指して他者と争うこと。", "type": "choice"},
-        {"scenario": "「complain」の意味として最も適切なものは？", "choices": ["不満を言う", "感謝する", "称賛する", "我慢する"], "correct": 0, "explanation": "不満や苦情を口に出して伝えること。", "type": "choice"},
-        {"scenario": "「complete」の意味として最も適切なものは？", "choices": ["完成させる", "開始する", "中断する", "破壊する"], "correct": 0, "explanation": "仕事や作業を最後まで終わらせること。", "type": "choice"},
-        {"scenario": "「conceal」の意味として最も適切なものは？", "choices": ["隠す", "明かす", "発見する", "説明する"], "correct": 0, "explanation": "秘密や物などを見えないようにすること。hideよりやや堅い語。", "type": "choice"},
-        {"scenario": "「concentrate」の意味として最も適切なものは？", "choices": ["集中する", "分散する", "怠ける", "忘れる"], "correct": 0, "explanation": "一つのことに注意や努力を集めること。", "type": "choice"},
-        {"scenario": "「confirm」の意味として最も適切なものは？", "choices": ["確認する", "疑う", "否定する", "忘れる"], "correct": 0, "explanation": "事実や予定が正しいことを確かめること。", "type": "choice"},
-        {"scenario": "「confront」の意味として最も適切なものは？", "choices": ["立ち向かう、直面する", "逃げる", "無視する", "避ける"], "correct": 0, "explanation": "困難や相手に正面から向き合うこと。", "type": "choice"},
-        {"scenario": "「confuse」の意味として最も適切なものは？", "choices": ["混乱させる", "納得させる", "安心させる", "説得する"], "correct": 0, "explanation": "人を分からなくさせたり、物事を取り違えさせたりすること。", "type": "choice"},
-        {"scenario": "「connect」の意味として最も適切なものは？", "choices": ["つなぐ", "切り離す", "隠す", "壊す"], "correct": 0, "explanation": "二つ以上のものを結び付けること。", "type": "choice"},
-        {"scenario": "「consider」の意味として最も適切なものは？", "choices": ["よく考える", "無視する", "忘れる", "拒否する"], "correct": 0, "explanation": "決定の前に物事をじっくり検討すること。", "type": "choice"}
+        {
+          "scenario": "「aid」の意味として最も適切なものは？",
+          "choices": [
+            "合併する",
+            "有効にする・活性化する",
+            "びっくり仰天させる",
+            "援助する"
+          ],
+          "correct": 3,
+          "explanation": "「aid」は「援助する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alienate」の意味として最も適切なものは？",
+          "choices": [
+            "交互に行う",
+            "遠ざける・疎外する",
+            "強調する・目立たせる",
+            "自動化する"
+          ],
+          "correct": 1,
+          "explanation": "「alienate」は「遠ざける・疎外する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「align」の意味として最も適切なものは？",
+          "choices": [
+            "整列させる・提携する",
+            "乱打する",
+            "調停する",
+            "提携する・加入する"
+          ],
+          "correct": 0,
+          "explanation": "「align」は「整列させる・提携する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「allege」の意味として最も適切なものは？",
+          "choices": [
+            "主張する",
+            "追放する",
+            "交互に行う",
+            "訓戒する・警告する"
+          ],
+          "correct": 0,
+          "explanation": "「allege」は「主張する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alleviate」の意味として最も適切なものは？",
+          "choices": [
+            "中止する・流産する",
+            "割り当てる・配分する",
+            "適する",
+            "和らげる・緩和する"
+          ],
+          "correct": 3,
+          "explanation": "「alleviate」は「和らげる・緩和する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「allocate」の意味として最も適切なものは？",
+          "choices": [
+            "割り当てる",
+            "提携する・加入する",
+            "肉汁をかける",
+            "暗殺する"
+          ],
+          "correct": 0,
+          "explanation": "「allocate」は「割り当てる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「allot」の意味として最も適切なものは？",
+          "choices": [
+            "（利息などが）生じる",
+            "調停する",
+            "同意する",
+            "分配する"
+          ],
+          "correct": 3,
+          "explanation": "「allot」は「分配する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「allude」の意味として最も適切なものは？",
+          "choices": [
+            "同化する・吸収する",
+            "切断する",
+            "破産させる",
+            "ほのめかす・言及する"
+          ],
+          "correct": 3,
+          "explanation": "「allude」は「ほのめかす・言及する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「allure」の意味として最も適切なものは？",
+          "choices": [
+            "魅了する",
+            "調停する",
+            "無効にする",
+            "降りかかる"
+          ],
+          "correct": 0,
+          "explanation": "「allure」は「魅了する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「alternate」の意味として最も適切なものは？",
+          "choices": [
+            "主張する",
+            "交互に行う",
+            "乱打する",
+            "喝采を送る・賞賛する"
+          ],
+          "correct": 1,
+          "explanation": "「alternate」は「交互に行う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 6,
-      "title": "動詞編1-6",
-      "type": "Basic Verbs",
-      "emoji": "🏗️",
-      "subtitle": "英検2級レベルの語彙クイズ！対処・解決系の動詞編",
+      "title": "動詞編セット6",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 51~60",
       "questions": [
-        {"scenario": "「construct」の意味として最も適切なものは？", "choices": ["建設する、構築する", "破壊する", "撤去する", "無視する"], "correct": 0, "explanation": "建物や理論などを組み立てて作ること。", "type": "choice"},
-        {"scenario": "「consult」の意味として最も適切なものは？", "choices": ["相談する", "無視する", "反対する", "命令する"], "correct": 0, "explanation": "専門家や資料などに意見や情報を求めること。", "type": "choice"},
-        {"scenario": "「contain」の意味として最も適切なものは？", "choices": ["含む", "除外する", "放出する", "破壊する"], "correct": 0, "explanation": "中に何かを入れている、成分として持っていること。", "type": "choice"},
-        {"scenario": "「convince」の意味として最も適切なものは？", "choices": ["納得させる", "混乱させる", "裏切る", "脅す"], "correct": 0, "explanation": "説明や証拠によって相手に信じさせること。", "type": "choice"},
-        {"scenario": "「cope」の意味として最も適切なものは？", "choices": ["対処する", "無視する", "逃げる", "諦める"], "correct": 0, "explanation": "通例 cope with の形で困難な状況にうまく対応することを表す。", "type": "choice"},
-        {"scenario": "「correct」を動詞として使うときの意味として最も適切なものは？", "choices": ["訂正する", "間違える", "無視する", "隠す"], "correct": 0, "explanation": "誤りを正しく直すこと。", "type": "choice"},
-        {"scenario": "「confess」の意味として最も適切なものは？", "choices": ["告白する、白状する", "否定する", "隠す", "忘れる"], "correct": 0, "explanation": "隠していた事実や罪を正直に打ち明けること。", "type": "choice"},
-        {"scenario": "「crawl」の意味として最も適切なものは？", "choices": ["はう、はって進む", "飛ぶ", "走る", "泳ぐ"], "correct": 0, "explanation": "手足を地面につけてゆっくり進むこと。", "type": "choice"},
-        {"scenario": "「create」の意味として最も適切なものは？", "choices": ["創造する", "破壊する", "模倣する", "削除する"], "correct": 0, "explanation": "新しいものを作り出すこと。", "type": "choice"},
-        {"scenario": "「cure」の意味として最も適切なものは？", "choices": ["治す", "悪化させる", "感染させる", "無視する"], "correct": 0, "explanation": "病気やけがを治療して治すこと。", "type": "choice"}
+        {
+          "scenario": "「amalgamate」の意味として最も適切なものは？",
+          "choices": [
+            "入浴する・洗う",
+            "（利息などが）生じる",
+            "合併する",
+            "減衰させる"
+          ],
+          "correct": 2,
+          "explanation": "「amalgamate」は「合併する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amass」の意味として最も適切なものは？",
+          "choices": [
+            "蓄積する・蓄える",
+            "黙認する・従う",
+            "注釈をつける",
+            "攻撃する"
+          ],
+          "correct": 0,
+          "explanation": "「amass」は「蓄積する・蓄える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ameliorate」の意味として最も適切なものは？",
+          "choices": [
+            "お世辞を言う",
+            "呼び起こす・目覚めさせる",
+            "有効にする・活性化する",
+            "改善する・向上させる"
+          ],
+          "correct": 3,
+          "explanation": "「ameliorate」は「改善する・向上させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amplify」の意味として最も適切なものは？",
+          "choices": [
+            "苦しめる",
+            "集計する・集める",
+            "増幅する",
+            "呼び起こす・目覚めさせる"
+          ],
+          "correct": 2,
+          "explanation": "「amplify」は「増幅する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amputate」の意味として最も適切なものは？",
+          "choices": [
+            "呼び起こす・目覚めさせる",
+            "調停する",
+            "罪状認否を行う",
+            "切断する"
+          ],
+          "correct": 3,
+          "explanation": "「amputate」は「切断する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「animate」の意味として最も適切なものは？",
+          "choices": [
+            "逃亡する・失踪する",
+            "確かめる",
+            "活気を与える",
+            "なだめる"
+          ],
+          "correct": 2,
+          "explanation": "「animate」は「活気を与える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「annex」の意味として最も適切なものは？",
+          "choices": [
+            "同意する",
+            "悪化させる",
+            "追加する",
+            "併合する"
+          ],
+          "correct": 3,
+          "explanation": "「annex」は「併合する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「annihilate」の意味として最も適切なものは？",
+          "choices": [
+            "訓戒する・警告する",
+            "ぞっとさせる",
+            "認可する・信用する",
+            "全滅させる"
+          ],
+          "correct": 3,
+          "explanation": "「annihilate」は「全滅させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「annotate」の意味として最も適切なものは？",
+          "choices": [
+            "知らせる・慣れ親しませる",
+            "なだめる",
+            "交互に行う",
+            "注釈をつける"
+          ],
+          "correct": 3,
+          "explanation": "「annotate」は「注釈をつける」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「annul」の意味として最も適切なものは？",
+          "choices": [
+            "活気を与える",
+            "作動させる・促す",
+            "認可する・信用する",
+            "無効にする"
+          ],
+          "correct": 3,
+          "explanation": "「annul」は「無効にする」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 7,
-      "title": "動詞編1-7",
-      "type": "Basic Verbs",
-      "emoji": "🛡️",
-      "subtitle": "英検2級レベルの語彙クイズ！要求・主張系の動詞編",
+      "title": "動詞編セット7",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 61~70",
       "questions": [
-        {"scenario": "「damage」の意味として最も適切なものは？", "choices": ["損害を与える", "修理する", "保護する", "改善する"], "correct": 0, "explanation": "物や体などに害や傷を与えること。", "type": "choice"},
-        {"scenario": "「decline」の意味として最も適切なものは？", "choices": ["断る、衰える", "承諾する", "増加する", "改善する"], "correct": 0, "explanation": "申し出を丁寧に断る、または徐々に悪化することを表す。", "type": "choice"},
-        {"scenario": "「decorate」の意味として最も適切なものは？", "choices": ["飾る", "汚す", "壊す", "隠す"], "correct": 0, "explanation": "見た目を美しくするために装飾すること。", "type": "choice"},
-        {"scenario": "「defend」の意味として最も適切なものは？", "choices": ["守る", "攻撃する", "放棄する", "無視する"], "correct": 0, "explanation": "危険や攻撃から人や物を保護すること。", "type": "choice"},
-        {"scenario": "「define」の意味として最も適切なものは？", "choices": ["定義する", "曖昧にする", "無視する", "否定する"], "correct": 0, "explanation": "言葉や概念の意味をはっきりさせること。", "type": "choice"},
-        {"scenario": "「delay」の意味として最も適切なものは？", "choices": ["遅らせる", "早める", "中止する", "完了する"], "correct": 0, "explanation": "予定より遅く行う、または遅れること。", "type": "choice"},
-        {"scenario": "「deliver」の意味として最も適切なものは？", "choices": ["配達する", "回収する", "保管する", "破棄する"], "correct": 0, "explanation": "物やメッセージを届けること。演説を行う意味でも使う。", "type": "choice"},
-        {"scenario": "「demand」の意味として最も適切なものは？", "choices": ["要求する", "拒否する", "提供する", "放棄する"], "correct": 0, "explanation": "強く必要なものを求めること。", "type": "choice"},
-        {"scenario": "「demonstrate」の意味として最も適切なものは？", "choices": ["実演する、示す", "隠す", "否定する", "無視する"], "correct": 0, "explanation": "実際にやってみせて説明すること。証明する意味でも使う。", "type": "choice"},
-        {"scenario": "「deny」の意味として最も適切なものは？", "choices": ["否定する", "認める", "説明する", "証明する"], "correct": 0, "explanation": "事実ではないと言うこと。要求を拒む意味でも使う。", "type": "choice"}
+        {
+          "scenario": "「antagonize」の意味として最も適切なものは？",
+          "choices": [
+            "無効にする",
+            "敵に回す",
+            "要約する・短縮する",
+            "改善する・向上させる"
+          ],
+          "correct": 1,
+          "explanation": "「antagonize」は「敵に回す」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appall」の意味として最も適切なものは？",
+          "choices": [
+            "整列させる・提携する",
+            "蓄積する・蓄える",
+            "（利息などが）生じる",
+            "ぞっとさせる"
+          ],
+          "correct": 3,
+          "explanation": "「appall」は「ぞっとさせる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appease」の意味として最も適切なものは？",
+          "choices": [
+            "なだめる",
+            "降りかかる",
+            "ぞっとさせる",
+            "苦しめる"
+          ],
+          "correct": 0,
+          "explanation": "「appease」は「なだめる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「append」の意味として最も適切なものは？",
+          "choices": [
+            "中止する・流産する",
+            "話しかける",
+            "作動させる・促す",
+            "追加する"
+          ],
+          "correct": 3,
+          "explanation": "「append」は「追加する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apportion」の意味として最も適切なものは？",
+          "choices": [
+            "作動させる・促す",
+            "喝采を送る・賞賛する",
+            "注釈をつける",
+            "割り当てる・配分する"
+          ],
+          "correct": 3,
+          "explanation": "「apportion」は「割り当てる・配分する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appraise」の意味として最も適切なものは？",
+          "choices": [
+            "評価する・鑑定する",
+            "敵に回す",
+            "増加させる",
+            "〜のせいにする"
+          ],
+          "correct": 0,
+          "explanation": "「appraise」は「評価する・鑑定する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apprehend」の意味として最も適切なものは？",
+          "choices": [
+            "調停する",
+            "逃亡する・失踪する",
+            "逮捕する・理解する",
+            "詐取する・勝手に引き受ける"
+          ],
+          "correct": 2,
+          "explanation": "「apprehend」は「逮捕する・理解する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arbitrate」の意味として最も適切なものは？",
+          "choices": [
+            "〜のせいにする",
+            "免除する・許す",
+            "主張する",
+            "調停する"
+          ],
+          "correct": 3,
+          "explanation": "「arbitrate」は「調停する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arraign」の意味として最も適切なものは？",
+          "choices": [
+            "罪状認否を行う",
+            "躊躇する・妨げる",
+            "破産させる",
+            "逮捕する・理解する"
+          ],
+          "correct": 0,
+          "explanation": "「arraign」は「罪状認否を行う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arrogate」の意味として最も適切なものは？",
+          "choices": [
+            "自動化する",
+            "全滅させる",
+            "整列させる・提携する",
+            "詐取する・勝手に引き受ける"
+          ],
+          "correct": 3,
+          "explanation": "「arrogate」は「詐取する・勝手に引き受ける」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 8,
-      "title": "動詞編1-8",
-      "type": "Basic Verbs",
-      "emoji": "🔍",
-      "subtitle": "英検2級レベルの語彙クイズ！説明・判断系の動詞編",
+      "title": "動詞編セット8",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 71~80",
       "questions": [
-        {"scenario": "「depend」の意味として最も適切なものは？", "choices": ["頼る、〜次第である", "無視する", "支配する", "拒否する"], "correct": 0, "explanation": "depend on の形で人に頼る、状況に左右されることを表す。", "type": "choice"},
-        {"scenario": "「describe」の意味として最も適切なものは？", "choices": ["描写する", "隠す", "無視する", "誤解する"], "correct": 0, "explanation": "物事の様子を言葉で詳しく説明すること。", "type": "choice"},
-        {"scenario": "「deserve」の意味として最も適切なものは？", "choices": ["〜に値する", "〜を否定する", "〜を拒む", "〜を疑う"], "correct": 0, "explanation": "良い、または悪い結果を受けるにふさわしいことを表す。", "type": "choice"},
-        {"scenario": "「detect」の意味として最も適切なものは？", "choices": ["検知する、見つける", "隠す", "無視する", "破壊する"], "correct": 0, "explanation": "目に見えにくいものを注意深く発見すること。", "type": "choice"},
-        {"scenario": "「determine」の意味として最も適切なものは？", "choices": ["決定する", "迷う", "無視する", "放棄する"], "correct": 0, "explanation": "調査や検討の末に何かをはっきり決めること。", "type": "choice"},
-        {"scenario": "「develop」の意味として最も適切なものは？", "choices": ["発展させる", "衰退させる", "無視する", "破壊する"], "correct": 0, "explanation": "物事を成長させたり、新しく開発したりすること。", "type": "choice"},
-        {"scenario": "「devote」の意味として最も適切なものは？", "choices": ["捧げる", "奪う", "無視する", "拒む"], "correct": 0, "explanation": "時間や労力を特定の目的のために使うこと。", "type": "choice"},
-        {"scenario": "「differ」の意味として最も適切なものは？", "choices": ["異なる", "一致する", "似る", "混同する"], "correct": 0, "explanation": "二つ以上のものが違いを持つこと。", "type": "choice"},
-        {"scenario": "「digest」を動詞として使うときの意味として最も適切なものは？", "choices": ["消化する、理解する", "拒絶する", "無視する", "忘れる"], "correct": 0, "explanation": "食べ物を体内で分解すること。情報を十分理解する意味でも使う。", "type": "choice"},
-        {"scenario": "「direct」を動詞として使うときの意味として最も適切なものは？", "choices": ["指揮する、向ける", "従う", "無視する", "隠す"], "correct": 0, "explanation": "人に指示を出したり、注意などを向けたりすること。", "type": "choice"}
+        {
+          "scenario": "「ascertain」の意味として最も適切なものは？",
+          "choices": [
+            "認可する・信用する",
+            "省略する・短縮する",
+            "権限を与える",
+            "確かめる"
+          ],
+          "correct": 3,
+          "explanation": "「ascertain」は「確かめる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ascribe」の意味として最も適切なものは？",
+          "choices": [
+            "切断する",
+            "確かめる",
+            "〜のせいにする",
+            "詐取する・勝手に引き受ける"
+          ],
+          "correct": 2,
+          "explanation": "「ascribe」は「〜のせいにする」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assail」の意味として最も適切なものは？",
+          "choices": [
+            "棄権する・控える",
+            "襲撃する",
+            "攻撃する",
+            "当惑させる"
+          ],
+          "correct": 1,
+          "explanation": "「assail」は「襲撃する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assassinate」の意味として最も適切なものは？",
+          "choices": [
+            "有効にする・活性化する",
+            "作動させる・促す",
+            "援助する",
+            "暗殺する"
+          ],
+          "correct": 3,
+          "explanation": "「assassinate」は「暗殺する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assent」の意味として最も適切なものは？",
+          "choices": [
+            "割り当てる",
+            "同意する",
+            "権限を与える",
+            "割り当てる・配分する"
+          ],
+          "correct": 1,
+          "explanation": "「assent」は「同意する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assimilate」の意味として最も適切なものは？",
+          "choices": [
+            "同化する・吸収する",
+            "要約する・短縮する",
+            "割り当てる",
+            "切断する"
+          ],
+          "correct": 0,
+          "explanation": "「assimilate」は「同化する・吸収する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「astound」の意味として最も適切なものは？",
+          "choices": [
+            "躊躇する・妨げる",
+            "暗殺する",
+            "豊かである・たくさんある",
+            "びっくり仰天させる"
+          ],
+          "correct": 3,
+          "explanation": "「astound」は「びっくり仰天させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attenuate」の意味として最も適切なものは？",
+          "choices": [
+            "〜のせいにする",
+            "援助する",
+            "減衰させる",
+            "同意する"
+          ],
+          "correct": 2,
+          "explanation": "「attenuate」は「減衰させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attest」の意味として最も適切なものは？",
+          "choices": [
+            "証明する",
+            "びっくり仰天させる",
+            "適する",
+            "呼び起こす・目覚めさせる"
+          ],
+          "correct": 0,
+          "explanation": "「attest」は「証明する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attune」の意味として最も適切なものは？",
+          "choices": [
+            "調和させる",
+            "追放する",
+            "退位する・放棄する",
+            "断言する・肯定する"
+          ],
+          "correct": 0,
+          "explanation": "「attune」は「調和させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 9,
-      "title": "動詞編1-9",
-      "type": "Basic Verbs",
-      "emoji": "🕵️",
-      "subtitle": "英検2級レベルの語彙クイズ！変化・発見系の動詞編",
+      "title": "動詞編セット9",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 81~90",
       "questions": [
-        {"scenario": "「disappear」の意味として最も適切なものは？", "choices": ["姿を消す", "現れる", "増える", "広がる"], "correct": 0, "explanation": "見えなくなる、存在しなくなること。", "type": "choice"},
-        {"scenario": "「discover」の意味として最も適切なものは？", "choices": ["発見する", "隠す", "失う", "破壊する"], "correct": 0, "explanation": "今まで知られていなかったものを見つけ出すこと。", "type": "choice"},
-        {"scenario": "「discuss」の意味として最も適切なものは？", "choices": ["話し合う", "無視する", "隠す", "否定する"], "correct": 0, "explanation": "ある話題について意見を交わすこと。", "type": "choice"},
-        {"scenario": "「dismiss」の意味として最も適切なものは？", "choices": ["解雇する、退ける", "雇う", "昇進させる", "称賛する"], "correct": 0, "explanation": "人を職から外すこと。考えを取り合わない意味でも使う。", "type": "choice"},
-        {"scenario": "「dispose」の意味として最も適切なものは？", "choices": ["処分する", "保管する", "修理する", "製造する"], "correct": 0, "explanation": "通例 dispose of の形で不要なものを捨てることを表す。", "type": "choice"},
-        {"scenario": "「disturb」の意味として最も適切なものは？", "choices": ["邪魔する", "助ける", "安心させる", "励ます"], "correct": 0, "explanation": "人の集中や平穏を妨げること。", "type": "choice"},
-        {"scenario": "「divide」の意味として最も適切なものは？", "choices": ["分ける", "まとめる", "結合する", "隠す"], "correct": 0, "explanation": "一つのものをいくつかの部分に分割すること。", "type": "choice"},
-        {"scenario": "「dominate」の意味として最も適切なものは？", "choices": ["支配する", "従う", "譲る", "無視する"], "correct": 0, "explanation": "他を圧倒するほどの力や影響力を持つこと。", "type": "choice"},
-        {"scenario": "「doubt」の意味として最も適切なものは？", "choices": ["疑う", "信じる", "保証する", "確認する"], "correct": 0, "explanation": "物事の真実性や確実性に疑いを持つこと。", "type": "choice"},
-        {"scenario": "「drag」の意味として最も適切なものは？", "choices": ["引きずる", "持ち上げる", "押す", "投げる"], "correct": 0, "explanation": "重い物を地面に沿って引っ張ること。", "type": "choice"}
+        {
+          "scenario": "「augment」の意味として最も適切なものは？",
+          "choices": [
+            "増加させる",
+            "割り当てる",
+            "訓戒する・警告する",
+            "要約する・短縮する"
+          ],
+          "correct": 0,
+          "explanation": "「augment」は「増加させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「authorize」の意味として最も適切なものは？",
+          "choices": [
+            "お世辞を言う",
+            "権限を与える",
+            "退位する・放棄する",
+            "減衰させる"
+          ],
+          "correct": 1,
+          "explanation": "「authorize」は「権限を与える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「automate」の意味として最も適切なものは？",
+          "choices": [
+            "管理する・執行する",
+            "自動化する",
+            "入浴する・洗う",
+            "追加する"
+          ],
+          "correct": 1,
+          "explanation": "「automate」は「自動化する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「avert」の意味として最も適切なものは？",
+          "choices": [
+            "避ける・そらす",
+            "乱打する",
+            "ぞっとさせる",
+            "話しかける"
+          ],
+          "correct": 0,
+          "explanation": "「avert」は「避ける・そらす」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「awaken」の意味として最も適切なものは？",
+          "choices": [
+            "詐取する・勝手に引き受ける",
+            "呼び起こす・目覚めさせる",
+            "始める",
+            "攻撃する"
+          ],
+          "correct": 1,
+          "explanation": "「awaken」は「呼び起こす・目覚めさせる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「babble」の意味として最も適切なものは？",
+          "choices": [
+            "蓄積する・蓄える",
+            "くだらないおしゃべりをする",
+            "適する",
+            "強調する・目立たせる"
+          ],
+          "correct": 1,
+          "explanation": "「babble」は「くだらないおしゃべりをする」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「baffle」の意味として最も適切なものは？",
+          "choices": [
+            "当惑させる",
+            "全滅させる",
+            "主張する",
+            "乱打する"
+          ],
+          "correct": 0,
+          "explanation": "「baffle」は「当惑させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「balk」の意味として最も適切なものは？",
+          "choices": [
+            "有効にする・活性化する",
+            "躊躇する・妨げる",
+            "無罪にする・放免する",
+            "順応させる"
+          ],
+          "correct": 1,
+          "explanation": "「balk」は「躊躇する・妨げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「banish」の意味として最も適切なものは？",
+          "choices": [
+            "苦しめる",
+            "豊かである・たくさんある",
+            "追放する",
+            "要約する・短縮する"
+          ],
+          "correct": 2,
+          "explanation": "「banish」は「追放する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bankrupt」の意味として最も適切なものは？",
+          "choices": [
+            "破産させる",
+            "評価する・鑑定する",
+            "（利息などが）生じる",
+            "獲得する・習得する"
+          ],
+          "correct": 0,
+          "explanation": "「bankrupt」は「破産させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 10,
-      "title": "動詞編1-10",
-      "type": "Basic Verbs",
-      "emoji": "🌊",
-      "subtitle": "英検2級レベルの語彙クイズ！総仕上げ動詞編",
+      "title": "動詞編セット10",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 91~100",
       "questions": [
-        {"scenario": "「drain」の意味として最も適切なものは？", "choices": ["水を抜く、排出する", "満たす", "保存する", "凍らせる"], "correct": 0, "explanation": "液体を流し出すこと。資源や体力を消耗させる意味でも使う。", "type": "choice"},
-        {"scenario": "「drift」の意味として最も適切なものは？", "choices": ["漂う", "沈む", "固定する", "急ぐ"], "correct": 0, "explanation": "風や水の流れに任せてゆっくり移動すること。", "type": "choice"},
-        {"scenario": "「drown」の意味として最も適切なものは？", "choices": ["溺れる、溺死させる", "浮く", "泳ぐ", "救助する"], "correct": 0, "explanation": "水の中で息ができずに死ぬこと。またそうさせること。", "type": "choice"},
-        {"scenario": "「earn」の意味として最も適切なものは？", "choices": ["稼ぐ", "浪費する", "借りる", "盗む"], "correct": 0, "explanation": "働いてお金や評価などを得ること。", "type": "choice"},
-        {"scenario": "「ease」の意味として最も適切なものは？", "choices": ["和らげる", "悪化させる", "強める", "無視する"], "correct": 0, "explanation": "苦痛や緊張などを軽減すること。", "type": "choice"},
-        {"scenario": "「elect」の意味として最も適切なものは？", "choices": ["選出する", "解任する", "無視する", "拒否する"], "correct": 0, "explanation": "選挙などによって人を役職に選ぶこと。", "type": "choice"},
-        {"scenario": "「embrace」の意味として最も適切なものは？", "choices": ["受け入れる、抱擁する", "拒絶する", "無視する", "批判する"], "correct": 0, "explanation": "考えや変化を積極的に受け入れること。人を抱きしめる意味でも使う。", "type": "choice"},
-        {"scenario": "「emerge」の意味として最も適切なものは？", "choices": ["現れる", "消える", "隠れる", "沈む"], "correct": 0, "explanation": "隠れていたものが表に出てくること。", "type": "choice"},
-        {"scenario": "「employ」の意味として最も適切なものは？", "choices": ["雇う", "解雇する", "無視する", "訓練する"], "correct": 0, "explanation": "人を仕事のために雇い入れること。", "type": "choice"},
-        {"scenario": "「enable」の意味として最も適切なものは？", "choices": ["可能にする", "妨げる", "禁止する", "無視する"], "correct": 0, "explanation": "何かをすることを可能にする、許可を与えること。", "type": "choice"}
+        {
+          "scenario": "「barter」の意味として最も適切なものは？",
+          "choices": [
+            "物々交換する",
+            "提携する・加入する",
+            "魅了する",
+            "当惑させる"
+          ],
+          "correct": 0,
+          "explanation": "「barter」は「物々交換する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「baste」の意味として最も適切なものは？",
+          "choices": [
+            "分配する",
+            "提携する・加入する",
+            "肉汁をかける",
+            "入浴する・洗う"
+          ],
+          "correct": 2,
+          "explanation": "「baste」は「肉汁をかける」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bathe」の意味として最も適切なものは？",
+          "choices": [
+            "苦しめる",
+            "増幅する",
+            "入浴する・洗う",
+            "認可する・信用する"
+          ],
+          "correct": 2,
+          "explanation": "「bathe」は「入浴する・洗う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「batter」の意味として最も適切なものは？",
+          "choices": [
+            "乱打する",
+            "中毒にさせる",
+            "詐取する・勝手に引き受ける",
+            "物々交換する"
+          ],
+          "correct": 0,
+          "explanation": "「batter」は「乱打する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bawl」の意味として最も適切なものは？",
+          "choices": [
+            "自動化する",
+            "避ける・そらす",
+            "びっくり仰天させる",
+            "大声で叫ぶ"
+          ],
+          "correct": 3,
+          "explanation": "「bawl」は「大声で叫ぶ」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beckon」の意味として最も適切なものは？",
+          "choices": [
+            "乱打する",
+            "合図する・招き寄せる",
+            "襲撃する",
+            "増加させる"
+          ],
+          "correct": 1,
+          "explanation": "「beckon」は「合図する・招き寄せる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「become」の意味として最も適切なものは？",
+          "choices": [
+            "〜になる",
+            "減衰させる",
+            "敵に回す",
+            "交互に行う"
+          ],
+          "correct": 0,
+          "explanation": "「become」は「〜になる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「befall」の意味として最も適切なものは？",
+          "choices": [
+            "降りかかる",
+            "合併する",
+            "躊躇する・妨げる",
+            "くだらないおしゃべりをする"
+          ],
+          "correct": 0,
+          "explanation": "「befall」は「降りかかる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「befit」の意味として最も適切なものは？",
+          "choices": [
+            "適する",
+            "訓戒する・警告する",
+            "無罪にする・放免する",
+            "活気を与える"
+          ],
+          "correct": 0,
+          "explanation": "「befit」は「適する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「begin」の意味として最も適切なものは？",
+          "choices": [
+            "調停する",
+            "集計する・集める",
+            "始める",
+            "ぞっとさせる"
+          ],
+          "correct": 2,
+          "explanation": "「begin」は「始める」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     }
   ]

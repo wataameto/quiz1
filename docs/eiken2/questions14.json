@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "実戦編セット1",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1301~1310",
+      "questions": [
+        {
+          "scenario": "「mandatory」の意味として最も適切なものは？",
+          "choices": [
+            "凡庸",
+            "義務的な",
+            "記念碑的な・途方もない",
+            "明示・現れ"
+          ],
+          "correct": 1,
+          "explanation": "「mandatory」は「義務的な」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manual」の意味として最も適切なものは？",
+          "choices": [
+            "合間",
+            "地方自治体の",
+            "拡声器",
+            "手動の・体を使う"
+          ],
+          "correct": 3,
+          "explanation": "「manual」は「手動の・体を使う」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「marginal」の意味として最も適切なものは？",
+          "choices": [
+            "人類",
+            "数学者",
+            "最小限の",
+            "わずかな・限界の"
+          ],
+          "correct": 3,
+          "explanation": "「marginal」は「わずかな・限界の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maternal」の意味として最も適切なものは？",
+          "choices": [
+            "母方の・母親の",
+            "婦長・お上さん",
+            "市長の職",
+            "数学者"
+          ],
+          "correct": 0,
+          "explanation": "「maternal」は「母方の・母親の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「medieval」の意味として最も適切なものは？",
+          "choices": [
+            "石工",
+            "中世の",
+            "わずかな・限界の",
+            "顕微鏡でしか見えない・微視的な"
+          ],
+          "correct": 1,
+          "explanation": "「medieval」は「中世の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「melancholy」の意味として最も適切なものは？",
+          "choices": [
+            "憂鬱症",
+            "憂鬱な",
+            "母性・妊婦であること",
+            "人類"
+          ],
+          "correct": 1,
+          "explanation": "「melancholy」は「憂鬱な」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「merciful」の意味として最も適切なものは？",
+          "choices": [
+            "慈悲深い",
+            "船乗り",
+            "大虐殺",
+            "栄養失調"
+          ],
+          "correct": 0,
+          "explanation": "「merciful」は「慈悲深い」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「microscopic」の意味として最も適切なものは？",
+          "choices": [
+            "混戦",
+            "惨めな",
+            "顕微鏡でしか見えない・微視的な",
+            "骨髄"
+          ],
+          "correct": 2,
+          "explanation": "「microscopic」は「顕微鏡でしか見えない・微視的な」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「minimal」の意味として最も適切なものは？",
+          "choices": [
+            "悪意",
+            "マットレス",
+            "大虐殺",
+            "最小限の"
+          ],
+          "correct": 3,
+          "explanation": "「minimal」は「最小限の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「miraculous」の意味として最も適切なものは？",
+          "choices": [
+            "市長の職",
+            "人類",
+            "奇跡的な",
+            "カエデ"
+          ],
+          "correct": 2,
+          "explanation": "「miraculous」は「奇跡的な」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "実戦編セット2",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1311~1320",
+      "questions": [
+        {
+          "scenario": "「mischievous」の意味として最も適切なものは？",
+          "choices": [
+            "霊廟",
+            "いたずら好きな",
+            "悪意",
+            "維持・整備"
+          ],
+          "correct": 1,
+          "explanation": "「mischievous」は「いたずら好きな」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「miserable」の意味として最も適切なものは？",
+          "choices": [
+            "哺乳類",
+            "惨めな",
+            "奇跡的な",
+            "磁石"
+          ],
+          "correct": 1,
+          "explanation": "「miserable」は「惨めな」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「misleading」の意味として最も適切なものは？",
+          "choices": [
+            "メドレー",
+            "誤解を招く",
+            "大虐殺",
+            "意地悪さ"
+          ],
+          "correct": 1,
+          "explanation": "「misleading」は「誤解を招く」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「moist」の意味として最も適切なものは？",
+          "choices": [
+            "元帥・執行官",
+            "奇跡的な",
+            "湿った",
+            "成熟・満期"
+          ],
+          "correct": 2,
+          "explanation": "「moist」は「湿った」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「molecular」の意味として最も適切なものは？",
+          "choices": [
+            "元帥・執行官",
+            "格言",
+            "分子の",
+            "悲しげな"
+          ],
+          "correct": 2,
+          "explanation": "「molecular」は「分子の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「monetary」の意味として最も適切なものは？",
+          "choices": [
+            "悪意",
+            "わずかな・限界の",
+            "巨石",
+            "通貨の・金融の"
+          ],
+          "correct": 3,
+          "explanation": "「monetary」は「通貨の・金融の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「monumental」の意味として最も適切なものは？",
+          "choices": [
+            "仕組み",
+            "大メダル",
+            "湿った",
+            "記念碑的な・途方もない"
+          ],
+          "correct": 3,
+          "explanation": "「monumental」は「記念碑的な・途方もない」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mortal」の意味として最も適切なものは？",
+          "choices": [
+            "市場",
+            "誤解を招く",
+            "死すべき運命の・致命的な",
+            "通貨の・金融の"
+          ],
+          "correct": 2,
+          "explanation": "「mortal」は「死すべき運命の・致命的な」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mounting」の意味として最も適切なものは？",
+          "choices": [
+            "高まる・増大する",
+            "船乗り",
+            "数学者",
+            "惨めな"
+          ],
+          "correct": 0,
+          "explanation": "「mounting」は「高まる・増大する」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mournful」の意味として最も適切なものは？",
+          "choices": [
+            "製造業者",
+            "旋律",
+            "悲しげな",
+            "巨石"
+          ],
+          "correct": 2,
+          "explanation": "「mournful」は「悲しげな」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "実戦編セット3",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1321~1330",
+      "questions": [
+        {
+          "scenario": "「muddy」の意味として最も適切なものは？",
+          "choices": [
+            "婦長・お上さん",
+            "泥だらけの",
+            "大邸宅",
+            "船乗り"
+          ],
+          "correct": 1,
+          "explanation": "「muddy」は「泥だらけの」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「multicultural」の意味として最も適切なものは？",
+          "choices": [
+            "多文化の",
+            "測定",
+            "成熟・満期",
+            "脅威"
+          ],
+          "correct": 0,
+          "explanation": "「multicultural」は「多文化の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mundane」の意味として最も適切なものは？",
+          "choices": [
+            "膜",
+            "ありふれた・俗世の",
+            "メロドラマ",
+            "明示・現れ"
+          ],
+          "correct": 1,
+          "explanation": "「mundane」は「ありふれた・俗世の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「municipal」の意味として最も適切なものは？",
+          "choices": [
+            "母方の・母親の",
+            "地方自治体の",
+            "成熟・満期",
+            "憂鬱症"
+          ],
+          "correct": 1,
+          "explanation": "「municipal」は「地方自治体の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mythical」の意味として最も適切なものは？",
+          "choices": [
+            "神話の",
+            "合間",
+            "哺乳類",
+            "市長の職"
+          ],
+          "correct": 0,
+          "explanation": "「mythical」は「神話の」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「magnet」の意味として最も適切なものは？",
+          "choices": [
+            "意地悪さ",
+            "磁石",
+            "石工",
+            "カエデ"
+          ],
+          "correct": 1,
+          "explanation": "「magnet」は「磁石」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「magnitude」の意味として最も適切なものは？",
+          "choices": [
+            "骨髄",
+            "大きさ・重要性",
+            "旋律",
+            "人類"
+          ],
+          "correct": 1,
+          "explanation": "「magnitude」は「大きさ・重要性」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「majesty」の意味として最も適切なものは？",
+          "choices": [
+            "威厳・陛下",
+            "製造業者",
+            "ありふれた・俗世の",
+            "混戦"
+          ],
+          "correct": 0,
+          "explanation": "「majesty」は「威厳・陛下」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maintenance」の意味として最も適切なものは？",
+          "choices": [
+            "合間",
+            "維持・整備",
+            "憂鬱症",
+            "マスコット"
+          ],
+          "correct": 1,
+          "explanation": "「maintenance」は「維持・整備」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「majority」の意味として最も適切なものは？",
+          "choices": [
+            "記念碑的な・途方もない",
+            "大部分",
+            "大理石",
+            "迷路"
+          ],
+          "correct": 1,
+          "explanation": "「majority」は「大部分」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "実戦編セット4",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1331~1340",
+      "questions": [
+        {
+          "scenario": "「malice」の意味として最も適切なものは？",
+          "choices": [
+            "石工",
+            "大理石",
+            "悪意",
+            "母性・妊婦であること"
+          ],
+          "correct": 2,
+          "explanation": "「malice」は「悪意」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「malnutrition」の意味として最も適切なものは？",
+          "choices": [
+            "栄養失調",
+            "磁石",
+            "凡庸",
+            "明示・現れ"
+          ],
+          "correct": 0,
+          "explanation": "「malnutrition」は「栄養失調」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mammal」の意味として最も適切なものは？",
+          "choices": [
+            "市長の職",
+            "膜",
+            "哺乳類",
+            "憂鬱症"
+          ],
+          "correct": 2,
+          "explanation": "「mammal」は「哺乳類」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mandate」の意味として最も適切なものは？",
+          "choices": [
+            "哺乳類",
+            "分子の",
+            "仕組み",
+            "命令・委任権限"
+          ],
+          "correct": 3,
+          "explanation": "「mandate」は「命令・委任権限」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mania」の意味として最も適切なものは？",
+          "choices": [
+            "霊廟",
+            "覚書",
+            "熱狂",
+            "死すべき運命の・致命的な"
+          ],
+          "correct": 2,
+          "explanation": "「mania」は「熱狂」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manifestation」の意味として最も適切なものは？",
+          "choices": [
+            "荘園",
+            "明示・現れ",
+            "マットレス",
+            "維持・整備"
+          ],
+          "correct": 1,
+          "explanation": "「manifestation」は「明示・現れ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manipulation」の意味として最も適切なものは？",
+          "choices": [
+            "いたずら好きな",
+            "製造業者",
+            "拡声器",
+            "操作"
+          ],
+          "correct": 3,
+          "explanation": "「manipulation」は「操作」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mankind」の意味として最も適切なものは？",
+          "choices": [
+            "最大限",
+            "旋律",
+            "薬物治療",
+            "人類"
+          ],
+          "correct": 3,
+          "explanation": "「mankind」は「人類」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manor」の意味として最も適切なものは？",
+          "choices": [
+            "人類",
+            "荘園",
+            "分子の",
+            "はしか"
+          ],
+          "correct": 1,
+          "explanation": "「manor」は「荘園」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mansion」の意味として最も適切なものは？",
+          "choices": [
+            "いたずら好きな",
+            "大邸宅",
+            "奇跡的な",
+            "はしか"
+          ],
+          "correct": 1,
+          "explanation": "「mansion」は「大邸宅」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "実戦編セット5",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1341~1350",
+      "questions": [
+        {
+          "scenario": "「mantelpiece」の意味として最も適切なものは？",
+          "choices": [
+            "仲介者",
+            "結婚",
+            "暖炉の前飾り",
+            "命令・委任権限"
+          ],
+          "correct": 2,
+          "explanation": "「mantelpiece」は「暖炉の前飾り」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manufacturer」の意味として最も適切なものは？",
+          "choices": [
+            "製造業者",
+            "記念碑",
+            "大きさ・重要性",
+            "驚くべきこと"
+          ],
+          "correct": 0,
+          "explanation": "「manufacturer」は「製造業者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「manuscript」の意味として最も適切なものは？",
+          "choices": [
+            "原稿",
+            "測定",
+            "大理石",
+            "記念品"
+          ],
+          "correct": 0,
+          "explanation": "「manuscript」は「原稿」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maple」の意味として最も適切なものは？",
+          "choices": [
+            "薬物治療",
+            "カエデ",
+            "最小限の",
+            "マッサージ"
+          ],
+          "correct": 1,
+          "explanation": "「maple」は「カエデ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「marble」の意味として最も適切なものは？",
+          "choices": [
+            "骨髄",
+            "大理石",
+            "母方の・母親の",
+            "記念碑"
+          ],
+          "correct": 1,
+          "explanation": "「marble」は「大理石」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mariner」の意味として最も適切なものは？",
+          "choices": [
+            "殉教者",
+            "死すべき運命の・致命的な",
+            "奇跡的な",
+            "船乗り"
+          ],
+          "correct": 3,
+          "explanation": "「mariner」は「船乗り」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「marketplace」の意味として最も適切なものは？",
+          "choices": [
+            "数学者",
+            "骨髄",
+            "市場",
+            "格言"
+          ],
+          "correct": 2,
+          "explanation": "「marketplace」は「市場」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「marriage」の意味として最も適切なものは？",
+          "choices": [
+            "結婚",
+            "通貨の・金融の",
+            "メドレー",
+            "凡庸"
+          ],
+          "correct": 0,
+          "explanation": "「marriage」は「結婚」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「marrow」の意味として最も適切なものは？",
+          "choices": [
+            "元帥・執行官",
+            "悪意",
+            "骨髄",
+            "命令・委任権限"
+          ],
+          "correct": 2,
+          "explanation": "「marrow」は「骨髄」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「marsh」の意味として最も適切なものは？",
+          "choices": [
+            "傑作",
+            "湿った",
+            "凡庸",
+            "沼地"
+          ],
+          "correct": 3,
+          "explanation": "「marsh」は「沼地」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "実戦編セット6",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1351~1360",
+      "questions": [
+        {
+          "scenario": "「marshal」の意味として最も適切なものは？",
+          "choices": [
+            "操作",
+            "高まる・増大する",
+            "元帥・執行官",
+            "地方自治体の"
+          ],
+          "correct": 2,
+          "explanation": "「marshal」は「元帥・執行官」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「martyr」の意味として最も適切なものは？",
+          "choices": [
+            "回顧録",
+            "殉教者",
+            "大邸宅",
+            "死すべき運命の・致命的な"
+          ],
+          "correct": 1,
+          "explanation": "「martyr」は「殉教者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「marvel」の意味として最も適切なものは？",
+          "choices": [
+            "母方の・母親の",
+            "マッサージ",
+            "驚くべきこと",
+            "市長"
+          ],
+          "correct": 2,
+          "explanation": "「marvel」は「驚くべきこと」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mascot」の意味として最も適切なものは？",
+          "choices": [
+            "手動の・体を使う",
+            "マスコット",
+            "操作",
+            "合間"
+          ],
+          "correct": 1,
+          "explanation": "「mascot」は「マスコット」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mason」の意味として最も適切なものは？",
+          "choices": [
+            "石工",
+            "憂鬱症",
+            "威厳・陛下",
+            "元帥・執行官"
+          ],
+          "correct": 0,
+          "explanation": "「mason」は「石工」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「masquerade」の意味として最も適切なものは？",
+          "choices": [
+            "従順",
+            "マッサージ",
+            "仮面舞踏会",
+            "拡声器"
+          ],
+          "correct": 2,
+          "explanation": "「masquerade」は「仮面舞踏会」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「massacre」の意味として最も適切なものは？",
+          "choices": [
+            "マッサージ",
+            "大虐殺",
+            "死すべき運命の・致命的な",
+            "沼地"
+          ],
+          "correct": 1,
+          "explanation": "「massacre」は「大虐殺」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「massage」の意味として最も適切なものは？",
+          "choices": [
+            "仕組み",
+            "マッサージ",
+            "顕微鏡でしか見えない・微視的な",
+            "湿った"
+          ],
+          "correct": 1,
+          "explanation": "「massage」は「マッサージ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「masterpiece」の意味として最も適切なものは？",
+          "choices": [
+            "憂鬱症",
+            "旋律",
+            "傑作",
+            "仕組み"
+          ],
+          "correct": 2,
+          "explanation": "「masterpiece」は「傑作」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mastery」の意味として最も適切なものは？",
+          "choices": [
+            "支配・熟達",
+            "通貨の・金融の",
+            "人類",
+            "威厳・陛下"
+          ],
+          "correct": 0,
+          "explanation": "「mastery」は「支配・熟達」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "実戦編セット7",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1361~1370",
+      "questions": [
+        {
+          "scenario": "「maternity」の意味として最も適切なものは？",
+          "choices": [
+            "大部分",
+            "母性・妊婦であること",
+            "記念品",
+            "数学"
+          ],
+          "correct": 1,
+          "explanation": "「maternity」は「母性・妊婦であること」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mathematician」の意味として最も適切なものは？",
+          "choices": [
+            "誤解を招く",
+            "殉教者",
+            "石工",
+            "数学者"
+          ],
+          "correct": 3,
+          "explanation": "「mathematician」は「数学者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mathematics」の意味として最も適切なものは？",
+          "choices": [
+            "湿った",
+            "数学",
+            "薬物治療",
+            "ありふれた・俗世の"
+          ],
+          "correct": 1,
+          "explanation": "「mathematics」は「数学」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「matrix」の意味として最も適切なものは？",
+          "choices": [
+            "行列・基盤",
+            "悪意",
+            "栄養失調",
+            "船乗り"
+          ],
+          "correct": 0,
+          "explanation": "「matrix」は「行列・基盤」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「matron」の意味として最も適切なものは？",
+          "choices": [
+            "大きさ・重要性",
+            "婦長・お上さん",
+            "最小限の",
+            "手動の・体を使う"
+          ],
+          "correct": 1,
+          "explanation": "「matron」は「婦長・お上さん」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mattress」の意味として最も適切なものは？",
+          "choices": [
+            "わずかな・限界の",
+            "仮面舞踏会",
+            "マットレス",
+            "マッサージ"
+          ],
+          "correct": 2,
+          "explanation": "「mattress」は「マットレス」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maturity」の意味として最も適切なものは？",
+          "choices": [
+            "最小限の",
+            "命令・委任権限",
+            "悪意",
+            "成熟・満期"
+          ],
+          "correct": 3,
+          "explanation": "「maturity」は「成熟・満期」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mausoleum」の意味として最も適切なものは？",
+          "choices": [
+            "沼地",
+            "分子の",
+            "多文化の",
+            "霊廟"
+          ],
+          "correct": 3,
+          "explanation": "「mausoleum」は「霊廟」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maxim」の意味として最も適切なものは？",
+          "choices": [
+            "記念品",
+            "格言",
+            "地方自治体の",
+            "巨石"
+          ],
+          "correct": 1,
+          "explanation": "「maxim」は「格言」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maximum」の意味として最も適切なものは？",
+          "choices": [
+            "最大限",
+            "覚書",
+            "仮面舞踏会",
+            "はしか"
+          ],
+          "correct": 0,
+          "explanation": "「maximum」は「最大限」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "実戦編セット8",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1371~1380",
+      "questions": [
+        {
+          "scenario": "「mayor」の意味として最も適切なものは？",
+          "choices": [
+            "合間",
+            "市長",
+            "維持・整備",
+            "大メダル"
+          ],
+          "correct": 1,
+          "explanation": "「mayor」は「市長」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mayoralty」の意味として最も適切なものは？",
+          "choices": [
+            "義務的な",
+            "憂鬱な",
+            "市長の職",
+            "船乗り"
+          ],
+          "correct": 2,
+          "explanation": "「mayoralty」は「市長の職」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「maze」の意味として最も適切なものは？",
+          "choices": [
+            "媒体・中間",
+            "迷路",
+            "原稿",
+            "誇大妄想"
+          ],
+          "correct": 1,
+          "explanation": "「maze」は「迷路」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meaning」の意味として最も適切なものは？",
+          "choices": [
+            "威厳・陛下",
+            "支配・熟達",
+            "意味",
+            "マットレス"
+          ],
+          "correct": 2,
+          "explanation": "「meaning」は「意味」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meanness」の意味として最も適切なものは？",
+          "choices": [
+            "従順",
+            "迷路",
+            "意地悪さ",
+            "哺乳類"
+          ],
+          "correct": 2,
+          "explanation": "「meanness」は「意地悪さ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meantime」の意味として最も適切なものは？",
+          "choices": [
+            "殉教者",
+            "最小限の",
+            "大部分",
+            "合間"
+          ],
+          "correct": 3,
+          "explanation": "「meantime」は「合間」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「measles」の意味として最も適切なものは？",
+          "choices": [
+            "市長の職",
+            "はしか",
+            "大虐殺",
+            "分子の"
+          ],
+          "correct": 1,
+          "explanation": "「measles」は「はしか」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「measurement」の意味として最も適切なものは？",
+          "choices": [
+            "結婚",
+            "はしか",
+            "母性・妊婦であること",
+            "測定"
+          ],
+          "correct": 3,
+          "explanation": "「measurement」は「測定」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mechanism」の意味として最も適切なものは？",
+          "choices": [
+            "原稿",
+            "船乗り",
+            "仕組み",
+            "従順"
+          ],
+          "correct": 2,
+          "explanation": "「mechanism」は「仕組み」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「medallion」の意味として最も適切なものは？",
+          "choices": [
+            "凡庸",
+            "大メダル",
+            "市長の職",
+            "記念品"
+          ],
+          "correct": 1,
+          "explanation": "「medallion」は「大メダル」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "実戦編セット9",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1381~1390",
+      "questions": [
+        {
+          "scenario": "「mediator」の意味として最も適切なものは？",
+          "choices": [
+            "骨髄",
+            "憂鬱症",
+            "仲介者",
+            "顕微鏡でしか見えない・微視的な"
+          ],
+          "correct": 2,
+          "explanation": "「mediator」は「仲介者」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「medication」の意味として最も適切なものは？",
+          "choices": [
+            "マッサージ",
+            "薬物治療",
+            "迷路",
+            "意地悪さ"
+          ],
+          "correct": 1,
+          "explanation": "「medication」は「薬物治療」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「mediocrity」の意味として最も適切なものは？",
+          "choices": [
+            "凡庸",
+            "マットレス",
+            "メドレー",
+            "婦長・お上さん"
+          ],
+          "correct": 0,
+          "explanation": "「mediocrity」は「凡庸」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meditation」の意味として最も適切なものは？",
+          "choices": [
+            "操作",
+            "迷路",
+            "瞑想",
+            "媒体・中間"
+          ],
+          "correct": 2,
+          "explanation": "「meditation」は「瞑想」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「medium」の意味として最も適切なものは？",
+          "choices": [
+            "仕組み",
+            "媒体・中間",
+            "骨髄",
+            "記念碑的な・途方もない"
+          ],
+          "correct": 1,
+          "explanation": "「medium」は「媒体・中間」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「medley」の意味として最も適切なものは？",
+          "choices": [
+            "死すべき運命の・致命的な",
+            "義務的な",
+            "メドレー",
+            "母方の・母親の"
+          ],
+          "correct": 2,
+          "explanation": "「medley」は「メドレー」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「meekness」の意味として最も適切なものは？",
+          "choices": [
+            "行列・基盤",
+            "従順",
+            "合間",
+            "死すべき運命の・致命的な"
+          ],
+          "correct": 1,
+          "explanation": "「meekness」は「従順」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「megalith」の意味として最も適切なものは？",
+          "choices": [
+            "威厳・陛下",
+            "わずかな・限界の",
+            "憂鬱症",
+            "巨石"
+          ],
+          "correct": 3,
+          "explanation": "「megalith」は「巨石」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「megalomania」の意味として最も適切なものは？",
+          "choices": [
+            "威厳・陛下",
+            "神話の",
+            "人類",
+            "誇大妄想"
+          ],
+          "correct": 3,
+          "explanation": "「megalomania」は「誇大妄想」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「megaphone」の意味として最も適切なものは？",
+          "choices": [
+            "哺乳類",
+            "記念碑",
+            "大邸宅",
+            "拡声器"
+          ],
+          "correct": 3,
+          "explanation": "「megaphone」は「拡声器」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "実戦編セット10",
+      "type": "vocabulary",
+      "emoji": "🏆",
+      "subtitle": "英検2級の実戦語彙 1391~1400",
+      "questions": [
+        {
+          "scenario": "「melancholia」の意味として最も適切なものは？",
+          "choices": [
+            "脅威",
+            "憂鬱症",
+            "意味",
+            "沼地"
+          ],
+          "correct": 1,
+          "explanation": "「melancholia」は「憂鬱症」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「melee」の意味として最も適切なものは？",
+          "choices": [
+            "ありふれた・俗世の",
+            "神話の",
+            "混戦",
+            "死すべき運命の・致命的な"
+          ],
+          "correct": 2,
+          "explanation": "「melee」は「混戦」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「melodrama」の意味として最も適切なものは？",
+          "choices": [
+            "高まる・増大する",
+            "メドレー",
+            "市場",
+            "メロドラマ"
+          ],
+          "correct": 3,
+          "explanation": "「melodrama」は「メロドラマ」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「melody」の意味として最も適切なものは？",
+          "choices": [
+            "旋律",
+            "結婚",
+            "大虐殺",
+            "メロドラマ"
+          ],
+          "correct": 0,
+          "explanation": "「melody」は「旋律」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「membrane」の意味として最も適切なものは？",
+          "choices": [
+            "迷路",
+            "膜",
+            "顕微鏡でしか見えない・微視的な",
+            "意地悪さ"
+          ],
+          "correct": 1,
+          "explanation": "「membrane」は「膜」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「memento」の意味として最も適切なものは？",
+          "choices": [
+            "磁石",
+            "記念品",
+            "市長の職",
+            "マスコット"
+          ],
+          "correct": 1,
+          "explanation": "「memento」は「記念品」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「memoir」の意味として最も適切なものは？",
+          "choices": [
+            "凡庸",
+            "荘園",
+            "回顧録",
+            "数学"
+          ],
+          "correct": 2,
+          "explanation": "「memoir」は「回顧録」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「memorandum」の意味として最も適切なものは？",
+          "choices": [
+            "母性・妊婦であること",
+            "憂鬱症",
+            "最大限",
+            "覚書"
+          ],
+          "correct": 3,
+          "explanation": "「memorandum」は「覚書」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「memorial」の意味として最も適切なものは？",
+          "choices": [
+            "市場",
+            "母性・妊婦であること",
+            "意味",
+            "記念碑"
+          ],
+          "correct": 3,
+          "explanation": "「memorial」は「記念碑」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「menace」の意味として最も適切なものは？",
+          "choices": [
+            "合間",
+            "カエデ",
+            "脅威",
+            "分子の"
+          ],
+          "correct": 2,
+          "explanation": "「menace」は「脅威」という意味の単語（または表現）です。英検2級の実戦問題です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

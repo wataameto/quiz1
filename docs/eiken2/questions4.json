@@ -1,197 +1,1297 @@
 {
   "id": "eiken2",
-  "level": 4,
-  "label": "📝 形容詞編2",
-  "description": "応用形容詞（感情・性質・評価を表す語）",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
   "tests": [
     {
       "id": 1,
-      "title": "形容詞編2-1",
-      "type": "Emotions Group A",
-      "emoji": "😰",
-      "subtitle": "英検2級レベルの感情を表す形容詞クイズ！",
+      "title": "動詞編セット1",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 301~310",
       "questions": [
-        {"scenario": "「apprehensive」の意味として最も適切なものは？", "choices": ["不安な、懸念して", "満足した", "誇りに思う", "無関心な"], "correct": 0, "explanation": "apprehensiveは「不安な、懸念している」という意味。be apprehensive about～の形でよく使われる。", "type": "choice"},
-        {"scenario": "「elated」の意味として最も適切なものは？", "choices": ["大喜びの", "怒っている", "眠い", "恥ずかしい"], "correct": 0, "explanation": "elatedは「大喜びの、有頂天の」という意味で、delightedと似たニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「furious」の意味として最も適切なものは？", "choices": ["激怒して", "うれしい", "眠い", "恥ずかしい"], "correct": 0, "explanation": "furiousは「激怒した」という強い怒りを表す形容詞。angryよりも感情が強い。", "type": "choice"},
-        {"scenario": "「guilty」の意味として最も適切なものは？", "choices": ["罪悪感のある", "誇らしい", "興奮した", "落ち着いた"], "correct": 0, "explanation": "guiltyは「罪悪感のある、後ろめたい」という意味。feel guilty about～の形でよく使われる。", "type": "choice"},
-        {"scenario": "「grateful」の意味として最も適切なものは？", "choices": ["感謝している", "嫉妬深い", "疑い深い", "無礼な"], "correct": 0, "explanation": "gratefulは「感謝している」という意味。I'm grateful for your help.（助けてくれて感謝しています）", "type": "choice"},
-        {"scenario": "「envious」の意味として最も適切なものは？", "choices": ["うらやましく思う", "感謝している", "寛大な", "冷静な"], "correct": 0, "explanation": "enviousは「うらやましく思う、嫉妬した」という意味。be envious of～の形で使う。", "type": "choice"},
-        {"scenario": "「hesitant」の意味として最も適切なものは？", "choices": ["ためらいがちな", "積極的な", "自信のある", "大胆な"], "correct": 0, "explanation": "hesitantは「ためらいがちな、気が進まない」という意味。be hesitant to doで「～するのをためらう」。", "type": "choice"},
-        {"scenario": "「mortified」の意味として最も適切なものは？", "choices": ["ひどく恥じ入った", "誇りに思う", "満足した", "冷淡な"], "correct": 0, "explanation": "mortifiedは「ひどく恥じ入った、いたたまれない」という意味で、embarrassedより強い恥の感情を表す。", "type": "choice"},
-        {"scenario": "「reassured」の意味として最も適切なものは？", "choices": ["安心させられた", "不安な", "激怒した", "嫉妬深い"], "correct": 0, "explanation": "reassuredは「安心させられた」という意味。不安が取り除かれ安堵した状態を表す。", "type": "choice"},
-        {"scenario": "「possessive」の意味として最も適切なものは？", "choices": ["独占欲の強い", "寛大な", "謙虚な", "誠実な"], "correct": 0, "explanation": "possessiveは「独占欲の強い」という意味。人や物を独り占めしたがる性質を表す。", "type": "choice"}
+        {
+          "scenario": "「cudgel」の意味として最も適切なものは？",
+          "choices": [
+            "脱線させる",
+            "悪化する",
+            "延期する",
+            "棍棒で打つ"
+          ],
+          "correct": 3,
+          "explanation": "「cudgel」は「棍棒で打つ」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cue」の意味として最も適切なものは？",
+          "choices": [
+            "示す・意味する",
+            "演繹する・推論する",
+            "展開する",
+            "合図を送る"
+          ],
+          "correct": 3,
+          "explanation": "「cue」は「合図を送る」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cuff」の意味として最も適切なものは？",
+          "choices": [
+            "指定する",
+            "手錠をかける",
+            "ひどく嫌う",
+            "勇気を与える"
+          ],
+          "correct": 1,
+          "explanation": "「cuff」は「手錠をかける」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cumber」の意味として最も適切なものは？",
+          "choices": [
+            "平価を切り下げる",
+            "邪魔する",
+            "爆発させる",
+            "放出する"
+          ],
+          "correct": 1,
+          "explanation": "「cumber」は「邪魔する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curb」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する",
+            "脱退する・亡命する",
+            "追い出す・噴出する",
+            "発する"
+          ],
+          "correct": 0,
+          "explanation": "「curb」は「抑制する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curl」の意味として最も適切なものは？",
+          "choices": [
+            "精巧に作り上げる",
+            "髪を巻く",
+            "具体化する",
+            "深く嘆く・非難する"
+          ],
+          "correct": 1,
+          "explanation": "「curl」は「髪を巻く」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curry」の意味として最も適切なものは？",
+          "choices": [
+            "乗り出す・乗船する",
+            "ごまをする",
+            "飾る",
+            "軽蔑する"
+          ],
+          "correct": 1,
+          "explanation": "「curry」は「ごまをする」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curse」の意味として最も適切なものは？",
+          "choices": [
+            "長くする",
+            "呪う",
+            "飾る",
+            "邪魔する"
+          ],
+          "correct": 1,
+          "explanation": "「curse」は「呪う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curtail」の意味として最も適切なものは？",
+          "choices": [
+            "抑止する",
+            "削減する",
+            "下る",
+            "延期する"
+          ],
+          "correct": 1,
+          "explanation": "「curtail」は「削減する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curve」の意味として最も適切なものは？",
+          "choices": [
+            "中傷する",
+            "曲げる",
+            "描写する",
+            "人口を激減させる"
+          ],
+          "correct": 1,
+          "explanation": "「curve」は「曲げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 2,
-      "title": "形容詞編2-2",
-      "type": "Emotions Group B",
-      "emoji": "😢",
-      "subtitle": "英検2級レベルの感情を表す形容詞クイズ！",
+      "title": "動詞編セット2",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 311~320",
       "questions": [
-        {"scenario": "「miserable」の意味として最も適切なものは？", "choices": ["惨めな", "幸せな", "誇らしい", "自信に満ちた"], "correct": 0, "explanation": "miserableは「惨めな、みじめな気持ちの」という意味。天候の悪さなどにも使う。", "type": "choice"},
-        {"scenario": "「thrilled」の意味として最も適切なものは？", "choices": ["大興奮して", "退屈した", "落胆した", "無関心な"], "correct": 0, "explanation": "thrilledは「大興奮している」という意味。be thrilled to～でとても喜んでいる様子を表す。", "type": "choice"},
-        {"scenario": "「terrified」の意味として最も適切なものは？", "choices": ["非常に恐れて", "安心した", "うれしい", "誇らしい"], "correct": 0, "explanation": "terrifiedは「非常に恐れている」という意味。afraidより強い恐怖を表す。", "type": "choice"},
-        {"scenario": "「weary」の意味として最も適切なものは？", "choices": ["疲れ果てた", "元気いっぱいの", "興奮した", "落ち着いた"], "correct": 0, "explanation": "wearyは「疲れ果てた」という意味。exhaustedと似たニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「irritated」の意味として最も適切なものは？", "choices": ["いら立った", "満足した", "安心した", "誇らしい"], "correct": 0, "explanation": "irritatedは物事が思うようにいかず「いら立った」という意味。frustratedと近い意味を持つ。", "type": "choice"},
-        {"scenario": "「homesick」の意味として最も適切なものは？", "choices": ["ホームシックの", "自信に満ちた", "誇り高い", "疑い深い"], "correct": 0, "explanation": "homesickは「故郷を恋しく思う、ホームシックの」という意味。feel homesickの形で使われる。", "type": "choice"},
-        {"scenario": "「jittery」の意味として最も適切なものは？", "choices": ["そわそわした、緊張した", "落ち着いた", "自信のある", "満足した"], "correct": 0, "explanation": "jitteryは「そわそわした、神経質に緊張した」という意味。nervousと似たニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「bold」の意味として最も適切なものは？", "choices": ["大胆な", "臆病な", "不安な", "恥ずかしがりの"], "correct": 0, "explanation": "boldは「大胆な、恐れを知らない」という意味。confidentと近いが積極的な行動力を強調する。", "type": "choice"},
-        {"scenario": "「inquisitive」の意味として最も適切なものは？", "choices": ["詮索好きな、好奇心旺盛な", "無関心な", "疑い深い", "退屈した"], "correct": 0, "explanation": "inquisitiveは「詮索好きな、好奇心旺盛な」という意味。curiousと近いが、質問を多くする様子を強調する。", "type": "choice"},
-        {"scenario": "「puzzled」の意味として最も適切なものは？", "choices": ["困惑した", "確信して", "満足した", "誇らしい"], "correct": 0, "explanation": "puzzledは「困惑した、当惑した」という意味。理解できずに戸惑う様子を表す。", "type": "choice"}
+        {
+          "scenario": "「cycle」の意味として最も適切なものは？",
+          "choices": [
+            "自転車に乗る",
+            "派遣する・発送する",
+            "強制送還する",
+            "神聖を汚す"
+          ],
+          "correct": 0,
+          "explanation": "「cycle」は「自転車に乗る」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decipher」の意味として最も適切なものは？",
+          "choices": [
+            "権限を与える",
+            "曲げる",
+            "解読する",
+            "水浸しにする"
+          ],
+          "correct": 2,
+          "explanation": "「decipher」は「解読する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decode」の意味として最も適切なものは？",
+          "choices": [
+            "解読する",
+            "邪魔する",
+            "展開する",
+            "権限を与える"
+          ],
+          "correct": 0,
+          "explanation": "「decode」は「解読する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decompose」の意味として最も適切なものは？",
+          "choices": [
+            "分解する",
+            "中傷する",
+            "邪魔する",
+            "破壊する"
+          ],
+          "correct": 0,
+          "explanation": "「decompose」は「分解する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decoy」の意味として最も適切なものは？",
+          "choices": [
+            "高める",
+            "品位を落とす",
+            "おとりで引き寄せる",
+            "迂回する"
+          ],
+          "correct": 2,
+          "explanation": "「decoy」は「おとりで引き寄せる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decree」の意味として最も適切なものは？",
+          "choices": [
+            "布告する",
+            "士気を低下させる",
+            "見習う・競う",
+            "成し遂げる"
+          ],
+          "correct": 0,
+          "explanation": "「decree」は「布告する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「decry」の意味として最も適切なものは？",
+          "choices": [
+            "品位を落とす",
+            "公然と非難する",
+            "曲げる",
+            "破壊する"
+          ],
+          "correct": 1,
+          "explanation": "「decry」は「公然と非難する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dedicate」の意味として最も適切なものは？",
+          "choices": [
+            "脱退する・亡命する",
+            "捧げる",
+            "邪魔する",
+            "軽蔑する"
+          ],
+          "correct": 1,
+          "explanation": "「dedicate」は「捧げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deduce」の意味として最も適切なものは？",
+          "choices": [
+            "異議を唱える",
+            "品位を落とす",
+            "演繹する・推論する",
+            "中傷する"
+          ],
+          "correct": 2,
+          "explanation": "「deduce」は「演繹する・推論する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deduct」の意味として最も適切なものは？",
+          "choices": [
+            "指定する",
+            "解読する",
+            "差し引く",
+            "権限を与える"
+          ],
+          "correct": 2,
+          "explanation": "「deduct」は「差し引く」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 3,
-      "title": "形容詞編2-3",
-      "type": "Personality Group A",
-      "emoji": "🎭",
-      "subtitle": "英検2級レベルの性格を表す形容詞クイズ！",
+      "title": "動詞編セット3",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 321~330",
       "questions": [
-        {"scenario": "「thrifty」の意味として最も適切なものは？", "choices": ["倹約家の、質素な", "浪費家の", "寛大な", "傲慢な"], "correct": 0, "explanation": "thriftyは「倹約家の、無駄遣いしない」という意味。お金や物を大切に使う様子を表す。", "type": "choice"},
-        {"scenario": "「obstinate」の意味として最も適切なものは？", "choices": ["頑固な", "従順な", "柔軟な", "寛大な"], "correct": 0, "explanation": "obstinateは「頑固な」という意味。stubbornと近い意味で、自分の意見を変えない様子を表す。", "type": "choice"},
-        {"scenario": "「unassuming」の意味として最も適切なものは？", "choices": ["気取らない、控えめな", "傲慢な", "生意気な", "派手な"], "correct": 0, "explanation": "unassumingは「気取らない、控えめな」という意味。自分を誇示しない態度を表す。", "type": "choice"},
-        {"scenario": "「conceited」の意味として最も適切なものは？", "choices": ["うぬぼれた", "謙虚な", "誠実な", "従順な"], "correct": 0, "explanation": "conceitedは「うぬぼれた、自惚れの強い」という意味。arrogantと近いニュアンスを持つ。", "type": "choice"},
-        {"scenario": "「earnest」の意味として最も適切なものは？", "choices": ["真剣な、誠実な", "偽りの", "傲慢な", "皮肉な"], "correct": 0, "explanation": "earnestは「真剣な、まじめな」という意味。sincereと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「wary」の意味として最も適切なものは？", "choices": ["用心深い、警戒している", "無頓着な", "大胆な", "軽率な"], "correct": 0, "explanation": "waryは「用心深い、警戒している」という意味。be wary of～で「～を警戒する」。", "type": "choice"},
-        {"scenario": "「aspiring」の意味として最も適切なものは？", "choices": ["意欲のある、〜を目指す", "怠惰な", "無関心な", "消極的な"], "correct": 0, "explanation": "aspiringは「（将来〜になることを）目指す、意欲的な」という意味。an aspiring writerのように使う。", "type": "choice"},
-        {"scenario": "「meek」の意味として最も適切なものは？", "choices": ["おとなしい、従順な", "傲慢な", "尊大な", "生意気な"], "correct": 0, "explanation": "meekは「おとなしい、従順な」という意味。humbleと近い意味で使われることがある。", "type": "choice"},
-        {"scenario": "「truthful」の意味として最も適切なものは？", "choices": ["正直な、真実を語る", "不誠実な", "皮肉な", "疑い深い"], "correct": 0, "explanation": "truthfulは「正直な、真実を語る」という意味。honestと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「reliable」の意味として最も適切なものは？", "choices": ["頼りになる、信頼できる", "無責任な", "気まぐれな", "怠惰な"], "correct": 0, "explanation": "reliableは「信頼できる、頼りになる」という意味。rely on～（頼る）から派生した語。", "type": "choice"}
+        {
+          "scenario": "「deem」の意味として最も適切なものは？",
+          "choices": [
+            "飾る",
+            "みなす",
+            "放出する",
+            "呪う"
+          ],
+          "correct": 1,
+          "explanation": "「deem」は「みなす」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deface」の意味として最も適切なものは？",
+          "choices": [
+            "脱線させる",
+            "外観を損なう",
+            "（時間が）経過する",
+            "水浸しにする"
+          ],
+          "correct": 1,
+          "explanation": "「deface」は「外観を損なう」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「defame」の意味として最も適切なものは？",
+          "choices": [
+            "免職する",
+            "中傷する",
+            "受け入れる・抱擁する",
+            "反響する"
+          ],
+          "correct": 1,
+          "explanation": "「defame」は「中傷する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「defect」の意味として最も適切なものは？",
+          "choices": [
+            "公然と非難する",
+            "外観を損なう",
+            "脱退する・亡命する",
+            "手錠をかける"
+          ],
+          "correct": 2,
+          "explanation": "「defect」は「脱退する・亡命する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「defer」の意味として最も適切なものは？",
+          "choices": [
+            "公然と非難する",
+            "追い出す・噴出する",
+            "横領する",
+            "延期する"
+          ],
+          "correct": 3,
+          "explanation": "「defer」は「延期する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「defy」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する",
+            "引き離す",
+            "反抗する・挑む",
+            "大いに喜ばせる"
+          ],
+          "correct": 2,
+          "explanation": "「defy」は「反抗する・挑む」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「degrade」の意味として最も適切なものは？",
+          "choices": [
+            "ごまをする",
+            "下る",
+            "抑止する",
+            "品位を落とす"
+          ],
+          "correct": 3,
+          "explanation": "「degrade」は「品位を落とす」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dehydrate」の意味として最も適切なものは？",
+          "choices": [
+            "受け入れる・抱擁する",
+            "ひどく嫌う",
+            "脱退する・亡命する",
+            "脱水する"
+          ],
+          "correct": 3,
+          "explanation": "「dehydrate」は「脱水する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delegate」の意味として最も適切なものは？",
+          "choices": [
+            "下る",
+            "精巧に作り上げる",
+            "代表として派遣する・委任する",
+            "呪う"
+          ],
+          "correct": 2,
+          "explanation": "「delegate」は「代表として派遣する・委任する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delete」の意味として最も適切なものは？",
+          "choices": [
+            "刺繍する",
+            "破壊する",
+            "削除する",
+            "だます"
+          ],
+          "correct": 2,
+          "explanation": "「delete」は「削除する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 4,
-      "title": "形容詞編2-4",
-      "type": "Personality Group B",
-      "emoji": "🤝",
-      "subtitle": "英検2級レベルの性格を表す形容詞クイズ！",
+      "title": "動詞編セット4",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 331~340",
       "questions": [
-        {"scenario": "「thoughtful」の意味として最も適切なものは？", "choices": ["思いやりのある", "自己中心的な", "無礼な", "冷淡な"], "correct": 0, "explanation": "thoughtfulは「思いやりのある」という意味。considerateと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「self-centered」の意味として最も適切なものは？", "choices": ["自己中心的な", "寛大な", "思いやりのある", "謙虚な"], "correct": 0, "explanation": "self-centeredは「自己中心的な」という意味。selfishと近い意味を持つ。", "type": "choice"},
-        {"scenario": "「courageous」の意味として最も適切なものは？", "choices": ["勇敢な", "臆病な", "怠惰な", "優柔不断な"], "correct": 0, "explanation": "courageousは「勇敢な」という意味。courage（勇気）の形容詞形。", "type": "choice"},
-        {"scenario": "「bashful」の意味として最も適切なものは？", "choices": ["内気な、はにかむ", "大胆な", "自信に満ちた", "攻撃的な"], "correct": 0, "explanation": "bashfulは「内気な、はにかむ」という意味。timidと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「diligent」の意味として最も適切なものは？", "choices": ["勤勉な", "怠惰な", "無謀な", "不誠実な"], "correct": 0, "explanation": "diligentは「勤勉な」という意味。努力を惜しまず一生懸命取り組む様子を表す。", "type": "choice"},
-        {"scenario": "「lazy」の意味として最も適切なものは？", "choices": ["怠惰な", "勤勉な", "熱心な", "几帳面な"], "correct": 0, "explanation": "lazyは「怠惰な、なまけ者の」という意味。diligentの反対語。", "type": "choice"},
-        {"scenario": "「optimistic」の意味として最も適切なものは？", "choices": ["楽観的な", "悲観的な", "冷笑的な", "無関心な"], "correct": 0, "explanation": "optimisticは「楽観的な」という意味。物事を前向きに捉える考え方を表す。", "type": "choice"},
-        {"scenario": "「pessimistic」の意味として最も適切なものは？", "choices": ["悲観的な", "楽観的な", "自信に満ちた", "熱心な"], "correct": 0, "explanation": "pessimisticは「悲観的な」という意味。optimisticの反対語。", "type": "choice"},
-        {"scenario": "「sociable」の意味として最も適切なものは？", "choices": ["社交的な", "内気な", "無愛想な", "攻撃的な"], "correct": 0, "explanation": "sociableは「社交的な、人付き合いの良い」という意味。socialと語源が同じ。", "type": "choice"},
-        {"scenario": "「hostile」の意味として最も適切なものは？", "choices": ["敵意のある", "友好的な", "温厚な", "従順な"], "correct": 0, "explanation": "hostileは「敵意のある、攻撃的な」という意味。aggressiveと近いニュアンスで使われる。", "type": "choice"}
+        {
+          "scenario": "「delight」の意味として最も適切なものは？",
+          "choices": [
+            "大いに喜ばせる",
+            "神聖を汚す",
+            "平価を切り下げる",
+            "移住する"
+          ],
+          "correct": 0,
+          "explanation": "「delight」は「大いに喜ばせる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delimit」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する",
+            "範囲を定める",
+            "呪う",
+            "降格させる"
+          ],
+          "correct": 1,
+          "explanation": "「delimit」は「範囲を定める」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「delude」の意味として最も適切なものは？",
+          "choices": [
+            "留置する・引き止める",
+            "横領する",
+            "水浸しにする",
+            "だます"
+          ],
+          "correct": 3,
+          "explanation": "「delude」は「だます」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deluge」の意味として最も適切なものは？",
+          "choices": [
+            "公然と非難する",
+            "品位を落とす",
+            "考案する",
+            "水浸しにする"
+          ],
+          "correct": 3,
+          "explanation": "「deluge」は「水浸しにする」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demarcate」の意味として最も適切なものは？",
+          "choices": [
+            "境界を定める",
+            "悪化する",
+            "公然と非難する",
+            "節約する"
+          ],
+          "correct": 0,
+          "explanation": "「demarcate」は「境界を定める」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demean」の意味として最も適切なものは？",
+          "choices": [
+            "品位を落とす",
+            "派遣する・発送する",
+            "自転車に乗る",
+            "むさぼり食う"
+          ],
+          "correct": 0,
+          "explanation": "「demean」は「品位を落とす」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demolish」の意味として最も適切なものは？",
+          "choices": [
+            "水浸しにする",
+            "破壊する",
+            "下る",
+            "消し去る"
+          ],
+          "correct": 1,
+          "explanation": "「demolish」は「破壊する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demoralize」の意味として最も適切なものは？",
+          "choices": [
+            "脱線させる",
+            "逸脱する",
+            "人口を激減させる",
+            "士気を低下させる"
+          ],
+          "correct": 3,
+          "explanation": "「demoralize」は「士気を低下させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demote」の意味として最も適切なものは？",
+          "choices": [
+            "品位を落とす",
+            "降格させる",
+            "追い出す・噴出する",
+            "横領する"
+          ],
+          "correct": 1,
+          "explanation": "「demote」は「降格させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「demur」の意味として最も適切なものは？",
+          "choices": [
+            "だます",
+            "堕落させる",
+            "留置する・引き止める",
+            "異議を唱える"
+          ],
+          "correct": 3,
+          "explanation": "「demur」は「異議を唱える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 5,
-      "title": "形容詞編2-5",
-      "type": "Evaluation Group A",
-      "emoji": "⭐",
-      "subtitle": "英検2級レベルの評価を表す形容詞クイズ！",
+      "title": "動詞編セット5",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 341~350",
       "questions": [
-        {"scenario": "「excellent」の意味として最も適切なものは？", "choices": ["優れた、素晴らしい", "平凡な", "劣った", "不十分な"], "correct": 0, "explanation": "excellentは「非常に優れた、素晴らしい」という意味。goodよりも強い評価を表す。", "type": "choice"},
-        {"scenario": "「remarkable」の意味として最も適切なものは？", "choices": ["注目すべき、著しい", "ありふれた", "つまらない", "平凡な"], "correct": 0, "explanation": "remarkableは「注目に値する、著しい」という意味。remark（注目する）から派生した語。", "type": "choice"},
-        {"scenario": "「valuable」の意味として最も適切なものは？", "choices": ["価値のある", "無価値な", "平凡な", "疑わしい"], "correct": 0, "explanation": "valuableは「価値のある、貴重な」という意味。value（価値）の形容詞形。", "type": "choice"},
-        {"scenario": "「worthless」の意味として最も適切なものは？", "choices": ["価値のない", "貴重な", "優れた", "適切な"], "correct": 0, "explanation": "worthlessは「価値のない」という意味。worth（価値）+less（〜がない）で構成される。", "type": "choice"},
-        {"scenario": "「indispensable」の意味として最も適切なものは？", "choices": ["不可欠な", "余分な", "些細な", "任意の"], "correct": 0, "explanation": "indispensableは「不可欠な、なくてはならない」という意味。essentialと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「substantial」の意味として最も適切なものは？", "choices": ["かなりの、相当な", "些細な", "無関係な", "不十分な"], "correct": 0, "explanation": "substantialは「かなりの、相当な」という意味。a substantial amountのように使われる。", "type": "choice"},
-        {"scenario": "「preeminent」の意味として最も適切なものは？", "choices": ["卓越した、抜きん出た", "劣った", "平凡な", "不十分な"], "correct": 0, "explanation": "preeminentは「卓越した、抜きん出た」という意味。superiorより一段強い優越を表す。", "type": "choice"},
-        {"scenario": "「subordinate」の意味として最も適切なものは？", "choices": ["下位の、従属的な", "優れた", "平凡な", "十分な"], "correct": 0, "explanation": "subordinateは「下位の、従属的な」という意味。inferiorと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「satisfactory」の意味として最も適切なものは？", "choices": ["満足のいく、十分な", "不十分な", "過剰な", "無関係な"], "correct": 0, "explanation": "satisfactoryは「満足のいく、十分な水準の」という意味。adequateと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「ample」の意味として最も適切なものは？", "choices": ["十分すぎるほどの", "不十分な", "過剰な", "不適切な"], "correct": 0, "explanation": "ampleは「十分すぎるほどの、豊富な」という意味。ample timeのように使われる。", "type": "choice"}
+        {
+          "scenario": "「denigrate」の意味として最も適切なものは？",
+          "choices": [
+            "巧みに避ける",
+            "脱退する・亡命する",
+            "（時間が）経過する",
+            "中傷する"
+          ],
+          "correct": 3,
+          "explanation": "「denigrate」は「中傷する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「denote」の意味として最も適切なものは？",
+          "choices": [
+            "軽蔑する",
+            "示す・意味する",
+            "追い出す・噴出する",
+            "演繹する・推論する"
+          ],
+          "correct": 1,
+          "explanation": "「denote」は「示す・意味する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「denounce」の意味として最も適切なものは？",
+          "choices": [
+            "堕落させる",
+            "公然と非難する",
+            "長くする",
+            "神聖を汚す"
+          ],
+          "correct": 1,
+          "explanation": "「denounce」は「公然と非難する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depict」の意味として最も適切なものは？",
+          "choices": [
+            "壊滅させる",
+            "引き離す",
+            "削除する",
+            "描写する"
+          ],
+          "correct": 3,
+          "explanation": "「depict」は「描写する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deplete」の意味として最も適切なものは？",
+          "choices": [
+            "激減させる・使い果たす",
+            "邪魔する",
+            "外観を損なう",
+            "展開する"
+          ],
+          "correct": 0,
+          "explanation": "「deplete」は「激減させる・使い果たす」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deplore」の意味として最も適切なものは？",
+          "choices": [
+            "深く嘆く・非難する",
+            "自転車に乗る",
+            "堕落させる",
+            "長くする"
+          ],
+          "correct": 0,
+          "explanation": "「deplore」は「深く嘆く・非難する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deploy」の意味として最も適切なものは？",
+          "choices": [
+            "感電させる・興奮させる",
+            "展開する",
+            "脱線させる",
+            "呪う"
+          ],
+          "correct": 1,
+          "explanation": "「deploy」は「展開する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depeople」の意味として最も適切なものは？",
+          "choices": [
+            "髪を巻く",
+            "示す・意味する",
+            "人口を激減させる",
+            "演繹する・推論する"
+          ],
+          "correct": 2,
+          "explanation": "「depeople」は「人口を激減させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deport」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する",
+            "描写する",
+            "節約する",
+            "強制送還する"
+          ],
+          "correct": 3,
+          "explanation": "「deport」は「強制送還する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depose」の意味として最も適切なものは？",
+          "choices": [
+            "精巧に作り上げる",
+            "免職する",
+            "示す・意味する",
+            "脱線させる"
+          ],
+          "correct": 1,
+          "explanation": "「depose」は「免職する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 6,
-      "title": "形容詞編2-6",
-      "type": "Evaluation Group B",
-      "emoji": "💎",
-      "subtitle": "英検2級レベルの評価を表す形容詞クイズ！",
+      "title": "動詞編セット6",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 351~360",
       "questions": [
-        {"scenario": "「impressive」の意味として最も適切なものは？", "choices": ["印象的な", "ありふれた", "退屈な", "不十分な"], "correct": 0, "explanation": "impressiveは「印象的な、感銘を与える」という意味。impress（感銘を与える）の形容詞形。", "type": "choice"},
-        {"scenario": "「ordinary」の意味として最も適切なものは？", "choices": ["普通の、平凡な", "非凡な", "印象的な", "完璧な"], "correct": 0, "explanation": "ordinaryは「普通の、ありふれた」という意味。特別ではない様子を表す。", "type": "choice"},
-        {"scenario": "「extraordinary」の意味として最も適切なものは？", "choices": ["並外れた", "平凡な", "不十分な", "些細な"], "correct": 0, "explanation": "extraordinaryは「並外れた、非凡な」という意味。extra（外に）+ordinary（普通）で構成される。", "type": "choice"},
-        {"scenario": "「mediocre」の意味として最も適切なものは？", "choices": ["平凡な、二流の", "優秀な", "完璧な", "非凡な"], "correct": 0, "explanation": "mediocreは「平凡な、二流の」という意味。優れても劣ってもいない中途半端な評価を表す。", "type": "choice"},
-        {"scenario": "「flawless」の意味として最も適切なものは？", "choices": ["完璧な、欠点のない", "欠陥のある", "平凡な", "不完全な"], "correct": 0, "explanation": "flawlessは「完璧な」という意味。flaw（欠点）+less（〜がない）で構成される。", "type": "choice"},
-        {"scenario": "「defective」の意味として最も適切なものは？", "choices": ["欠陥のある", "完璧な", "優れた", "適切な"], "correct": 0, "explanation": "defectiveは「欠陥のある」という意味。defective productで「不良品」を表す。", "type": "choice"},
-        {"scenario": "「legitimate」の意味として最も適切なものは？", "choices": ["正当な、合法的な", "不当な", "疑わしい", "平凡な"], "correct": 0, "explanation": "legitimateは「正当な、合法的な」という意味。a legitimate reasonのように使われる。", "type": "choice"},
-        {"scenario": "「credible」の意味として最も適切なものは？", "choices": ["信頼できる、信憑性のある", "疑わしい", "偽造の", "平凡な"], "correct": 0, "explanation": "credibleは「信頼できる、信憑性のある」という意味。a credible sourceのように使われる。", "type": "choice"},
-        {"scenario": "「fake」の意味として最も適切なものは？", "choices": ["偽の", "本物の", "貴重な", "誠実な"], "correct": 0, "explanation": "fakeは「偽の、偽物の」という意味。genuineやauthenticの反対語として使われる。", "type": "choice"},
-        {"scenario": "「trustworthy」の意味として最も適切なものは？", "choices": ["信頼できる", "疑わしい", "無責任な", "気まぐれな"], "correct": 0, "explanation": "trustworthyは「信頼できる」という意味。trust（信頼）+worthy（〜に値する）で構成される。", "type": "choice"}
+        {
+          "scenario": "「deprave」の意味として最も適切なものは？",
+          "choices": [
+            "移住する",
+            "反抗する・挑む",
+            "堕落させる",
+            "棍棒で打つ"
+          ],
+          "correct": 2,
+          "explanation": "「deprave」は「堕落させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deprecate」の意味として最も適切なものは？",
+          "choices": [
+            "勇気を与える",
+            "反対する・軽んじる",
+            "下る",
+            "詳細に述べる"
+          ],
+          "correct": 1,
+          "explanation": "「deprecate」は「反対する・軽んじる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「depreciate」の意味として最も適切なものは？",
+          "choices": [
+            "抑制する",
+            "価値を下げる",
+            "外観を損なう",
+            "公然と非難する"
+          ],
+          "correct": 1,
+          "explanation": "「depreciate」は「価値を下げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「derail」の意味として最も適切なものは？",
+          "choices": [
+            "だます",
+            "脱線させる",
+            "見習う・競う",
+            "受け入れる・抱擁する"
+          ],
+          "correct": 1,
+          "explanation": "「derail」は「脱線させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「descend」の意味として最も適切なものは？",
+          "choices": [
+            "下る",
+            "延期する",
+            "演繹する・推論する",
+            "捧げる"
+          ],
+          "correct": 0,
+          "explanation": "「descend」は「下る」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「desecrate」の意味として最も適切なものは？",
+          "choices": [
+            "神聖を汚す",
+            "解放する",
+            "ごまをする",
+            "手錠をかける"
+          ],
+          "correct": 0,
+          "explanation": "「desecrate」は「神聖を汚す」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「designate」の意味として最も適切なものは？",
+          "choices": [
+            "堕落させる",
+            "指定する",
+            "平価を切り下げる",
+            "（時間が）経過する"
+          ],
+          "correct": 1,
+          "explanation": "「designate」は「指定する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「desist」の意味として最も適切なものは？",
+          "choices": [
+            "乗り出す・乗船する",
+            "高める",
+            "やめる",
+            "解放する"
+          ],
+          "correct": 2,
+          "explanation": "「desist」は「やめる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「despatch」の意味として最も適切なものは？",
+          "choices": [
+            "棍棒で打つ",
+            "軽蔑する",
+            "派遣する・発送する",
+            "反対する・軽んじる"
+          ],
+          "correct": 2,
+          "explanation": "「despatch」は「派遣する・発送する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「despise」の意味として最も適切なものは？",
+          "choices": [
+            "壊滅させる",
+            "外観を損なう",
+            "中傷する",
+            "軽蔑する"
+          ],
+          "correct": 3,
+          "explanation": "「despise」は「軽蔑する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 7,
-      "title": "形容詞編2-7",
-      "type": "Manners & Behavior",
-      "emoji": "🙇",
-      "subtitle": "英検2級レベルの態度・振る舞いを表す形容詞クイズ！",
+      "title": "動詞編セット7",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 361~370",
       "questions": [
-        {"scenario": "「courteous」の意味として最も適切なものは？", "choices": ["礼儀正しい", "無礼な", "傲慢な", "攻撃的な"], "correct": 0, "explanation": "courteousは「礼儀正しい、丁寧な」という意味。politeと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「impolite」の意味として最も適切なものは？", "choices": ["失礼な", "礼儀正しい", "謙虚な", "思いやりのある"], "correct": 0, "explanation": "impoliteは「失礼な、無礼な」という意味。rudeと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「tactful」の意味として最も適切なものは？", "choices": ["気の利いた、如才ない", "無神経な", "無礼な", "不器用な"], "correct": 0, "explanation": "tactfulは「気配りができる、如才ない」という意味。人を傷つけないよう配慮する態度を表す。", "type": "choice"},
-        {"scenario": "「clumsy」の意味として最も適切なものは？", "choices": ["不器用な", "器用な", "優雅な", "几帳面な"], "correct": 0, "explanation": "clumsyは「不器用な、ぎこちない」という意味。物を落としたりする様子を表す。", "type": "choice"},
-        {"scenario": "「awkward」の意味として最も適切なものは？", "choices": ["ぎこちない、気まずい", "優雅な", "自然な", "巧みな"], "correct": 0, "explanation": "awkwardは「ぎこちない、気まずい」という意味。an awkward silence（気まずい沈黙）のように使う。", "type": "choice"},
-        {"scenario": "「graceful」の意味として最も適切なものは？", "choices": ["優雅な", "不器用な", "ぎこちない", "粗野な"], "correct": 0, "explanation": "gracefulは「優雅な」という意味。grace（優雅さ）の形容詞形。", "type": "choice"},
-        {"scenario": "「careless」の意味として最も適切なものは？", "choices": ["不注意な", "慎重な", "几帳面な", "熱心な"], "correct": 0, "explanation": "carelessは「不注意な」という意味。care（注意）+less（〜がない）で構成される。", "type": "choice"},
-        {"scenario": "「meticulous」の意味として最も適切なものは？", "choices": ["几帳面な、細心の", "大雑把な", "不注意な", "怠惰な"], "correct": 0, "explanation": "meticulousは「細部まで気を配る、几帳面な」という意味。carelessの対極にある性質を表す。", "type": "choice"},
-        {"scenario": "「thoughtless」の意味として最も適切なものは？", "choices": ["思慮に欠ける、軽率な", "思いやりのある", "慎重な", "誠実な"], "correct": 0, "explanation": "thoughtlessは「思慮に欠ける、軽率な」という意味。他人への配慮を欠く様子を表す。", "type": "choice"},
-        {"scenario": "「attentive」の意味として最も適切なものは？", "choices": ["注意深い、気配りのある", "無関心な", "不注意な", "傲慢な"], "correct": 0, "explanation": "attentiveは「注意を払う、気配りのある」という意味。attentive serviceのように使われる。", "type": "choice"}
+        {
+          "scenario": "「detach」の意味として最も適切なものは？",
+          "choices": [
+            "権限を与える",
+            "引き離す",
+            "成し遂げる",
+            "描写する"
+          ],
+          "correct": 1,
+          "explanation": "「detach」は「引き離す」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「detail」の意味として最も適切なものは？",
+          "choices": [
+            "詳細に述べる",
+            "削減する",
+            "引き出す",
+            "指定する"
+          ],
+          "correct": 0,
+          "explanation": "「detail」は「詳細に述べる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「detain」の意味として最も適切なものは？",
+          "choices": [
+            "品位を落とす",
+            "公然と非難する",
+            "留置する・引き止める",
+            "節約する"
+          ],
+          "correct": 2,
+          "explanation": "「detain」は「留置する・引き止める」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deter」の意味として最も適切なものは？",
+          "choices": [
+            "抑止する",
+            "異議を唱える",
+            "消し去る",
+            "壊滅させる"
+          ],
+          "correct": 0,
+          "explanation": "「deter」は「抑止する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「deteriorate」の意味として最も適切なものは？",
+          "choices": [
+            "人口を激減させる",
+            "悪化する",
+            "指定する",
+            "中傷する"
+          ],
+          "correct": 1,
+          "explanation": "「deteriorate」は「悪化する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「detest」の意味として最も適切なものは？",
+          "choices": [
+            "ごまをする",
+            "脱線させる",
+            "人口を激減させる",
+            "ひどく嫌う"
+          ],
+          "correct": 3,
+          "explanation": "「detest」は「ひどく嫌う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「detonate」の意味として最も適切なものは？",
+          "choices": [
+            "爆発させる",
+            "見習う・競う",
+            "解放する",
+            "感電させる・興奮させる"
+          ],
+          "correct": 0,
+          "explanation": "「detonate」は「爆発させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「detour」の意味として最も適切なものは？",
+          "choices": [
+            "迂回する",
+            "堕落させる",
+            "延期する",
+            "見習う・競う"
+          ],
+          "correct": 0,
+          "explanation": "「detour」は「迂回する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「devalue」の意味として最も適切なものは？",
+          "choices": [
+            "大いに喜ばせる",
+            "派遣する・発送する",
+            "ひどく嫌う",
+            "平価を切り下げる"
+          ],
+          "correct": 3,
+          "explanation": "「devalue」は「平価を切り下げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「devastate」の意味として最も適切なものは？",
+          "choices": [
+            "引き離す",
+            "見習う・競う",
+            "感電させる・興奮させる",
+            "壊滅させる"
+          ],
+          "correct": 3,
+          "explanation": "「devastate」は「壊滅させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 8,
-      "title": "形容詞編2-8",
-      "type": "Attitude & Ability",
-      "emoji": "💪",
-      "subtitle": "英検2級レベルの態度・能力を表す形容詞クイズ！",
+      "title": "動詞編セット8",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 371~380",
       "questions": [
-        {"scenario": "「patient」の意味として最も適切なものは？", "choices": ["忍耐強い", "せっかちな", "短気な", "怠惰な"], "correct": 0, "explanation": "patientは「忍耐強い」という意味。名詞では「患者」の意味もある多義語。", "type": "choice"},
-        {"scenario": "「impatient」の意味として最も適切なものは？", "choices": ["短気な、せっかちな", "忍耐強い", "冷静な", "寛大な"], "correct": 0, "explanation": "impatientは「短気な、我慢できない」という意味。patientの反対語。", "type": "choice"},
-        {"scenario": "「persistent」の意味として最も適切なものは？", "choices": ["粘り強い", "あきらめやすい", "気まぐれな", "消極的な"], "correct": 0, "explanation": "persistentは「粘り強い、根気強い」という意味。persist（固執する）の形容詞形。", "type": "choice"},
-        {"scenario": "「determined」の意味として最も適切なものは？", "choices": ["決意の固い", "優柔不断な", "無関心な", "消極的な"], "correct": 0, "explanation": "determinedは「決意の固い」という意味。be determined to～で「〜する決意をしている」。", "type": "choice"},
-        {"scenario": "「flexible」の意味として最も適切なものは？", "choices": ["柔軟な", "頑固な", "厳格な", "融通の利かない"], "correct": 0, "explanation": "flexibleは「柔軟な」という意味。状況に応じて対応できる様子を表す。", "type": "choice"},
-        {"scenario": "「inflexible」の意味として最も適切なものは？", "choices": ["融通の利かない", "柔軟な", "寛容な", "適応力のある"], "correct": 0, "explanation": "inflexibleは「融通の利かない、頑なな」という意味。rigidと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「adaptable」の意味として最も適切なものは？", "choices": ["適応力のある", "頑固な", "融通の利かない", "消極的な"], "correct": 0, "explanation": "adaptableは「適応力のある」という意味。adapt（適応する）の形容詞形。", "type": "choice"},
-        {"scenario": "「versatile」の意味として最も適切なものは？", "choices": ["多才な、万能の", "単調な", "限定的な", "平凡な"], "correct": 0, "explanation": "versatileは「多才な、多方面に使える」という意味。a versatile player（万能選手）のように使う。", "type": "choice"},
-        {"scenario": "「competent」の意味として最も適切なものは？", "choices": ["有能な", "無能な", "未熟な", "不十分な"], "correct": 0, "explanation": "competentは「有能な、能力のある」という意味。仕事などをこなす十分な能力を表す。", "type": "choice"},
-        {"scenario": "「capable」の意味として最も適切なものは？", "choices": ["能力のある、有能な", "無能な", "不十分な", "未熟な"], "correct": 0, "explanation": "capableは「能力のある」という意味。be capable of～で「〜する能力がある」。", "type": "choice"}
+        {
+          "scenario": "「deviate」の意味として最も適切なものは？",
+          "choices": [
+            "逸脱する",
+            "削減する",
+            "具体化する",
+            "壊滅させる"
+          ],
+          "correct": 0,
+          "explanation": "「deviate」は「逸脱する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「devise」の意味として最も適切なものは？",
+          "choices": [
+            "考案する",
+            "解読する",
+            "下る",
+            "境界を定める"
+          ],
+          "correct": 0,
+          "explanation": "「devise」は「考案する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「devour」の意味として最も適切なものは？",
+          "choices": [
+            "考案する",
+            "ごまをする",
+            "むさぼり食う",
+            "価値を下げる"
+          ],
+          "correct": 2,
+          "explanation": "「devour」は「むさぼり食う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「echo」の意味として最も適切なものは？",
+          "choices": [
+            "延期する",
+            "反響する",
+            "大いに喜ばせる",
+            "横領する"
+          ],
+          "correct": 1,
+          "explanation": "「echo」は「反響する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「economize」の意味として最も適切なものは？",
+          "choices": [
+            "境界を定める",
+            "破壊する",
+            "脱線させる",
+            "節約する"
+          ],
+          "correct": 3,
+          "explanation": "「economize」は「節約する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「efface」の意味として最も適切なものは？",
+          "choices": [
+            "中傷する",
+            "ごまをする",
+            "消し去る",
+            "軽蔑する"
+          ],
+          "correct": 2,
+          "explanation": "「efface」は「消し去る」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effectuate」の意味として最も適切なものは？",
+          "choices": [
+            "士気を低下させる",
+            "飾る",
+            "成し遂げる",
+            "ごまをする"
+          ],
+          "correct": 2,
+          "explanation": "「effectuate」は「成し遂げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eject」の意味として最も適切なものは？",
+          "choices": [
+            "おとりで引き寄せる",
+            "権限を与える",
+            "ひどく嫌う",
+            "追い出す・噴出する"
+          ],
+          "correct": 3,
+          "explanation": "「eject」は「追い出す・噴出する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elaborate」の意味として最も適切なものは？",
+          "choices": [
+            "精巧に作り上げる",
+            "やめる",
+            "抑止する",
+            "引き出す"
+          ],
+          "correct": 0,
+          "explanation": "「elaborate」は「精巧に作り上げる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elapse」の意味として最も適切なものは？",
+          "choices": [
+            "（時間が）経過する",
+            "価値を下げる",
+            "激減させる・使い果たす",
+            "反対する・軽んじる"
+          ],
+          "correct": 0,
+          "explanation": "「elapse」は「（時間が）経過する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 9,
-      "title": "形容詞編2-9",
-      "type": "Skepticism & Detachment",
-      "emoji": "🤨",
-      "subtitle": "英検2級レベルの懐疑・無関心を表す形容詞クイズ！",
+      "title": "動詞編セット9",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 381~390",
       "questions": [
-        {"scenario": "「controversial」の意味として最も適切なものは？", "choices": ["物議を醸す", "明白な", "平凡な", "一般的な"], "correct": 0, "explanation": "controversialは「物議を醸す、議論の的となる」という意味。a controversial issueのように使う。", "type": "choice"},
-        {"scenario": "「equivocal」の意味として最も適切なものは？", "choices": ["あいまいな、玉虫色の", "明確な", "正確な", "単純な"], "correct": 0, "explanation": "equivocalは「あいまいな、玉虫色の」という意味。ambiguousと近いニュアンスで使われる。", "type": "choice"},
-        {"scenario": "「ironic」の意味として最も適切なものは？", "choices": ["皮肉な", "誠実な", "素直な", "明白な"], "correct": 0, "explanation": "ironicは「皮肉な」という意味。予想と反対の結果になる状況を表すこともある。", "type": "choice"},
-        {"scenario": "「sarcastic」の意味として最も適切なものは？", "choices": ["皮肉な、嫌味な", "誠実な", "優しい", "素直な"], "correct": 0, "explanation": "sarcasticは「皮肉な、嫌味な」という意味。相手を遠回しに批判するような話し方を表す。", "type": "choice"},
-        {"scenario": "「skeptical」の意味として最も適切なものは？", "choices": ["懐疑的な", "信じやすい", "楽観的な", "熱心な"], "correct": 0, "explanation": "skepticalは「懐疑的な」という意味。be skeptical about～で「〜に懐疑的である」。", "type": "choice"},
-        {"scenario": "「naive」の意味として最も適切なものは？", "choices": ["世間知らずな、純朴な", "老練な", "疑い深い", "冷笑的な"], "correct": 0, "explanation": "naiveは「世間知らずな、単純に信じやすい」という意味。人生経験の乏しさを表す。", "type": "choice"},
-        {"scenario": "「suspicious」の意味として最も適切なものは？", "choices": ["疑わしい、疑い深い", "信頼できる", "純粋な", "無邪気な"], "correct": 0, "explanation": "suspiciousは「疑わしい」または「疑い深い」という意味。文脈により両方の意味で使われる。", "type": "choice"},
-        {"scenario": "「cynical」の意味として最も適切なものは？", "choices": ["冷笑的な、皮肉な見方をする", "楽観的な", "純朴な", "誠実な"], "correct": 0, "explanation": "cynicalは「冷笑的な、人の善意を疑う」という意味。物事を否定的に見る態度を表す。", "type": "choice"},
-        {"scenario": "「indifferent」の意味として最も適切なものは？", "choices": ["無関心な", "熱心な", "好奇心の強い", "同情的な"], "correct": 0, "explanation": "indifferentは「無関心な」という意味。be indifferent to～で「〜に無関心である」。", "type": "choice"},
-        {"scenario": "「passive」の意味として最も適切なものは？", "choices": ["受動的な、消極的な", "積極的な", "攻撃的な", "熱心な"], "correct": 0, "explanation": "passiveは「受動的な、消極的な」という意味。activeの反対語として使われる。", "type": "choice"}
+        {
+          "scenario": "「electrify」の意味として最も適切なものは？",
+          "choices": [
+            "感電させる・興奮させる",
+            "価値を下げる",
+            "むさぼり食う",
+            "下る"
+          ],
+          "correct": 0,
+          "explanation": "「electrify」は「感電させる・興奮させる」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elevate」の意味として最も適切なものは？",
+          "choices": [
+            "公然と非難する",
+            "高める",
+            "権限を与える",
+            "詳細に述べる"
+          ],
+          "correct": 1,
+          "explanation": "「elevate」は「高める」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elicit」の意味として最も適切なものは？",
+          "choices": [
+            "横領する",
+            "境界を定める",
+            "引き出す",
+            "士気を低下させる"
+          ],
+          "correct": 2,
+          "explanation": "「elicit」は「引き出す」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elongate」の意味として最も適切なものは？",
+          "choices": [
+            "反抗する・挑む",
+            "長くする",
+            "差し引く",
+            "横領する"
+          ],
+          "correct": 1,
+          "explanation": "「elongate」は「長くする」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elude」の意味として最も適切なものは？",
+          "choices": [
+            "具体化する",
+            "価値を下げる",
+            "巧みに避ける",
+            "節約する"
+          ],
+          "correct": 2,
+          "explanation": "「elude」は「巧みに避ける」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emanate」の意味として最も適切なものは？",
+          "choices": [
+            "発する",
+            "布告する",
+            "感電させる・興奮させる",
+            "具体化する"
+          ],
+          "correct": 0,
+          "explanation": "「emanate」は「発する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emancipate」の意味として最も適切なものは？",
+          "choices": [
+            "公然と非難する",
+            "留置する・引き止める",
+            "解放する",
+            "呪う"
+          ],
+          "correct": 2,
+          "explanation": "「emancipate」は「解放する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embark」の意味として最も適切なものは？",
+          "choices": [
+            "放出する",
+            "乗り出す・乗船する",
+            "降格させる",
+            "描写する"
+          ],
+          "correct": 1,
+          "explanation": "「embark」は「乗り出す・乗船する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embellish」の意味として最も適切なものは？",
+          "choices": [
+            "布告する",
+            "免職する",
+            "破壊する",
+            "飾る"
+          ],
+          "correct": 3,
+          "explanation": "「embellish」は「飾る」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embezzle」の意味として最も適切なものは？",
+          "choices": [
+            "権限を与える",
+            "破壊する",
+            "横領する",
+            "放出する"
+          ],
+          "correct": 2,
+          "explanation": "「embezzle」は「横領する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     },
     {
       "id": 10,
-      "title": "形容詞編2-10",
-      "type": "Mixed Advanced Feelings",
-      "emoji": "🌪️",
-      "subtitle": "英検2級レベルの応用形容詞クイズ！",
+      "title": "動詞編セット10",
+      "type": "vocabulary",
+      "emoji": "🏃‍♂️",
+      "subtitle": "英検2級の動詞 391~400",
       "questions": [
-        {"scenario": "「keen」の意味として最も適切なものは？", "choices": ["熱心な、切望して", "無関心な", "消極的な", "疲れた"], "correct": 0, "explanation": "keenは「熱心な、切望している」という意味。be keen to～で「〜することを切望している」。", "type": "choice"},
-        {"scenario": "「desperate」の意味として最も適切なものは？", "choices": ["必死の、絶望的な", "冷静な", "満足した", "自信のある"], "correct": 0, "explanation": "desperateは「必死の、絶望的な」という意味。be desperate for～で「〜を切実に求めている」。", "type": "choice"},
-        {"scenario": "「content」の意味として最も適切なものは？", "choices": ["満足している", "不満な", "不安な", "嫉妬深い"], "correct": 0, "explanation": "contentは形容詞で「満足している」という意味。be content with～で使われる。", "type": "choice"},
-        {"scenario": "「resentful」の意味として最も適切なものは？", "choices": ["憤りを感じる", "感謝している", "満足した", "寛大な"], "correct": 0, "explanation": "resentfulは「憤りを感じる、恨みを抱く」という意味。不公平な扱いへの怒りを表す。", "type": "choice"},
-        {"scenario": "「sympathetic」の意味として最も適切なものは？", "choices": ["同情的な", "冷淡な", "無関心な", "攻撃的な"], "correct": 0, "explanation": "sympatheticは「同情的な、思いやりのある」という意味。他人の苦しみを理解し寄り添う様子を表す。", "type": "choice"},
-        {"scenario": "「compassionate」の意味として最も適切なものは？", "choices": ["思いやりのある、慈悲深い", "冷酷な", "無関心な", "傲慢な"], "correct": 0, "explanation": "compassionateは「思いやりのある、慈悲深い」という意味。苦しむ人を助けたいと思う気持ちを表す。", "type": "choice"},
-        {"scenario": "「tolerant」の意味として最も適切なものは？", "choices": ["寛容な", "不寛容な", "頑固な", "攻撃的な"], "correct": 0, "explanation": "tolerantは「寛容な」という意味。異なる意見や習慣を受け入れる態度を表す。", "type": "choice"},
-        {"scenario": "「intolerant」の意味として最も適切なものは？", "choices": ["不寛容な", "寛容な", "温厚な", "柔軟な"], "correct": 0, "explanation": "intolerantは「不寛容な」という意味。tolerantの反対語で、異なる考えを受け入れない態度を表す。", "type": "choice"},
-        {"scenario": "「dependable」の意味として最も適切なものは？", "choices": ["頼りになる", "無責任な", "気まぐれな", "未熟な"], "correct": 0, "explanation": "dependableは「頼りになる、当てになる」という意味。depend on～（頼る）から派生した語。", "type": "choice"},
-        {"scenario": "「notorious」の意味として最も適切なものは？", "choices": ["悪名高い", "有名で称賛される", "無名の", "平凡な"], "correct": 0, "explanation": "notoriousは「悪名高い」という意味。良くない理由で有名であることを表す。famousとは異なりネガティブな含みを持つ。", "type": "choice"}
+        {
+          "scenario": "「embody」の意味として最も適切なものは？",
+          "choices": [
+            "具体化する",
+            "境界を定める",
+            "派遣する・発送する",
+            "外観を損なう"
+          ],
+          "correct": 0,
+          "explanation": "「embody」は「具体化する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embolden」の意味として最も適切なものは？",
+          "choices": [
+            "境界を定める",
+            "示す・意味する",
+            "士気を低下させる",
+            "勇気を与える"
+          ],
+          "correct": 3,
+          "explanation": "「embolden」は「勇気を与える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embrace」の意味として最も適切なものは？",
+          "choices": [
+            "（時間が）経過する",
+            "受け入れる・抱擁する",
+            "反響する",
+            "公然と非難する"
+          ],
+          "correct": 1,
+          "explanation": "「embrace」は「受け入れる・抱擁する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embroider」の意味として最も適切なものは？",
+          "choices": [
+            "ごまをする",
+            "反抗する・挑む",
+            "価値を下げる",
+            "刺繍する"
+          ],
+          "correct": 3,
+          "explanation": "「embroider」は「刺繍する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emigrate」の意味として最も適切なものは？",
+          "choices": [
+            "移住する",
+            "演繹する・推論する",
+            "品位を落とす",
+            "見習う・競う"
+          ],
+          "correct": 0,
+          "explanation": "「emigrate」は「移住する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emit」の意味として最も適切なものは？",
+          "choices": [
+            "呪う",
+            "詳細に述べる",
+            "放出する",
+            "人口を激減させる"
+          ],
+          "correct": 2,
+          "explanation": "「emit」は「放出する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「empower」の意味として最も適切なものは？",
+          "choices": [
+            "権限を与える",
+            "大いに喜ばせる",
+            "飾る",
+            "堕落させる"
+          ],
+          "correct": 0,
+          "explanation": "「empower」は「権限を与える」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「empty」の意味として最も適切なものは？",
+          "choices": [
+            "空にする",
+            "脱水する",
+            "公然と非難する",
+            "指定する"
+          ],
+          "correct": 0,
+          "explanation": "「empty」は「空にする」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emulate」の意味として最も適切なものは？",
+          "choices": [
+            "おとりで引き寄せる",
+            "解読する",
+            "高める",
+            "見習う・競う"
+          ],
+          "correct": 3,
+          "explanation": "「emulate」は「見習う・競う」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enact」の意味として最も適切なものは？",
+          "choices": [
+            "派遣する・発送する",
+            "留置する・引き止める",
+            "おとりで引き寄せる",
+            "制定する"
+          ],
+          "correct": 3,
+          "explanation": "「enact」は「制定する」という意味の動詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
       ]
     }
   ]

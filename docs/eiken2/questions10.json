@@ -1,795 +1,1295 @@
 {
   "id": "eiken2",
-  "level": 10,
-  "label": "🎯 総合復習編",
-  "description": "各品詞混在の総合復習（模試形式）",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
   "tests": [
     {
       "id": 1,
-      "title": "総合復習編-1",
-      "type": "Mixed Review",
-      "emoji": "🧩",
-      "subtitle": "基本動詞と日常表現の総復習！",
+      "title": "形容詞・副詞編セット1",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 901~910",
       "questions": [
         {
-          "scenario": "「absorb」の意味として最も適切なものは？",
-          "choices": ["吸収する", "拒絶する", "放出する", "反射する"],
+          "scenario": "「culinary」の意味として最も適切なものは？",
+          "choices": [
+            "料理の",
+            "おしゃれな",
+            "意欲的な",
+            "曲がった"
+          ],
           "correct": 0,
-          "explanation": "absorbは液体や情報などを「吸収する」という意味の動詞。",
+          "explanation": "「culinary」は「料理の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「accurate」の意味として最も適切なものは？",
-          "choices": ["正確な", "曖昧な", "大まかな", "不完全な"],
-          "correct": 0,
-          "explanation": "accurateは「正確な、精密な」という意味の形容詞。",
+          "scenario": "「culpable」の意味として最も適切なものは？",
+          "choices": [
+            "拒絶的な・軽蔑的な",
+            "ひどく嫌悪すべき",
+            "延性のある",
+            "とがむべき"
+          ],
+          "correct": 3,
+          "explanation": "「culpable」は「とがむべき」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「announce」の意味として最も適切なものは？",
-          "choices": ["発表する", "隠す", "否定する", "延期する"],
-          "correct": 0,
-          "explanation": "announceは情報などを「発表する、知らせる」という意味の動詞。",
+          "scenario": "「cultivated」の意味として最も適切なものは？",
+          "choices": [
+            "消化不良の",
+            "洗練された・栽培された",
+            "恐れられている",
+            "二枚舌の"
+          ],
+          "correct": 1,
+          "explanation": "「cultivated」は「洗練された・栽培された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「apologize」の意味として最も適切なものは？",
-          "choices": ["謝罪する", "賞賛する", "反論する", "招待する"],
+          "scenario": "「cumulative」の意味として最も適切なものは？",
+          "choices": [
+            "累積的な",
+            "分散した",
+            "散漫な・拡散した",
+            "反抗的な"
+          ],
           "correct": 0,
-          "explanation": "apologizeは「謝罪する」という意味の動詞。",
+          "explanation": "「cumulative」は「累積的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「postpone」の意味として最も適切なものは？",
-          "choices": ["延期する", "実行する", "完成させる", "開始する"],
-          "correct": 0,
-          "explanation": "postponeは「延期する、先延ばしにする」という意味の動詞。",
+          "scenario": "「cunning」の意味として最も適切なものは？",
+          "choices": [
+            "変装した",
+            "狡猾な",
+            "不機嫌な",
+            "なくてもすむ"
+          ],
+          "correct": 1,
+          "explanation": "「cunning」は「狡猾な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「resolve」の意味として最も適切なものは？",
-          "choices": ["解決する、決意する", "悪化させる", "無視する", "中止する"],
-          "correct": 0,
-          "explanation": "resolveは問題などを「解決する」、または「決意する」という意味の動詞。",
+          "scenario": "「cursory」の意味として最も適切なものは？",
+          "choices": [
+            "不協和音の",
+            "大雑把な",
+            "疑わしい",
+            "回りくどい・よこしまな"
+          ],
+          "correct": 1,
+          "explanation": "「cursory」は「大雑把な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「distinguish」の意味として最も適切なものは？",
-          "choices": ["区別する", "混同する", "結合する", "無視する"],
-          "correct": 0,
-          "explanation": "distinguishは物事を「区別する、見分ける」という意味の動詞。",
+          "scenario": "「curved」の意味として最も適切なものは？",
+          "choices": [
+            "うなだれた",
+            "曲がった",
+            "冷静な",
+            "熱心な"
+          ],
+          "correct": 1,
+          "explanation": "「curved」は「曲がった」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「accomplish」の意味として最も適切なものは？",
-          "choices": ["成し遂げる", "失敗する", "諦める", "中断する"],
-          "correct": 0,
-          "explanation": "accomplishは目標などを「成し遂げる、達成する」という意味の動詞。",
+          "scenario": "「cynical」の意味として最も適切なものは？",
+          "choices": [
+            "独裁的な",
+            "冷笑的な",
+            "異なる・分岐する",
+            "失格の"
+          ],
+          "correct": 1,
+          "explanation": "「cynical」は「冷笑的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「anticipate」の意味として最も適切なものは？",
-          "choices": ["予期する、見越す", "忘れる", "無視する", "疑う"],
-          "correct": 0,
-          "explanation": "anticipateは「予期する、見越す」という意味の動詞。",
+          "scenario": "「dainty」の意味として最も適切なものは？",
+          "choices": [
+            "説教的な",
+            "異なる",
+            "累積的な",
+            "華奢な"
+          ],
+          "correct": 3,
+          "explanation": "「dainty」は「華奢な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「reimburse」の意味として最も適切なものは？",
-          "choices": ["（費用を）払い戻す", "請求する", "没収する", "借りる"],
+          "scenario": "「deadly」の意味として最も適切なものは？",
+          "choices": [
+            "致命的な",
+            "不名誉な",
+            "曲がった",
+            "規律正しい"
+          ],
           "correct": 0,
-          "explanation": "reimburseは立て替えた「費用を払い戻す」という意味の動詞。",
+          "explanation": "「deadly」は「致命的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 2,
-      "title": "総合復習編-2",
-      "type": "Mixed Review",
-      "emoji": "🔎",
-      "subtitle": "動詞・名詞・形容詞を幅広くチェック！",
+      "title": "形容詞・副詞編セット2",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 911~920",
       "questions": [
         {
-          "scenario": "「attract」の意味として最も適切なものは？",
-          "choices": ["引き付ける", "追い払う", "無視する", "拒絶する"],
+          "scenario": "「defiant」の意味として最も適切なものは？",
+          "choices": [
+            "反抗的な",
+            "むくんだ",
+            "軽蔑的な",
+            "致命的な"
+          ],
           "correct": 0,
-          "explanation": "attractは人や物事を「引き付ける、魅了する」という意味の動詞。",
+          "explanation": "「defiant」は「反抗的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「average」の意味として最も適切なものは？",
-          "choices": ["平均の", "最大の", "最小の", "特別な"],
-          "correct": 0,
-          "explanation": "averageは「平均の、平均」という意味の形容詞・名詞。",
+          "scenario": "「deluxe」の意味として最も適切なものは？",
+          "choices": [
+            "忠実な",
+            "勇敢な",
+            "豪華な",
+            "産毛の"
+          ],
+          "correct": 2,
+          "explanation": "「deluxe」は「豪華な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「aware」の意味として最も適切なものは？",
-          "choices": ["気づいている", "無知な", "無関心な", "疑っている"],
-          "correct": 0,
-          "explanation": "awareは「（〜に）気づいている、意識している」という意味の形容詞。",
+          "scenario": "「demographic」の意味として最も適切なものは？",
+          "choices": [
+            "診断の",
+            "人口統計学の",
+            "滴る",
+            "延性のある"
+          ],
+          "correct": 1,
+          "explanation": "「demographic」は「人口統計学の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「scrutinize」の意味として最も適切なものは？",
-          "choices": ["精査する、詳しく調べる", "見過ごす", "無視する", "隠す"],
-          "correct": 0,
-          "explanation": "scrutinizeは物事を「精査する、詳しく調べる」という意味の動詞。",
+          "scenario": "「detective」の意味として最も適切なものは？",
+          "choices": [
+            "累積的な",
+            "探偵の",
+            "放蕩な",
+            "だらしない"
+          ],
+          "correct": 1,
+          "explanation": "「detective」は「探偵の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「bond」の意味として最も適切なものは？",
-          "choices": ["絆、結びつき", "対立", "距離", "誤解"],
-          "correct": 0,
-          "explanation": "bondは人と人との「絆、結びつき」という意味の名詞。",
+          "scenario": "「detestable」の意味として最も適切なものは？",
+          "choices": [
+            "異種の",
+            "威厳のある",
+            "ひどく嫌悪すべき",
+            "外観を損ねた"
+          ],
+          "correct": 2,
+          "explanation": "「detestable」は「ひどく嫌悪すべき」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「simplify」の意味として最も適切なものは？",
-          "choices": ["簡単にする", "複雑にする", "誇張する", "曖昧にする"],
+          "scenario": "「devious」の意味として最も適切なものは？",
+          "choices": [
+            "回りくどい・よこしまな",
+            "二枚舌の",
+            "散漫な・拡散した",
+            "遠い"
+          ],
           "correct": 0,
-          "explanation": "simplifyは物事を「簡単にする、簡素化する」という意味の動詞。",
+          "explanation": "「devious」は「回りくどい・よこしまな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「verify」の意味として最も適切なものは？",
-          "choices": ["検証する、確認する", "疑う", "偽造する", "否定する"],
-          "correct": 0,
-          "explanation": "verifyは事実などを「検証する、確認する」という意味の動詞。",
+          "scenario": "「devout」の意味として最も適切なものは？",
+          "choices": [
+            "くすんだ",
+            "華奢な",
+            "信心深い",
+            "探偵の"
+          ],
+          "correct": 2,
+          "explanation": "「devout」は「信心深い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「modify」の意味として最も適切なものは？",
-          "choices": ["修正する、変更する", "固定する", "破壊する", "無視する"],
-          "correct": 0,
-          "explanation": "modifyは「修正する、変更する」という意味の動詞。",
+          "scenario": "「diagnostic」の意味として最も適切なものは？",
+          "choices": [
+            "恐れられている",
+            "診断の",
+            "耐久性のある",
+            "信心深い"
+          ],
+          "correct": 1,
+          "explanation": "「diagnostic」は「診断の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「justify」の意味として最も適切なものは？",
-          "choices": ["正当化する", "非難する", "否定する", "隠す"],
-          "correct": 0,
-          "explanation": "justifyは行為などを「正当化する」という意味の動詞。",
+          "scenario": "「diagonal」の意味として最も適切なものは？",
+          "choices": [
+            "教義の",
+            "大雑把な",
+            "拒絶的な・軽蔑的な",
+            "対角線の"
+          ],
+          "correct": 3,
+          "explanation": "「diagonal」は「対角線の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「neglect」の意味として最も適切なものは？",
-          "choices": ["怠る、無視する", "大切にする", "実行する", "強調する"],
-          "correct": 0,
-          "explanation": "neglectは義務などを「怠る」、または人を「無視する」という意味の動詞。",
+          "scenario": "「dictatorial」の意味として最も適切なものは？",
+          "choices": [
+            "狡猾な",
+            "独裁的な",
+            "教義の",
+            "診断の"
+          ],
+          "correct": 1,
+          "explanation": "「dictatorial」は「独裁的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 3,
-      "title": "総合復習編-3",
-      "type": "Mixed Review",
-      "emoji": "🌦️",
-      "subtitle": "生活シーンでよく使う語彙を確認！",
+      "title": "形容詞・副詞編セット3",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 921~930",
       "questions": [
         {
-          "scenario": "「reinforce」の意味として最も適切なものは？",
-          "choices": ["強化する", "弱める", "破壊する", "無視する"],
-          "correct": 0,
-          "explanation": "reinforceは構造や主張などを「強化する」という意味の動詞。",
+          "scenario": "「didactic」の意味として最も適切なものは？",
+          "choices": [
+            "異種の",
+            "説教的な",
+            "致命的な",
+            "恐れられている"
+          ],
+          "correct": 1,
+          "explanation": "「didactic」は「説教的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「charity」の意味として最も適切なものは？",
-          "choices": ["慈善、慈善団体", "競争", "借金", "罰"],
-          "correct": 0,
-          "explanation": "charityは「慈善（活動）、慈善団体」という意味の名詞。",
+          "scenario": "「different」の意味として最も適切なものは？",
+          "choices": [
+            "転換された",
+            "異なる",
+            "分散した",
+            "回りくどい・よこしまな"
+          ],
+          "correct": 1,
+          "explanation": "「different」は「異なる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「undermine」の意味として最も適切なものは？",
-          "choices": ["徐々に弱体化させる", "強化する", "支援する", "促進する"],
-          "correct": 0,
-          "explanation": "undermineは信頼や立場などを「徐々に弱体化させる」という意味の動詞。",
+          "scenario": "「diffuse」の意味として最も適切なものは？",
+          "choices": [
+            "対角線の",
+            "減少した",
+            "風通しのよい",
+            "散漫な・拡散した"
+          ],
+          "correct": 3,
+          "explanation": "「diffuse」は「散漫な・拡散した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「exaggerate」の意味として最も適切なものは？",
-          "choices": ["誇張する", "控えめに言う", "正確に述べる", "省略する"],
-          "correct": 0,
-          "explanation": "exaggerateは物事を「誇張する、大げさに言う」という意味の動詞。",
+          "scenario": "「digestive」の意味として最も適切なものは？",
+          "choices": [
+            "美しい・心地よい",
+            "不穏な",
+            "転換された",
+            "消化の"
+          ],
+          "correct": 3,
+          "explanation": "「digestive」は「消化の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「claim」の意味として最も適切なものは？",
-          "choices": ["主張する", "否定する", "忘れる", "隠す"],
-          "correct": 0,
-          "explanation": "claimは「（〜だと）主張する、要求する」という意味の動詞。",
+          "scenario": "「dignified」の意味として最も適切なものは？",
+          "choices": [
+            "膨張した",
+            "威厳のある",
+            "対角線の",
+            "豪華な"
+          ],
+          "correct": 1,
+          "explanation": "「dignified」は「威厳のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「sacrifice」の意味として最も適切なものは？",
-          "choices": ["犠牲にする", "獲得する", "節約する", "保護する"],
-          "correct": 0,
-          "explanation": "sacrificeは何かのために別のものを「犠牲にする」という意味の動詞。",
+          "scenario": "「diminished」の意味として最も適切なものは？",
+          "choices": [
+            "豪華な",
+            "期限の・〜による",
+            "減少した",
+            "無礼な"
+          ],
+          "correct": 2,
+          "explanation": "「diminished」は「減少した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「climate」の意味として最も適切なものは？",
-          "choices": ["気候", "地形", "人口", "文化"],
-          "correct": 0,
-          "explanation": "climateはある地域の「気候」を表す名詞。",
+          "scenario": "「dim」の意味として最も適切なものは？",
+          "choices": [
+            "かすの多い",
+            "冷静な",
+            "分散した",
+            "薄暗い"
+          ],
+          "correct": 3,
+          "explanation": "「dim」は「薄暗い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「resign」の意味として最も適切なものは？",
-          "choices": ["辞職する", "就任する", "昇進する", "解雇する"],
-          "correct": 0,
-          "explanation": "resignは職などを「辞職する、辞任する」という意味の動詞。",
+          "scenario": "「disadvantageous」の意味として最も適切なものは？",
+          "choices": [
+            "散漫な",
+            "反体制の",
+            "不利な",
+            "冷静な"
+          ],
+          "correct": 2,
+          "explanation": "「disadvantageous」は「不利な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「retrieve」の意味として最も適切なものは？",
-          "choices": ["取り戻す、回収する", "捨てる", "隠す", "破壊する"],
-          "correct": 0,
-          "explanation": "retrieveは失ったものを「取り戻す、回収する」という意味の動詞。",
+          "scenario": "「discerning」の意味として最も適切なものは？",
+          "choices": [
+            "むくんだ",
+            "洞察力のある",
+            "異議のある",
+            "信心深い"
+          ],
+          "correct": 1,
+          "explanation": "「discerning」は「洞察力のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「comfort」の意味として最も適切なものは？",
-          "choices": ["慰め、快適さ", "苦痛", "恐怖", "混乱"],
-          "correct": 0,
-          "explanation": "comfortは「慰め、快適さ」という意味の名詞、または「慰める」という動詞。",
+          "scenario": "「disciplined」の意味として最も適切なものは？",
+          "choices": [
+            "探偵の",
+            "熱心な",
+            "意欲的な",
+            "規律正しい"
+          ],
+          "correct": 3,
+          "explanation": "「disciplined」は「規律正しい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 4,
-      "title": "総合復習編-4",
-      "type": "Mixed Review",
-      "emoji": "💬",
-      "subtitle": "会話やビジネスで使う頻出語彙！",
+      "title": "形容詞・副詞編セット4",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 931~940",
       "questions": [
         {
-          "scenario": "「commit」の意味として最も適切なものは？",
-          "choices": ["（罪などを）犯す、約束する", "許す", "忘れる", "拒否する"],
-          "correct": 0,
-          "explanation": "commitは「（罪を）犯す」「（〜することを）約束する」という意味の動詞。",
+          "scenario": "「discontented」の意味として最も適切なものは？",
+          "choices": [
+            "無礼な",
+            "軽蔑的な",
+            "意欲的な",
+            "不満な"
+          ],
+          "correct": 3,
+          "explanation": "「discontented」は「不満な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「withdraw」の意味として最も適切なものは？",
-          "choices": ["引き下がる、撤回する", "参加する", "提案する", "主張する"],
-          "correct": 0,
-          "explanation": "withdrawは「引き下がる、（発言などを）撤回する」という意味の動詞。",
+          "scenario": "「discontinued」の意味として最も適切なものは？",
+          "choices": [
+            "人口統計学の",
+            "耐久性のある",
+            "中止された",
+            "夢のような"
+          ],
+          "correct": 2,
+          "explanation": "「discontinued」は「中止された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「surrender」の意味として最も適切なものは？",
-          "choices": ["降伏する、明け渡す", "抵抗する", "勝利する", "攻撃する"],
-          "correct": 0,
-          "explanation": "surrenderは「降伏する、明け渡す」という意味の動詞。",
+          "scenario": "「discourteous」の意味として最も適切なものは？",
+          "choices": [
+            "延性のある",
+            "勇敢な",
+            "無礼な",
+            "文書の"
+          ],
+          "correct": 2,
+          "explanation": "「discourteous」は「無礼な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「eliminate」の意味として最も適切なものは？",
-          "choices": ["排除する、取り除く", "追加する", "保存する", "強化する"],
-          "correct": 0,
-          "explanation": "eliminateは対象を「排除する、取り除く」という意味の動詞。",
+          "scenario": "「discretionary」の意味として最も適切なものは？",
+          "choices": [
+            "信心深い",
+            "致命的な",
+            "任意の・裁量による",
+            "独裁的な"
+          ],
+          "correct": 2,
+          "explanation": "「discretionary」は「任意の・裁量による」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「complicated」の意味として最も適切なものは？",
-          "choices": ["複雑な", "単純な", "明確な", "簡単な"],
+          "scenario": "「discursive」の意味として最も適切なものは？",
+          "choices": [
+            "散漫な",
+            "ひどく嫌悪すべき",
+            "不機嫌な",
+            "忠実な"
+          ],
           "correct": 0,
-          "explanation": "complicatedは「複雑な、込み入った」という意味の形容詞。",
+          "explanation": "「discursive」は「散漫な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「compose」の意味として最も適切なものは？",
-          "choices": ["作曲する、構成する", "破壊する", "演奏を止める", "削除する"],
+          "scenario": "「disdainful」の意味として最も適切なものは？",
+          "choices": [
+            "軽蔑的な",
+            "意欲的な",
+            "かすの多い",
+            "不機嫌な"
+          ],
           "correct": 0,
-          "explanation": "composeは「作曲する」、また部分から「構成する」という意味の動詞。",
+          "explanation": "「disdainful」は「軽蔑的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「illustrate」の意味として最も適切なものは？",
-          "choices": ["説明する、例示する", "隠す", "混乱させる", "否定する"],
-          "correct": 0,
-          "explanation": "illustrateは具体例を挙げて「説明する、例示する」という意味の動詞。",
+          "scenario": "「diseased」の意味として最も適切なものは？",
+          "choices": [
+            "おしゃれな",
+            "異種の",
+            "風通しのよい",
+            "病気の"
+          ],
+          "correct": 3,
+          "explanation": "「diseased」は「病気の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「interpret」の意味として最も適切なものは？",
-          "choices": ["解釈する、通訳する", "誤解させる", "無視する", "隠す"],
-          "correct": 0,
-          "explanation": "interpretは物事を「解釈する」、または「通訳する」という意味の動詞。",
+          "scenario": "「disfigured」の意味として最も適切なものは？",
+          "choices": [
+            "対角線の",
+            "外観を損ねた",
+            "豪華な",
+            "熱心な"
+          ],
+          "correct": 1,
+          "explanation": "「disfigured」は「外観を損ねた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「manipulate」の意味として最も適切なものは？",
-          "choices": ["操作する、巧みに扱う", "放置する", "尊重する", "公開する"],
-          "correct": 0,
-          "explanation": "manipulateは人や物事を「操作する、巧みに扱う」という意味の動詞。",
+          "scenario": "「disgraceful」の意味として最も適切なものは？",
+          "choices": [
+            "文書の",
+            "散漫な・拡散した",
+            "冷静な",
+            "不名誉な"
+          ],
+          "correct": 3,
+          "explanation": "「disgraceful」は「不名誉な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「mediate」の意味として最も適切なものは？",
-          "choices": ["仲裁する、調停する", "対立をあおる", "無視する", "拒否する"],
-          "correct": 0,
-          "explanation": "mediateは対立する両者の間を「仲裁する、調停する」という意味の動詞。",
+          "scenario": "「disguised」の意味として最も適切なものは？",
+          "choices": [
+            "不名誉な",
+            "変装した",
+            "不利な",
+            "冷静な"
+          ],
+          "correct": 1,
+          "explanation": "「disguised」は「変装した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 5,
-      "title": "総合復習編-5",
-      "type": "Mixed Review",
-      "emoji": "🤝",
-      "subtitle": "人間関係やコミュニケーションの語彙！",
+      "title": "形容詞・副詞編セット5",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 941~950",
       "questions": [
         {
-          "scenario": "「congratulate」の意味として最も適切なものは？",
-          "choices": ["祝う、お祝いを言う", "慰める", "非難する", "謝罪する"],
-          "correct": 0,
-          "explanation": "congratulateは人の成功などを「祝う」という意味の動詞。",
+          "scenario": "「disheveled」の意味として最も適切なものは？",
+          "choices": [
+            "くすんだ",
+            "反抗的な",
+            "分配の",
+            "だらしない"
+          ],
+          "correct": 3,
+          "explanation": "「disheveled」は「だらしない」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「overcome」の意味として最も適切なものは？",
-          "choices": ["克服する", "屈する", "諦める", "悪化させる"],
-          "correct": 0,
-          "explanation": "overcomeは困難などを「克服する」という意味の動詞。",
+          "scenario": "「dismissive」の意味として最も適切なものは？",
+          "choices": [
+            "うなだれた",
+            "拒絶的な・軽蔑的な",
+            "信心深い",
+            "昼間の・毎日の"
+          ],
+          "correct": 1,
+          "explanation": "「dismissive」は「拒絶的な・軽蔑的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「consist」の意味として最も適切なものは？",
-          "choices": ["（consist ofで）構成される", "分解する", "消滅する", "拒否する"],
-          "correct": 0,
-          "explanation": "consist of ~で「〜から構成される」という意味になる動詞。",
+          "scenario": "「disparaging」の意味として最も適切なものは？",
+          "choices": [
+            "消化不良の",
+            "むくんだ",
+            "薄暗い",
+            "軽蔑的な"
+          ],
+          "correct": 3,
+          "explanation": "「disparaging」は「軽蔑的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「persuade」の意味として最も適切なものは？",
-          "choices": ["説得する", "混乱させる", "拒絶させる", "疑わせる"],
+          "scenario": "「disparate」の意味として最も適切なものは？",
+          "choices": [
+            "異種の",
+            "分配の",
+            "霧雨の",
+            "むくんだ"
+          ],
           "correct": 0,
-          "explanation": "persuadeは人を「説得する」という意味の動詞。",
+          "explanation": "「disparate」は「異種の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「predict」の意味として最も適切なものは？",
-          "choices": ["予測する", "忘れる", "無視する", "疑う"],
-          "correct": 0,
-          "explanation": "predictは未来のことを「予測する」という意味の動詞。",
+          "scenario": "「dispassionate」の意味として最も適切なものは？",
+          "choices": [
+            "華奢な",
+            "累積的な",
+            "冷静な",
+            "不満な"
+          ],
+          "correct": 2,
+          "explanation": "「dispassionate」は「冷静な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「contact」の意味として最も適切なものは？",
-          "choices": ["連絡する", "避ける", "忘れる", "拒絶する"],
+          "scenario": "「dispensable」の意味として最も適切なものは？",
+          "choices": [
+            "なくてもすむ",
+            "反体制の",
+            "致命的な",
+            "不協和音の"
+          ],
           "correct": 0,
-          "explanation": "contactは人に「連絡する」という意味の動詞・名詞。",
+          "explanation": "「dispensable」は「なくてもすむ」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「convert」の意味として最も適切なものは？",
-          "choices": ["変換する、改宗させる", "維持する", "破壊する", "隠す"],
-          "correct": 0,
-          "explanation": "convertは形式などを「変換する」という意味の動詞。",
+          "scenario": "「dispersed」の意味として最も適切なものは？",
+          "choices": [
+            "風通しのよい",
+            "分散した",
+            "威厳のある",
+            "外観を損ねた"
+          ],
+          "correct": 1,
+          "explanation": "「dispersed」は「分散した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「prevent」の意味として最も適切なものは？",
-          "choices": ["防ぐ、妨げる", "促進する", "許可する", "招く"],
-          "correct": 0,
-          "explanation": "preventは物事を「防ぐ、妨げる」という意味の動詞。",
+          "scenario": "「displeased」の意味として最も適切なものは？",
+          "choices": [
+            "任意の・裁量による",
+            "不穏な",
+            "なくてもすむ",
+            "不機嫌な"
+          ],
+          "correct": 3,
+          "explanation": "「displeased」は「不機嫌な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「pursue」の意味として最も適切なものは？",
-          "choices": ["追求する", "諦める", "避ける", "拒否する"],
-          "correct": 0,
-          "explanation": "pursueは目標などを「追求する」という意味の動詞。",
+          "scenario": "「disqualified」の意味として最も適切なものは？",
+          "choices": [
+            "減少した",
+            "困惑した・苦しんでいる",
+            "失格の",
+            "散漫な"
+          ],
+          "correct": 2,
+          "explanation": "「disqualified」は「失格の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「correct」の意味として最も適切なものは？",
-          "choices": ["正しい、訂正する", "誤った", "曖昧な", "不完全な"],
-          "correct": 0,
-          "explanation": "correctは「正しい」という形容詞、または「訂正する」という動詞。",
+          "scenario": "「disquieting」の意味として最も適切なものは？",
+          "choices": [
+            "致命的な",
+            "不穏な",
+            "説教的な",
+            "意欲的な"
+          ],
+          "correct": 1,
+          "explanation": "「disquieting」は「不穏な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 6,
-      "title": "総合復習編-6",
-      "type": "Mixed Review",
-      "emoji": "🏗️",
-      "subtitle": "出来事や状況を表す語彙をまとめて！",
+      "title": "形容詞・副詞編セット6",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 951~960",
       "questions": [
         {
-          "scenario": "「crash」の意味として最も適切なものは？",
-          "choices": ["衝突する", "停止する", "修理する", "出発する"],
-          "correct": 0,
-          "explanation": "crashは車などが「衝突する」という意味の動詞・名詞。",
+          "scenario": "「disregardful」の意味として最も適切なものは？",
+          "choices": [
+            "豪華な",
+            "人口統計学の",
+            "不注意な",
+            "説教的な"
+          ],
+          "correct": 2,
+          "explanation": "「disregardful」は「不注意な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「recall」の意味として最も適切なものは？",
-          "choices": ["思い出す、回収する", "忘れる", "発明する", "破壊する"],
+          "scenario": "「dissentient」の意味として最も適切なものは？",
+          "choices": [
+            "異議のある",
+            "洗練された・栽培された",
+            "探偵の",
+            "おしゃれな"
+          ],
           "correct": 0,
-          "explanation": "recallは記憶を「思い出す」、または製品を「回収する」という意味の動詞。",
+          "explanation": "「dissentient」は「異議のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「recover」の意味として最も適切なものは？",
-          "choices": ["回復する", "悪化する", "消滅する", "拡大する"],
+          "scenario": "「dissident」の意味として最も適切なものは？",
+          "choices": [
+            "反体制の",
+            "退屈な・鈍い",
+            "溶解した",
+            "二枚舌の"
+          ],
           "correct": 0,
-          "explanation": "recoverは病気や状態から「回復する」という意味の動詞。",
+          "explanation": "「dissident」は「反体制の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「reduce」の意味として最も適切なものは？",
-          "choices": ["減らす", "増やす", "維持する", "拡張する"],
+          "scenario": "「dissipated」の意味として最も適切なものは？",
+          "choices": [
+            "放蕩な",
+            "回りくどい・よこしまな",
+            "分散した",
+            "冷笑的な"
+          ],
           "correct": 0,
-          "explanation": "reduceは量や程度を「減らす」という意味の動詞。",
+          "explanation": "「dissipated」は「放蕩な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「refuse」の意味として最も適切なものは？",
-          "choices": ["拒否する", "承諾する", "提案する", "歓迎する"],
-          "correct": 0,
-          "explanation": "refuseは申し出などを「拒否する」という意味の動詞。",
+          "scenario": "「dissolute」の意味として最も適切なものは？",
+          "choices": [
+            "軽蔑的な",
+            "恐れられている",
+            "だらしない",
+            "薄暗い"
+          ],
+          "correct": 2,
+          "explanation": "「dissolute」は「だらしない」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「restrain」の意味として最も適切なものは？",
-          "choices": ["抑制する、抑える", "解放する", "助長する", "強化する"],
-          "correct": 0,
-          "explanation": "restrainは感情や行動を「抑制する、抑える」という意味の動詞。",
+          "scenario": "「dissolved」の意味として最も適切なものは？",
+          "choices": [
+            "反体制の",
+            "溶解した",
+            "軽蔑的な",
+            "思いとどまらせる"
+          ],
+          "correct": 1,
+          "explanation": "「dissolved」は「溶解した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「resume」の意味として最も適切なものは？",
-          "choices": ["再開する", "中止する", "延期する", "終了する"],
+          "scenario": "「dissonant」の意味として最も適切なものは？",
+          "choices": [
+            "不協和音の",
+            "大雑把な",
+            "反体制の",
+            "累積的な"
+          ],
           "correct": 0,
-          "explanation": "resumeは中断していたことを「再開する」という意味の動詞。",
+          "explanation": "「dissonant」は「不協和音の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「reveal」の意味として最も適切なものは？",
-          "choices": ["明らかにする", "隠す", "否定する", "曖昧にする"],
-          "correct": 0,
-          "explanation": "revealは秘密などを「明らかにする」という意味の動詞。",
+          "scenario": "「dissuasive」の意味として最も適切なものは？",
+          "choices": [
+            "不穏な",
+            "思いとどまらせる",
+            "曲がった",
+            "散漫な"
+          ],
+          "correct": 1,
+          "explanation": "「dissuasive」は「思いとどまらせる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「revise」の意味として最も適切なものは？",
-          "choices": ["改訂する、見直す", "破棄する", "無視する", "隠す"],
-          "correct": 0,
-          "explanation": "reviseは文書や計画を「改訂する、見直す」という意味の動詞。",
+          "scenario": "「distant」の意味として最も適切なものは？",
+          "choices": [
+            "膨張した",
+            "異なる",
+            "遠い",
+            "威厳のある"
+          ],
+          "correct": 2,
+          "explanation": "「distant」は「遠い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「secure」の意味として最も適切なものは？",
-          "choices": ["確保する", "手放す", "失う", "破壊する"],
-          "correct": 0,
-          "explanation": "secureは必要なものを「確保する」という意味の動詞。",
+          "scenario": "「distended」の意味として最も適切なものは？",
+          "choices": [
+            "昼間の・毎日の",
+            "致命的な",
+            "二枚舌の",
+            "膨張した"
+          ],
+          "correct": 3,
+          "explanation": "「distended」は「膨張した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 7,
-      "title": "総合復習編-7",
-      "type": "Mixed Review",
-      "emoji": "🧭",
-      "subtitle": "移動・観察・判断に関わる語彙！",
+      "title": "形容詞・副詞編セット7",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 961~970",
       "questions": [
         {
-          "scenario": "「depart」の意味として最も適切なものは？",
-          "choices": ["出発する", "到着する", "滞在する", "帰宅する"],
-          "correct": 0,
-          "explanation": "departは「出発する」という意味の動詞。",
+          "scenario": "「distressed」の意味として最も適切なものは？",
+          "choices": [
+            "霧雨の",
+            "困惑した・苦しんでいる",
+            "不名誉な",
+            "中止された"
+          ],
+          "correct": 1,
+          "explanation": "「distressed」は「困惑した・苦しんでいる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「seize」の意味として最も適切なものは？",
-          "choices": ["つかむ、奪い取る", "手放す", "拒否する", "見送る"],
-          "correct": 0,
-          "explanation": "seizeは物などを「つかむ、奪い取る」という意味の動詞。seize the opportunityで「機会をつかむ」。",
+          "scenario": "「distributive」の意味として最も適切なものは？",
+          "choices": [
+            "変装した",
+            "華奢な",
+            "分配の",
+            "不協和音の"
+          ],
+          "correct": 2,
+          "explanation": "「distributive」は「分配の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「endorse」の意味として最も適切なものは？",
-          "choices": ["支持する、承認する", "反対する", "無視する", "拒絶する"],
-          "correct": 0,
-          "explanation": "endorseは提案や候補者などを「支持する、承認する」という意味の動詞。",
+          "scenario": "「distrustful」の意味として最も適切なものは？",
+          "choices": [
+            "薄暗い",
+            "かすの多い",
+            "熱心な",
+            "疑い深い"
+          ],
+          "correct": 3,
+          "explanation": "「distrustful」は「疑い深い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「destroy」の意味として最も適切なものは？",
-          "choices": ["破壊する", "建設する", "修理する", "保護する"],
-          "correct": 0,
-          "explanation": "destroyは物などを「破壊する」という意味の動詞。",
+          "scenario": "「diurnal」の意味として最も適切なものは？",
+          "choices": [
+            "外観を損ねた",
+            "曲がった",
+            "不機嫌な",
+            "昼間の・毎日の"
+          ],
+          "correct": 3,
+          "explanation": "「diurnal」は「昼間の・毎日の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「suppress」の意味として最も適切なものは？",
-          "choices": ["抑圧する、鎮圧する", "解放する", "助長する", "公表する"],
-          "correct": 0,
-          "explanation": "suppressは感情や反乱などを「抑圧する、鎮圧する」という意味の動詞。",
+          "scenario": "「divergent」の意味として最も適切なものは？",
+          "choices": [
+            "教義の",
+            "散漫な・拡散した",
+            "異なる・分岐する",
+            "豪華な"
+          ],
+          "correct": 2,
+          "explanation": "「divergent」は「異なる・分岐する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「comprehend」の意味として最も適切なものは？",
-          "choices": ["理解する", "誤解する", "無視する", "疑う"],
-          "correct": 0,
-          "explanation": "comprehendは物事を「理解する」という意味の動詞。",
+          "scenario": "「diverted」の意味として最も適切なものは？",
+          "choices": [
+            "疑い深い",
+            "昼間の・毎日の",
+            "転換された",
+            "不協和音の"
+          ],
+          "correct": 2,
+          "explanation": "「diverted」は「転換された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「transform」の意味として最も適切なものは？",
-          "choices": ["変容させる", "維持する", "破壊する", "無視する"],
-          "correct": 0,
-          "explanation": "transformは物事の姿・形を大きく「変容させる」という意味の動詞。",
+          "scenario": "「divided」の意味として最も適切なものは？",
+          "choices": [
+            "不利な",
+            "中止された",
+            "料理の",
+            "分割された"
+          ],
+          "correct": 3,
+          "explanation": "「divided」は「分割された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「discard」の意味として最も適切なものは？",
-          "choices": ["捨てる", "保管する", "修理する", "使用する"],
-          "correct": 0,
-          "explanation": "discardは不要なものを「捨てる」という意味の動詞。",
+          "scenario": "「doctrinal」の意味として最も適切なものは？",
+          "choices": [
+            "疑わしい",
+            "不穏な",
+            "軽蔑的な",
+            "教義の"
+          ],
+          "correct": 3,
+          "explanation": "「doctrinal」は「教義の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「disgusting」の意味として最も適切なものは？",
-          "choices": ["気持ち悪い", "魅力的な", "快適な", "普通の"],
-          "correct": 0,
-          "explanation": "disgustingは「気持ち悪い、嫌悪感を催す」という意味の形容詞。",
+          "scenario": "「documentary」の意味として最も適切なものは？",
+          "choices": [
+            "無礼な",
+            "ずんぐりした",
+            "文書の",
+            "だらしない"
+          ],
+          "correct": 2,
+          "explanation": "「documentary」は「文書の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「undertake」の意味として最も適切なものは？",
-          "choices": ["引き受ける、着手する", "拒否する", "放棄する", "先送りする"],
-          "correct": 0,
-          "explanation": "undertakeは任務などを「引き受ける、着手する」という意味の動詞。",
+          "scenario": "「doughty」の意味として最も適切なものは？",
+          "choices": [
+            "不満な",
+            "曲がった",
+            "不名誉な",
+            "勇敢な"
+          ],
+          "correct": 3,
+          "explanation": "「doughty」は「勇敢な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 8,
-      "title": "総合復習編-8",
-      "type": "Mixed Review",
-      "emoji": "📦",
-      "subtitle": "分配・感情・状態を表す語彙！",
+      "title": "形容詞・副詞編セット8",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 971~980",
       "questions": [
         {
-          "scenario": "「display」の意味として最も適切なものは？",
-          "choices": ["展示する、表示する", "隠す", "破壊する", "無視する"],
-          "correct": 0,
-          "explanation": "displayは物などを「展示する、表示する」という意味の動詞・名詞。",
+          "scenario": "「dour」の意味として最も適切なものは？",
+          "choices": [
+            "不注意な",
+            "薄暗い",
+            "洞察力のある",
+            "不機嫌な"
+          ],
+          "correct": 3,
+          "explanation": "「dour」は「不機嫌な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「distribute」の意味として最も適切なものは？",
-          "choices": ["分配する", "集める", "隠す", "破壊する"],
-          "correct": 0,
-          "explanation": "distributeは物やお金などを「分配する」という意味の動詞。",
+          "scenario": "「downy」の意味として最も適切なものは？",
+          "choices": [
+            "放蕩な",
+            "かすの多い",
+            "洞察力のある",
+            "産毛の"
+          ],
+          "correct": 3,
+          "explanation": "「downy」は「産毛の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「unite」の意味として最も適切なものは？",
-          "choices": ["団結させる、結合する", "分裂させる", "対立させる", "孤立させる"],
-          "correct": 0,
-          "explanation": "uniteは人々や物事を「団結させる、結合する」という意味の動詞。",
+          "scenario": "「drab」の意味として最も適切なものは？",
+          "choices": [
+            "華奢な",
+            "滴る",
+            "探偵の",
+            "くすんだ"
+          ],
+          "correct": 3,
+          "explanation": "「drab」は「くすんだ」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「utilize」の意味として最も適切なものは？",
-          "choices": ["活用する", "浪費する", "無視する", "廃棄する"],
+          "scenario": "「drafty」の意味として最も適切なものは？",
+          "choices": [
+            "風通しのよい",
+            "料理の",
+            "ひどく嫌悪すべき",
+            "なくてもすむ"
+          ],
           "correct": 0,
-          "explanation": "utilizeは資源などを「活用する」という意味の動詞。",
+          "explanation": "「drafty」は「風通しのよい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「dull」の意味として最も適切なものは？",
-          "choices": ["退屈な、鈍い", "面白い", "鋭い", "明るい"],
-          "correct": 0,
-          "explanation": "dullは「退屈な」、または刃物などが「鈍い」という意味の形容詞。",
+          "scenario": "「dreaded」の意味として最も適切なものは？",
+          "choices": [
+            "うなだれた",
+            "恐れられている",
+            "探偵の",
+            "不満な"
+          ],
+          "correct": 1,
+          "explanation": "「dreaded」は「恐れられている」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「vanish」の意味として最も適切なものは？",
-          "choices": ["消える、姿を消す", "現れる", "増える", "定着する"],
+          "scenario": "「dreamy」の意味として最も適切なものは？",
+          "choices": [
+            "夢のような",
+            "人口統計学の",
+            "口のきけない",
+            "異種の"
+          ],
           "correct": 0,
-          "explanation": "vanishは「（突然）消える、姿を消す」という意味の動詞。",
+          "explanation": "「dreamy」は「夢のような」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「educate」の意味として最も適切なものは？",
-          "choices": ["教育する", "無視する", "罰する", "雇う"],
-          "correct": 0,
-          "explanation": "educateは人を「教育する」という意味の動詞。",
+          "scenario": "「drenching」の意味として最も適切なものは？",
+          "choices": [
+            "こっけいな",
+            "びしょ濡れの",
+            "散漫な・拡散した",
+            "回りくどい・よこしまな"
+          ],
+          "correct": 1,
+          "explanation": "「drenching」は「びしょ濡れの」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「violate」の意味として最も適切なものは？",
-          "choices": ["（法律・規則を）違反する", "遵守する", "制定する", "支持する"],
-          "correct": 0,
-          "explanation": "violateは法律や規則などに「違反する」という意味の動詞。",
+          "scenario": "「dressy」の意味として最も適切なものは？",
+          "choices": [
+            "異議のある",
+            "おしゃれな",
+            "薄暗い",
+            "反体制の"
+          ],
+          "correct": 1,
+          "explanation": "「dressy」は「おしゃれな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「abandon」の意味として最も適切なものは？",
-          "choices": ["放棄する、見捨てる", "維持する", "完成する", "保護する"],
-          "correct": 0,
-          "explanation": "abandonは計画や人などを「放棄する、見捨てる」という意味の動詞。",
+          "scenario": "「dripping」の意味として最も適切なものは？",
+          "choices": [
+            "反体制の",
+            "滴る",
+            "不満な",
+            "熱心な"
+          ],
+          "correct": 1,
+          "explanation": "「dripping」は「滴る」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「encounter」の意味として最も適切なものは？",
-          "choices": ["出会う、遭遇する", "避ける", "見失う", "忘れる"],
-          "correct": 0,
-          "explanation": "encounterは人や困難などに「出会う、遭遇する」という意味の動詞。",
+          "scenario": "「driven」の意味として最も適切なものは？",
+          "choices": [
+            "耐久性のある",
+            "分配の",
+            "滴る",
+            "意欲的な"
+          ],
+          "correct": 3,
+          "explanation": "「driven」は「意欲的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 9,
-      "title": "総合復習編-9",
-      "type": "Mixed Review",
-      "emoji": "🎓",
-      "subtitle": "励まし・制度・組織に関する語彙！",
+      "title": "形容詞・副詞編セット9",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 981~990",
       "questions": [
         {
-          "scenario": "「encourage」の意味として最も適切なものは？",
-          "choices": ["励ます", "落胆させる", "無視する", "批判する"],
-          "correct": 0,
-          "explanation": "encourageは人を「励ます、勇気づける」という意味の動詞。",
+          "scenario": "「drizzling」の意味として最も適切なものは？",
+          "choices": [
+            "対角線の",
+            "疑わしい",
+            "霧雨の",
+            "分割された"
+          ],
+          "correct": 2,
+          "explanation": "「drizzling」は「霧雨の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「endure」の意味として最も適切なものは？",
-          "choices": ["耐える", "諦める", "逃げる", "拒否する"],
-          "correct": 0,
-          "explanation": "endureは苦しみなどに「耐える」という意味の動詞。",
+          "scenario": "「droll」の意味として最も適切なものは？",
+          "choices": [
+            "薄暗い",
+            "こっけいな",
+            "軽蔑的な",
+            "中止された"
+          ],
+          "correct": 1,
+          "explanation": "「droll」は「こっけいな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「enforce」の意味として最も適切なものは？",
-          "choices": ["施行する、強制する", "廃止する", "無視する", "提案する"],
+          "scenario": "「drooping」の意味として最も適切なものは？",
+          "choices": [
+            "うなだれた",
+            "曲がった",
+            "口のきけない",
+            "病気の"
+          ],
           "correct": 0,
-          "explanation": "enforceは法律などを「施行する、強制する」という意味の動詞。",
+          "explanation": "「drooping」は「うなだれた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「engage」の意味として最も適切なものは？",
-          "choices": ["従事する、関わる", "避ける", "拒否する", "放棄する"],
-          "correct": 0,
-          "explanation": "engageは「（engage inで）〜に従事する、関わる」という意味の動詞。",
+          "scenario": "「dropsical」の意味として最も適切なものは？",
+          "choices": [
+            "びしょ濡れの",
+            "むくんだ",
+            "忠実な",
+            "こっけいな"
+          ],
+          "correct": 1,
+          "explanation": "「dropsical」は「むくんだ」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「enroll」の意味として最も適切なものは？",
-          "choices": ["登録する、入学する", "退学する", "卒業する", "拒否する"],
+          "scenario": "「drossy」の意味として最も適切なものは？",
+          "choices": [
+            "かすの多い",
+            "説教的な",
+            "熱心な",
+            "洗練された・栽培された"
+          ],
           "correct": 0,
-          "explanation": "enrollは学校やコースに「登録する、入学する」という意味の動詞。",
+          "explanation": "「drossy」は「かすの多い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「ensure」の意味として最も適切なものは？",
-          "choices": ["確実にする、保証する", "疑う", "妨げる", "無視する"],
-          "correct": 0,
-          "explanation": "ensureは「（〜を）確実にする、保証する」という意味の動詞。",
+          "scenario": "「dubious」の意味として最も適切なものは？",
+          "choices": [
+            "診断の",
+            "むくんだ",
+            "耐久性のある",
+            "疑わしい"
+          ],
+          "correct": 3,
+          "explanation": "「dubious」は「疑わしい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「entertain」の意味として最も適切なものは？",
-          "choices": ["楽しませる", "退屈させる", "怒らせる", "罰する"],
-          "correct": 0,
-          "explanation": "entertainは人を「楽しませる」という意味の動詞。",
+          "scenario": "「ductile」の意味として最も適切なものは？",
+          "choices": [
+            "累積的な",
+            "延性のある",
+            "大雑把な",
+            "不機嫌な"
+          ],
+          "correct": 1,
+          "explanation": "「ductile」は「延性のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「establish」の意味として最も適切なものは？",
-          "choices": ["設立する、確立する", "廃止する", "破壊する", "無視する"],
-          "correct": 0,
-          "explanation": "establishは組織や制度を「設立する、確立する」という意味の動詞。",
+          "scenario": "「due」の意味として最も適切なものは？",
+          "choices": [
+            "洞察力のある",
+            "困惑した・苦しんでいる",
+            "期限の・〜による",
+            "かすの多い"
+          ],
+          "correct": 2,
+          "explanation": "「due」は「期限の・〜による」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「examine」の意味として最も適切なものは？",
-          "choices": ["調べる、検査する", "無視する", "隠す", "破壊する"],
-          "correct": 0,
-          "explanation": "examineは物事を注意深く「調べる、検査する」という意味の動詞。",
+          "scenario": "「dulcet」の意味として最も適切なものは？",
+          "choices": [
+            "忠実な",
+            "軽蔑的な",
+            "困惑した・苦しんでいる",
+            "美しい・心地よい"
+          ],
+          "correct": 3,
+          "explanation": "「dulcet」は「美しい・心地よい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「exchange」の意味として最も適切なものは？",
-          "choices": ["交換する", "保持する", "破棄する", "隠す"],
+          "scenario": "「dull」の意味として最も適切なものは？",
+          "choices": [
+            "退屈な・鈍い",
+            "消化不良の",
+            "散漫な・拡散した",
+            "大雑把な"
+          ],
           "correct": 0,
-          "explanation": "exchangeは物やお金などを「交換する」という意味の動詞・名詞。",
+          "explanation": "「dull」は「退屈な・鈍い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 10,
-      "title": "総合復習編-10",
-      "type": "Mixed Review",
-      "emoji": "🌍",
-      "subtitle": "最後の総仕上げ、グローバルな語彙まで！",
+      "title": "形容詞・副詞編セット10",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 991~1000",
       "questions": [
         {
-          "scenario": "「exclude」の意味として最も適切なものは？",
-          "choices": ["除外する", "含める", "追加する", "招待する"],
+          "scenario": "「dumb」の意味として最も適切なものは？",
+          "choices": [
+            "口のきけない",
+            "華奢な",
+            "失格の",
+            "致命的な"
+          ],
           "correct": 0,
-          "explanation": "excludeは対象を「除外する」という意味の動詞。",
+          "explanation": "「dumb」は「口のきけない」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「excuse」の意味として最も適切なものは？",
-          "choices": ["言い訳、許す", "罰", "命令", "疑い"],
-          "correct": 0,
-          "explanation": "excuseは「言い訳」という名詞、または「許す」という動詞。",
+          "scenario": "「dumpy」の意味として最も適切なものは？",
+          "choices": [
+            "異なる・分岐する",
+            "美しい・心地よい",
+            "華奢な",
+            "ずんぐりした"
+          ],
+          "correct": 3,
+          "explanation": "「dumpy」は「ずんぐりした」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「exist」の意味として最も適切なものは？",
-          "choices": ["存在する", "消滅する", "隠れる", "移動する"],
+          "scenario": "「duplicitous」の意味として最も適切なものは？",
+          "choices": [
+            "二枚舌の",
+            "延性のある",
+            "溶解した",
+            "だらしない"
+          ],
           "correct": 0,
-          "explanation": "existは「存在する」という意味の動詞。",
+          "explanation": "「duplicitous」は「二枚舌の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「expand」の意味として最も適切なものは？",
-          "choices": ["拡大する", "縮小する", "停止する", "破壊する"],
-          "correct": 0,
-          "explanation": "expandは規模や範囲を「拡大する」という意味の動詞。",
+          "scenario": "「durable」の意味として最も適切なものは？",
+          "choices": [
+            "散漫な",
+            "耐久性のある",
+            "規律正しい",
+            "不名誉な"
+          ],
+          "correct": 1,
+          "explanation": "「durable」は「耐久性のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「expect」の意味として最も適切なものは？",
-          "choices": ["期待する、予期する", "諦める", "忘れる", "拒否する"],
-          "correct": 0,
-          "explanation": "expectは「期待する、予期する」という意味の動詞。",
+          "scenario": "「dusky」の意味として最も適切なものは？",
+          "choices": [
+            "規律正しい",
+            "薄暗い",
+            "華奢な",
+            "思いとどまらせる"
+          ],
+          "correct": 1,
+          "explanation": "「dusky」は「薄暗い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「explain」の意味として最も適切なものは？",
-          "choices": ["説明する", "隠す", "混乱させる", "無視する"],
+          "scenario": "「dutiful」の意味として最も適切なものは？",
+          "choices": [
+            "忠実な",
+            "軽蔑的な",
+            "不利な",
+            "こっけいな"
+          ],
           "correct": 0,
-          "explanation": "explainは物事を「説明する」という意味の動詞。",
+          "explanation": "「dutiful」は「忠実な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「explore」の意味として最も適切なものは？",
-          "choices": ["探検する", "避ける", "無視する", "破壊する"],
-          "correct": 0,
-          "explanation": "exploreは未知の場所などを「探検する、探索する」という意味の動詞。",
+          "scenario": "「dwarfish」の意味として最も適切なものは？",
+          "choices": [
+            "散漫な・拡散した",
+            "失格の",
+            "小人のような",
+            "冷静な"
+          ],
+          "correct": 2,
+          "explanation": "「dwarfish」は「小人のような」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「export」の意味として最も適切なものは？",
-          "choices": ["輸出する", "輸入する", "廃棄する", "保管する"],
-          "correct": 0,
-          "explanation": "exportは商品などを「輸出する」という意味の動詞。",
+          "scenario": "「dyspeptic」の意味として最も適切なものは？",
+          "choices": [
+            "中止された",
+            "冷笑的な",
+            "消化不良の",
+            "おしゃれな"
+          ],
+          "correct": 2,
+          "explanation": "「dyspeptic」は「消化不良の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「expose」の意味として最も適切なものは？",
-          "choices": ["さらす、暴露する", "隠す", "保護する", "無視する"],
-          "correct": 0,
-          "explanation": "exposeは物事を「さらす」、秘密などを「暴露する」という意味の動詞。",
+          "scenario": "「eager」の意味として最も適切なものは？",
+          "choices": [
+            "薄暗い",
+            "熱心な",
+            "不満な",
+            "異種の"
+          ],
+          "correct": 1,
+          "explanation": "「eager」は「熱心な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「extend」の意味として最も適切なものは？",
-          "choices": ["延長する、広げる", "短縮する", "中止する", "拒否する"],
+          "scenario": "「earnest」の意味として最も適切なものは？",
+          "choices": [
+            "熱心な",
+            "分割された",
+            "曲がった",
+            "病気の"
+          ],
           "correct": 0,
-          "explanation": "extendは期間や範囲を「延長する、広げる」という意味の動詞。",
+          "explanation": "「earnest」は「熱心な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]

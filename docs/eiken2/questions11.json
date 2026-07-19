@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "形容詞・副詞編セット1",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1001~1010",
+      "questions": [
+        {
+          "scenario": "「earthy」の意味として最も適切なものは？",
+          "choices": [
+            "やつれた",
+            "安置された",
+            "楽しい",
+            "土の"
+          ],
+          "correct": 3,
+          "explanation": "「earthy」は「土の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eccentric」の意味として最も適切なものは？",
+          "choices": [
+            "適格な",
+            "偏屈な",
+            "啓発された",
+            "公平な"
+          ],
+          "correct": 1,
+          "explanation": "「eccentric」は「偏屈な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ecclesiastical」の意味として最も適切なものは？",
+          "choices": [
+            "うらやましそうな",
+            "弾力のある",
+            "教会の",
+            "楽しい"
+          ],
+          "correct": 2,
+          "explanation": "「ecclesiastical」は「教会の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「echoic」の意味として最も適切なものは？",
+          "choices": [
+            "啓発された",
+            "埋葬された",
+            "不気味な",
+            "反響の"
+          ],
+          "correct": 3,
+          "explanation": "「echoic」は「反響の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eclectic」の意味として最も適切なものは？",
+          "choices": [
+            "折衷的な",
+            "経過した",
+            "参政権を与えられた",
+            "解放された"
+          ],
+          "correct": 0,
+          "explanation": "「eclectic」は「折衷的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「economic」の意味として最も適切なものは？",
+          "choices": [
+            "弾力のある",
+            "経済の",
+            "登録された",
+            "電気の"
+          ],
+          "correct": 1,
+          "explanation": "「economic」は「経済の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「economical」の意味として最も適切なものは？",
+          "choices": [
+            "感情的な",
+            "謎めいた",
+            "啓発された",
+            "節約になる"
+          ],
+          "correct": 3,
+          "explanation": "「economical」は「節約になる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ecstatic」の意味として最も適切なものは？",
+          "choices": [
+            "同等の",
+            "実にひどい",
+            "有頂天の",
+            "感情を吐露する"
+          ],
+          "correct": 2,
+          "explanation": "「ecstatic」は「有頂天の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「edible」の意味として最も適切なものは？",
+          "choices": [
+            "食べられる",
+            "没頭した",
+            "適格な",
+            "感情を吐露する"
+          ],
+          "correct": 0,
+          "explanation": "「edible」は「食べられる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「editorial」の意味として最も適切なものは？",
+          "choices": [
+            "反響の",
+            "経済の",
+            "不気味な",
+            "社説の・編修の"
+          ],
+          "correct": 3,
+          "explanation": "「editorial」は「社説の・編修の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "形容詞・副詞編セット2",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1011~1020",
+      "questions": [
+        {
+          "scenario": "「educated」の意味として最も適切なものは？",
+          "choices": [
+            "同等の",
+            "続いて起こる",
+            "教育のある",
+            "土の"
+          ],
+          "correct": 2,
+          "explanation": "「educated」は「教育のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eerie」の意味として最も適切なものは？",
+          "choices": [
+            "不気味な",
+            "環境の",
+            "選挙の",
+            "経済の"
+          ],
+          "correct": 0,
+          "explanation": "「eerie」は「不気味な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effectual」の意味として最も適切なものは？",
+          "choices": [
+            "電気の",
+            "効果のある",
+            "馬術の",
+            "反響の"
+          ],
+          "correct": 1,
+          "explanation": "「effectual」は「効果のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effeminate」の意味として最も適切なものは？",
+          "choices": [
+            "教育のある",
+            "女々しい",
+            "奴隷にされた",
+            "節約になる"
+          ],
+          "correct": 1,
+          "explanation": "「effeminate」は「女々しい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effervescent」の意味として最も適切なものは？",
+          "choices": [
+            "精力的な",
+            "あいまいな",
+            "感情的な",
+            "泡立つ"
+          ],
+          "correct": 3,
+          "explanation": "「effervescent」は「泡立つ」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「efficacious」の意味として最も適切なものは？",
+          "choices": [
+            "効果のある",
+            "エピソードの",
+            "偏屈な",
+            "象徴的な"
+          ],
+          "correct": 0,
+          "explanation": "「efficacious」は「効果のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effortless」の意味として最も適切なものは？",
+          "choices": [
+            "努力を要しない",
+            "経験的な",
+            "象徴的な",
+            "埋葬された"
+          ],
+          "correct": 0,
+          "explanation": "「effortless」は「努力を要しない」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「effusive」の意味として最も適切なものは？",
+          "choices": [
+            "濃縮された",
+            "感情を吐露する",
+            "教会の",
+            "没頭した"
+          ],
+          "correct": 1,
+          "explanation": "「effusive」は「感情を吐露する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「egalitarian」の意味として最も適切なものは？",
+          "choices": [
+            "努力を要しない",
+            "教育のある",
+            "利己的な",
+            "平等主義の"
+          ],
+          "correct": 3,
+          "explanation": "「egalitarian」は「平等主義の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「egoistic」の意味として最も適切なものは？",
+          "choices": [
+            "年配の",
+            "利己的な",
+            "面白い",
+            "同等の"
+          ],
+          "correct": 1,
+          "explanation": "「egoistic」は「利己的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "形容詞・副詞編セット3",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1021~1030",
+      "questions": [
+        {
+          "scenario": "「egregious」の意味として最も適切なものは？",
+          "choices": [
+            "啓発された",
+            "高められた",
+            "共感できる",
+            "実にひどい"
+          ],
+          "correct": 3,
+          "explanation": "「egregious」は「実にひどい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elapsed」の意味として最も適切なものは？",
+          "choices": [
+            "効果のある",
+            "装飾された",
+            "埋葬された",
+            "経過した"
+          ],
+          "correct": 3,
+          "explanation": "「elapsed」は「経過した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elastic」の意味として最も適切なものは？",
+          "choices": [
+            "恥ずかしい",
+            "公平な",
+            "弾力のある",
+            "土の"
+          ],
+          "correct": 2,
+          "explanation": "「elastic」は「弾力のある」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elated」の意味として最も適切なものは？",
+          "choices": [
+            "巨大な",
+            "大喜びの",
+            "捕まえどころのない",
+            "均等化された"
+          ],
+          "correct": 1,
+          "explanation": "「elated」は「大喜びの」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elder」の意味として最も適切なものは？",
+          "choices": [
+            "叙事詩の",
+            "年上の",
+            "落ち着いた",
+            "利己的な"
+          ],
+          "correct": 1,
+          "explanation": "「elder」は「年上の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elderly」の意味として最も適切なものは？",
+          "choices": [
+            "謎めいた",
+            "弱まった",
+            "年配の",
+            "経済の"
+          ],
+          "correct": 2,
+          "explanation": "「elderly」は「年配の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「electoral」の意味として最も適切なものは？",
+          "choices": [
+            "弾力のある",
+            "従事している・婚約した",
+            "選挙の",
+            "教育のある"
+          ],
+          "correct": 2,
+          "explanation": "「electoral」は「選挙の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「electric」の意味として最も適切なものは？",
+          "choices": [
+            "濃縮された",
+            "初期の",
+            "電気の",
+            "解放された"
+          ],
+          "correct": 2,
+          "explanation": "「electric」は「電気の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「electrical」の意味として最も適切なものは？",
+          "choices": [
+            "高められた",
+            "従事している・婚約した",
+            "電気に関する",
+            "全体の"
+          ],
+          "correct": 2,
+          "explanation": "「electrical」は「電気に関する」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「electrifying」の意味として最も適切なものは？",
+          "choices": [
+            "食べられる",
+            "しびれるような",
+            "経験的な",
+            "埋葬された"
+          ],
+          "correct": 1,
+          "explanation": "「electrifying」は「しびれるような」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "形容詞・副詞編セット4",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1031~1040",
+      "questions": [
+        {
+          "scenario": "「elegant」の意味として最も適切なものは？",
+          "choices": [
+            "優雅な",
+            "謎めいた",
+            "続いて起こる",
+            "電気の"
+          ],
+          "correct": 0,
+          "explanation": "「elegant」は「優雅な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elegiac」の意味として最も適切なものは？",
+          "choices": [
+            "流行性の",
+            "哀歌の",
+            "有頂天の",
+            "充足した"
+          ],
+          "correct": 1,
+          "explanation": "「elegiac」は「哀歌の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elevated」の意味として最も適切なものは？",
+          "choices": [
+            "高められた",
+            "教会の",
+            "感情を吐露する",
+            "弾力のある"
+          ],
+          "correct": 0,
+          "explanation": "「elevated」は「高められた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eligible」の意味として最も適切なものは？",
+          "choices": [
+            "有頂天の",
+            "奴隷にされた",
+            "全体の",
+            "適格な"
+          ],
+          "correct": 3,
+          "explanation": "「eligible」は「適格な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elite」の意味として最も適切なものは？",
+          "choices": [
+            "楕円の",
+            "教育のある",
+            "エリートの",
+            "利己的な"
+          ],
+          "correct": 2,
+          "explanation": "「elite」は「エリートの」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elliptical」の意味として最も適切なものは？",
+          "choices": [
+            "優雅な",
+            "折衷的な",
+            "楕円の",
+            "激怒した"
+          ],
+          "correct": 2,
+          "explanation": "「elliptical」は「楕円の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eloquent」の意味として最も適切なものは？",
+          "choices": [
+            "均等化された",
+            "節約になる",
+            "起業家的な",
+            "雄弁な"
+          ],
+          "correct": 3,
+          "explanation": "「eloquent」は「雄弁な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elusive」の意味として最も適切なものは？",
+          "choices": [
+            "精力的な",
+            "捕まえどころのない",
+            "経過した",
+            "啓発された"
+          ],
+          "correct": 1,
+          "explanation": "「elusive」は「捕まえどころのない」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emaciated」の意味として最も適切なものは？",
+          "choices": [
+            "権利を与えられた",
+            "やつれた",
+            "平等主義の",
+            "食べられる"
+          ],
+          "correct": 1,
+          "explanation": "「emaciated」は「やつれた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emancipated」の意味として最も適切なものは？",
+          "choices": [
+            "解放された",
+            "巨大な",
+            "経験的な",
+            "雄弁な"
+          ],
+          "correct": 0,
+          "explanation": "「emancipated」は「解放された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "形容詞・副詞編セット5",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1041~1050",
+      "questions": [
+        {
+          "scenario": "「embarrassing」の意味として最も適切なものは？",
+          "choices": [
+            "装飾された",
+            "うらやましそうな",
+            "偏屈な",
+            "恥ずかしい"
+          ],
+          "correct": 3,
+          "explanation": "「embarrassing」は「恥ずかしい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embellished」の意味として最も適切なものは？",
+          "choices": [
+            "装飾された",
+            "効果のある",
+            "終わりのない",
+            "面白い"
+          ],
+          "correct": 0,
+          "explanation": "「embellished」は「装飾された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emblematic」の意味として最も適切なものは？",
+          "choices": [
+            "公平な",
+            "象徴的な",
+            "有頂天の",
+            "埋葬された"
+          ],
+          "correct": 1,
+          "explanation": "「emblematic」は「象徴的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embryonic」の意味として最も適切なものは？",
+          "choices": [
+            "教育のある",
+            "初期の",
+            "経験的な",
+            "努力を要しない"
+          ],
+          "correct": 1,
+          "explanation": "「embryonic」は「初期の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emergent」の意味として最も適切なものは？",
+          "choices": [
+            "あいまいな",
+            "没頭させる",
+            "新興の",
+            "登録された"
+          ],
+          "correct": 2,
+          "explanation": "「emergent」は「新興の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eminent」の意味として最も適切なものは？",
+          "choices": [
+            "著名な",
+            "食べられる",
+            "年上の",
+            "拡大された"
+          ],
+          "correct": 0,
+          "explanation": "「eminent」は「著名な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emotional」の意味として最も適切なものは？",
+          "choices": [
+            "安置された",
+            "謎めいた",
+            "従事している・婚約した",
+            "感情的な"
+          ],
+          "correct": 3,
+          "explanation": "「emotional」は「感情的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「empathetic」の意味として最も適切なものは？",
+          "choices": [
+            "経済の",
+            "謎めいた",
+            "享楽的な",
+            "共感できる"
+          ],
+          "correct": 3,
+          "explanation": "「empathetic」は「共感できる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emphatic」の意味として最も適切なものは？",
+          "choices": [
+            "電気に関する",
+            "面白い",
+            "強調された・断固たる",
+            "哀歌の"
+          ],
+          "correct": 2,
+          "explanation": "「emphatic」は「強調された・断固たる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「empirical」の意味として最も適切なものは？",
+          "choices": [
+            "全体の",
+            "女々しい",
+            "経験的な",
+            "土の"
+          ],
+          "correct": 2,
+          "explanation": "「empirical」は「経験的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "形容詞・副詞編セット6",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1051~1060",
+      "questions": [
+        {
+          "scenario": "「emulous」の意味として最も適切なものは？",
+          "choices": [
+            "負けず嫌いの",
+            "努力を要しない",
+            "続いて起こる",
+            "馬術の"
+          ],
+          "correct": 0,
+          "explanation": "「emulous」は「負けず嫌いの」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enraptured」の意味として最も適切なものは？",
+          "choices": [
+            "恥ずかしい",
+            "赤道の",
+            "全体の",
+            "有頂天の"
+          ],
+          "correct": 3,
+          "explanation": "「enraptured」は「有頂天の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「endless」の意味として最も適切なものは？",
+          "choices": [
+            "全体の",
+            "奴隷にされた",
+            "終わりのない",
+            "弱まった"
+          ],
+          "correct": 2,
+          "explanation": "「endless」は「終わりのない」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「energetic」の意味として最も適切なものは？",
+          "choices": [
+            "反響の",
+            "捕まえどころのない",
+            "精力的な",
+            "登録された"
+          ],
+          "correct": 2,
+          "explanation": "「energetic」は「精力的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enervated」の意味として最も適切なものは？",
+          "choices": [
+            "教育のある",
+            "不気味な",
+            "無気力な",
+            "享楽的な"
+          ],
+          "correct": 2,
+          "explanation": "「enervated」は「無気力な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enfeebled」の意味として最も適切なものは？",
+          "choices": [
+            "弱まった",
+            "工学の",
+            "初期の",
+            "環境の"
+          ],
+          "correct": 0,
+          "explanation": "「enfeebled」は「弱まった」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enfranchised」の意味として最も適切なものは？",
+          "choices": [
+            "魅惑的な",
+            "有頂天の",
+            "参政権を与えられた",
+            "電気の"
+          ],
+          "correct": 2,
+          "explanation": "「enfranchised」は「参政権を与えられた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「engaged」の意味として最も適切なものは？",
+          "choices": [
+            "従事している・婚約した",
+            "馬術の",
+            "享楽的な",
+            "社説の・編修の"
+          ],
+          "correct": 0,
+          "explanation": "「engaged」は「従事している・婚約した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「engaging」の意味として最も適切なものは？",
+          "choices": [
+            "馬術の",
+            "没頭させる",
+            "魅力的な",
+            "全体の"
+          ],
+          "correct": 2,
+          "explanation": "「engaging」は「魅力的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「engineering」の意味として最も適切なものは？",
+          "choices": [
+            "埋葬された",
+            "新興の",
+            "同等の",
+            "工学の"
+          ],
+          "correct": 3,
+          "explanation": "「engineering」は「工学の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "形容詞・副詞編セット7",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1061~1070",
+      "questions": [
+        {
+          "scenario": "「engrossed」の意味として最も適切なものは？",
+          "choices": [
+            "有頂天の",
+            "没頭した",
+            "埋葬された",
+            "偏屈な"
+          ],
+          "correct": 1,
+          "explanation": "「engrossed」は「没頭した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「engrossing」の意味として最も適切なものは？",
+          "choices": [
+            "経過した",
+            "工学の",
+            "効果のある",
+            "没頭させる"
+          ],
+          "correct": 3,
+          "explanation": "「engrossing」は「没頭させる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enhanced」の意味として最も適切なものは？",
+          "choices": [
+            "従事している・婚約した",
+            "弱まった",
+            "楽しい",
+            "高められた"
+          ],
+          "correct": 3,
+          "explanation": "「enhanced」は「高められた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enigmatic」の意味として最も適切なものは？",
+          "choices": [
+            "没頭させる",
+            "新興の",
+            "謎めいた",
+            "高められた"
+          ],
+          "correct": 2,
+          "explanation": "「enigmatic」は「謎めいた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enjoyable」の意味として最も適切なものは？",
+          "choices": [
+            "雄弁な",
+            "激怒した",
+            "装飾された",
+            "楽しい"
+          ],
+          "correct": 3,
+          "explanation": "「enjoyable」は「楽しい」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enlarged」の意味として最も適切なものは？",
+          "choices": [
+            "落ち着いた",
+            "叙事詩の",
+            "電気の",
+            "拡大された"
+          ],
+          "correct": 3,
+          "explanation": "「enlarged」は「拡大された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enlightened」の意味として最も適切なものは？",
+          "choices": [
+            "啓発された",
+            "やつれた",
+            "参政権を与えられた",
+            "選挙の"
+          ],
+          "correct": 0,
+          "explanation": "「enlightened」は「啓発された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enormous」の意味として最も適切なものは？",
+          "choices": [
+            "有頂天の",
+            "穏やかな",
+            "権利を与えられた",
+            "巨大な"
+          ],
+          "correct": 3,
+          "explanation": "「enormous」は「巨大な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enough」の意味として最も適切なものは？",
+          "choices": [
+            "経済の",
+            "環境の",
+            "充足した",
+            "共感できる"
+          ],
+          "correct": 2,
+          "explanation": "「enough」は「充足した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enraged」の意味として最も適切なものは？",
+          "choices": [
+            "激怒した",
+            "楕円の",
+            "楽しい",
+            "叙事詩の"
+          ],
+          "correct": 0,
+          "explanation": "「enraged」は「激怒した」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "形容詞・副詞編セット8",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1071~1080",
+      "questions": [
+        {
+          "scenario": "「enriched」の意味として最も適切なものは？",
+          "choices": [
+            "公平な",
+            "濃縮された",
+            "均等化された",
+            "感情を吐露する"
+          ],
+          "correct": 1,
+          "explanation": "「enriched」は「濃縮された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enrolled」の意味として最も適切なものは？",
+          "choices": [
+            "精力的な",
+            "熱狂的な",
+            "登録された",
+            "電気の"
+          ],
+          "correct": 2,
+          "explanation": "「enrolled」は「登録された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enshrined」の意味として最も適切なものは？",
+          "choices": [
+            "安置された",
+            "参政権を与えられた",
+            "経験的な",
+            "流行性の"
+          ],
+          "correct": 0,
+          "explanation": "「enshrined」は「安置された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enslaved」の意味として最も適切なものは？",
+          "choices": [
+            "濃縮された",
+            "奴隷にされた",
+            "楽しい",
+            "均等化された"
+          ],
+          "correct": 1,
+          "explanation": "「enslaved」は「奴隷にされた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ensuing」の意味として最も適切なものは？",
+          "choices": [
+            "あいまいな",
+            "続いて起こる",
+            "権利を与えられた",
+            "彼岸の"
+          ],
+          "correct": 1,
+          "explanation": "「ensuing」は「続いて起こる」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entertaining」の意味として最も適切なものは？",
+          "choices": [
+            "面白い",
+            "感情を吐露する",
+            "エピソードの",
+            "公平な"
+          ],
+          "correct": 0,
+          "explanation": "「entertaining」は「面白い」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enthusiastic」の意味として最も適切なものは？",
+          "choices": [
+            "充足した",
+            "熱狂的な",
+            "新興の",
+            "高められた"
+          ],
+          "correct": 1,
+          "explanation": "「enthusiastic」は「熱狂的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enticing」の意味として最も適切なものは？",
+          "choices": [
+            "利己的な",
+            "経済の",
+            "やつれた",
+            "魅惑的な"
+          ],
+          "correct": 3,
+          "explanation": "「enticing」は「魅惑的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entire」の意味として最も適切なものは？",
+          "choices": [
+            "平等主義の",
+            "全体の",
+            "激怒した",
+            "利己的な"
+          ],
+          "correct": 1,
+          "explanation": "「entire」は「全体の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entitled」の意味として最も適切なものは？",
+          "choices": [
+            "全体の",
+            "権利を与えられた",
+            "奴隷にされた",
+            "著名な"
+          ],
+          "correct": 1,
+          "explanation": "「entitled」は「権利を与えられた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "形容詞・副詞編セット9",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1081~1090",
+      "questions": [
+        {
+          "scenario": "「entombed」の意味として最も適切なものは？",
+          "choices": [
+            "埋葬された",
+            "流行性の",
+            "面白い",
+            "楽しい"
+          ],
+          "correct": 0,
+          "explanation": "「entombed」は「埋葬された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entrepreneurial」の意味として最も適切なものは？",
+          "choices": [
+            "濃縮された",
+            "有頂天の",
+            "起業家的な",
+            "努力を要しない"
+          ],
+          "correct": 2,
+          "explanation": "「entrepreneurial」は「起業家的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enviable」の意味として最も適切なものは？",
+          "choices": [
+            "安置された",
+            "羨むべき",
+            "大喜びの",
+            "公平な"
+          ],
+          "correct": 1,
+          "explanation": "「enviable」は「羨むべき」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「envious」の意味として最も適切なものは？",
+          "choices": [
+            "魅力的な",
+            "うらやましそうな",
+            "終わりのない",
+            "権利を与えられた"
+          ],
+          "correct": 1,
+          "explanation": "「envious」は「うらやましそうな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「environmental」の意味として最も適切なものは？",
+          "choices": [
+            "解放された",
+            "熱狂的な",
+            "啓発された",
+            "環境の"
+          ],
+          "correct": 3,
+          "explanation": "「environmental」は「環境の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「epic」の意味として最も適切なものは？",
+          "choices": [
+            "感情的な",
+            "うらやましそうな",
+            "叙事詩の",
+            "社説の・編修の"
+          ],
+          "correct": 2,
+          "explanation": "「epic」は「叙事詩の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「epicurean」の意味として最も適切なものは？",
+          "choices": [
+            "節約になる",
+            "高められた",
+            "激怒した",
+            "享楽的な"
+          ],
+          "correct": 3,
+          "explanation": "「epicurean」は「享楽的な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「epidemic」の意味として最も適切なものは？",
+          "choices": [
+            "穏やかな",
+            "流行性の",
+            "女々しい",
+            "解放された"
+          ],
+          "correct": 1,
+          "explanation": "「epidemic」は「流行性の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「episodic」の意味として最も適切なものは？",
+          "choices": [
+            "著名な",
+            "教育のある",
+            "高められた",
+            "エピソードの"
+          ],
+          "correct": 3,
+          "explanation": "「episodic」は「エピソードの」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equable」の意味として最も適切なものは？",
+          "choices": [
+            "穏やかな",
+            "全体の",
+            "エリートの",
+            "経験的な"
+          ],
+          "correct": 0,
+          "explanation": "「equable」は「穏やかな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "形容詞・副詞編セット10",
+      "type": "vocabulary",
+      "emoji": "🎨",
+      "subtitle": "英検2級の形容詞・副詞 1091~1100",
+      "questions": [
+        {
+          "scenario": "「equalized」の意味として最も適切なものは？",
+          "choices": [
+            "うらやましそうな",
+            "没頭させる",
+            "均等化された",
+            "恥ずかしい"
+          ],
+          "correct": 2,
+          "explanation": "「equalized」は「均等化された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equanimous」の意味として最も適切なものは？",
+          "choices": [
+            "登録された",
+            "落ち着いた",
+            "有頂天の",
+            "エピソードの"
+          ],
+          "correct": 1,
+          "explanation": "「equanimous」は「落ち着いた」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equatorial」の意味として最も適切なものは？",
+          "choices": [
+            "赤道の",
+            "魅惑的な",
+            "充足した",
+            "弾力のある"
+          ],
+          "correct": 0,
+          "explanation": "「equatorial」は「赤道の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equestrian」の意味として最も適切なものは？",
+          "choices": [
+            "馬術の",
+            "穏やかな",
+            "没頭した",
+            "年配の"
+          ],
+          "correct": 0,
+          "explanation": "「equestrian」は「馬術の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equine」の意味として最も適切なものは？",
+          "choices": [
+            "実にひどい",
+            "雄弁な",
+            "高められた",
+            "馬の"
+          ],
+          "correct": 3,
+          "explanation": "「equine」は「馬の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equinoctial」の意味として最も適切なものは？",
+          "choices": [
+            "彼岸の",
+            "落ち着いた",
+            "巨大な",
+            "魅力的な"
+          ],
+          "correct": 0,
+          "explanation": "「equinoctial」は「彼岸の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equipped」の意味として最も適切なものは？",
+          "choices": [
+            "捕まえどころのない",
+            "経験的な",
+            "弾力のある",
+            "装備された"
+          ],
+          "correct": 3,
+          "explanation": "「equipped」は「装備された」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equitable」の意味として最も適切なものは？",
+          "choices": [
+            "装飾された",
+            "装備された",
+            "赤道の",
+            "公平な"
+          ],
+          "correct": 3,
+          "explanation": "「equitable」は「公平な」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equivalent」の意味として最も適切なものは？",
+          "choices": [
+            "適格な",
+            "同等の",
+            "折衷的な",
+            "新興の"
+          ],
+          "correct": 1,
+          "explanation": "「equivalent」は「同等の」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equivocal」の意味として最も適切なものは？",
+          "choices": [
+            "あいまいな",
+            "哀歌の",
+            "流行性の",
+            "女々しい"
+          ],
+          "correct": 0,
+          "explanation": "「equivocal」は「あいまいな」という意味の形容詞（または副詞）です。英検2級の必須語彙です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

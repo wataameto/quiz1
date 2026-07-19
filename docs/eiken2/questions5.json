@@ -1,795 +1,1295 @@
 {
   "id": "eiken2",
-  "level": 5,
-  "label": "📖 名詞編1",
-  "description": "基本名詞（社会・日常生活の語彙）",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
   "tests": [
     {
       "id": 1,
-      "title": "名詞編1-1",
-      "type": "General Nouns Group A",
-      "emoji": "📘",
-      "subtitle": "英検2級レベルの語彙クイズ！社会生活に関わる基本名詞をチェック",
+      "title": "名詞編セット1",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 401~410",
       "questions": [
         {
-          "scenario": "「agriculture」の意味として最も適切なものは？",
-          "choices": ["農業", "漁業", "建築業", "製造業"],
-          "correct": 0,
-          "explanation": "agricultureは「農業」。agri-（畑）+cultureで、農地を耕す営みを指す。",
+          "scenario": "「gardener」の意味として最も適切なものは？",
+          "choices": [
+            "巻き上げ機",
+            "障害物",
+            "本部・本社",
+            "庭師"
+          ],
+          "correct": 3,
+          "explanation": "「gardener」は「庭師」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「appliance」の意味として最も適切なものは？",
-          "choices": ["(家庭用)電化製品", "家具", "装飾品", "衣類"],
-          "correct": 0,
-          "explanation": "applianceは主に家庭用電化製品を指す。例: a kitchen appliance（台所用電化製品）。",
+          "scenario": "「gender」の意味として最も適切なものは？",
+          "choices": [
+            "躊躇",
+            "巻き上げ機",
+            "性別",
+            "踵"
+          ],
+          "correct": 2,
+          "explanation": "「gender」は「性別」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「atmosphere」の意味として最も適切なものは？",
-          "choices": ["雰囲気、大気", "気候変動", "天気予報", "騒音"],
-          "correct": 0,
-          "explanation": "atmosphereは「大気」の意味に加え、場の「雰囲気」も表す。",
+          "scenario": "「grandstand」の意味として最も適切なものは？",
+          "choices": [
+            "ハーブ・薬草",
+            "くぼみ・谷",
+            "成長",
+            "特別席"
+          ],
+          "correct": 3,
+          "explanation": "「grandstand」は「特別席」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「authority」の意味として最も適切なものは？",
-          "choices": ["権威、当局", "罰金", "許可証", "義務"],
-          "correct": 0,
-          "explanation": "authorityは「権威」「権限」、複数形the authoritiesで「当局」を意味する。",
+          "scenario": "「granite」の意味として最も適切なものは？",
+          "choices": [
+            "体操選手",
+            "花崗岩",
+            "家宝",
+            "感謝の気持ち"
+          ],
+          "correct": 1,
+          "explanation": "「granite」は「花崗岩」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「behavior」の意味として最も適切なものは？",
-          "choices": ["行動、振る舞い", "感情", "習慣", "性格"],
-          "correct": 0,
-          "explanation": "behaviorは人や動物の「行動・振る舞い」を指す語。",
+          "scenario": "「graph」の意味として最も適切なものは？",
+          "choices": [
+            "カモメ",
+            "ホッケー",
+            "グラフ",
+            "感謝の気持ち"
+          ],
+          "correct": 2,
+          "explanation": "「graph」は「グラフ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「burden」の意味として最も適切なものは？",
-          "choices": ["負担、重荷", "利益", "義務教育", "貯蓄"],
-          "correct": 0,
-          "explanation": "burdenは精神的・物理的な「重荷、負担」を意味する。",
+          "scenario": "「gratitude」の意味として最も適切なものは？",
+          "choices": [
+            "格納庫",
+            "象形文字",
+            "砂・勇気",
+            "感謝の気持ち"
+          ],
+          "correct": 3,
+          "explanation": "「gratitude」は「感謝の気持ち」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「category」の意味として最も適切なものは？",
-          "choices": ["部門、範疇", "結果", "比較", "基準"],
-          "correct": 0,
-          "explanation": "categoryは物事を分類した「部門、種類」を指す。",
+          "scenario": "「grease」の意味として最も適切なものは？",
+          "choices": [
+            "庭師",
+            "かかと",
+            "グリース・脂",
+            "後光"
+          ],
+          "correct": 2,
+          "explanation": "「grease」は「グリース・脂」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「ceremony」の意味として最も適切なものは？",
-          "choices": ["式典", "祭日", "記念品", "招待状"],
-          "correct": 0,
-          "explanation": "ceremonyは結婚式や卒業式などの「儀式、式典」を指す。",
+          "scenario": "「greatness」の意味として最も適切なものは？",
+          "choices": [
+            "蓄え・貯蔵",
+            "性別",
+            "偉大さ",
+            "ハッカー"
+          ],
+          "correct": 2,
+          "explanation": "「greatness」は「偉大さ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「circumstance」の意味として最も適切なものは？",
-          "choices": ["状況、事情", "結果", "原因", "理由"],
-          "correct": 0,
-          "explanation": "circumstanceは人を取り巻く「状況、事情」を意味し、しばしば複数形で使われる。",
+          "scenario": "「greed」の意味として最も適切なものは？",
+          "choices": [
+            "巣箱",
+            "ハンカチ",
+            "英雄",
+            "強欲・強欲さ"
+          ],
+          "correct": 3,
+          "explanation": "「greed」は「強欲・強欲さ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「colleague」の意味として最も適切なものは？",
-          "choices": ["同僚", "上司", "顧客", "部下"],
-          "correct": 0,
-          "explanation": "colleagueは同じ職場・専門分野で働く「同僚」を指す。",
+          "scenario": "「grief」の意味として最も適切なものは？",
+          "choices": [
+            "冬眠",
+            "手芸・工芸品",
+            "特徴・保証マーク",
+            "深い悲しみ"
+          ],
+          "correct": 3,
+          "explanation": "「grief」は「深い悲しみ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 2,
-      "title": "名詞編1-2",
-      "type": "Business & Relationship Nouns",
-      "emoji": "💼",
-      "subtitle": "英検2級レベルの語彙クイズ！ビジネス・人間関係の名詞をチェック",
+      "title": "名詞編セット2",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 411~420",
       "questions": [
         {
-          "scenario": "「commodity」の意味として最も適切なものは？",
-          "choices": ["商品、必需品", "広告", "在庫", "値段"],
-          "correct": 0,
-          "explanation": "commodityは特に売買される「商品」、農産物や原材料を指すことが多い。",
+          "scenario": "「grievance」の意味として最も適切なものは？",
+          "choices": [
+            "特徴・保証マーク",
+            "不満・苦情",
+            "ホルスター",
+            "柄"
+          ],
+          "correct": 1,
+          "explanation": "「grievance」は「不満・苦情」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「commuter」の意味として最も適切なものは？",
-          "choices": ["通勤者、通学者", "旅行者", "移民", "観光客"],
-          "correct": 0,
-          "explanation": "commuterは電車やバスで定期的に通勤・通学する人を指す。",
+          "scenario": "「grill」の意味として最も適切なものは？",
+          "choices": [
+            "手芸・工芸品",
+            "焼き網",
+            "ホッケー",
+            "カモメ"
+          ],
+          "correct": 1,
+          "explanation": "「grill」は「焼き網」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「companion」の意味として最も適切なものは？",
-          "choices": ["仲間、連れ", "競争相手", "客", "案内人"],
-          "correct": 0,
-          "explanation": "companionは一緒に行動する「仲間、連れ」を意味する。",
+          "scenario": "「grit」の意味として最も適切なものは？",
+          "choices": [
+            "象形文字",
+            "ジャイロスコープ",
+            "砂・勇気",
+            "食料雑貨"
+          ],
+          "correct": 2,
+          "explanation": "「grit」は「砂・勇気」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「compensation」の意味として最も適切なものは？",
-          "choices": ["補償、報酬", "罰則", "割引", "保険料"],
-          "correct": 0,
-          "explanation": "compensationは損失に対する「補償」や労働への「報酬」を意味する。",
+          "scenario": "「grocery」の意味として最も適切なものは？",
+          "choices": [
+            "悪知恵",
+            "メスジカ",
+            "保護者",
+            "食料雑貨"
+          ],
+          "correct": 3,
+          "explanation": "「grocery」は「食料雑貨」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「component」の意味として最も適切なものは？",
-          "choices": ["構成要素、部品", "完成品", "説明書", "材料費"],
-          "correct": 0,
-          "explanation": "componentは機械やシステムを構成する「部品、要素」を指す。",
+          "scenario": "「groove」の意味として最も適切なものは？",
+          "choices": [
+            "裾",
+            "一握り・少数",
+            "ヘリウム",
+            "溝"
+          ],
+          "correct": 3,
+          "explanation": "「groove」は「溝」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「conflict」の意味として最も適切なものは？",
-          "choices": ["対立、紛争", "協力", "合意", "和解"],
-          "correct": 0,
-          "explanation": "conflictは意見や利害の「対立」、または武力「紛争」を意味する。",
+          "scenario": "「gross」の意味として最も適切なものは？",
+          "choices": [
+            "散髪",
+            "総計",
+            "ヘルメット",
+            "本部・本社"
+          ],
+          "correct": 1,
+          "explanation": "「gross」は「総計」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「consent」の意味として最も適切なものは？",
-          "choices": ["同意、承諾", "拒否", "命令", "警告"],
-          "correct": 0,
-          "explanation": "consentは相手の要求などへの「同意」を意味し、give consentのように使う。",
+          "scenario": "「groundwork」の意味として最も適切なものは？",
+          "choices": [
+            "裾",
+            "障害・不利な条件",
+            "基礎工事・準備",
+            "歴史家"
+          ],
+          "correct": 2,
+          "explanation": "「groundwork」は「基礎工事・準備」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「consequence」の意味として最も適切なものは？",
-          "choices": ["結果、影響", "原因", "目的", "過程"],
-          "correct": 0,
-          "explanation": "consequenceは行動や出来事によって生じる「結果」を意味する。",
+          "scenario": "「grove」の意味として最も適切なものは？",
+          "choices": [
+            "悪知恵",
+            "深い悲しみ",
+            "ホルスター",
+            "木立"
+          ],
+          "correct": 3,
+          "explanation": "「grove」は「木立」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「consumer」の意味として最も適切なものは？",
-          "choices": ["消費者", "生産者", "販売者", "投資家"],
-          "correct": 0,
-          "explanation": "consumerは商品やサービスを購入・利用する「消費者」を指す。",
+          "scenario": "「growth」の意味として最も適切なものは？",
+          "choices": [
+            "案内・指導",
+            "英雄的行為",
+            "成長",
+            "象形文字"
+          ],
+          "correct": 2,
+          "explanation": "「growth」は「成長」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「container」の意味として最も適切なものは？",
-          "choices": ["容器", "内容物", "包装紙", "貯蔵庫"],
+          "scenario": "「grudge」の意味として最も適切なものは？",
+          "choices": [
+            "恨み",
+            "雌鳥",
+            "ギルド・同業組合",
+            "後光"
+          ],
           "correct": 0,
-          "explanation": "containerは物を入れる「容器」で、輸送用のコンテナも指す。",
+          "explanation": "「grudge」は「恨み」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 3,
-      "title": "名詞編1-3",
-      "type": "Society & Agreement Nouns",
-      "emoji": "📜",
-      "subtitle": "英検2級レベルの語彙クイズ！社会・契約に関する名詞をチェック",
+      "title": "名詞編セット3",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 421~430",
       "questions": [
         {
-          "scenario": "「contract」の意味として最も適切なものは？",
-          "choices": ["契約", "提案", "申請", "報告書"],
-          "correct": 0,
-          "explanation": "contractは法的拘束力のある「契約」を意味する。動詞では「契約する、収縮する」の意味も。",
+          "scenario": "「guardian」の意味として最も適切なものは？",
+          "choices": [
+            "ハンガー",
+            "散髪",
+            "ホッケー",
+            "保護者"
+          ],
+          "correct": 3,
+          "explanation": "「guardian」は「保護者」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「contribution」の意味として最も適切なものは？",
-          "choices": ["貢献、寄付", "反対", "批判", "損失"],
+          "scenario": "「guidance」の意味として最も適切なものは？",
+          "choices": [
+            "案内・指導",
+            "隠者",
+            "湾・格差",
+            "天国"
+          ],
           "correct": 0,
-          "explanation": "contributionは組織や社会への「貢献」、または「寄付」を意味する。",
+          "explanation": "「guidance」は「案内・指導」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「controversy」の意味として最も適切なものは？",
-          "choices": ["論争、物議", "合意", "解決策", "調査"],
-          "correct": 0,
-          "explanation": "controversyは意見が対立する「論争、物議」を意味する。",
+          "scenario": "「guideline」の意味として最も適切なものは？",
+          "choices": [
+            "花崗岩",
+            "指針",
+            "成長",
+            "筆跡・手書き"
+          ],
+          "correct": 1,
+          "explanation": "「guideline」は「指針」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「convenience」の意味として最も適切なものは？",
-          "choices": ["便利さ、便宜", "不便", "複雑さ", "混乱"],
-          "correct": 0,
-          "explanation": "convenienceは「便利さ」を意味し、convenience storeはコンビニのこと。",
+          "scenario": "「guild」の意味として最も適切なものは？",
+          "choices": [
+            "障害・不利な条件",
+            "かかと",
+            "躊躇・ためらい",
+            "ギルド・同業組合"
+          ],
+          "correct": 3,
+          "explanation": "「guild」は「ギルド・同業組合」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「correspondence」の意味として最も適切なものは？",
-          "choices": ["文通、通信", "会話", "会議", "契約書"],
-          "correct": 0,
-          "explanation": "correspondenceは手紙などの「文通・通信」、または物事の「一致・対応関係」を意味する。",
+          "scenario": "「guile」の意味として最も適切なものは？",
+          "choices": [
+            "食料雑貨",
+            "隙間・中断",
+            "悪知恵",
+            "ホルスター"
+          ],
+          "correct": 2,
+          "explanation": "「guile」は「悪知恵」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「council」の意味として最も適切なものは？",
-          "choices": ["議会、評議会", "法律", "選挙", "市民"],
+          "scenario": "「guilt」の意味として最も適切なものは？",
+          "choices": [
+            "罪・罪悪感",
+            "半球",
+            "食料雑貨",
+            "花崗岩"
+          ],
           "correct": 0,
-          "explanation": "councilは地方議会などの「評議会、議会」を指す。city council（市議会）。",
+          "explanation": "「guilt」は「罪・罪悪感」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「crew」の意味として最も適切なものは？",
-          "choices": ["乗組員、作業班", "乗客", "荷物", "船"],
+          "scenario": "「gulf」の意味として最も適切なものは？",
+          "choices": [
+            "湾・格差",
+            "ハーブ・薬草",
+            "冬眠",
+            "群れ"
+          ],
           "correct": 0,
-          "explanation": "crewは船や飛行機の「乗組員」、作業を行う「班」を意味する。",
+          "explanation": "「gulf」は「湾・格差」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「crisis」の意味として最も適切なものは？",
-          "choices": ["危機", "解決", "安定", "繁栄"],
+          "scenario": "「gull」の意味として最も適切なものは？",
+          "choices": [
+            "カモメ",
+            "本部・本社",
+            "湾・格差",
+            "躊躇"
+          ],
           "correct": 0,
-          "explanation": "crisisは経済危機や健康危機など重大な「危機」を意味する。複数形はcrises。",
+          "explanation": "「gull」は「カモメ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「custom」の意味として最も適切なものは？",
-          "choices": ["習慣、慣習", "法律", "規則", "伝説"],
-          "correct": 0,
-          "explanation": "customは社会や個人の「習慣、慣習」を意味する。customsで「税関」の意味もある。",
+          "scenario": "「gutter」の意味として最も適切なものは？",
+          "choices": [
+            "冬眠",
+            "偉大さ",
+            "溝・どぶ",
+            "溝"
+          ],
+          "correct": 2,
+          "explanation": "「gutter」は「溝・どぶ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「debt」の意味として最も適切なものは？",
-          "choices": ["借金、負債", "貯金", "利益", "投資"],
-          "correct": 0,
-          "explanation": "debtは返済すべき「借金、負債」を意味する。be in debtで「借金がある」。",
+          "scenario": "「gymnast」の意味として最も適切なものは？",
+          "choices": [
+            "助手",
+            "不満・苦情",
+            "体操選手",
+            "特別席"
+          ],
+          "correct": 2,
+          "explanation": "「gymnast」は「体操選手」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 4,
-      "title": "名詞編1-4",
-      "type": "Time, Places & Values Nouns",
-      "emoji": "🗺️",
-      "subtitle": "英検2級レベルの語彙クイズ！時間・場所・価値に関する名詞をチェック",
+      "title": "名詞編セット4",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 431~440",
       "questions": [
         {
-          "scenario": "「decade」の意味として最も適切なものは？",
-          "choices": ["10年間", "1世紀", "1年間", "1世代"],
-          "correct": 0,
-          "explanation": "decadeは「10年間」を意味する。ラテン語のdecem（10）に由来。",
+          "scenario": "「gymnastics」の意味として最も適切なものは？",
+          "choices": [
+            "保護者",
+            "花崗岩",
+            "体操",
+            "群れ"
+          ],
+          "correct": 2,
+          "explanation": "「gymnastics」は「体操」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「deficit」の意味として最も適切なものは？",
-          "choices": ["赤字、不足", "黒字", "利益", "余剰"],
+          "scenario": "「gyroscope」の意味として最も適切なものは？",
+          "choices": [
+            "ジャイロスコープ",
+            "ヘリウム",
+            "かご",
+            "案内書・ハンドブック"
+          ],
           "correct": 0,
-          "explanation": "deficitは支出が収入を上回る「赤字」、または不足分を意味する。",
+          "explanation": "「gyroscope」は「ジャイロスコープ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「destination」の意味として最も適切なものは？",
-          "choices": ["目的地", "出発地", "経路", "距離"],
-          "correct": 0,
-          "explanation": "destinationは旅行や配送の「目的地」を意味する。",
+          "scenario": "「hacker」の意味として最も適切なものは？",
+          "choices": [
+            "ハイキング",
+            "ハッカー",
+            "障害物",
+            "後光"
+          ],
+          "correct": 1,
+          "explanation": "「hacker」は「ハッカー」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「device」の意味として最も適切なものは？",
-          "choices": ["装置、機器", "方法", "計画", "素材"],
+          "scenario": "「haircut」の意味として最も適切なものは？",
+          "choices": [
+            "散髪",
+            "ニシン",
+            "天国",
+            "でっち上げ・いたずら"
+          ],
           "correct": 0,
-          "explanation": "deviceは特定の目的のために作られた「装置、機器」を指す。",
+          "explanation": "「haircut」は「散髪」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「dignity」の意味として最も適切なものは？",
-          "choices": ["尊厳", "恥", "権力", "名声"],
-          "correct": 0,
-          "explanation": "dignityは人としての「尊厳、威厳」を意味する。",
+          "scenario": "「hallmark」の意味として最も適切なものは？",
+          "choices": [
+            "しゃっくり",
+            "半球",
+            "クワ",
+            "特徴・保証マーク"
+          ],
+          "correct": 3,
+          "explanation": "「hallmark」は「特徴・保証マーク」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「discipline」の意味として最も適切なものは？",
-          "choices": ["規律、訓練", "自由", "娯楽", "混乱"],
+          "scenario": "「halo」の意味として最も適切なものは？",
+          "choices": [
+            "後光",
+            "階層制",
+            "保護者",
+            "クワ"
+          ],
           "correct": 0,
-          "explanation": "disciplineは「規律」、また学問の「分野」という意味もある。",
+          "explanation": "「halo」は「後光」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「disaster」の意味として最も適切なものは？",
-          "choices": ["災害、大惨事", "成功", "救助", "予防"],
-          "correct": 0,
-          "explanation": "disasterは地震や洪水などの「災害」、転じて「大失敗」も意味する。",
+          "scenario": "「halter」の意味として最も適切なものは？",
+          "choices": [
+            "偉大さ",
+            "手綱",
+            "メスジカ",
+            "象形文字"
+          ],
+          "correct": 1,
+          "explanation": "「halter」は「手綱」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「discount」の意味として最も適切なものは？",
-          "choices": ["割引", "定価", "税金", "手数料"],
-          "correct": 0,
-          "explanation": "discountは価格の「割引」を意味する。at a discountで「割引価格で」。",
+          "scenario": "「hamper」の意味として最も適切なものは？",
+          "choices": [
+            "危険",
+            "一握り・少数",
+            "ヒロイン",
+            "かご"
+          ],
+          "correct": 3,
+          "explanation": "「hamper」は「かご」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「district」の意味として最も適切なものは？",
-          "choices": ["地区、地域", "国境", "都市全体", "建物"],
+          "scenario": "「handbook」の意味として最も適切なものは？",
+          "choices": [
+            "案内書・ハンドブック",
+            "一握り・少数",
+            "冬眠",
+            "半球"
+          ],
           "correct": 0,
-          "explanation": "districtは行政上・地理上の「地区」を意味する。business district（商業地区）。",
+          "explanation": "「handbook」は「案内書・ハンドブック」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「diversity」の意味として最も適切なものは？",
-          "choices": ["多様性", "統一性", "類似性", "均一性"],
-          "correct": 0,
-          "explanation": "diversityは人種や文化などの「多様性」を意味する。",
+          "scenario": "「handful」の意味として最も適切なものは？",
+          "choices": [
+            "ハッカー",
+            "一握り・少数",
+            "焼き網",
+            "ハンカチ"
+          ],
+          "correct": 1,
+          "explanation": "「handful」は「一握り・少数」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 5,
-      "title": "名詞編1-5",
-      "type": "Economy & Crisis Nouns",
-      "emoji": "🌍",
-      "subtitle": "英検2級レベルの語彙クイズ！経済・社会情勢の名詞をチェック",
+      "title": "名詞編セット5",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 441~450",
       "questions": [
         {
-          "scenario": "「donation」の意味として最も適切なものは？",
-          "choices": ["寄付", "借金", "税金", "罰金"],
-          "correct": 0,
-          "explanation": "donationは慈善団体などへの「寄付、寄付金」を意味する。",
+          "scenario": "「handicap」の意味として最も適切なものは？",
+          "choices": [
+            "階層制",
+            "躊躇",
+            "障害・不利な条件",
+            "ハンカチ"
+          ],
+          "correct": 2,
+          "explanation": "「handicap」は「障害・不利な条件」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「drought」の意味として最も適切なものは？",
-          "choices": ["干ばつ", "洪水", "台風", "地震"],
-          "correct": 0,
-          "explanation": "droughtは長期間雨が降らない「干ばつ」を意味する。",
+          "scenario": "「handicraft」の意味として最も適切なものは？",
+          "choices": [
+            "一握り・少数",
+            "溝",
+            "溝・どぶ",
+            "手芸・工芸品"
+          ],
+          "correct": 3,
+          "explanation": "「handicraft」は「手芸・工芸品」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「economy」の意味として最も適切なものは？",
-          "choices": ["経済", "政治", "文化", "教育"],
-          "correct": 0,
-          "explanation": "economyは国や地域の「経済」を意味する。形容詞economicも重要。",
+          "scenario": "「handkerchief」の意味として最も適切なものは？",
+          "choices": [
+            "体操選手",
+            "保護者",
+            "巻き上げ機",
+            "ハンカチ"
+          ],
+          "correct": 3,
+          "explanation": "「handkerchief」は「ハンカチ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「edition」の意味として最も適切なものは？",
-          "choices": ["(出版物の)版", "著者", "出版社", "印刷所"],
-          "correct": 0,
-          "explanation": "editionは本や新聞の「版」を意味する。the latest editionで「最新版」。",
+          "scenario": "「handshake」の意味として最も適切なものは？",
+          "choices": [
+            "階層制",
+            "握手",
+            "隠者",
+            "体操"
+          ],
+          "correct": 1,
+          "explanation": "「handshake」は「握手」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「emergency」の意味として最も適切なものは？",
-          "choices": ["緊急事態", "平常時", "休暇", "予定"],
-          "correct": 0,
-          "explanation": "emergencyは急を要する「緊急事態」を意味する。emergency exit（非常口）。",
+          "scenario": "「handwriting」の意味として最も適切なものは？",
+          "choices": [
+            "ハンカチ",
+            "六角形",
+            "筆跡・手書き",
+            "支持器・保有者"
+          ],
+          "correct": 2,
+          "explanation": "「handwriting」は「筆跡・手書き」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「emotion」の意味として最も適切なものは？",
-          "choices": ["感情", "理性", "事実", "意見"],
+          "scenario": "「hangar」の意味として最も適切なものは？",
+          "choices": [
+            "格納庫",
+            "家宝",
+            "象形文字",
+            "豚"
+          ],
           "correct": 0,
-          "explanation": "emotionは喜怒哀楽などの「感情」を意味する。",
+          "explanation": "「hangar」は「格納庫」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「employer」の意味として最も適切なものは？",
-          "choices": ["雇用主", "従業員", "求職者", "仲介業者"],
+          "scenario": "「hanger」の意味として最も適切なものは？",
+          "choices": [
+            "ハンガー",
+            "格納庫",
+            "躊躇",
+            "生け垣"
+          ],
           "correct": 0,
-          "explanation": "employerは人を雇う「雇用主、雇い主」を意味する。対義語はemployee。",
+          "explanation": "「hanger」は「ハンガー」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「enterprise」の意味として最も適切なものは？",
-          "choices": ["企業、事業", "従業員", "製品", "利益"],
-          "correct": 0,
-          "explanation": "enterpriseは「企業」、または「進取の気性、事業」を意味する。",
+          "scenario": "「hazard」の意味として最も適切なものは？",
+          "choices": [
+            "でっち上げ・いたずら",
+            "保護者",
+            "危険",
+            "大虐殺"
+          ],
+          "correct": 2,
+          "explanation": "「hazard」は「危険」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「environment」の意味として最も適切なものは？",
-          "choices": ["環境", "天気", "資源", "汚染"],
-          "correct": 0,
-          "explanation": "environmentは自然環境や周囲の「環境」を意味する。",
+          "scenario": "「headquarters」の意味として最も適切なものは？",
+          "choices": [
+            "豚",
+            "本部・本社",
+            "かご",
+            "ハンカチ"
+          ],
+          "correct": 1,
+          "explanation": "「headquarters」は「本部・本社」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「epidemic」の意味として最も適切なものは？",
-          "choices": ["(伝染病の)流行", "予防接種", "治療法", "病院"],
-          "correct": 0,
-          "explanation": "epidemicは病気が急速に広がる「流行、伝染病」を意味する。",
+          "scenario": "「heaven」の意味として最も適切なものは？",
+          "choices": [
+            "体操",
+            "天国",
+            "くぼみ・谷",
+            "後光"
+          ],
+          "correct": 1,
+          "explanation": "「heaven」は「天国」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 6,
-      "title": "名詞編1-6",
-      "type": "Facilities & Costs Nouns",
-      "emoji": "🏢",
-      "subtitle": "英検2級レベルの語彙クイズ！施設・費用に関する名詞をチェック",
+      "title": "名詞編セット6",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 451~460",
       "questions": [
         {
-          "scenario": "「equipment」の意味として最も適切なものは？",
-          "choices": ["設備、備品", "道具の使い方", "建物", "材料"],
-          "correct": 0,
-          "explanation": "equipmentは作業や活動に必要な「設備、装備」を意味する不可算名詞。",
+          "scenario": "「hedge」の意味として最も適切なものは？",
+          "choices": [
+            "食料雑貨",
+            "助手",
+            "指針",
+            "生け垣"
+          ],
+          "correct": 3,
+          "explanation": "「hedge」は「生け垣」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「essence」の意味として最も適切なものは？",
-          "choices": ["本質、真髄", "表面", "形式", "外見"],
-          "correct": 0,
-          "explanation": "essenceは物事の「本質」を意味する。in essenceで「本質的には」。",
+          "scenario": "「heel」の意味として最も適切なものは？",
+          "choices": [
+            "罪・罪悪感",
+            "かかと",
+            "ハイキング",
+            "巻き上げ機"
+          ],
+          "correct": 1,
+          "explanation": "「heel」は「かかと」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「estate」の意味として最も適切なものは？",
-          "choices": ["地所、財産", "借金", "給料", "税金"],
-          "correct": 0,
-          "explanation": "estateは広い「土地・地所」や死後残す「財産」を意味する。real estate（不動産）。",
+          "scenario": "「height」の意味として最も適切なものは？",
+          "choices": [
+            "花崗岩",
+            "一握り・少数",
+            "高さ",
+            "しゃっくり"
+          ],
+          "correct": 2,
+          "explanation": "「height」は「高さ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「evidence」の意味として最も適切なものは？",
-          "choices": ["証拠", "疑い", "判決", "告発"],
-          "correct": 0,
-          "explanation": "evidenceは事実を裏付ける「証拠」を意味する不可算名詞。",
+          "scenario": "「heir」の意味として最も適切なものは？",
+          "choices": [
+            "一握り・少数",
+            "相続人",
+            "恨み",
+            "罪・罪悪感"
+          ],
+          "correct": 1,
+          "explanation": "「heir」は「相続人」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「exhibition」の意味として最も適切なものは？",
-          "choices": ["展示会", "講演会", "競技会", "式典"],
-          "correct": 0,
-          "explanation": "exhibitionは美術品や製品の「展示会」を意味する。",
+          "scenario": "「heirloom」の意味として最も適切なものは？",
+          "choices": [
+            "成長",
+            "砂・勇気",
+            "ギルド・同業組合",
+            "家宝"
+          ],
+          "correct": 3,
+          "explanation": "「heirloom」は「家宝」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「expense」の意味として最も適切なものは？",
-          "choices": ["費用、支出", "収入", "利益", "貯蓄"],
-          "correct": 0,
-          "explanation": "expenseは何かにかかる「費用、支出」を意味する。at the expense ofで「〜を犠牲にして」。",
+          "scenario": "「helium」の意味として最も適切なものは？",
+          "choices": [
+            "筆跡・手書き",
+            "ギルド・同業組合",
+            "ヘリウム",
+            "手綱"
+          ],
+          "correct": 2,
+          "explanation": "「helium」は「ヘリウム」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「facility」の意味として最も適切なものは？",
-          "choices": ["施設、設備", "職員", "規則", "利用者"],
+          "scenario": "「helmet」の意味として最も適切なものは？",
+          "choices": [
+            "ヘルメット",
+            "ハンガー",
+            "指針",
+            "溝"
+          ],
           "correct": 0,
-          "explanation": "facilityは病院や体育館などの「施設」を意味する。複数形facilitiesがよく使われる。",
+          "explanation": "「helmet」は「ヘルメット」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「faculty」の意味として最も適切なものは？",
-          "choices": ["(大学の)学部、能力", "学生", "校舎", "授業料"],
-          "correct": 0,
-          "explanation": "facultyは大学の「学部」や、生まれ持った「能力」を意味する。",
+          "scenario": "「helper」の意味として最も適切なものは？",
+          "choices": [
+            "溝・どぶ",
+            "裾",
+            "隠者",
+            "助手"
+          ],
+          "correct": 3,
+          "explanation": "「helper」は「助手」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「fare」の意味として最も適切なものは？",
-          "choices": ["運賃", "料金体系", "割引券", "時刻表"],
-          "correct": 0,
-          "explanation": "fareはバスや電車、タクシーの「運賃」を意味する。",
+          "scenario": "「hem」の意味として最も適切なものは？",
+          "choices": [
+            "格納庫",
+            "庭師",
+            "裾",
+            "先駆者・伝令官"
+          ],
+          "correct": 2,
+          "explanation": "「hem」は「裾」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「fatigue」の意味として最も適切なものは？",
-          "choices": ["疲労", "休息", "活力", "緊張"],
+          "scenario": "「hemisphere」の意味として最も適切なものは？",
+          "choices": [
+            "半球",
+            "特別席",
+            "特徴・保証マーク",
+            "庭師"
+          ],
           "correct": 0,
-          "explanation": "fatigueは肉体的・精神的な「疲労」を意味する。",
+          "explanation": "「hemisphere」は「半球」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 7,
-      "title": "名詞編1-7",
-      "type": "Abstract & Household Nouns",
-      "emoji": "🪑",
-      "subtitle": "英検2級レベルの語彙クイズ！抽象概念・家庭生活の名詞をチェック",
+      "title": "名詞編セット7",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 461~470",
       "questions": [
         {
-          "scenario": "「flaw」の意味として最も適切なものは？",
-          "choices": ["欠陥、傷", "長所", "改善", "評価"],
+          "scenario": "「hemp」の意味として最も適切なものは？",
+          "choices": [
+            "大麻・麻",
+            "六角形",
+            "柄",
+            "蓄え・貯蔵"
+          ],
           "correct": 0,
-          "explanation": "flawは製品や性格の「欠陥、欠点」を意味する。",
+          "explanation": "「hemp」は「大麻・麻」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「fortune」の意味として最も適切なものは？",
-          "choices": ["財産、幸運", "不幸", "貧困", "努力"],
-          "correct": 0,
-          "explanation": "fortuneは「幸運」、また「莫大な財産」も意味する。make a fortuneで「大金を稼ぐ」。",
+          "scenario": "「hen」の意味として最も適切なものは？",
+          "choices": [
+            "感謝の気持ち",
+            "ヘルメット",
+            "悪知恵",
+            "雌鳥"
+          ],
+          "correct": 3,
+          "explanation": "「hen」は「雌鳥」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「fraction」の意味として最も適切なものは？",
-          "choices": ["ごく一部、分数", "全体", "合計", "割合の平均"],
-          "correct": 0,
-          "explanation": "fractionは数学の「分数」、また「ごく一部、小部分」を意味する。",
+          "scenario": "「herald」の意味として最も適切なものは？",
+          "choices": [
+            "歴史家",
+            "群れ",
+            "案内・指導",
+            "先駆者・伝令官"
+          ],
+          "correct": 3,
+          "explanation": "「herald」は「先駆者・伝令官」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「fragment」の意味として最も適切なものは？",
-          "choices": ["断片、破片", "全体像", "起源", "完成品"],
-          "correct": 0,
-          "explanation": "fragmentは壊れたものの「断片、破片」を意味する。",
+          "scenario": "「herb」の意味として最も適切なものは？",
+          "choices": [
+            "かご",
+            "ヘルメット",
+            "ハーブ・薬草",
+            "握手"
+          ],
+          "correct": 2,
+          "explanation": "「herb」は「ハーブ・薬草」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「framework」の意味として最も適切なものは？",
-          "choices": ["枠組み、構造", "内容", "結論", "背景"],
+          "scenario": "「herd」の意味として最も適切なものは？",
+          "choices": [
+            "群れ",
+            "歴史家",
+            "尻・腰",
+            "食料雑貨"
+          ],
           "correct": 0,
-          "explanation": "frameworkは物事を組み立てる「枠組み、体制」を意味する。",
+          "explanation": "「herd」は「群れ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「fund」の意味として最も適切なものは？",
-          "choices": ["資金、基金", "負債", "支出", "税金"],
-          "correct": 0,
-          "explanation": "fundは特定目的のための「資金、基金」を意味する。",
+          "scenario": "「hermit」の意味として最も適切なものは？",
+          "choices": [
+            "くぼみ・谷",
+            "散髪",
+            "隠者",
+            "悪知恵"
+          ],
+          "correct": 2,
+          "explanation": "「hermit」は「隠者」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「furniture」の意味として最も適切なものは？",
-          "choices": ["家具", "電化製品", "装飾品", "建材"],
-          "correct": 0,
-          "explanation": "furnitureは椅子や机などの「家具」を指す不可算名詞。",
+          "scenario": "「hero」の意味として最も適切なものは？",
+          "choices": [
+            "助手",
+            "ハーブ・薬草",
+            "英雄",
+            "ヘリウム"
+          ],
+          "correct": 2,
+          "explanation": "「hero」は「英雄」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「gender」の意味として最も適切なものは？",
-          "choices": ["性別", "年齢", "国籍", "人種"],
+          "scenario": "「heroine」の意味として最も適切なものは？",
+          "choices": [
+            "ヒロイン",
+            "握手",
+            "カバ",
+            "雌鳥"
+          ],
           "correct": 0,
-          "explanation": "genderは社会的・文化的観点からの「性別」を意味する。",
+          "explanation": "「heroine」は「ヒロイン」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「generation」の意味として最も適切なものは？",
-          "choices": ["世代", "時代", "歴史", "子孫"],
+          "scenario": "「heroism」の意味として最も適切なものは？",
+          "choices": [
+            "英雄的行為",
+            "後光",
+            "砂・勇気",
+            "一握り・少数"
+          ],
           "correct": 0,
-          "explanation": "generationは同時期に生まれ育った「世代」を意味する。",
+          "explanation": "「heroism」は「英雄的行為」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「generosity」の意味として最も適切なものは？",
-          "choices": ["寛大さ、気前の良さ", "けち", "冷酷さ", "無関心"],
-          "correct": 0,
-          "explanation": "generosityは物惜しみしない「寛大さ、気前の良さ」を意味する。",
+          "scenario": "「heron」の意味として最も適切なものは？",
+          "choices": [
+            "躊躇",
+            "罪・罪悪感",
+            "サギ",
+            "大虐殺"
+          ],
+          "correct": 2,
+          "explanation": "「heron」は「サギ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 8,
-      "title": "名詞編1-8",
-      "type": "Nature & Everyday Life Nouns",
-      "emoji": "🌾",
-      "subtitle": "英検2級レベルの語彙クイズ！自然・日常生活の名詞をチェック",
+      "title": "名詞編セット8",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 471~480",
       "questions": [
         {
-          "scenario": "「gesture」の意味として最も適切なものは？",
-          "choices": ["身振り、しぐさ", "表情", "発言", "態度全般"],
-          "correct": 0,
-          "explanation": "gestureは手や体を使った「身振り」、また「意思表示の行為」も意味する。",
+          "scenario": "「herring」の意味として最も適切なものは？",
+          "choices": [
+            "先駆者・伝令官",
+            "かご",
+            "ニシン",
+            "躊躇"
+          ],
+          "correct": 2,
+          "explanation": "「herring」は「ニシン」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「grocery」の意味として最も適切なものは？",
-          "choices": ["食料雑貨(店)", "衣料品店", "文房具", "家電製品"],
+          "scenario": "「hesitancy」の意味として最も適切なものは？",
+          "choices": [
+            "躊躇",
+            "ハーブ・薬草",
+            "案内・指導",
+            "先駆者・伝令官"
+          ],
           "correct": 0,
-          "explanation": "groceryは食料品などの「日用雑貨」、grocery storeで「食料品店」を意味する。",
+          "explanation": "「hesitancy」は「躊躇」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「habitat」の意味として最も適切なものは？",
-          "choices": ["生息地", "絶滅", "繁殖", "進化"],
-          "correct": 0,
-          "explanation": "habitatは動植物が自然に生息する「生息地、生育地」を意味する。",
+          "scenario": "「hesitation」の意味として最も適切なものは？",
+          "choices": [
+            "英雄",
+            "雌鳥",
+            "躊躇・ためらい",
+            "裾"
+          ],
+          "correct": 2,
+          "explanation": "「hesitation」は「躊躇・ためらい」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「harvest」の意味として最も適切なものは？",
-          "choices": ["収穫(物)", "播種", "肥料", "農地"],
-          "correct": 0,
-          "explanation": "harvestは農作物を「収穫すること、収穫物」を意味する。",
+          "scenario": "「hexagon」の意味として最も適切なものは？",
+          "choices": [
+            "巻き上げ機",
+            "筆跡・手書き",
+            "手芸・工芸品",
+            "六角形"
+          ],
+          "correct": 3,
+          "explanation": "「hexagon」は「六角形」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「hazard」の意味として最も適切なものは？",
-          "choices": ["危険(要因)", "安全対策", "保険金", "規則"],
-          "correct": 0,
-          "explanation": "hazardは事故などを引き起こす「危険(要因)」を意味する。a health hazard（健康被害の恐れ）。",
+          "scenario": "「hiatus」の意味として最も適切なものは？",
+          "choices": [
+            "躊躇・ためらい",
+            "柄",
+            "隙間・中断",
+            "ハンカチ"
+          ],
+          "correct": 2,
+          "explanation": "「hiatus」は「隙間・中断」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「heritage」の意味として最も適切なものは？",
-          "choices": ["(文化的)遺産", "借金", "記念碑", "博物館"],
-          "correct": 0,
-          "explanation": "heritageは受け継がれる文化的・歴史的な「遺産」を意味する。",
+          "scenario": "「hibernation」の意味として最も適切なものは？",
+          "choices": [
+            "豚",
+            "ヒロイン",
+            "隙間・中断",
+            "冬眠"
+          ],
+          "correct": 3,
+          "explanation": "「hibernation」は「冬眠」という意味の名詞です。英検2級の必須語彙です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「hiccup」の意味として最も適切なものは？",
+          "choices": [
+            "食料雑貨",
+            "しゃっくり",
+            "危険",
+            "障害物"
+          ],
+          "correct": 1,
+          "explanation": "「hiccup」は「しゃっくり」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
           "scenario": "「hierarchy」の意味として最も適切なものは？",
-          "choices": ["階層制、序列", "平等", "民主主義", "組織図"],
-          "correct": 0,
-          "explanation": "hierarchyは地位や階級による「階層制、上下関係」を意味する。",
+          "choices": [
+            "指針",
+            "一握り・少数",
+            "階層制",
+            "危険"
+          ],
+          "correct": 2,
+          "explanation": "「hierarchy」は「階層制」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「horizon」の意味として最も適切なものは？",
-          "choices": ["地平線、視野", "水平線の反対語", "天候", "距離"],
-          "correct": 0,
-          "explanation": "horizonは「地平線・水平線」、比喩的に「視野、展望」も意味する。broaden one's horizons（視野を広げる）。",
+          "scenario": "「hieroglyph」の意味として最も適切なものは？",
+          "choices": [
+            "高さ",
+            "象形文字",
+            "障害物",
+            "偉大さ"
+          ],
+          "correct": 1,
+          "explanation": "「hieroglyph」は「象形文字」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「household」の意味として最も適切なものは？",
-          "choices": ["世帯、家庭", "家系", "近所", "家賃"],
+          "scenario": "「hike」の意味として最も適切なものは？",
+          "choices": [
+            "ハイキング",
+            "手芸・工芸品",
+            "ヒロイン",
+            "罪・罪悪感"
+          ],
           "correct": 0,
-          "explanation": "householdは同居する「世帯、家族」を意味する。household chores（家事）。",
-          "type": "choice"
-        },
-        {
-          "scenario": "「hygiene」の意味として最も適切なものは？",
-          "choices": ["衛生(状態)", "病気", "医療費", "治療"],
-          "correct": 0,
-          "explanation": "hygieneは清潔を保つ「衛生」を意味する。personal hygiene（個人衛生）。",
+          "explanation": "「hike」は「ハイキング」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 9,
-      "title": "名詞編1-9",
-      "type": "Social & Economic Nouns",
-      "emoji": "🏙️",
-      "subtitle": "英検2級レベルの語彙クイズ！社会・経済に関する名詞をチェック",
+      "title": "名詞編セット9",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 481~490",
       "questions": [
         {
-          "scenario": "「identity」の意味として最も適切なものは？",
-          "choices": ["身元、独自性", "名声", "国籍のみ", "職業"],
+          "scenario": "「hilt」の意味として最も適切なものは？",
+          "choices": [
+            "柄",
+            "生け垣",
+            "ハンカチ",
+            "相続人"
+          ],
           "correct": 0,
-          "explanation": "identityは個人や集団の「身元、独自性」を意味する。identity card（身分証明書）。",
+          "explanation": "「hilt」は「柄」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「immigrant」の意味として最も適切なものは？",
-          "choices": ["(入国する)移民", "旅行者", "難民のみ", "外交官"],
-          "correct": 0,
-          "explanation": "immigrantは他国から移り住んできた「移民」を意味する。出て行く場合はemigrant。",
+          "scenario": "「hind」の意味として最も適切なものは？",
+          "choices": [
+            "散髪",
+            "天国",
+            "メスジカ",
+            "ギルド・同業組合"
+          ],
+          "correct": 2,
+          "explanation": "「hind」は「メスジカ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「impact」の意味として最も適切なものは？",
-          "choices": ["影響、衝撃", "原因", "予測", "結論"],
+          "scenario": "「hindrance」の意味として最も適切なものは？",
+          "choices": [
+            "障害物",
+            "象形文字",
+            "隠者",
+            "庭師"
+          ],
           "correct": 0,
-          "explanation": "impactは物事に与える「大きな影響、衝撃」を意味する。have an impact on〜。",
+          "explanation": "「hindrance」は「障害物」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「incident」の意味として最も適切なものは？",
-          "choices": ["出来事、事件", "結果", "習慣", "法律"],
+          "scenario": "「hinge」の意味として最も適切なものは？",
+          "choices": [
+            "蝶番",
+            "焼き網",
+            "後光",
+            "かかと"
+          ],
           "correct": 0,
-          "explanation": "incidentは特に注目すべき「出来事、事件」を意味する。",
+          "explanation": "「hinge」は「蝶番」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「income」の意味として最も適切なものは？",
-          "choices": ["収入", "支出", "貯蓄額のみ", "税率"],
-          "correct": 0,
-          "explanation": "incomeは仕事などから得る「収入」を意味する。income tax（所得税）。",
+          "scenario": "「hip」の意味として最も適切なものは？",
+          "choices": [
+            "豚",
+            "溝・どぶ",
+            "尻・腰",
+            "躊躇"
+          ],
+          "correct": 2,
+          "explanation": "「hip」は「尻・腰」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「index」の意味として最も適切なものは？",
-          "choices": ["指数、索引", "統計局", "調査方法", "目次のみ"],
+          "scenario": "「hippo」の意味として最も適切なものは？",
+          "choices": [
+            "カバ",
+            "砂・勇気",
+            "格納庫",
+            "案内書・ハンドブック"
+          ],
           "correct": 0,
-          "explanation": "indexは物価「指数」や本の「索引」を意味する。",
+          "explanation": "「hippo」は「カバ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「inflation」の意味として最も適切なものは？",
-          "choices": ["インフレ、物価上昇", "デフレ", "不況", "景気回復"],
-          "correct": 0,
-          "explanation": "inflationは物価が持続的に上昇する「インフレーション」を意味する。",
+          "scenario": "「historian」の意味として最も適切なものは？",
+          "choices": [
+            "指針",
+            "歴史家",
+            "食料雑貨",
+            "一握り・少数"
+          ],
+          "correct": 1,
+          "explanation": "「historian」は「歴史家」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「infrastructure」の意味として最も適切なものは？",
-          "choices": ["インフラ、基盤設備", "建築様式", "人口密度", "国土面積"],
-          "correct": 0,
-          "explanation": "infrastructureは道路や電力網などの「社会基盤、インフラ」を意味する。",
+          "scenario": "「hitch」の意味として最も適切なものは？",
+          "choices": [
+            "庭師",
+            "雌鳥",
+            "強欲・強欲さ",
+            "障害・もつれ"
+          ],
+          "correct": 3,
+          "explanation": "「hitch」は「障害・もつれ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「ingredient」の意味として最も適切なものは？",
-          "choices": ["(料理の)材料、成分", "調理器具", "レシピのみ", "味付け"],
-          "correct": 0,
-          "explanation": "ingredientは料理の「材料」、比喩的に成功の「要素」も意味する。",
+          "scenario": "「hive」の意味として最も適切なものは？",
+          "choices": [
+            "階層制",
+            "でっち上げ・いたずら",
+            "巣箱",
+            "踵"
+          ],
+          "correct": 2,
+          "explanation": "「hive」は「巣箱」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「inhabitant」の意味として最も適切なものは？",
-          "choices": ["住民、居住者", "観光客", "移民のみ", "所有者"],
-          "correct": 0,
-          "explanation": "inhabitantはある地域に住む「住民」を意味する。",
+          "scenario": "「hoard」の意味として最も適切なものは？",
+          "choices": [
+            "手綱",
+            "蓄え・貯蔵",
+            "後光",
+            "砂・勇気"
+          ],
+          "correct": 1,
+          "explanation": "「hoard」は「蓄え・貯蔵」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]
     },
     {
       "id": 10,
-      "title": "名詞編1-10",
-      "type": "Institution & Planning Nouns",
-      "emoji": "🏦",
-      "subtitle": "英検2級レベルの語彙クイズ！制度・計画に関する名詞をチェック",
+      "title": "名詞編セット10",
+      "type": "vocabulary",
+      "emoji": "📝",
+      "subtitle": "英検2級の名詞 491~500",
       "questions": [
         {
-          "scenario": "「initiative」の意味として最も適切なものは？",
-          "choices": ["主導権、新たな取り組み", "結果", "責任のみ", "義務"],
-          "correct": 0,
-          "explanation": "initiativeは物事を「率先して行うこと」や「新たな取り組み」を意味する。take the initiative（率先する）。",
+          "scenario": "「hoax」の意味として最も適切なものは？",
+          "choices": [
+            "グリース・脂",
+            "でっち上げ・いたずら",
+            "蝶番",
+            "総計"
+          ],
+          "correct": 1,
+          "explanation": "「hoax」は「でっち上げ・いたずら」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「injury」の意味として最も適切なものは？",
-          "choices": ["けが、負傷", "病気全般", "疲労", "事故のみ"],
-          "correct": 0,
-          "explanation": "injuryは事故やスポーツなどによる「けが、負傷」を意味する。",
+          "scenario": "「hock」の意味として最も適切なものは？",
+          "choices": [
+            "躊躇",
+            "踵",
+            "ハーブ・薬草",
+            "成長"
+          ],
+          "correct": 1,
+          "explanation": "「hock」は「踵」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「institution」の意味として最も適切なものは？",
-          "choices": ["機関、制度", "建物のみ", "規則", "会員"],
-          "correct": 0,
-          "explanation": "institutionは学校や銀行などの「機関」、社会的な「制度」を意味する。",
+          "scenario": "「hockey」の意味として最も適切なものは？",
+          "choices": [
+            "ニシン",
+            "ホッケー",
+            "カモメ",
+            "恨み"
+          ],
+          "correct": 1,
+          "explanation": "「hockey」は「ホッケー」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「instruction」の意味として最も適切なものは？",
-          "choices": ["指示、説明(書)", "結果", "質問", "許可"],
-          "correct": 0,
-          "explanation": "instructionは物事のやり方を示す「指示、説明」を意味する。複数形instructionsで「取扱説明書」。",
+          "scenario": "「hoe」の意味として最も適切なものは？",
+          "choices": [
+            "体操",
+            "ヒロイン",
+            "格納庫",
+            "クワ"
+          ],
+          "correct": 3,
+          "explanation": "「hoe」は「クワ」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「instrument」の意味として最も適切なものは？",
-          "choices": ["器具、楽器", "部品のみ", "機械の一部のみ", "家具"],
-          "correct": 0,
-          "explanation": "instrumentは精密な「器具」や「楽器」を意味する。musical instrument（楽器）。",
+          "scenario": "「hog」の意味として最も適切なものは？",
+          "choices": [
+            "でっち上げ・いたずら",
+            "成長",
+            "豚",
+            "指針"
+          ],
+          "correct": 2,
+          "explanation": "「hog」は「豚」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「insurance」の意味として最も適切なものは？",
-          "choices": ["保険", "貯蓄", "投資", "年金のみ"],
-          "correct": 0,
-          "explanation": "insuranceは事故や病気に備える「保険」を意味する。health insurance（健康保険）。",
+          "scenario": "「hoist」の意味として最も適切なものは？",
+          "choices": [
+            "木立",
+            "巻き上げ機",
+            "蓄え・貯蔵",
+            "ホッケー"
+          ],
+          "correct": 1,
+          "explanation": "「hoist」は「巻き上げ機」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「intention」の意味として最も適切なものは？",
-          "choices": ["意図、意向", "結果", "方法", "義務"],
-          "correct": 0,
-          "explanation": "intentionは何かをしようとする「意図、つもり」を意味する。",
+          "scenario": "「holder」の意味として最も適切なものは？",
+          "choices": [
+            "手綱",
+            "指針",
+            "支持器・保有者",
+            "先駆者・伝令官"
+          ],
+          "correct": 2,
+          "explanation": "「holder」は「支持器・保有者」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「interval」の意味として最も適切なものは？",
-          "choices": ["間隔、合間", "期間全体", "休日", "距離のみ"],
+          "scenario": "「hollow」の意味として最も適切なものは？",
+          "choices": [
+            "くぼみ・谷",
+            "ヒロイン",
+            "後光",
+            "特別席"
+          ],
           "correct": 0,
-          "explanation": "intervalは時間や空間の「間隔」、劇の「幕間」も意味する。",
+          "explanation": "「hollow」は「くぼみ・谷」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「inventory」の意味として最も適切なものは？",
-          "choices": ["在庫(目録)", "注文", "販売", "広告"],
+          "scenario": "「holocaust」の意味として最も適切なものは？",
+          "choices": [
+            "大虐殺",
+            "裾",
+            "特別席",
+            "ハンカチ"
+          ],
           "correct": 0,
-          "explanation": "inventoryは店や倉庫の「在庫(品)」やその「目録」を意味する。",
+          "explanation": "「holocaust」は「大虐殺」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         },
         {
-          "scenario": "「investment」の意味として最も適切なものは？",
-          "choices": ["投資", "貯金のみ", "借金", "寄付"],
+          "scenario": "「holster」の意味として最も適切なものは？",
+          "choices": [
+            "ホルスター",
+            "本部・本社",
+            "天国",
+            "隠者"
+          ],
           "correct": 0,
-          "explanation": "investmentは利益を見込んで資金を投じる「投資」を意味する。",
+          "explanation": "「holster」は「ホルスター」という意味の名詞です。英検2級の必須語彙です。",
           "type": "choice"
         }
       ]

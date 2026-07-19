@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "熟語編セット1",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1201~1210",
+      "questions": [
+        {
+          "scenario": "「crave for」の意味として最も適切なものは？",
+          "choices": [
+            "区別する",
+            "〜を自覚している・気づいている",
+            "遠ざける",
+            "切望する"
+          ],
+          "correct": 3,
+          "explanation": "「crave for」は「切望する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crawl on」の意味として最も適切なものは？",
+          "choices": [
+            "割り込む",
+            "超える",
+            "削減する",
+            "走る・這う"
+          ],
+          "correct": 3,
+          "explanation": "「crawl on」は「走る・這う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「create from」の意味として最も適切なものは？",
+          "choices": [
+            "創造する",
+            "崩壊する",
+            "王冠を戴かせる",
+            "見積もる"
+          ],
+          "correct": 0,
+          "explanation": "「create from」は「創造する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「credit with」の意味として最も適切なものは？",
+          "choices": [
+            "押しつぶす",
+            "設立する",
+            "強調する",
+            "功績を認める"
+          ],
+          "correct": 3,
+          "explanation": "「credit with」は「功績を認める」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「creep into」の意味として最も適切なものは？",
+          "choices": [
+            "期待する",
+            "目を通す",
+            "忍び込む",
+            "功績を認める"
+          ],
+          "correct": 2,
+          "explanation": "「creep into」は「忍び込む」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「criticize for」の意味として最も適切なものは？",
+          "choices": [
+            "分ける",
+            "批判する",
+            "治療する",
+            "支配する"
+          ],
+          "correct": 1,
+          "explanation": "「criticize for」は「批判する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crouch down」の意味として最も適切なものは？",
+          "choices": [
+            "〜を強く主張する",
+            "稼ぐ",
+            "忍び込む",
+            "しゃがむ"
+          ],
+          "correct": 3,
+          "explanation": "「crouch down」は「しゃがむ」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crowd into」の意味として最も適切なものは？",
+          "choices": [
+            "恐れる",
+            "可能にする",
+            "押し寄せる",
+            "設立する"
+          ],
+          "correct": 2,
+          "explanation": "「crowd into」は「押し寄せる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crown with」の意味として最も適切なものは？",
+          "choices": [
+            "拡大する",
+            "王冠を戴かせる",
+            "〜を自覚している・気づいている",
+            "注意する"
+          ],
+          "correct": 1,
+          "explanation": "「crown with」は「王冠を戴かせる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「crumble into」の意味として最も適切なものは？",
+          "choices": [
+            "評価する",
+            "治療する",
+            "楽しませる",
+            "崩壊する"
+          ],
+          "correct": 3,
+          "explanation": "「crumble into」は「崩壊する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "熟語編セット2",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1211~1220",
+      "questions": [
+        {
+          "scenario": "「crush by」の意味として最も適切なものは？",
+          "choices": [
+            "拡大する",
+            "押しつぶす",
+            "稼ぐ",
+            "爆発する"
+          ],
+          "correct": 1,
+          "explanation": "「crush by」は「押しつぶす」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cry for」の意味として最も適切なものは？",
+          "choices": [
+            "ふりをする",
+            "求める",
+            "拡大する",
+            "遮断する"
+          ],
+          "correct": 1,
+          "explanation": "「cry for」は「求める」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cultivate with」の意味として最も適切なものは？",
+          "choices": [
+            "拡大する",
+            "耕す",
+            "逃げる",
+            "ふりをする"
+          ],
+          "correct": 1,
+          "explanation": "「cultivate with」は「耕す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cure of」の意味として最も適切なものは？",
+          "choices": [
+            "存在する",
+            "治療する",
+            "超える",
+            "異なる"
+          ],
+          "correct": 1,
+          "explanation": "「cure of」は「治療する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curl up」の意味として最も適切なものは？",
+          "choices": [
+            "強調する",
+            "丸まる",
+            "従事する",
+            "解放する"
+          ],
+          "correct": 1,
+          "explanation": "「curl up」は「丸まる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curtail on」の意味として最も適切なものは？",
+          "choices": [
+            "批判する",
+            "ふりをする",
+            "削減する",
+            "〜を強く主張する"
+          ],
+          "correct": 2,
+          "explanation": "「curtail on」は「削減する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「curve into」の意味として最も適切なものは？",
+          "choices": [
+            "治療する",
+            "寄付する",
+            "拡大する",
+            "曲げる"
+          ],
+          "correct": 3,
+          "explanation": "「curve into」は「曲げる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cut down」の意味として最も適切なものは？",
+          "choices": [
+            "爆発する",
+            "耐える",
+            "削減する",
+            "曲げる"
+          ],
+          "correct": 2,
+          "explanation": "「cut down」は「削減する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cut off」の意味として最も適切なものは？",
+          "choices": [
+            "排除する",
+            "爆発する",
+            "遮断する",
+            "当然のことと思う"
+          ],
+          "correct": 2,
+          "explanation": "「cut off」は「遮断する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cut in」の意味として最も適切なものは？",
+          "choices": [
+            "奪う",
+            "さらす",
+            "割り込む",
+            "期待する"
+          ],
+          "correct": 2,
+          "explanation": "「cut in」は「割り込む」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "熟語編セット3",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1221~1230",
+      "questions": [
+        {
+          "scenario": "「deprive of」の意味として最も適切なものは？",
+          "choices": [
+            "奪う",
+            "ふりをする",
+            "楽しませる",
+            "分配する"
+          ],
+          "correct": 0,
+          "explanation": "「deprive of」は「奪う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「derive from」の意味として最も適切なものは？",
+          "choices": [
+            "由来する",
+            "しゃがむ",
+            "多くとも",
+            "除外する"
+          ],
+          "correct": 0,
+          "explanation": "「derive from」は「由来する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「devote to」の意味として最も適切なものは？",
+          "choices": [
+            "耐える",
+            "〜のお返しに",
+            "ひっくり返す",
+            "捧げる"
+          ],
+          "correct": 3,
+          "explanation": "「devote to」は「捧げる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「differ from」の意味として最も適切なものは？",
+          "choices": [
+            "異なる",
+            "分配する",
+            "押し寄せる",
+            "漂う"
+          ],
+          "correct": 0,
+          "explanation": "「differ from」は「異なる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disagree with」の意味として最も適切なものは？",
+          "choices": [
+            "設立する",
+            "意見が異なる",
+            "走る・這う",
+            "逃げる"
+          ],
+          "correct": 1,
+          "explanation": "「disagree with」は「意見が異なる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disappear from」の意味として最も適切なものは？",
+          "choices": [
+            "消える",
+            "爆発する",
+            "疲れ果てさせる",
+            "排除する"
+          ],
+          "correct": 0,
+          "explanation": "「disappear from」は「消える」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「disappoint with」の意味として最も適切なものは？",
+          "choices": [
+            "丸まる",
+            "失望させる",
+            "〜を強く主張する",
+            "片付ける"
+          ],
+          "correct": 1,
+          "explanation": "「disappoint with」は「失望させる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discharge from」の意味として最も適切なものは？",
+          "choices": [
+            "評価する",
+            "解放する",
+            "区別する",
+            "耐える"
+          ],
+          "correct": 1,
+          "explanation": "「discharge from」は「解放する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「discourage from」の意味として最も適切なものは？",
+          "choices": [
+            "曲げる",
+            "落胆させる",
+            "漂う",
+            "拡大する"
+          ],
+          "correct": 1,
+          "explanation": "「discourage from」は「落胆させる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dismiss from」の意味として最も適切なものは？",
+          "choices": [
+            "丸まる",
+            "解雇する",
+            "雇用する",
+            "選出する"
+          ],
+          "correct": 1,
+          "explanation": "「dismiss from」は「解雇する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "熟語編セット4",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1231~1240",
+      "questions": [
+        {
+          "scenario": "「distinguish from」の意味として最も適切なものは？",
+          "choices": [
+            "説明する",
+            "雇用する",
+            "恥ずかしがらせる",
+            "区別する"
+          ],
+          "correct": 3,
+          "explanation": "「distinguish from」は「区別する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「distribute to」の意味として最も適切なものは？",
+          "choices": [
+            "区別する",
+            "楽しむ",
+            "片付ける",
+            "分配する"
+          ],
+          "correct": 3,
+          "explanation": "「distribute to」は「分配する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「divide into」の意味として最も適切なものは？",
+          "choices": [
+            "丸まる",
+            "走る・這う",
+            "分ける",
+            "恐れる"
+          ],
+          "correct": 2,
+          "explanation": "「divide into」は「分ける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dominate over」の意味として最も適切なものは？",
+          "choices": [
+            "探検する",
+            "しゃがむ",
+            "〜のお返しに",
+            "支配する"
+          ],
+          "correct": 3,
+          "explanation": "「dominate over」は「支配する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「donate to」の意味として最も適切なものは？",
+          "choices": [
+            "評価する",
+            "落胆させる",
+            "寄付する",
+            "注意する"
+          ],
+          "correct": 2,
+          "explanation": "「donate to」は「寄付する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「doubt about」の意味として最も適切なものは？",
+          "choices": [
+            "疑う",
+            "由来する",
+            "〜の結果として",
+            "溺れる"
+          ],
+          "correct": 0,
+          "explanation": "「doubt about」は「疑う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drag into」の意味として最も適切なものは？",
+          "choices": [
+            "引きずる",
+            "楽しむ",
+            "当然のことと思う",
+            "強調する"
+          ],
+          "correct": 0,
+          "explanation": "「drag into」は「引きずる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「dread of」の意味として最も適切なものは？",
+          "choices": [
+            "このようにして",
+            "注意する",
+            "恐れる",
+            "可能にする"
+          ],
+          "correct": 2,
+          "explanation": "「dread of」は「恐れる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drift into」の意味として最も適切なものは？",
+          "choices": [
+            "奪う",
+            "溺れる",
+            "漂う",
+            "雇用する"
+          ],
+          "correct": 2,
+          "explanation": "「drift into」は「漂う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「drown in」の意味として最も適切なものは？",
+          "choices": [
+            "落胆させる",
+            "忍び込む",
+            "解雇する",
+            "溺れる"
+          ],
+          "correct": 3,
+          "explanation": "「drown in」は「溺れる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "熟語編セット5",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1241~1250",
+      "questions": [
+        {
+          "scenario": "「earn by」の意味として最も適切なものは？",
+          "choices": [
+            "和らげる",
+            "稼ぐ",
+            "失望させる",
+            "異なる"
+          ],
+          "correct": 1,
+          "explanation": "「earn by」は「稼ぐ」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ease from」の意味として最も適切なものは？",
+          "choices": [
+            "〜する時までに",
+            "創造する",
+            "従事する",
+            "和らげる"
+          ],
+          "correct": 3,
+          "explanation": "「ease from」は「和らげる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「elect as」の意味として最も適切なものは？",
+          "choices": [
+            "ひっくり返す",
+            "搾取する",
+            "選出する",
+            "多くとも"
+          ],
+          "correct": 2,
+          "explanation": "「elect as」は「選出する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「eliminate from」の意味として最も適切なものは？",
+          "choices": [
+            "排除する",
+            "理解する・だます",
+            "疑う",
+            "分配する"
+          ],
+          "correct": 0,
+          "explanation": "「eliminate from」は「排除する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「embarrass by」の意味として最も適切なものは？",
+          "choices": [
+            "消す",
+            "恥ずかしがらせる",
+            "功績を認める",
+            "〜のお返しに"
+          ],
+          "correct": 1,
+          "explanation": "「embarrass by」は「恥ずかしがらせる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emerge from」の意味として最も適切なものは？",
+          "choices": [
+            "意見が異なる",
+            "探検する",
+            "注意する",
+            "現れる"
+          ],
+          "correct": 3,
+          "explanation": "「emerge from」は「現れる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「emphasize on」の意味として最も適切なものは？",
+          "choices": [
+            "疲れ果てさせる",
+            "恐れる",
+            "強調する",
+            "寄付する"
+          ],
+          "correct": 2,
+          "explanation": "「emphasize on」は「強調する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「employ as」の意味として最も適切なものは？",
+          "choices": [
+            "〜を強く主張する",
+            "多くとも",
+            "雇用する",
+            "遮断する"
+          ],
+          "correct": 2,
+          "explanation": "「employ as」は「雇用する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enable to」の意味として最も適切なものは？",
+          "choices": [
+            "〜する時までに",
+            "可能にする",
+            "丸まる",
+            "設立する"
+          ],
+          "correct": 1,
+          "explanation": "「enable to」は「可能にする」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「encounter with」の意味として最も適切なものは？",
+          "choices": [
+            "まず第一に",
+            "遭遇する",
+            "言い訳する",
+            "崩壊する"
+          ],
+          "correct": 1,
+          "explanation": "「encounter with」は「遭遇する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "熟語編セット6",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1251~1260",
+      "questions": [
+        {
+          "scenario": "「encourage to」の意味として最も適切なものは？",
+          "choices": [
+            "評価する",
+            "耐える",
+            "逃げる",
+            "励ます"
+          ],
+          "correct": 3,
+          "explanation": "「encourage to」は「励ます」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「endure through」の意味として最も適切なものは？",
+          "choices": [
+            "存在する",
+            "高める",
+            "耐える",
+            "批判する"
+          ],
+          "correct": 2,
+          "explanation": "「endure through」は「耐える」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「engage in」の意味として最も適切なものは？",
+          "choices": [
+            "疲れ果てさせる",
+            "従事する",
+            "稼ぐ",
+            "延長する"
+          ],
+          "correct": 1,
+          "explanation": "「engage in」は「従事する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enhance by」の意味として最も適切なものは？",
+          "choices": [
+            "高める",
+            "励ます",
+            "削減する",
+            "溺れる"
+          ],
+          "correct": 0,
+          "explanation": "「enhance by」は「高める」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enjoy with」の意味として最も適切なものは？",
+          "choices": [
+            "確実にする",
+            "遠ざける",
+            "楽しむ",
+            "雇用する"
+          ],
+          "correct": 2,
+          "explanation": "「enjoy with」は「楽しむ」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「enlarge by」の意味として最も適切なものは？",
+          "choices": [
+            "従事する",
+            "進化する",
+            "拡大する",
+            "削減する"
+          ],
+          "correct": 2,
+          "explanation": "「enlarge by」は「拡大する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ensure that」の意味として最も適切なものは？",
+          "choices": [
+            "表現する",
+            "引きずる",
+            "溺れる",
+            "確実にする"
+          ],
+          "correct": 3,
+          "explanation": "「ensure that」は「確実にする」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entertain with」の意味として最も適切なものは？",
+          "choices": [
+            "王冠を戴かせる",
+            "失望させる",
+            "溺れる",
+            "楽しませる"
+          ],
+          "correct": 3,
+          "explanation": "「entertain with」は「楽しませる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「entitle to」の意味として最も適切なものは？",
+          "choices": [
+            "支配する",
+            "削減する",
+            "権利を与える",
+            "〜と対照的に"
+          ],
+          "correct": 2,
+          "explanation": "「entitle to」は「権利を与える」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「equip with」の意味として最も適切なものは？",
+          "choices": [
+            "表現する",
+            "権利を与える",
+            "現れる",
+            "装備する"
+          ],
+          "correct": 3,
+          "explanation": "「equip with」は「装備する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "熟語編セット7",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1261~1270",
+      "questions": [
+        {
+          "scenario": "「escape from」の意味として最も適切なものは？",
+          "choices": [
+            "曲げる",
+            "恐れる",
+            "稼ぐ",
+            "逃げる"
+          ],
+          "correct": 3,
+          "explanation": "「escape from」は「逃げる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「establish in」の意味として最も適切なものは？",
+          "choices": [
+            "理解する・だます",
+            "求める",
+            "多くとも",
+            "設立する"
+          ],
+          "correct": 3,
+          "explanation": "「establish in」は「設立する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「estimate at」の意味として最も適切なものは？",
+          "choices": [
+            "ひっくり返す",
+            "楽しませる",
+            "押しつぶす",
+            "見積もる"
+          ],
+          "correct": 3,
+          "explanation": "「estimate at」は「見積もる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「evaluate by」の意味として最も適切なものは？",
+          "choices": [
+            "評価する",
+            "分ける",
+            "分配する",
+            "求める"
+          ],
+          "correct": 0,
+          "explanation": "「evaluate by」は「評価する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「evolve from」の意味として最も適切なものは？",
+          "choices": [
+            "批判する",
+            "搾取する",
+            "楽しむ",
+            "進化する"
+          ],
+          "correct": 3,
+          "explanation": "「evolve from」は「進化する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exceed in」の意味として最も適切なものは？",
+          "choices": [
+            "切望する",
+            "超える",
+            "王冠を戴かせる",
+            "〜の結果として"
+          ],
+          "correct": 1,
+          "explanation": "「exceed in」は「超える」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exchange for」の意味として最も適切なものは？",
+          "choices": [
+            "交換する",
+            "存在する",
+            "〜と対照的に",
+            "実行に移す"
+          ],
+          "correct": 0,
+          "explanation": "「exchange for」は「交換する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exclude from」の意味として最も適切なものは？",
+          "choices": [
+            "言い訳する",
+            "実行に移す",
+            "表現する",
+            "除外する"
+          ],
+          "correct": 3,
+          "explanation": "「exclude from」は「除外する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「excuse for」の意味として最も適切なものは？",
+          "choices": [
+            "言い訳する",
+            "批判する・衰退する",
+            "〜の結果として",
+            "〜を強く主張する"
+          ],
+          "correct": 0,
+          "explanation": "「excuse for」は「言い訳する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exhaust by」の意味として最も適切なものは？",
+          "choices": [
+            "割り込む",
+            "功績を認める",
+            "疲れ果てさせる",
+            "可能にする"
+          ],
+          "correct": 2,
+          "explanation": "「exhaust by」は「疲れ果てさせる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "熟語編セット8",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1271~1280",
+      "questions": [
+        {
+          "scenario": "「exist in」の意味として最も適切なものは？",
+          "choices": [
+            "励ます",
+            "当然のことと思う",
+            "存在する",
+            "異なる"
+          ],
+          "correct": 2,
+          "explanation": "「exist in」は「存在する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expand into」の意味として最も適切なものは？",
+          "choices": [
+            "交換する",
+            "解放する",
+            "拡大する",
+            "疑う"
+          ],
+          "correct": 2,
+          "explanation": "「expand into」は「拡大する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expect from」の意味として最も適切なものは？",
+          "choices": [
+            "期待する",
+            "実行に移す",
+            "搾取する",
+            "分ける"
+          ],
+          "correct": 0,
+          "explanation": "「expect from」は「期待する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explain to」の意味として最も適切なものは？",
+          "choices": [
+            "表現する",
+            "説明する",
+            "由来する",
+            "〜のお返しに"
+          ],
+          "correct": 1,
+          "explanation": "「explain to」は「説明する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explode into」の意味として最も適切なものは？",
+          "choices": [
+            "片付ける",
+            "求める",
+            "爆発する",
+            "言い訳する"
+          ],
+          "correct": 2,
+          "explanation": "「explode into」は「爆発する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「exploit for」の意味として最も適切なものは？",
+          "choices": [
+            "搾取する",
+            "〜と対照的に",
+            "表現する",
+            "曲げる"
+          ],
+          "correct": 0,
+          "explanation": "「exploit for」は「搾取する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「explore for」の意味として最も適切なものは？",
+          "choices": [
+            "遠ざける",
+            "遮断する",
+            "楽しむ",
+            "探検する"
+          ],
+          "correct": 3,
+          "explanation": "「explore for」は「探検する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「expose to」の意味として最も適切なものは？",
+          "choices": [
+            "曲げる",
+            "従事する",
+            "さらす",
+            "捧げる"
+          ],
+          "correct": 2,
+          "explanation": "「expose to」は「さらす」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「express in」の意味として最も適切なものは？",
+          "choices": [
+            "分ける",
+            "忍び込む",
+            "表現する",
+            "評価する"
+          ],
+          "correct": 2,
+          "explanation": "「express in」は「表現する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「extend to」の意味として最も適切なものは？",
+          "choices": [
+            "楽しませる",
+            "批判する",
+            "表現する",
+            "延長する"
+          ],
+          "correct": 3,
+          "explanation": "「extend to」は「延長する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "熟語編セット9",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1281~1290",
+      "questions": [
+        {
+          "scenario": "「extinguish with」の意味として最も適切なものは？",
+          "choices": [
+            "功績を認める",
+            "理解する・だます",
+            "消す",
+            "耕す"
+          ],
+          "correct": 2,
+          "explanation": "「extinguish with」は「消す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「keep away」の意味として最も適切なものは？",
+          "choices": [
+            "支配する",
+            "除外する",
+            "遠ざける",
+            "逃げる"
+          ],
+          "correct": 2,
+          "explanation": "「keep away」は「遠ざける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look out」の意味として最も適切なものは？",
+          "choices": [
+            "耐える",
+            "注意する",
+            "権利を与える",
+            "理解する・だます"
+          ],
+          "correct": 1,
+          "explanation": "「look out」は「注意する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「look through」の意味として最も適切なものは？",
+          "choices": [
+            "進化する",
+            "目を通す",
+            "疑う",
+            "高める"
+          ],
+          "correct": 1,
+          "explanation": "「look through」は「目を通す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「make believe」の意味として最も適切なものは？",
+          "choices": [
+            "楽しませる",
+            "選出する",
+            "寄付する",
+            "ふりをする"
+          ],
+          "correct": 3,
+          "explanation": "「make believe」は「ふりをする」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put away」の意味として最も適切なものは？",
+          "choices": [
+            "片付ける",
+            "説明する",
+            "拡大する",
+            "丸まる"
+          ],
+          "correct": 0,
+          "explanation": "「put away」は「片付ける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「put into practice」の意味として最も適切なものは？",
+          "choices": [
+            "進化する",
+            "実行に移す",
+            "選出する",
+            "励ます"
+          ],
+          "correct": 1,
+          "explanation": "「put into practice」は「実行に移す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「run down」の意味として最も適切なものは？",
+          "choices": [
+            "搾取する",
+            "失望させる",
+            "〜する時までに",
+            "批判する・衰退する"
+          ],
+          "correct": 3,
+          "explanation": "「run down」は「批判する・衰退する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take in」の意味として最も適切なものは？",
+          "choices": [
+            "異なる",
+            "理解する・だます",
+            "ひっくり返す",
+            "意見が異なる"
+          ],
+          "correct": 1,
+          "explanation": "「take in」は「理解する・だます」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「take for granted」の意味として最も適切なものは？",
+          "choices": [
+            "理解する・だます",
+            "〜を強く主張する",
+            "〜と対照的に",
+            "当然のことと思う"
+          ],
+          "correct": 3,
+          "explanation": "「take for granted」は「当然のことと思う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "熟語編セット10",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1291~1300",
+      "questions": [
+        {
+          "scenario": "「turn over」の意味として最も適切なものは？",
+          "choices": [
+            "遮断する",
+            "拡大する",
+            "割り込む",
+            "ひっくり返す"
+          ],
+          "correct": 3,
+          "explanation": "「turn over」は「ひっくり返す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「as a result of」の意味として最も適切なものは？",
+          "choices": [
+            "〜の結果として",
+            "選出する",
+            "交換する",
+            "走る・這う"
+          ],
+          "correct": 0,
+          "explanation": "「as a result of」は「〜の結果として」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in return for」の意味として最も適切なものは？",
+          "choices": [
+            "まず第一に",
+            "溺れる",
+            "〜のお返しに",
+            "設立する"
+          ],
+          "correct": 2,
+          "explanation": "「in return for」は「〜のお返しに」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in contrast to」の意味として最も適切なものは？",
+          "choices": [
+            "多くとも",
+            "〜と対照的に",
+            "見積もる",
+            "寄付する"
+          ],
+          "correct": 1,
+          "explanation": "「in contrast to」は「〜と対照的に」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「be aware of」の意味として最も適切なものは？",
+          "choices": [
+            "削減する",
+            "失望させる",
+            "現れる",
+            "〜を自覚している・気づいている"
+          ],
+          "correct": 3,
+          "explanation": "「be aware of」は「〜を自覚している・気づいている」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「insist on」の意味として最も適切なものは？",
+          "choices": [
+            "爆発する",
+            "ふりをする",
+            "〜を強く主張する",
+            "奪う"
+          ],
+          "correct": 2,
+          "explanation": "「insist on」は「〜を強く主張する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「first of all」の意味として最も適切なものは？",
+          "choices": [
+            "片付ける",
+            "目を通す",
+            "恥ずかしがらせる",
+            "まず第一に"
+          ],
+          "correct": 3,
+          "explanation": "「first of all」は「まず第一に」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「at most」の意味として最も適切なものは？",
+          "choices": [
+            "支配する",
+            "選出する",
+            "当然のことと思う",
+            "多くとも"
+          ],
+          "correct": 3,
+          "explanation": "「at most」は「多くとも」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「in this way」の意味として最も適切なものは？",
+          "choices": [
+            "切望する",
+            "溺れる",
+            "理解する・だます",
+            "このようにして"
+          ],
+          "correct": 3,
+          "explanation": "「in this way」は「このようにして」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「by the time」の意味として最も適切なものは？",
+          "choices": [
+            "現れる",
+            "〜する時までに",
+            "〜を自覚している・気づいている",
+            "分ける"
+          ],
+          "correct": 1,
+          "explanation": "「by the time」は「〜する時までに」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}

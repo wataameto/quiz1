@@ -1,0 +1,1298 @@
+{
+  "id": "eiken2",
+  "level": 1,
+  "label": "📘 英検2級 単語・熟語",
+  "description": "実用英語技能検定2級レベルの重要単語・熟語クイズ。動詞・名詞・形容詞・副詞・会話表現・重要熟語の150セット（1500語）で高校卒業程度の頻出語彙を反復練習できる",
+  "tests": [
+    {
+      "id": 1,
+      "title": "熟語編セット1",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1101~1110",
+      "questions": [
+        {
+          "scenario": "「abide by」の意味として最も適切なものは？",
+          "choices": [
+            "闘う",
+            "名乗り出る",
+            "禁止する",
+            "従う・守る"
+          ],
+          "correct": 3,
+          "explanation": "「abide by」は「従う・守る」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「abstain from」の意味として最も適切なものは？",
+          "choices": [
+            "買い占める",
+            "控える・棄権する",
+            "貢献する",
+            "〜のせいにする"
+          ],
+          "correct": 1,
+          "explanation": "「abstain from」は「控える・棄権する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「account for」の意味として最も適切なものは？",
+          "choices": [
+            "比較する",
+            "説明する・占める",
+            "〜にある",
+            "頼りにする"
+          ],
+          "correct": 1,
+          "explanation": "「account for」は「説明する・占める」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adapt to」の意味として最も適切なものは？",
+          "choices": [
+            "適応する",
+            "続ける",
+            "補償する",
+            "含む"
+          ],
+          "correct": 0,
+          "explanation": "「adapt to」は「適応する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「adhere to」の意味として最も適切なものは？",
+          "choices": [
+            "名乗り出る",
+            "直面させる",
+            "固執する・付着する",
+            "続ける"
+          ],
+          "correct": 2,
+          "explanation": "「adhere to」は「固執する・付着する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aim at」の意味として最も適切なものは？",
+          "choices": [
+            "目指す",
+            "契約する",
+            "含む",
+            "ほのめかす・言及する"
+          ],
+          "correct": 0,
+          "explanation": "「aim at」は「目指す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「allude to」の意味として最も適切なものは？",
+          "choices": [
+            "ほのめかす・言及する",
+            "共謀する",
+            "矛盾する",
+            "覆う"
+          ],
+          "correct": 0,
+          "explanation": "「allude to」は「ほのめかす・言及する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「amount to」の意味として最も適切なものは？",
+          "choices": [
+            "総計〜になる",
+            "期待する・交渉する",
+            "熱望する",
+            "そらす"
+          ],
+          "correct": 0,
+          "explanation": "「amount to」は「総計〜になる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「apologize to」の意味として最も適切なものは？",
+          "choices": [
+            "謝罪する",
+            "集中する",
+            "授ける",
+            "連絡する"
+          ],
+          "correct": 0,
+          "explanation": "「apologize to」は「謝罪する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「appeal to」の意味として最も適切なものは？",
+          "choices": [
+            "従う・守る",
+            "比較する",
+            "訴える・引きつける",
+            "貢献する"
+          ],
+          "correct": 2,
+          "explanation": "「appeal to」は「訴える・引きつける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "熟語編セット2",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1111~1120",
+      "questions": [
+        {
+          "scenario": "「approve of」の意味として最も適切なものは？",
+          "choices": [
+            "明らかになる・出版される",
+            "承認する",
+            "統合する",
+            "信頼して打ち明ける"
+          ],
+          "correct": 1,
+          "explanation": "「approve of」は「承認する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「arrive at」の意味として最も適切なものは？",
+          "choices": [
+            "到着する・達する",
+            "突然〜し出す",
+            "買い占める",
+            "謝罪する"
+          ],
+          "correct": 0,
+          "explanation": "「arrive at」は「到着する・達する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「aspire to」の意味として最も適切なものは？",
+          "choices": [
+            "集中する",
+            "調整する",
+            "満足する",
+            "熱望する"
+          ],
+          "correct": 3,
+          "explanation": "「aspire to」は「熱望する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「associate with」の意味として最も適切なものは？",
+          "choices": [
+            "不慢を言う",
+            "〜に基づく",
+            "関連づける",
+            "祝う"
+          ],
+          "correct": 2,
+          "explanation": "「associate with」は「関連づける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「assure of」の意味として最も適切なものは？",
+          "choices": [
+            "妥協する",
+            "補償する",
+            "対照する",
+            "確信させる"
+          ],
+          "correct": 3,
+          "explanation": "「assure of」は「確信させる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「atone for」の意味として最も適切なものは？",
+          "choices": [
+            "謝罪する",
+            "競争する",
+            "しがみつく",
+            "償う"
+          ],
+          "correct": 3,
+          "explanation": "「atone for」は「償う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「attribute to」の意味として最も適切なものは？",
+          "choices": [
+            "〜のせいにする",
+            "信頼して打ち明ける",
+            "矛盾する",
+            "承認する"
+          ],
+          "correct": 0,
+          "explanation": "「attribute to」は「〜のせいにする」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「avail of」の意味として最も適切なものは？",
+          "choices": [
+            "信頼する・存在を信じる",
+            "築き上げる",
+            "利用する",
+            "白状する"
+          ],
+          "correct": 2,
+          "explanation": "「avail of」は「利用する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「avert from」の意味として最も適切なものは？",
+          "choices": [
+            "迎合する・まかなう",
+            "そらす",
+            "協同する",
+            "信頼して打ち明ける"
+          ],
+          "correct": 1,
+          "explanation": "「avert from」は「そらす」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「ban from」の意味として最も適切なものは？",
+          "choices": [
+            "直面させる",
+            "禁止する",
+            "妥協する",
+            "屈する"
+          ],
+          "correct": 1,
+          "explanation": "「ban from」は「禁止する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "熟語編セット3",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1121~1130",
+      "questions": [
+        {
+          "scenario": "「bargain for」の意味として最も適切なものは？",
+          "choices": [
+            "期待する・交渉する",
+            "熟考する",
+            "支配する",
+            "衝突する"
+          ],
+          "correct": 0,
+          "explanation": "「bargain for」は「期待する・交渉する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「base on」の意味として最も適切なものは？",
+          "choices": [
+            "確信させる",
+            "許す",
+            "〜に基づく",
+            "屈する"
+          ],
+          "correct": 2,
+          "explanation": "「base on」は「〜に基づく」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bear with」の意味として最も適切なものは？",
+          "choices": [
+            "一致する",
+            "耐える",
+            "利益を得る",
+            "頼りにする"
+          ],
+          "correct": 1,
+          "explanation": "「bear with」は「耐える」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beg for」の意味として最も適切なものは？",
+          "choices": [
+            "直面させる",
+            "支配する",
+            "一致する",
+            "求める"
+          ],
+          "correct": 3,
+          "explanation": "「beg for」は「求める」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「believe in」の意味として最も適切なものは？",
+          "choices": [
+            "承認する",
+            "変換する",
+            "買い占める",
+            "信頼する・存在を信じる"
+          ],
+          "correct": 3,
+          "explanation": "「believe in」は「信頼する・存在を信じる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「benefit from」の意味として最も適切なものは？",
+          "choices": [
+            "到着する・達する",
+            "利益を得る",
+            "固執する・付着する",
+            "買い占める"
+          ],
+          "correct": 1,
+          "explanation": "「benefit from」は「利益を得る」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bestow on」の意味として最も適切なものは？",
+          "choices": [
+            "明らかになる・出版される",
+            "授ける",
+            "従う・守る",
+            "耐える"
+          ],
+          "correct": 1,
+          "explanation": "「bestow on」は「授ける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「beware of」の意味として最も適切なものは？",
+          "choices": [
+            "直面させる",
+            "ほのめかす・言及する",
+            "相談する",
+            "注意する"
+          ],
+          "correct": 3,
+          "explanation": "「beware of」は「注意する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「bow to」の意味として最も適切なものは？",
+          "choices": [
+            "償う",
+            "一致する",
+            "対抗する",
+            "屈する"
+          ],
+          "correct": 3,
+          "explanation": "「bow to」は「屈する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「build up」の意味として最も適切なものは？",
+          "choices": [
+            "謝罪する",
+            "築き上げる",
+            "買い占める",
+            "固執する・付着する"
+          ],
+          "correct": 1,
+          "explanation": "「build up」は「築き上げる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "熟語編セット4",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1131~1140",
+      "questions": [
+        {
+          "scenario": "「burst into」の意味として最も適切なものは？",
+          "choices": [
+            "妥協する",
+            "突然〜し出す",
+            "適応する",
+            "信頼する・存在を信じる"
+          ],
+          "correct": 1,
+          "explanation": "「burst into」は「突然〜し出す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「buy up」の意味として最も適切なものは？",
+          "choices": [
+            "満足する",
+            "閉鎖する",
+            "確認する",
+            "買い占める"
+          ],
+          "correct": 3,
+          "explanation": "「buy up」は「買い占める」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「call on」の意味として最も適切なものは？",
+          "choices": [
+            "迎合する・まかなう",
+            "調整する",
+            "訪問する",
+            "名乗り出る"
+          ],
+          "correct": 2,
+          "explanation": "「call on」は「訪問する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cast aside」の意味として最も適切なものは？",
+          "choices": [
+            "対照する",
+            "捨てる",
+            "集中する",
+            "償う"
+          ],
+          "correct": 1,
+          "explanation": "「cast aside」は「捨てる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cater to」の意味として最も適切なものは？",
+          "choices": [
+            "迎合する・まかなう",
+            "一致する",
+            "たとえる",
+            "対照する"
+          ],
+          "correct": 0,
+          "explanation": "「cater to」は「迎合する・まかなう」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cease from」の意味として最も適切なものは？",
+          "choices": [
+            "たとえる",
+            "やめる",
+            "閉鎖する",
+            "同意する"
+          ],
+          "correct": 1,
+          "explanation": "「cease from」は「やめる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cling to」の意味として最も適切なものは？",
+          "choices": [
+            "しがみつく",
+            "従う",
+            "矛盾する",
+            "つなぐ"
+          ],
+          "correct": 0,
+          "explanation": "「cling to」は「しがみつく」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「close down」の意味として最も適切なものは？",
+          "choices": [
+            "閉鎖する",
+            "信頼する・存在を信じる",
+            "従う・守る",
+            "〜に基づく"
+          ],
+          "correct": 0,
+          "explanation": "「close down」は「閉鎖する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coincide with」の意味として最も適切なものは？",
+          "choices": [
+            "続ける",
+            "一致する",
+            "つなぐ",
+            "対立する"
+          ],
+          "correct": 1,
+          "explanation": "「coincide with」は「一致する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「collaborate with」の意味として最も適切なものは？",
+          "choices": [
+            "有罪を宣告する",
+            "協同する",
+            "矛盾する",
+            "しがみつく"
+          ],
+          "correct": 1,
+          "explanation": "「collaborate with」は「協同する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "熟語編セット5",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1141~1150",
+      "questions": [
+        {
+          "scenario": "「collide with」の意味として最も適切なものは？",
+          "choices": [
+            "名乗り出る",
+            "承認する",
+            "耐える",
+            "衝突する"
+          ],
+          "correct": 3,
+          "explanation": "「collide with」は「衝突する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come forward」の意味として最も適切なものは？",
+          "choices": [
+            "協同する",
+            "許す",
+            "頼りにする",
+            "名乗り出る"
+          ],
+          "correct": 3,
+          "explanation": "「come forward」は「名乗り出る」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「come out」の意味として最も適切なものは？",
+          "choices": [
+            "明らかになる・出版される",
+            "白状する",
+            "関連づける",
+            "対抗する"
+          ],
+          "correct": 0,
+          "explanation": "「come out」は「明らかになる・出版される」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comment on」の意味として最も適切なものは？",
+          "choices": [
+            "ほのめかす・言及する",
+            "相談する",
+            "論評する",
+            "謝罪する"
+          ],
+          "correct": 2,
+          "explanation": "「comment on」は「論評する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compare to」の意味として最も適切なものは？",
+          "choices": [
+            "そらす",
+            "共謀する",
+            "目指す",
+            "たとえる"
+          ],
+          "correct": 3,
+          "explanation": "「compare to」は「たとえる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compare with」の意味として最も適切なものは？",
+          "choices": [
+            "統合する",
+            "確認する",
+            "比較する",
+            "適応する"
+          ],
+          "correct": 2,
+          "explanation": "「compare with」は「比較する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compensate for」の意味として最も適切なものは？",
+          "choices": [
+            "固執する・付着する",
+            "しがみつく",
+            "対立する",
+            "補償する"
+          ],
+          "correct": 3,
+          "explanation": "「compensate for」は「補償する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compete with」の意味として最も適切なものは？",
+          "choices": [
+            "競争する",
+            "〜から結論を出す",
+            "集中する",
+            "闘う"
+          ],
+          "correct": 0,
+          "explanation": "「compete with」は「競争する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「complain of」の意味として最も適切なものは？",
+          "choices": [
+            "〜にある",
+            "しがみつく",
+            "不慢を言う",
+            "屈する"
+          ],
+          "correct": 2,
+          "explanation": "「complain of」は「不慢を言う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「comply with」の意味として最も適切なものは？",
+          "choices": [
+            "関係する",
+            "従う",
+            "到着する・達する",
+            "一致する"
+          ],
+          "correct": 1,
+          "explanation": "「comply with」は「従う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "熟語編セット6",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1151~1160",
+      "questions": [
+        {
+          "scenario": "「compose of」の意味として最も適切なものは？",
+          "choices": [
+            "〜から構成される",
+            "信頼する・存在を信じる",
+            "一致する",
+            "従う"
+          ],
+          "correct": 0,
+          "explanation": "「compose of」は「〜から構成される」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「compromise on」の意味として最も適切なものは？",
+          "choices": [
+            "支配する",
+            "同意する",
+            "消費する",
+            "妥協する"
+          ],
+          "correct": 3,
+          "explanation": "「compromise on」は「妥協する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concentrate on」の意味として最も適切なものは？",
+          "choices": [
+            "従う・守る",
+            "明らかになる・出版される",
+            "信頼する・存在を信じる",
+            "集中する"
+          ],
+          "correct": 3,
+          "explanation": "「concentrate on」は「集中する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「concern with」の意味として最も適切なものは？",
+          "choices": [
+            "祝う",
+            "関係する",
+            "競争する",
+            "含む"
+          ],
+          "correct": 1,
+          "explanation": "「concern with」は「関係する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conclude from」の意味として最も適切なものは？",
+          "choices": [
+            "〜から結論を出す",
+            "従う",
+            "捨てる",
+            "授ける"
+          ],
+          "correct": 0,
+          "explanation": "「conclude from」は「〜から結論を出す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「condone for」の意味として最も適切なものは？",
+          "choices": [
+            "変換する",
+            "突然〜し出す",
+            "許す",
+            "利益を得る"
+          ],
+          "correct": 2,
+          "explanation": "「condone for」は「許す」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confer with」の意味として最も適切なものは？",
+          "choices": [
+            "調整する",
+            "変換する",
+            "一致する",
+            "相談する"
+          ],
+          "correct": 3,
+          "explanation": "「confer with」は「相談する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confess to」の意味として最も適切なものは？",
+          "choices": [
+            "白状する",
+            "会話する",
+            "訪問する",
+            "〜から構成される"
+          ],
+          "correct": 0,
+          "explanation": "「confess to」は「白状する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confide in」の意味として最も適切なものは？",
+          "choices": [
+            "期待する・交渉する",
+            "信頼して打ち明ける",
+            "利益を得る",
+            "授ける"
+          ],
+          "correct": 1,
+          "explanation": "「confide in」は「信頼して打ち明ける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confine to」の意味として最も適切なものは？",
+          "choices": [
+            "集中する",
+            "控える・棄権する",
+            "制限する",
+            "伝える"
+          ],
+          "correct": 2,
+          "explanation": "「confine to」は「制限する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "熟語編セット7",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1161~1170",
+      "questions": [
+        {
+          "scenario": "「confirm with」の意味として最も適切なものは？",
+          "choices": [
+            "確認する",
+            "許す",
+            "承認する",
+            "迎合する・まかなう"
+          ],
+          "correct": 0,
+          "explanation": "「confirm with」は「確認する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conflict with」の意味として最も適切なものは？",
+          "choices": [
+            "対抗する",
+            "対立する",
+            "償う",
+            "関係する"
+          ],
+          "correct": 1,
+          "explanation": "「conflict with」は「対立する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「conform to」の意味として最も適切なものは？",
+          "choices": [
+            "熱望する",
+            "従う",
+            "訴える・引きつける",
+            "買い占める"
+          ],
+          "correct": 1,
+          "explanation": "「conform to」は「従う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「confront with」の意味として最も適切なものは？",
+          "choices": [
+            "対照する",
+            "屈する",
+            "従う・守る",
+            "直面させる"
+          ],
+          "correct": 3,
+          "explanation": "「confront with」は「直面させる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「congratulate on」の意味として最も適切なものは？",
+          "choices": [
+            "買い占める",
+            "祝う",
+            "利益を得る",
+            "一致する"
+          ],
+          "correct": 1,
+          "explanation": "「congratulate on」は「祝う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「connect to」の意味として最も適切なものは？",
+          "choices": [
+            "変換する",
+            "熟考する",
+            "確認する",
+            "つなぐ"
+          ],
+          "correct": 3,
+          "explanation": "「connect to」は「つなぐ」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consent to」の意味として最も適切なものは？",
+          "choices": [
+            "謝罪する",
+            "変換する",
+            "同意する",
+            "確認する"
+          ],
+          "correct": 2,
+          "explanation": "「consent to」は「同意する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consist in」の意味として最も適切なものは？",
+          "choices": [
+            "制限する",
+            "禁止する",
+            "〜にある",
+            "〜に基づく"
+          ],
+          "correct": 2,
+          "explanation": "「consist in」は「〜にある」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「console for」の意味として最も適切なものは？",
+          "choices": [
+            "慰める",
+            "相談する",
+            "確信させる",
+            "論評する"
+          ],
+          "correct": 0,
+          "explanation": "「console for」は「慰める」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consolidate with」の意味として最も適切なものは？",
+          "choices": [
+            "統合する",
+            "変換する",
+            "不慢を言う",
+            "求める"
+          ],
+          "correct": 0,
+          "explanation": "「consolidate with」は「統合する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "熟語編セット8",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1171~1180",
+      "questions": [
+        {
+          "scenario": "「conspire with」の意味として最も適切なものは？",
+          "choices": [
+            "変換する",
+            "共謀する",
+            "含む",
+            "従う"
+          ],
+          "correct": 1,
+          "explanation": "「conspire with」は「共謀する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「constitute of」の意味として最も適切なものは？",
+          "choices": [
+            "〜から構成される",
+            "迎合する・まかなう",
+            "閉鎖する",
+            "連絡する"
+          ],
+          "correct": 0,
+          "explanation": "「constitute of」は「〜から構成される」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consult with」の意味として最も適切なものは？",
+          "choices": [
+            "連絡する",
+            "求める",
+            "相談する",
+            "補償する"
+          ],
+          "correct": 2,
+          "explanation": "「consult with」は「相談する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「consume by」の意味として最も適切なものは？",
+          "choices": [
+            "築き上げる",
+            "消費する",
+            "相談する",
+            "しがみつく"
+          ],
+          "correct": 1,
+          "explanation": "「consume by」は「消費する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contact with」の意味として最も適切なものは？",
+          "choices": [
+            "連絡する",
+            "固執する・付着する",
+            "つなぐ",
+            "到着する・達する"
+          ],
+          "correct": 0,
+          "explanation": "「contact with」は「連絡する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contain in」の意味として最も適切なものは？",
+          "choices": [
+            "しがみつく",
+            "直面させる",
+            "含む",
+            "統合する"
+          ],
+          "correct": 2,
+          "explanation": "「contain in」は「含む」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contaminate with」の意味として最も適切なものは？",
+          "choices": [
+            "求める",
+            "続ける",
+            "授ける",
+            "汚染する"
+          ],
+          "correct": 3,
+          "explanation": "「contaminate with」は「汚染する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contemplate on」の意味として最も適切なものは？",
+          "choices": [
+            "熟考する",
+            "買い占める",
+            "信頼して打ち明ける",
+            "白状する"
+          ],
+          "correct": 0,
+          "explanation": "「contemplate on」は「熟考する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contend with」の意味として最も適切なものは？",
+          "choices": [
+            "貢献する",
+            "闘う",
+            "適応する",
+            "汚染する"
+          ],
+          "correct": 1,
+          "explanation": "「contend with」は「闘う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「content with」の意味として最も適切なものは？",
+          "choices": [
+            "しがみつく",
+            "一致する",
+            "信頼して打ち明ける",
+            "満足する"
+          ],
+          "correct": 3,
+          "explanation": "「content with」は「満足する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "熟語編セット9",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1181~1190",
+      "questions": [
+        {
+          "scenario": "「continue with」の意味として最も適切なものは？",
+          "choices": [
+            "召集する",
+            "突然〜し出す",
+            "白状する",
+            "続ける"
+          ],
+          "correct": 3,
+          "explanation": "「continue with」は「続ける」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contract with」の意味として最も適切なものは？",
+          "choices": [
+            "買い占める",
+            "契約する",
+            "同意する",
+            "直面させる"
+          ],
+          "correct": 1,
+          "explanation": "「contract with」は「契約する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contradict with」の意味として最も適切なものは？",
+          "choices": [
+            "訴える・引きつける",
+            "矛盾する",
+            "関係する",
+            "しがみつく"
+          ],
+          "correct": 1,
+          "explanation": "「contradict with」は「矛盾する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contrast with」の意味として最も適切なものは？",
+          "choices": [
+            "ほのめかす・言及する",
+            "承認する",
+            "伝える",
+            "対照する"
+          ],
+          "correct": 3,
+          "explanation": "「contrast with」は「対照する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「contribute to」の意味として最も適切なものは？",
+          "choices": [
+            "求める",
+            "貢献する",
+            "伝える",
+            "文通する・一致する"
+          ],
+          "correct": 1,
+          "explanation": "「contribute to」は「貢献する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「control over」の意味として最も適切なものは？",
+          "choices": [
+            "伝える",
+            "文通する・一致する",
+            "利益を得る",
+            "支配する"
+          ],
+          "correct": 3,
+          "explanation": "「control over」は「支配する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convene at」の意味として最も適切なものは？",
+          "choices": [
+            "妥協する",
+            "召集する",
+            "従う",
+            "注意する"
+          ],
+          "correct": 1,
+          "explanation": "「convene at」は「召集する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「converge on」の意味として最も適切なものは？",
+          "choices": [
+            "覆う",
+            "集中する",
+            "妥協する",
+            "突然〜し出す"
+          ],
+          "correct": 1,
+          "explanation": "「converge on」は「集中する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「converse with」の意味として最も適切なものは？",
+          "choices": [
+            "授ける",
+            "対抗する",
+            "会話する",
+            "禁止する"
+          ],
+          "correct": 2,
+          "explanation": "「converse with」は「会話する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convert into」の意味として最も適切なものは？",
+          "choices": [
+            "召集する",
+            "〜のせいにする",
+            "変換する",
+            "信頼して打ち明ける"
+          ],
+          "correct": 2,
+          "explanation": "「convert into」は「変換する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "熟語編セット10",
+      "type": "vocabulary",
+      "emoji": "🔗",
+      "subtitle": "英検2級の重要熟語 1191~1200",
+      "questions": [
+        {
+          "scenario": "「convey to」の意味として最も適切なものは？",
+          "choices": [
+            "伝える",
+            "信頼して打ち明ける",
+            "消費する",
+            "〜に基づく"
+          ],
+          "correct": 0,
+          "explanation": "「convey to」は「伝える」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convict of」の意味として最も適切なものは？",
+          "choices": [
+            "〜のせいにする",
+            "有罪を宣告する",
+            "〜から結論を出す",
+            "固執する・付着する"
+          ],
+          "correct": 1,
+          "explanation": "「convict of」は「有罪を宣告する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「convince of」の意味として最も適切なものは？",
+          "choices": [
+            "関連づける",
+            "求める",
+            "関係する",
+            "確信させる"
+          ],
+          "correct": 3,
+          "explanation": "「convince of」は「確信させる」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cooperate with」の意味として最も適切なものは？",
+          "choices": [
+            "期待する・交渉する",
+            "確認する",
+            "〜から結論を出す",
+            "協力する"
+          ],
+          "correct": 3,
+          "explanation": "「cooperate with」は「協力する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「coordinate with」の意味として最も適切なものは？",
+          "choices": [
+            "協力する",
+            "調整する",
+            "集中する",
+            "名乗り出る"
+          ],
+          "correct": 1,
+          "explanation": "「coordinate with」は「調整する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「correspond to」の意味として最も適切なものは？",
+          "choices": [
+            "一致する",
+            "確認する",
+            "説明する・占める",
+            "買い占める"
+          ],
+          "correct": 0,
+          "explanation": "「correspond to」は「一致する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「correspond with」の意味として最も適切なものは？",
+          "choices": [
+            "〜にある",
+            "文通する・一致する",
+            "妥協する",
+            "祝う"
+          ],
+          "correct": 1,
+          "explanation": "「correspond with」は「文通する・一致する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「count on」の意味として最も適切なものは？",
+          "choices": [
+            "関連づける",
+            "頼りにする",
+            "対立する",
+            "買い占める"
+          ],
+          "correct": 1,
+          "explanation": "「count on」は「頼りにする」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「counter with」の意味として最も適切なものは？",
+          "choices": [
+            "関連づける",
+            "突然〜し出す",
+            "築き上げる",
+            "対抗する"
+          ],
+          "correct": 3,
+          "explanation": "「counter with」は「対抗する」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        },
+        {
+          "scenario": "「cover with」の意味として最も適切なものは？",
+          "choices": [
+            "覆う",
+            "確信させる",
+            "突然〜し出す",
+            "耐える"
+          ],
+          "correct": 0,
+          "explanation": "「cover with」は「覆う」という意味の熟語です。英検2級の重要表現です。",
+          "type": "choice"
+        }
+      ]
+    }
+  ]
+}
