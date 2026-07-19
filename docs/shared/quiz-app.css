@@ -115,6 +115,7 @@
     .quiz-score-btn:hover { background: #fff5f5; transform: translateY(-1px); }
     .quiz-title-wrap h2 { font-size: 1.2rem; font-weight: 800; color: #2d3748; }
     .quiz-title-wrap p { font-size: 0.8rem; color: #718096; }
+    .quiz-part-label { font-size: 0.72rem !important; font-weight: 700; color: #667eea !important; margin-bottom: 2px; }
     .progress-wrap { margin-bottom: 15px; }
     .progress-top { display: flex; justify-content: space-between; font-size: 0.82rem; color: #718096; margin-bottom: 6px; }
     .progress-bar-bg { background: #edf2f7; border-radius: 99px; height: 10px; overflow: hidden; }

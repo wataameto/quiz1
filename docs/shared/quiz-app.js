@@ -1234,6 +1234,7 @@ function renderQuestion() {
   const isText = isTextQuestion(q); // 記述式問題判定
   const pct = Math.round((currentQ / total) * 100);
 
+  document.getElementById('quiz-part-label').textContent = getPartLabel(quizData[currentLevel], currentLevel);
   document.getElementById('quiz-title').textContent    = currentTest.title;
   document.getElementById('quiz-subtitle').textContent = currentTest.subtitle;
   document.getElementById('progress-bar').style.width  = pct + '%';
