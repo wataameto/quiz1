@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "実戦編レッスン1",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1401~1410",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "実戦編レッスン2",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1411~1420",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "実戦編レッスン3",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1421~1430",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "実戦編レッスン4",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1431~1440",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "実戦編レッスン5",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1441~1450",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "実戦編レッスン6",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1451~1460",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "実戦編レッスン7",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1461~1470",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "実戦編レッスン8",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1471~1480",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "実戦編レッスン9",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1481~1490",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "実戦編レッスン10",
-      "type": "vocabulary",
       "emoji": "🏆",
       "subtitle": "実戦語彙 1491~1500",
       "questions": [

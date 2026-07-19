@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "名詞編⑤：健康・医療に関わる名詞をチェック",
-      "type": "Nouns 5",
       "emoji": "🏥",
       "subtitle": "健康・医療に関わる名詞をチェック",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "名詞編⑥：科学・テクノロジー分野の名詞",
-      "type": "Nouns 6",
       "emoji": "🎨",
       "subtitle": "科学・テクノロジー分野の名詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編⑦：ビジネス・経済で使われる名詞",
-      "type": "Nouns 7",
       "emoji": "🏙️",
       "subtitle": "ビジネス・経済で使われる名詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑧：芸術・文化・娯楽に関する名詞",
-      "type": "Nouns 8",
       "emoji": "📚",
       "subtitle": "芸術・文化・娯楽に関する名詞",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編⑨：オフィスや職場でよく使う名詞",
-      "type": "Nouns 9",
       "emoji": "🧑‍🤝‍🧑",
       "subtitle": "オフィスや職場でよく使う名詞",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "名詞編⑩：社会制度や生活に関わる名詞",
-      "type": "Nouns 10",
       "emoji": "🌆",
       "subtitle": "社会制度や生活に関わる名詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "名詞編⑪：人間関係・社会的属性を表す名詞",
-      "type": "Nouns 11",
       "emoji": "🏛️",
       "subtitle": "人間関係・社会的属性を表す名詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "名詞編⑫：大学生活や都市に関する名詞",
-      "type": "Nouns 12",
       "emoji": "🗺️",
       "subtitle": "大学生活や都市に関する名詞",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "名詞編⑬：重要名詞の総復習",
-      "type": "Nouns 13",
       "emoji": "👥",
       "subtitle": "総仕上げ：重要名詞の総復習",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "名詞・形容詞ミックス：物や場所と性質を表す言葉",
-      "type": "Nouns & Adjectives Mix",
       "emoji": "🔀",
       "subtitle": "名詞と形容詞が混在する総合レッスン",
       "questions": [

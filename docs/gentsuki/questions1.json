@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "🚦 標識・信号",
-      "type": "Signs and Signals",
       "emoji": "🚦",
       "subtitle": "原付学科試験レベルの○×問題！標識・信号編",
       "questions": [
@@ -85,7 +84,6 @@
     {
       "id": 2,
       "title": "🛣️ 通行方法・交通ルール",
-      "type": "Traffic Rules",
       "emoji": "🛣️",
       "subtitle": "原付学科試験レベルの○×問題！通行方法・交通ルール編",
       "questions": [
@@ -164,7 +162,6 @@
     {
       "id": 3,
       "title": "🛵 原付特有のルール",
-      "type": "Moped Specific Rules",
       "emoji": "🛵",
       "subtitle": "原付学科試験レベルの○×問題！原付特有のルール編",
       "questions": [
@@ -243,7 +240,6 @@
     {
       "id": 4,
       "title": "🔧 安全運転・整備",
-      "type": "Safe Driving and Maintenance",
       "emoji": "🔧",
       "subtitle": "原付学科試験レベルの○×問題！安全運転・整備編",
       "questions": [

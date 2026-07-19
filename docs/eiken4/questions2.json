@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編③：心・感覚",
-      "type": "Basic Verbs 3",
       "emoji": "🧠",
       "subtitle": "感情や感覚、認知を表す動詞",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編④：社会・日常動作",
-      "type": "Basic Verbs 4",
       "emoji": "🛎️",
       "subtitle": "日常生活や対人コミュニケーションの動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編④：学問・仕事関係",
-      "type": "Nouns: Study & Work",
       "emoji": "🧑‍🔬",
       "subtitle": "学校の教科や職業を表す名詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑤：体・健康・医療",
-      "type": "Nouns: Body & Health",
       "emoji": "💊",
       "subtitle": "健康や病気、体に関する名詞",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編⑥：イベント・社会生活",
-      "type": "Nouns: Events & Society",
       "emoji": "🎪",
       "subtitle": "行事や社会に関するさまざまな名詞",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "形容詞編③：社会・範囲",
-      "type": "Adjectives 3",
       "emoji": "🗺️",
       "subtitle": "範囲や社会的な位置づけを表す形容詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "形容詞編④：評価・感情",
-      "type": "Adjectives 4",
       "emoji": "🎭",
       "subtitle": "感情や状況を詳しく表す形容詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "副詞・前置詞編②",
-      "type": "Adverbs & Prepositions 2",
       "emoji": "📍",
       "subtitle": "時間や場所の限定を示す言葉",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "数量・グループ・単位",
-      "type": "Quantity & Units",
       "emoji": "📊",
       "subtitle": "数やまとまり、単位を表す名詞",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "会話表現・重要熟語編②",
-      "type": "Everyday Phrases 2",
       "emoji": "🗣️",
       "subtitle": "前置詞を伴う重要な動詞・形容詞熟語",
       "questions": [

@@ -4,8 +4,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "📦 基礎初級-1",
-      "type": "SDLC Automation",
+      "title": "SDLC Automation",
       "emoji": "📦",
       "subtitle": "CI/CD・デプロイメント自動化の問題！",
       "questions": [
@@ -133,8 +132,7 @@
     },
     {
       "id": 2,
-      "title": "🏗️ 基礎初級-2",
-      "type": "IaC & 構成管理",
+      "title": "IaC & 構成管理",
       "emoji": "🏗️",
       "subtitle": "Infrastructure as Code の問題！",
       "questions": [
@@ -262,8 +260,7 @@
     },
     {
       "id": 3,
-      "title": "⚡ 基礎初級-3",
-      "type": "Resilient Cloud Solutions",
+      "title": "Resilient Cloud Solutions",
       "emoji": "⚡",
       "subtitle": "高可用性・耐障害性の問題！",
       "questions": [
@@ -391,8 +388,7 @@
     },
     {
       "id": 4,
-      "title": "📊 基礎初級-4",
-      "type": "Monitoring & Logging",
+      "title": "Monitoring & Logging",
       "emoji": "📊",
       "subtitle": "モニタリング・ログ管理の問題！",
       "questions": [
@@ -520,8 +516,7 @@
     },
     {
       "id": 5,
-      "title": "🚨 基礎初級-5",
-      "type": "Incident & Event Response",
+      "title": "Incident & Event Response",
       "emoji": "🚨",
       "subtitle": "インシデント対応・イベント管理の問題！",
       "questions": [
@@ -649,8 +644,7 @@
     },
     {
       "id": 6,
-      "title": "🔒 基礎初級-6",
-      "type": "Security & Compliance",
+      "title": "Security & Compliance",
       "emoji": "🔒",
       "subtitle": "セキュリティ・コンプライアンスの問題！",
       "questions": [

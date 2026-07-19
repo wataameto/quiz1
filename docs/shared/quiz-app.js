@@ -23,7 +23,7 @@ let cacheInitialized = false;
 const UNIT_NAME = 'レッスン';
 
 function getLessonName(t) {
-  return `${UNIT_NAME}${t.id}　${t.type || ''}`;
+  return `${UNIT_NAME}${t.id}　${t.title || ''}`;
 }
 
 // ===== 表示サイズ設定（端末ごとにlocalStorageで保持） =====
@@ -291,7 +291,7 @@ function showAdmin() {
     for (const test of levelData.tests) {
       const countLabel = Array.isArray(test.questions) ? `${test.questions.length}問` : '0問';
       lines.push('');
-      lines.push(`### ${test.title} ${test.type || ''} / ${countLabel}`);
+      lines.push(`### ${test.title} / ${countLabel}`);
 
       test.questions.forEach((question, qIndex) => {
         lines.push('');

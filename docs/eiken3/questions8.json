@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "会話表現・定型フレーズ編①：実践的な英会話で使える決まり文句",
-      "type": "Conversational Expressions 1",
       "emoji": "🗣️",
       "subtitle": "実践的な英会話で使える決まり文句",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "会話表現・定型フレーズ編②：日常対話や賛同を表す表現",
-      "type": "Conversational Expressions 2",
       "emoji": "💬",
       "subtitle": "日常対話や賛同を表す表現",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "会話表現・定型フレーズ編③：要望や時間の確認に使う表現",
-      "type": "Conversational Expressions 3",
       "emoji": "📞",
       "subtitle": "要望や時間の確認に使う表現",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "会話表現・定型フレーズ編④：頼み事や人間関係に関わる表現",
-      "type": "Conversational Expressions 4",
       "emoji": "🎙️",
       "subtitle": "頼み事や人間関係に関わる表現",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "会話表現・定型フレーズ編⑤：日常会話や来客時に使う表現",
-      "type": "Conversational Expressions 5",
       "emoji": "👋",
       "subtitle": "日常会話や来客時に使う表現",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "会話表現・定型フレーズ編⑥：疑問やトラブル対応の表現",
-      "type": "Conversational Expressions 6",
       "emoji": "💌",
       "subtitle": "疑問やトラブル対応の表現",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "会話表現・定型フレーズ編⑦：安否確認や判断の返答表現",
-      "type": "Conversational Expressions 7",
       "emoji": "🙋‍♀️",
       "subtitle": "安否確認や判断の返答表現",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "会話表現・定型フレーズ編⑧：気象や心身のトラブルを伝える表現",
-      "type": "Conversational Expressions 8",
       "emoji": "🤔",
       "subtitle": "気象や心身のトラブルを伝える表現",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "会話表現・定型フレーズ編⑨：会話表現の総復習",
-      "type": "Conversational Expressions 9",
       "emoji": "🗨️",
       "subtitle": "総仕上げ：会話表現の総復習",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "会話表現・新出語彙ミックス：総仕上げプラスワン",
-      "type": "Conversation & New Vocabulary",
       "emoji": "🎁",
       "subtitle": "会話表現に加え、新出の重要語彙3語を追加収録",
       "questions": [

@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編⑤：行動・対人",
-      "type": "Basic Verbs 5",
       "emoji": "🤝",
       "subtitle": "人とのコミュニケーションや生活の行動",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編⑥：変化・発展",
-      "type": "Basic Verbs 6",
       "emoji": "📈",
       "subtitle": "成長や変化、状態の向上を表す動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編⑦：乗り物・交通・通信",
-      "type": "Nouns: Vehicles & Traffic",
       "emoji": "🚇",
       "subtitle": "交通手段や通信手段に関する名詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑧：日用品・文房具",
-      "type": "Nouns: Daily Goods",
       "emoji": "🧼",
       "subtitle": "家で使う道具や文房具の名詞",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編⑨：メディア・娯楽",
-      "type": "Nouns: Media & Hobby",
       "emoji": "📰",
       "subtitle": "情報通信や趣味に関する名詞",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "形容詞編⑤：状態・特徴",
-      "type": "Adjectives 5",
       "emoji": "⚖️",
       "subtitle": "金額や物理的な特徴を表す形容詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "形容詞編⑥：時間・素材",
-      "type": "Adjectives 6",
       "emoji": "🪵",
       "subtitle": "頻度や特定の素材を表す形容詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "副詞・前置詞編③",
-      "type": "Adverbs & Prepositions 3",
       "emoji": "📍",
       "subtitle": "急な状況の変化や確実性を示す言葉",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "名詞編⑩：イベント・記憶",
-      "type": "Nouns: Events & Memory",
       "emoji": "🎭",
       "subtitle": "社会的な行事や心の状態に関する名詞",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "会話表現・重要熟語編③",
-      "type": "Everyday Phrases 3",
       "emoji": "🗣️",
       "subtitle": "日常の会話や動作でよく使う熟語",
       "questions": [

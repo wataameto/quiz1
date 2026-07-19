@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "🌏 アジアの首都",
-      "type": "Asia Capitals",
       "emoji": "🌏",
       "subtitle": "アジア各国の首都クイズ！",
       "questions": [
@@ -85,7 +84,6 @@
     {
       "id": 2,
       "title": "🌍 ヨーロッパの首都",
-      "type": "Europe Capitals",
       "emoji": "🌍",
       "subtitle": "ヨーロッパ各国の首都クイズ！",
       "questions": [
@@ -164,7 +162,6 @@
     {
       "id": 3,
       "title": "🌎 南北アメリカの首都",
-      "type": "Americas Capitals",
       "emoji": "🌎",
       "subtitle": "南北アメリカ各国の首都クイズ！",
       "questions": [
@@ -243,7 +240,6 @@
     {
       "id": 4,
       "title": "🌐 アフリカ・オセアニアの首都",
-      "type": "Africa Oceania Capitals",
       "emoji": "🌐",
       "subtitle": "アフリカ・オセアニア各国の首都クイズ！",
       "questions": [
@@ -322,7 +318,6 @@
     {
       "id": 5,
       "title": "🌏 アジアの首都２",
-      "type": "Asia Capitals 2",
       "emoji": "🌏",
       "subtitle": "アジア各国の首都クイズ！パート2",
       "questions": [
@@ -401,7 +396,6 @@
     {
       "id": 6,
       "title": "🌏 アジアの首都３",
-      "type": "Asia Capitals 3",
       "emoji": "🌏",
       "subtitle": "アジア各国の首都クイズ！パート3",
       "questions": [
@@ -480,7 +474,6 @@
     {
       "id": 7,
       "title": "🌍 ヨーロッパの首都２",
-      "type": "Europe Capitals 2",
       "emoji": "🌍",
       "subtitle": "ヨーロッパ各国の首都クイズ！パート2",
       "questions": [
@@ -559,7 +552,6 @@
     {
       "id": 8,
       "title": "🌍 ヨーロッパの首都３",
-      "type": "Europe Capitals 3",
       "emoji": "🌍",
       "subtitle": "ヨーロッパ各国の首都クイズ！パート3",
       "questions": [
@@ -638,7 +630,6 @@
     {
       "id": 9,
       "title": "🌎 南北アメリカの首都２",
-      "type": "Americas Capitals 2",
       "emoji": "🌎",
       "subtitle": "南北アメリカ各国の首都クイズ！パート2",
       "questions": [
@@ -717,7 +708,6 @@
     {
       "id": 10,
       "title": "🌎 南北アメリカの首都３",
-      "type": "Americas Capitals 3",
       "emoji": "🌎",
       "subtitle": "南北アメリカ各国の首都クイズ！パート3",
       "questions": [
@@ -796,7 +786,6 @@
     {
       "id": 11,
       "title": "🌐 アフリカ・オセアニアの首都２",
-      "type": "Africa Oceania Capitals 2",
       "emoji": "🌐",
       "subtitle": "アフリカ・オセアニア各国の首都クイズ！パート2",
       "questions": [
@@ -875,7 +864,6 @@
     {
       "id": 12,
       "title": "🌐 アフリカ・オセアニアの首都３",
-      "type": "Africa Oceania Capitals 3",
       "emoji": "🌐",
       "subtitle": "アフリカ・オセアニア各国の首都クイズ！パート3",
       "questions": [

@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編⑪：状況を説明する動詞をマスター",
-      "type": "Verbs 11",
       "emoji": "🎬",
       "subtitle": "状況を説明する動詞をマスター",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編⑫：頻出の動作・変化を表す動詞",
-      "type": "Verbs 12",
       "emoji": "🧠",
       "subtitle": "頻出の動作・変化を表す動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "動詞編⑬：読解・リスニングで狙われる動詞",
-      "type": "Verbs 13",
       "emoji": "🛠️",
       "subtitle": "読解・リスニングで狙われる動詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "動詞編⑭：表現の幅を広げる動詞をチェック",
-      "type": "Verbs 14",
       "emoji": "🚀",
       "subtitle": "表現の幅を広げる動詞をチェック",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "動詞編⑮：重要動詞の総復習",
-      "type": "Verbs 15",
       "emoji": "🔍",
       "subtitle": "総仕上げ：重要動詞の総復習",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "動詞・名詞ミックス：基本動詞と身近な名詞",
-      "type": "Verbs & Nouns Mix",
       "emoji": "🔀",
       "subtitle": "動詞と名詞が混在する総合レッスン",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "名詞編①：学校生活や将来の仕事に関わる重要名詞",
-      "type": "Nouns 1",
       "emoji": "🏫",
       "subtitle": "学校生活や将来の仕事に関わる重要名詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "名詞編②：ニュースや日常会話で頻出する社会的名詞",
-      "type": "Nouns 2",
       "emoji": "🌏",
       "subtitle": "ニュースや日常会話で頻出する社会的名詞",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "名詞編③：身の回りの物や場所を表す名詞",
-      "type": "Nouns 3",
       "emoji": "🏢",
       "subtitle": "身の回りの物や場所を表す名詞",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "名詞編④：自然・環境に関する重要名詞",
-      "type": "Nouns 4",
       "emoji": "💻",
       "subtitle": "自然・環境に関する重要名詞",
       "questions": [

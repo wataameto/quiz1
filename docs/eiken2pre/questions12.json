@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "熟語編2レッスン1",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1101~1110",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "熟語編2レッスン2",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1111~1120",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "熟語編2レッスン3",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1121~1130",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "熟語編2レッスン4",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1131~1140",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "熟語編2レッスン5",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1141~1150",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "熟語編2レッスン6",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1151~1160",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "熟語編2レッスン7",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1161~1170",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "熟語編2レッスン8",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1171~1180",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "熟語編2レッスン9",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1181~1190",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "熟語編2レッスン10",
-      "type": "vocabulary",
       "emoji": "📖",
       "subtitle": "熟語 1191~1200",
       "questions": [

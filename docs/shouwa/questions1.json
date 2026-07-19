@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "🍚 くらし・家電",
-      "type": "Showa Life",
       "emoji": "🍚",
       "subtitle": "昭和のくらし・家電の雑学問題！",
       "questions": [
@@ -85,7 +84,6 @@
     {
       "id": 2,
       "title": "📺 テレビ・娯楽",
-      "type": "Showa Entertainment",
       "emoji": "📺",
       "subtitle": "昭和のテレビ・娯楽の雑学問題！",
       "questions": [
@@ -164,7 +162,6 @@
     {
       "id": 3,
       "title": "🎌 出来事・世相",
-      "type": "Showa Events",
       "emoji": "🎌",
       "subtitle": "昭和の出来事・世相の雑学問題！",
       "questions": [
@@ -243,7 +240,6 @@
     {
       "id": 4,
       "title": "🎵 音楽・芸能",
-      "type": "Showa Entertainers",
       "emoji": "🎵",
       "subtitle": "昭和の音楽・芸能の雑学問題！",
       "questions": [

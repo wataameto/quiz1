@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編⑤",
-      "type": "Basic Verbs 5",
       "emoji": "🏊",
       "subtitle": "いろいろな動作や生活を表す動詞",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編⑥",
-      "type": "Basic Verbs 6",
       "emoji": "💃",
       "subtitle": "表現力や学びに関する動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編⑨：衣類・身の回りのもの",
-      "type": "Nouns: Clothes & Belongings",
       "emoji": "🧢",
       "subtitle": "身につけるものや持ち物に関する名詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑩：家の中のもの",
-      "type": "Nouns: House Items",
       "emoji": "🛋️",
       "subtitle": "家や部屋の中にある家具や設備の名前",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編⑪：乗り物・街の様子",
-      "type": "Nouns: Vehicles & Streets",
       "emoji": "🚌",
       "subtitle": "交通機関や街の中にあるものの名前",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "名詞編⑫：月・季節・天気",
-      "type": "Nouns: Months, Seasons & Weather",
       "emoji": "🌧️",
       "subtitle": "暦や季節、自然の天候に関する名詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "形容詞編④：様子・気候",
-      "type": "Adjectives: State & Weather",
       "emoji": "🍂",
       "subtitle": "温度や様子を表す形容詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "代名詞・前置詞編②",
-      "type": "Pronouns & Prepositions 2",
       "emoji": "📍",
       "subtitle": "人を指す言葉と、場所を示す言葉",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "指示代名詞・疑問詞編②",
-      "type": "Pronouns & Question Words 2",
       "emoji": "❔",
       "subtitle": "指し示す言葉と、選択・たずねる言葉",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "日常会話表現③",
-      "type": "Everyday Conversations 3",
       "emoji": "🗣️",
       "subtitle": "挨拶やよく使う便利なフレーズ",
       "questions": [

@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編①：意思・思考",
-      "type": "Basic Verbs 1",
       "emoji": "💡",
       "subtitle": "意思や考え、状態を表す重要な動詞",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編②：日常・行動",
-      "type": "Basic Verbs 2",
       "emoji": "🏃",
       "subtitle": "移動や日常の様々な活動を表す動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編①：人間関係・役割",
-      "type": "Nouns: Relationships",
       "emoji": "👥",
       "subtitle": "身の回りの人間関係や立場を表す名詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編②：建物・場所",
-      "type": "Nouns: Buildings & Places",
       "emoji": "🏛️",
       "subtitle": "街の中の大きな施設や場所の名前",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編③：自然・世界・宇宙",
-      "type": "Nouns: Nature & Space",
       "emoji": "🌍",
       "subtitle": "地球や宇宙、自然に関する地理的単語",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "形容詞編①：様子・評価",
-      "type": "Adjectives 1",
       "emoji": "🌟",
       "subtitle": "人や物の状態や評価を表す形容詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "形容詞編②：感情・性質",
-      "type": "Adjectives 2",
       "emoji": "🎭",
       "subtitle": "性格や感情、様子を表す形容詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "副詞・前置詞編①",
-      "type": "Adverbs & Prepositions 1",
       "emoji": "🗺️",
       "subtitle": "時間や状態、位置関係を示す言葉",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "日付・時間・その他名詞",
-      "type": "Nouns: Time & Others",
       "emoji": "⏳",
       "subtitle": "時間的な概念や予定を表す名詞",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "会話表現・重要熟語編①",
-      "type": "Everyday Phrases 1",
       "emoji": "🗣️",
       "subtitle": "日常会話や読解で頻出する重要熟語",
       "questions": [

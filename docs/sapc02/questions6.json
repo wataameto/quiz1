@@ -5,8 +5,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "🏢 模擬試験3-1",
-      "type": "Organizational Complexity and Networking",
+      "title": "Organizational Complexity and Networking",
       "emoji": "🏢",
       "subtitle": "本番レベルの組織統治とネットワーキング問題！",
       "questions": [
@@ -134,8 +133,7 @@
     },
     {
       "id": 2,
-      "title": "🛡️ 模擬試験3-2",
-      "type": "Resilience and Migration Strategy",
+      "title": "Resilience and Migration Strategy",
       "emoji": "🛡️",
       "subtitle": "本番レベルの可用性・DRと移行戦略問題！",
       "questions": [
@@ -263,8 +261,7 @@
     },
     {
       "id": 3,
-      "title": "🔐 模擬試験3-3",
-      "type": "Data Architecture and Security",
+      "title": "Data Architecture and Security",
       "emoji": "🔐",
       "subtitle": "本番レベルのデータ設計とセキュリティ問題！",
       "questions": [

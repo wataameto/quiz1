@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "重要熟語①：前置詞・副詞句",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(1〜10)",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "重要熟語②：動詞句(1)",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(11〜20)",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "重要熟語③：動詞句(2)",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(21〜30)",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "重要熟語④：be動詞の熟語",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(31〜40)",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "重要熟語⑤：基本動詞の熟語",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(41〜50)",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "重要熟語⑥：副詞的表現",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(51〜60)",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "重要熟語⑦：接続詞的表現",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(61〜70)",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "重要熟語⑧：頻出イディオム(1)",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(71〜80)",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "重要熟語⑨：頻出イディオム(2)",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(81〜90)",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "重要熟語⑩：総まとめ",
-      "type": "vocabulary",
       "emoji": "🔗",
       "subtitle": "重要熟語・表現(91〜100)",
       "questions": [

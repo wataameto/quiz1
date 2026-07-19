@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編①",
-      "type": "Basic Verbs 1",
       "emoji": "🏃",
       "subtitle": "によく出る基本の動作を表す言葉",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編②",
-      "type": "Basic Verbs 2",
       "emoji": "🍽️",
       "subtitle": "日常のいろいろな行動を表す動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編①：人物・家族",
-      "type": "Nouns: People & Family",
       "emoji": "🧑‍🧑‍🧒",
       "subtitle": "家族や身の回りの人々に関する名詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編②：学校・日常",
-      "type": "Nouns: School & Everyday Life",
       "emoji": "🏫",
       "subtitle": "学校や家でよく使う身近なアイテム",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編③：生き物・自然",
-      "type": "Nouns: Animals & Nature",
       "emoji": "🌳",
       "subtitle": "動物や自然に関する身近な言葉",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "形容詞編①：感情・状態",
-      "type": "Adjectives: Feelings & States",
       "emoji": "😊",
       "subtitle": "人の気持ちや物の様子を表す形容詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "形容詞・副詞編②：様子・度合",
-      "type": "Adjectives & Adverbs: Appearance & Degrees",
       "emoji": "📏",
       "subtitle": "長さ、速さ、難易度などを表す言葉",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "名詞編④：時間・曜日・季節",
-      "type": "Nouns: Time, Days & Seasons",
       "emoji": "📅",
       "subtitle": "時間やカレンダーに関する基本的な名詞",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "代名詞・疑問詞編",
-      "type": "Pronouns & Question Words",
       "emoji": "❓",
       "subtitle": "主語になる言葉や、質問するときに使う重要な言葉",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "会話表現・挨拶編",
-      "type": "Conversations & Greetings",
       "emoji": "🤝",
       "subtitle": "日常会話でよく使われる定番の挨拶とフレーズ",
       "questions": [

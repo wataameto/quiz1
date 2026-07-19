@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "📟 IT・ガジェット",
-      "type": "Heisei Gadgets",
       "emoji": "📟",
       "subtitle": "平成のIT・ガジェットの雑学問題！",
       "questions": [
@@ -85,7 +84,6 @@
     {
       "id": 2,
       "title": "🕹️ テレビ・ゲーム・娯楽",
-      "type": "Heisei Entertainment",
       "emoji": "🕹️",
       "subtitle": "平成のテレビ・ゲーム・娯楽の雑学問題！",
       "questions": [
@@ -164,7 +162,6 @@
     {
       "id": 3,
       "title": "🏯 出来事・世相",
-      "type": "Heisei Events",
       "emoji": "🏯",
       "subtitle": "平成の出来事・世相の雑学問題！",
       "questions": [
@@ -243,7 +240,6 @@
     {
       "id": 4,
       "title": "🎤 音楽・芸能",
-      "type": "Heisei Entertainers",
       "emoji": "🎤",
       "subtitle": "平成の音楽・芸能の雑学問題！",
       "questions": [

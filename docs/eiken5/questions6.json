@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編③：体を使う動作",
-      "type": "Basic Verbs 3",
       "emoji": "🤸",
       "subtitle": "遊びやスポーツでよく使う体の動きの言葉",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編④：手を使う動作",
-      "type": "Basic Verbs 4",
       "emoji": "🙌",
       "subtitle": "料理や日常のしぐさに関する動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "天気編：空の様子",
-      "type": "Weather Words",
       "emoji": "🌦️",
       "subtitle": "毎日の天気を表す形容詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "形容詞編③：気持ちと様子",
-      "type": "Adjectives: Feelings & Appearance",
       "emoji": "🙀",
       "subtitle": "気持ちや物の状態を表す形容詞",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "動物編②：森や水辺の生き物",
-      "type": "Animals 2",
       "emoji": "🐸",
       "subtitle": "動物園や自然でよく見る生き物の名前",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "体の部分編",
-      "type": "Parts of the Body",
       "emoji": "🦶",
       "subtitle": "自分の体を表す基本的な名詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "食べ物編②：おやつと野菜",
-      "type": "Food 2",
       "emoji": "🍭",
       "subtitle": "おやつや料理でよく出てくる食べ物の名前",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "身の回りの物・場所編",
-      "type": "Everyday Things & Places",
       "emoji": "🎈",
       "subtitle": "体の一部や身近な場所、遊び道具の言葉",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "家族編②・小さな生き物編",
-      "type": "Family 2 & Small Creatures",
       "emoji": "🐛",
       "subtitle": "親戚を表す言葉と、庭や草むらの小さな生き物",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "文房具・遊び道具編",
-      "type": "School Supplies & Toys",
       "emoji": "🖍️",
       "subtitle": "教室や机の上でよく見る道具の名前",
       "questions": [

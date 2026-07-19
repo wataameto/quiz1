@@ -5,8 +5,7 @@
   "tests": [
     {
       "id": 1,
-      "title": "📦 基礎初級-1",
-      "type": "Organizational Complexity & Multi-Account Governance",
+      "title": "Organizational Complexity & Multi-Account Governance",
       "emoji": "📦",
       "subtitle": "マルチアカウント統治とガバナンスの問題！",
       "questions": [
@@ -134,8 +133,7 @@
     },
     {
       "id": 2,
-      "title": "🌐 基礎初級-2",
-      "type": "Networking & Hybrid Connectivity",
+      "title": "Networking & Hybrid Connectivity",
       "emoji": "🌐",
       "subtitle": "ネットワーク・ハイブリッド接続の問題！",
       "questions": [
@@ -263,8 +261,7 @@
     },
     {
       "id": 3,
-      "title": "⚡ 基礎初級-3",
-      "type": "High Availability, Resilience & DR",
+      "title": "High Availability, Resilience & DR",
       "emoji": "⚡",
       "subtitle": "高可用性・レジリエンス・DR設計の問題！",
       "questions": [
@@ -392,8 +389,7 @@
     },
     {
       "id": 4,
-      "title": "💰 基礎初級-4",
-      "type": "Cost Optimization & Migration Strategy",
+      "title": "Cost Optimization & Migration Strategy",
       "emoji": "💰",
       "subtitle": "コスト最適化・移行戦略の問題！",
       "questions": [
@@ -521,8 +517,7 @@
     },
     {
       "id": 5,
-      "title": "🗄️ 基礎初級-5",
-      "type": "Data & Storage Architecture",
+      "title": "Data & Storage Architecture",
       "emoji": "🗄️",
       "subtitle": "データ・ストレージアーキテクチャの問題！",
       "questions": [
@@ -650,8 +645,7 @@
     },
     {
       "id": 6,
-      "title": "🔒 基礎初級-6",
-      "type": "Security & Compliance at Scale",
+      "title": "Security & Compliance at Scale",
       "emoji": "🔒",
       "subtitle": "大規模セキュリティ・コンプライアンスの問題！",
       "questions": [

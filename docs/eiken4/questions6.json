@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編⑫：達成・変化",
-      "type": "Basic Verbs 12",
       "emoji": "🎯",
       "subtitle": "物事を成し遂げたり変化させたりする動詞",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編⑬：日常・仕事",
-      "type": "Basic Verbs 13",
       "emoji": "💼",
       "subtitle": "日常生活や仕事の場面で使う動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "動詞編⑭：伝達・思考",
-      "type": "Basic Verbs 14",
       "emoji": "💬",
       "subtitle": "コミュニケーションや考えに関する動詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑱：職業",
-      "type": "Nouns: Occupations",
       "emoji": "👔",
       "subtitle": "様々な仕事や職業を表す名詞",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編⑲：街の場所",
-      "type": "Nouns: Town Places",
       "emoji": "🏙️",
       "subtitle": "街や建物の中の細かい場所を表す名詞",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "名詞編⑳：自然の風景",
-      "type": "Nouns: Nature Scenes",
       "emoji": "🌿",
       "subtitle": "自然の中に見られる地形や植物の名詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "名詞編㉑：日用品",
-      "type": "Nouns: Household Items",
       "emoji": "🧰",
       "subtitle": "家庭や生活の中で使う道具の名詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "名詞編㉒：学校・教育",
-      "type": "Nouns: School & Education",
       "emoji": "🎓",
       "subtitle": "学校生活や教育に関する名詞・動詞",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "副詞編⑦：頻度・時の流れ",
-      "type": "Adverbs: Frequency & Time",
       "emoji": "⏱️",
       "subtitle": "頻度や時間の経過を表す副詞・名詞",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "形容詞編⑩：性格・様子",
-      "type": "Adjectives 10",
       "emoji": "🙂",
       "subtitle": "人柄や状態を表す形容詞",
       "questions": [

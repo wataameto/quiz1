@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編⑦：日常の動作",
-      "type": "Basic Verbs 7",
       "emoji": "🛌",
       "subtitle": "日常的によく行う一連の動作",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "名詞編⑬：家・部屋のパーツ",
-      "type": "Nouns: House Parts",
       "emoji": "🏡",
       "subtitle": "家や建物の部分を表す単語",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編⑭：学校生活",
-      "type": "Nouns: School Life",
       "emoji": "🧑‍🎓",
       "subtitle": "学校で使うアイテムや人物に関する単語",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑮：身の回りの小物・食器",
-      "type": "Nouns: Goods & Dishes",
       "emoji": "⛱️",
       "subtitle": "おもちゃや楽器、食事用の器具の名前",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編⑯：身の回りの自然・公共機関",
-      "type": "Nouns: Nature & Public Buildings",
       "emoji": "⛰️",
       "subtitle": "自然の地形や便利な公共施設の名前",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "名詞編⑰：日付・曜日・気象",
-      "type": "Nouns: Days & Weather",
       "emoji": "⛈️",
       "subtitle": "暦や天候に関する言葉",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "形容詞編⑤：状態・強さ",
-      "type": "Adjectives: Feelings & Strengths",
       "emoji": "🦁",
       "subtitle": "気分や強弱などを表す形容詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "前置詞編③：位置・方向",
-      "type": "Prepositions 3",
       "emoji": "🏹",
       "subtitle": "位置関係や方向を示す前置詞",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "数字編①（1〜10）",
-      "type": "Numbers 1 (1-10)",
       "emoji": "1️⃣",
       "subtitle": "基本の数字1から10まで",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "数字編②（11〜20）",
-      "type": "Numbers 2 (11-20)",
       "emoji": "🔟",
       "subtitle": "数字の11から20まで",
       "questions": [

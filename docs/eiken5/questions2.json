@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編③",
-      "type": "Basic Verbs 3",
       "emoji": "🎯",
       "subtitle": "覚えておきたい日常の動作動詞",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "動詞編④",
-      "type": "Basic Verbs 4",
       "emoji": "🧭",
       "subtitle": "移動・感覚・思考の動詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編⑤：食べ物・飲み物",
-      "type": "Nouns: Food & Drinks",
       "emoji": "🍎",
       "subtitle": "食事や食べ物に関する身近な単語",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑥：場所・建物",
-      "type": "Nouns: Places & Buildings",
       "emoji": "🏙️",
       "subtitle": "よく行く場所や身近な建物の名前",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編⑦：体・健康",
-      "type": "Nouns: Body & Health",
       "emoji": "💪",
       "subtitle": "体の部位や健康に関する基本単語",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "名詞編⑧：スポーツ・趣味",
-      "type": "Nouns: Sports & Hobbies",
       "emoji": "⚽",
       "subtitle": "スポーツや趣味に関する単語",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "形容詞編③：様子・感覚",
-      "type": "Adjectives: Appearance & Senses",
       "emoji": "🎨",
       "subtitle": "見た目や感覚を表すさまざまな形容詞",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "色・数・前置詞編",
-      "type": "Colors, Numbers & Prepositions",
       "emoji": "🌈",
       "subtitle": "色や数字、場所を示す大切な言葉",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "副詞・数量表現編",
-      "type": "Adverbs & Quantity",
       "emoji": "📊",
       "subtitle": "程度や数を表す大切な言葉",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "会話表現②：気持ち・返答",
-      "type": "Conversations: Feelings & Responses",
       "emoji": "💬",
       "subtitle": "日常会話でよく使う返事・感情表現",
       "questions": [

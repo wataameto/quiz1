@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "形容詞編⑪：評価や可能性を表す形容詞",
-      "type": "Adjectives 11",
       "emoji": "💡",
       "subtitle": "評価や可能性を表す形容詞",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "形容詞編⑫：時間や客観的状態を表す形容詞",
-      "type": "Adjectives 12",
       "emoji": "🎪",
       "subtitle": "時間や客観的状態を表す形容詞",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "形容詞編⑬：感情や価値を表す形容詞",
-      "type": "Adjectives 13",
       "emoji": "🌸",
       "subtitle": "感情や価値を表す形容詞",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "形容詞編⑭：重要形容詞の総復習",
-      "type": "Adjectives 14",
       "emoji": "🎓",
       "subtitle": "総仕上げ：重要形容詞の総復習",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "形容詞・副詞ミックス：性質と程度を表す言葉",
-      "type": "Adjectives & Adverbs Mix",
       "emoji": "🔀",
       "subtitle": "形容詞と副詞が混在する総合レッスン",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "副詞編①：程度や頻度を表す重要な副詞",
-      "type": "Adverbs 1",
       "emoji": "📊",
       "subtitle": "程度や頻度を表す重要な副詞",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "副詞編②：確実性や強調を表す副詞表現",
-      "type": "Adverbs 2",
       "emoji": "⏱️",
       "subtitle": "確実性や強調を表す副詞表現",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "副詞編③：文脈や態度を示す副詞",
-      "type": "Adverbs 3",
       "emoji": "🎯",
       "subtitle": "文脈や態度を示す副詞",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "副詞編④：時間関係や限界を表す副詞",
-      "type": "Adverbs 4",
       "emoji": "🔁",
       "subtitle": "時間関係や限界を表す副詞",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "副詞編⑤：様子や程度を表す副詞",
-      "type": "Adverbs 5",
       "emoji": "📈",
       "subtitle": "様子や程度を表す副詞",
       "questions": [

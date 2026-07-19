@@ -6,7 +6,6 @@
     {
       "id": 1,
       "title": "動詞編⑧：心・状態",
-      "type": "Basic Verbs 8",
       "emoji": "🧠",
       "subtitle": "思考や記憶、好む状態を表す動詞",
       "questions": [
@@ -135,7 +134,6 @@
     {
       "id": 2,
       "title": "名詞編⑱：動物・生き物",
-      "type": "Nouns: More Animals",
       "emoji": "🐻",
       "subtitle": "いろいろな動物の名前",
       "questions": [
@@ -264,7 +262,6 @@
     {
       "id": 3,
       "title": "名詞編⑲：果物・野菜・食材",
-      "type": "Nouns: Fruits, Vegetables & Food",
       "emoji": "🍌",
       "subtitle": "食卓でおなじみの果物や野菜、肉の名前",
       "questions": [
@@ -393,7 +390,6 @@
     {
       "id": 4,
       "title": "名詞編⑳：衣類・色の追加",
-      "type": "Nouns: More Clothes & Colors",
       "emoji": "🧦",
       "subtitle": "身につけるものとカラーのバリエーション",
       "questions": [
@@ -522,7 +518,6 @@
     {
       "id": 5,
       "title": "名詞編㉑：仕事・職業・人物",
-      "type": "Nouns: Jobs & Figures",
       "emoji": "🧑‍✈️",
       "subtitle": "いろいろな職業や身分を表す名詞",
       "questions": [
@@ -651,7 +646,6 @@
     {
       "id": 6,
       "title": "名詞編㉒：月の名前①（1月〜6月）",
-      "type": "Nouns: Months 1 (Jan-Jun)",
       "emoji": "📅",
       "subtitle": "1年の前半にあたる1月から6月まで",
       "questions": [
@@ -780,7 +774,6 @@
     {
       "id": 7,
       "title": "名詞編㉓：月の名前②（7月〜12月）",
-      "type": "Nouns: Months 2 (Jul-Dec)",
       "emoji": "🗓️",
       "subtitle": "1年の後半にあたる7月から12月まで",
       "questions": [
@@ -909,7 +902,6 @@
     {
       "id": 8,
       "title": "数字編③（大きな数・その他）",
-      "type": "Numbers 3 (Large & Others)",
       "emoji": "💯",
       "subtitle": "10の倍数や100以上の大きな単位の数",
       "questions": [
@@ -1038,7 +1030,6 @@
     {
       "id": 9,
       "title": "形容詞・副詞編⑥：頻度・状態",
-      "type": "Adjectives & Adverbs 6",
       "emoji": "⚡",
       "subtitle": "速さや重要度などを表す言葉",
       "questions": [
@@ -1167,7 +1158,6 @@
     {
       "id": 10,
       "title": "日常会話表現④",
-      "type": "Everyday Conversations 4",
       "emoji": "🗣️",
       "subtitle": "様々な挨拶や思いやりのあるフレーズ",
       "questions": [
