@@ -125,7 +125,9 @@ async function syncUserProfile() {
   if (!currentUser) return;
   try {
     await ensureMigrated();
-    await db.collection('users').doc(currentUser.uid).set({
+    const userRef = db.collection('users').doc(currentUser.uid);
+    await userRef.get();
+    await userRef.set({
       displayName: currentUser.displayName || null,
       email: currentUser.email || null,
       lastSeen: firebase.firestore.FieldValue.serverTimestamp(),
