@@ -1797,6 +1797,23 @@ document.addEventListener('keydown', (e) => {
     timeEl.style.lineHeight = '1.4';
     timeEl.style.whiteSpace = 'nowrap';
     (document.querySelector('.container') || document.body).appendChild(timeEl);
+
+    // 試験中・結果画面では邪魔になるので隠す（メインメニューにはこの2画面が
+    // 存在しないため、そちらでは常に表示されたままになる）
+    const quizEl = document.getElementById('screen-quiz');
+    const resultsEl = document.getElementById('screen-results');
+    if (quizEl || resultsEl) {
+      const syncVisibility = () => {
+        const hide = (quizEl && !quizEl.classList.contains('hidden')) ||
+                     (resultsEl && !resultsEl.classList.contains('hidden'));
+        timeEl.style.display = hide ? 'none' : '';
+      };
+      [quizEl, resultsEl].filter(Boolean).forEach(el => {
+        new MutationObserver(syncVisibility).observe(el, { attributes: true, attributeFilter: ['class'] });
+      });
+      syncVisibility();
+    }
+
     return timeEl;
   }
 
