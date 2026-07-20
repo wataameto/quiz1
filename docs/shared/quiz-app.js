@@ -297,7 +297,29 @@ let currentLevel = 1;
 let maxLevel = 1;
 const isAdminMode = new URLSearchParams(location.search).get('admin') === '1';
 
+const QUIZ_LOAD_TIMEOUT_MS = 10000;
+
+function showQuizLoadFailure() {
+  const testGrid = document.getElementById('test-grid');
+  if (!testGrid) return;
+  testGrid.innerHTML = `
+    <div class="loading-failed">
+      <p class="loading-failed-text">読み込みに時間がかかりすぎています。<br>通信状況をご確認のうえ、もう一度お試しください。</p>
+      <button type="button" class="btn-reload-inline loading-failed-btn" onclick="location.reload()">
+        <span class="reload-icon">🔄</span> 最新に更新
+      </button>
+    </div>`;
+}
+
 async function loadAllQuestions() {
+  // 通信がハングして「読み込み中」のまま何も表示されない状態を避けるため、
+  // 一定時間で失敗表示（更新ボタンのみ）に切り替える。
+  let quizLoadTimedOut = false;
+  const quizLoadTimeoutId = setTimeout(() => {
+    quizLoadTimedOut = true;
+    showQuizLoadFailure();
+  }, QUIZ_LOAD_TIMEOUT_MS);
+
   try {
     const tQuery = '?t=' + Date.now();
     // config.json と questions1.json, ../quiz-meta.json を並行して fetch する
@@ -400,6 +422,9 @@ async function loadAllQuestions() {
       }
     }
 
+    clearTimeout(quizLoadTimeoutId);
+    if (quizLoadTimedOut) return; // 失敗表示済みなら、そのまま更新ボタンでのやり直しに任せる
+
     currentLevel = 1;
     if (isAdminMode) {
       showAdmin();
@@ -407,13 +432,15 @@ async function loadAllQuestions() {
       loadQuestions(1);
     }
   } catch (e) {
+    clearTimeout(quizLoadTimeoutId);
     console.error('Failed to load questions:', e);
+    if (quizLoadTimedOut) return; // 失敗表示済みなら、そのまま更新ボタンでのやり直しに任せる
     TESTS = [];
     document.getElementById('screen-home').classList.remove('hidden');
     document.getElementById('screen-quiz').classList.add('hidden');
     document.getElementById('screen-results').classList.add('hidden');
     document.getElementById('screen-admin').classList.add('hidden');
-    
+
     const testGrid = document.getElementById('test-grid');
     if (testGrid) {
       testGrid.innerHTML = '';
