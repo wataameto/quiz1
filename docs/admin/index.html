@@ -51,6 +51,21 @@
     .section-heading { font-size: 1rem; color: #2d3748; margin: 20px 0 8px; }
     .user-name-cell { font-weight: 700; color: #2d3748; }
     .user-email-cell { font-size: 0.75rem; color: #a0aec0; }
+    #user-rows tr { cursor: pointer; }
+    #user-rows tr:hover { background: #f7fafc; }
+    .detail-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 10000; padding: 12px; }
+    .detail-overlay.open { display: flex; }
+    .detail-modal { background: #fff; border-radius: 16px; padding: 20px; max-width: 640px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+    .detail-modal h2 { font-size: 1.15rem; color: #2d3748; margin-bottom: 2px; }
+    .detail-modal .detail-sub { font-size: 0.78rem; color: #a0aec0; margin-bottom: 14px; }
+    .detail-close-btn { float: right; background: #edf2f7; border: none; border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; cursor: pointer; color: #4a5568; font-family: inherit; }
+    .detail-quiz-block { border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; }
+    .detail-quiz-title { font-weight: 800; color: #2d3748; font-size: 0.95rem; }
+    .detail-quiz-lap { font-size: 0.78rem; color: #d69e2e; font-weight: 700; margin-bottom: 8px; }
+    .detail-part-label { font-size: 0.82rem; font-weight: 700; color: #4a5568; margin: 8px 0 4px; }
+    .detail-lesson-row { display: flex; justify-content: space-between; font-size: 0.8rem; color: #4a5568; padding: 3px 0; border-bottom: 1px solid #f7fafc; }
+    .detail-lesson-row .score-good { color: #38a169; font-weight: 700; }
+    .detail-empty { color: #a0aec0; font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -112,7 +127,16 @@
     </div>
   </div>
 
-  <script src="../shared/quiz-app.js?v=20260720143138"></script>
+  <div class="detail-overlay" id="detail-overlay" onclick="if(event.target===this) closeUserDetail()">
+    <div class="detail-modal">
+      <button class="detail-close-btn" onclick="closeUserDetail()">閉じる</button>
+      <h2 id="detail-name">-</h2>
+      <p class="detail-sub" id="detail-email">-</p>
+      <div id="detail-body"><p class="detail-empty">読み込み中…</p></div>
+    </div>
+  </div>
+
+  <script src="../shared/quiz-app.js?v=20260720143450"></script>
   <script>
     const ADMIN_EMAIL = 'wataamegit@gmail.com';
 
@@ -138,10 +162,19 @@
       return ts.toDate().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
     }
 
+    // ユーザー詳細モーダルで使い回すため、直近のloadDashboard()結果を保持しておく
+    let configCache = null;
+    let profileCache = {};
+    let rawUserDocs = {}; // uid -> { quizId: docData }
+    let questionsCache = {}; // `${quizId}_${level}` -> questions{level}.json
+    let quizMetaCacheAll = null;
+
     async function loadDashboard() {
       showScreen('screen-loading');
       const config = await fetch('../config.json').then(r => r.json());
+      configCache = config;
       const quizIds = Object.keys(config);
+      rawUserDocs = {};
 
       // quiz_menu_prefsにログイン時同期しているdisplayName/email/lastSeenを
       // uidから引けるようにしておく（無ければuidをそのまま表示する）
@@ -150,6 +183,7 @@
         const prefsSnap = await db.collection('quiz_menu_prefs').get();
         prefsSnap.forEach(doc => { profileMap[doc.id] = doc.data(); });
       } catch (e) { console.error('Failed to load quiz_menu_prefs:', e); }
+      profileCache = profileMap;
 
       const userStats = {}; // uid -> { quizCount, totalAttempts, totalLaps }
       const quizRows = [];
@@ -162,6 +196,8 @@
           let quizTotalLaps = 0;
           snap.forEach(doc => {
             const data = doc.data();
+            if (!rawUserDocs[doc.id]) rawUserDocs[doc.id] = {};
+            rawUserDocs[doc.id][id] = data;
             let userAttempts = 0;
             Object.keys(data).forEach(k => {
               if (k.startsWith('lessonAttemptCount_') || k.startsWith('lessonPracticeCount_')) {
@@ -197,7 +233,7 @@
         const profile = profileMap[uid] || {};
         const name = profile.displayName ? escapeHtml(profile.displayName) : uid;
         const email = profile.email ? `<div class="user-email-cell">${escapeHtml(profile.email)}</div>` : '';
-        return `<tr>
+        return `<tr onclick="openUserDetail('${uid}')">
           <td><div class="user-name-cell">${name}</div>${email}</td>
           <td class="num">${stats.quizCount}</td>
           <td class="num">${stats.totalAttempts}</td>
@@ -220,6 +256,73 @@
       }).join('');
 
       showScreen('screen-dashboard');
+    }
+
+    function closeUserDetail() {
+      document.getElementById('detail-overlay').classList.remove('open');
+    }
+
+    async function openUserDetail(uid) {
+      const overlay = document.getElementById('detail-overlay');
+      overlay.classList.add('open');
+      document.getElementById('detail-body').innerHTML = '<p class="detail-empty">読み込み中…</p>';
+
+      const profile = profileCache[uid] || {};
+      document.getElementById('detail-name').textContent = profile.displayName || uid;
+      document.getElementById('detail-email').textContent = profile.email || '';
+
+      if (!quizMetaCacheAll) {
+        quizMetaCacheAll = await fetch('../quiz-meta.json').then(r => r.json()).catch(() => ({}));
+      }
+
+      const userQuizIds = Object.keys(rawUserDocs[uid] || {});
+      if (userQuizIds.length === 0) {
+        document.getElementById('detail-body').innerHTML = '<p class="detail-empty">この教材の利用履歴はありません</p>';
+        return;
+      }
+
+      const blocks = [];
+      for (const quizId of userQuizIds) {
+        const data = rawUserDocs[uid][quizId];
+        const meta = quizMetaCacheAll[quizId];
+        const title = (configCache[quizId] && configCache[quizId].title) || quizId;
+        const lap = typeof data.lap === 'number' ? data.lap : 0;
+        const parts = (meta && meta.parts) || 0;
+
+        let partsHtml = '';
+        for (let level = 1; level <= parts; level++) {
+          const cacheKey = `${quizId}_${level}`;
+          if (!(cacheKey in questionsCache)) {
+            questionsCache[cacheKey] = await fetch(`../${quizId}/questions${level}.json`).then(r => r.ok ? r.json() : null).catch(() => null);
+          }
+          const qData = questionsCache[cacheKey];
+          if (!qData || !Array.isArray(qData.tests)) continue;
+          const levelLabel = qData.label || `Part${level}`;
+
+          let lessonsHtml = '';
+          qData.tests.forEach(t => {
+            const score = data[`lesson_${level}_${t.id}`];
+            const attempts = data[`lessonAttemptCount_${level}_${t.id}`] || 0;
+            const practice = data[`lessonPracticeCount_${level}_${t.id}`] || 0;
+            if (score === undefined && attempts === 0 && practice === 0) return;
+            const scoreLabel = score === undefined ? '未挑戦' : `${score}点`;
+            const scoreClass = typeof score === 'number' && score >= 80 ? 'score-good' : '';
+            lessonsHtml += `<div class="detail-lesson-row"><span>${escapeHtml(t.title || `レッスン${t.id}`)}</span><span class="${scoreClass}">${scoreLabel}（試験${attempts}回・演習${practice}回）</span></div>`;
+          });
+          if (lessonsHtml) {
+            partsHtml += `<div class="detail-part-label">${escapeHtml(levelLabel)}</div>${lessonsHtml}`;
+          }
+        }
+
+        if (!partsHtml) continue; // このuidのデータが全部未挑戦相当（0件）なら教材ごと省略
+        blocks.push(`<div class="detail-quiz-block">
+          <div class="detail-quiz-title">${escapeHtml(title)}</div>
+          <div class="detail-quiz-lap">🌟 周回数: ${lap}</div>
+          ${partsHtml}
+        </div>`);
+      }
+
+      document.getElementById('detail-body').innerHTML = blocks.join('') || '<p class="detail-empty">この教材の利用履歴はありません</p>';
     }
   </script>
 </body>
