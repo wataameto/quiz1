@@ -93,6 +93,7 @@ auth.onAuthStateChanged(user => {
   cacheInitialized = false;
   bestScores = {};
   renderAuthStatus();
+  if (currentUser) syncUserProfile();
   // メインメニュー（docs/index.html）もこのファイルを読み込むため、教材ページ特有の
   // 初期化（問題データの読み込み）は教材ページにしかないDOM（#screen-quiz）の有無で判定する。
   if (document.getElementById('screen-quiz')) {
@@ -100,6 +101,20 @@ auth.onAuthStateChanged(user => {
     loadAllQuestions();
   }
 });
+
+// ログインの度に表示名・メールをquiz_menu_prefsへ書いておく（管理者ダッシュボードが
+// uidから人間が読める名前を引けるようにするため）。書き込み権限は本人のuidのドキュメント
+// のみなので、既存のFirestoreルールのままで問題ない。
+async function syncUserProfile() {
+  if (!currentUser) return;
+  try {
+    await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({
+      displayName: currentUser.displayName || null,
+      email: currentUser.email || null,
+      lastSeen: firebase.firestore.FieldValue.serverTimestamp(),
+    }, { merge: true });
+  } catch (e) { console.error('Failed to sync user profile:', e); }
+}
 
 // Firebase の signInWithPopup/signInWithRedirect は iPhone Chrome (CriOS)
 // で機能しない（redirect は firebaseapp.com への別ドメインiframeに依存

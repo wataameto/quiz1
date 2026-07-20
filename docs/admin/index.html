@@ -48,6 +48,9 @@
     .summary-item .value { font-size: 1.4rem; font-weight: 800; color: #2d3748; }
     .error-cell { color: #e53e3e; font-size: 0.8rem; }
     .refresh-btn { background: #edf2f7; border: none; border-radius: 8px; padding: 6px 12px; font-size: 0.8rem; font-weight: 700; cursor: pointer; color: #4a5568; font-family: inherit; margin-bottom: 12px; }
+    .section-heading { font-size: 1rem; color: #2d3748; margin: 20px 0 8px; }
+    .user-name-cell { font-weight: 700; color: #2d3748; }
+    .user-email-cell { font-size: 0.75rem; color: #a0aec0; }
   </style>
 </head>
 <body>
@@ -71,7 +74,7 @@
       <button class="refresh-btn" onclick="loadDashboard()">🔄 再読み込み</button>
       <div class="summary">
         <div class="summary-item">
-          <div class="label">利用実績のあるユーザー数（延べ）</div>
+          <div class="label">利用実績のあるユーザー数</div>
           <div class="value" id="summary-total-users">-</div>
         </div>
         <div class="summary-item">
@@ -79,6 +82,22 @@
           <div class="value" id="summary-total-attempts">-</div>
         </div>
       </div>
+
+      <h2 class="section-heading">👤 ユーザーごとの利用状況</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ユーザー</th>
+            <th class="num">触った教材数</th>
+            <th class="num">総挑戦回数</th>
+            <th class="num">周回合計</th>
+            <th>最終ログイン</th>
+          </tr>
+        </thead>
+        <tbody id="user-rows"></tbody>
+      </table>
+
+      <h2 class="section-heading">📚 教材ごとの利用状況</h2>
       <table>
         <thead>
           <tr>
@@ -93,7 +112,7 @@
     </div>
   </div>
 
-  <script src="../shared/quiz-app.js?v=20260720142613"></script>
+  <script src="../shared/quiz-app.js?v=20260720142921"></script>
   <script>
     const ADMIN_EMAIL = 'wataamegit@gmail.com';
 
@@ -114,43 +133,81 @@
       }
     });
 
+    function formatLastSeen(ts) {
+      if (!ts || typeof ts.toDate !== 'function') return '-';
+      return ts.toDate().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
+    }
+
     async function loadDashboard() {
       showScreen('screen-loading');
       const config = await fetch('../config.json').then(r => r.json());
       const quizIds = Object.keys(config);
-      const allUserIds = new Set();
+
+      // quiz_menu_prefsにログイン時同期しているdisplayName/email/lastSeenを
+      // uidから引けるようにしておく（無ければuidをそのまま表示する）
+      const profileMap = {};
+      try {
+        const prefsSnap = await db.collection('quiz_menu_prefs').get();
+        prefsSnap.forEach(doc => { profileMap[doc.id] = doc.data(); });
+      } catch (e) { console.error('Failed to load quiz_menu_prefs:', e); }
+
+      const userStats = {}; // uid -> { quizCount, totalAttempts, totalLaps }
+      const quizRows = [];
       let totalAttemptsAll = 0;
-      const rows = [];
 
       for (const id of quizIds) {
         try {
           const snap = await db.collection(`quiz_${id}`).get();
-          let totalAttempts = 0;
-          let totalLaps = 0;
+          let quizTotalAttempts = 0;
+          let quizTotalLaps = 0;
           snap.forEach(doc => {
-            allUserIds.add(doc.id);
             const data = doc.data();
+            let userAttempts = 0;
             Object.keys(data).forEach(k => {
               if (k.startsWith('lessonAttemptCount_') || k.startsWith('lessonPracticeCount_')) {
                 const v = data[k];
-                if (typeof v === 'number') totalAttempts += v;
+                if (typeof v === 'number') userAttempts += v;
               }
             });
-            if (typeof data.lap === 'number') totalLaps += data.lap;
+            const userLap = typeof data.lap === 'number' ? data.lap : 0;
+            quizTotalAttempts += userAttempts;
+            quizTotalLaps += userLap;
+
+            if (!userStats[doc.id]) userStats[doc.id] = { quizCount: 0, totalAttempts: 0, totalLaps: 0 };
+            if (userAttempts > 0 || userLap > 0) userStats[doc.id].quizCount += 1;
+            userStats[doc.id].totalAttempts += userAttempts;
+            userStats[doc.id].totalLaps += userLap;
           });
-          totalAttemptsAll += totalAttempts;
-          rows.push({ id, title: (config[id] && config[id].title) || id, userCount: snap.size, totalAttempts, totalLaps });
+          totalAttemptsAll += quizTotalAttempts;
+          quizRows.push({ id, title: (config[id] && config[id].title) || id, userCount: snap.size, totalAttempts: quizTotalAttempts, totalLaps: quizTotalLaps });
         } catch (e) {
           console.error(`Failed to load quiz_${id}:`, e);
-          rows.push({ id, title: (config[id] && config[id].title) || id, error: true });
+          quizRows.push({ id, title: (config[id] && config[id].title) || id, error: true });
         }
       }
 
-      document.getElementById('summary-total-users').textContent = allUserIds.size;
+      const userIds = Object.keys(userStats);
+      document.getElementById('summary-total-users').textContent = userIds.length;
       document.getElementById('summary-total-attempts').textContent = totalAttemptsAll;
 
-      const tbody = document.getElementById('dashboard-rows');
-      tbody.innerHTML = rows.map(r => {
+      const sortedUserIds = userIds.sort((a, b) => userStats[b].totalAttempts - userStats[a].totalAttempts);
+      const userTbody = document.getElementById('user-rows');
+      userTbody.innerHTML = sortedUserIds.map(uid => {
+        const stats = userStats[uid];
+        const profile = profileMap[uid] || {};
+        const name = profile.displayName ? escapeHtml(profile.displayName) : uid;
+        const email = profile.email ? `<div class="user-email-cell">${escapeHtml(profile.email)}</div>` : '';
+        return `<tr>
+          <td><div class="user-name-cell">${name}</div>${email}</td>
+          <td class="num">${stats.quizCount}</td>
+          <td class="num">${stats.totalAttempts}</td>
+          <td class="num">${stats.totalLaps}</td>
+          <td>${formatLastSeen(profile.lastSeen)}</td>
+        </tr>`;
+      }).join('') || '<tr><td colspan="5" class="error-cell">利用実績のあるユーザーがいません</td></tr>';
+
+      const quizTbody = document.getElementById('dashboard-rows');
+      quizTbody.innerHTML = quizRows.map(r => {
         if (r.error) {
           return `<tr><td>${escapeHtml(r.title)}</td><td colspan="3" class="error-cell">読み込み失敗</td></tr>`;
         }
