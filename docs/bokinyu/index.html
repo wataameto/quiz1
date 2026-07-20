@@ -15,7 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260720140311">
+  <link rel="stylesheet" href="../shared/quiz-app.css?v=20260720140507">
   <style id="dynamic-colors"></style>
 </head>
 <body>
@@ -215,7 +215,7 @@
           <p style="margin:0; font-size:0.76rem; color:#7c4a00; line-height:1.5;">消える: このパートの最高点・誤答記録・挑戦履歴・通し回数<br>残る: 周回数(⭐)・周回履歴・全問正解達成記録、他のパートの成績</p>
         </div>
         <div style="text-align:left; border:1.5px solid #e53e3e; border-radius:10px; padding:10px 12px;">
-          <button onclick="confirmResetAllLevels()" style="width:100%; padding:10px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">教材まるごと(全パート)</button>
+          <button onclick="confirmResetAllLevels()" style="width:100%; padding:10px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#fff; font-family:inherit; margin-bottom:8px;">この教材丸ごと(全パート)</button>
           <p style="margin:0; font-size:0.76rem; color:#9b2c2c; line-height:1.5;">消える: この教材の成績データを全部（周回数・周回履歴・全問正解達成記録も含む）</p>
         </div>
         <button onclick="closeResetModal()" style="padding:10px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
@@ -262,7 +262,7 @@
   </div>
 </div>
 <div class="confetti-wrap" id="confetti-wrap"></div>
-<script src="../shared/quiz-app.js?v=20260720140311"></script>
+<script src="../shared/quiz-app.js?v=20260720140507"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
