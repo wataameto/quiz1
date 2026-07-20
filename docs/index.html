@@ -931,7 +931,7 @@
   </div>
 </div>
 
-<script src="shared/quiz-app.js?v=20260720160612"></script>
+<script src="shared/quiz-app.js?v=20260720173242"></script>
 <script>
 // Firebase初期化・認証（firebaseConfig/auth/db/currentUser/GOOGLE_CLIENT_ID/
 // loginWithGoogle/logout/confirmLogout/renderAuthStatus/userDataAction）は
@@ -1064,12 +1064,15 @@ async function loadMenuConfig() {
   if (menuConfigCache) return menuConfigCache;
   try {
     const res = await fetch('./config.json?t=' + Date.now());
-    menuConfigCache = await res.json();
+    if (!res.ok) throw new Error(`config.json fetch failed: ${res.status}`);
+    const data = await res.json();
+    menuConfigCache = data; // 成功時だけキャッシュする。失敗時にここで{}をキャッシュすると
+    // 一時的な通信失敗のせいで教材一覧が空のまま固定されてしまい、リロードしないと直らない。
+    return menuConfigCache;
   } catch (e) {
     console.error('Failed to load config.json:', e);
-    menuConfigCache = {};
+    return {};
   }
-  return menuConfigCache;
 }
 
 // このセッションで行った教材idリネームの旧→新対応表。
