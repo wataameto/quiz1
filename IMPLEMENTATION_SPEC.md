@@ -51,8 +51,10 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - getQuizScore(collectionName, quizId, questionsPath) は quiz-meta.json の setCounts を使って Firestore の lesson_<level>_<testId> を集計する（questions*.json は読まない）。未ログイン時は {correct: 0, total, lap: 0} を返す（エラーにしない）。lap（周回数）も同じドキュメント読み込みのついでに返す。
 - 「あなたの選択教材」ボックス（score-summary, 600px幅で中央寄せ）は、下の「教材一覧」でONにしたクイズだけを表示する。合計（score-summary-total）も同じボックス内、見出しの右に表示する。各行には正答数表示の直前に `⭐×N`（lap>0のとき）を出し、さらに全問正解済みだが「次の周へ進む」をまだ押していない状態（correct===totalかつ）なら `+⭐` を追記する（メインメニューはFirestoreを都度読み直さない設計のため、この判定だけは既存のcorrect/totalから導出する）。
 - 「教材一覧」（quiz-toggle-section）は全クイズをトグルスイッチ（左側）付きで一覧表示し、上に検索ボックス（quiz-search-input）でタイトル・説明・idコード（`bokinyu`, `sapc02`等）を絞り込める。各行の名前の前には`id`を大文字化した短いコードバッジ（`.quiz-code-badge`）を表示する。
-- 教材ごとのON/OFFは visiblePrefs（{quizId: boolean}）で管理し、Firestoreの `quiz_menu_prefs/{uid}` ドキュメントの`visible`フィールドに保存する。初回（ドキュメント未作成）はデフォルト全部OFF。
-- 教材ごとの📌ピン留めは pinnedPrefs（{quizId: boolean}）で管理し、同じ`quiz_menu_prefs/{uid}`ドキュメントの`pinned`フィールドに保存する（visibleとは別フィールド、同じドキュメント）。「あなたの選択教材」はピン留めした教材を先頭にまとめる安定ソートで並べる。
+- 教材ごとのON/OFFは visiblePrefs（{quizId: boolean}）で管理し、Firestoreの `users/{uid}` ドキュメントの`visible`フィールドに保存する。初回（ドキュメント未作成）はデフォルト全部OFF。
+- 教材ごとの📌ピン留めは pinnedPrefs（{quizId: boolean}）で管理し、同じ`users/{uid}`ドキュメントの`pinned`フィールドに保存する（visibleとは別フィールド、同じドキュメント）。「あなたの選択教材」はピン留めした教材を先頭にまとめる安定ソートで並べる。
+- `users/{uid}`ドキュメントは`syncUserProfile()`（displayName/email/lastSeen書き込み）とvisiblePrefs/pinnedPrefsの読み書きが同じドキュメントに対して行われる。`syncUserProfile()`は一度も`.get()`していない状態で`.set(...,{merge:true})`すると、ほぼ同時に走る`loadVisiblePrefs()`がvisible/pinnedを読み損ねる不具合が起きるため、書き込み前に必ず`.get()`している（このガードを外さないこと）。
+- `loadMenuConfig()`（config.jsonの取得結果をメモ化）は、取得失敗時に空値をキャッシュしない。失敗時にキャッシュすると、通信が一瞬失敗しただけでリロードするまで教材一覧全体が空表示のまま固定される。
 - 教材一覧の「タイトルのみ表示」チェックボックス（`isCompactListMode()`）はFirestoreではなくlocalStorageの`quizListCompactMode`に保存する（表示設定でユーザーデータではないため）。ONにすると各行の説明文とパート/レッスン/問題数を省略する。
 - toggleQuizVisibility(id) は未ログイン時、保存せずに「教材を選択するにはログインしてください」とアラートを出して終了する。
 - forceReload()（最新に更新ボタン）は、直前のトグル保存（pendingPrefsSave）を待ってから location.href でリロードする。
