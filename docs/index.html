@@ -886,7 +886,7 @@
   </div>
 </div>
 
-<script src="shared/quiz-app.js?v=20260720082456"></script>
+<script src="shared/quiz-app.js?v=20260720085506"></script>
 <script>
 // Firebase初期化・認証（firebaseConfig/auth/db/currentUser/GOOGLE_CLIENT_ID/
 // loginWithGoogle/logout/confirmLogout/renderAuthStatus/userDataAction）は
@@ -1467,7 +1467,9 @@ auth.onAuthStateChanged(user => {
   function createBuildTimeDisplay() {
     const timeEl = document.createElement('div');
     timeEl.id = 'build-time-display';
-    timeEl.style.position = 'fixed';
+    // .containerに紐付けて配置する（position:fixedでビューポート基準にすると、
+    // ウィンドウ幅によって中央寄せされたカードとの距離感がバラバラになるため）
+    timeEl.style.position = 'absolute';
     timeEl.style.bottom = '10px';
     timeEl.style.left = '10px';
     timeEl.style.fontSize = '14px';
@@ -1476,7 +1478,7 @@ auth.onAuthStateChanged(user => {
     timeEl.style.pointerEvents = 'none';
     timeEl.style.lineHeight = '1.4';
     timeEl.style.whiteSpace = 'nowrap';
-    document.body.appendChild(timeEl);
+    (document.querySelector('.container') || document.body).appendChild(timeEl);
     return timeEl;
   }
 

@@ -1785,7 +1785,9 @@ document.addEventListener('keydown', (e) => {
   function createBuildTimeDisplay() {
     const timeEl = document.createElement('div');
     timeEl.id = 'build-time-display';
-    timeEl.style.position = 'fixed';
+    // .containerに紐付けて配置する（position:fixedでビューポート基準にすると、
+    // ウィンドウ幅によって中央寄せされたカードとの距離感がバラバラになるため）
+    timeEl.style.position = 'absolute';
     timeEl.style.bottom = '10px';
     timeEl.style.left = '10px';
     timeEl.style.fontSize = '14px';
@@ -1794,7 +1796,7 @@ document.addEventListener('keydown', (e) => {
     timeEl.style.pointerEvents = 'none';
     timeEl.style.lineHeight = '1.4';
     timeEl.style.whiteSpace = 'nowrap';
-    document.body.appendChild(timeEl);
+    (document.querySelector('.container') || document.body).appendChild(timeEl);
     return timeEl;
   }
 
