@@ -1778,6 +1778,11 @@ document.addEventListener('keydown', (e) => {
 });
 
 (function() {
+  // メインメニュー（docs/index.html）には同じ処理の専用版（正しい相対パス './build-info.json'
+  // を使う）が別途あるため、ここでは実行しない。ここで使う '../build-info.json' は
+  // 教材ページ・管理画面（docs/{quiz}/、docs/admin/）からの相対パスとしてのみ正しい。
+  if (document.getElementById('quiz-genre-nav')) return;
+
   const now = new Date();
   const jstTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
   const year = jstTime.getFullYear();
