@@ -105,10 +105,19 @@ auth.onAuthStateChanged(user => {
 // ログインの度に表示名・メールをquiz_menu_prefsへ書いておく（管理者ダッシュボードが
 // uidから人間が読める名前を引けるようにするため）。書き込み権限は本人のuidのドキュメント
 // のみなので、既存のFirestoreルールのままで問題ない。
+//
+// 先に.get()でこのドキュメントの最新状態（visible/pinnedフィールドなど）をクライアントの
+// キャッシュに読み込んでから.set(...,{merge:true})する。これをせずにいきなりmerge書き込み
+// すると、このドキュメントを一度も読んだことが無いクライアントでは、Firestoreがこの保留中の
+// 書き込みを「このドキュメントにはdisplayName/email/lastSeenしか無い」とみなしてしまい、
+// ほぼ同時に走るloadVisiblePrefs()等の読み込みがvisible/pinnedフィールドを見失う
+// （実際に発生した不具合: メインメニューの「あなたの選択教材」が常に空になっていた）。
 async function syncUserProfile() {
   if (!currentUser) return;
   try {
-    await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({
+    const docRef = db.collection('quiz_menu_prefs').doc(currentUser.uid);
+    await docRef.get();
+    await docRef.set({
       displayName: currentUser.displayName || null,
       email: currentUser.email || null,
       lastSeen: firebase.firestore.FieldValue.serverTimestamp(),
