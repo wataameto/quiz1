@@ -931,7 +931,7 @@
   </div>
 </div>
 
-<script src="shared/quiz-app.js?v=20260720141835"></script>
+<script src="shared/quiz-app.js?v=20260720155716"></script>
 <script>
 // Firebase初期化・認証（firebaseConfig/auth/db/currentUser/GOOGLE_CLIENT_ID/
 // loginWithGoogle/logout/confirmLogout/renderAuthStatus/userDataAction）は
@@ -1091,6 +1091,7 @@ async function loadVisiblePrefs() {
   if (!currentUser) return null;
   try {
     const data = await userDataAction('getMenuPrefs');
+    console.log('[DEBUG] loadVisiblePrefs raw data from Firestore:', JSON.stringify(data));
     if (!data.visible) return null;
     const visible = data.visible;
 
@@ -1112,6 +1113,7 @@ async function loadVisiblePrefs() {
     if (needsMigration) {
       try { await userDataAction('migrateMenuPrefsIds', { migrationUpdates }); } catch (e) { console.error('Failed to migrate menu prefs:', e); }
     }
+    console.log('[DEBUG] loadVisiblePrefs returning:', JSON.stringify(visible));
     return visible;
   } catch (e) { console.error('Failed to load menu prefs:', e); }
   return null;
@@ -1311,9 +1313,13 @@ async function updateScoreDisplay() {
   lastQuizResults = results;
   renderGenreNav();
 
+  console.log('[DEBUG] updateScoreDisplay visiblePrefs:', JSON.stringify(visiblePrefs));
+  console.log('[DEBUG] updateScoreDisplay result ids:', JSON.stringify(results.map(r => r.id)));
+
   let totalCorrect = 0;
   let totalQuestions = 0;
   const visibleResults = results.filter(r => isQuizVisible(r.id));
+  console.log('[DEBUG] updateScoreDisplay visibleResults ids:', JSON.stringify(visibleResults.map(r => r.id)));
   visibleResults.forEach(r => {
     totalCorrect += r.score.correct;
     totalQuestions += r.score.total;
