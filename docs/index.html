@@ -612,6 +612,24 @@
       cursor: pointer;
     }
 
+    .btn-reset-selection {
+      background: transparent;
+      border: 1.5px solid #e53e3e;
+      color: #e53e3e;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .btn-reset-selection:hover {
+      background: #fff5f5;
+    }
+
     .quiz-toggle-hint {
       font-size: 0.76rem;
       color: #a0aec0;
@@ -845,6 +863,7 @@
           <input type="checkbox" id="compact-list-toggle" onchange="onCompactListToggleChange()">
           タイトルのみ表示
         </label>
+        <button type="button" class="btn-reset-selection" onclick="confirmResetSelection()">🗑️ 選択教材を全部リセット</button>
       </div>
       <p class="quiz-toggle-hint">ONにした教材だけ、上の成績一覧に表示されます</p>
       <input
@@ -861,6 +880,20 @@
 
     <div class="footer">
       <p>© 2026 🏠満点まで帰れません✨</p>
+    </div>
+  </div>
+
+  <!-- 選択教材リセット確認（危険操作） -->
+  <div id="reset-selection-modal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; z-index:10001;">
+    <div style="background:#fff; border-radius:16px; padding:20px; box-shadow:0 20px 60px rgba(0,0,0,0.45); max-width:400px; width:90%; text-align:center; border:3px solid #e53e3e;">
+      <div style="font-size:2.6rem; margin-bottom:6px; line-height:1;">💣</div>
+      <h2 style="font-size:1.15rem; color:#c53030; margin-bottom:10px; font-weight:800; letter-spacing:0.05em;">⚠️ 危険操作 ⚠️</h2>
+      <p style="color:#4a5568; margin-bottom:8px; font-size:0.9rem; font-weight:700; line-height:1.5;">「あなたの選択教材」の表示・固定設定を全部解除します。<br>（各教材の成績データは消えません）</p>
+      <p style="color:#e53e3e; margin-bottom:20px; font-size:0.85rem; font-weight:800;">この操作は取り消せません。本当によろしいですか？</p>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <button onclick="closeResetSelectionModal()" style="flex:1; padding:12px; background:#e2e8f0; border:none; border-radius:8px; cursor:pointer; font-weight:700; color:#2d3748; font-family:inherit;">キャンセル</button>
+        <button onclick="executeResetSelection()" style="flex:1; padding:12px; background:#e53e3e; border:none; border-radius:8px; cursor:pointer; font-weight:800; color:#fff; font-family:inherit;">💣 実行する</button>
+      </div>
     </div>
   </div>
 
@@ -887,7 +920,7 @@
   </div>
 </div>
 
-<script src="shared/quiz-app.js?v=20260720101030"></script>
+<script src="shared/quiz-app.js?v=20260720103615"></script>
 <script>
 // Firebase初期化・認証（firebaseConfig/auth/db/currentUser/GOOGLE_CLIENT_ID/
 // loginWithGoogle/logout/confirmLogout/renderAuthStatus/userDataAction）は
@@ -1123,6 +1156,31 @@ async function toggleQuizPin(id) {
   pinnedPrefs[id] = !isQuizPinned(id);
   pendingPinnedSave = savePinnedPrefs();
   await pendingPinnedSave;
+  await updateScoreDisplay();
+}
+
+function confirmResetSelection() {
+  if (!currentUser) {
+    showLoginPromptModal();
+    return;
+  }
+  const modal = document.getElementById('reset-selection-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeResetSelectionModal() {
+  const modal = document.getElementById('reset-selection-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+async function executeResetSelection() {
+  closeResetSelectionModal();
+  visiblePrefs = {};
+  pinnedPrefs = {};
+  pendingPrefsSave = saveVisiblePrefs();
+  pendingPinnedSave = savePinnedPrefs();
+  await Promise.all([pendingPrefsSave, pendingPinnedSave]);
+  renderQuizToggleList();
   await updateScoreDisplay();
 }
 

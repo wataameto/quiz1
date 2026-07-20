@@ -12,7 +12,7 @@
     .level-btn { flex: 1; padding: 10px 8px; border: 2.5px solid #e2e8f0; border-radius: 12px; background: #fff; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: inherit; color: #718096; }
     .level-btn.active { border-color: #f7971e; background: linear-gradient(135deg, #fff9ed, #fffbea); color: #2d3748; box-shadow: 0 4px 12px rgba(247,151,30,0.2); }
     .level-btn:hover:not(.active) { border-color: #cbd5e0; background: #f7fafc; }
-    .part-scores-section { margin-bottom: 10px; }
+    .part-scores-section { margin-bottom: 20px; }
     .part-block {
       background: rgba(23,92,211,0.16);
       border: 1.5px solid #e2e8f0;
