@@ -474,23 +474,31 @@ function updatePartBadge() {
   }
 }
 
-function switchLevel(level) {
+async function switchLevel(level) {
   if (level === currentLevel || level < 1 || level > maxLevel) return;
   currentLevel = level;
   updatePartBadge();
-  loadQuestions(level);
+  await loadQuestions(level);
 }
 
 let homeCollapsed = true; // 現在パートのレッスン一覧を閉じているか
 
-function toggleLevel(level) {
+async function toggleLevel(level) {
   soundClick();
+  let opening;
   if (level === currentLevel) {
     homeCollapsed = !homeCollapsed;
-    showHome();
+    opening = !homeCollapsed;
+    await showHome();
   } else {
     homeCollapsed = false;
-    switchLevel(level);
+    opening = true;
+    await switchLevel(level);
+  }
+  // 開いたパートが画面外にある場合、そこまで自動スクロールする
+  if (opening) {
+    const openBlock = document.querySelector('.part-block.open');
+    if (openBlock) openBlock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 }
 
@@ -944,7 +952,13 @@ async function showScoreHistory() {
   if (listEl) listEl.innerHTML = partSections.join('') || '<p>パートがありません</p>';
 
   const modal = document.getElementById('history-modal');
-  if (modal) modal.style.display = 'flex';
+  if (modal) {
+    modal.style.display = 'flex';
+    // position:fixedのモーダルはページ側のスクロール位置によっては
+    // （特にモバイルブラウザで）画面内に収まりきらないことがあるため、
+    // ページ自体を先頭に戻して確実に画面内に収める
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 function closeHistoryModal() {
