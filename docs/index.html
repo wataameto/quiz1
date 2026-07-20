@@ -3,10 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>メニュー</title>
+  <title>満点まで帰れません✨</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🏠</text></svg>">
   <link rel="manifest" href="./manifest.json">
   <link rel="apple-touch-icon" href="./icon-192.svg">
+  <script>
+    // ブラウザの通常タブではお気に入り登録名として分かる名前を出したいが、
+    // インストール済みPWAのウィンドウ枠ではmanifestのアプリ名と並んで
+    // 「アプリ名 - ページタイトル」と二重表示になるため、standalone起動時だけ
+    // ページ側のタイトルを短くする（iOS Safariはnavigator.standalone、それ以外は
+    // display-modeメディアクエリで判定する）
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+      document.title = 'メニュー';
+    }
+  </script>
   <meta name="theme-color" content="#667eea">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -920,7 +930,7 @@
   </div>
 </div>
 
-<script src="shared/quiz-app.js?v=20260720134251"></script>
+<script src="shared/quiz-app.js?v=20260720134535"></script>
 <script>
 // Firebase初期化・認証（firebaseConfig/auth/db/currentUser/GOOGLE_CLIENT_ID/
 // loginWithGoogle/logout/confirmLogout/renderAuthStatus/userDataAction）は
