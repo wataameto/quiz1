@@ -16,6 +16,15 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
+// オフライン永続化を有効にする。これが無いと、db.set()を呼んでもFirestoreへの
+// ネットワーク書き込みが完了する前にページをリロード/閉じた場合、その変更が
+// そのまま消えてしまう（IndexedDBに書き込みキューが残らないため）。有効にすると
+// 変更はまずローカルのIndexedDBへ即座に反映され、そこから裏でサーバーへ同期される
+// ので、リロードしても失われない。synchronizeTabs:trueで複数タブでも共有できる。
+db.enablePersistence({ synchronizeTabs: true }).catch(e => {
+  console.warn('Firestore offline persistence could not be enabled:', e.code);
+});
+
 let currentUser = null;
 let bestScores = {};
 let cacheInitialized = false;
