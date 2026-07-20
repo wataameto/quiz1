@@ -563,7 +563,11 @@ async function migrateUserDataIfNeeded() {
     const userSnap = await userRef.get();
     if (userSnap.exists && userSnap.data().migratedAt) return;
 
-    const config = await fetch(DOCS_ROOT + 'config.json').then(r => r.json()).catch(() => ({}));
+    // config.jsonの取得に失敗した場合はここで例外を投げて外側のcatchに落とし、
+    // migratedAtをセットしないまま終わる（次回ログイン時に再試行される）。
+    // ここで{}にフォールバックしてしまうと、一時的な通信失敗のせいで
+    // 教材の成績データが1個も移行されないまま「移行済み」扱いになってしまう。
+    const config = await fetch(DOCS_ROOT + 'config.json').then(r => r.json());
     const quizIds = Object.keys(config);
 
     const [oldPrefsSnap, oldQuizDocs] = await Promise.all([
