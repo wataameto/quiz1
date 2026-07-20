@@ -1,6 +1,6 @@
 {
   "sample": {
-    "title": "🎲 サンプル教材",
+    "title": "サンプル教材",
     "heading": "サンプル教材",
     "genreMajor": "sample",
     "genreMinor": null,
@@ -13,7 +13,7 @@
     "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
   },
   "sample2": {
-    "title": "🎲 サンプル教材2（最小構成）",
+    "title": "サンプル教材2（最小構成）",
     "heading": "サンプル教材2（最小構成）",
     "genreMajor": "sample",
     "genreMinor": null,
@@ -26,7 +26,7 @@
     "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
   },
   "sample3": {
-    "title": "✏️ サンプル教材3（記述式・最小構成）",
+    "title": "サンプル教材3（記述式・最小構成）",
     "heading": "サンプル教材3（記述式・最小構成）",
     "genreMajor": "sample",
     "genreMinor": null,
@@ -39,7 +39,7 @@
     "accentActive": "linear-gradient(135deg, #f0fff9, #e6fffa)"
   },
   "itpassjr": {
-    "title": "🌱 ITパスポートJr（やさしい版）",
+    "title": "ITパスポートJr（やさしい版）",
     "heading": "ITパスポートJr（やさしい版）",
     "genreMajor": "shikaku",
     "genreMinor": "it_shikaku",
@@ -52,7 +52,7 @@
     "accentActive": "linear-gradient(135deg, #f0fdf4, #d1fae5)"
   },
   "itpass": {
-    "title": "🧭 （IPA）ITパスポート試験",
+    "title": "（IPA）ITパスポート試験",
     "heading": "（IPA）ITパスポート試験",
     "genreMajor": "shikaku",
     "genreMinor": "it_shikaku",
@@ -65,7 +65,7 @@
     "accentActive": "linear-gradient(135deg, #f5f3ff, #ede9fe)"
   },
   "sapc02": {
-    "title": "🏛️ AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
+    "title": "AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
     "heading": "AWS認定ソリューションアーキテクト プロフェッショナル(SAP-C02)",
     "genreMajor": "shikaku",
     "genreMinor": "it_shikaku",
@@ -78,7 +78,7 @@
     "accentActive": "linear-gradient(135deg, #fff5f2, #ffeef0)"
   },
   "devops": {
-    "title": "☁️ AWS認定DevOpsエンジニア(DOP-C02)",
+    "title": "AWS認定DevOpsエンジニア(DOP-C02)",
     "heading": "AWS認定DevOpsエンジニア(DOP-C02)",
     "genreMajor": "shikaku",
     "genreMinor": "it_shikaku",
@@ -91,7 +91,7 @@
     "accentActive": "linear-gradient(135deg, #fff9ed, #fffbea)"
   },
   "bokinyu": {
-    "title": "📚 簿記超入門レベル",
+    "title": "簿記超入門レベル",
     "heading": "簿記超入門レベル",
     "genreMajor": "shikaku",
     "genreMinor": "kaikei_kinyu_shikaku",
@@ -104,7 +104,7 @@
     "accentActive": "linear-gradient(135deg, #f7f8ff, #f5f7ff)"
   },
   "fp3kyuu": {
-    "title": "💰 FP技能検定3級",
+    "title": "FP技能検定3級",
     "heading": "FP技能検定3級",
     "genreMajor": "shikaku",
     "genreMinor": "kaikei_kinyu_shikaku",
@@ -117,7 +117,7 @@
     "accentActive": "linear-gradient(135deg, #fffaf0, #fff3e0)"
   },
   "gentsuki": {
-    "title": "🛵 原付学科試験",
+    "title": "原付学科試験",
     "heading": "原付学科試験",
     "genreMajor": "shikaku",
     "genreMinor": "houritsu_sonota_shikaku",
@@ -130,7 +130,7 @@
     "accentActive": "linear-gradient(135deg, #fff5f5, #ffe8e8)"
   },
   "takken": {
-    "title": "🏘️ 宅地建物取引士（宅建士）",
+    "title": "宅地建物取引士（宅建士）",
     "heading": "宅地建物取引士（宅建士）",
     "genreMajor": "shikaku",
     "genreMinor": "houritsu_sonota_shikaku",
@@ -143,7 +143,7 @@
     "accentActive": "linear-gradient(135deg, #f0f4ff, #e8ecff)"
   },
   "koukyou1": {
-    "title": "⚖️ 公共1 高校１年１学期末考査対策",
+    "title": "公共1 高校１年１学期末考査対策",
     "heading": "公共1 高校１年１学期末考査対策",
     "genreMajor": "gakkou",
     "genreMinor": null,
@@ -156,7 +156,7 @@
     "accentActive": "linear-gradient(135deg, #f0fdf4, #dcfce7)"
   },
   "jouhou1": {
-    "title": "💻 情報処理1 練習問題",
+    "title": "情報処理1 練習問題",
     "heading": "情報処理1 練習問題",
     "genreMajor": "gakkou",
     "genreMinor": null,
@@ -169,7 +169,7 @@
     "accentActive": "linear-gradient(135deg, #f0f9ff, #e0f2fe)"
   },
   "shouwa": {
-    "title": "🎏 昭和レトロ雑学",
+    "title": "昭和レトロ雑学",
     "heading": "昭和レトロ雑学",
     "genreMajor": "zatsugaku",
     "genreMinor": null,
@@ -182,7 +182,7 @@
     "accentActive": "linear-gradient(135deg, #fff5f0, #ffece0)"
   },
   "heisei": {
-    "title": "📼 平成レトロ雑学",
+    "title": "平成レトロ雑学",
     "heading": "平成レトロ雑学",
     "genreMajor": "zatsugaku",
     "genreMinor": null,
@@ -195,7 +195,7 @@
     "accentActive": "linear-gradient(135deg, #eef7ff, #e0f0ff)"
   },
   "capital": {
-    "title": "🌍 世界の首都クイズ",
+    "title": "世界の首都クイズ",
     "heading": "世界の首都クイズ",
     "genreMajor": "zatsugaku",
     "genreMinor": null,
@@ -208,7 +208,7 @@
     "accentActive": "linear-gradient(135deg, #ecfffe, #e0fbf8)"
   },
   "eiken5": {
-    "title": "📗 英検5級 単語・熟語",
+    "title": "英検5級 単語・熟語",
     "heading": "英検5級 単語・熟語",
     "genreMajor": "shikaku",
     "genreMinor": "language_shikaku",
@@ -221,7 +221,7 @@
     "accentActive": "linear-gradient(135deg, #f0fff4, #e6ffe9)"
   },
   "eiken4": {
-    "title": "📙 英検4級 単語・熟語",
+    "title": "英検4級 単語・熟語",
     "heading": "英検4級 単語・熟語",
     "genreMajor": "shikaku",
     "genreMinor": "language_shikaku",
@@ -234,7 +234,7 @@
     "accentActive": "linear-gradient(135deg, #fdf0ff, #fae0ff)"
   },
   "eiken3": {
-    "title": "📚 英検3級 単語・熟語",
+    "title": "英検3級 単語・熟語",
     "heading": "英検3級 単語・熟語",
     "genreMajor": "shikaku",
     "genreMinor": "language_shikaku",
@@ -247,7 +247,7 @@
     "accentActive": "linear-gradient(135deg, #e0f7fa, #e8f5e9)"
   },
   "eiken2pre": {
-    "title": "📖 英検準2級 単語・熟語",
+    "title": "英検準2級 単語・熟語",
     "heading": "英検準2級 単語・熟語",
     "genreMajor": "shikaku",
     "genreMinor": "language_shikaku",
@@ -260,7 +260,7 @@
     "accentActive": "linear-gradient(135deg, #e8fcf4, #dcfce7)"
   },
   "eiken2": {
-    "title": "📘 英検2級 単語・熟語",
+    "title": "英検2級 単語・熟語",
     "heading": "英検2級 単語・熟語",
     "genreMajor": "shikaku",
     "genreMinor": "language_shikaku",
