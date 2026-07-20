@@ -63,8 +63,9 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - PWAインストール導線は`renderPwaInstallUI()`が担う。`isRunningStandalone()`（`display-mode: standalone`または`navigator.standalone`）がtrueなら何も表示しない。上のバナー（`#pwa-install-banner`）は`beforeinstallprompt`を捕捉できた場合のみ「インストール」ボタンを出し、×で閉じると`localStorage`の`pwaInstallBannerDismissed`が`'1'`になって二度と出ない。教材一覧最下部の常設ヒント（`#pwa-install-footer-hint`）は×の対象外で、iOSは`isIosDevice()`判定でSafari共有ボタン経由の案内文、それ以外はブラウザのインストールボタンの案内文を出し分ける。
 
 ### クイズ画面 docs/{quiz}/index.html（共通: docs/shared/quiz-app.js）
-- 全クイズページで共通のJSを使う。差分を作る場合は本当に必要か確認する。
+- 全クイズページで共通のJSを使う。差分を作る場合は本当に必要か確認する。HTML骨格自体を変えるときは docs/sample/index.html を正として編集し、残り全ページへバイト単位でコピーする（`?v=` はコミット時のpre-commitフックが全ページ一括で振り直す）。
 - 起動時に ../config.json と questions*.json を読み込み、quizId に合う config を画面へ反映する。
+- `loadAllQuestions()`（quiz-app.js）は QUIZ_LOAD_TIMEOUT_MS（10秒）のタイマーを仕掛けており、その時間内に読み込みが終わらなければ `#test-grid` の中身を「読み込みに失敗しました」＋中央の「最新に更新」ボタンだけの表示（showQuizLoadFailure()）に切り替える。`#test-grid` はページ初期表示ではスピナー＋「読み込み中...」を表示しており、`showHome()` が実際の成績一覧（`#part-scores-list`）を組み立てた時点で空にする（メインメニューの showHomeScreen() と同じ考え方の安全策。詳細はAI_PROJECT_GUIDE.mdの該当メモを参照）。
 - URLパラメータ admin=1 のときは通常のテスト選択ではなく showAdmin() を表示する。
 - 画面は主に screen-home（「教材トップ」ラベル表示）, screen-quiz, screen-results, screen-admin を切り替える。
 - currentLevel は現在のパート、maxLevel は読み込めた最大パート数、quizData[level] は各パートのJSON、TESTS は現在パートの tests。

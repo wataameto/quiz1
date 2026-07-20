@@ -58,7 +58,7 @@
 
 ## スコアと認証の注意
 - スコアは `users/{uid}/quizzes/{quizId}` ドキュメントに、教材別・ユーザー別で保存する。教材トグルのON/OFF・プロフィール（displayName/email/lastSeen）は `users/{uid}` ドキュメント本体に保存する。Firestoreへの読み書きは全て `docs/shared/quiz-app.js` の `userDataAction(action, params)` に集約されており、通常はこの関数にcaseを足すだけで済む（呼び出し側を変える必要はない）。
-- 旧構造（教材ごとにトップレベルコレクションを1個ずつ増やす `quiz_<quizId>/{uid}` ・ `quiz_menu_prefs/{uid}`）からの移行は `migrateUserDataIfNeeded()` が担う。ユーザーが次回ログインした時に1回だけ、旧データを新構造へ非破壊コピーする（`users/{uid}.migratedAt` の有無で判定、旧データは削除しない）。Firestoreのセキュリティルールには、この移行期間中の旧データ参照用に `^quiz_.*` にマッチするコレクション名を許可する後方互換ルールがまだ残っている。
+- 旧構造（教材ごとにトップレベルコレクションを1個ずつ増やす `quiz_<quizId>/{uid}` ・ `quiz_menu_prefs/{uid}`）からの移行は `migrateUserDataIfNeeded()` が担う。ユーザーが次回ログインした時に1回だけ、旧データを新構造へ非破壊コピーする（`users/{uid}.migratedAt` の有無で判定）。全ユーザーの移行完了を確認した後、旧`quiz_*`コレクションはFirebase Consoleから手動で削除済み（2026-07-20）。`migrateUserDataIfNeeded()`のコード自体は残っているが、旧データが無いユーザーに対しては何もコピーせず`migratedAt`だけセットする形で安全に動く。Firestoreセキュリティルールの`^quiz_.*`向け後方互換ルールは、実データが無くなった今も残ってはいるが実害はない（削除するかはユーザー判断）。
 - 保存フィールド: `lesson_<level>_<lessonId>`（最高点0-100）、`lessonHistory_<level>_<lessonId>`（挑戦履歴、初回1件＋直近10件を保持、各要素は`{no, score, date}`）、`lessonWrongAnswers_<level>_<lessonId>`（誤答問題番号）、`lessonAttemptCount_<level>_<lessonId>`（履歴が間引かれても減らない通しの挑戦回数）、`lap`（全クリア周回数）、`lapHistory`（周回開始日時の配列 `[{lap, date}, ...]`）、`lapAttemptCount`（今の周回に入ってからの試験挑戦回数、周回が進むたびに0にリセット）、`fullClearHistory`（全問正解を達成した日時の記録 `[{lap, date, attempts}, ...]`、周回ごとに初めて達成した瞬間だけ追記）。
 - メインメニュー（docs/index.html）は認証状態に関わらず常にホーム画面（教材一覧・検索・成績枠）を表示する。専用のログイン画面はない。ログインしていない状態で成績に関わる操作（教材トグルのON/OFFなど）をしようとしたときだけ、その場でログインを促す。
 - 管理者ダッシュボード（`docs/admin/index.html`）は特定の管理者メールアドレスでログインした時だけ、全ユーザーの利用状況（ユーザーごと・教材ごとの集計、個別ユーザーの詳細）を閲覧できる。一般ユーザーには一切見えない。Firestoreルールに管理者メールアドレス向けの読み取り専用の例外が入っている。
