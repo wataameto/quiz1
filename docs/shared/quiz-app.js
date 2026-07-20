@@ -457,7 +457,7 @@ async function loadQuestions(level = 1) {
     if (!quizData[level]) throw new Error(`Level ${level} data not found`);
     const data = quizData[level];
     TESTS = data.tests;
-    showHome();
+    await showHome();
   } catch (e) {
     console.error('Failed to load questions:', e);
     TESTS = [];
@@ -557,9 +557,12 @@ async function toggleLevel(level) {
     await switchLevel(level);
   }
   // 開いたパートが画面外にある場合、そこまで自動スクロールする
+  // block:'nearest' は開いた部分が画面の上下をまたいで覆っている状態だと
+  // 「もう画面内にある」と判定して何もスクロールしないことがあるため、
+  // 常に開いた部分の先頭が画面上端に来るよう block:'start' で揃える。
   if (opening) {
     const openBlock = document.querySelector('.part-block.open');
-    if (openBlock) openBlock.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (openBlock) openBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
@@ -947,10 +950,12 @@ function toggleHistoryPart(level) {
   if (block) {
     block.classList.toggle('open');
     const row = block.querySelector('.part-score-row');
+    const isOpen = block.classList.contains('open');
     if (row) {
-      const isOpen = block.classList.contains('open');
       row.setAttribute('aria-expanded', String(isOpen));
     }
+    // 開いたパートが画面外にある場合、そこまで自動スクロールする（理由はtoggleLevel参照）
+    if (isOpen) block.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
