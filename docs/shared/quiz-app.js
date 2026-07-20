@@ -16,6 +16,10 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
+// docs/直下への絶対URL。ページによって相対パス（'./'か'../'か）が変わる問題を避けるため、
+// document.currentScriptは同期実行中しか取れないのでここで即キャプチャする。
+const DOCS_ROOT = document.currentScript ? new URL('../', document.currentScript.src).href : './';
+
 let currentUser = null;
 let bestScores = {};
 let cacheInitialized = false;
@@ -115,9 +119,8 @@ auth.onAuthStateChanged(user => {
 async function syncUserProfile() {
   if (!currentUser) return;
   try {
-    const docRef = db.collection('quiz_menu_prefs').doc(currentUser.uid);
-    await docRef.get();
-    await docRef.set({
+    await ensureMigrated();
+    await db.collection('users').doc(currentUser.uid).set({
       displayName: currentUser.displayName || null,
       email: currentUser.email || null,
       lastSeen: firebase.firestore.FieldValue.serverTimestamp(),
@@ -543,9 +546,42 @@ function calculateTotalQuestions() {
   return TESTS.reduce((sum, test) => sum + test.questions.length, 0);
 }
 
-function getCollectionName() {
-  // quizId（boki1 or devops）をコレクション名に変換
-  return `quiz_${quizId}`;
+// ==== Firestoreデータ構造の移行（教材ごとのトップレベルコレクション → ユーザーごとの階層） ====
+// 旧: quiz_<教材id>/{uid}、quiz_menu_prefs/{uid}
+// 新: users/{uid}、users/{uid}/quizzes/{教材id}
+// ログインの度に1回だけ、旧データを新構造へ非破壊コピーする（旧データは削除しない）。
+let migrationPromise = null;
+function ensureMigrated() {
+  if (!migrationPromise) migrationPromise = migrateUserDataIfNeeded();
+  return migrationPromise;
+}
+
+async function migrateUserDataIfNeeded() {
+  if (!currentUser) return;
+  const userRef = db.collection('users').doc(currentUser.uid);
+  try {
+    const userSnap = await userRef.get();
+    if (userSnap.exists && userSnap.data().migratedAt) return;
+
+    const config = await fetch(DOCS_ROOT + 'config.json').then(r => r.json()).catch(() => ({}));
+    const quizIds = Object.keys(config);
+
+    const [oldPrefsSnap, oldQuizDocs] = await Promise.all([
+      db.collection('quiz_menu_prefs').doc(currentUser.uid).get(),
+      Promise.all(quizIds.map(id =>
+        db.collection(`quiz_${id}`).doc(currentUser.uid).get().then(snap => ({ id, snap }))
+      )),
+    ]);
+
+    const batch = db.batch();
+    const oldPrefs = oldPrefsSnap.exists ? oldPrefsSnap.data() : {};
+    batch.set(userRef, { ...oldPrefs, migratedAt: firebase.firestore.FieldValue.serverTimestamp() }, { merge: true });
+    oldQuizDocs.forEach(({ id, snap }) => {
+      if (snap.exists) batch.set(userRef.collection('quizzes').doc(id), snap.data());
+    });
+
+    await batch.commit();
+  } catch (e) { console.error('Failed to migrate user data to new structure:', e); }
 }
 
 let isInitializingCache = null;
@@ -686,7 +722,11 @@ async function getHistory(id, level = currentLevel) {
 // 移行時はこのswitch各caseの中身をそのままサーバー側（onCall関数）に移す想定で書いてある。
 // docs/index.html（メインメニュー）もこのquiz-app.jsを読み込んで同じ関数を使う。
 async function userDataAction(action, params = {}) {
-  const docRef = db.collection(getCollectionName()).doc(currentUser.uid);
+  await ensureMigrated();
+  const userRef = db.collection('users').doc(currentUser.uid);
+  // メインメニュー（docs/index.html）から呼ばれる場合はquizIdが無いので、
+  // ここで.doc(null)を作ろうとして例外にならないよう、必要な時だけ組み立てる。
+  const docRef = quizId ? userRef.collection('quizzes').doc(quizId) : null;
   switch (action) {
     case 'getScores': {
       const doc = await docRef.get();
@@ -814,27 +854,27 @@ async function userDataAction(action, params = {}) {
     }
     // ==== ここからメインメニュー（docs/index.html）の教材設定用 ====
     case 'getMenuPrefs': {
-      const doc = await db.collection('quiz_menu_prefs').doc(currentUser.uid).get();
+      const doc = await userRef.get();
       return doc.exists ? doc.data() : {};
     }
     case 'setVisiblePrefs': {
       const { visible } = params;
-      await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ visible }, { merge: true });
+      await userRef.set({ visible }, { merge: true });
       return { visible };
     }
     case 'setPinnedPrefs': {
       const { pinned } = params;
-      await db.collection('quiz_menu_prefs').doc(currentUser.uid).set({ pinned }, { merge: true });
+      await userRef.set({ pinned }, { merge: true });
       return { pinned };
     }
     case 'migrateMenuPrefsIds': {
       const { migrationUpdates } = params;
-      await db.collection('quiz_menu_prefs').doc(currentUser.uid).update(migrationUpdates);
+      await userRef.update(migrationUpdates);
       return migrationUpdates;
     }
     case 'getQuizScoreDoc': {
       const { quizId: targetQuizId } = params;
-      const doc = await db.collection(`quiz_${targetQuizId}`).doc(currentUser.uid).get();
+      const doc = await userRef.collection('quizzes').doc(targetQuizId).get();
       return doc.exists ? doc.data() : null;
     }
     default:

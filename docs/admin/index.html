@@ -147,7 +147,7 @@
     </div>
   </div>
 
-  <script src="../shared/quiz-app.js?v=20260720160612"></script>
+  <script src="../shared/quiz-app.js?v=20260720165546"></script>
   <script>
     const ADMIN_EMAIL = 'wataamegit@gmail.com';
 
@@ -184,31 +184,32 @@
       showScreen('screen-loading');
       const config = await fetch('../config.json').then(r => r.json());
       configCache = config;
-      const quizIds = Object.keys(config);
       rawUserDocs = {};
 
-      // quiz_menu_prefsにログイン時同期しているdisplayName/email/lastSeenを
+      // users/{uid} にログイン時同期しているdisplayName/email/lastSeenを
       // uidから引けるようにしておく（無ければuidをそのまま表示する）
       const profileMap = {};
-      try {
-        const prefsSnap = await db.collection('quiz_menu_prefs').get();
-        prefsSnap.forEach(doc => { profileMap[doc.id] = doc.data(); });
-      } catch (e) { console.error('Failed to load quiz_menu_prefs:', e); }
+      const usersSnap = await db.collection('users').get();
+      usersSnap.forEach(doc => { profileMap[doc.id] = doc.data(); });
       profileCache = profileMap;
 
+      const userIds = usersSnap.docs.map(doc => doc.id);
       const userStats = {}; // uid -> { quizCount, totalAttempts, totalLaps }
-      const quizRows = [];
+      const quizTotals = {}; // quizId -> { userCount, totalAttempts, totalLaps }
       let totalAttemptsAll = 0;
 
-      for (const id of quizIds) {
+      // ユーザーごとにquizzesサブコレクションを1回ずつ取得する（教材ごとに21コレクション
+      // ループしていた旧構造より、ユーザー数が教材数より少ない限りクエリ回数が減る）
+      await Promise.all(userIds.map(async uid => {
+        rawUserDocs[uid] = {};
+        userStats[uid] = { quizCount: 0, totalAttempts: 0, totalLaps: 0 };
         try {
-          const snap = await db.collection(`quiz_${id}`).get();
-          let quizTotalAttempts = 0;
-          let quizTotalLaps = 0;
-          snap.forEach(doc => {
+          const quizzesSnap = await db.collection('users').doc(uid).collection('quizzes').get();
+          quizzesSnap.forEach(doc => {
+            const quizId = doc.id;
             const data = doc.data();
-            if (!rawUserDocs[doc.id]) rawUserDocs[doc.id] = {};
-            rawUserDocs[doc.id][id] = data;
+            rawUserDocs[uid][quizId] = data;
+
             let userAttempts = 0;
             Object.keys(data).forEach(k => {
               if (k.startsWith('lessonAttemptCount_') || k.startsWith('lessonPracticeCount_')) {
@@ -217,23 +218,24 @@
               }
             });
             const userLap = typeof data.lap === 'number' ? data.lap : 0;
-            quizTotalAttempts += userAttempts;
-            quizTotalLaps += userLap;
 
-            if (!userStats[doc.id]) userStats[doc.id] = { quizCount: 0, totalAttempts: 0, totalLaps: 0 };
-            if (userAttempts > 0 || userLap > 0) userStats[doc.id].quizCount += 1;
-            userStats[doc.id].totalAttempts += userAttempts;
-            userStats[doc.id].totalLaps += userLap;
+            if (userAttempts > 0 || userLap > 0) userStats[uid].quizCount += 1;
+            userStats[uid].totalAttempts += userAttempts;
+            userStats[uid].totalLaps += userLap;
+            totalAttemptsAll += userAttempts;
+
+            if (!quizTotals[quizId]) quizTotals[quizId] = { userCount: 0, totalAttempts: 0, totalLaps: 0 };
+            quizTotals[quizId].userCount += 1;
+            quizTotals[quizId].totalAttempts += userAttempts;
+            quizTotals[quizId].totalLaps += userLap;
           });
-          totalAttemptsAll += quizTotalAttempts;
-          quizRows.push({ id, title: (config[id] && config[id].title) || id, userCount: snap.size, totalAttempts: quizTotalAttempts, totalLaps: quizTotalLaps });
-        } catch (e) {
-          console.error(`Failed to load quiz_${id}:`, e);
-          quizRows.push({ id, title: (config[id] && config[id].title) || id, error: true });
-        }
-      }
+        } catch (e) { console.error(`Failed to load quizzes for user ${uid}:`, e); }
+      }));
 
-      const userIds = Object.keys(userStats);
+      const quizRows = Object.keys(config).map(id => {
+        const totals = quizTotals[id] || { userCount: 0, totalAttempts: 0, totalLaps: 0 };
+        return { id, title: (config[id] && config[id].title) || id, ...totals };
+      });
       document.getElementById('summary-total-users').textContent = userIds.length;
       document.getElementById('summary-total-attempts').textContent = totalAttemptsAll;
 
@@ -254,17 +256,12 @@
       }).join('') || '<tr><td colspan="5" class="error-cell">利用実績のあるユーザーがいません</td></tr>';
 
       const quizTbody = document.getElementById('dashboard-rows');
-      quizTbody.innerHTML = quizRows.map(r => {
-        if (r.error) {
-          return `<tr><td>${escapeHtml(r.title)}</td><td colspan="3" class="error-cell">読み込み失敗</td></tr>`;
-        }
-        return `<tr>
+      quizTbody.innerHTML = quizRows.map(r => `<tr>
           <td>${escapeHtml(r.title)}</td>
           <td class="num">${r.userCount}</td>
           <td class="num">${r.totalAttempts}</td>
           <td class="num">${r.totalLaps}</td>
-        </tr>`;
-      }).join('');
+        </tr>`).join('');
 
       showScreen('screen-dashboard');
     }
