@@ -96,6 +96,11 @@ auth.onAuthStateChanged(user => {
   currentUser = user || null;
   cacheInitialized = false;
   bestScores = {};
+  // ページをリロードせずに別アカウントへログインし直すと、前のユーザーで
+  // 解決済みのmigrationPromiseが残ったままになり、新しいユーザーの移行チェックが
+  // 走らなくなってしまう。認証状態が変わるたびにリセットし、次回userDataAction呼び出し時に
+  // 今ログインしているユーザーで改めて判定させる。
+  migrationPromise = null;
   renderAuthStatus();
   if (currentUser) syncUserProfile();
   // メインメニュー（docs/index.html）もこのファイルを読み込むため、教材ページ特有の
