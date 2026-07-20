@@ -70,6 +70,9 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 画面は主に screen-home（「教材トップ」ラベル表示）, screen-quiz, screen-results, screen-admin を切り替える。
 - currentLevel は現在のパート、maxLevel は読み込めた最大パート数、quizData[level] は各パートのJSON、TESTS は現在パートの tests。
 - showHome() はパートごとに `.part-block` を描画する（アコーディオン）。パート行クリックで toggleLevel() が呼ばれ、シングルアコーディオン（1つ開くと他は閉じる）で開閉する。初期状態は全パート閉じている（homeCollapsed = true）。パート行の集計表示（`.part-value`）は「試験 X/Y問(N回)・演習/復習(M回)」の形式で、先頭に「試験」ラベルを明記する（演習/復習の回数と並べたときにどちらの回数か分かるように）。`.part-score-row`はPC・スマホともに常時`flex-wrap:wrap`で、パート名の行と集計表示の行（右寄せ、`order:3; flex-basis:100%`）を分ける。
+- toggleLevel() はパートを開いた（opening === true）とき、開いた `.part-block.open` を `scrollIntoView({behavior:'smooth', block:'start'})` で画面上端に揃える。`toggleHistoryPart()`（成績履歴モーダル内のパート開閉）も同じ仕組みを持つ。
+  - `loadQuestions()` 内の `showHome()` 呼び出しには必ず `await` を付けること。付けずに投げっぱなしにすると、`toggleLevel()` の別パートへの切り替え分岐（`switchLevel()` 経由）でスクロール判定が `showHome()` のDOM書き換え（`await getBest()`/`await getHistory()` を含む非同期処理）完了より先に走り、自動スクロールが実行タイミング次第でランダムに失敗する（実際に発生し修正済み）。
+  - `block:'nearest'` は使わないこと。開いた部分が画面の上端より上・下端より下にまたがって画面全体を覆っている状態だと「もう画面内にある」と判定されて一切スクロールされない仕様があり、パートの高さや直前のスクロール位置次第で発動する/しないが分かれてしまう（実際に約50%の確率で失敗する形で発生し、`block:'start'` に変更して修正済み）。
 - 各レッスンは `.part-set-row`（横長のリスト行、Finder風。クラス名はリネーム前の名残でsetのまま）で、行自体はクリック不可。ボタンは「試験」（.set-exam-btn、goToTest → startTest(id, false, false)、常時表示）と、誤答があれば「誤答復習」（.set-review-btn）、なければ「演習」（.set-practice-btn）（どちらも記録なし）の2つ。ボタン内の2行目（成績や回数）は `.btn-sub-score` クラスで1行目より大きいフォントにする。3つのボタンとも文言の長さで幅が揃わないことがあるため `.set-actions button` に min-width（PC 7.8rem / 520px以下 7.0rem）を指定して幅を揃える。
 - goToTest(level, testId, isReview, isPractice) は必要ならパートを切り替えてから startTest() を呼ぶ。
 - startTest(id, isReview, isPracticeMode) は通常テスト（記録あり）、間違い復習、練習モードを兼ねる。記録されるのは isReview も isPracticeMode も false のときだけ（showResults() 内）。
