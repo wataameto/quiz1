@@ -21,8 +21,10 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - ドキュメントだけの変更なら npm test は不要。JavaScript または問題JSONを変更したら npm test を実行する。
 - 簿記の作問ルールは QUESTION_GUIDE.md を優先する。特に分記法、売上/仕入の勘定科目禁止、自然文では使用可の扱いを守る。
 - 確認ダイアログは `confirm()`/`alert()` を多用せず、破壊的操作（ログアウト、成績リセット）は自前モーダル（`logout-modal`, `reset-modal` と同じパターン）を使う。iOS Safari系ブラウザは繰り返しダイアログを出すページで「今後表示しない」を選ばれると、以降の `confirm()`/`alert()` が無言で失敗するため。
-- Firestoreに新しいコレクションを追加するときは、セキュリティルールが `scores` または `^quiz_.*` にマッチするコレクション名しか許可していないことに注意する（例: メニュー設定は `menu_prefs` ではなく `quiz_menu_prefs`）。
-- 新しいクイズの questions1.json（以降の各レベルファイルも）には必ず `id` フィールド（クイズスラッグと同じ値）を入れる。これが無いと `quizId` が undefined のままになり、成績が `quiz_undefined` コレクションに保存される（実際に発生した事故。sap/sample追加時に発覚し修正済み）。
+- Firestoreは `users/{uid}`（プロフィール・メインメニュー設定）と `users/{uid}/quizzes/{quizId}`（教材ごとの成績）の階層構造。旧 `quiz_<id>/{uid}` ・ `quiz_menu_prefs/{uid}`（教材ごとにトップレベルコレクションを1個ずつ増やす形）から移行済みだが、旧データはバックアップとして残っており、セキュリティルールにも後方互換の `^quiz_.*` パターンがまだ生きている。新規にFirestoreへ読み書きするコードを足すときは、`quiz_<id>` のような新しいトップレベルコレクションを作らず、`users/{uid}` 以下に追加すること。全アクセスは `docs/shared/quiz-app.js` の `userDataAction(action, params)` に集約されているため、通常は呼び出し側を変える必要はなく、この関数内にcaseを足すだけでよい。
+- ユーザーが次回ログインした時、`migrateUserDataIfNeeded()`（`ensureMigrated()`でセッション内メモ化）が旧データを新構造へ非破壊コピーする。移行済みかどうかは `users/{uid}.migratedAt` の有無で判定する。
+- 新しいクイズの questions1.json（以降の各レベルファイルも）には必ず `id` フィールド（クイズスラッグと同じ値）を入れる。これが無いと `quizId` が undefined のままになり、成績が `users/{uid}/quizzes/undefined` に保存される（実際に発生した事故。sap/sample追加時に発覚し修正済み）。
+- 管理者ダッシュボード（`docs/admin/index.html`）は特定の管理者メールアドレスでログインした時だけ、全ユーザーの利用状況（ユーザーごと・教材ごとの集計、個別ユーザーの詳細）を閲覧できる。Firestoreルールに管理者メールアドレス向けの読み取り専用の例外が入っている。一般ユーザーの書き込み権限には影響しない。
 - メインメニューは docs/quiz-meta.json（ビルド時生成）を読んで各クイズの parts/sets/total/setCounts を得る。questions*.json 自体をメインメニューから直接fetchするのは、quiz-meta.jsonに載っていない教材（ローカルで新規追加してまだコミット/ビルドしていない場合など）へのフォールバックのみ。
 - 全クリア・周回機能（`isFullyCleared()`/`getLap()`/`advanceLap()`）は、周回を進めても `lesson_`/`lessonWrongAnswers_` は削除するが `lessonHistory_`/`lap`/`lapHistory`/`fullClearHistory` は消さない。`lapAttemptCount` だけは周回が進むたびに0へ明示的にリセットする。「周回のたびに成績は初期化されるが、過去の挑戦履歴と周回数・達成記録は積み上がる」という設計。
 - 「次の周へ進む」「選択した履歴を削除」は破壊的操作のため、実行前に自前モーダル（advance-lap-modal, delete-history-modal）で確認する。confirmAdvanceLap()/confirmDeleteSelectedHistory() が確認モーダルを開き、advanceLap()/deleteSelectedHistory() が実処理を行う2段構え。
@@ -91,10 +93,12 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 管理者専用認証はない。URLを知っていれば表示できる軽量レビュー画面として扱う。
 
 ### Firestore スキーマ
-- スコア用collection名は quiz_<quizId>。例: quiz_bokinyu, quiz_devops, quiz_koukyou1, quiz_jouhou1, quiz_itpass, quiz_itpassjr, quiz_sapc02, quiz_sample。quizId は questions1.json の `id` フィールドから取得するため、新規クイズでは必ずこれを設定すること（無いと quiz_undefined に保存される）。
-- メインメニューの教材トグル設定は quiz_menu_prefs（document id は uid、フィールド visible が {quizId: boolean}）。
-- セキュリティルールは `request.auth.uid == userId && (collection == 'scores' || collection.matches('^quiz_.*'))` の形。新規コレクションは `quiz_` プレフィックス必須（`scores` は現状未使用）。
-- document id は currentUser.uid。
+- 教材ごとの成績は `users/{uid}/quizzes/{quizId}` ドキュメントに保存する。quizId は questions1.json の `id` フィールドから取得するため、新規クイズでは必ずこれを設定すること（無いと `users/{uid}/quizzes/undefined` に保存される）。
+- メインメニューの教材トグル設定・プロフィール（displayName/email/lastSeen）は `users/{uid}` ドキュメント本体（サブコレクションではない）に保存する。フィールド visible/pinned が {quizId: boolean}。
+- セキュリティルールは `users/{userId}` と `users/{userId}/quizzes/{quizId}` それぞれに `request.auth.uid == userId` の読み書きルールと、管理者メールアドレス向けの読み取り専用ルールを持つ。旧 `quiz_<id>/{uid}` ・ `quiz_menu_prefs/{uid}` 向けの後方互換ルール（`^quiz_.*` にマッチするコレクション名）もまだ残っている（移行期間中の旧データ参照用）。
+- Firestoreへの読み書きは全て `docs/shared/quiz-app.js` の `userDataAction(action, params)` 経由（教材の成績系は `action` に対応する内部で `users/{uid}/quizzes/{quizId}` を、メニュー設定系は `users/{uid}` を参照する）。
+- 旧構造から新構造への移行は `migrateUserDataIfNeeded()` が担う。ユーザーが次回ログインした時に1回だけ、旧データを読んで新構造へ非破壊コピーする（旧データは削除しない）。`users/{uid}.migratedAt` があれば移行済みと判定する。
+- document id は currentUser.uid（`users/{uid}/quizzes/{quizId}` の場合はさらにquizIdがドキュメントid）。
 - 最高点は lesson_<level>_<testId> に保存する。
 - 間違えた問題番号は lessonWrongAnswers_<level>_<lessonId> に配列で保存する。
 - 挑戦履歴は lessonHistory_<level>_<testId> に `[{no, score, date}, ...]` で保存する（初回1件＋直近10件まで）。
@@ -103,7 +107,7 @@ AIエージェント向けの詳細な実装仕様。記述が衝突する場合
 - 今の周回に入ってからの試験挑戦回数は lapAttemptCount（整数、advanceLap()で0にリセット）。全問正解を達成した日時は fullClearHistory（`[{lap, date, attempts}, ...]`、周回ごとにfalse→true転換時のみ追記）。
 - 旧キー lesson_<testId> はメインメニューの集計で後方互換として扱う。
 - resetCurrentLevel() は現在パートの lesson_*・lessonWrongAnswers_*・lessonHistory_*・lessonAttemptCount_* を FieldValue.delete() で削除する（lap/lapHistoryは触らない）。Firestore document が存在しない場合は update しない。
-- resetAllLevels() は現在ユーザーの quiz collection document を削除する（lap/lapHistory含め全部消える）。
+- resetAllLevels() は現在ユーザーの `users/{uid}/quizzes/{quizId}` ドキュメントを削除する（lap/lapHistory含め全部消える。他の教材やプロフィール・メニュー設定には影響しない）。
 - ログアウトまたは認証ユーザー変更時は currentUser と bestScores/cacheInitialized を更新し、別ユーザーのキャッシュを残さない。
 
 ### 点数と問題数
@@ -567,7 +571,9 @@ for (let level = 1; level <= maxLevel; level++) {
 
 **目的：** ユーザーが解いた問題の正解/不正解を記録し、後で間違い問題だけを復習できる機能
 
-**Firestore コレクション構造：**
+> **注記（構造は既に移行済み）：** 以下の `quiz_<quizId>/{userId}` というコレクション名は、この項が書かれた時点の構造。現在は `users/{uid}/quizzes/{quizId}` に置き換わっている（フィールド名・データの持ち方自体は変わっていない）。最新の構造は上の「Firestore スキーマ」節を参照。
+
+**Firestore コレクション構造（当時）：**
 
 ```
 quiz_<quizId>/{userId}
